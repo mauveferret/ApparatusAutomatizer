@@ -1,0 +1,8 @@
+AP
+help
+OP COM47
+DO 6 1
+DO 5 0
+AI 4
+DO 6 0
+CP
