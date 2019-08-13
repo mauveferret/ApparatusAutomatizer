@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 public abstract  class Device {
 
-
     abstract String RunCommand (String someCommand);
 
     abstract  HashMap<String, String> getCommands();
@@ -15,6 +14,48 @@ public abstract  class Device {
     abstract public void SendMessage(String message);
 
     public HashMap<String, String> commands = new HashMap<>();
+    //key == alias, value == command
+    public HashMap<String,String> aliases = new HashMap<>();
+
+    public boolean AddAlias(String alias, String command)
+    {
+        boolean canBeAdded=true;
+        for (String str: aliases.keySet())
+        {
+            if (alias.equals(str))
+            {
+                canBeAdded=false;
+                break;
+            }
+        }
+        for (String str: commands.keySet())
+        {
+            if (alias.equals(str))
+            {
+                canBeAdded=false;
+                break;
+            }
+        }
+        if (!commands.containsKey(command))
+        {
+            canBeAdded=false;
+        }
+        if (canBeAdded) aliases.put(alias,command);
+        return canBeAdded;
+    }
+
+    public String replaceAliasByCommand(String alias)
+    {
+        if (aliases.containsKey(alias))
+            return aliases.get(alias);
+        else
+            return alias;
+    }
+
+    public HashMap<String,String> getAliases()
+    {
+        return aliases;
+    }
 
     public String[] CommandToStringArray(String command)
     {

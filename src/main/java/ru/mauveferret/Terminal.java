@@ -8,13 +8,12 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class Terminal extends Device {
-
+    public HashMap<String, String> commands = new HashMap<>();
+    //key == alias, value == command
+    public HashMap<String,String> aliases = new HashMap<>();
     //needs to send some command to its owner through LaunchCommand
     private HashMap<Device, HashMap<String, String>> commandMap = new HashMap<>();
-    //key - local command name, value - description
-    private HashMap<String, String> commands = new HashMap<>();
-    //key - global command name, value - its alias
-    private HashMap<String,String> aliasMap = new HashMap<>();
+
     //key - device name, value - its object
     private HashMap<String, Device> deviceMap = new HashMap<>();
     private  ArrayList<String> help = new ArrayList<>();
@@ -51,14 +50,15 @@ public class Terminal extends Device {
                 SendMessage("WARNING: Command "+str +" is used by several devices");
         }
         deviceMap.put(someDevice.GetDeviceName(),someDevice);
-        AddToHelp(someDevice);
+
+        help.add("_____________"+someDevice.GetDeviceName()+"_________");
+        for (String s : someDevice.getCommands().keySet())
+        {
+            help.add(s+"   "+someDevice.getAliases().get(s)+" "+someDevice.getCommands().get(s));
+        }
     }
 
-    private void AddToHelp (Device someDevice)
-    {
-        help.add("_____________"+someDevice.GetDeviceName()+"_________");
-        for (String s : someDevice.getCommands().keySet()) help.add(s+"   "+someDevice.getCommands().get(s));
-    }
+
 
     public Device GetDevice(String deviceName)
     {
@@ -67,10 +67,7 @@ public class Terminal extends Device {
 
     public void LaunchCommand(String command, boolean silentMode)  {
 
-        for (String str : aliasMap.keySet())
-        {
-            if (aliasMap.get(str).equals(command)) command=str;
-        }
+
             for (Device device : commandMap.keySet())
                 for (String deviceCommand : commandMap.get(device).keySet())
                     if (CommandToStringArray(command)[0].equals(deviceCommand))
@@ -121,47 +118,23 @@ public class Terminal extends Device {
     HashMap<String, String> getCommands() {
         commands.put("help", "this page");
         commands.put("load", "load command scrypt from the file in form: load $file_path$");
-        commands.put("alias", "creates alias for some command in form:  alias $command name$ &alias name&");
+        commands.put("alias", "creates alias for some command in form:  alias  &alias name& $command name$");
         commands.put("exit", "stops program");
         commands.put("wait","wait for some ms in form: wait $ms$");
-        commands.put("DO","");
         return commands;
     }
 
     @Override
     String GetDeviceName() {
-        return "commandLine";
+        return "Terminal";
     }
 
-    @Override
-    public String[] CommandToStringArray(String command) {
-        return super.CommandToStringArray(command);
-    }
 
     private void ShowHelp()
     {
         for (String s : help) SendMessage(s);
     }
-    private void AddAlias(String someCommand, String alias)
-    {
-        boolean aliasIsNew=true;
-        for (String command: aliasMap.keySet())
-        {
-            if (aliasMap.get(command).equals(alias)) aliasIsNew=false;
-        }
-        for (String command: commands.keySet())
-        {
-            if (command.equals(alias)) aliasIsNew = false;
-        }
-        if (aliasIsNew)
-        {
-            aliasMap.put( someCommand,alias);
-            SendMessage(alias+" alias is set!");
 
-        }
-        else
-            SendMessage(alias+" alias exists");
-    }
     //doesn't work !!!!!!!!!!!
     private void Wait(int ms)
     {
@@ -175,5 +148,23 @@ public class Terminal extends Device {
         }
     }
 
+    @Override
+    public boolean AddAlias(String alias, String command) {
+        return super.AddAlias(alias, command);
+    }
 
+    @Override
+    public String replaceAliasByCommand(String alias) {
+        return super.replaceAliasByCommand(alias);
+    }
+
+    @Override
+    public HashMap<String, String> getAliases() {
+        return super.getAliases();
+    }
+
+    @Override
+    public String[] CommandToStringArray(String command) {
+        return super.CommandToStringArray(command);
+    }
 }

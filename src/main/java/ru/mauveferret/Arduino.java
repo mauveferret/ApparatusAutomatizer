@@ -5,8 +5,17 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Arduino extends Device {
+/*
+ must be accompanied by special Arduino driver which is made
+ by Ivan Sorokin and can be got at plasma physics department of
+ the National research Nuclear University "Mephi"
+ */
 
+public class Arduino extends Device {
+    public HashMap<String, String> commands = new HashMap<>();
+    //key == alias, value == command
+    public HashMap<String,String> aliases = new HashMap<>();
+    private String deviceName=this.getClass().getName();
     private String arduinoID="001";
     private SerialPort serialPort;
 
@@ -17,10 +26,11 @@ public class Arduino extends Device {
        arduinoID=FillStringByZeros(arduinoNumber,3);
     }
 
-    public Arduino(int arduinoNumber, String comPortName) throws Exception
+    public Arduino(int arduinoNumber, String comPortName, String deviceName) throws Exception
     {
         arduinoID = FillStringByZeros(arduinoNumber, 3);
         OpenPort(comPortName);
+        this.deviceName = deviceName;
     }
 
     //Arduino operations
@@ -178,7 +188,7 @@ public class Arduino extends Device {
     }
 
 
-    //internal methods
+    //internal Arduino methods (are needed for the driver support)
 
     private String FillStringByZeros(int value, int stringLength)
     {
@@ -198,44 +208,29 @@ public class Arduino extends Device {
 
     //for commandline
 
-    @Override
-
-    public String GetDeviceName() {
-        return "Arduino";
-    }
 
     @Override
     public HashMap<String, String> getCommands() {
         HashMap<String, String> commands = new HashMap<>();
-        commands.put("AP", "shows available COM port's names");
-        commands.put("OP", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
-        commands.put("DO", "Write on Arduino digital port in form: DO $pin number$ $value(0,1)$");
-        commands.put("DI", "Read from Arduino digital  port in form: DI $pin number$");
-        commands.put("AO", "Write on Arduino analog port(PWM~) in form: AO $pin number$ $value(0-5)$");
-        commands.put("AI", "Read from Arduino analog  port in form: AI $pin number$");
-        commands.put("CP", "close Arduino port");
+        commands.put("ports", "shows available COM port's names");
+        commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
+        commands.put("dwrite", "Write on Arduino digital port in form: DO $pin number$ $value(0,1)$");
+        commands.put("dread", "Read from Arduino digital  port in form: DI $pin number$");
+        commands.put("awrite", "Write on Arduino analog port(PWM~) in form: AO $pin number$ $value(0-5)$");
+        commands.put("aread", "Read from Arduino analog  port in form: AI $pin number$");
+        commands.put("close", "close Arduino port");
+        commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$");
         return commands;
     }
 
     @Override
-    public String[] CommandToStringArray(String command) {
-        return super.CommandToStringArray(command);
-    }
-
-  private ArrayList<String> messageList = new ArrayList<>();
-    @Override
-    public void SendMessage(String message)
-    {
-        messageList.add(message);
-    }
-
-    @Override
     public String RunCommand(String someCommand) {
+        someCommand = replaceAliasByCommand(someCommand);
         String[] command = CommandToStringArray(someCommand);
        try {
            switch (command[0])
            {
-               case "AP" :
+               case "ports" :
                {
                    String message="Available ports:";
                    String[] s = ShowAvailableCOMPorts();
@@ -244,13 +239,13 @@ public class Arduino extends Device {
                    SendMessage(message);
                }
                break;
-               case "OP" :
+               case "open" :
                {
                    if (command[1].equals("")) SendMessage("Enter COM port name as an option");
                    else OpenPort(command[1]);
                }
                break;
-               case "DO" :
+               case "dwrite" :
                {
                    if (command[1].equals("") || command[2].equals(" "))
                        SendMessage("Enter pin number and value (0,1) as an option");
@@ -260,7 +255,7 @@ public class Arduino extends Device {
                    }
                }
                break;
-               case "DI" :
+               case "dread" :
                {
 
                    if (command[1].equals(""))
@@ -268,13 +263,14 @@ public class Arduino extends Device {
                    else SendMessage(""+DigitalRead(Integer.parseInt(command[1])));
                }
                break;
-               case "AO" : if (command[1].equals("")||command[2].equals("")) SendMessage("Enter pin number and value (0-5) as an option");
+               case "awrite" : if (command[1].equals("")||command[2].equals("")) SendMessage("Enter pin number and value (0-5) as an option");
                else AnalogWrite(Integer.parseInt(command[1]),Integer.parseInt(command[2]));
                    break;
-               case "AI" :  if (command[1].equals("")) SendMessage("Enter pin number as an option");
+               case "aread" :  if (command[1].equals("")) SendMessage("Enter pin number as an option");
                else SendMessage(""+AnalogRead(Integer.parseInt(command[1])));
                    break;
-               case "CP" : ClosePort();
+               case "close" : ClosePort();
+               case "alias" : AddAlias(command[1], command[2]);
                    break;
            }
 
@@ -284,8 +280,40 @@ public class Arduino extends Device {
            SendMessage(e.getLocalizedMessage());
        }
 
-        String returnMessage = "";
+       String returnMessage = "";
        for (String str: messageList) returnMessage+=str+"\n";
        return returnMessage;
+    }
+
+    @Override
+    public String[] CommandToStringArray(String command) {
+        return super.CommandToStringArray(command);
+    }
+
+    private ArrayList<String> messageList = new ArrayList<>();
+    @Override
+    public void SendMessage(String message)
+    {
+        messageList.add(message);
+    }
+
+    @Override
+    public boolean AddAlias(String alias, String command) {
+        return super.AddAlias(alias, command);
+    }
+
+    @Override
+    public String replaceAliasByCommand(String alias) {
+        return super.replaceAliasByCommand(alias);
+    }
+
+    @Override
+    public HashMap<String, String> getAliases() {
+        return super.getAliases();
+    }
+
+    @Override
+    public String GetDeviceName() {
+        return deviceName;
     }
 }
