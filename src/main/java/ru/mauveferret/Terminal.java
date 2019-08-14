@@ -2,21 +2,15 @@ package ru.mauveferret;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Terminal extends Device {
-
 
     //needs to send some command to its owner through LaunchCommand
     //key == deviceCommand, value == device object
     private HashMap<String, Device> commandMap = new HashMap<>();
     //key == device name, value == device object
     private HashMap<String, Device> deviceMap = new HashMap<>();
-    //key == deviceCommand, value == device
-    //private HashMap<String,Device> deviceCommandMap= new HashMap<>();
-
-    //private  HashMap<String, HashMap<String,String>> help = new HashMap<>();
 
     public HashMap<String, Device> getCommandMap() {
         return commandMap;
@@ -181,7 +175,7 @@ public class Terminal extends Device {
                 }
                 else
                 {
-                    str+=fillStringByZeros("",0);
+                    str+=fillStringByZeros("",10);
 
                 }
                 str+=deviceMap.get(s).commands.get(command);

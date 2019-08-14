@@ -270,7 +270,7 @@ public class Arduino extends Device {
                     case "close":
                         ClosePort();
                     case "alias":
-                        addAlias(command[2], command[3]);
+                        sendMessage((addAlias(command[2], command[3])) ? "added" : "not added");
                         break;
                 }
 
@@ -290,8 +290,6 @@ public class Arduino extends Device {
        return returnMessage;
     }
 
-
-
     private ArrayList<String> messageList = new ArrayList<>();
 
     @Override
@@ -299,6 +297,5 @@ public class Arduino extends Device {
     {
         messageList.add(message);
     }
-
 
 }

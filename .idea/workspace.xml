@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +18,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1PMxnSFcQu765DwhlkMPXnQBmh5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -21,6 +32,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ru/mauveferret" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -41,6 +55,8 @@
   </component>
   <component name="RunManager" selected="Application.run">
     <configuration name="run" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="12.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="ApparatusAutomatizer" />
       <method v="2">
