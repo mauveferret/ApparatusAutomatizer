@@ -15,9 +15,9 @@ public abstract  class Device {
     abstract public void sendMessage(String message);
 
     //it is used in help
-    private  String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
+    private String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
     //some String from which your appeal in Terminal starts with
-    private String deviceCommand = deviceName.substring(0,3);
+    private String deviceCommand = deviceName.substring(0,3).toLowerCase();
     //key == command, value == its desciption for help
     HashMap<String, String> commands = new HashMap<>();
     //key == alias, value == command which is represented by the alias
@@ -42,6 +42,11 @@ public abstract  class Device {
     HashMap<String,String> getAliases()
     {
         return aliases;
+    }
+
+    boolean exist(String command)
+    {
+        return (commands.containsKey(command)||aliases.containsKey(command));
     }
 
     boolean addAlias(String alias, String command)

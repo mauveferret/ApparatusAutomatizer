@@ -12,6 +12,9 @@ public class Main {
         Arduino arduino = new Arduino(1);
         terminal.AddDevice(terminal);
         terminal.AddDevice(arduino);
+        for (String s :terminal.getCommandMap().keySet()) System.out.print(s+" ");
+        System.out.println();
+        System.out.println("__________________________________________");
         String command = scanner.nextLine();
         while (!command.equals("exit")) {
             terminal.launchCommand(command, false);

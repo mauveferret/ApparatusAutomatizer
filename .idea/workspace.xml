@@ -113,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565697932244</updated>
       <workItem from="1565697936645" duration="8469000" />
-      <workItem from="1565775271490" duration="7644000" />
+      <workItem from="1565775271490" duration="17062000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565715225860</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="alias works, trying to make deviceCommandMap workable">
+      <created>1565785345327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565785345327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="alias added but don't not work" />
-    <option name="LAST_COMMIT_MESSAGE" value="alias added but don't not work" />
+    <MESSAGE value="alias works, trying to make deviceCommandMap workable" />
+    <option name="LAST_COMMIT_MESSAGE" value="alias works, trying to make deviceCommandMap workable" />
   </component>
 </project>

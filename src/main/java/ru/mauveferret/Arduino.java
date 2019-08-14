@@ -21,14 +21,15 @@ public class Arduino extends Device {
 
     public Arduino(int arduinoNumber)
     {
-       arduinoID=FillStringByZeros(arduinoNumber,3);
+       arduinoID=fillStringByZeros(arduinoNumber,3);
     }
 
-    public Arduino(int arduinoNumber, String comPortName, String deviceName) throws Exception
+    public Arduino(int arduinoNumber, String comPortName, String deviceName, String deviceCommand) throws Exception
     {
-        arduinoID = FillStringByZeros(arduinoNumber, 3);
+        arduinoID = fillStringByZeros(arduinoNumber, 3);
         OpenPort(comPortName);
-        this.deviceName = deviceName;
+        setDeviceName(deviceName);
+        setDeviceCommand(deviceCommand);
     }
 
     //Arduino operations
@@ -101,8 +102,8 @@ public class Arduino extends Device {
     private boolean DigitalWrite(int pin, boolean value)
     {
        try {
-           String message=arduinoID+"DO"+FillStringByZeros(pin,2)+(value ? 1 : 0);
-           serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
+           String message=arduinoID+"DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
+           serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
            String answer = "";
            while (!answer.contains("\n")) answer+=(new String(serialPort.readBytes(1)));
            if (answer.contains("SETTED"))sendMessage((value) ? "HIGH" : "LOW"+" on pin "+pin+" is set");
@@ -117,14 +118,14 @@ public class Arduino extends Device {
 
     private boolean DigitalRead(int pin) throws Exception
     {
-            String message=arduinoID+"DI"+FillStringByZeros(pin,2);
-            serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
+            String message=arduinoID+"DI"+fillStringByZeros(pin,2);
+            serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
             String answer ="";
             while (!answer.contains("\n"))
             {
                 answer+=(new String(serialPort.readBytes(1)));
             }
-            int signal = CheckSum(answer.substring(0,answer.length()-4));
+            int signal = checkSum(answer.substring(0,answer.length()-4));
             int checksum = Integer.parseInt(answer.substring(answer.length()-4,answer.length()-1));
             if ((signal == checksum)&&(!answer.contains("ERROR")))
             {
@@ -143,8 +144,8 @@ public class Arduino extends Device {
     private boolean AnalogWrite(int pin, int value)
     {
         try {
-            String message=arduinoID+"AO"+FillStringByZeros(pin,2)+FillStringByZeros(value*51, 4);
-            serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
+            String message=arduinoID+"AO"+fillStringByZeros(pin,2)+fillStringByZeros(value*51, 4);
+            serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
             String answer = "";
             while (!answer.contains("\n"))
             {
@@ -163,14 +164,14 @@ public class Arduino extends Device {
 
     private double AnalogRead(int pin) throws Exception
     {
-            String message=arduinoID+"AI"+FillStringByZeros(pin,2);
-            serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
+            String message=arduinoID+"AI"+fillStringByZeros(pin,2);
+            serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
             String answer ="";
             while (!answer.contains("\n"))
             {
                 answer+=(new String(serialPort.readBytes(1)));
             }
-            int signal = CheckSum(answer.substring(0,answer.length()-4));
+            int signal = checkSum(answer.substring(0,answer.length()-4));
             int checksum = Integer.parseInt(answer.substring(answer.length()-4,answer.length()-1));
             if ((signal == checksum)&&(!answer.contains("ERROR")))
             {
@@ -188,7 +189,7 @@ public class Arduino extends Device {
 
     //internal Arduino methods (are needed for the driver support)
 
-    private String FillStringByZeros(int value, int stringLength)
+    private String fillStringByZeros(int value, int stringLength)
     {
         StringBuilder returnString = new StringBuilder();
         for (int i=0; i<(stringLength-String.valueOf(value).length()); i++) returnString.append("0");
@@ -196,7 +197,7 @@ public class Arduino extends Device {
         return returnString.toString();
     }
 
-    private int CheckSum(String message)
+    private int checkSum(String message)
     {
         int checkSum=0;
         byte[] b = message.getBytes(StandardCharsets.US_ASCII);
@@ -222,61 +223,68 @@ public class Arduino extends Device {
 
     @Override
     public String runCommand(Device device, String someCommand) {
-        someCommand = replaceAliasByCommand(someCommand);
+
+        messageList.clear();
         String[] command = commandToStringArray(someCommand);
-       try {
-           switch (command[0])
-           {
-               case "ports" :
-               {
-                   String message="Available ports:";
-                   String[] s = ShowAvailableCOMPorts();
-                   for (String value : s) message+=(value + " ");
-                   //message+="\n";
-                   sendMessage(message);
-               }
-               break;
-               case "open" :
-               {
-                   if (command[1].equals("")) sendMessage("Enter COM port name as an option");
-                   else OpenPort(command[1]);
-               }
-               break;
-               case "dwrite" :
-               {
-                   if (command[1].equals("") || command[2].equals(" "))
-                       sendMessage("Enter pin number and value (0,1) as an option");
-                   else
-                   {
-                       DigitalWrite(Integer.parseInt(command[1]), command[2].equals("1"));
-                   }
-               }
-               break;
-               case "dread" :
-               {
+        if (exist(command[1]))
+        {
+            command[1] = replaceAliasByCommand(command[1]);
+            try {
+                switch (command[1]) {
+                    case "ports": {
+                        String message = "Available ports:";
+                        String[] s = ShowAvailableCOMPorts();
+                        for (String value : s) message += (value + " ");
+                        sendMessage(message);
+                    }
+                    break;
+                    case "open": {
+                        if (command[2].equals("")) sendMessage("Enter COM port name as an option");
+                        else OpenPort(command[2]);
+                    }
+                    break;
+                    case "dwrite": {
+                        if (command[2].equals("") || command[3].equals(" "))
+                            sendMessage("Enter pin number and value (0,1) as an option");
+                        else {
+                            DigitalWrite(Integer.parseInt(command[2]), command[3].equals("1"));
+                        }
+                    }
+                    break;
+                    case "dread": {
 
-                   if (command[1].equals(""))
-                       sendMessage("Enter pin number as an option");
-                   else sendMessage(""+DigitalRead(Integer.parseInt(command[1])));
-               }
-               break;
-               case "awrite" : if (command[1].equals("")||command[2].equals("")) sendMessage("Enter pin number and value (0-5) as an option");
-               else AnalogWrite(Integer.parseInt(command[1]),Integer.parseInt(command[2]));
-                   break;
-               case "aread" :  if (command[1].equals("")) sendMessage("Enter pin number as an option");
-               else sendMessage(""+AnalogRead(Integer.parseInt(command[1])));
-                   break;
-               case "close" : ClosePort();
-               case "alias" : addAlias(command[1], command[2]);
-                   break;
-           }
+                        if (command[2].equals(""))
+                            sendMessage("Enter pin number as an option");
+                        else sendMessage("" + DigitalRead(Integer.parseInt(command[2])));
+                    }
+                    break;
+                    case "awrite":
+                        if (command[2].equals("") || command[3].equals(""))
+                            sendMessage("Enter pin number and value (0-5) as an option");
+                        else AnalogWrite(Integer.parseInt(command[2]), Integer.parseInt(command[3]));
+                        break;
+                    case "aread":
+                        if (command[2].equals("")) sendMessage("Enter pin number as an option");
+                        else sendMessage("" + AnalogRead(Integer.parseInt(command[2])));
+                        break;
+                    case "close":
+                        ClosePort();
+                    case "alias":
+                        addAlias(command[2], command[3]);
+                        break;
+                }
 
-       }
-       catch (Exception e)
-       {
-           sendMessage(e.getLocalizedMessage());
-       }
+            } catch (Exception e) {
+                sendMessage(e.getLocalizedMessage());
+            }
 
+        }
+        else
+        {
+            sendMessage("command \""+command[1]+"\" doesn't exist ");
+        }
+
+            //if message list is empty it makes /n which is not good!!!
        String returnMessage = "";
        for (String str: messageList) returnMessage+=str+"\n";
        return returnMessage;

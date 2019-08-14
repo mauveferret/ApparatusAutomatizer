@@ -4,21 +4,27 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 public class Terminal extends Device {
 
 
     //needs to send some command to its owner through LaunchCommand
-    private HashMap<Device, HashMap<String, String>> commandMap = new HashMap<>();
-    //key - device name, value - its object
+    //key == deviceCommand, value == device object
+    private HashMap<String, Device> commandMap = new HashMap<>();
+    //key == device name, value == device object
     private HashMap<String, Device> deviceMap = new HashMap<>();
     //key == deviceCommand, value == device
-    private HashMap<String,Device> deviceCommandMap= new HashMap<>();
+    //private HashMap<String,Device> deviceCommandMap= new HashMap<>();
 
-    private  ArrayList<String> help = new ArrayList<>();
+    //private  HashMap<String, HashMap<String,String>> help = new HashMap<>();
 
+    public HashMap<String, Device> getCommandMap() {
+        return commandMap;
+    }
+
+    public HashMap<String, Device> getDeviceMap() {
+        return deviceMap;
+    }
 
     public Terminal(String loadFromFile, String path)
     {
@@ -43,21 +49,34 @@ public class Terminal extends Device {
     }
 
     void AddDevice(Device someDevice) {
-        commandMap.put(someDevice, someDevice.getCommands());
-        deviceMap.put(someDevice.getDeviceName(),someDevice);
-        deviceCommandMap.put(someDevice.getDeviceName(), someDevice);
+        someDevice.getCommands();
+
+        // get commands should not be launched several times!
+
+        if (commandMap.containsKey(someDevice.getDeviceCommand()))
+        {
+            sendMessage("Device command \""+someDevice.getDeviceCommand()+"\" repeats.");
+        }
+        else
+        {
+            commandMap.put(someDevice.getDeviceCommand(), someDevice);
+        }
+        if (deviceMap.containsKey(someDevice.getDeviceName()))
+        {
+            sendMessage("Device name \""+someDevice.getDeviceName()+"\" repeats.");
+        }
+        else
+        {
+            deviceMap.put(someDevice.getDeviceName(),someDevice);
+        }
+
+       // deviceCommandMap.put(someDevice.getDeviceName(), someDevice);
        /* for (String str : someDevice.getCommands().keySet())
         {
             if (!commandSet.add(str))
                 sendMessage("WARNING: Command "+str +" is used by several devices");
         }
         */
-
-        help.add("_____________"+someDevice.getDeviceName()+"_________");
-        for (String s : someDevice.getCommands().keySet())
-        {
-            help.add(s+"   "+someDevice.getAliases().get(s)+" "+someDevice.getCommands().get(s));
-        }
     }
 
 
@@ -69,39 +88,41 @@ public class Terminal extends Device {
 
     void launchCommand(String command, boolean silentMode)  {
 
+        String[] commandArray = commandToStringArray(command);
+        if (commandMap.containsKey(commandArray[0]))
+        {
+            if (silentMode)
+            {
+                commandMap.get(commandArray[0]).runCommand(Terminal.this, command);
+            }
+            else
+            {
+                sendMessage(commandMap.get(commandArray[0]).runCommand(Terminal.this, command));
+            }
 
-            for (Device device : commandMap.keySet())
-                for (String deviceCommand : commandMap.get(device).keySet())
-                    //if (CommandToStringArray(command)[0].equals(deviceCommand))
-                        if (silentMode)
-                        {
-                            device.runCommand(Terminal.this,command);
-                            break;
-                        }
-                        else
-                        {
-                            sendMessage(device.runCommand(Terminal.this, command));
-                            break;
-                        }
+        }
+        else
+        {
+            sendMessage("Command \""+commandArray[0]+"\" not found.");
+        }
     }
 
 
-    //doesn't return SendMessage and it is printing!!!
     @Override
     String runCommand(Device device, String someCommand) {
         String[] command = commandToStringArray(someCommand);
         try {
-            switch (command[0])
+            switch (command[1])
             {
                 case "help":
-                    ShowHelp();
+                    showHelp();
                     break;
                 case "load":
-                    LoadCommandsFromFile(command[1]);
+                    LoadCommandsFromFile(command[2]);
                     break;
 
                 case "wait":
-                    Wait(Integer.parseInt(command[1]));
+                    wait(Integer.parseInt(command[2]));
                     break;
             }
         }
@@ -128,13 +149,50 @@ public class Terminal extends Device {
     }
 
 
-    private void ShowHelp()
+    private void showHelp()
     {
-        for (String s : help) sendMessage(s);
+        int length = 20;
+        String help="";
+        for (String s: deviceMap.keySet())
+        {
+            String star="";
+            for (int i=0;i<(length-s.length())/2;i++)
+            {
+                star+="*";
+            }
+            help+=star+" "+s+" "+star;
+            HashMap<String,String> description =deviceMap.get(s).getCommands();
+            for(String command: description.keySet())
+            {
+                String str="";
+                str+=command+fillStringByZeros(10, command.length());
+                if (deviceMap.get(s).getAliases().containsValue(command))
+                {
+                    String alias="";
+                    for (String keys: deviceMap.get(s).getAliases().keySet())
+                    {
+                        if (command.equals(deviceMap.get(s).getAliases().get(keys)))
+                        {
+                            alias=keys;
+                            break;
+                        }
+                    }
+                    str+=alias+fillStringByZeros(10,alias.length());
+                }
+                else
+                {
+                    str+=fillStringByZeros(10,0);
+                }
+                str+=deviceMap.get(s).commands.get(command);
+                str+="\n";
+                help+=str;
+            }
+        }
+        sendMessage(help);
     }
 
     //doesn't work !!!!!!!!!!!
-    private void Wait(int ms)
+    private void wait(int ms)
     {
         try
         {
@@ -144,5 +202,12 @@ public class Terminal extends Device {
         {
             sendMessage(e.getLocalizedMessage());
         }
+    }
+
+    private String fillStringByZeros(int value, int stringLength)
+    {
+        String returnString = "";
+        for (int i=0; i<(stringLength-String.valueOf(value).length()); i++) returnString+=" ";
+        return  returnString;
     }
 }
