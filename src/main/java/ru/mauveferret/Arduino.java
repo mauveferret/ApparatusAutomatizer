@@ -34,7 +34,7 @@ public class Arduino extends Device {
 
     //Arduino operations
 
-    private String[] ShowAvailableCOMPorts()
+    private String[] showAvailableCOMPorts()
     {
         return SerialPortList.getPortNames();
     }
@@ -116,7 +116,7 @@ public class Arduino extends Device {
        }
     }
 
-    private boolean DigitalRead(int pin) throws Exception
+    private boolean digitalRead(int pin) throws Exception
     {
             String message=arduinoID+"DI"+fillStringByZeros(pin,2);
             serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
@@ -141,7 +141,7 @@ public class Arduino extends Device {
             return false;
     }
 
-    private boolean AnalogWrite(int pin, int value)
+    private boolean analogWrite(int pin, int value)
     {
         try {
             String message=arduinoID+"AO"+fillStringByZeros(pin,2)+fillStringByZeros(value*51, 4);
@@ -162,7 +162,7 @@ public class Arduino extends Device {
 
     }
 
-    private double AnalogRead(int pin) throws Exception
+    private double analogRead(int pin) throws Exception
     {
             String message=arduinoID+"AI"+fillStringByZeros(pin,2);
             serialPort.writeBytes((message+fillStringByZeros(checkSum(message),3)+"\n").getBytes());
@@ -233,44 +233,73 @@ public class Arduino extends Device {
                 switch (command[1]) {
                     case "ports": {
                         String message = "Available ports:";
-                        String[] s = ShowAvailableCOMPorts();
+                        String[] s = showAvailableCOMPorts();
                         for (String value : s) message += (value + " ");
                         sendMessage(message);
                     }
                     break;
                     case "open": {
                         if (command[2].equals("")) sendMessage("Enter COM port name as an option");
-                        else OpenPort(command[2]);
+                        else sendMessage((OpenPort(command[2])) ? command[2]+" is opened" : command[2]+" isn't opened");
                     }
                     break;
                     case "dwrite": {
                         if (command[2].equals("") || command[3].equals(" "))
+                        {
                             sendMessage("Enter pin number and value (0,1) as an option");
-                        else {
-                            DigitalWrite(Integer.parseInt(command[2]), command[3].equals("1"));
                         }
+                        else
+                            {
+                                boolean isWritten=false;
+                                isWritten = DigitalWrite(Integer.parseInt(command[2]), command[3].equals("1"));
+                                sendMessage((isWritten) ? command[3]+"is setted" : command[3]+"isn't setted");
+                            }
                     }
                     break;
                     case "dread": {
 
                         if (command[2].equals(""))
+                        {
                             sendMessage("Enter pin number as an option");
-                        else sendMessage("" + DigitalRead(Integer.parseInt(command[2])));
+                        }
+                        else
+                        {
+
+                            sendMessage("" + digitalRead(Integer.parseInt(command[2])));
+                        }
                     }
                     break;
                     case "awrite":
                         if (command[2].equals("") || command[3].equals(""))
+                        {
                             sendMessage("Enter pin number and value (0-5) as an option");
-                        else AnalogWrite(Integer.parseInt(command[2]), Integer.parseInt(command[3]));
+                        }
+                        else
+                        {
+                            boolean isWritten=false;
+                            isWritten = analogWrite(Integer.parseInt(command[2]), Integer.parseInt(command[3]));
+                            sendMessage((isWritten) ? command[3]+"is setted": command[3]+" isn't setted");
+                        }
                         break;
                     case "aread":
-                        if (command[2].equals("")) sendMessage("Enter pin number as an option");
-                        else sendMessage("" + AnalogRead(Integer.parseInt(command[2])));
+                        if (command[2].equals(""))
+                        {
+                            sendMessage("Enter pin number as an option");
+                        }
+                        else
+                        {
+                            sendMessage("" + analogRead(Integer.parseInt(command[2])));
+                        }
                         break;
                     case "close":
+                    {
                         ClosePort();
+                    }
+                    break;
                     case "alias":
-                        sendMessage((addAlias(command[2], command[3])) ? "added" : "not added");
+                    {
+                        sendMessage((addAlias(command[2], command[3])) ? command[2]+" added" : command[2]+" isn't added");
+                    }
                         break;
                 }
 
