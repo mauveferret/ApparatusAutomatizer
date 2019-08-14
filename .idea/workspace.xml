@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565697932244</updated>
       <workItem from="1565697936645" duration="8469000" />
-      <workItem from="1565775271490" duration="17062000" />
+      <workItem from="1565775271490" duration="18909000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -129,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565785345327</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="help fixed, some problems remained">
+      <created>1565800703295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565800703295</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="alias added but don't not work" />
     <MESSAGE value="alias works, trying to make deviceCommandMap workable" />
-    <option name="LAST_COMMIT_MESSAGE" value="alias works, trying to make deviceCommandMap workable" />
+    <MESSAGE value="help fixed, some problems remained" />
+    <option name="LAST_COMMIT_MESSAGE" value="help fixed, some problems remained" />
   </component>
 </project>

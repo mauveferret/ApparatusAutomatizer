@@ -160,12 +160,12 @@ public class Terminal extends Device {
             {
                 star+="*";
             }
-            help+=star+" "+s+" "+star;
+            help+=star+" "+s+" "+star+"\n";
             HashMap<String,String> description =deviceMap.get(s).getCommands();
             for(String command: description.keySet())
             {
                 String str="";
-                str+=command+fillStringByZeros(10, command.length());
+                str+=command+fillStringByZeros(command, 10);
                 if (deviceMap.get(s).getAliases().containsValue(command))
                 {
                     String alias="";
@@ -177,11 +177,12 @@ public class Terminal extends Device {
                             break;
                         }
                     }
-                    str+=alias+fillStringByZeros(10,alias.length());
+                    str+=alias+fillStringByZeros(alias,10);
                 }
                 else
                 {
-                    str+=fillStringByZeros(10,0);
+                    str+=fillStringByZeros("",0);
+
                 }
                 str+=deviceMap.get(s).commands.get(command);
                 str+="\n";
@@ -204,7 +205,7 @@ public class Terminal extends Device {
         }
     }
 
-    private String fillStringByZeros(int value, int stringLength)
+    private String fillStringByZeros(String value, int stringLength)
     {
         String returnString = "";
         for (int i=0; i<(stringLength-String.valueOf(value).length()); i++) returnString+=" ";
