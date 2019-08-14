@@ -12,10 +12,8 @@ import java.util.HashMap;
  */
 
 public class Arduino extends Device {
-    public HashMap<String, String> commands = new HashMap<>();
-    //key == alias, value == command
-    public HashMap<String,String> aliases = new HashMap<>();
-    private String deviceName=this.getClass().getName();
+
+
     private String arduinoID="001";
     private SerialPort serialPort;
 
@@ -35,12 +33,12 @@ public class Arduino extends Device {
 
     //Arduino operations
 
-    public String[] ShowAvailableCOMPorts()
+    private String[] ShowAvailableCOMPorts()
     {
         return SerialPortList.getPortNames();
     }
 
-    public boolean OpenPort(String portName) throws Exception
+    private boolean OpenPort(String portName) throws Exception
     {
         serialPort = new SerialPort(portName);
         try
@@ -72,52 +70,52 @@ public class Arduino extends Device {
             }
             catch (Exception ex)
             {
-                SendMessage("Wrong Port number or port is busy");
+               sendMessage("Wrong Port number or port is busy");
                 return false;
             }
         }
         else
         {
-            SendMessage("This COM port doesn't exist!");
+            sendMessage("This COM port doesn't exist!");
             return false;
         }
-        if (comPortExist)  SendMessage(serialPort.getPortName()+": opened");
+        if (comPortExist)  sendMessage(serialPort.getPortName()+": opened");
         return true;
     }
 
-    public boolean ClosePort ()
+    private boolean ClosePort ()
     {
         try
         {
             serialPort.closePort();
-            SendMessage(serialPort.getPortName()+": closed");
+            sendMessage(serialPort.getPortName()+": closed");
             return true;
         }
         catch (Exception ex)
         {
-            SendMessage(ex.getLocalizedMessage());
+            sendMessage(ex.getLocalizedMessage());
             return false;
         }
     }
 
-    public boolean DigitalWrite(int pin, boolean value)
+    private boolean DigitalWrite(int pin, boolean value)
     {
        try {
            String message=arduinoID+"DO"+FillStringByZeros(pin,2)+(value ? 1 : 0);
            serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
            String answer = "";
            while (!answer.contains("\n")) answer+=(new String(serialPort.readBytes(1)));
-           if (answer.contains("SETTED")) SendMessage((value) ? "HIGH" : "LOW"+" on pin "+pin+" is set");
+           if (answer.contains("SETTED"))sendMessage((value) ? "HIGH" : "LOW"+" on pin "+pin+" is set");
            return (answer.contains("SETTED"));
        }
        catch (Exception e)
        {
-           SendMessage(value+"on pin "+pin+" is not set");
+           sendMessage(value+"on pin "+pin+" is not set");
            return false;
        }
     }
 
-    public boolean DigitalRead(int pin) throws Exception
+    private boolean DigitalRead(int pin) throws Exception
     {
             String message=arduinoID+"DI"+FillStringByZeros(pin,2);
             serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
@@ -135,14 +133,14 @@ public class Arduino extends Device {
             else
             {
                 if (answer.contains("ERROR"))
-                    SendMessage("pin "+pin+" doesn't exist");
+                    sendMessage("pin "+pin+" doesn't exist");
                 else
-                    SendMessage("CheckSum is not correct. Check the wires!");
+                    sendMessage("CheckSum is not correct. Check the wires!");
             }
             return false;
     }
 
-    public boolean AnalogWrite(int pin, int value)
+    private boolean AnalogWrite(int pin, int value)
     {
         try {
             String message=arduinoID+"AO"+FillStringByZeros(pin,2)+FillStringByZeros(value*51, 4);
@@ -152,18 +150,18 @@ public class Arduino extends Device {
             {
                 answer+=(new String(serialPort.readBytes(1)));
             }
-            if (answer.contains("SETTED")) SendMessage(value+" on pin "+pin+" is set");;
+            if (answer.contains("SETTED")) sendMessage(value+" on pin "+pin+" is set");;
             return (answer.contains("SETTED"));
         }
         catch (Exception e)
         {
-            SendMessage(value+"on pin "+pin+" is not set");
+            sendMessage(value+"on pin "+pin+" is not set");
             return false;
         }
 
     }
 
-    public double AnalogRead(int pin) throws Exception
+    private double AnalogRead(int pin) throws Exception
     {
             String message=arduinoID+"AI"+FillStringByZeros(pin,2);
             serialPort.writeBytes((message+FillStringByZeros(CheckSum(message),3)+"\n").getBytes());
@@ -180,9 +178,9 @@ public class Arduino extends Device {
             }
             else
             {
-                if (answer.contains("ERROR")) SendMessage("pin "+pin+" doesn't exist");
+                if (answer.contains("ERROR")) sendMessage("pin "+pin+" doesn't exist");
                 else
-                    SendMessage("CheckSum is not correct. Check the wires!");
+                    sendMessage("CheckSum is not correct. Check the wires!");
             }
             return -1;
     }
@@ -206,12 +204,11 @@ public class Arduino extends Device {
         return (checkSum % 256);
     }
 
-    //for commandline
 
+    //for commandline
 
     @Override
     public HashMap<String, String> getCommands() {
-        HashMap<String, String> commands = new HashMap<>();
         commands.put("ports", "shows available COM port's names");
         commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
         commands.put("dwrite", "Write on Arduino digital port in form: DO $pin number$ $value(0,1)$");
@@ -224,9 +221,9 @@ public class Arduino extends Device {
     }
 
     @Override
-    public String RunCommand(String someCommand) {
+    public String runCommand(Device device, String someCommand) {
         someCommand = replaceAliasByCommand(someCommand);
-        String[] command = CommandToStringArray(someCommand);
+        String[] command = commandToStringArray(someCommand);
        try {
            switch (command[0])
            {
@@ -236,19 +233,19 @@ public class Arduino extends Device {
                    String[] s = ShowAvailableCOMPorts();
                    for (String value : s) message+=(value + " ");
                    //message+="\n";
-                   SendMessage(message);
+                   sendMessage(message);
                }
                break;
                case "open" :
                {
-                   if (command[1].equals("")) SendMessage("Enter COM port name as an option");
+                   if (command[1].equals("")) sendMessage("Enter COM port name as an option");
                    else OpenPort(command[1]);
                }
                break;
                case "dwrite" :
                {
                    if (command[1].equals("") || command[2].equals(" "))
-                       SendMessage("Enter pin number and value (0,1) as an option");
+                       sendMessage("Enter pin number and value (0,1) as an option");
                    else
                    {
                        DigitalWrite(Integer.parseInt(command[1]), command[2].equals("1"));
@@ -259,25 +256,25 @@ public class Arduino extends Device {
                {
 
                    if (command[1].equals(""))
-                       SendMessage("Enter pin number as an option");
-                   else SendMessage(""+DigitalRead(Integer.parseInt(command[1])));
+                       sendMessage("Enter pin number as an option");
+                   else sendMessage(""+DigitalRead(Integer.parseInt(command[1])));
                }
                break;
-               case "awrite" : if (command[1].equals("")||command[2].equals("")) SendMessage("Enter pin number and value (0-5) as an option");
+               case "awrite" : if (command[1].equals("")||command[2].equals("")) sendMessage("Enter pin number and value (0-5) as an option");
                else AnalogWrite(Integer.parseInt(command[1]),Integer.parseInt(command[2]));
                    break;
-               case "aread" :  if (command[1].equals("")) SendMessage("Enter pin number as an option");
-               else SendMessage(""+AnalogRead(Integer.parseInt(command[1])));
+               case "aread" :  if (command[1].equals("")) sendMessage("Enter pin number as an option");
+               else sendMessage(""+AnalogRead(Integer.parseInt(command[1])));
                    break;
                case "close" : ClosePort();
-               case "alias" : AddAlias(command[1], command[2]);
+               case "alias" : addAlias(command[1], command[2]);
                    break;
            }
 
        }
        catch (Exception e)
        {
-           SendMessage(e.getLocalizedMessage());
+           sendMessage(e.getLocalizedMessage());
        }
 
        String returnMessage = "";
@@ -285,35 +282,15 @@ public class Arduino extends Device {
        return returnMessage;
     }
 
-    @Override
-    public String[] CommandToStringArray(String command) {
-        return super.CommandToStringArray(command);
-    }
+
 
     private ArrayList<String> messageList = new ArrayList<>();
+
     @Override
-    public void SendMessage(String message)
+    public void sendMessage(String message)
     {
         messageList.add(message);
     }
 
-    @Override
-    public boolean AddAlias(String alias, String command) {
-        return super.AddAlias(alias, command);
-    }
 
-    @Override
-    public String replaceAliasByCommand(String alias) {
-        return super.replaceAliasByCommand(alias);
-    }
-
-    @Override
-    public HashMap<String, String> getAliases() {
-        return super.getAliases();
-    }
-
-    @Override
-    public String GetDeviceName() {
-        return deviceName;
-    }
 }

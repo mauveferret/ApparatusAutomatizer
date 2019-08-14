@@ -14,7 +14,7 @@ public class Main {
         terminal.AddDevice(arduino);
         String command = scanner.nextLine();
         while (!command.equals("exit")) {
-            terminal.LaunchCommand(command, false);
+            terminal.launchCommand(command, false);
             command = scanner.nextLine();
         }
     }

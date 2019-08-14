@@ -8,16 +8,16 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class Terminal extends Device {
-    public HashMap<String, String> commands = new HashMap<>();
-    //key == alias, value == command
-    public HashMap<String,String> aliases = new HashMap<>();
+
+
     //needs to send some command to its owner through LaunchCommand
     private HashMap<Device, HashMap<String, String>> commandMap = new HashMap<>();
-
     //key - device name, value - its object
     private HashMap<String, Device> deviceMap = new HashMap<>();
+    //key == deviceCommand, value == device
+    private HashMap<String,Device> deviceCommandMap= new HashMap<>();
+
     private  ArrayList<String> help = new ArrayList<>();
-    private SortedSet<String> commandSet = new TreeSet<>();
 
 
     public Terminal(String loadFromFile, String path)
@@ -33,25 +33,27 @@ public class Terminal extends Device {
             path = Terminal.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"commands.txt";
             System.out.println(path);
             BufferedReader reader = new BufferedReader(new FileReader(path));
-            while (reader.ready()) LaunchCommand(reader.readLine(), true);
+            while (reader.ready()) launchCommand(reader.readLine(), true);
             reader.close();
         }
         catch (Exception e)
         {
-            SendMessage("File not Found");
+            sendMessage("File not Found");
         }
     }
 
-    public void AddDevice(Device someDevice) {
+    void AddDevice(Device someDevice) {
         commandMap.put(someDevice, someDevice.getCommands());
-        for (String str : someDevice.getCommands().keySet())
+        deviceMap.put(someDevice.getDeviceName(),someDevice);
+        deviceCommandMap.put(someDevice.getDeviceName(), someDevice);
+       /* for (String str : someDevice.getCommands().keySet())
         {
             if (!commandSet.add(str))
-                SendMessage("WARNING: Command "+str +" is used by several devices");
+                sendMessage("WARNING: Command "+str +" is used by several devices");
         }
-        deviceMap.put(someDevice.GetDeviceName(),someDevice);
+        */
 
-        help.add("_____________"+someDevice.GetDeviceName()+"_________");
+        help.add("_____________"+someDevice.getDeviceName()+"_________");
         for (String s : someDevice.getCommands().keySet())
         {
             help.add(s+"   "+someDevice.getAliases().get(s)+" "+someDevice.getCommands().get(s));
@@ -60,31 +62,34 @@ public class Terminal extends Device {
 
 
 
-    public Device GetDevice(String deviceName)
+    public Device getDevice(String deviceName)
     {
         return deviceMap.get(deviceName);
     }
 
-    public void LaunchCommand(String command, boolean silentMode)  {
+    void launchCommand(String command, boolean silentMode)  {
 
 
             for (Device device : commandMap.keySet())
                 for (String deviceCommand : commandMap.get(device).keySet())
-                    if (CommandToStringArray(command)[0].equals(deviceCommand))
+                    //if (CommandToStringArray(command)[0].equals(deviceCommand))
                         if (silentMode)
                         {
-                            device.RunCommand(command);
+                            device.runCommand(Terminal.this,command);
                             break;
                         }
                         else
-                            SendMessage(device.RunCommand(command));
+                        {
+                            sendMessage(device.runCommand(Terminal.this, command));
+                            break;
+                        }
     }
 
 
     //doesn't return SendMessage and it is printing!!!
     @Override
-    String RunCommand(String someCommand) {
-        String[] command = CommandToStringArray(someCommand);
+    String runCommand(Device device, String someCommand) {
+        String[] command = commandToStringArray(someCommand);
         try {
             switch (command[0])
             {
@@ -94,9 +99,7 @@ public class Terminal extends Device {
                 case "load":
                     LoadCommandsFromFile(command[1]);
                     break;
-                case "alias":
-                    AddAlias(command[1], command[2]);
-                    break;
+
                 case "wait":
                     Wait(Integer.parseInt(command[1]));
                     break;
@@ -104,13 +107,13 @@ public class Terminal extends Device {
         }
         catch (Exception e)
         {
-            SendMessage(e.getLocalizedMessage());
+            sendMessage(e.getLocalizedMessage());
         }
         return "";
     }
 
     @Override
-    public void SendMessage(String message) {
+    public void sendMessage(String message) {
         System.out.println(message);
     }
 
@@ -124,15 +127,10 @@ public class Terminal extends Device {
         return commands;
     }
 
-    @Override
-    String GetDeviceName() {
-        return "Terminal";
-    }
-
 
     private void ShowHelp()
     {
-        for (String s : help) SendMessage(s);
+        for (String s : help) sendMessage(s);
     }
 
     //doesn't work !!!!!!!!!!!
@@ -144,27 +142,7 @@ public class Terminal extends Device {
         }
         catch (Exception e)
         {
-            SendMessage(e.getLocalizedMessage());
+            sendMessage(e.getLocalizedMessage());
         }
-    }
-
-    @Override
-    public boolean AddAlias(String alias, String command) {
-        return super.AddAlias(alias, command);
-    }
-
-    @Override
-    public String replaceAliasByCommand(String alias) {
-        return super.replaceAliasByCommand(alias);
-    }
-
-    @Override
-    public HashMap<String, String> getAliases() {
-        return super.getAliases();
-    }
-
-    @Override
-    public String[] CommandToStringArray(String command) {
-        return super.CommandToStringArray(command);
     }
 }
