@@ -1,5 +1,8 @@
 package ru.mauveferret;
 
+import jssc.SerialPort;
+import jssc.SerialPortList;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -14,6 +17,9 @@ public abstract  class Device {
     //....???
     abstract public void sendMessage(String message);
 
+
+    //device serial port
+    SerialPort serialPort;
     //it is used in help
     private String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
     //some String from which your appeal in Terminal starts with
@@ -106,4 +112,71 @@ public abstract  class Device {
         }
         return commandArray;
     }
+
+    String[] showAvailableCOMPorts()
+    {
+        return SerialPortList.getPortNames();
+    }
+
+    boolean openPort(String portName)
+    {
+        serialPort = new SerialPort(portName);
+
+        try
+        {
+            serialPort.closePort();
+        }
+        catch (Exception ignored) {}
+        String[] portList = SerialPortList.getPortNames();
+        boolean comPortExist = false;
+        //check if the portName exist
+        for (String s: portList)
+            if (portName.equals(s))
+            {
+                comPortExist = true;
+                break;
+            }
+
+        if (comPortExist)
+        {
+            try
+            {
+                serialPort.openPort();
+                serialPort.setParams(SerialPort.BAUDRATE_9600,
+                        SerialPort.DATABITS_8,
+                        SerialPort.STOPBITS_1,
+                        SerialPort.PARITY_NONE);
+                //don't know why, but arduino  need these 2000
+                Thread.sleep(2000);
+            }
+            catch (Exception ex)
+            {
+                sendMessage("Wrong Port number or port is busy");
+                return false;
+            }
+        }
+        else
+        {
+            sendMessage("This COM port doesn't exist!");
+            return false;
+        }
+        if (comPortExist)  sendMessage(serialPort.getPortName()+": opened");
+        return true;
+    }
+
+     boolean ClosePort ()
+    {
+        try
+        {
+            serialPort.closePort();
+            sendMessage(serialPort.getPortName()+": closed");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            sendMessage(ex.getLocalizedMessage());
+            return false;
+        }
+    }
+
 }

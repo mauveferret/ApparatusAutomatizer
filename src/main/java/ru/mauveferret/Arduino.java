@@ -4,6 +4,7 @@ import jssc.SerialPortList;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /*
  must be accompanied by special Arduino driver which is made
@@ -15,7 +16,7 @@ public class Arduino extends Device {
 
 
     private String arduinoID="001";
-    private SerialPort serialPort;
+
 
     public Arduino(){}
 
@@ -27,77 +28,12 @@ public class Arduino extends Device {
     public Arduino(int arduinoNumber, String comPortName, String deviceName, String deviceCommand) throws Exception
     {
         arduinoID = fillStringByZeros(arduinoNumber, 3);
-        OpenPort(comPortName);
+        openPort(comPortName);
         setDeviceName(deviceName);
         setDeviceCommand(deviceCommand);
     }
 
     //Arduino operations
-
-    private String[] showAvailableCOMPorts()
-    {
-        return SerialPortList.getPortNames();
-    }
-
-    private boolean OpenPort(String portName) throws Exception
-    {
-        serialPort = new SerialPort(portName);
-        try
-        {
-            serialPort.closePort();
-        }
-        catch (Exception ignored) {}
-        String[] portList = SerialPortList.getPortNames();
-        boolean comPortExist = false;
-        //check if the portName exist
-        for (String s: portList)
-            if (portName.equals(s))
-            {
-                comPortExist = true;
-                break;
-            }
-
-        if (comPortExist)
-        {
-            try
-            {
-                serialPort.openPort();
-                serialPort.setParams(SerialPort.BAUDRATE_9600,
-                        SerialPort.DATABITS_8,
-                        SerialPort.STOPBITS_1,
-                        SerialPort.PARITY_NONE);
-                //don't know why, but arduino  need these 2000
-                Thread.sleep(2000);
-            }
-            catch (Exception ex)
-            {
-               sendMessage("Wrong Port number or port is busy");
-                return false;
-            }
-        }
-        else
-        {
-            sendMessage("This COM port doesn't exist!");
-            return false;
-        }
-        if (comPortExist)  sendMessage(serialPort.getPortName()+": opened");
-        return true;
-    }
-
-    private boolean ClosePort ()
-    {
-        try
-        {
-            serialPort.closePort();
-            sendMessage(serialPort.getPortName()+": closed");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            sendMessage(ex.getLocalizedMessage());
-            return false;
-        }
-    }
 
     private boolean DigitalWrite(int pin, boolean value)
     {
@@ -240,7 +176,7 @@ public class Arduino extends Device {
                     break;
                     case "open": {
                         if (command[2].equals("")) sendMessage("Enter COM port name as an option");
-                        else sendMessage((OpenPort(command[2])) ? command[2]+" is opened" : command[2]+" isn't opened");
+                        else sendMessage((openPort(command[2])) ? command[2]+" is opened" : command[2]+" isn't opened");
                     }
                     break;
                     case "dwrite": {
