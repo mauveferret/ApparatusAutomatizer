@@ -7,7 +7,10 @@ import java.util.HashMap;
 
 public class ThyracontGauge extends Device {
 
-    private SerialPort serialPort;
+    private double pressureColumn1;
+    private double pressureColumn2;
+    private double pressureVessel;
+
 
     public ThyracontGauge(SerialPort serialPort, String deviceName, String deviceCommand) {
         this.serialPort = serialPort;
@@ -16,6 +19,25 @@ public class ThyracontGauge extends Device {
         setDeviceCommand(deviceCommand);
     }
 
+    //Getters
+
+    public double getPressureColumn1() {
+        return pressureColumn1;
+    }
+
+    public double getPressureColumn2() {
+        return pressureColumn2;
+    }
+
+    public double getPressureVessel() {
+        return pressureVessel;
+    }
+
+    //Com port related commands
+
+
+    //device commands
+
     @Override
     String runCommand(Device device, String someCommand) {
         return null;
@@ -23,7 +45,8 @@ public class ThyracontGauge extends Device {
 
     @Override
     HashMap<String, String> getCommands() {
-        commands.put("pressure", "measures pressure in mBar by some gauge in form: pressure $gauge number$ ");
+        commands.put("measure", "measures pressure in mBar by some gauge in form: measure $gauge number$ ");
+        commands.put("calibrate", "makes a calibration of the pirani or cold cathode in form: calibrate $type$");
         return commands;
     }
 
@@ -33,3 +56,4 @@ public class ThyracontGauge extends Device {
         messageList.add(message);
     }
 }
+

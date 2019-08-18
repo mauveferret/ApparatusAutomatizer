@@ -12,6 +12,8 @@ public class Terminal extends Device {
     //key == device name, value == device object
     private HashMap<String, Device> deviceMap = new HashMap<>();
 
+    GuardianAngel angel = new GuardianAngel();
+
     public HashMap<String, Device> getCommandMap() {
         return commandMap;
     }
@@ -82,16 +84,29 @@ public class Terminal extends Device {
 
     void launchCommand(String command, boolean silentMode)  {
 
-        String[] commandArray = commandToStringArray(command);
+        final String[] commandArray = commandToStringArray(command);
+        final String internalCommand = command;
         if (commandMap.containsKey(commandArray[0]))
         {
             if (silentMode)
             {
-                commandMap.get(commandArray[0]).runCommand(Terminal.this, command);
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
+                    }
+                }
+                );
             }
             else
             {
-                sendMessage(commandMap.get(commandArray[0]).runCommand(Terminal.this, command));
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        sendMessage(commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand));
+                    }
+                }
+                );
             }
 
         }
@@ -118,6 +133,13 @@ public class Terminal extends Device {
                 case "wait":
                     wait(Integer.parseInt(command[2]));
                     break;
+                case "angel":
+                {
+                    angel.setDevice(Terminal.this);
+                    angel.setDaemon(true);
+                    angel.setPriority(7);
+                    angel.start();
+                }
             }
         }
         catch (Exception e)
@@ -139,6 +161,7 @@ public class Terminal extends Device {
         commands.put("alias", "creates alias for some command in form:  alias  &alias name& $command name$");
         commands.put("exit", "stops program");
         commands.put("wait","wait for some ms in form: wait $ms$");
+        commands.put("angel", "launches a deamon which defeats devices in case of emergency");
         return commands;
     }
 
