@@ -1,6 +1,8 @@
 package ru.mauveferret;
 
-public class GuardianAngel extends Thread{
+import java.util.HashMap;
+
+public class GuardianAngel extends Device{
 
     /*
     used to check if the temperature and pressure conditions are comfortable
@@ -21,6 +23,21 @@ public class GuardianAngel extends Thread{
         {
             //?
         }
+
+    }
+
+    @Override
+    String runCommand(Device device, String someCommand) {
+        return null;
+    }
+
+    @Override
+    HashMap<String, String> getCommands() {
+        return null;
+    }
+
+    @Override
+    public void sendMessage(String message) {
 
     }
 }

@@ -7,7 +7,17 @@ import java.util.Arrays;
 import java.util.EventListener;
 import java.util.HashMap;
 
-public abstract  class Device {
+public abstract  class Device extends Thread{
+
+    //добавлен Thread. МОжно использовать для перманентного измерения давления!!!
+   /*
+   run ()
+   {
+  this.getpressure1(this.runcommand(pressure));
+   }
+    */
+
+
 
     //associates a command with a method the command dedicated to
     abstract String runCommand (Device device, String someCommand);

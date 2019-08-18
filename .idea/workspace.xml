@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="help works">
-      <change afterPath="$PROJECT_DIR$/.idea/ApparatusAutomatizer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mauveferret.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dgbulgadaryan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +141,7 @@
       <workItem from="1565963020843" duration="2073000" />
       <workItem from="1565966987757" duration="1341000" />
       <workItem from="1566067709287" duration="274000" />
-      <workItem from="1566121851066" duration="6681000" />
+      <workItem from="1566121851066" duration="7330000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -178,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565815368730</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="devices run commands in separate thread, guard added">
+      <created>1566135907740</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566135907740</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +202,7 @@
     <MESSAGE value="alias works, trying to make deviceCommandMap workable" />
     <MESSAGE value="help fixed, some problems remained" />
     <MESSAGE value="help works" />
-    <option name="LAST_COMMIT_MESSAGE" value="help works" />
+    <MESSAGE value="devices run commands in separate thread, guard added" />
+    <option name="LAST_COMMIT_MESSAGE" value="devices run commands in separate thread, guard added" />
   </component>
 </project>
