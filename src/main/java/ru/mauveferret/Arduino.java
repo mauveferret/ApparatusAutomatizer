@@ -14,6 +14,9 @@ import java.util.HashMap;
 public class Arduino extends Device {
 
 
+    //TODO list of pins status
+    private String[] digitalPins = new String[50];
+    private String[] analogPins = new String[50];
     //FIXME: does Jssc controls simultenous writingon arduino?
 
     private String arduinoID="001";
@@ -34,13 +37,23 @@ public class Arduino extends Device {
         setDeviceCommand(deviceCommand);
     }
 
+    //Getters and Setters
+
     public void setArduinoID(String arduinoID) {
         this.arduinoID = arduinoID;
     }
 
+    public String[] getDigitalPins() {
+        return digitalPins;
+    }
+
+    public String[] getAnalogPins() {
+        return analogPins;
+    }
+
     //Arduino operations
 
-    synchronized private boolean DigitalWrite(int pin, boolean value)
+    synchronized private boolean digitalWrite(int pin, boolean value)
     {
        try {
            String message=arduinoID+"DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
@@ -49,7 +62,7 @@ public class Arduino extends Device {
            if (answer.contains("SETTED"))
                sendMessage(((value) ? "HIGH" : "LOW")+" on pin "+pin+" is set");
            else
-               sendMessage("ERROR: pin number or the value is incorrect.");
+               if (!isReconnectActive()) sendMessage("ERROR: pin number is incorrect.");
            return (answer.contains("SETTED"));
        }
        catch (Exception e)
@@ -132,6 +145,11 @@ public class Arduino extends Device {
 
     private String fillStringByZeros(int value, int stringLength)
     {
+        /*
+        in case of "true" method returnes incorrect String
+        so its better to return "" so the arduino will surely send ERROR
+         */
+        if ((""+value).length()>stringLength) return "";
         StringBuilder returnString = new StringBuilder();
         for (int i=0; i<(stringLength-String.valueOf(value).length()); i++) returnString.append("0");
         returnString.append(value);
@@ -191,11 +209,11 @@ public class Arduino extends Device {
     @Override
     public void runCommand(Device device, String someCommand) {
 
-        System.out.println("3 "+Thread.currentThread().getName());
-
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
+            setReceivedCommand(someCommand);
+            setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             switch (command[1]) {
                 case "ports": {
@@ -218,9 +236,10 @@ public class Arduino extends Device {
                     }
                     else
                         {
-                            boolean isWritten=false;
-                            isWritten = DigitalWrite(Integer.parseInt(command[2]), command[3].equals("1"));
-                            //sendMessage((isWritten) ? command[3]+"is setted" : command[3]+"isn't setted");
+                            if (command[3].equals("1") || command[3].equals("0"))
+                                digitalWrite(Integer.parseInt(command[2]), command[3].equals("1"));
+                            else
+                                sendMessage("Value is incorrect (should be 0 or 1).");
                         }
                 }
                 break;
@@ -232,7 +251,6 @@ public class Arduino extends Device {
                         }
                         else
                         {
-
                             sendMessage("" + digitalRead(Integer.parseInt(command[2])));
                         }
                     }

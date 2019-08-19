@@ -1,8 +1,6 @@
 package ru.mauveferret;
 
-import jssc.SerialPort;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ThyracontGauge extends Device {
@@ -12,8 +10,7 @@ public class ThyracontGauge extends Device {
     private double pressureVessel;
 
 
-    public ThyracontGauge(SerialPort serialPort, String deviceName, String deviceCommand) {
-        this.serialPort = serialPort;
+    public ThyracontGauge( String deviceName, String deviceCommand) {
         setDeviceName(deviceName);
         setDeviceCommand(deviceCommand);
     }
@@ -42,6 +39,8 @@ public class ThyracontGauge extends Device {
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
+            setReceivedCommand(someCommand);
+            setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             //switch
         }

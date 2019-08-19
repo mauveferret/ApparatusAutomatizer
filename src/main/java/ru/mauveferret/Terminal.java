@@ -182,11 +182,15 @@ public class Terminal extends Device {
     }
 
     @Override
-    void runCommand(Device device, String someCommand) {
+    public void runCommand(Device device, String someCommand) {
+
         String[] command = commandToStringArray(someCommand);
-        try {
-            switch (command[1])
-            {
+        if (commandExists(command[1]))
+        {
+            setReceivedCommand(someCommand);
+            setReceivedDevice(device);
+            command[1] = replaceAliasByCommand(command[1]);
+            switch (command[1]) {
                 case "help":
                     showHelp();
                     break;
@@ -201,9 +205,9 @@ public class Terminal extends Device {
                 break;
             }
         }
-        catch (Exception e)
+        else
         {
-            sendMessage(e.getLocalizedMessage());
+            sendMessage("command \""+command[1]+"\" doesn't exist ");
         }
     }
 }

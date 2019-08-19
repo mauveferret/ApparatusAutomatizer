@@ -10,7 +10,10 @@ public class LeyboldTMP extends Device {
     private double current;
 
     public LeyboldTMP(){}
+
     public LeyboldTMP(String comPortName) {
+
+        //TODO add device name and device command ike in gauges
         openPort(comPortName);
     }
 
@@ -43,6 +46,8 @@ public class LeyboldTMP extends Device {
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
+            setReceivedCommand(someCommand);
+            setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             //switch
         }

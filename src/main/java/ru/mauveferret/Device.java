@@ -25,6 +25,9 @@ public abstract  class Device extends Thread{
     SerialPort serialPort;
     //used in openComPort to prevent constant error messages printing
     private boolean isReconnectActive = false;
+    //used in reconnectmethod to rerun command which cause reconnect
+    private String receivedCommand = "";
+    private Device receivedDevice;
     //it is used in help
     private String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
     //some String from which your appeal in Terminal starts with
@@ -35,6 +38,18 @@ public abstract  class Device extends Thread{
     private HashMap<String,String> aliases = new HashMap<>();
 
     //Setters and Getters
+
+    public boolean isReconnectActive() {
+        return isReconnectActive;
+    }
+
+    public void setReceivedDevice(Device receivedDevice) {
+        this.receivedDevice = receivedDevice;
+    }
+
+    public void setReceivedCommand(String receivedCommand) {
+        this.receivedCommand = receivedCommand;
+    }
 
     public void setDeviceCommand(String deviceCommand) {
         this.deviceCommand = deviceCommand;
@@ -175,7 +190,7 @@ public abstract  class Device extends Thread{
         try
         {
             serialPort.closePort();
-            sendMessage(serialPort.getPortName()+" is closed");
+            if (!isReconnectActive) sendMessage(serialPort.getPortName()+" is closed");
             return true;
         }
         catch (SerialPortException ex)
@@ -192,13 +207,15 @@ public abstract  class Device extends Thread{
         try {
             String comPortName = serialPort.getPortName();
             sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
-            closePort();
             isReconnectActive=true;
+            closePort();
             while (!serialPort.isOpened()) {
                 openPort(comPortName);
             }
             sendMessage("Reconnected.");
             isReconnectActive=false;
+            //rerunning command which caused the reconnection
+            runCommand(receivedDevice,receivedCommand);
         }
         catch (NullPointerException e)
         {

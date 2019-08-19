@@ -11,6 +11,11 @@ public class Main {
         Terminal terminal = new Terminal("args[0]", "args[1]");
         Arduino arduino = new Arduino(1);
         GuardianAngel angel = new GuardianAngel("ang");
+        LeyboldTMP leyboldTMP = new LeyboldTMP();
+        leyboldTMP.setDeviceName("TMP");
+        ThyracontGauge thyracontGauge = new ThyracontGauge("gauge", "gag");
+        terminal.AddDevice(thyracontGauge);
+        terminal.AddDevice(leyboldTMP);
         terminal.AddDevice(terminal);
         terminal.AddDevice(arduino);
         terminal.AddDevice(angel);
