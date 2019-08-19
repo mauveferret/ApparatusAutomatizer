@@ -2,14 +2,12 @@ package ru.mauveferret;
 
 import jssc.*;
 
-import javax.sql.rowset.serial.SerialException;
 import java.util.Arrays;
-import java.util.EventListener;
 import java.util.HashMap;
 
 public abstract  class Device extends Thread{
 
-    //добавлен Thread. МОжно использовать для перманентного измерения давления!!!
+    //TODO добавлен Thread. МОжно использовать для перманентного измерения давления!!!
    /*
    run ()
    {
@@ -17,22 +15,16 @@ public abstract  class Device extends Thread{
    }
     */
 
-
-
     //associates a command with a method the command dedicated to
-    abstract String runCommand (Device device, String someCommand);
-
+    abstract void runCommand (Device device, String someCommand);
     //actually not only returns a commands Map, but also forms it
     abstract  HashMap<String, String> getCommands();
 
-    //....???
-    abstract public void sendMessage(String message);
 
-
-    //device serial port
+    //device's serial port
     SerialPort serialPort;
-    //used to check it before sending any COM related command
-    boolean isPortOpened = false;
+    //used in openComPort to prevent constant error messages printing
+    private boolean isReconnectActive = false;
     //it is used in help
     private String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
     //some String from which your appeal in Terminal starts with
@@ -41,6 +33,8 @@ public abstract  class Device extends Thread{
     HashMap<String, String> commands = new HashMap<>();
     //key == alias, value == command which is represented by the alias
     private HashMap<String,String> aliases = new HashMap<>();
+
+    //Setters and Getters
 
     public void setDeviceCommand(String deviceCommand) {
         this.deviceCommand = deviceCommand;
@@ -63,7 +57,7 @@ public abstract  class Device extends Thread{
         return aliases;
     }
 
-    boolean exist(String command)
+    boolean commandExists(String command)
     {
         return (commands.containsKey(command)||aliases.containsKey(command));
     }
@@ -111,8 +105,8 @@ public abstract  class Device extends Thread{
 
     String[] commandToStringArray(String command)
     {
-        command = command.replaceAll("\\s+"," ");
-        command = (command.charAt(0)==' ') ? command.substring(1) : command;
+        command = command.replaceAll("\\s+"," ").trim();
+        //command = (command.charAt(0)==' ') ? command.substring(1) : command;
         String[] commandArray = new String[10];
         Arrays.fill(commandArray, "");
         int i=0;
@@ -126,68 +120,97 @@ public abstract  class Device extends Thread{
         return commandArray;
     }
 
-    String[] showAvailableCOMPorts()
+    //COM port related commands
+
+    synchronized String[] showAvailableCOMPorts()
     {
         return SerialPortList.getPortNames();
     }
 
-    boolean openPort(String portName)
+    synchronized boolean openPort(String portName)
     {
+        try {
+            serialPort.closePort();
+        } catch (Exception ignored) {
+            //if port is opened - we close it, otherwise, Exception happened (ignored)
+        }
+        //System.out.println(Thread.currentThread().getName());
         serialPort = new SerialPort(portName);
-         try {
-                serialPort.closePort();
-            } catch (Exception ignored) {
-                //if port is opened - we close it, otherwise, Exception happened (ignored)
+        String[] portList = SerialPortList.getPortNames();
+        boolean comPortExist = false;
+        //check if the portName exist
+        for (String s : portList)
+            if (portName.equals(s)) {
+                comPortExist = true;
+                break;
             }
 
-            String[] portList = SerialPortList.getPortNames();
-            boolean comPortExist = false;
-            //check if the portName exist
-            for (String s : portList)
-                if (portName.equals(s)) {
-                    comPortExist = true;
-                    break;
-                }
-
-            if (comPortExist)
-            {
-                try {
-                    serialPort.openPort();
-                    serialPort.setParams(SerialPort.BAUDRATE_9600,
-                            SerialPort.DATABITS_8,
-                            SerialPort.STOPBITS_1,
-                            SerialPort.PARITY_NONE);
-                    //!--it shouldn't exist in extands method!
-                    //don't know why, but arduino  need these 2000
-                    Thread.sleep(2000);
-                } catch (Exception ex) {
-                    sendMessage("Wrong Port number or port is busy");
-                    return false;
-                }
-            }
-            else {
-                sendMessage("This COM port doesn't exist!");
+        if (comPortExist)
+        {
+            try {
+                serialPort.openPort();
+                serialPort.setParams(SerialPort.BAUDRATE_9600,
+                        SerialPort.DATABITS_8,
+                        SerialPort.STOPBITS_1,
+                        SerialPort.PARITY_NONE);
+                //!--it shouldn't exist in extands method!
+                //don't know why, but arduino  need these 2000
+                //Thread.sleep(2000);
+            } catch (Exception ex) {
+                sendMessage("Port is busy");
                 return false;
             }
-            sendMessage(serialPort.getPortName() + ": opened");
-            isPortOpened=true;
-            return true;
+        }
+        else {
+            if (!isReconnectActive)
+                sendMessage("This COM port doesn't exist!");
+            return false;
+        }
+        sendMessage(serialPort.getPortName() + " is opened");
+        return true;
     }
 
-     boolean ClosePort ()
+     synchronized boolean closePort()
     {
         try
         {
             serialPort.closePort();
-            sendMessage(serialPort.getPortName()+": closed");
-            isPortOpened=false;
+            sendMessage(serialPort.getPortName()+" is closed");
             return true;
         }
-        catch (Exception ex)
+        catch (SerialPortException ex)
         {
             sendMessage(ex.getLocalizedMessage());
             return false;
         }
+    }
+
+    synchronized void reconnect()
+    {
+        //TODO manual desactivation, threadlist
+
+        try {
+            String comPortName = serialPort.getPortName();
+            sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
+            closePort();
+            isReconnectActive=true;
+            while (!serialPort.isOpened()) {
+                openPort(comPortName);
+            }
+            sendMessage("Reconnected.");
+            isReconnectActive=false;
+        }
+        catch (NullPointerException e)
+        {
+            isReconnectActive=false;
+            sendMessage("COM port name isn't set.");
+        }
+    }
+
+    public void sendMessage(String message) {
+        System.out.println(message);
+
+        //TODO logging to file with time labels
     }
 
 }

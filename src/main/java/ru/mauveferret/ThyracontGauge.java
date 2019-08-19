@@ -14,7 +14,6 @@ public class ThyracontGauge extends Device {
 
     public ThyracontGauge(SerialPort serialPort, String deviceName, String deviceCommand) {
         this.serialPort = serialPort;
-        this.messageList = messageList;
         setDeviceName(deviceName);
         setDeviceCommand(deviceCommand);
     }
@@ -36,11 +35,20 @@ public class ThyracontGauge extends Device {
     //Com port related commands
 
 
-    //device commands
 
+    //for commandline
     @Override
-    String runCommand(Device device, String someCommand) {
-        return null;
+    void runCommand(Device device, String someCommand) {
+        String[] command = commandToStringArray(someCommand);
+        if (commandExists(command[1]))
+        {
+            command[1] = replaceAliasByCommand(command[1]);
+            //switch
+        }
+        else
+        {
+            sendMessage("command \""+command[1]+"\" doesn't exist ");
+        }
     }
 
     @Override
@@ -50,10 +58,5 @@ public class ThyracontGauge extends Device {
         return commands;
     }
 
-    private ArrayList<String> messageList = new ArrayList<>();
-    @Override
-    public void sendMessage(String message) {
-        messageList.add(message);
-    }
 }
 

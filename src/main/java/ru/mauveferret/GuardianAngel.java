@@ -11,25 +11,25 @@ public class GuardianAngel extends Device{
     works as thread
      */
 
-    Device device;
 
-    public void setDevice(Device device) {
-        this.device = device;
+    GuardianAngel(String angelCommand) {
+        setDeviceCommand(angelCommand);
+        setDeviceName("angel");
     }
+
+
+    //command related methods
 
     @Override
     public void run() {
         while (true)
         {
-            //?
+            // FIXME so...?
         }
 
     }
 
-    @Override
-    String runCommand(Device device, String someCommand) {
-        return null;
-    }
+    //for commandline
 
     @Override
     HashMap<String, String> getCommands() {
@@ -37,7 +37,16 @@ public class GuardianAngel extends Device{
     }
 
     @Override
-    public void sendMessage(String message) {
-
+    void runCommand(Device device, String someCommand) {
+        String[] command = commandToStringArray(someCommand);
+        if (commandExists(command[1]))
+        {
+            command[1] = replaceAliasByCommand(command[1]);
+            //switch
+        }
+        else
+        {
+            sendMessage("command \""+command[1]+"\" doesn't exist ");
+        }
     }
 }

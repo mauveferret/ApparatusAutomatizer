@@ -2,17 +2,30 @@ package ru.mauveferret;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 
+/*
+needs to send some command to its owner through LaunchCommand
+also realises help command
+ */
 public class Terminal extends Device {
 
-    //needs to send some command to its owner through LaunchCommand
+
     //key == deviceCommand, value == device object
     private HashMap<String, Device> commandMap = new HashMap<>();
     //key == device name, value == device object
     private HashMap<String, Device> deviceMap = new HashMap<>();
 
-    GuardianAngel angel = new GuardianAngel();
+    ArrayList<Thread> threads = new ArrayList<>();
+
+    public Terminal(String loadFromFile, String path)
+    {
+        //load scrypt
+        if (loadFromFile.equals("l")) LoadCommandsFromFile(path);
+    }
+
+    //Getters
 
     public HashMap<String, Device> getCommandMap() {
         return commandMap;
@@ -22,14 +35,16 @@ public class Terminal extends Device {
         return deviceMap;
     }
 
-    public Terminal(String loadFromFile, String path)
+    public Device getDevice(String deviceName)
     {
-        //load scrypt
-        if (loadFromFile.equals("l")) LoadCommandsFromFile(path);
+        return deviceMap.get(deviceName);
     }
 
-    public void LoadCommandsFromFile(String path)
+    //commands
+
+    private void LoadCommandsFromFile(String path)
     {
+        //TODO needs improvement. not bufferet but scanner?
         try {
 
             path = Terminal.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"commands.txt";
@@ -45,6 +60,7 @@ public class Terminal extends Device {
     }
 
     void AddDevice(Device someDevice) {
+
         someDevice.getCommands();
 
         // get commands should not be launched several times!
@@ -74,97 +90,6 @@ public class Terminal extends Device {
         }
         */
     }
-
-
-
-    public Device getDevice(String deviceName)
-    {
-        return deviceMap.get(deviceName);
-    }
-
-    void launchCommand(String command, boolean silentMode)  {
-
-        final String[] commandArray = commandToStringArray(command);
-        final String internalCommand = command;
-        if (commandMap.containsKey(commandArray[0]))
-        {
-            if (silentMode)
-            {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
-                    }
-                }
-                );
-            }
-            else
-            {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        sendMessage(commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand));
-                    }
-                }
-                );
-            }
-
-        }
-        else
-        {
-            sendMessage("Command \""+commandArray[0]+"\" not found.");
-        }
-    }
-
-
-    @Override
-    String runCommand(Device device, String someCommand) {
-        String[] command = commandToStringArray(someCommand);
-        try {
-            switch (command[1])
-            {
-                case "help":
-                    showHelp();
-                    break;
-                case "load":
-                    LoadCommandsFromFile(command[2]);
-                    break;
-
-                case "wait":
-                    wait(Integer.parseInt(command[2]));
-                    break;
-                case "angel":
-                {
-                    angel.setDevice(Terminal.this);
-                    angel.setDaemon(true);
-                    angel.setPriority(7);
-                    angel.start();
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            sendMessage(e.getLocalizedMessage());
-        }
-        return "";
-    }
-
-    @Override
-    public void sendMessage(String message) {
-        System.out.println(message);
-    }
-
-    @Override
-    HashMap<String, String> getCommands() {
-        commands.put("help", "this page");
-        commands.put("load", "load command scrypt from the file in form: load $file_path$");
-        commands.put("alias", "creates alias for some command in form:  alias  &alias name& $command name$");
-        commands.put("exit", "stops program");
-        commands.put("wait","wait for some ms in form: wait $ms$");
-        commands.put("angel", "launches a deamon which defeats devices in case of emergency");
-        return commands;
-    }
-
 
     private void showHelp()
     {
@@ -209,23 +134,76 @@ public class Terminal extends Device {
         sendMessage(help);
     }
 
-    //doesn't work !!!!!!!!!!!
-    private void wait(int ms)
-    {
-        try
-        {
-            Thread.currentThread().wait(ms);
-        }
-        catch (Exception e)
-        {
-            sendMessage(e.getLocalizedMessage());
-        }
-    }
 
     private String fillStringByZeros(String value, int stringLength)
     {
         String returnString = "";
         for (int i=0; i<(stringLength-String.valueOf(value).length()); i++) returnString+=" ";
         return  returnString;
+    }
+
+
+    //for commandline
+
+    void launchCommand(String command, final boolean silentMode)  {
+
+        //TODO probably while with Scanner is better here than in main?
+
+        final String[] commandArray = commandToStringArray(command);
+        final String internalCommand = command;
+        if (commandMap.containsKey(commandArray[0]))
+        {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    threads.add(Thread.currentThread());
+                    System.out.println(Thread.currentThread().getName());
+                    commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
+                   // TODO silentmode
+                }
+
+            }
+            ).start();
+        }
+        else
+        {
+            sendMessage("Command \""+commandArray[0]+"\" not found.");
+        }
+    }
+
+    @Override
+    HashMap<String, String> getCommands() {
+        commands.put("help", "this page");
+        commands.put("load", "load command scrypt from the file in form: load $file_path$");
+        commands.put("alias", "creates alias for some command in form:  alias  &alias name& $command name$");
+       // commands.put("exit", "stops program");
+        commands.put("threads","");
+        return commands;
+    }
+
+    @Override
+    void runCommand(Device device, String someCommand) {
+        String[] command = commandToStringArray(someCommand);
+        try {
+            switch (command[1])
+            {
+                case "help":
+                    showHelp();
+                    break;
+                case "load":
+                    LoadCommandsFromFile(command[2]);
+                    break;
+
+                case "threads":
+                {
+                    for (Thread thread: threads) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
+                }
+                break;
+            }
+        }
+        catch (Exception e)
+        {
+            sendMessage(e.getLocalizedMessage());
+        }
     }
 }

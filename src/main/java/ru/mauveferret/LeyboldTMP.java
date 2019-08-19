@@ -39,8 +39,17 @@ public class LeyboldTMP extends Device {
     //Device related commands
 
     @Override
-    String runCommand(Device device, String someCommand) {
-        return null;
+    void runCommand(Device device, String someCommand) {
+        String[] command = commandToStringArray(someCommand);
+        if (commandExists(command[1]))
+        {
+            command[1] = replaceAliasByCommand(command[1]);
+            //switch
+        }
+        else
+        {
+            sendMessage("command \""+command[1]+"\" doesn't exist ");
+        }
     }
 
     @Override
@@ -51,10 +60,5 @@ public class LeyboldTMP extends Device {
         commands.put("frequency", "...");
 
         return commands;
-    }
-
-    @Override
-    public void sendMessage(String message) {
-
     }
 }
