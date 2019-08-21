@@ -19,10 +19,15 @@ public class Terminal extends Device {
 
     ArrayList<Thread> threads = new ArrayList<>();
 
-    public Terminal(String loadFromFile, String path)
+    Terminal(String loadFromFile, String path)
     {
         //load scrypt
         if (loadFromFile.equals("l")) LoadCommandsFromFile(path);
+    }
+
+    //is needed because of the superclass but ot used because Terminal is the virtual device with no configuration
+    public Terminal(String path) {
+        super(path);
     }
 
     //Getters
@@ -59,7 +64,7 @@ public class Terminal extends Device {
         }
     }
 
-    void AddDevice(Device someDevice) {
+    void addDevice(Device someDevice) {
 
         someDevice.getCommands();
 

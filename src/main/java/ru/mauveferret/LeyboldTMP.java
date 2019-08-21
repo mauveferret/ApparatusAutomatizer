@@ -9,15 +9,12 @@ public class LeyboldTMP extends Device {
     private double voltage;
     private double current;
 
-    public LeyboldTMP(){}
-
-    public LeyboldTMP(String comPortName) {
-
-        //TODO add device name and device command ike in gauges
-        openPort(comPortName);
+    public LeyboldTMP(String path) {
+        super(path);
     }
 
-    //Getters
+
+//Getters
 
     public int getTemperature() {
         return temperature;

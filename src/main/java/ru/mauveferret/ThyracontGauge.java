@@ -9,13 +9,11 @@ public class ThyracontGauge extends Device {
     private double pressureColumn2;
     private double pressureVessel;
 
-
-    public ThyracontGauge( String deviceName, String deviceCommand) {
-        setDeviceName(deviceName);
-        setDeviceCommand(deviceCommand);
+    public ThyracontGauge(String path) {
+        super(path);
     }
 
-    //Getters
+//Getters
 
     public double getPressureColumn1() {
         return pressureColumn1;

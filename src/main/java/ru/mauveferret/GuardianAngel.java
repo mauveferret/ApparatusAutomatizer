@@ -13,11 +13,10 @@ public class GuardianAngel extends Device{
 
     private boolean continueChecking = true;
 
-
-    GuardianAngel(String angelCommand) {
-        setDeviceCommand(angelCommand);
-        setDeviceName("angel");
+    public GuardianAngel(String path) {
+        super(path);
     }
+
 
     //Getters and Setters
 

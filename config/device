@@ -1,0 +1,10 @@
+/*
+this is a configuration file
+
+*/
+
+id 1
+port COM4
+name arduino
+command ard
+alias ports lol

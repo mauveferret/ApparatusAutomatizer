@@ -9,16 +9,18 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Terminal terminal = new Terminal("args[0]", "args[1]");
-        Arduino arduino = new Arduino(1);
+        Arduino arduino = new Arduino("C:\\Users\\mauve\\Git\\ApparatusAutomatizer\\config\\device");
         GuardianAngel angel = new GuardianAngel("ang");
-        LeyboldTMP leyboldTMP = new LeyboldTMP();
+        LeyboldTMP leyboldTMP = new LeyboldTMP("");
         leyboldTMP.setDeviceName("TMP");
-        ThyracontGauge thyracontGauge = new ThyracontGauge("gauge", "gag");
-        terminal.AddDevice(thyracontGauge);
-        terminal.AddDevice(leyboldTMP);
-        terminal.AddDevice(terminal);
-        terminal.AddDevice(arduino);
-        terminal.AddDevice(angel);
+        ThyracontGauge thyracontGauge = new ThyracontGauge("");
+        GuardianAngel guardianAngel = new GuardianAngel("");
+        terminal.addDevice(guardianAngel);
+        terminal.addDevice(thyracontGauge);
+        terminal.addDevice(leyboldTMP);
+        terminal.addDevice(terminal);
+        terminal.addDevice(arduino);
+        terminal.addDevice(angel);
         for (String s :terminal.getCommandMap().keySet()) System.out.print(s+" ");
         System.out.println();
         System.out.println("__________________________________________");
