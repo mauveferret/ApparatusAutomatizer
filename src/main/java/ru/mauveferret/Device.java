@@ -25,10 +25,6 @@ public abstract  class Device extends Thread{
     */
 
 
-
-
-
-
     //device's serial port
     SerialPort serialPort;
     //ComPortName
@@ -43,35 +39,40 @@ public abstract  class Device extends Thread{
     //some String from which your appeal in Terminal starts with
     private String deviceCommand = deviceName.substring(0,3).toLowerCase();
     //some devices like arduino needs to set some ID
-     String id = "001";
+     private String deviceID = "001";
     //key == command, value == its desciption for help
     HashMap<String, String> commands = new HashMap<>();
     //key == alias, value == command which is represented by the alias
     private HashMap<String,String> aliases = new HashMap<>();
+    //key == alias, value == options.
 
     //Setters and Getters
 
-    public void setId(String id) {
-        this.id = id;
+     private void setId(String id) {
+        this.deviceID = id;
     }
 
-    public boolean isReconnectActive() {
+     String getDeviceID() {
+        return deviceID;
+    }
+
+    boolean isReconnectActive() {
         return isReconnectActive;
     }
 
-    public void setReceivedDevice(Device receivedDevice) {
+     void setReceivedDevice(Device receivedDevice) {
         this.receivedDevice = receivedDevice;
     }
 
-    public void setReceivedCommand(String receivedCommand) {
+     void setReceivedCommand(String receivedCommand) {
         this.receivedCommand = receivedCommand;
     }
 
-    public void setDeviceCommand(String deviceCommand) {
+     private void setDeviceCommand(String deviceCommand) {
         this.deviceCommand = deviceCommand;
     }
 
-    public String getDeviceCommand() {
+    String getDeviceCommand() {
         return deviceCommand;
     }
 
@@ -112,9 +113,16 @@ public abstract  class Device extends Thread{
                     sendMessage(message);
                 }
                 break;
+                case "setID":
+                {
+                    if (command[2].equals(""))
+                        sendMessage("Enter ID number.");
+                    else
+                        setId(command[2]);
+                }
                 case "open": {
                     if (command[2].equals("")) sendMessage("Enter COM port name as an option");
-                        //else sendMessage((openPort(command[2])) ? command[2]+" is opened" : command[2]+" isn't opened");
+                    //else sendMessage((openPort(command[2])) ? command[2]+" is opened" : command[2]+" isn't opened");
                     else openPort(command[2]);
                 }
                 break;
@@ -125,7 +133,10 @@ public abstract  class Device extends Thread{
                 break;
                 case "alias":
                 {
-                    sendMessage((addAlias(command[3], command[2])) ? command[2]+" added" : command[2]+" isn't added");
+                    String options="";
+                    for (int i=4;i<command.length;i++) options+=command[i];
+                    sendMessage((addAlias(command[2], command[3], options)) ?
+                            command[2]+" added" : command[2]+" isn't added");
                 }
                 break;
             }
@@ -142,11 +153,13 @@ public abstract  class Device extends Thread{
           commands.put("ports", "shows available COM port's names");
           commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
           commands.put("close", "close Arduino port");
-          commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$");
+          commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
+          commands.put("setID","sets ID of the device in form: setID $ID number$");
           return commands;
       }
 
-    private boolean addAlias(String alias, String command)
+      //TODO check how does the alias works
+    private boolean addAlias(String alias, String command, String options)
     {
         boolean canBeAdded=true;
         for (String str: aliases.keySet())
@@ -169,7 +182,7 @@ public abstract  class Device extends Thread{
         {
             canBeAdded=false;
         }
-        if (canBeAdded) aliases.put(alias,command);
+        if (canBeAdded) aliases.put(alias,command+" "+options);
         return canBeAdded;
     }
 
@@ -194,20 +207,6 @@ public abstract  class Device extends Thread{
                             setId(confArray[1]);
                         }
                         break;
-                        case "port": {
-                            try {
-                                serialPort.closePort();
-                            } catch (Exception ignored) {
-                            }
-                            if (doesPortExist(confArray[1])) {
-                                port = confArray[1];
-                            } else {
-                                sendMessage(confArray[1] + " doesn't exist.");
-                            }
-                            //we use incorrect "", but openPort will chose our "port" as a correct portName.
-                            openPort("");
-                        }
-                        break;
                         case "name": {
                             setDeviceName(confArray[1]);
                         }
@@ -216,8 +215,9 @@ public abstract  class Device extends Thread{
                             setDeviceCommand(confArray[1]);
                         }
                         break;
-                        case "alias": {
-                            addAlias(confArray[2], confArray[1]);
+                        default:
+                        {
+                            runCommand(receivedDevice, deviceCommand+" "+line);
                         }
                         break;
                     }
@@ -237,21 +237,21 @@ public abstract  class Device extends Thread{
     used in run method to replace alias by its command
     if the alias exists. If not, returns as it was
      */
-     String replaceAliasByCommand(String command)
+     String replaceAliasByCommand(String alias)
     {
-        if (aliases.containsKey(command))
+        if (aliases.containsKey(alias))
         {
-            return aliases.get(command);
+            return aliases.get(alias);
         }
         else
-            return command;
+            return alias; //which is a command really
     }
 
     String[] commandToStringArray(String command)
     {
         command = command.replaceAll("\\s+"," ").trim();
         //command = (command.charAt(0)==' ') ? command.substring(1) : command;
-        String[] commandArray = new String[10];
+        String[] commandArray = new String[20];
         Arrays.fill(commandArray, "");
         int i=0;
         for (char c: command.toCharArray())

@@ -42,7 +42,8 @@ public class Arduino extends Device {
     synchronized private boolean digitalWrite(String pin, boolean value)
     {
        try {
-           String message=fillStringByZeros(id,3)+"DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
+           String message=fillStringByZeros(getDeviceID(),3);
+           message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            serialPort.writeBytes((message+fillStringByZeros(""+checkSum(message),3)+"\n").getBytes());
            String answer = readMessageFromArduino();
            if (answer.contains("SETTED"))
@@ -63,7 +64,8 @@ public class Arduino extends Device {
     {
         try {
 
-            String message = fillStringByZeros(id,3)+ "DI" + fillStringByZeros(pin, 2);
+            String message = fillStringByZeros(getDeviceID(),3);
+            message +="DI" + fillStringByZeros(pin, 2);
             serialPort.writeBytes((message + fillStringByZeros(""+checkSum(message), 3) + "\n").getBytes());
             String answer = readMessageFromArduino();
             int signal = checkSum(answer.substring(0, answer.length() - 4));
@@ -88,7 +90,7 @@ public class Arduino extends Device {
     synchronized private boolean analogWrite(String pin, int value)
     {
         try {
-            String message=fillStringByZeros(id,3);
+            String message=fillStringByZeros(getDeviceID(),3);
             message+="AO"+fillStringByZeros(pin,2)+fillStringByZeros(""+value*51, 4);
             serialPort.writeBytes((message+fillStringByZeros(""+checkSum(message),3)+"\n").getBytes());
             String answer = readMessageFromArduino();
@@ -107,7 +109,8 @@ public class Arduino extends Device {
     synchronized private double analogRead(String pin)
     {
             try {
-                String message = fillStringByZeros(id,3) + "AI" + fillStringByZeros(pin, 2);
+                String message = fillStringByZeros(getDeviceID(),3);
+                message += "AI" + fillStringByZeros(pin, 2);
                 serialPort.writeBytes((message + fillStringByZeros(""+checkSum(message), 3) + "\n").getBytes());
                 String answer = readMessageFromArduino();
                 int signal = checkSum(answer.substring(0, answer.length() - 4));

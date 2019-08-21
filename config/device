@@ -3,8 +3,8 @@ this is a configuration file
 
 */
 
-id 1
-port COM4
+command ard1
+setID 1
+open COM4
 name arduino
-command ard
-alias ports lol
+alias gate1 dwrite 8 1

@@ -17,6 +17,8 @@ public class GuardianAngel extends Device{
         super(path);
     }
 
+    //TODO Command interpretator
+
 
     //Getters and Setters
 
