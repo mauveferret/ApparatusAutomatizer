@@ -15,25 +15,22 @@ public class Arduino extends Device {
 
 
     //TODO list of pins status
-    private String[] digitalPins = new String[50];
-    private String[] analogPins = new String[50];
+    private boolean[] digitalPins = new boolean[50];
+    private int[] analogPins = new int[50];
     //FIXME: does Jssc controls simultenous writingon arduino?
-
-
 
     public Arduino(String path) {
         super(path);
     }
 
-
     //Getters and Setters
 
-
-    public String[] getDigitalPins() {
+    //TODO добавить в методы ардуины добавление информации в эти массив
+    public boolean[] getDigitalPins() {
         return digitalPins;
     }
 
-    public String[] getAnalogPins() {
+    public int[] getAnalogPins() {
         return analogPins;
     }
 
@@ -197,8 +194,6 @@ public class Arduino extends Device {
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
-            setReceivedCommand(someCommand);
-            setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             switch (command[1]) {
                 case "dwrite": {
