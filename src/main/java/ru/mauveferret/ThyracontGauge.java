@@ -9,31 +9,37 @@ public class ThyracontGauge extends Device {
     private double pressureColumn2;
     private double pressureVessel;
 
-    public ThyracontGauge(String path) {
+    ThyracontGauge(String path) {
         super(path);
     }
 
-//Getters
+    //Getters
 
-    public double getPressureColumn1() {
+    double getPressureColumn1() {
         return pressureColumn1;
     }
 
-    public double getPressureColumn2() {
+    double getPressureColumn2() {
         return pressureColumn2;
     }
 
-    public double getPressureVessel() {
+    double getPressureVessel() {
         return pressureVessel;
     }
 
-    //Com port related commands
+    //gauge related commands
 
 
+    synchronized double measure()
+    {
+
+        return 78;
+    }
 
     //for commandline
     @Override
     void runCommand(Device device, String someCommand) {
+        someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
@@ -53,6 +59,12 @@ public class ThyracontGauge extends Device {
         commands.put("measure", "measures pressure in mBar by some gauge in form: measure $gauge number$ ");
         commands.put("calibrate", "makes a calibration of the pirani or cold cathode in form: calibrate $type$");
         return commands;
+    }
+
+    @Override
+    void info() {
+
+
     }
 
 }

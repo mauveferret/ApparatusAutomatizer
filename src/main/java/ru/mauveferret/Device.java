@@ -6,32 +6,26 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public abstract  class Device extends Thread{
+abstract  class Device extends Thread{
 
-    public  Device(String path)
+    Device(String path)
     {
         importConfigurationFile(path);
     }
 
-    protected Device() {
+    Device() {
     }
 
-    //TODO добавлен Thread. МОжно использовать для перманентного измерения давления!!!
-   /*
-   run ()
-   {
-  this.getpressure1(this.runcommand(pressure));
-   }
-    */
-
+    // some config data
+    abstract void info();
 
     //device's serial port
     SerialPort serialPort;
     //ComPortName
-    String port="";
+    private String port="";
     //used in openComPort to prevent constant error messages printing
     private boolean isReconnectActive = false;
-    //used in reconnectmethod to rerun command which cause reconnect
+    //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
     //it is used in help
@@ -72,16 +66,8 @@ public abstract  class Device extends Thread{
         this.deviceCommand = deviceCommand;
     }
 
-    String getDeviceCommand() {
-        return deviceCommand;
-    }
-
     void setDeviceName(String deviceName) {
         this.deviceName = deviceName;
-    }
-
-     String getDeviceName() {
-        return deviceName;
     }
 
     HashMap<String,String> getAliases()
@@ -89,16 +75,12 @@ public abstract  class Device extends Thread{
         return aliases;
     }
 
-    boolean commandExists(String command)
-    {
-        return (commands.containsKey(command)||aliases.containsKey(command));
-    }
-
     // terminal related
 
     //associates a command with a method the command dedicated to
     void runCommand (Device device, String someCommand)
     {
+        someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
@@ -139,6 +121,8 @@ public abstract  class Device extends Thread{
                             command[2]+" added" : command[2]+" isn't added");
                 }
                 break;
+                case "info": info();
+                break;
             }
         }
         else
@@ -155,6 +139,7 @@ public abstract  class Device extends Thread{
           commands.put("close", "close Arduino port");
           commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
           commands.put("setID","sets ID of the device in form: setID $ID number$");
+          commands.put("info", "gives info about the device");
           return commands;
       }
 
@@ -186,6 +171,11 @@ public abstract  class Device extends Thread{
         return canBeAdded;
     }
 
+    boolean commandExists(String command)
+    {
+        return (commands.containsKey(command)||aliases.containsKey(command));
+    }
+
     private void importConfigurationFile(String path) {
         try {
             boolean isComment = false;
@@ -201,7 +191,7 @@ public abstract  class Device extends Thread{
                 }
                 if (!isComment) {
                     confArray = line.split(" ");
-                    switch (confArray[0]) {
+                    switch (confArray[0].toLowerCase()) {
                         case "id":
                         {
                             setId(confArray[1]);
@@ -332,7 +322,34 @@ public abstract  class Device extends Thread{
         }
     }
 
-     synchronized void reconnect()
+    synchronized  String readMessage() throws SerialPortException
+    {
+        String answer="";
+        long startTime = System.currentTimeMillis();
+        while (!answer.contains("\n"))
+        {
+            answer+=(new String(serialPort.readBytes(1)));
+            if (System.currentTimeMillis()-startTime>2000)
+            {
+                launchReconnectInThread();
+                break;
+            }
+
+        }
+        return answer;
+    }
+
+    void launchReconnectInThread()
+    {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                reconnect();
+            }
+        }).start();
+    }
+
+    private synchronized void reconnect()
     {
         //TODO manual desactivation, threadlist
 

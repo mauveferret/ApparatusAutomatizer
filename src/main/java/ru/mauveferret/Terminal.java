@@ -30,6 +30,11 @@ public class Terminal extends Device {
         super(path);
     }
 
+    @Override
+    void info() {
+
+    }
+
     //Getters
 
     public HashMap<String, Device> getCommandMap() {
@@ -188,7 +193,7 @@ public class Terminal extends Device {
 
     @Override
     public void runCommand(Device device, String someCommand) {
-
+        someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {

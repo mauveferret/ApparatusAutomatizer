@@ -2,6 +2,7 @@ package ru.mauveferret;
 
 import java.util.HashMap;
 
+
 public class LeyboldTMP extends Device {
 
     private int  temperature;
@@ -11,6 +12,12 @@ public class LeyboldTMP extends Device {
 
     public LeyboldTMP(String path) {
         super(path);
+    }
+
+    @Override
+    void info() {
+
+
     }
 
 
@@ -40,6 +47,7 @@ public class LeyboldTMP extends Device {
 
     @Override
     void runCommand(Device device, String someCommand) {
+        someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {

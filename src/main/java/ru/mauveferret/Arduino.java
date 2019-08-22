@@ -23,6 +23,7 @@ public class Arduino extends Device {
         super(path);
     }
 
+
     //Getters and Setters
 
     //TODO добавить в методы ардуины добавление информации в эти массив
@@ -42,7 +43,7 @@ public class Arduino extends Device {
            String message=fillStringByZeros(getDeviceID(),3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            serialPort.writeBytes((message+fillStringByZeros(""+checkSum(message),3)+"\n").getBytes());
-           String answer = readMessageFromArduino();
+           String answer = readMessage();
            if (answer.contains("SETTED"))
                sendMessage(((value) ? "HIGH" : "LOW")+" on pin "+pin+" is set");
            else
@@ -64,7 +65,7 @@ public class Arduino extends Device {
             String message = fillStringByZeros(getDeviceID(),3);
             message +="DI" + fillStringByZeros(pin, 2);
             serialPort.writeBytes((message + fillStringByZeros(""+checkSum(message), 3) + "\n").getBytes());
-            String answer = readMessageFromArduino();
+            String answer = readMessage();
             int signal = checkSum(answer.substring(0, answer.length() - 4));
             int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
             if ((signal == checksum) && (!answer.contains("ERROR"))) {
@@ -90,7 +91,7 @@ public class Arduino extends Device {
             String message=fillStringByZeros(getDeviceID(),3);
             message+="AO"+fillStringByZeros(pin,2)+fillStringByZeros(""+value*51, 4);
             serialPort.writeBytes((message+fillStringByZeros(""+checkSum(message),3)+"\n").getBytes());
-            String answer = readMessageFromArduino();
+            String answer = readMessage();
             if (answer.contains("SETTED")) sendMessage(value+" on pin "+pin+" is set");;
             return (answer.contains("SETTED"));
         }
@@ -109,7 +110,7 @@ public class Arduino extends Device {
                 String message = fillStringByZeros(getDeviceID(),3);
                 message += "AI" + fillStringByZeros(pin, 2);
                 serialPort.writeBytes((message + fillStringByZeros(""+checkSum(message), 3) + "\n").getBytes());
-                String answer = readMessageFromArduino();
+                String answer = readMessage();
                 int signal = checkSum(answer.substring(0, answer.length() - 4));
                 int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
                 if ((signal == checksum) && (!answer.contains("ERROR"))) {
@@ -149,32 +150,6 @@ public class Arduino extends Device {
         return (checkSum % 256);
     }
 
-    synchronized private String readMessageFromArduino() throws SerialPortException
-    {
-        String answer="";
-        long startTime = System.currentTimeMillis();
-        while (!answer.contains("\n"))
-        {
-            answer+=(new String(serialPort.readBytes(1)));
-            if (System.currentTimeMillis()-startTime>2000)
-            {
-                launchReconnectInThread();
-                break;
-            }
-
-        }
-        return answer;
-    }
-
-    private void launchReconnectInThread()
-    {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                reconnect();
-            }
-        }).start();
-    }
 
     //for commandline
 
@@ -190,6 +165,7 @@ public class Arduino extends Device {
 
     @Override
     void runCommand(Device device, String someCommand) {
+        someCommand = someCommand.toLowerCase();
         super.runCommand(device, someCommand);
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
@@ -248,5 +224,10 @@ public class Arduino extends Device {
         {
             sendMessage("command \""+command[1]+"\" doesn't exist ");
         }
+    }
+
+    @Override
+    void info() {
+
     }
 }
