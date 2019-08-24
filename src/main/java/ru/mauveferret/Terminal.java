@@ -168,7 +168,7 @@ public class Terminal extends Device {
                 public void run() {
                     threads.add(Thread.currentThread());
                     System.out.println(Thread.currentThread().getName());
-                    commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
+                    commandMap.get(commandArray[0]).analyzeCommand(Terminal.this, internalCommand);
                    // TODO silentmode
                 }
 
@@ -192,7 +192,7 @@ public class Terminal extends Device {
     }
 
     @Override
-    public void runCommand(Device device, String someCommand) {
+    public void analyzeCommand(Device device, String someCommand) {
         someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))

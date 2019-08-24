@@ -9,7 +9,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Terminal terminal = new Terminal("args[0]", "args[1]");
-        Arduino arduino = new Arduino("C:\\Users\\mauve\\Git\\ApparatusAutomatizer\\config\\device");
+        Arduino arduino = new Arduino();
         GuardianAngel angel = new GuardianAngel("ang");
         LeyboldTMP leyboldTMP = new LeyboldTMP("");
         leyboldTMP.setDeviceName("TMP");

@@ -46,7 +46,7 @@ public class LeyboldTMP extends Device {
     //Device related commands
 
     @Override
-    void runCommand(Device device, String someCommand) {
+    void analyzeCommand(Device device, String someCommand) {
         someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))

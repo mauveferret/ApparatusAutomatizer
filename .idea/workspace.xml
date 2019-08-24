@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="abstract methods removed, some became private, config import added, hardware wasnt checked, gitignore added">
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="gate control added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config/commands.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +53,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\src\main\java\ru\mauveferret" />
     </key>
@@ -153,7 +153,9 @@
       <workItem from="1566067709287" duration="274000" />
       <workItem from="1566121851066" duration="7330000" />
       <workItem from="1566364313662" duration="634000" />
-      <workItem from="1566418459380" duration="14065000" />
+      <workItem from="1566418459380" duration="14107000" />
+      <workItem from="1566457174491" duration="955000" />
+      <workItem from="1566635726476" duration="3599000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566428940546</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="gate control added">
+      <created>1566432611079</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566432611079</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +256,7 @@
     <MESSAGE value="some bags fixed, angel get some functions" />
     <MESSAGE value="abstract methods removed, some became private, config import added, hardware wasnt checked, gitignore added" />
     <MESSAGE value="alias added, some optimization made" />
-    <option name="LAST_COMMIT_MESSAGE" value="alias added, some optimization made" />
+    <MESSAGE value="gate control added" />
+    <option name="LAST_COMMIT_MESSAGE" value="gate control added" />
   </component>
 </project>

@@ -11,7 +11,7 @@ import java.util.HashMap;
  the National research Nuclear University "Mephi"
  */
 
-public class Arduino extends Device {
+public class Arduino extends SerialDevice {
 
 
     //TODO list of pins status
@@ -19,9 +19,6 @@ public class Arduino extends Device {
     private int[] analogPins = new int[50];
     //FIXME: does Jssc controls simultenous writingon arduino?
 
-    public Arduino(String path) {
-        super(path);
-    }
 
 
     //Getters and Setters
@@ -164,65 +161,55 @@ public class Arduino extends Device {
     }
 
     @Override
-    void runCommand(Device device, String someCommand) {
-        someCommand = someCommand.toLowerCase();
-        super.runCommand(device, someCommand);
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
-        {
-            command[1] = replaceAliasByCommand(command[1]);
-            switch (command[1]) {
-                case "dwrite": {
-                    if (command[2].equals("") || command[3].equals(" "))
-                    {
-                        sendMessage("Enter pin number and value (0,1) as an option");
-                    }
-                    else
-                    {
-                        if (command[3].equals("1") || command[3].equals("0"))
-                            digitalWrite(command[2], command[3].equals("1"));
-                        else
-                            sendMessage("Value is incorrect (should be 0 or 1).");
-                    }
-                }
-                break;
-                case "dread":
+    void runCommand(String[] command) {
+        super.runCommand(command);
+        switch (command[1]) {
+            case "dwrite": {
+                if (command[2].equals("") || command[3].equals(" "))
                 {
-                    if (command[2].equals(""))
-                    {
-                        sendMessage("Enter pin number as an option");
-                    }
+                    sendMessage("Enter pin number and value (0,1) as an option");
+                }
+                else
+                {
+                    if (command[3].equals("1") || command[3].equals("0"))
+                        digitalWrite(command[2], command[3].equals("1"));
                     else
-                    {
-                        sendMessage("" + digitalRead(command[2]));
-                    }
+                        sendMessage("Value is incorrect (should be 0 or 1).");
+                }
+            }
+            break;
+            case "dread":
+            {
+                if (command[2].equals(""))
+                {
+                    sendMessage("Enter pin number as an option");
+                }
+                else
+                {
+                    sendMessage("" + digitalRead(command[2]));
+                }
+            }
+            break;
+            case "awrite":
+                if (command[2].equals("") || command[3].equals(""))
+                {
+                    sendMessage("Enter pin number and value (0-5) as an option");
+                }
+                else
+                {
+                    analogWrite((command[2]), Integer.parseInt(command[3]));
                 }
                 break;
-                case "awrite":
-                    if (command[2].equals("") || command[3].equals(""))
-                    {
-                        sendMessage("Enter pin number and value (0-5) as an option");
-                    }
-                    else
-                    {
-                        analogWrite((command[2]), Integer.parseInt(command[3]));
-                    }
-                    break;
-                case "aread":
-                    if (command[2].equals(""))
-                    {
-                        sendMessage("Enter pin number as an option");
-                    }
-                    else
-                    {
-                        sendMessage("" + analogRead(command[2]));
-                    }
-                    break;
-            }
-        }
-        else
-        {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
+            case "aread":
+                if (command[2].equals(""))
+                {
+                    sendMessage("Enter pin number as an option");
+                }
+                else
+                {
+                    sendMessage("" + analogRead(command[2]));
+                }
+                break;
         }
     }
 

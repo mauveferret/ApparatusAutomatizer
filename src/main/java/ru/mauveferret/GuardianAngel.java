@@ -56,7 +56,7 @@ public class GuardianAngel extends Device{
             //if pressure difference is too much or pressureVessel to much -> close gate
             if ((Math.abs(pressureColumn1-pressureVessel)>10 || pressureVessel>10) && gate1>2.5 )
             {
-                terminal.runCommand(terminal,"arduino dwrite 8 0");
+                terminal.analyzeCommand(terminal,"arduino dwrite 8 0");
             }
 
         }
@@ -73,7 +73,7 @@ public class GuardianAngel extends Device{
     }
 
     @Override
-    void runCommand(Device someDevice, String someCommand) {
+    void analyzeCommand(Device someDevice, String someCommand) {
         final Device device = someDevice;
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
