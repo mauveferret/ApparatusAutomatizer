@@ -14,12 +14,6 @@ public class LeyboldTMP extends Device {
         super(path);
     }
 
-    @Override
-    void info() {
-
-
-    }
-
 
 //Getters
 
@@ -46,7 +40,7 @@ public class LeyboldTMP extends Device {
     //Device related commands
 
     @Override
-    void analyzeCommand(Device device, String someCommand) {
+    void runCommand(Device device, String someCommand) {
         someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))

@@ -13,9 +13,8 @@ public class GuardianAngel extends Device{
 
     private boolean continueChecking = true;
 
-    public GuardianAngel(String path) {
-        super(path);
-    }
+
+
 
     //TODO Command interpretator
 
@@ -39,6 +38,9 @@ public class GuardianAngel extends Device{
 
     }
 
+    public GuardianAngel(String path) {
+        super(path);
+    }
 
     private void startCheckingPressure(Device device)
     {
@@ -56,7 +58,7 @@ public class GuardianAngel extends Device{
             //if pressure difference is too much or pressureVessel to much -> close gate
             if ((Math.abs(pressureColumn1-pressureVessel)>10 || pressureVessel>10) && gate1>2.5 )
             {
-                terminal.analyzeCommand(terminal,"arduino dwrite 8 0");
+                terminal.runCommand(terminal,"arduino dwrite 8 0");
             }
 
         }
@@ -73,7 +75,7 @@ public class GuardianAngel extends Device{
     }
 
     @Override
-    void analyzeCommand(Device someDevice, String someCommand) {
+    void runCommand(Device someDevice, String someCommand) {
         final Device device = someDevice;
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))

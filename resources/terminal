@@ -1,0 +1,10 @@
+log C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\terminal1.txt
+command ter
+/* 1
+
+this
+
+*/
+ID 1
+name terminal
+port COM1

@@ -1,0 +1,10 @@
+log C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\Gauge.txt
+command gag
+/* 1
+
+this
+
+*/
+ID 1
+name gauge
+port COM51

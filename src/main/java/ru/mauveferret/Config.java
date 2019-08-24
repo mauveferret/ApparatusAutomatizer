@@ -1,59 +1,78 @@
 package ru.mauveferret;
 
-import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Config {
 
 
-    public Config(TreeMap<String, String> parameters) {
-        this.parameters = parameters;
-    }
+
 
     private String deviceID;
     private String deviceName;
     private String devicePort;
-    private String deviceLaunchCommand;
+    private String deviceCommand;
+    private String logPath;
 
     private TreeMap<String,String> parameters = new TreeMap<>();
 
-    public String getDeviceID() {
+    public void setLogPath(String logPath) {
+        this.logPath = logPath;
+    }
+
+    public String getLogPath() {
+        return logPath;
+    }
+
+    String getDeviceID() {
         return deviceID;
     }
 
-    public void setDeviceID(String deviceID) {
+    void setDeviceID(String deviceID) {
         this.deviceID = deviceID;
     }
 
-    public String getDeviceName() {
+    String getDeviceName() {
         return deviceName;
     }
 
-    public void setDeviceName(String deviceName) {
+    void setDeviceName(String deviceName) {
         this.deviceName = deviceName;
     }
 
-    public String getDevicePort() {
+    String getDevicePort() {
         return devicePort;
     }
 
-    public void setDevicePort(String devicePort) {
+    void setDevicePort(String devicePort) {
         this.devicePort = devicePort;
     }
 
-    public String getDeviceLaunchCommand() {
-        return deviceLaunchCommand;
+    String getDeviceCommand() {
+        return deviceCommand;
     }
 
-    public void setDeviceLaunchCommand(String deviceLaunchCommand) {
-        this.deviceLaunchCommand = deviceLaunchCommand;
+    void setDeviceCommand(String deviceCommand) {
+        this.deviceCommand = deviceCommand;
     }
 
     public TreeMap<String, String> getParameters() {
         return parameters;
     }
 
-    public void setParameters(TreeMap<String, String> parameters) {
-        this.parameters = parameters;
+    public void addParameter(String key, String value) {
+        parameters.put(key, value);
     }
+
+    String info()
+    {
+        String info = "";
+        String line = "\n--------------------\n";
+        info+="device: "+deviceName+line+"deviceID: "+deviceID+line+"command: "+deviceCommand+line;
+        info+="device COM port: "+devicePort+line;
+        for (String str: parameters.keySet())
+            info+=str+" "+parameters.get(str)+line;
+        return info;
+    }
+
+
 }

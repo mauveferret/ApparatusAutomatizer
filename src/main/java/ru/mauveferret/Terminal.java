@@ -1,7 +1,5 @@
 package ru.mauveferret;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -17,27 +15,17 @@ public class Terminal extends Device {
     //key == device name, value == device object
     private HashMap<String, Device> deviceMap = new HashMap<>();
 
-    ArrayList<Thread> threads = new ArrayList<>();
+    private ArrayList<Thread> threads = new ArrayList<>();
 
-    Terminal(String loadFromFile, String path)
-    {
-        //load scrypt
-        if (loadFromFile.equals("l")) LoadCommandsFromFile(path);
-    }
-
-    //is needed because of the superclass but ot used because Terminal is the virtual device with no configuration
     public Terminal(String path) {
+
         super(path);
     }
 
-    @Override
-    void info() {
-
-    }
 
     //Getters
 
-    public HashMap<String, Device> getCommandMap() {
+    HashMap<String, Device> getCommandMap() {
         return commandMap;
     }
 
@@ -45,51 +33,37 @@ public class Terminal extends Device {
         return deviceMap;
     }
 
-    public Device getDevice(String deviceName)
+    Device getDevice(String deviceName)
     {
         return deviceMap.get(deviceName);
     }
 
     //commands
 
-    private void LoadCommandsFromFile(String path)
-    {
-        //TODO needs improvement. not bufferet but scanner?
-        try {
-
-            path = Terminal.class.getProtectionDomain().getCodeSource().getLocation().getPath()+"commands.txt";
-            System.out.println(path);
-            BufferedReader reader = new BufferedReader(new FileReader(path));
-            while (reader.ready()) launchCommand(reader.readLine(), true);
-            reader.close();
-        }
-        catch (Exception e)
-        {
-            sendMessage("File not Found");
-        }
-    }
 
     void addDevice(Device someDevice) {
 
         someDevice.getCommands();
+        String deviceName = someDevice.getConfig().getDeviceName();
+        String deviceCommand = someDevice.getConfig().getDeviceCommand();
 
         // get commands should not be launched several times!
 
-        if (commandMap.containsKey(someDevice.getDeviceCommand()))
+        if (commandMap.containsKey(deviceCommand))
         {
-            sendMessage("Device command \""+someDevice.getDeviceCommand()+"\" repeats.");
+            sendMessage("Device command \""+deviceCommand+"\" repeats.");
         }
         else
         {
-            commandMap.put(someDevice.getDeviceCommand(), someDevice);
+            commandMap.put(deviceCommand, someDevice);
         }
-        if (deviceMap.containsKey(someDevice.getDeviceName()))
+        if (deviceMap.containsKey(deviceName ))
         {
-            sendMessage("Device name \""+someDevice.getDeviceName()+"\" repeats.");
+            sendMessage("Device name \""+deviceName+"\" repeats.");
         }
         else
         {
-            deviceMap.put(someDevice.getDeviceName(),someDevice);
+            deviceMap.put(deviceName,someDevice);
         }
 
        // deviceCommandMap.put(someDevice.getDeviceName(), someDevice);
@@ -166,9 +140,10 @@ public class Terminal extends Device {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    Thread.currentThread().setName(commandMap.get(commandArray[0]).getName()+" thread");
                     threads.add(Thread.currentThread());
-                    System.out.println(Thread.currentThread().getName());
-                    commandMap.get(commandArray[0]).analyzeCommand(Terminal.this, internalCommand);
+                   // System.out.println(Thread.currentThread().getName());
+                    commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
                    // TODO silentmode
                 }
 
@@ -184,40 +159,24 @@ public class Terminal extends Device {
     @Override
     HashMap<String, String> getCommands() {
         commands.put("help", "this page");
-        commands.put("load", "load command scrypt from the file in form: load $file_path$");
-        commands.put("alias", "creates alias for some command in form:  alias  &alias name& $command name$");
-       // commands.put("exit", "stops program");
+        // commands.put("exit", "stops program");
         commands.put("threads","");
-        return commands;
+        return super.getCommands();
     }
 
     @Override
-    public void analyzeCommand(Device device, String someCommand) {
-        someCommand = someCommand.toLowerCase();
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
-        {
-            setReceivedCommand(someCommand);
-            setReceivedDevice(device);
-            command[1] = replaceAliasByCommand(command[1]);
-            switch (command[1]) {
-                case "help":
-                    showHelp();
-                    break;
-                case "load":
-                    LoadCommandsFromFile(command[2]);
-                    break;
-
-                case "threads":
-                {
-                    for (Thread thread: threads) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
-                }
+    void chooseCommand(String[] command) {
+        switch (command[1]) {
+            case "help":
+                showHelp();
                 break;
+
+            case "threads":
+            {
+                for (Thread thread: threads) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
             }
+            break;
         }
-        else
-        {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
-        }
+        super.chooseCommand(command);
     }
 }

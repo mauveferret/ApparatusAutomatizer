@@ -1,5 +1,8 @@
 package ru.mauveferret;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -8,35 +11,21 @@ abstract  class Device extends Thread{
 
     Device(String path)
     {
+        getCommands();
         importConfigurationFile(path);
     }
 
-    Device() {
-    }
+    Device(){}
+
 
     // some config data
-    abstract void info();
 
-    private void log()
-    {
-
-    }
-
-    //device's serial port
-
-    //ComPortName
-
-    //used in openComPort to prevent constant error messages printing
-
+    private Config config = new Config();
+     FileWriter logger;
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
     //it is used in help
-    private String deviceName = this.getClass().getName().substring(this.getClass().getName().lastIndexOf(".")+1);
-    //some String from which your appeal in Terminal starts with
-    private String deviceCommand = deviceName.substring(0,3).toLowerCase();
-    //some devices like arduino needs to set some ID
-     private String deviceID = "001";
     //key == command, value == its desciption for help
     HashMap<String, String> commands = new HashMap<>();
     //key == alias, value == command which is represented by the alias
@@ -45,13 +34,6 @@ abstract  class Device extends Thread{
 
     //Setters and Getters
 
-     private void setId(String id) {
-        this.deviceID = id;
-    }
-
-     String getDeviceID() {
-        return deviceID;
-    }
 
     public String getReceivedCommand() {
         return receivedCommand;
@@ -69,21 +51,10 @@ abstract  class Device extends Thread{
         this.receivedCommand = receivedCommand;
     }
 
-    public String getDeviceName() {
-        return deviceName;
+    Config getConfig() {
+        return config;
     }
 
-    public String getDeviceCommand() {
-        return deviceCommand;
-    }
-
-    private void setDeviceCommand(String deviceCommand) {
-        this.deviceCommand = deviceCommand;
-    }
-
-    void setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-    }
 
     HashMap<String,String> getAliases()
     {
@@ -93,7 +64,7 @@ abstract  class Device extends Thread{
     // terminal related
 
     //associates a command with a method the command dedicated to
-    void analyzeCommand(Device device, String someCommand)
+    void runCommand(Device device, String someCommand)
     {
         someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
@@ -102,27 +73,23 @@ abstract  class Device extends Thread{
             setReceivedCommand(someCommand);
             setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
-            runCommand(command);
+            chooseCommand(command);
         }
         else
         {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
+            sendMessage("command \""+command[1]+"\" doesn't exist");
         }
     }
 
-    void runCommand(String[] command)
+    void chooseCommand(String[] command)
     {
         switch (command[1]) {
 
-            case "setID":
+            case "info":
             {
-                if (command[2].equals(""))
-                    sendMessage("Enter ID number.");
-                else
-                    setId(command[2]);
+                sendMessage(config.info());
             }
-
-
+            break;
             case "alias":
             {
                 String options="";
@@ -131,20 +98,18 @@ abstract  class Device extends Thread{
                         command[2]+" added" : command[2]+" isn't added");
             }
             break;
-            case "info": info();
-                break;
+            case  "import": importConfigurationFile(command[2]);
+            break;
         }
     }
 
     //actually not only returns a commands Map, but also forms it
       HashMap<String, String> getCommands()
       {
-          commands.put("ports", "shows available COM port's names");
-          commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
-          commands.put("close", "close Arduino port");
+
           commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
-          commands.put("setID","sets ID of the device in form: setID $ID number$");
-          commands.put("info", "gives info about the device");
+          commands.put("import", "import parameters from the file if form: import $path$");
+          commands.put("info", "info");
           return commands;
       }
 
@@ -181,50 +146,49 @@ abstract  class Device extends Thread{
         return (commands.containsKey(command)||aliases.containsKey(command));
     }
 
-    private void importConfigurationFile(String path) {
+     private void importConfigurationFile(String path) {
         try {
             boolean isComment = false;
             String line;
             String[] confArray;
-            Scanner scanner = new Scanner(path);
+            Scanner scanner = new Scanner(new File(path));
             while (scanner.hasNextLine()) {
                 line = scanner.nextLine().trim();
                 if (line.contains("/*")) isComment = true;
                 if (line.contains("*/")) {
                     isComment = false;
-                    line = line.substring(line.indexOf("*") + 1);
+                    line = line.substring(line.indexOf("*") + 2);
                 }
-                if (!isComment) {
+                if (!isComment && !line.equals("")) {
                     confArray = line.split(" ");
                     switch (confArray[0].toLowerCase()) {
-                        case "id":
+                        case "id": config.setDeviceID(confArray[1]);
+                        break;
+                        case "name": config.setDeviceName(confArray[1]);
+                        break;
+                        case "command": config.setDeviceCommand(confArray[1]);
+                        break;
+                        case "port": config.setDevicePort(confArray[1]);
+                        break;
+                        case "log":
                         {
-                            setId(confArray[1]);
+                            File file = new File(confArray[1]);
+                            file.createNewFile();
+                            logger = new FileWriter(file, true);
                         }
                         break;
-                        case "name": {
-                            setDeviceName(confArray[1]);
-                        }
-                        break;
-                        case "command": {
-                            setDeviceCommand(confArray[1]);
-                        }
-                        break;
-                        default:
-                        {
-                            analyzeCommand(receivedDevice, deviceCommand+" "+line);
-                        }
+                        default: runCommand(receivedDevice, config.getDeviceCommand()+" "+line);
                         break;
                     }
 
                 }
             }
             scanner.close();
-            sendMessage(path.substring(path.lastIndexOf("\\")) + " imported correctly.");
+            sendMessage("~"+path.substring(path.lastIndexOf("\\")) + " imported correctly.");
         }
         catch (Exception e)
         {
-            sendMessage(path.substring(path.lastIndexOf("\\")) + "encountered some problem.");
+            sendMessage(path + " encountered some problem.");
             sendMessage(e.getLocalizedMessage());
         }
     }
@@ -260,9 +224,16 @@ abstract  class Device extends Thread{
     }
 
     void sendMessage(String message) {
-        System.out.println(message);
-
-        //TODO logging to file with time labels
+        try {
+            message = System.currentTimeMillis() +  " : " + message;
+            System.out.println(message);
+            logger.write(message+"\n");
+            logger.flush();
+        }
+        catch (IOException ex)
+        {
+            System.out.println(ex.getLocalizedMessage());
+        }
     }
 
 }

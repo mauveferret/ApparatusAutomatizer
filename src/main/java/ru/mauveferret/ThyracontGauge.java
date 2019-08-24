@@ -9,11 +9,11 @@ public class ThyracontGauge extends Device {
     private double pressureColumn2;
     private double pressureVessel;
 
-    ThyracontGauge(String path) {
+    public ThyracontGauge(String path) {
         super(path);
     }
 
-    //Getters
+//Getters
 
     double getPressureColumn1() {
         return pressureColumn1;
@@ -38,7 +38,7 @@ public class ThyracontGauge extends Device {
 
     //for commandline
     @Override
-    void analyzeCommand(Device device, String someCommand) {
+    void runCommand(Device device, String someCommand) {
         someCommand = someCommand.toLowerCase();
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
@@ -61,11 +61,6 @@ public class ThyracontGauge extends Device {
         return commands;
     }
 
-    @Override
-    void info() {
-
-
-    }
 
 }
 

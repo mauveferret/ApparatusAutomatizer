@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="gate control added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/Arduino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Gauge" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/TMP" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/angel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/terminal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/angelnstructions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/commands.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/device" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApparatusAutomatizer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ApparatusAutomatizer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApparatusAutomatizer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/ApparatusAutomatizer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.mauveferret.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.mauveferret.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ru.mauveferret.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.mauveferret.AppTest.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ru/mauveferret" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -54,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\resources" />
       <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\src\main\java\ru\mauveferret" />
     </key>
   </component>
@@ -155,7 +174,7 @@
       <workItem from="1566364313662" duration="634000" />
       <workItem from="1566418459380" duration="14107000" />
       <workItem from="1566457174491" duration="955000" />
-      <workItem from="1566635726476" duration="3599000" />
+      <workItem from="1566635726476" duration="22500000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -227,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566432611079</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="serialdevice added">
+      <created>1566639366486</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1566639366486</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +283,7 @@
     <MESSAGE value="abstract methods removed, some became private, config import added, hardware wasnt checked, gitignore added" />
     <MESSAGE value="alias added, some optimization made" />
     <MESSAGE value="gate control added" />
-    <option name="LAST_COMMIT_MESSAGE" value="gate control added" />
+    <MESSAGE value="serialdevice added" />
+    <option name="LAST_COMMIT_MESSAGE" value="serialdevice added" />
   </component>
 </project>

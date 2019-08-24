@@ -1,5 +1,9 @@
+ru\mauveferret\Config.class
 ru\mauveferret\Arduino.class
 ru\mauveferret\Terminal.class
 ru\mauveferret\SomeShit.class
+ru\mauveferret\GateControl.class
+ru\mauveferret\SerialDevice$1.class
 ru\mauveferret\Device.class
 ru\mauveferret\Main.class
+ru\mauveferret\SerialDevice.class

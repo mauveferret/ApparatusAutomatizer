@@ -1,0 +1,10 @@
+log C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\TMP.txt
+command tmp
+/* 1
+
+this
+
+*/
+ID 1
+name tmp
+port COM5

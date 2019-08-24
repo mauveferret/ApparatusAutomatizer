@@ -102,7 +102,7 @@ public class GateControl extends Device{
         }
 
         String digitalOutput = (enablePump) ? " 1" : " 0";
-        arduino.analyzeCommand(terminal, "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput);
+        arduino.runCommand(terminal, "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput);
     }
 
     private void valve( String control)
@@ -136,7 +136,7 @@ public class GateControl extends Device{
             //FIXME ?!
             if ((isforlinePumpOn|| (!isforlinePumpOn && columnPressure > 700)) && openValve)
             {
-                arduino.analyzeCommand(terminal,"deviceCommand dwrite "+valveDigitalPin+" 1");
+                arduino.runCommand(terminal,"deviceCommand dwrite "+valveDigitalPin+" 1");
             }
             else
             {
@@ -144,7 +144,7 @@ public class GateControl extends Device{
             }
             if (!openValve && isCorrectControl)
             {
-                arduino.analyzeCommand(terminal,"deviceCommand dwrite "+valveDigitalPin+" 0");
+                arduino.runCommand(terminal,"deviceCommand dwrite "+valveDigitalPin+" 0");
             }
         }
     }
@@ -178,7 +178,7 @@ public class GateControl extends Device{
             double pressureDifference = Math.abs(columnPressure-vesselPressure);
             if (pressureDifference < maxPresDifference && openGate && vesselPressure<maxPresDifference)
             {
-                arduino.analyzeCommand(terminal,"deviceCommand dwrite "+gateDigitalPin+" 1");
+                arduino.runCommand(terminal,"deviceCommand dwrite "+gateDigitalPin+" 1");
             }
             else
             {
@@ -193,7 +193,7 @@ public class GateControl extends Device{
             }
             if (!openGate)
             {
-                arduino.analyzeCommand(terminal,"deviceCommand dwrite "+gateDigitalPin+" 0");
+                arduino.runCommand(terminal,"deviceCommand dwrite "+gateDigitalPin+" 0");
             }
         }
     }
@@ -205,19 +205,15 @@ public class GateControl extends Device{
         return super.getCommands();
     }
 
-    @Override
-    void info() {
-
-    }
 
     @Override
-    void analyzeCommand(Device device, String someCommand) {
+    void runCommand(Device device, String someCommand) {
         terminal = (Terminal) device;
         arduino = (Arduino) terminal.getDevice(arduinoName);
         gauge = (ThyracontGauge) terminal.getDevice(gaugeName);
 
         someCommand = someCommand.toLowerCase();
-        super.analyzeCommand(device, someCommand);
+        super.runCommand(device, someCommand);
         String[] command = commandToStringArray(someCommand);
         if (commandExists(command[1]))
         {
