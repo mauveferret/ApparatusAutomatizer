@@ -38,7 +38,6 @@ class Arduino extends SerialDevice {
 
     synchronized private boolean digitalWrite(String pin, boolean value)
     {
-
            String message=fillStringByZeros(getConfig().getDeviceID(),3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");

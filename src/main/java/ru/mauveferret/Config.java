@@ -12,6 +12,15 @@ public class Config {
     private String devicePort;
     private String deviceCommand;
     private String logPath;
+    private String dataPath;
+
+    public String getDataPath() {
+        return dataPath;
+    }
+
+    public void setDataPath(String dataPath) {
+        this.dataPath = dataPath;
+    }
 
     private TreeMap<String,String> parameters = new TreeMap<>();
 

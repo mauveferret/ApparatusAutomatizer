@@ -11,8 +11,11 @@ abstract  class Device extends Thread{
 
     Device(String path)
     {
+        //FIXME что за хня?
         getCommands();
         importConfigurationFile(path);
+        //TODO исправить
+        logger();
     }
 
     Device(){}
@@ -21,7 +24,7 @@ abstract  class Device extends Thread{
     // some config data
 
     private Config config = new Config();
-     FileWriter logger;
+     FileWriter messages;
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
@@ -31,6 +34,8 @@ abstract  class Device extends Thread{
     //key == alias, value == command which is represented by the alias
     private HashMap<String,String> aliases = new HashMap<>();
     //key == alias, value == options.
+    boolean logData = false;
+    private Thread logger;
 
     //Setters and Getters
 
@@ -174,9 +179,13 @@ abstract  class Device extends Thread{
                         {
                             File file = new File(confArray[1]);
                             file.createNewFile();
-                            logger = new FileWriter(file, true);
+                            messages = new FileWriter(file, true);
                         }
                         break;
+                        case "data" :
+                        {
+                            config.setDataPath(confArray[1]);
+                        }
                         default: runCommand(receivedDevice, config.getDeviceCommand()+" "+line);
                         break;
                     }
@@ -227,12 +236,44 @@ abstract  class Device extends Thread{
         try {
             message = System.currentTimeMillis() +  " : " + message;
             System.out.println(message);
-            logger.write(message+"\n");
-            logger.flush();
+            messages.write(message+"\n");
+            messages.flush();
         }
         catch (IOException ex)
         {
             System.out.println(ex.getLocalizedMessage());
+        }
+    }
+
+
+    String toLogger="";
+    void logger()
+    {
+        try {
+
+            File file = new File(config.getDataPath());
+            final FileWriter log = new FileWriter(file);
+            logger = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (logData) {
+
+                       try {
+                           if (!toLogger.equals(""))log.write(toLogger);
+                       }
+                       catch (Exception e)
+                       {
+                           e.printStackTrace();
+                       }
+
+                    }
+                }
+            });
+            logger.start();
+        }
+        catch (IOException e)
+        {
+            sendMessage(e.getLocalizedMessage());
         }
     }
 
