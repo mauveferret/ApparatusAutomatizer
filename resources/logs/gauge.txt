@@ -1,0 +1,19 @@
+1566722922810 : command "datalog" doesn't exist 
+1566722922810 : ~\Gauge imported correctly.
+1566723098990 : ~\Gauge imported correctly.
+1566723196612 : ~\Gauge imported correctly.
+1566723311761 : ~\Gauge imported correctly.
+1566723382598 : ~\Gauge imported correctly.
+1566726288598 : ~\Gauge imported correctly.
+1566726332565 : ~\Gauge imported correctly.
+1566726385256 : ~\Gauge imported correctly.
+1566726512656 : ~\Gauge imported correctly.
+1566726537672 : ~\Gauge imported correctly.
+1566726551168 : ~\Gauge imported correctly.
+1566726657488 : ~\Gauge imported correctly.
+1566726727153 : ~\Gauge imported correctly.
+1566726760132 : ~\Gauge imported correctly.
+1566727392724 : ~\Gauge imported correctly.
+1566727924695 : ~\Gauge imported correctly.
+1566727938688 : ~\Gauge imported correctly.
+1566727952198 : ~\Gauge imported correctly.
