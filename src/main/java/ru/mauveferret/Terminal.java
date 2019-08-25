@@ -22,6 +22,11 @@ public class Terminal extends Device {
         super(path);
     }
 
+    @Override
+    void log() {
+
+    }
+
 
     //Getters
 
@@ -43,7 +48,6 @@ public class Terminal extends Device {
 
     void addDevice(Device someDevice) {
 
-        someDevice.getCommands();
         String deviceName = someDevice.getConfig().getDeviceName();
         String deviceCommand = someDevice.getConfig().getDeviceCommand();
 

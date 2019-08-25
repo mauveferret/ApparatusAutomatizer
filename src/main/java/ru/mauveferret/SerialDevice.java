@@ -5,7 +5,9 @@ import jssc.SerialPortException;
 import jssc.SerialPortList;
 import java.util.HashMap;
 
-class SerialDevice extends Device {
+abstract class SerialDevice extends Device {
+
+
 
     private SerialPort serialPort;
     //in this thread reconnection to the device happening

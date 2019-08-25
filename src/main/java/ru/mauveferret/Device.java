@@ -11,20 +11,18 @@ abstract  class Device extends Thread{
 
     Device(String path)
     {
-        //FIXME что за хня?
         getCommands();
         importConfigurationFile(path);
-        //TODO исправить
-        logger();
     }
 
     Device(){}
 
+    abstract void log();
 
     // some config data
 
     private Config config = new Config();
-     FileWriter messages;
+    private FileWriter messages;
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
@@ -34,11 +32,20 @@ abstract  class Device extends Thread{
     //key == alias, value == command which is represented by the alias
     private HashMap<String,String> aliases = new HashMap<>();
     //key == alias, value == options.
-    boolean logData = false;
-    private Thread logger;
+    private String dataToLog ="";
 
     //Setters and Getters
 
+
+    public void setDataToLog(String dataToLog) {
+        if (!dataToLog.equals(this.dataToLog))
+        {
+            System.out.println(dataToLog);
+            this.dataToLog = dataToLog;
+            logData();
+        }
+
+    }
 
     public String getReceivedCommand() {
         return receivedCommand;
@@ -79,6 +86,7 @@ abstract  class Device extends Thread{
             setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             chooseCommand(command);
+            log();
         }
         else
         {
@@ -155,7 +163,6 @@ abstract  class Device extends Thread{
         try {
             boolean isComment = false;
             String line;
-            String[] confArray;
             Scanner scanner = new Scanner(new File(path));
             while (scanner.hasNextLine()) {
                 line = scanner.nextLine().trim();
@@ -165,31 +172,35 @@ abstract  class Device extends Thread{
                     line = line.substring(line.indexOf("*") + 2);
                 }
                 if (!isComment && !line.equals("")) {
-                    confArray = line.split(" ");
-                    switch (confArray[0].toLowerCase()) {
-                        case "id": config.setDeviceID(confArray[1]);
-                        break;
-                        case "name": config.setDeviceName(confArray[1]);
-                        break;
-                        case "command": config.setDeviceCommand(confArray[1]);
-                        break;
-                        case "port": config.setDevicePort(confArray[1]);
-                        break;
-                        case "log":
+                    String[] command = line.split(" ");
+                    switch (command[0].toLowerCase())
+                    {
+                        case "id": config.setDeviceID(command[1]);
+                            break;
+                        case "name": config.setDeviceName(command[1]);
+                            break;
+                        case "command": config.setDeviceCommand(command[1]);
+                            break;
+                        case "port": config.setDevicePort(command[1]);
+                            break;
+                        case "messagelog":
                         {
-                            File file = new File(confArray[1]);
-                            file.createNewFile();
+                            File file = new File(command[1]);
+                            //file.createNewFile();
                             messages = new FileWriter(file, true);
                         }
                         break;
-                        case "data" :
+                        case "datalog" : config.setDataPath(command[1]);
+                            break;
+                        case "type" : config.setDeviceType(command[1]);
+                            break;
+                        default:
                         {
-                            config.setDataPath(confArray[1]);
+                            //FIXME
+                            runCommand(receivedDevice, config.getDeviceCommand()+" "+line);
                         }
-                        default: runCommand(receivedDevice, config.getDeviceCommand()+" "+line);
                         break;
                     }
-
                 }
             }
             scanner.close();
@@ -197,6 +208,7 @@ abstract  class Device extends Thread{
         }
         catch (Exception e)
         {
+            e.printStackTrace();
             sendMessage(path + " encountered some problem.");
             sendMessage(e.getLocalizedMessage());
         }
@@ -245,31 +257,29 @@ abstract  class Device extends Thread{
         }
     }
 
-
-    String toLogger="";
-    void logger()
+    private void logData()
     {
         try {
-
             File file = new File(config.getDataPath());
             final FileWriter log = new FileWriter(file);
-            logger = new Thread(new Runnable() {
+            new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    while (logData) {
 
                        try {
-                           if (!toLogger.equals(""))log.write(toLogger);
+                           if (!dataToLog.equals(""))
+                           {
+                               log.write(dataToLog);
+                               log.flush();
+                           }
                        }
                        catch (Exception e)
                        {
                            e.printStackTrace();
                        }
 
-                    }
                 }
-            });
-            logger.start();
+            }).start();
         }
         catch (IOException e)
         {

@@ -3,14 +3,19 @@ package ru.mauveferret;
 
 import java.util.HashMap;
 
-public class ThyracontGauge extends Device {
+class ThyracontGauge extends Device {
 
     private double pressureColumn1;
     private double pressureColumn2;
     private double pressureVessel;
 
-    public ThyracontGauge(String path) {
+    ThyracontGauge(String path) {
         super(path);
+    }
+
+    @Override
+    void log() {
+
     }
 
 //Getters

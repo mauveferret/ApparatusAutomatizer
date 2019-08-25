@@ -9,15 +9,26 @@ import java.util.HashMap;
  the National research Nuclear University "Mephi"
  */
 
-class Arduino extends SerialDevice {
+class Arduino extends SerialDevice implements Configurable{
 
     public Arduino(String path) {
         super(path);
     }
 
+    @Override
+    void log() {
+        type();
+        String mes="digital:";
+        for (boolean b : digitalPins) mes+= (b) ? "1 ": "0 ";
+        mes+="\nanalog: ";
+        for (double d: analogPins) mes+= d+" ";
+        setDataToLog(mes);
+    }
+
+
     //TODO list of pins status
-    private boolean[] digitalPins = new boolean[50];
-    private int[] analogPins = new int[50];
+    private boolean[] digitalPins;
+    private double[] analogPins;
 
 
     //FIXME: does Jssc controls simultenous writingon arduino?
@@ -30,7 +41,7 @@ class Arduino extends SerialDevice {
         return digitalPins;
     }
 
-    public int[] getAnalogPins() {
+    public double[] getAnalogPins() {
         return analogPins;
     }
 
@@ -122,6 +133,7 @@ class Arduino extends SerialDevice {
     }
 
 
+
     //for commandline
 
 
@@ -153,37 +165,40 @@ class Arduino extends SerialDevice {
             }
             break;
             case "dread":
-            {
                 if (command[2].equals(""))
-                {
                     sendMessage("Enter pin number as an option");
-                }
                 else
-                {
                     sendMessage("" + digitalRead(command[2]));
-                }
-            }
             break;
             case "awrite":
                 if (command[2].equals("") || command[3].equals(""))
-                {
                     sendMessage("Enter pin number and value (0-5) as an option");
-                }
                 else
-                {
                     analogWrite((command[2]), Integer.parseInt(command[3]));
-                }
                 break;
             case "aread":
                 if (command[2].equals(""))
-                {
                     sendMessage("Enter pin number as an option");
-                }
                 else
-                {
                     sendMessage("" + analogRead(command[2]));
-                }
                 break;
         }
+
+    }
+
+    @Override
+    public void type() {
+        String type = getConfig().getDeviceType();
+        if (type.toLowerCase().equals("nano"))
+        {
+            digitalPins = new boolean[14];
+            analogPins = new double[8];
+        }
+        if (type.toLowerCase().equals("uno"))
+        {
+            digitalPins = new boolean[14];
+            analogPins = new double[6];
+        }
+
     }
 }

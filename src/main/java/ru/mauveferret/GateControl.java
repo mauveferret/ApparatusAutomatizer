@@ -28,7 +28,10 @@ public class GateControl extends Device{
         super(path);
     }
 
+    @Override
+    void log() {
 
+    }
 
 
     //Setters
@@ -205,44 +208,33 @@ public class GateControl extends Device{
         return super.getCommands();
     }
 
-
     @Override
-    void runCommand(Device device, String someCommand) {
-        terminal = (Terminal) device;
+    void chooseCommand(String[] command) {
+        terminal = (Terminal) getReceivedDevice();
         arduino = (Arduino) terminal.getDevice(arduinoName);
         gauge = (ThyracontGauge) terminal.getDevice(gaugeName);
+        super.chooseCommand(command);
+        switch (command[1]) {
+            case "valve": valve( command[2]);
+                break;
+            case "gate": gate(command[2]);
+                break;
+            case "forline": forlinePump(command[2]);
+                break;
+            case "forlinepin": setForlinePumpDigitalPin(Integer.parseInt(command[2]));
+                break;
+            case "valvepin": setValveDigitalPin(Integer.parseInt(command[2]));
+                break;
+            case "gatepin": setGateDigitalPin(Integer.parseInt(command[2]));
+                break;
+            case "gauge" : setGaugeName(command[2]);
+                break;
+            case "arduino" : setArduinoName(command[2]);
+                break;
+            case "columnnumber" : setColumnNumber(Integer.parseInt(command[2]));
+                break;
+        }
 
-        someCommand = someCommand.toLowerCase();
-        super.runCommand(device, someCommand);
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
-        {
-            command[1] = replaceAliasByCommand(command[1]);
-            switch (command[1]) {
-                case "valve": valve( command[2]);
-                break;
-                case "gate": gate(command[2]);
-                break;
-                case "forline": forlinePump(command[2]);
-                break;
-                case "forlinepin": setForlinePumpDigitalPin(Integer.parseInt(command[2]));
-                break;
-                case "valvepin": setValveDigitalPin(Integer.parseInt(command[2]));
-                break;
-                case "gatepin": setGateDigitalPin(Integer.parseInt(command[2]));
-                break;
-                case "gauge" : setGaugeName(command[2]);
-                break;
-                case "arduino" : setArduinoName(command[2]);
-                break;
-                case "columnnumber" : setColumnNumber(Integer.parseInt(command[2]));
-                break;
-            }
-        }
-        else
-        {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
-        }
+
     }
-
 }

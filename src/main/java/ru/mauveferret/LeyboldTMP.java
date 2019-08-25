@@ -14,6 +14,11 @@ public class LeyboldTMP extends Device {
         super(path);
     }
 
+    @Override
+    void log() {
+
+    }
+
 
 //Getters
 

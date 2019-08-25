@@ -1,4 +1,6 @@
-log C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\arduino1.txt
+DataLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\data\arduino1.txt
+MessageLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\arduino1.txt
+
 command ard1
 /* 1
 
@@ -6,5 +8,7 @@ this
 
 */
 ID 1
+type nano
 name arduino1
 port COM1
+info

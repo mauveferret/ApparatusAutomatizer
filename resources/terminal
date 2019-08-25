@@ -1,4 +1,5 @@
-log C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\terminal1.txt
+MessageLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\terminal.txt
+DataLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\data\terminal.txt
 command ter
 /* 1
 

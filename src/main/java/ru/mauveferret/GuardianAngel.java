@@ -2,7 +2,7 @@ package ru.mauveferret;
 
 import java.util.HashMap;
 
-public class GuardianAngel extends Device{
+public class GuardianAngel extends Device {
 
     /*
     used to check if the temperature and pressure conditions are comfortable
@@ -12,8 +12,6 @@ public class GuardianAngel extends Device{
      */
 
     private boolean continueChecking = true;
-
-
 
 
     //TODO Command interpretator
@@ -30,8 +28,7 @@ public class GuardianAngel extends Device{
 
     @Override
     public void run() {
-        while (true)
-        {
+        while (true) {
 
             // FIXME so...?
         }
@@ -42,10 +39,13 @@ public class GuardianAngel extends Device{
         super(path);
     }
 
-    private void startCheckingPressure(Device device)
-    {
-        while (continueChecking)
-        {
+    @Override
+    void log() {
+
+    }
+
+    private void startCheckingPressure(Device device) {
+        while (continueChecking) {
             //TODO very dangerous, what if device is not a termonal?
             Terminal terminal = (Terminal) device;
             ThyracontGauge gauge = (ThyracontGauge) ((Terminal) device).getDevice("gauge");
@@ -56,9 +56,8 @@ public class GuardianAngel extends Device{
             double gate1 = arduino.getAnalogPins()[3];
 
             //if pressure difference is too much or pressureVessel to much -> close gate
-            if ((Math.abs(pressureColumn1-pressureVessel)>10 || pressureVessel>10) && gate1>2.5 )
-            {
-                terminal.runCommand(terminal,"arduino dwrite 8 0");
+            if ((Math.abs(pressureColumn1 - pressureVessel) > 10 || pressureVessel > 10) && gate1 > 2.5) {
+                terminal.runCommand(terminal, "arduino dwrite 8 0");
             }
 
         }
@@ -68,43 +67,30 @@ public class GuardianAngel extends Device{
 
     @Override
     HashMap<String, String> getCommands() {
-        commands.put("start","");
-        commands.put("pause","");
+        commands.put("start", "");
+        commands.put("pause", "");
 
         return commands;
     }
 
     @Override
-    void runCommand(Device someDevice, String someCommand) {
-        final Device device = someDevice;
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
-        {
-            setReceivedCommand(someCommand);
-            setReceivedDevice(device);
-            command[1] = replaceAliasByCommand(command[1]);
-            switch (command[1])
-            {
-                case ("start"):
-                {
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            startCheckingPressure(device);
-                        }
+    void chooseCommand(String[] command) {
+
+        super.chooseCommand(command);
+        switch (command[1]) {
+            case ("start"): {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        startCheckingPressure(getReceivedDevice());
                     }
-                    ).start();
                 }
-                break;
-                case ("pause"):
-                {
-                    setContinueChecking(false);
-                }
+                ).start(); //FIXME received device?!
             }
-        }
-        else
-        {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
+            break;
+            case ("pause"): {
+                setContinueChecking(false);
+            }
         }
     }
 }

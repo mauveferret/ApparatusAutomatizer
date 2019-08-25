@@ -7,9 +7,20 @@ public class Config {
 
 
 
-    private String deviceID;
-    private String deviceName;
-    private String devicePort;
+    private String deviceID="ID isn't set";
+    private String deviceName = "name isn't set";
+    private String devicePort = "port isn't set";
+    private String deviceType = "type isn't set";
+
+    public String getDeviceType() {
+        return deviceType;
+    }
+
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+
+    }
+
     private String deviceCommand;
     private String logPath;
     private String dataPath;
