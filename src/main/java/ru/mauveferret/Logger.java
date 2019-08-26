@@ -36,7 +36,7 @@ public abstract class Logger extends Thread{
         }
     }
 
-    public void createDataFile(String pathToData) {
+    void createDataFile(String pathToData) {
         this.pathToData = pathToData;
         try {
             dataWriter = new FileWriter(new File(pathToData), true);
@@ -49,7 +49,7 @@ public abstract class Logger extends Thread{
 
 
 
-    abstract void log();
+    abstract void measureAndLog();
 
      void logData(String data) {
         if (!data.equals(dataToLog)) {

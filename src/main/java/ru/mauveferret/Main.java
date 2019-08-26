@@ -7,11 +7,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Terminal terminal = new Terminal("C:\\Users\\dgbulgadaryan.2133-20115\\Git\\ApparatusAutomatizer\\resources\\terminal");
-        Arduino arduino = new Arduino("C:\\Users\\dgbulgadaryan.2133-20115\\Git\\ApparatusAutomatizer\\resources\\Arduino");
-        GuardianAngel angel = new GuardianAngel("C:\\Users\\dgbulgadaryan.2133-20115\\Git\\ApparatusAutomatizer\\resources\\angel");
-        LeyboldTMP leyboldTMP = new LeyboldTMP("C:\\Users\\dgbulgadaryan.2133-20115\\Git\\ApparatusAutomatizer\\resources\\TMP");
-        ThyracontGauge thyracontGauge = new ThyracontGauge("C:\\Users\\dgbulgadaryan.2133-20115\\Git\\ApparatusAutomatizer\\resources\\Gauge");
+        TempPathFinder tempPathFinder = new TempPathFinder(true);
+        Terminal terminal = new Terminal(tempPathFinder.terminal);
+        Arduino arduino = new Arduino(tempPathFinder.Arduino);
+        GuardianAngel angel = new GuardianAngel(tempPathFinder.angel);
+        LeyboldTMP leyboldTMP = new LeyboldTMP(tempPathFinder.TMP);
+        ThyracontGauge thyracontGauge = new ThyracontGauge(tempPathFinder.Gauge);
         //GuardianAngel guardianAngel = new GuardianAngel();
         //terminal.addDevice(guardianAngel);
         terminal.addDevice(thyracontGauge);

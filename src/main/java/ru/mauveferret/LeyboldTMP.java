@@ -1,6 +1,5 @@
 package ru.mauveferret;
 
-import java.util.HashMap;
 import java.util.TreeMap;
 
 
@@ -11,15 +10,9 @@ public class LeyboldTMP extends Device {
     private double voltage;
     private double current;
 
-    LeyboldTMP(String path) {
+    public LeyboldTMP(String path) {
         super(path);
     }
-
-    @Override
-    void log() {
-
-    }
-
 
 //Getters
 
@@ -40,35 +33,59 @@ public class LeyboldTMP extends Device {
     }
 
 
-    //Com port related Commands
-
-
     //Device related commands
 
+
     @Override
-    void runCommand(Device device, String someCommand) {
-        someCommand = someCommand.toLowerCase();
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
+    void chooseCommand(String[] command) {
+        switch (command[1])
         {
-            setReceivedCommand(someCommand);
-            setReceivedDevice(device);
-            command[1] = replaceAliasByCommand(command[1]);
-            //switch
+            case "enable": enable();
+            case "measure": measure();
+            break;
         }
-        else
-        {
-            sendMessage("command \""+command[1]+"\" doesn't exist ");
-        }
+        super.chooseCommand(command);
+    }
+
+    private void enable() {
+
+        //TODO TMP
+
+    }
+
+    private void measure()
+    {
+
+    }
+
+    //terminal related
+
+    @Override
+    void measureAndLog() {
+        Thread log = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean stop = true;
+                while (stop)
+                {
+                    //Todo measure
+                    logData("time "+temperature+" "+frequency+" "+voltage+" "+current+"\n");
+                    stop = Thread.currentThread().isInterrupted();
+                }
+            }
+        });
+        log.setName("GaugeLogger");
+        log.start();
+
     }
 
     @Override
     TreeMap<String, String> getCommands() {
-        commands.put("run", "launches the TMP in form $run$");
+        commands.put("enable", "launches the TMP in form $run$");
         commands.put("stop","stops the TMP in form: $stop$");
+        commands.put("measure","");
         commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");
         commands.put("frequency", "...");
-
-        return commands;
+        return super.getCommands();
     }
 }

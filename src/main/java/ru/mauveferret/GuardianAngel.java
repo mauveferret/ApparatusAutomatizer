@@ -41,7 +41,7 @@ public class GuardianAngel extends Device {
     }
 
     @Override
-    void log() {
+    void measureAndLog() {
 
     }
 

@@ -30,7 +30,7 @@ public class GateControl extends Device{
     }
 
     @Override
-    void log() {
+    void measureAndLog() {
 
     }
 

@@ -1,27 +1,21 @@
 package ru.mauveferret;
 
-
-import java.util.HashMap;
 import java.util.TreeMap;
 
 class ThyracontGauge extends SerialDevice {
 
 
-
-    ThyracontGauge(String path) {
+    public ThyracontGauge(String path) {
         super(path);
     }
 
-    @Override
-    void log() {
+    private double[] pressure = new double[4];
 
-    }
 
-    double[] pressure1 = new double[4];
-//Getters
+    //Getters
 
-    public double[] getPressure() {
-        return pressure1;
+    public double getPressure(int gaugeNumber) {
+        return pressure[gaugeNumber];
     }
 
     //TODO calibrate
@@ -30,49 +24,91 @@ class ThyracontGauge extends SerialDevice {
 
     private synchronized double measure(int gaugeNumber)
     {
-        //FIXME CHECKSuM
+        //FIXME CHECK CHECKSuM
         String message = "00"+gaugeNumber+"M";
+        writeMessage(message+checkSum(message)+"\r");
+        message = readMessage();
+        if (message.substring(message.length()-1).equals(checkSum(message))) {
+            double mantissa = 0;
+            try {
+                mantissa = Double.parseDouble(message.substring(4, 8)) / 1000;
+            } catch (Exception e) {
+                System.out.println("hyi");
+            }
+            int order = 0;
+            try {
+                order = Integer.parseInt(message.substring(8, 10)) - 20;
+            } catch (Exception e) {
+                System.out.println("sef");
+            }
+            double value = mantissa * 0.75 * Math.pow(10, order);
+            try {
+                pressure[gaugeNumber] = value;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return value;
+        }
+        else
+        {
+            sendMessage("Error during measuring pressure by "+gaugeNumber+" gauge");
+            reconnect();
+            //return previous
+            return getPressure(gaugeNumber);
+        }
+    }
+
+    private String checkSum(String message)
+    {
         int checkSum=0;
         for (char c: message.toCharArray())
             checkSum+=c;
-        writeMessage(message+(char) (checkSum % 64 +64)+"\r");
-        message = readMessage();
-        double mantissa =0;
-        try {
-            mantissa = Double.parseDouble(message.substring(4,8))/1000;
-        }
-        catch (Exception e)
-        {
-            System.out.println("hyi");
-        }
-        int order = 0;
-                try {
-                    order= Integer.parseInt(message.substring(8,10))-20;
-                }
-                catch (Exception e)
-                {
-                    System.out.println("sef");
-                }
-        double value = mantissa*0.75*Math.pow(10,order);
-        try {
-            pressure1[gaugeNumber] = value;
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        System.out.println(value);
-        return  value;
+        return ((char) (checkSum % 64 +64))+"";
     }
+
 
     //for commandline
 
+    @Override
+    void measureAndLog() {
+        Thread log = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean stop = true;
+                while (stop)
+                {
+                    measure(1);
+                    measure(2);
+                    //measure(3);
+                    logData("time "+getPressure(1)+" "+getPressure(2)+"\n");
+                    stop = Thread.currentThread().isInterrupted();
+                }
+            }
+        });
+        log.setName("GaugeLogger");
+        log.start();
+    }
 
     @Override
     void chooseCommand(String[] command) {
-        if (command[1].equals("measure"))
+        switch (command[1])
         {
-            measure(1);
+            case "measure":
+            {
+                try {
+                    measure(Integer.parseInt(command[2]));
+                }
+                catch (Exception e)
+                {
+                    sendMessage("enter gauge number (1-3) as an option");
+                }
+            }
+            break;
+            case "calibrate":
+            {
+
+            }
+            break;
         }
         super.chooseCommand(command);
     }

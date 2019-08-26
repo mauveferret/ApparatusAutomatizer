@@ -1,8 +1,6 @@
 package ru.mauveferret;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -14,7 +12,7 @@ abstract  class Device extends Logger{
     {
         getCommands();
         importConfigurationFile(path);
-        log();
+        measureAndLog();
     }
 
     Device(){}
@@ -190,6 +188,7 @@ abstract  class Device extends Logger{
         }
         catch (Exception e)
         {
+            e.printStackTrace();
             sendMessage(path + " FileNotFound or some commands ard incorrect");
             sendMessage(e.getLocalizedMessage());
         }

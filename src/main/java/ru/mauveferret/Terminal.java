@@ -192,7 +192,7 @@ public class Terminal extends Device {
     }
 
     @Override
-    void log() {
+    void measureAndLog() {
 
     }
 }

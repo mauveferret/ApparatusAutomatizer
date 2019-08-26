@@ -178,7 +178,7 @@ class Arduino extends SerialDevice implements Configurable{
     }
 
     @Override
-    void log() {
+    void measureAndLog() {
         Thread log = new Thread(new Runnable() {
             @Override
             public void run() {
