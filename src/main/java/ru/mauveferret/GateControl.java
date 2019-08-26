@@ -1,6 +1,7 @@
 package ru.mauveferret;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 //an example of the  virtual device which would be made by some user to configure Automizer for his personal needs
 public class GateControl extends Device{
@@ -132,9 +133,9 @@ public class GateControl extends Device{
 
 
 
-        if ((openValve ^ arduino.getDigitalPins()[valveDigitalPin]) && isCorrectControl)
+        if ((openValve ^ arduino.getDigitalPinsWritten()[valveDigitalPin]) && isCorrectControl)
         {
-            boolean isforlinePumpOn = arduino.getDigitalPins()[forlinePumpDigitalPin];
+            boolean isforlinePumpOn = arduino.getDigitalPinsWritten()[forlinePumpDigitalPin];
             double columnPressure = (columnNumber == 1) ? gauge.getPressureColumn1() : gauge.getPressureColumn2();
             //FIXME ?!
             if ((isforlinePumpOn|| (!isforlinePumpOn && columnPressure > 700)) && openValve)
@@ -174,7 +175,7 @@ public class GateControl extends Device{
             sendMessage("No $open$ options or it's incorrect (should use \"open\" or \"close\")");
         }
 
-        if ((openGate ^ arduino.getDigitalPins()[valveDigitalPin]) && isCorrectControl)
+        if ((openGate ^ arduino.getDigitalPinsWritten()[valveDigitalPin]) && isCorrectControl)
         {
             double columnPressure = (columnNumber == 1) ? gauge.getPressureColumn1() : gauge.getPressureColumn2();
             double vesselPressure = gauge.getPressureVessel();
@@ -204,7 +205,7 @@ public class GateControl extends Device{
     //terminal related methods
 
     @Override
-    HashMap<String, String> getCommands() {
+    TreeMap<String, String> getCommands() {
         return super.getCommands();
     }
 

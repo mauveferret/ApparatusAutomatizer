@@ -2,6 +2,8 @@ package ru.mauveferret;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 /*
 needs to send some command to its owner through LaunchCommand
@@ -11,30 +13,25 @@ public class Terminal extends Device {
 
 
     //key == deviceCommand, value == device object
-    private HashMap<String, Device> commandMap = new HashMap<>();
+    private TreeMap<String, Device> commandMap = new TreeMap<>();
     //key == device name, value == device object
-    private HashMap<String, Device> deviceMap = new HashMap<>();
+    private TreeMap<String, Device> deviceMap = new TreeMap<>();
 
-    private ArrayList<Thread> threads = new ArrayList<>();
 
     public Terminal(String path) {
 
         super(path);
     }
 
-    @Override
-    void log() {
-
-    }
 
 
     //Getters
 
-    HashMap<String, Device> getCommandMap() {
+    TreeMap<String, Device> getCommandMap() {
         return commandMap;
     }
 
-    public HashMap<String, Device> getDeviceMap() {
+    public TreeMap<String, Device> getDeviceMap() {
         return deviceMap;
     }
 
@@ -91,7 +88,8 @@ public class Terminal extends Device {
                 star+="*";
             }
             help+=star+" "+s+" "+star+"\n";
-            HashMap<String,String> description =deviceMap.get(s).getCommands();
+            TreeMap<String,String> description =deviceMap.get(s).getCommands();
+
             for(String command: description.keySet())
             {
                 String str="";
@@ -130,29 +128,41 @@ public class Terminal extends Device {
         return  returnString;
     }
 
+    @Override
+    public void run() {
+        Scanner scanner = new Scanner(System.in);
+        String command = scanner.nextLine();
+        while (!command.equals("exit"))
+        {
+            launchCommand(command,false);
+            command = scanner.nextLine();
+        }
+        sendMessage("Goodbye, my Lord.");
+        for (Thread thr: Thread.getAllStackTraces().keySet())
+        {
+            thr.interrupt();
+        }
+    }
+
 
     //for commandline
 
     void launchCommand(String command, final boolean silentMode)  {
 
-        //TODO probably while with Scanner is better here than in main?
-
         final String[] commandArray = commandToStringArray(command);
         final String internalCommand = command;
         if (commandMap.containsKey(commandArray[0]))
         {
-            new Thread(new Runnable() {
+            Thread commandThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    Thread.currentThread().setName(commandMap.get(commandArray[0]).getName()+" thread");
-                    threads.add(Thread.currentThread());
-                   // System.out.println(Thread.currentThread().getName());
                     commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
                    // TODO silentmode
                 }
-
             }
-            ).start();
+            );
+            commandThread.setName(command);
+            commandThread.start();
         }
         else
         {
@@ -161,7 +171,7 @@ public class Terminal extends Device {
     }
 
     @Override
-    HashMap<String, String> getCommands() {
+    TreeMap<String, String> getCommands() {
         commands.put("help", "this page");
         // commands.put("exit", "stops program");
         commands.put("threads","");
@@ -177,10 +187,15 @@ public class Terminal extends Device {
 
             case "threads":
             {
-                for (Thread thread: threads) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
+                for (Thread thread: Thread.getAllStackTraces().keySet()) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
             }
             break;
         }
         super.chooseCommand(command);
+    }
+
+    @Override
+    void log() {
+
     }
 }

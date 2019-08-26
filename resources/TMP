@@ -1,5 +1,5 @@
-MessageLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\TMP.txt
-DataLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\data\TMP.txt
+LogPath C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\logs\TMP.txt
+DataPath C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\data\TMP.txt
 command tmp
 /* 1
 

@@ -1,5 +1,5 @@
-MessageLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\gauge.txt
-DataLog C:\Users\mauve\Git\ApparatusAutomatizer\resources\data\gauge.txt
+LogPath C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\logs\gauge.txt
+DataPath C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\data\gauge.txt
 command gag
 /* 1
 

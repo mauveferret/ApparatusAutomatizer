@@ -2,6 +2,7 @@ package ru.mauveferret;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 /*
  must be accompanied by special Arduino driver which is made
@@ -11,38 +12,26 @@ import java.util.HashMap;
 
 class Arduino extends SerialDevice implements Configurable{
 
-    public Arduino(String path) {
+    Arduino(String path) {
         super(path);
-    }
-
-    @Override
-    void log() {
-        type();
-        String mes="digital:";
-        for (boolean b : digitalPins) mes+= (b) ? "1 ": "0 ";
-        mes+="\nanalog: ";
-        for (double d: analogPins) mes+= d+" ";
-        setDataToLog(mes);
     }
 
 
     //TODO list of pins status
-    private boolean[] digitalPins;
-    private double[] analogPins;
+    private boolean[] digitalPinsWritten = new boolean[14];
+    private double[] analogPinsRead = new double[14];
 
 
     //FIXME: does Jssc controls simultenous writingon arduino?
 
-
     //Getters and Setters
 
-    //TODO добавить в методы ардуины добавление информации в эти массив
-    public boolean[] getDigitalPins() {
-        return digitalPins;
+    public boolean[] getDigitalPinsWritten() {
+        return digitalPinsWritten;
     }
 
-    public double[] getAnalogPins() {
-        return analogPins;
+    public double[] getAnalogPinsRead() {
+        return analogPinsRead;
     }
 
     //Arduino operations
@@ -52,11 +41,12 @@ class Arduino extends SerialDevice implements Configurable{
            String message=fillStringByZeros(getConfig().getDeviceID(),3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");
-           System.out.println("serf");
            String answer = readMessage();
-           System.out.println("sefsessss");
            if (answer.contains("SETTED"))
+           {
                sendMessage(((value) ? "HIGH" : "LOW")+" on pin "+pin+" is set");
+               digitalPinsWritten[Integer.parseInt(pin)] = value;
+           }
            else
            {
                if (!isReconnectActive()) sendMessage("ERROR: pin number is incorrect.");
@@ -103,7 +93,11 @@ class Arduino extends SerialDevice implements Configurable{
             int signal = checkSum(answer.substring(0, answer.length() - 4));
             int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
             if ((signal == checksum) && (!answer.contains("ERROR"))) {
-                return Integer.parseInt(answer.substring(7, 11)) / 204.6;
+                {
+                    double value = Integer.parseInt(answer.substring(7, 11)) / 204.6;
+                    analogPinsRead[Integer.parseInt(pin)] = value;
+                    return value;
+                }
             } else {
                 if (answer.contains("ERROR")) sendMessage("pin " + pin + " doesn't exist");
                 else
@@ -132,13 +126,10 @@ class Arduino extends SerialDevice implements Configurable{
         return (checkSum % 256);
     }
 
-
-
     //for commandline
 
-
     @Override
-    HashMap<String, String> getCommands() {
+    TreeMap<String, String> getCommands() {
         commands.put("dwrite", "Write on Arduino digital port in form: DO $pin number$ $value(0,1)$");
         commands.put("dread", "Read from Arduino digital  port in form: DI $pin number$");
         commands.put("awrite", "Write on Arduino analog port(PWM~) in form: AO $pin number$ $value(0-5)$");
@@ -187,18 +178,41 @@ class Arduino extends SerialDevice implements Configurable{
     }
 
     @Override
+    void log() {
+        Thread log = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean stop = true;
+                while (stop) {
+                    String time = "time";
+                    String dataToLog =time+" digital ";
+                    for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
+                    dataToLog+="\n"+time+" analog ";
+                    for (double d: analogPinsRead) dataToLog+=d+" ";
+                    logData(dataToLog);
+                    stop = !Thread.currentThread().isInterrupted();
+                }
+            }
+        });
+        log.setName(getConfig().getDeviceName()+" logger");
+        log.start();
+    }
+
+    //FIXME
+    @Override
     public void type() {
         String type = getConfig().getDeviceType();
         if (type.toLowerCase().equals("nano"))
         {
-            digitalPins = new boolean[14];
-            analogPins = new double[8];
+            digitalPinsWritten = new boolean[14];
+            analogPinsRead = new double[8];
         }
         if (type.toLowerCase().equals("uno"))
         {
-            digitalPins = new boolean[14];
-            analogPins = new double[6];
+            digitalPinsWritten = new boolean[14];
+            analogPinsRead = new double[6];
         }
 
     }
+
 }

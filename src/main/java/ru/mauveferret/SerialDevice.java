@@ -4,6 +4,7 @@ import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 abstract class SerialDevice extends Device {
 
@@ -30,7 +31,7 @@ abstract class SerialDevice extends Device {
     //terminal related methods
 
     @Override
-    HashMap<String, String> getCommands() {
+    TreeMap<String, String> getCommands() {
         commands.put("ports", "shows available COM port's names");
         commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
         commands.put("close", "close Arduino port");
@@ -206,6 +207,7 @@ abstract class SerialDevice extends Device {
             }
         }
         );
+        reconnectionThread.setName("reconnection");
         reconnectionThread.start();
     }
 

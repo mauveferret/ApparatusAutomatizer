@@ -6,46 +6,36 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.TreeMap;
 
-abstract  class Device extends Thread{
+abstract  class Device extends Logger{
 
     Device(String path)
     {
         getCommands();
         importConfigurationFile(path);
+        log();
     }
 
     Device(){}
 
-    abstract void log();
 
     // some config data
 
     private Config config = new Config();
-    private FileWriter messages;
+
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
     //it is used in help
     //key == command, value == its desciption for help
-    HashMap<String, String> commands = new HashMap<>();
+    TreeMap<String, String> commands = new TreeMap<>();
     //key == alias, value == command which is represented by the alias
     private HashMap<String,String> aliases = new HashMap<>();
     //key == alias, value == options.
-    private String dataToLog ="";
 
     //Setters and Getters
 
-
-    public void setDataToLog(String dataToLog) {
-        if (!dataToLog.equals(this.dataToLog))
-        {
-            System.out.println(dataToLog);
-            this.dataToLog = dataToLog;
-            logData();
-        }
-
-    }
 
     public String getReceivedCommand() {
         return receivedCommand;
@@ -86,7 +76,6 @@ abstract  class Device extends Thread{
             setReceivedDevice(device);
             command[1] = replaceAliasByCommand(command[1]);
             chooseCommand(command);
-            log();
         }
         else
         {
@@ -98,10 +87,7 @@ abstract  class Device extends Thread{
     {
         switch (command[1]) {
 
-            case "info":
-            {
-                sendMessage(config.info());
-            }
+            case "info": sendMessage(config.info());
             break;
             case "alias":
             {
@@ -117,7 +103,7 @@ abstract  class Device extends Thread{
     }
 
     //actually not only returns a commands Map, but also forms it
-      HashMap<String, String> getCommands()
+      TreeMap<String, String> getCommands()
       {
 
           commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
@@ -154,10 +140,7 @@ abstract  class Device extends Thread{
         return canBeAdded;
     }
 
-    boolean commandExists(String command)
-    {
-        return (commands.containsKey(command)||aliases.containsKey(command));
-    }
+
 
      private void importConfigurationFile(String path) {
         try {
@@ -183,17 +166,12 @@ abstract  class Device extends Thread{
                             break;
                         case "port": config.setDevicePort(command[1]);
                             break;
-                        case "messagelog":
-                        {
-                            File file = new File(command[1]);
-                            //file.createNewFile();
-                            messages = new FileWriter(file, true);
-                        }
+                        case "logpath": createLogFile(command[1]);
                         break;
-                        case "datalog" : config.setDataPath(command[1]);
-                            break;
+                        case "datapath" : createDataFile(command[1]);
+                        break;
                         case "type" : config.setDeviceType(command[1]);
-                            break;
+                        break;
                         default:
                         {
                             //FIXME
@@ -208,8 +186,7 @@ abstract  class Device extends Thread{
         }
         catch (Exception e)
         {
-            e.printStackTrace();
-            sendMessage(path + " encountered some problem.");
+            sendMessage(path + " FileNotFound or some commands ard incorrect");
             sendMessage(e.getLocalizedMessage());
         }
     }
@@ -244,47 +221,9 @@ abstract  class Device extends Thread{
         return commandArray;
     }
 
-    void sendMessage(String message) {
-        try {
-            message = System.currentTimeMillis() +  " : " + message;
-            System.out.println(message);
-            messages.write(message+"\n");
-            messages.flush();
-        }
-        catch (IOException ex)
-        {
-            System.out.println(ex.getLocalizedMessage());
-        }
-    }
-
-    private void logData()
+    boolean commandExists(String command)
     {
-        try {
-            File file = new File(config.getDataPath());
-            final FileWriter log = new FileWriter(file);
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                       try {
-                           if (!dataToLog.equals(""))
-                           {
-                               log.write(dataToLog);
-                               log.flush();
-                           }
-                       }
-                       catch (Exception e)
-                       {
-                           e.printStackTrace();
-                       }
-
-                }
-            }).start();
-        }
-        catch (IOException e)
-        {
-            sendMessage(e.getLocalizedMessage());
-        }
+        return (commands.containsKey(command)||aliases.containsKey(command));
     }
-
 }
+

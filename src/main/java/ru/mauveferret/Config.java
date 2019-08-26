@@ -1,5 +1,6 @@
 package ru.mauveferret;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Config {
@@ -12,6 +13,9 @@ public class Config {
     private String devicePort = "port isn't set";
     private String deviceType = "type isn't set";
 
+
+
+
     public String getDeviceType() {
         return deviceType;
     }
@@ -22,26 +26,18 @@ public class Config {
     }
 
     private String deviceCommand;
-    private String logPath;
-    private String dataPath;
+   // private String logPath;
 
-    public String getDataPath() {
-        return dataPath;
-    }
-
-    public void setDataPath(String dataPath) {
-        this.dataPath = dataPath;
-    }
 
     private TreeMap<String,String> parameters = new TreeMap<>();
 
-    public void setLogPath(String logPath) {
-        this.logPath = logPath;
-    }
+    //public void setLogPath(String logPath) {
+       // this.logPath = logPath;
+  //  }
 
-    public String getLogPath() {
-        return logPath;
-    }
+    //public String getLogPath() {
+     //   return logPath;
+   // }
 
     String getDeviceID() {
         return deviceID;
@@ -85,7 +81,7 @@ public class Config {
 
     String info()
     {
-        String info = "";
+        String info = "\n";
         String line = "\n--------------------\n";
         info+="device: "+deviceName+line+"deviceID: "+deviceID+line+"command: "+deviceCommand+line;
         info+="device COM port: "+devicePort+line;

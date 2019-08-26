@@ -1,6 +1,7 @@
 package ru.mauveferret;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 
 public class LeyboldTMP extends Device {
@@ -10,7 +11,7 @@ public class LeyboldTMP extends Device {
     private double voltage;
     private double current;
 
-    public LeyboldTMP(String path) {
+    LeyboldTMP(String path) {
         super(path);
     }
 
@@ -62,7 +63,7 @@ public class LeyboldTMP extends Device {
     }
 
     @Override
-    HashMap<String, String> getCommands() {
+    TreeMap<String, String> getCommands() {
         commands.put("run", "launches the TMP in form $run$");
         commands.put("stop","stops the TMP in form: $stop$");
         commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");
