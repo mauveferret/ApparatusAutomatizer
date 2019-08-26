@@ -11,7 +11,6 @@ also realises help command
  */
 public class Terminal extends Device {
 
-
     //key == deviceCommand, value == device object
     private TreeMap<String, Device> commandMap = new TreeMap<>();
     //key == device name, value == device object
@@ -22,8 +21,6 @@ public class Terminal extends Device {
 
         super(path);
     }
-
-
 
     //Getters
 

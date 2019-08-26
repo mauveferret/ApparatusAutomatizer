@@ -2,36 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Arduino" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Arduino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Gauge" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Gauge" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/TMP" beforeDir="false" afterPath="$PROJECT_DIR$/resources/TMP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/angel" beforeDir="false" afterPath="$PROJECT_DIR$/resources/angel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/data/TMP.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/data/angel.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/data/arduino1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/data/gauge.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/data/terminal.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/logs/TMP.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/logs/angel.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/logs/arduino1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/logs/gauge.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/logs/terminal.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/terminal" beforeDir="false" afterPath="$PROJECT_DIR$/resources/terminal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" afterDir="false" />
@@ -272,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566690910188</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="logs work, help works">
+      <created>1566826138312</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566826138312</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +290,7 @@
     <MESSAGE value="serialdevice added" />
     <MESSAGE value="logs and info added, some problems with serial found" />
     <MESSAGE value="help don't work, data log needs to be fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="help don't work, data log needs to be fixed" />
+    <MESSAGE value="logs work, help works" />
+    <option name="LAST_COMMIT_MESSAGE" value="logs work, help works" />
   </component>
 </project>

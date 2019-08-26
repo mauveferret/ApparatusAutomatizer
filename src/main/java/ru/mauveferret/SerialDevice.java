@@ -91,8 +91,7 @@ abstract class SerialDevice extends Device {
     {
         //if it wasn'r set, trying to load from the config file
         String port = getConfig().getDevicePort();
-
-        if (portName.equals("") && !doesPortExist(port))
+        if (!doesPortExist(portName) && !doesPortExist(port))
         {
             sendMessage("Enter COM port name as an option");
             return false;
@@ -118,7 +117,9 @@ abstract class SerialDevice extends Device {
                     //don't know why, but arduino  need these 2000
                     //Thread.sleep(2000);
                 } catch (Exception ex) {
-                    sendMessage("Port " + portName + " is busy");
+                    //FIXME is busy wouldnt ever appear is seems
+                    if (!isReconnectActive)
+                        sendMessage("Port " + portName + " is busy");
                     return false;
                 }
             } else {
@@ -151,7 +152,8 @@ abstract class SerialDevice extends Device {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
-            while (!answer.contains("\n")) {
+            //FIXME for arduino \n for gauge \r
+            while (!answer.contains("\r")) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
                 answer += (new String(serialPort.readBytes(1)));
                 if (System.currentTimeMillis() - startTime > 2000) {

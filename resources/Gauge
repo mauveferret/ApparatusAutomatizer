@@ -8,4 +8,6 @@ this
 */
 ID 1
 name gauge
-port COM51
+port COM49
+open
+measure

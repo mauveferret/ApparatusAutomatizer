@@ -68,18 +68,22 @@ abstract  class Device extends Logger{
     //associates a command with a method the command dedicated to
     void runCommand(Device device, String someCommand)
     {
-        someCommand = someCommand.toLowerCase();
-        String[] command = commandToStringArray(someCommand);
-        if (commandExists(command[1]))
-        {
-            setReceivedCommand(someCommand);
-            setReceivedDevice(device);
-            command[1] = replaceAliasByCommand(command[1]);
-            chooseCommand(command);
+        try {
+
+            String[] command = commandToStringArray(someCommand);
+            command[1] = command[1].toLowerCase();
+            if (commandExists(command[1])) {
+                setReceivedCommand(someCommand);
+                setReceivedDevice(device);
+                command[1] = replaceAliasByCommand(command[1]);
+                chooseCommand(command);
+            } else {
+                sendMessage("command \"" + command[1] + "\" doesn't exist");
+            }
         }
-        else
+        catch (Exception e)
         {
-            sendMessage("command \""+command[1]+"\" doesn't exist");
+            sendMessage("Unknown error during command "+someCommand);
         }
     }
 
@@ -159,13 +163,13 @@ abstract  class Device extends Logger{
                     switch (command[0].toLowerCase())
                     {
                         case "id": config.setDeviceID(command[1]);
-                            break;
+                        break;
                         case "name": config.setDeviceName(command[1]);
-                            break;
+                        break;
                         case "command": config.setDeviceCommand(command[1]);
-                            break;
+                        break;
                         case "port": config.setDevicePort(command[1]);
-                            break;
+                        break;
                         case "logpath": createLogFile(command[1]);
                         break;
                         case "datapath" : createDataFile(command[1]);
@@ -175,7 +179,7 @@ abstract  class Device extends Logger{
                         default:
                         {
                             //FIXME
-                            runCommand(receivedDevice, config.getDeviceCommand()+" "+line);
+                            runCommand(receivedDevice, "somecommand"+" "+line);
                         }
                         break;
                     }

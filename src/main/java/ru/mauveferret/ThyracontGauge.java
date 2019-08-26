@@ -6,9 +6,7 @@ import java.util.TreeMap;
 
 class ThyracontGauge extends SerialDevice {
 
-    private double pressureColumn1;
-    private double pressureColumn2;
-    private double pressureVessel;
+
 
     ThyracontGauge(String path) {
         super(path);
@@ -19,27 +17,52 @@ class ThyracontGauge extends SerialDevice {
 
     }
 
+    double[] pressure1 = new double[4];
 //Getters
 
-    double getPressureColumn1() {
-        return pressureColumn1;
+    public double[] getPressure() {
+        return pressure1;
     }
 
-    double getPressureColumn2() {
-        return pressureColumn2;
-    }
-
-    double getPressureVessel() {
-        return pressureVessel;
-    }
+    //TODO calibrate
 
     //gauge related commands
 
-
-    synchronized double measure()
+    private synchronized double measure(int gaugeNumber)
     {
-
-        return 78;
+        //FIXME CHECKSuM
+        String message = "00"+gaugeNumber+"M";
+        int checkSum=0;
+        for (char c: message.toCharArray())
+            checkSum+=c;
+        writeMessage(message+(char) (checkSum % 64 +64)+"\r");
+        message = readMessage();
+        double mantissa =0;
+        try {
+            mantissa = Double.parseDouble(message.substring(4,8))/1000;
+        }
+        catch (Exception e)
+        {
+            System.out.println("hyi");
+        }
+        int order = 0;
+                try {
+                    order= Integer.parseInt(message.substring(8,10))-20;
+                }
+                catch (Exception e)
+                {
+                    System.out.println("sef");
+                }
+        double value = mantissa*0.75*Math.pow(10,order);
+        try {
+            pressure1[gaugeNumber] = value;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        System.out.println(value);
+        return  value;
     }
 
     //for commandline
@@ -47,6 +70,10 @@ class ThyracontGauge extends SerialDevice {
 
     @Override
     void chooseCommand(String[] command) {
+        if (command[1].equals("measure"))
+        {
+            measure(1);
+        }
         super.chooseCommand(command);
     }
 
