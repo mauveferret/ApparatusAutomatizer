@@ -70,10 +70,10 @@ abstract  class Device extends Logger{
 
             String[] command = commandToStringArray(someCommand);
             command[1] = command[1].toLowerCase();
-            if (commandExists(command[1])) {
+            command[1] = replaceAliasByCommand(command[1]);
+            if (commands.containsKey(command[1])) {
                 setReceivedCommand(someCommand);
                 setReceivedDevice(device);
-                command[1] = replaceAliasByCommand(command[1]);
                 chooseCommand(command);
             } else {
                 sendMessage("command \"" + command[1] + "\" doesn't exist");
@@ -210,24 +210,9 @@ abstract  class Device extends Logger{
 
     String[] commandToStringArray(String command)
     {
-        command = command.replaceAll("\\s+"," ").trim();
-        //command = (command.charAt(0)==' ') ? command.substring(1) : command;
-        String[] commandArray = new String[20];
-        Arrays.fill(commandArray, "");
-        int i=0;
-        for (char c: command.toCharArray())
-        {
-            if (c!=' ')
-                commandArray[i]+=c;
-            else
-                i++;
-        }
-        return commandArray;
+        command = command.replaceAll(" {2}"," ").trim();
+        return  command.split(" ");
     }
 
-    boolean commandExists(String command)
-    {
-        return (commands.containsKey(command)||aliases.containsKey(command));
-    }
 }
 
