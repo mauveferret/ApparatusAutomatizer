@@ -20,6 +20,7 @@ public class TempPathFinder {
         GateControl = "C:\\Users\\"+author+"\\Git\\ApparatusAutomatizer\\resources\\gate";
         angel = "C:\\Users\\"+author+"\\Git\\ApparatusAutomatizer\\resources\\angel";
         Gauge = "C:\\Users\\"+author+"\\Git\\ApparatusAutomatizer\\resources\\Gauge";
+        Arduino = "C:\\Users\\"+author+"\\Git\\ApparatusAutomatizer\\resources\\Arduino";
     }
 
 }

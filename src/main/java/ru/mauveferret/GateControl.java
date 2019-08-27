@@ -136,7 +136,7 @@ public class GateControl extends Device{
         if ((openValve ^ arduino.getDigitalPinsWritten()[valveDigitalPin]) && isCorrectControl)
         {
             boolean isforlinePumpOn = arduino.getDigitalPinsWritten()[forlinePumpDigitalPin];
-            double columnPressure = gauge.getPressure()[columnNumber];
+            double columnPressure = gauge.getPressure(columnNumber);
             //FIXME ?!
             if ((isforlinePumpOn|| (!isforlinePumpOn && columnPressure > 700)) && openValve)
             {
@@ -177,8 +177,8 @@ public class GateControl extends Device{
 
         if ((openGate ^ arduino.getDigitalPinsWritten()[valveDigitalPin]) && isCorrectControl)
         {
-            double columnPressure = gauge.getPressure()[columnNumber];
-            double vesselPressure = gauge.getPressure()[3];
+            double columnPressure = gauge.getPressure(columnNumber);
+            double vesselPressure = gauge.getPressure(3);
             double pressureDifference = Math.abs(columnPressure-vesselPressure);
             if (pressureDifference < maxPresDifference && openGate && vesselPressure<maxPresDifference)
             {

@@ -50,9 +50,9 @@ public class GuardianAngel extends Device {
             //TODO very dangerous, what if device is not a termonal?
             Terminal terminal = (Terminal) device;
             ThyracontGauge gauge = (ThyracontGauge) ((Terminal) device).getDevice("gauge");
-            double pressureColumn1 = gauge.getPressure()[1];
-            double pressureColumn2 = gauge.getPressure()[1];
-            double pressureVessel = gauge.getPressure()[1];
+            double pressureColumn1 = gauge.getPressure(1);
+            double pressureColumn2 = gauge.getPressure(2);
+            double pressureVessel = gauge.getPressure(3);
             Arduino arduino = (Arduino) ((Terminal) device).getDevice("arduino");
             double gate1 = arduino.getAnalogPinsRead()[3];
 

@@ -1,7 +1,7 @@
 DataPath C:\Users\mauve\Git\ApparatusAutomatizer\resources\data\arduino1.txt
 LogPath C:\Users\mauve\Git\ApparatusAutomatizer\resources\logs\arduino1.txt
 
-command ard1
+command ard
 /* 1
 
 this
@@ -10,6 +10,6 @@ this
 ID 1
 type nano
 name arduino1
-port COM46
+port COM4
 open
 info

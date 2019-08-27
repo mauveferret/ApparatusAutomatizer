@@ -13,7 +13,7 @@ public class Config {
     private String devicePort = "port isn't set";
     private String deviceType = "type isn't set";
 
-
+//TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 
 
     public String getDeviceType() {

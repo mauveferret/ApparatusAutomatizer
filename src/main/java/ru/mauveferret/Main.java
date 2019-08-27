@@ -7,19 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TempPathFinder tempPathFinder = new TempPathFinder(true);
+        TempPathFinder tempPathFinder = new TempPathFinder(false);
         Terminal terminal = new Terminal(tempPathFinder.terminal);
         Arduino arduino = new Arduino(tempPathFinder.Arduino);
-        GuardianAngel angel = new GuardianAngel(tempPathFinder.angel);
+        //GuardianAngel angel = new GuardianAngel(tempPathFinder.angel);
         LeyboldTMP leyboldTMP = new LeyboldTMP(tempPathFinder.TMP);
-        ThyracontGauge thyracontGauge = new ThyracontGauge(tempPathFinder.Gauge);
+        //ThyracontGauge thyracontGauge = new ThyracontGauge(tempPathFinder.Gauge);
         //GuardianAngel guardianAngel = new GuardianAngel();
         //terminal.addDevice(guardianAngel);
-        terminal.addDevice(thyracontGauge);
+       // terminal.addDevice(thyracontGauge);
         terminal.addDevice(leyboldTMP);
         terminal.addDevice(terminal);
         terminal.addDevice(arduino);
-        terminal.addDevice(angel);
+        //terminal.addDevice(angel);
         System.out.println("__________________________________________");
         for (String s :terminal.getCommandMap().keySet()) System.out.print(s+" ");
         System.out.println();

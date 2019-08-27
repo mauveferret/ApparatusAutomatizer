@@ -10,6 +10,8 @@ import java.util.TreeMap;
  the National research Nuclear University "Mephi"
  */
 
+//TODO проверка корректного ввода пинов
+
 class Arduino extends SerialDevice implements Configurable{
 
     Arduino(String path) {
@@ -21,8 +23,6 @@ class Arduino extends SerialDevice implements Configurable{
     private boolean[] digitalPinsWritten = new boolean[14];
     private double[] analogPinsRead = new double[14];
 
-
-    //FIXME: does Jssc controls simultenous writingon arduino?
 
     //Getters and Setters
 
@@ -49,7 +49,7 @@ class Arduino extends SerialDevice implements Configurable{
            }
            else
            {
-               if (!isReconnectActive()) sendMessage("ERROR: pin number is incorrect.");
+               //if (!isReconnectActive()) sendMessage("ERROR: pin number is incorrect.");
                sendMessage(((value) ? "HIGH" : "LOW")+" on pin "+pin+" isn't set");
            }
            return (answer.contains("SETTED"));

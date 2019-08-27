@@ -23,7 +23,9 @@ public abstract class Logger extends Thread{
     }
 
     Logger() {
+
     }
+
 
     void createLogFile(String pathToLog) {
         this.pathToLog = pathToLog;

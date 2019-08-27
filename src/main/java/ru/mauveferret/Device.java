@@ -197,6 +197,7 @@ abstract  class Device extends Logger{
     used in run method to replace alias by its command
     if the alias exists. If not, returns as it was
      */
+
      String replaceAliasByCommand(String alias)
     {
         if (aliases.containsKey(alias))

@@ -5,7 +5,7 @@ import java.util.TreeMap;
 class ThyracontGauge extends SerialDevice {
 
 
-    public ThyracontGauge(String path) {
+    ThyracontGauge(String path) {
         super(path);
     }
 
@@ -14,7 +14,7 @@ class ThyracontGauge extends SerialDevice {
 
     //Getters
 
-    public double getPressure(int gaugeNumber) {
+    double getPressure(int gaugeNumber) {
         return pressure[gaugeNumber];
     }
 
@@ -29,24 +29,10 @@ class ThyracontGauge extends SerialDevice {
         writeMessage(message+checkSum(message)+"\r");
         message = readMessage();
         if (message.substring(message.length()-1).equals(checkSum(message))) {
-            double mantissa = 0;
-            try {
-                mantissa = Double.parseDouble(message.substring(4, 8)) / 1000;
-            } catch (Exception e) {
-                System.out.println("hyi");
-            }
-            int order = 0;
-            try {
-                order = Integer.parseInt(message.substring(8, 10)) - 20;
-            } catch (Exception e) {
-                System.out.println("sef");
-            }
+            double mantissa  = Double.parseDouble(message.substring(4, 8)) / 1000;
+            int order = Integer.parseInt(message.substring(8, 10)) - 20;
             double value = mantissa * 0.75 * Math.pow(10, order);
-            try {
-                pressure[gaugeNumber] = value;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            pressure[gaugeNumber] = value;
             return value;
         }
         else
@@ -56,6 +42,11 @@ class ThyracontGauge extends SerialDevice {
             //return previous
             return getPressure(gaugeNumber);
         }
+    }
+
+    private synchronized double calibrate(String sensorType)
+    {
+        return  1;
     }
 
     private String checkSum(String message)

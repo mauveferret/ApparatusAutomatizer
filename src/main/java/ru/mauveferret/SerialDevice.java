@@ -153,11 +153,15 @@ abstract class SerialDevice extends Device {
             String answer = "";
             long startTime = System.currentTimeMillis();
             //FIXME for arduino \n for gauge \r
-            while (!answer.contains("\r")) {
+            while (!answer.contains("\r") && !answer.contains("\n")) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
-                answer += (new String(serialPort.readBytes(1)));
+                if (serialPort.getInputBufferBytesCount()>0)
+                {
+                    answer += (new String(serialPort.readBytes(1)));
+                }
                 if (System.currentTimeMillis() - startTime > 2000) {
                     reconnect();
+                    sendMessage(getConfig().getDeviceName()+" message wasn't got.");
                     break;
                 }
             }
