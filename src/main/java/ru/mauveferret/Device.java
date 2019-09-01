@@ -28,8 +28,8 @@ abstract  class Device extends Logger{
     //it is used in help
     //key == command, value == its desciption for help
     TreeMap<String, String> commands = new TreeMap<>();
-    //key == alias, value == command which is represented by the alias
-    private HashMap<String,String> aliases = new HashMap<>();
+    //key == alias, value == command + options which is represented by the alias
+    private HashMap<String,String[]> aliases = new HashMap<>();
     //key == alias, value == options.
 
     //Setters and Getters
@@ -56,7 +56,7 @@ abstract  class Device extends Logger{
     }
 
 
-    HashMap<String,String> getAliases()
+    HashMap<String,String[]> getAliases()
     {
         return aliases;
     }
@@ -67,20 +67,25 @@ abstract  class Device extends Logger{
     void runCommand(Device device, String someCommand)
     {
         try {
-
+            long t1 = System.currentTimeMillis();
             String[] command = commandToStringArray(someCommand);
             command[1] = command[1].toLowerCase();
-            command[1] = replaceAliasByCommand(command[1]);
+            command = replaceAliasByCommand(command);
             if (commands.containsKey(command[1])) {
                 setReceivedCommand(someCommand);
                 setReceivedDevice(device);
+                long t2 = System.currentTimeMillis();
                 chooseCommand(command);
+                long t3 = System.currentTimeMillis();
+                System.out.println(" logic time "+(t2-t1)+" command time: "+(t3-t2));
+
             } else {
                 sendMessage("command \"" + command[1] + "\" doesn't exist");
             }
         }
         catch (Exception e)
         {
+            e.printStackTrace();
             sendMessage("Unknown error during command "+someCommand);
         }
     }
@@ -91,13 +96,7 @@ abstract  class Device extends Logger{
 
             case "info": sendMessage(config.info());
             break;
-            case "alias":
-            {
-                String options="";
-                for (int i=4;i<command.length;i++) options+=command[i];
-                sendMessage((addAlias(command[2], command[3], options)) ?
-                        command[2]+" added" : command[2]+" isn't added");
-            }
+            case "alias": sendMessage(addAlias(command) ? command[2]+" added" : command[2]+" isn't added");
             break;
             case  "import": importConfigurationFile(command[2]);
             break;
@@ -114,15 +113,17 @@ abstract  class Device extends Logger{
           return commands;
       }
 
-      //TODO check how does the alias works
-    private boolean addAlias(String alias, String command, String options)
+    private boolean addAlias(String[] command)
     {
+        String alias = command[2];
+        String someCommand = command[3];
         boolean canBeAdded=true;
         for (String str: aliases.keySet())
         {
             if (alias.equals(str))
             {
                 canBeAdded=false;
+                sendMessage("alias "+alias+" already exist.");
                 break;
             }
         }
@@ -131,14 +132,20 @@ abstract  class Device extends Logger{
             if (alias.equals(str))
             {
                 canBeAdded=false;
+                sendMessage("alias "+alias+" already exist as a command.");
                 break;
             }
         }
-        if (!commands.containsKey(command))
+        if (!commands.containsKey(someCommand))
         {
             canBeAdded=false;
+            sendMessage("command "+someCommand+" doesn't exist");
         }
-        if (canBeAdded) aliases.put(alias,command+" "+options);
+
+        String[] commandToReplace = new String[command.length-2];
+        for (int i = 3; i<command.length; i++)
+            commandToReplace[i-2] = command[i];
+        if (canBeAdded) aliases.put(alias,commandToReplace);
         return canBeAdded;
     }
 
@@ -177,7 +184,8 @@ abstract  class Device extends Logger{
                         default:
                         {
                             //FIXME
-                            runCommand(receivedDevice, "somecommand"+" "+line);
+                            //Bug is need to create some options as port Name or message
+                            runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
                         }
                         break;
                     }
@@ -189,7 +197,7 @@ abstract  class Device extends Logger{
         catch (Exception e)
         {
             e.printStackTrace();
-            sendMessage(path + " FileNotFound or some commands ard incorrect");
+            sendMessage(path + " FileNotFound or some commands are incorrect");
             sendMessage(e.getLocalizedMessage());
         }
     }
@@ -198,14 +206,19 @@ abstract  class Device extends Logger{
     if the alias exists. If not, returns as it was
      */
 
-     String replaceAliasByCommand(String alias)
+    private String[] replaceAliasByCommand(String[] command)
     {
-        if (aliases.containsKey(alias))
+        if (aliases.containsKey(command[1]))
         {
-            return aliases.get(alias);
+            if (command.length>aliases.get(command[1]).length)
+            {
+                command[1] = aliases.get(command[1])[1];
+                return  command;
+            }
+            else return aliases.get(command[1]);
         }
         else
-            return alias; //which is a command really
+            return command;
     }
 
     String[] commandToStringArray(String command)

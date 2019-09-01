@@ -1,6 +1,7 @@
 package ru.mauveferret;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
 
@@ -17,6 +18,8 @@ class Arduino extends SerialDevice implements Configurable{
     Arduino(String path) {
         super(path);
     }
+
+    //TODO create list with active pin numbers for log
 
 
     //TODO list of pins status

@@ -29,7 +29,7 @@ public class Config {
    // private String logPath;
 
 
-    private TreeMap<String,String> parameters = new TreeMap<>();
+    private TreeMap<String,Object> parameters = new TreeMap<>();
 
     //public void setLogPath(String logPath) {
        // this.logPath = logPath;
@@ -71,11 +71,11 @@ public class Config {
         this.deviceCommand = deviceCommand;
     }
 
-    public TreeMap<String, String> getParameters() {
+    public TreeMap<String, Object> getParameters() {
         return parameters;
     }
 
-    public void addParameter(String key, String value) {
+    public void addParameter(String key, Object value) {
         parameters.put(key, value);
     }
 

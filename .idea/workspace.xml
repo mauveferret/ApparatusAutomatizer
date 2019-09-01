@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +158,11 @@
       <workItem from="1566719706414" duration="10740000" />
       <workItem from="1566850167581" duration="3562000" />
       <workItem from="1566883805634" duration="361000" />
-      <workItem from="1566932647897" duration="8971000" />
+      <workItem from="1566932647897" duration="9007000" />
+      <workItem from="1567142986732" duration="164000" />
+      <workItem from="1567143247396" duration="4335000" />
+      <workItem from="1567315099728" duration="2754000" />
+      <workItem from="1567352141177" duration="7371000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -264,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566941207845</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="reading from COM fixed">
+      <created>1566941828686</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1566941828686</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

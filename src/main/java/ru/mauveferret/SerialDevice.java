@@ -48,7 +48,7 @@ abstract class SerialDevice extends Device {
         switch (command[1]) {
             case "ports": showAvailableCOMPorts();
             break;
-            case "open": openPort(command[2]);
+            case "open":  openPort(command[2]);
             break;
             case "connect": reconnect();
             break;

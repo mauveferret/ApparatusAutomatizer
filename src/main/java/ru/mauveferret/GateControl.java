@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 //an example of the  virtual device which would be made by some user to configure Automizer for his personal needs
-public class GateControl extends Device{
+public class GateControl extends Arduino{
 
     private int columnNumber;
     private String arduinoName;
