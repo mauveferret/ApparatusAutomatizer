@@ -717,3 +717,323 @@ device COM port: COM4
 --------------------
 
 1567369033771 ~\Arduino imported correctly.
+time device message1567516730231 ~\Arduino imported correctly.
+
+1567516752947 Unknown error during command ard open
+
+1567516758868 COM4 is opened
+
+time device message1567516908421 ~\Arduino imported correctly.
+
+time device message1567519353757 ~\Arduino imported correctly.
+
+time device message1567519391963 ~\Arduino imported correctly.
+
+time device message1567519445128 ~\Arduino imported correctly.
+
+time device message1567519525955 ~\Arduino imported correctly.
+
+time device message1567519608910 ~\Arduino imported correctly.
+
+time device message1567519634466 ~\Arduino imported correctly.
+
+time device message1567519804521 ~\Arduino imported correctly.
+
+time device message1567519849771 ~\Arduino imported correctly.
+
+time device message1567519872650 ~\Arduino imported correctly.
+
+time device message1567519909939 ~\Arduino imported correctly.
+
+time device message1567519996155 ~\Arduino imported correctly.
+
+time device message1567520086314 ~\Arduino imported correctly.
+
+time device message1567520508315 ~\Arduino imported correctly.
+
+time device message1567520622042 ~\Arduino imported correctly.
+
+time device message1567520655693 ~\Arduino imported correctly.
+
+time device message1567520790161 ~\Arduino imported correctly.
+
+time device message1567520892986 ~\Arduino imported correctly.
+
+time device message1567521003641 Port COM4 is busy
+
+1567521003642 Port COM4 is busy
+
+1567521003642 ~\Arduino imported correctly.
+
+time device message1567521036411 Port COM4 is busy
+
+1567521036413 Port COM4 is busy
+
+1567521036414 ~\Arduino imported correctly.
+
+time device message1567521052519 Port COM4 is busy
+
+1567521052520 Port COM4 is busy
+
+1567521052520 ~\Arduino imported correctly.
+
+time device message1567521132824 Port COM4 is busy
+
+1567521132826 Port COM4 is busy
+
+1567521132826 ~\Arduino imported correctly.
+
+time device message1567521287713 Port COM4 is busy
+
+1567521287714 Port COM4 is busy
+
+1567521287715 ~\Arduino imported correctly.
+
+time device message1567521332474 Port COM4 is busy
+
+1567521332476 Port COM4 is busy
+
+1567521332476 ~\Arduino imported correctly.
+
+time device message1567521369526 Port COM4 is busy
+
+1567521369527 Port COM4 is busy
+
+1567521369528 ~\Arduino imported correctly.
+
+time device message1567521414128 Port COM4 is busy
+
+1567521414130 Port COM4 is busy
+
+1567521414130 ~\Arduino imported correctly.
+
+time device message1567521429662 Port COM4 is busy
+
+1567521429663 Port COM4 is busy
+
+1567521429663 ~\Arduino imported correctly.
+
+time device message1567521444204 Port COM4 is busy
+
+1567521444205 Port COM4 is busy
+
+1567521444205 ~\Arduino imported correctly.
+
+time device message1567521466543 Port COM4 is busy
+
+1567521466544 Port COM4 is busy
+
+1567521466544 ~\Arduino imported correctly.
+
+time device message1567521486501 Port COM4 is busy
+
+1567521486502 Port COM4 is busy
+
+1567521486503 ~\Arduino imported correctly.
+
+time device message1567521585340 Port COM4 is busy
+
+1567521585341 Port COM4 is busy
+
+1567521585341 ~\Arduino imported correctly.
+
+time device message1567521614867 Port COM4 is busy
+
+1567521614869 Port COM4 is busy
+
+1567521614869 ~\Arduino imported correctly.
+
+time device message1567521632432 Port COM4 is busy
+
+1567521632434 Port COM4 is busy
+
+1567521632434 ~\Arduino imported correctly.
+
+time device message1567521667329 Port COM4 is busy
+
+1567521667330 Port COM4 is busy
+
+1567521667330 ~\Arduino imported correctly.
+
+time device message1567521698646 Port COM4 is busy
+
+1567521698647 Port COM4 is busy
+
+1567521698647 ~\Arduino imported correctly.
+
+time device message1567521752247 Port COM4 is busy
+
+1567521752248 Port COM4 is busy
+
+1567521752248 ~\Arduino imported correctly.
+
+time device message1567521784307 Port COM4 is busy
+
+1567521784308 Port COM4 is busy
+
+1567521784308 ~\Arduino imported correctly.
+
+time device message1567521809346 Port COM4 is busy
+
+1567521809347 Port COM4 is busy
+
+1567521809348 ~\Arduino imported correctly.
+
+time device message1567521826866 Port COM4 is busy
+
+1567521826868 Port COM4 is busy
+
+1567521826868 ~\Arduino imported correctly.
+
+time device message1567521911744 Port COM4 is busy
+
+1567521911746 Port COM4 is busy
+
+1567521911746 ~\Arduino imported correctly.
+
+time device message1567521950635 Port COM4 is busy
+
+1567521950637 Port COM4 is busy
+
+1567521950638 ~\Arduino imported correctly.
+
+time device message1567522121140 Port COM4 is busy
+
+1567522121142 Port COM4 is busy
+
+1567522121142 ~\Arduino imported correctly.
+
+time device message1567522346674 Port COM4 is busy
+
+1567522346675 Port COM4 is busy
+
+1567522346676 ~\Arduino imported correctly.
+
+time device message1567522678438 Port COM4 is busy
+
+1567522678440 Port COM4 is busy
+
+1567522678440 ~\Arduino imported correctly.
+
+time device message1567522706250 Port COM4 is busy
+
+1567522706251 Port COM4 is busy
+
+1567522706251 ~\Arduino imported correctly.
+
+time device message1567522873887 Port COM4 is busy
+
+1567522873889 Port COM4 is busy
+
+1567522873889 ~\Arduino imported correctly.
+
+time device message1567523096196 Port COM4 is busy
+
+1567523096198 Port COM4 is busy
+
+1567523096198 ~\Arduino imported correctly.
+
+time device message1567523292646 Port COM4 is busy
+
+1567523292647 Port COM4 is busy
+
+1567523292647 ~\Arduino imported correctly.
+
+time device message1567523429290 Port COM4 is busy
+
+1567523429291 Port COM4 is busy
+
+1567523429291 ~\Arduino imported correctly.
+
+time device message1567523544300 Port COM4 is busy
+
+1567523544302 Port COM4 is busy
+
+1567523544302 ~\Arduino imported correctly.
+
+time device message1567523592336 Port COM4 is busy
+
+1567523592337 Port COM4 is busy
+
+1567523592337 ~\Arduino imported correctly.
+
+time device message1567523815583 Port COM4 is busy
+
+1567523815585 Port COM4 is busy
+
+1567523815585 ~\Arduino imported correctly.
+
+time device message1567523984474 Port COM4 is busy
+
+1567523984476 Port COM4 is busy
+
+1567523984477 ~\Arduino imported correctly.
+
+time device message1567523995279 Port COM4 is busy
+
+1567523995280 Port COM4 is busy
+
+1567523995280 ~\Arduino imported correctly.
+
+time device message1567524072001 Port COM4 is busy
+
+1567524072003 Port COM4 is busy
+
+1567524072003 ~\Arduino imported correctly.
+
+time device message1567524127353 Port COM4 is busy
+
+1567524127354 Port COM4 is busy
+
+1567524127354 ~\Arduino imported correctly.
+
+time device message1567524229627 Port COM4 is busy
+
+1567524229628 Port COM4 is busy
+
+1567524229628 ~\Arduino imported correctly.
+
+time device message1567524284299 Port COM4 is busy
+
+1567524284301 Port COM4 is busy
+
+1567524284301 ~\Arduino imported correctly.
+
+time device message1567524334862 Port COM4 is busy
+
+1567524334863 Port COM4 is busy
+
+1567524334863 ~\Arduino imported correctly.
+
+time device message1567524340253 Port COM4 is busy
+
+1567524340254 Port COM4 is busy
+
+1567524340254 ~\Arduino imported correctly.
+
+time device message1567524373221 Port COM4 is busy
+
+1567524373223 Port COM4 is busy
+
+1567524373223 ~\Arduino imported correctly.
+
+time device message1567524387403 Port COM4 is busy
+
+1567524387404 Port COM4 is busy
+
+1567524387405 ~\Arduino imported correctly.
+
+time device message1567524434072 Port COM4 is busy
+
+1567524434073 Port COM4 is busy
+
+1567524434073 ~\Arduino imported correctly.
+
+1567524539179 Available ports:COM1 COM4 COM5 COM6 COM7 COM8 COM18 COM19 COM22 COM23 COM46 COM51 
+
+time device message1567524559653 Port COM4 is busy
+
+1567524559655 Port COM4 is busy
+
+1567524559655 ~\Arduino imported correctly.
+

@@ -77,6 +77,7 @@ abstract class SerialDevice extends Device {
             }
             break;
             case "port": config.devicePort = command[1];
+            case "open": openPort("");
             break;
 
         }
@@ -171,15 +172,16 @@ abstract class SerialDevice extends Device {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
-            while (!answer.contains("\r") && !answer.contains("\n")) {
+            //&& !answer.contains("\n")
+            while (!answer.contains("\r")) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
                 if (serialPort.getInputBufferBytesCount()>0)
                 {
                     answer += (new String(serialPort.readBytes(1)));
                 }
-                if (System.currentTimeMillis() - startTime > 2000) {
-                    reconnect();
+                if (System.currentTimeMillis() - startTime > 3000) {
                     sendMessage(config.deviceName+" message wasn't got.");
+                    reconnect();
                     break;
                 }
             }
@@ -196,7 +198,8 @@ abstract class SerialDevice extends Device {
     synchronized boolean writeMessage(String message)
     {
         try {
-            return serialPort.writeString(message);
+           boolean success =  serialPort.writeString(message);
+           return  success;
         }
         catch (SerialPortException e)
         {

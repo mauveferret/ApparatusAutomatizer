@@ -1,14 +1,20 @@
 package ru.mauveferret;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.TreeMap;
 
 class ThyracontGauge extends SerialDevice {
 
     ThyracontGauge(String path) {
         super(path);
-        logPressure1.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr1");
-        logPressure2.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr2");
-        logPressure3.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr3");
+        String newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr1.txt";
+        logPressure1.createFile( newPath, "");
+        newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr2.txt";
+        logPressure2.createFile( newPath,"");
+        newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr3.txt";
+        logPressure3.createFile( newPath,"");
         sendMessage(logPressure1.getPath());
         measureAndLog();
     }
@@ -33,11 +39,14 @@ class ThyracontGauge extends SerialDevice {
         String message = "00"+gaugeNumber+"M";
         writeMessage(message+checkSum(message)+"\r");
         message = readMessage();
-        if (message.substring(message.length()-1).equals(checkSum(message))) {
+        //if ((message.charAt(10)+"").equals(checkSum(message.substring(0,10))))
+        if (true)
+        {
             double mantissa  = Double.parseDouble(message.substring(4, 8)) / 1000;
             int order = Integer.parseInt(message.substring(8, 10)) - 20;
             double value = mantissa * 0.75 * Math.pow(10, order);
             pressure[gaugeNumber] = value;
+            //System.out.println(value);
             return value;
         }
         else
@@ -69,20 +78,35 @@ class ThyracontGauge extends SerialDevice {
         log = new Thread(new Runnable() {
             @Override
             public void run() {
-                boolean stop = true;
-                while (stop)
+                Locale locale;
+                NumberFormat numFormat = NumberFormat.getNumberInstance(Locale.getDefault());
+                boolean stop = false;
+                while (!stop)
                 {
-                    long t1 = System.currentTimeMillis();
-                    measure(1);
-                    measure(2);
-                    //measure(3);
-                    long t2 = System.currentTimeMillis();
-                    dataLog.write("time "+getPressure(1)+" "+getPressure(2)+" "+(t2-t1));
-                    logPressure1.write("time "+getPressure(1));
-                    logPressure2.write("time "+getPressure(2));
-                    logPressure3.write("time "+getPressure(3));
-                    stop = Thread.currentThread().isInterrupted();
+                    try {
+                        long t1 = System.currentTimeMillis();
+                        measure(1);
+                        measure(2);
+                        //measure(3);
+                        long t2 = System.currentTimeMillis();
+                        String pr1 = numFormat.format(getPressure(1));
+                        String pr2 = numFormat.format(getPressure(2));
+                        String pr3 = numFormat.format(getPressure(3));
+                        dataLog.write("time " + pr1 + " " + pr2+" "+pr3);
+                        logPressure1.write("time " + pr1);
+                        logPressure2.write("time " + pr2);
+                        logPressure3.write("time " + pr3);
+                        stop = Thread.currentThread().isInterrupted();
+                        Thread.currentThread().wait(30);
+                        stop = true;
+                    }
+                    catch (Exception  e)
+                    {
+                        e.printStackTrace();
+                        stop = true;
+                    }
                 }
+
             }
         });
         log.setName(config.deviceName);

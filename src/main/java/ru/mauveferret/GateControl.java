@@ -102,8 +102,6 @@ public class GateControl extends Arduino{
             sendMessage("No $open$ options or it's incorrect (should use \"open\" or \"close\")");
         }
 
-
-
         if ((openValve ^ arduino.getDigitalPinsWritten()[valveDigitalPin]) && isCorrectControl)
         {
             boolean isforlinePumpOn = arduino.getDigitalPinsWritten()[forlinePumpDigitalPin];

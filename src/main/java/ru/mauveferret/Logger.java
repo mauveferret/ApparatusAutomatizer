@@ -16,10 +16,12 @@ public class Logger {
         return path;
     }
 
-    void createFile(String pathToLog) {
-        this.path = pathToLog;
+    void createFile(String path, String header) {
+        this.path = path;
         try {
-            writer = new FileWriter(new File(pathToLog), true);
+            writer = new FileWriter(new File(path), true);
+            if (!"".equals(header))
+                writer.write(header);
         }
         catch (IOException ex)
         {

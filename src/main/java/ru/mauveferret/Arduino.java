@@ -12,7 +12,7 @@ import java.util.TreeMap;
 
 //TODO проверка корректного ввода пинов
 
-class Arduino extends SerialDevice implements Configurable{
+class Arduino extends SerialDevice {
 
     Arduino(String path) {
         super(path);

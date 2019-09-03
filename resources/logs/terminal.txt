@@ -119,3 +119,163 @@ temperature          returnes the temperature of the TMP in celsium in form: $te
 1567368717575 Goodbye, my Lord.
 1567368834160 ~\terminal imported correctly.
 1567369033753 ~\terminal imported correctly.
+time device message1567516730229 ~\terminal imported correctly.
+
+1567516765235 Goodbye, my Lord.
+
+time device message1567516908418 ~\terminal imported correctly.
+
+time device message1567519353755 ~\terminal imported correctly.
+
+time device message1567519391961 ~\terminal imported correctly.
+
+time device message1567519445126 ~\terminal imported correctly.
+
+1567519505371 Goodbye, my Lord.
+
+time device message1567519525952 ~\terminal imported correctly.
+
+1567519546738 Goodbye, my Lord.
+
+time device message1567519608907 ~\terminal imported correctly.
+
+time device message1567519634463 ~\terminal imported correctly.
+
+1567519732276 Goodbye, my Lord.
+
+time device message1567519804518 ~\terminal imported correctly.
+
+1567519827556 Goodbye, my Lord.
+
+time device message1567519849768 ~\terminal imported correctly.
+
+time device message1567519872648 ~\terminal imported correctly.
+
+1567519893891 Goodbye, my Lord.
+
+time device message1567519909937 ~\terminal imported correctly.
+
+1567519939140 Goodbye, my Lord.
+
+time device message1567519996151 ~\terminal imported correctly.
+
+1567520023236 Goodbye, my Lord.
+
+time device message1567520086312 ~\terminal imported correctly.
+
+1567520482347 Goodbye, my Lord.
+
+time device message1567520508311 ~\terminal imported correctly.
+
+1567520524594 Goodbye, my Lord.
+
+time device message1567520622039 ~\terminal imported correctly.
+
+time device message1567520655690 ~\terminal imported correctly.
+
+1567520774043 Goodbye, my Lord.
+
+time device message1567520790158 ~\terminal imported correctly.
+
+time device message1567520892983 ~\terminal imported correctly.
+
+time device message1567521003630 ~\terminal imported correctly.
+
+time device message1567521036397 ~\terminal imported correctly.
+
+time device message1567521052508 ~\terminal imported correctly.
+
+time device message1567521132811 ~\terminal imported correctly.
+
+time device message1567521287704 ~\terminal imported correctly.
+
+time device message1567521332464 ~\terminal imported correctly.
+
+time device message1567521369517 ~\terminal imported correctly.
+
+time device message1567521414116 ~\terminal imported correctly.
+
+time device message1567521429651 ~\terminal imported correctly.
+
+time device message1567521444192 ~\terminal imported correctly.
+
+time device message1567521466533 ~\terminal imported correctly.
+
+time device message1567521486492 ~\terminal imported correctly.
+
+time device message1567521585330 ~\terminal imported correctly.
+
+time device message1567521614858 ~\terminal imported correctly.
+
+time device message1567521632418 ~\terminal imported correctly.
+
+time device message1567521667318 ~\terminal imported correctly.
+
+time device message1567521698635 ~\terminal imported correctly.
+
+time device message1567521752237 ~\terminal imported correctly.
+
+time device message1567521784297 ~\terminal imported correctly.
+
+time device message1567521809336 ~\terminal imported correctly.
+
+time device message1567521826857 ~\terminal imported correctly.
+
+time device message1567521911733 ~\terminal imported correctly.
+
+1567521946428 Goodbye, my Lord.
+
+time device message1567521950623 ~\terminal imported correctly.
+
+1567521988251 Goodbye, my Lord.
+
+time device message1567522121130 ~\terminal imported correctly.
+
+time device message1567522346663 ~\terminal imported correctly.
+
+time device message1567522678429 ~\terminal imported correctly.
+
+time device message1567522706240 ~\terminal imported correctly.
+
+time device message1567522873873 ~\terminal imported correctly.
+
+time device message1567523096187 ~\terminal imported correctly.
+
+time device message1567523292636 ~\terminal imported correctly.
+
+time device message1567523429280 ~\terminal imported correctly.
+
+time device message1567523544289 ~\terminal imported correctly.
+
+time device message1567523592326 ~\terminal imported correctly.
+
+time device message1567523815570 ~\terminal imported correctly.
+
+time device message1567523984461 ~\terminal imported correctly.
+
+time device message1567523995269 ~\terminal imported correctly.
+
+time device message1567524071954 ~\terminal imported correctly.
+
+time device message1567524127344 ~\terminal imported correctly.
+
+time device message1567524229616 ~\terminal imported correctly.
+
+time device message1567524284291 ~\terminal imported correctly.
+
+time device message1567524334852 ~\terminal imported correctly.
+
+time device message1567524340243 ~\terminal imported correctly.
+
+time device message1567524373209 ~\terminal imported correctly.
+
+time device message1567524387394 ~\terminal imported correctly.
+
+time device message1567524434060 ~\terminal imported correctly.
+
+1567524547442 Goodbye, my Lord.
+
+time device message1567524559642 ~\terminal imported correctly.
+
+1567524565971 Goodbye, my Lord.
+
