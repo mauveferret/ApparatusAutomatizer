@@ -221,4 +221,16 @@ class Arduino extends SerialDevice {
 
     }
 
+    @Override
+    boolean callDevice() {
+        try {
+            analogRead(""+1);
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
+
 }

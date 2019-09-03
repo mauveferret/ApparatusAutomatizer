@@ -11,6 +11,7 @@ class Config {
     String deviceCommand = "name isn't set";
     String devicePort = "port isn't set";
     String deviceType = "type isn't set";
+    int baudRate = 9600;
     String logPath;
     String dataPath;
     String units;
