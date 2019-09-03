@@ -1,7 +1,5 @@
 package ru.mauveferret;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
@@ -18,8 +16,8 @@ public class Terminal extends Device {
 
 
     public Terminal(String path) {
-
         super(path);
+        measureAndLog();
     }
 
     //Getters
@@ -42,8 +40,8 @@ public class Terminal extends Device {
 
     void addDevice(Device someDevice) {
 
-        String deviceName = someDevice.getConfig().getDeviceName();
-        String deviceCommand = someDevice.getConfig().getDeviceCommand();
+        String deviceName = someDevice.config.deviceName;
+        String deviceCommand = someDevice.config.deviceCommand;
 
         // get commands should not be launched several times!
 
@@ -176,7 +174,7 @@ public class Terminal extends Device {
     }
 
     @Override
-    void chooseCommand(String[] command) {
+    void chooseTerminalCommand(String[] command) {
         switch (command[1]) {
             case "help":
                 showHelp();
@@ -188,7 +186,7 @@ public class Terminal extends Device {
             }
             break;
         }
-        super.chooseCommand(command);
+        super.chooseTerminalCommand(command);
     }
 
     @Override

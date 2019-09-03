@@ -1,0 +1,719 @@
+1566850935521 Enter COM port name as an option
+1566850935522 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566850935522 ~\Arduino imported correctly.
+1566934760105 Enter COM port name as an option
+1566934760106 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566934760106 ~\Arduino imported correctly.
+1566934770650 Enter COM port name as an option
+1566934783064 Available ports:COM1 COM3 COM4 
+1566934794170 COM4 is opened
+1566934809630 ERROR: pin number is incorrect.
+1566934809630 HIGH on pin 6 isn't set
+1566934809630 COM4 is lost. Reconnecting...
+1566934809657 COM4 is opened
+1566934809657 Reconnected.
+1566934852608 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566934967896 Enter COM port name as an option
+1566934967897 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566934967897 ~\Arduino imported correctly.
+1566935105580 Enter COM port name as an option
+1566935105581 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566935105581 ~\Arduino imported correctly.
+1566935109358 Enter COM port name as an option
+1566935189303 Enter COM port name as an option.
+1566935189303 COM46 doesn't exist.
+1566935189303 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566935189303 ~\Arduino imported correctly.
+1566935193932 Enter COM port name as an option.
+1566935193933 COM46 doesn't exist.
+1566935199924 COM4 is opened
+1566935250683 Enter COM port name as an option.
+1566935250683 COM46 doesn't exist.
+1566935250684 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566935250684 ~\Arduino imported correctly.
+1566935254060 Available ports:COM1 COM3 COM4 
+1566935265898 Available ports:COM1 COM3 
+1566935273874 COM4 is opened
+1566935289516 LOW on pin 4 is set
+1566935300724 LOW on pin 6 is set
+1566935306537 HIGH on pin 6 is set
+1566935318547 HIGH on pin 6 is set
+1566935390122 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM4
+--------------------
+
+1566935434026 LOW on pin 10 is set
+1566935442881 HIGH on pin 10 is set
+1566935453520 LOW on pin 10 is set
+1566935473730 lol added
+1566935488657 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM4
+--------------------
+
+1566935726531 Enter COM port name as an option.
+1566935726532 COM46 doesn't exist.
+1566935726532 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566935726532 ~\Arduino imported correctly.
+1566935744775 COM4 is opened
+1566935758839 lol added
+1566935768366 HIGH on pin 10 is set
+1566935777693 LOW on pin 10 is set
+1566936491275 Enter COM port name as an option.
+1566936491275 COM46 doesn't exist.
+1566936491275 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard1
+--------------------
+device COM port: COM46
+--------------------
+
+1566936491275 ~\Arduino imported correctly.
+1566936498575 COM4 is opened
+1566936512729 lol added
+1566936518518 HIGH on pin 10 is set
+1566936524113 HIGH on pin 10 is set
+1566936529385 LOW on pin 10 is set
+1566936533879 HIGH on pin 10 is set
+1566936542480 HIGH on pin 10 is set
+1566936551288 HIGH on pin 10 is set
+1566936564231 kek added
+1566936572274 Unknown error during command ard1 kek 10 0
+1566936641626 Enter COM port name as an option.
+1566936641626 COM46 doesn't exist.
+1566936641627 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM46
+--------------------
+
+1566936641627 ~\Arduino imported correctly.
+1566936647127 COM4 is opened
+1566936657281 dwrite isn't added
+1566936665431 kek added
+1566936670199 Unknown error during command ard kek 10 0
+1566936736321 Enter COM port name as an option.
+1566936736321 COM46 doesn't exist.
+1566936736321 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM46
+--------------------
+
+1566936736322 ~\Arduino imported correctly.
+1566936763573 COM4 is opened
+1566936770515 COM4 is opened
+1566936782012 COM4 is closed
+1566936787534 Enter COM port name as an option.
+1566936787534 COM46 doesn't exist.
+1566936787535 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM46
+--------------------
+
+1566936787535 ~\Arduino imported correctly.
+1566936792462 COM4 is opened
+1566936800514 Enter COM port name as an option.
+1566936800514 COM46 doesn't exist.
+1566936800515 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM46
+--------------------
+
+1566936800515 ~\Arduino imported correctly.
+1566936804910 COM4 is opened
+1566936820828 command "aliaslol" doesn't exist
+1566936827774 lol added
+1566936832470 Unknown error during command ard lol 10 1
+1566936870235 COM4 is opened
+1566936870237 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566936870237 ~\Arduino imported correctly.
+1566936888223 lol added
+1566936896390 Unknown error during command ard lol 10 1
+1566937043762 COM4 is opened
+1566937043763 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937043763 ~\Arduino imported correctly.
+1566937051374 lol added
+1566937059284 Unknown error during command ard lol 10 1
+1566937122312 COM4 is opened
+1566937122313 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937122314 ~\Arduino imported correctly.
+1566937129036 lol added
+1566937132619 Unknown error during command ard lol 10 1
+1566937528737 COM4 is opened
+1566937528738 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937528738 ~\Arduino imported correctly.
+1566937540826 lol isn't added
+1566937587908 COM4 is opened
+1566937587909 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937587909 ~\Arduino imported correctly.
+1566937594457 lol added
+1566937598007 Unknown error during command ard lol 10 1
+1566937631016 COM4 is opened
+1566937631016 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937631016 ~\Arduino imported correctly.
+1566937638136 lol added
+1566937641711 Unknown error during command ard lol 10 1
+1566937919274 COM4 is opened
+1566937919274 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937919275 ~\Arduino imported correctly.
+1566937926198 lol added
+1566937945111 COM4 is opened
+1566937945112 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937945112 ~\Arduino imported correctly.
+1566937949677 lol added
+1566937994277 COM4 is opened
+1566937994277 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566937994278 ~\Arduino imported correctly.
+1566937998628 lol added
+1566938035950 COM4 is opened
+1566938035951 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566938035951 ~\Arduino imported correctly.
+1566938042262 lol added
+1566938143876 Unknown error during command somecommand open
+1566938143877 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566938143878 ~\Arduino imported correctly.
+1566938152363 lol added
+1566938161555 Unknown error during command ard lol 10 1
+1566938300217 Unknown error during command somecommand open
+1566938300218 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566938300218 ~\Arduino imported correctly.
+1566938305059 Unknown error during command ard dwrite 10 1
+1566938330322 Unknown error during command somecommand open
+1566938330323 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566938330323 ~\Arduino imported correctly.
+1566938418601 Unknown error during command somecommand open
+1566938418602 Unknown error during command somecommand info
+1566938418602 ~\Arduino imported correctly.
+1566939839812 Unknown error during command somecommand open
+1566939839813 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566939839813 ~\Arduino imported correctly.
+1566939862948 Unknown error during command somecommand open
+1566939862949 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566939862949 ~\Arduino imported correctly.
+1566939900360 Unknown error during command somecommand open
+1566939900361 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566939900361 ~\Arduino imported correctly.
+1566940208230 COM4 is opened
+1566940208230 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566940208231 ~\Arduino imported correctly.
+1566940227142 HIGH on pin 10 is set
+1566940232901 LOW on pin 10 is set
+1566940238312 HIGH on pin 10 is set
+1566940279078 Value is incorrect (should be 0 or 1).
+1566940324298 COM4 is opened
+1566940324299 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566940324299 ~\Arduino imported correctly.
+1566940337423 dwrite isn't added
+1566940344110 lol added
+1566940359893 lol isn't added
+1566940369078 kek added
+1566940645916 COM4 is opened
+1566940645917 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566940645917 ~\Arduino imported correctly.
+1566940656247 ERROR: pin number is incorrect.
+1566940656247 HIGH on pin 10 isn't set
+1566940656252 COM4 is lost. Reconnecting...
+1566940656282 COM4 is opened
+1566940656282 Reconnected.
+1566940669876 ERROR: pin number is incorrect.
+1566940669876 LOW on pin 10 isn't set
+1566940669876 COM4 is lost. Reconnecting...
+1566940669906 COM4 is opened
+1566940669906 Reconnected.
+1566940796830 COM4 is opened
+1566940796830 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566940796831 ~\Arduino imported correctly.
+1566940940735 COM4 is opened
+1566940940736 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1566940940736 ~\Arduino imported correctly.
+1566940945904 HIGH on pin 10 is set
+1566940989939 LOW on pin 10 is set
+1566940998668 ERROR: pin number is incorrect.
+1566940998668 HIGH on pin 10 isn't set
+1566940998668 COM4 is lost. Reconnecting...
+1566940998669 COM port name isn't set.
+1567365799363 Unknown error during command somecommand open
+1567365799365 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567365799365 ~\Arduino imported correctly.
+1567365829635 Unknown error during command ard alias wef
+1567365838236 lol added
+1567365846754 command "lol" doesn't exist
+1567365907395 Unknown error during command somecommand open
+1567365907397 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567365907397 ~\Arduino imported correctly.
+1567365915042 alias dwrite already exist as a command.
+1567365915042 command 8 doesn't exist
+1567365915042 dwrite isn't added
+1567365934465 lol added
+1567365939530 command "lol" doesn't exist
+1567365980903 Unknown error during command somecommand open
+1567365980905 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567365980905 ~\Arduino imported correctly.
+1567365989578 lol added
+1567365994984 command "lol" doesn't exist
+1567366155320 Unknown error during command somecommand open
+1567366155321 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567366155321 ~\Arduino imported correctly.
+1567366166111 lol added
+1567366169770 Unknown error during command somecommand dwrite 8 1
+1567366244209 Unknown error during command somecommand open
+1567366244210 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567366244210 ~\Arduino imported correctly.
+1567366255126 lol added
+1567366257832 Unknown error during command somecommand dwrite 8 1
+1567366309721 Unknown error during command somecommand open
+1567366309726 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567366309727 ~\Arduino imported correctly.
+1567366317823 alias dwrite already exist as a command.
+1567366317823 command 8 doesn't exist
+1567366317823 dwrite isn't added
+1567366331829 lol added
+1567366366920 Unknown error during command somecommand dwrite 8 1
+1567366418727 Unknown error during command somecommand open
+1567366418728 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567366418728 ~\Arduino imported correctly.
+1567366424542 lol added
+1567366427207 Unknown error during command somecommand dwrite 8 1
+1567366442164 d added
+1567366530452 Unknown error during command somecommand dwrite
+1567367973139 Unknown error during command somecommand open
+1567367973141 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567367973142 ~\Arduino imported correctly.
+1567367980688 lol added
+1567368030222 Unknown error during command somecommand open
+1567368030223 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567368030223 ~\Arduino imported correctly.
+1567368036104 lol added
+1567368086431 Unknown error during command ard lol
+1567368158654 COM4 is opened
+1567368165124 HIGH on pin 8 is set
+1567368171493 LOW on pin 8 is set
+1567368174275 HIGH on pin 8 is set
+1567368190685 kek added
+1567368193172 HIGH on pin 10 is set
+1567368209162 ko added
+1567368225245 LOW on pin 10 is set
+1567368236085 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567368552581 Unknown error during command somecommand open
+1567368552582 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567368552582 ~\Arduino imported correctly.
+1567368682594 COM4 is opened
+1567368700648 lol added
+1567368706410 HIGH on pin 10 is set
+1567368834166 Unknown error during command somecommand open
+1567368834168 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567368834168 ~\Arduino imported correctly.
+1567369033770 COM4 is opened
+1567369033771 
+device: arduino1
+--------------------
+deviceID: 1
+--------------------
+command: ard
+--------------------
+device COM port: COM4
+--------------------
+
+1567369033771 ~\Arduino imported correctly.

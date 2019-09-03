@@ -1,0 +1,121 @@
+1566850935508 ~\terminal imported correctly.
+1566850942727 Goodbye, my Lord.
+1566934659455 ~\terminal imported correctly.
+1566934760091 ~\terminal imported correctly.
+1566934767777 Command "ard" not found.
+1566934788657 Command "ard" not found.
+1566934802672 Command "ard" not found.
+1566934823631 Command "ard" not found.
+1566934844640 Command "awd" not found.
+1566934967889 ~\terminal imported correctly.
+1566934977206 Goodbye, my Lord.
+1566935105569 ~\terminal imported correctly.
+1566935189295 ~\terminal imported correctly.
+1566935205371 Command "ard" not found.
+1566935250675 ~\terminal imported correctly.
+1566935282307 Command "ard" not found.
+1566935296026 Command "ard" not found.
+1566935314153 Command "ard" not found.
+1566935341546 Command "ard" not found.
+1566935370443 ****** arduino1 ******
+alias               adds alias to the specific command in form: alias $alias$  $command$ $options$
+aread               Read from Arduino analog  port in form: AI $pin number$
+awrite              Write on Arduino analog port(PWM~) in form: AO $pin number$ $value(0-5)$
+break               stops the reconnection to the Device
+close               close Arduino port
+connect             trying to reconnect to the Device in case of the failure
+dread               Read from Arduino digital  port in form: DI $pin number$
+dwrite              Write on Arduino digital port in form: DO $pin number$ $value(0,1)$
+import              import parameters from the file if form: import $path$
+info                info
+open                Open Arduino Port in form: OP $arduino number$ $COM port name$
+ports               shows available COM port's names
+read                read message from the port
+write               write command on the port
+****** terminal ******
+alias               adds alias to the specific command in form: alias $alias$  $command$ $options$
+help                this page
+import              import parameters from the file if form: import $path$
+info                info
+threads             
+******** tmp ********
+alias               adds alias to the specific command in form: alias $alias$  $command$ $options$
+enable              launches the TMP in form $run$
+frequency           ...
+import              import parameters from the file if form: import $path$
+info                info
+measure             
+stop                stops the TMP in form: $stop$
+temperature          returnes the temperature of the TMP in celsium in form: $temperature$
+
+1566935438041 Command "ard" not found.
+1566935447657 Command "ard" not found.
+1566935500759 Command "" not found.
+1566935508488 Command "ard" not found.
+1566935542343 Goodbye, my Lord.
+1566935726524 ~\terminal imported correctly.
+1566935774021 Command "ard" not found.
+1566935788598 Command "ard" not found.
+1566935798086 Goodbye, my Lord.
+1566936491266 ~\terminal imported correctly.
+1566936578479 Goodbye, my Lord.
+1566936641617 ~\terminal imported correctly.
+1566936673758 Goodbye, my Lord.
+1566936736312 ~\terminal imported correctly.
+1566936763565 Command "" not found.
+1566936784108 Goodbye, my Lord.
+1566936787525 ~\terminal imported correctly.
+1566936794908 Goodbye, my Lord.
+1566936800506 ~\terminal imported correctly.
+1566936835724 Goodbye, my Lord.
+1566936870218 ~\terminal imported correctly.
+1566936905020 Goodbye, my Lord.
+1566937043745 ~\terminal imported correctly.
+1566937051371 Command "" not found.
+1566937070241 Goodbye, my Lord.
+1566937122295 ~\terminal imported correctly.
+1566937136890 Goodbye, my Lord.
+1566937528720 ~\terminal imported correctly.
+1566937545798 Goodbye, my Lord.
+1566937587891 ~\terminal imported correctly.
+1566937630999 ~\terminal imported correctly.
+1566937645549 Goodbye, my Lord.
+1566937919257 ~\terminal imported correctly.
+1566937945094 ~\terminal imported correctly.
+1566937994260 ~\terminal imported correctly.
+1566938001050 Goodbye, my Lord.
+1566938035926 ~\terminal imported correctly.
+1566938044818 Goodbye, my Lord.
+1566938143872 ~\terminal imported correctly.
+1566938163761 Goodbye, my Lord.
+1566938300213 ~\terminal imported correctly.
+1566938330317 ~\terminal imported correctly.
+1566938418597 ~\terminal imported correctly.
+1566939839808 ~\terminal imported correctly.
+1566939862943 ~\terminal imported correctly.
+1566939900356 ~\terminal imported correctly.
+1566940208214 ~\terminal imported correctly.
+1566940253415 Command "kek" not found.
+1566940285503 Goodbye, my Lord.
+1566940324282 ~\terminal imported correctly.
+1566940374565 Goodbye, my Lord.
+1566940645900 ~\terminal imported correctly.
+1566940671539 Goodbye, my Lord.
+1566940796813 ~\terminal imported correctly.
+1566940940719 ~\terminal imported correctly.
+1566941011804 Goodbye, my Lord.
+1567365799359 ~\terminal imported correctly.
+1567365879242 Goodbye, my Lord.
+1567365907392 ~\terminal imported correctly.
+1567365980898 ~\terminal imported correctly.
+1567366155316 ~\terminal imported correctly.
+1567366244201 ~\terminal imported correctly.
+1567366309717 ~\terminal imported correctly.
+1567366418721 ~\terminal imported correctly.
+1567367973135 ~\terminal imported correctly.
+1567368030217 ~\terminal imported correctly.
+1567368246429 Goodbye, my Lord.
+1567368552576 ~\terminal imported correctly.
+1567368717575 Goodbye, my Lord.
+1567368834160 ~\terminal imported correctly.
+1567369033753 ~\terminal imported correctly.

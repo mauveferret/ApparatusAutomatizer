@@ -1,35 +1,24 @@
 package ru.mauveferret;
 
-import java.util.ArrayList;
 import java.util.TreeMap;
 
-public class Config {
+class Config {
 
 
 
-
-    private String deviceID="ID isn't set";
-    private String deviceName = "name isn't set";
-    private String devicePort = "port isn't set";
-    private String deviceType = "type isn't set";
-
+    String deviceID="ID isn't set";
+    String deviceName = "name isn't set";
+    String deviceCommand = "name isn't set";
+    String devicePort = "port isn't set";
+    String deviceType = "type isn't set";
+    String logPath;
+    String dataPath;
+    String units;
+    TreeMap<String,Object> parameters = new TreeMap<>();
 //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 
-
-    public String getDeviceType() {
-        return deviceType;
-    }
-
-    public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
-
-    }
-
-    private String deviceCommand;
    // private String logPath;
 
-
-    private TreeMap<String,Object> parameters = new TreeMap<>();
 
     //public void setLogPath(String logPath) {
        // this.logPath = logPath;
@@ -39,37 +28,6 @@ public class Config {
      //   return logPath;
    // }
 
-    String getDeviceID() {
-        return deviceID;
-    }
-
-    void setDeviceID(String deviceID) {
-        this.deviceID = deviceID;
-    }
-
-    String getDeviceName() {
-        return deviceName;
-    }
-
-    void setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
-    }
-
-    String getDevicePort() {
-        return devicePort;
-    }
-
-    void setDevicePort(String devicePort) {
-        this.devicePort = devicePort;
-    }
-
-    String getDeviceCommand() {
-        return deviceCommand;
-    }
-
-    void setDeviceCommand(String deviceCommand) {
-        this.deviceCommand = deviceCommand;
-    }
 
     public TreeMap<String, Object> getParameters() {
         return parameters;

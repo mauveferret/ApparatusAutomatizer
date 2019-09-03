@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AutoPumping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/gettersofGateControl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Configurable.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +167,8 @@
       <workItem from="1567142986732" duration="164000" />
       <workItem from="1567143247396" duration="4335000" />
       <workItem from="1567315099728" duration="2754000" />
-      <workItem from="1567352141177" duration="7371000" />
+      <workItem from="1567352141177" duration="7414000" />
+      <workItem from="1567489783206" duration="7036000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -283,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566941828686</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="alias fixed">
+      <created>1567370077231</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567370077231</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +332,7 @@
     <MESSAGE value="logs work, help works" />
     <MESSAGE value="some tiny improvements, filecorrector added, gauge log added" />
     <MESSAGE value="reading from COM fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="reading from COM fixed" />
+    <MESSAGE value="alias fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="alias fixed" />
   </component>
 </project>

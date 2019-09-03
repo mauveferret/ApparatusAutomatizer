@@ -1,27 +1,29 @@
 package ru.mauveferret;
 
 import java.io.File;
-import java.util.Arrays;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-abstract  class Device extends Logger{
+abstract  class Device extends Thread{
 
     Device(String path)
     {
         getCommands();
         importConfigurationFile(path);
-        measureAndLog();
     }
 
     Device(){}
 
+    abstract void measureAndLog();
 
     // some config data
 
-    private Config config = new Config();
-
+    Config config = new Config();
+    private Logger messageLog = new Logger();
+    Logger dataLog = new Logger();
+    Thread log;
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
     private Device receivedDevice;
@@ -35,25 +37,14 @@ abstract  class Device extends Logger{
     //Setters and Getters
 
 
-    public String getReceivedCommand() {
+    String getReceivedCommand() {
         return receivedCommand;
     }
 
-    public Device getReceivedDevice() {
+    Device getReceivedDevice() {
         return receivedDevice;
     }
 
-    void setReceivedDevice(Device receivedDevice) {
-        this.receivedDevice = receivedDevice;
-    }
-
-     void setReceivedCommand(String receivedCommand) {
-        this.receivedCommand = receivedCommand;
-    }
-
-    Config getConfig() {
-        return config;
-    }
 
 
     HashMap<String,String[]> getAliases()
@@ -72,10 +63,10 @@ abstract  class Device extends Logger{
             command[1] = command[1].toLowerCase();
             command = replaceAliasByCommand(command);
             if (commands.containsKey(command[1])) {
-                setReceivedCommand(someCommand);
-                setReceivedDevice(device);
+                receivedCommand = someCommand;
+                receivedDevice = device;
                 long t2 = System.currentTimeMillis();
-                chooseCommand(command);
+                chooseTerminalCommand(command);
                 long t3 = System.currentTimeMillis();
                 System.out.println(" logic time "+(t2-t1)+" command time: "+(t3-t2));
 
@@ -90,7 +81,7 @@ abstract  class Device extends Logger{
         }
     }
 
-    void chooseCommand(String[] command)
+    void chooseTerminalCommand(String[] command)
     {
         switch (command[1]) {
 
@@ -164,31 +155,7 @@ abstract  class Device extends Logger{
                     line = line.substring(line.indexOf("*") + 2);
                 }
                 if (!isComment && !line.equals("")) {
-                    String[] command = line.split(" ");
-                    switch (command[0].toLowerCase())
-                    {
-                        case "id": config.setDeviceID(command[1]);
-                        break;
-                        case "name": config.setDeviceName(command[1]);
-                        break;
-                        case "command": config.setDeviceCommand(command[1]);
-                        break;
-                        case "port": config.setDevicePort(command[1]);
-                        break;
-                        case "logpath": createLogFile(command[1]);
-                        break;
-                        case "datapath" : createDataFile(command[1]);
-                        break;
-                        case "type" : config.setDeviceType(command[1]);
-                        break;
-                        default:
-                        {
-                            //FIXME
-                            //Bug is need to create some options as port Name or message
-                            runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
-                        }
-                        break;
-                    }
+                   chooseImportCommand (line);
                 }
             }
             scanner.close();
@@ -201,6 +168,35 @@ abstract  class Device extends Logger{
             sendMessage(e.getLocalizedMessage());
         }
     }
+
+    void chooseImportCommand(String line)
+    {
+        String[] command = line.split(" ");
+        switch (command[0].toLowerCase())
+        {
+            case "id": config.deviceID = command[1];
+                break;
+            case "name": config.deviceName = command[1];
+                break;
+            case "command": config.deviceCommand = command[1];
+                break;
+            case "logpath":
+            {
+                config.logPath = command[1];
+                messageLog.createFile(command[1]);
+            }
+                break;
+            case "datapath" :
+            {
+                config.dataPath = command[1];
+                dataLog.createFile(command[1]);
+            }
+                break;
+            case "run" : runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
+            break;
+        }
+    }
+
     /*
     used in run method to replace alias by its command
     if the alias exists. If not, returns as it was
@@ -225,6 +221,12 @@ abstract  class Device extends Logger{
     {
         command = command.replaceAll(" {2}"," ").trim();
         return  command.split(" ");
+    }
+
+    void sendMessage(String message) {
+        message = System.currentTimeMillis() + " " + message;
+        System.out.println(message);
+        messageLog.write(message + "\n");
     }
 
 }

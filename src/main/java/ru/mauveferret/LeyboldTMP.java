@@ -12,6 +12,7 @@ public class LeyboldTMP extends Device {
 
     public LeyboldTMP(String path) {
         super(path);
+        measureAndLog();
     }
 
 //Getters
@@ -37,14 +38,14 @@ public class LeyboldTMP extends Device {
 
 
     @Override
-    void chooseCommand(String[] command) {
+    void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
             case "enable": enable();
             case "measure": measure();
             break;
         }
-        super.chooseCommand(command);
+        super.chooseTerminalCommand(command);
     }
 
     private void enable() {
@@ -68,13 +69,12 @@ public class LeyboldTMP extends Device {
                 boolean stop = true;
                 while (stop)
                 {
-                    //Todo measure
-                    logData("time "+temperature+" "+frequency+" "+voltage+" "+current+"\n");
+                    dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current);
                     stop = Thread.currentThread().isInterrupted();
                 }
             }
         });
-        log.setName("GaugeLogger");
+        log.setName(config.deviceName);
         log.start();
 
     }

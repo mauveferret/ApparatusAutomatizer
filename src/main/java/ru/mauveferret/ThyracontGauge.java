@@ -4,14 +4,19 @@ import java.util.TreeMap;
 
 class ThyracontGauge extends SerialDevice {
 
-
     ThyracontGauge(String path) {
         super(path);
+        logPressure1.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr1");
+        logPressure2.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr2");
+        logPressure3.createFile(config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr3");
+        sendMessage(logPressure1.getPath());
+        measureAndLog();
     }
 
     private double[] pressure = new double[4];
-
-
+    private Logger logPressure1 = new Logger();
+    private Logger logPressure2 = new Logger();
+    private Logger logPressure3 = new Logger();
     //Getters
 
     double getPressure(int gaugeNumber) {
@@ -57,31 +62,35 @@ class ThyracontGauge extends SerialDevice {
         return ((char) (checkSum % 64 +64))+"";
     }
 
-
     //for commandline
 
     @Override
     void measureAndLog() {
-        Thread log = new Thread(new Runnable() {
+        log = new Thread(new Runnable() {
             @Override
             public void run() {
                 boolean stop = true;
                 while (stop)
                 {
+                    long t1 = System.currentTimeMillis();
                     measure(1);
                     measure(2);
                     //measure(3);
-                    logData("time "+getPressure(1)+" "+getPressure(2)+"\n");
+                    long t2 = System.currentTimeMillis();
+                    dataLog.write("time "+getPressure(1)+" "+getPressure(2)+" "+(t2-t1));
+                    logPressure1.write("time "+getPressure(1));
+                    logPressure2.write("time "+getPressure(2));
+                    logPressure3.write("time "+getPressure(3));
                     stop = Thread.currentThread().isInterrupted();
                 }
             }
         });
-        log.setName("GaugeLogger");
+        log.setName(config.deviceName);
         log.start();
     }
 
     @Override
-    void chooseCommand(String[] command) {
+    void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
             case "measure":
@@ -101,7 +110,7 @@ class ThyracontGauge extends SerialDevice {
             }
             break;
         }
-        super.chooseCommand(command);
+        super.chooseTerminalCommand(command);
     }
 
     @Override
@@ -110,5 +119,8 @@ class ThyracontGauge extends SerialDevice {
         commands.put("calibrate", "makes a calibration of the pirani or cold cathode in form: calibrate $type$");
         return super.getCommands();
     }
+
+    @Override
+    void type() {}
 }
 

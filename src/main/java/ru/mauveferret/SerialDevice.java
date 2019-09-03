@@ -3,12 +3,13 @@ package ru.mauveferret;
 import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
-import java.util.HashMap;
+
 import java.util.TreeMap;
 
 abstract class SerialDevice extends Device {
 
 
+    abstract void type();
 
     private SerialPort serialPort;
     //in this thread reconnection to the device happening
@@ -20,7 +21,7 @@ abstract class SerialDevice extends Device {
         super(path);
     }
 
-    SerialDevice(){}
+    //SerialDevice(){}
 
     //Getters
 
@@ -43,8 +44,8 @@ abstract class SerialDevice extends Device {
     }
 
     @Override
-    void chooseCommand(String[] command) {
-        super.chooseCommand(command);
+    void chooseTerminalCommand(String[] command) {
+        super.chooseTerminalCommand(command);
         switch (command[1]) {
             case "ports": showAvailableCOMPorts();
             break;
@@ -60,6 +61,24 @@ abstract class SerialDevice extends Device {
             break;
             case "read": sendMessage(readMessage());
             break;
+        }
+    }
+
+    @Override
+    void chooseImportCommand(String line) {
+        super.chooseImportCommand(line);
+        String[] command = line.split(" ");
+        switch (command[0].toLowerCase())
+        {
+            case "type" :
+            {
+                config.deviceType = command[1];
+                type();
+            }
+            break;
+            case "port": config.devicePort = command[1];
+            break;
+
         }
     }
 
@@ -90,7 +109,7 @@ abstract class SerialDevice extends Device {
     private synchronized boolean openPort(String portName)
     {
         //if it wasn'r set, trying to load from the config file
-        String port = getConfig().getDevicePort();
+        String port = config.devicePort;
         if (!doesPortExist(portName) && !doesPortExist(port))
         {
             sendMessage("Enter COM port name as an option");
@@ -152,7 +171,6 @@ abstract class SerialDevice extends Device {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
-            //FIXME for arduino \n for gauge \r
             while (!answer.contains("\r") && !answer.contains("\n")) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
                 if (serialPort.getInputBufferBytesCount()>0)
@@ -161,7 +179,7 @@ abstract class SerialDevice extends Device {
                 }
                 if (System.currentTimeMillis() - startTime > 2000) {
                     reconnect();
-                    sendMessage(getConfig().getDeviceName()+" message wasn't got.");
+                    sendMessage(config.deviceName+" message wasn't got.");
                     break;
                 }
             }

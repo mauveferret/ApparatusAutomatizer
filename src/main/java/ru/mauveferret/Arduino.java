@@ -2,7 +2,6 @@ package ru.mauveferret;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.TreeMap;
 
 /*
@@ -17,6 +16,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     Arduino(String path) {
         super(path);
+        measureAndLog();
     }
 
     //TODO create list with active pin numbers for log
@@ -25,6 +25,9 @@ class Arduino extends SerialDevice implements Configurable{
     //TODO list of pins status
     private boolean[] digitalPinsWritten = new boolean[14];
     private double[] analogPinsRead = new double[14];
+
+    private ArrayList<Integer> actualDigitalPins;
+    private ArrayList<Integer> actualAnalogPins;
 
 
     //Getters and Setters
@@ -41,7 +44,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     synchronized private boolean digitalWrite(String pin, boolean value)
     {
-           String message=fillStringByZeros(getConfig().getDeviceID(),3);
+           String message=fillStringByZeros(config.deviceID,3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");
            String answer = readMessage();
@@ -60,7 +63,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     synchronized private boolean digitalRead(String pin)
     {
-            String message = fillStringByZeros(getConfig().getDeviceID(),3);
+            String message = fillStringByZeros(config.deviceID,3);
             message +="DI" + fillStringByZeros(pin, 2);
             writeMessage(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
             String answer = readMessage();
@@ -79,7 +82,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     synchronized private boolean analogWrite(String pin, int value)
     {
-            String message=fillStringByZeros(getConfig().getDeviceID(),3);
+            String message=fillStringByZeros(config.deviceID,3);
             message+="AO"+fillStringByZeros(pin,2)+fillStringByZeros(""+value*51, 4);
             writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");
             String answer = readMessage();
@@ -89,7 +92,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     synchronized private double analogRead(String pin)
     {
-            String message = fillStringByZeros(getConfig().getDeviceID(),3);
+            String message = fillStringByZeros(config.deviceID,3);
             message += "AI" + fillStringByZeros(pin, 2);
             writeMessage(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
             String answer = readMessage();
@@ -141,8 +144,8 @@ class Arduino extends SerialDevice implements Configurable{
     }
 
     @Override
-    void chooseCommand(String[] command) {
-        super.chooseCommand(command);
+    void chooseTerminalCommand(String[] command) {
+        super.chooseTerminalCommand(command);
         switch (command[1]) {
             case "dwrite": {
                 if (command[2].equals("") || command[3].equals(" "))
@@ -182,7 +185,7 @@ class Arduino extends SerialDevice implements Configurable{
 
     @Override
     void measureAndLog() {
-        Thread log = new Thread(new Runnable() {
+         log = new Thread(new Runnable() {
             @Override
             public void run() {
                 boolean stop = true;
@@ -192,19 +195,19 @@ class Arduino extends SerialDevice implements Configurable{
                     for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
                     dataToLog+="\n"+time+" analog ";
                     for (double d: analogPinsRead) dataToLog+=d+" ";
-                    logData(dataToLog);
+                    dataLog.write(dataToLog);
                     stop = !Thread.currentThread().isInterrupted();
                 }
             }
         });
-        log.setName(getConfig().getDeviceName()+" logger");
+        log.setName(config.deviceName);
         log.start();
     }
 
     //FIXME
     @Override
     public void type() {
-        String type = getConfig().getDeviceType();
+        String type = config.deviceType;
         if (type.toLowerCase().equals("nano"))
         {
             digitalPinsWritten = new boolean[14];

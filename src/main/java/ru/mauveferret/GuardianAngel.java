@@ -1,6 +1,5 @@
 package ru.mauveferret;
 
-import java.util.HashMap;
 import java.util.TreeMap;
 
 public class GuardianAngel extends Device {
@@ -37,7 +36,9 @@ public class GuardianAngel extends Device {
     }
 
     public GuardianAngel(String path) {
+
         super(path);
+        measureAndLog();
     }
 
     @Override
@@ -75,9 +76,9 @@ public class GuardianAngel extends Device {
     }
 
     @Override
-    void chooseCommand(String[] command) {
+    void chooseTerminalCommand(String[] command) {
 
-        super.chooseCommand(command);
+        super.chooseTerminalCommand(command);
         switch (command[1]) {
             case ("start"): {
                 new Thread(new Runnable() {
