@@ -21,7 +21,8 @@ public class Logger {
         try {
             writer = new FileWriter(new File(path), true);
             if (!"".equals(header))
-                writer.write(header);
+                writer.write(header+"\n");
+            writer.close();
         }
         catch (IOException ex)
         {
@@ -29,12 +30,16 @@ public class Logger {
         }
     }
 
+    //TODO выравнивание колонок
+
      void write(String data) {
         if (!data.equals(dataToLog)) {
             dataToLog = data;
             try {
+                writer = new FileWriter(new File(path), true);
                 writer.write(dataToLog.replaceAll("time", System.currentTimeMillis()+"")+"\n");
                 writer.flush();
+                writer.close();
             } catch (Exception e) {
                 System.out.println("Data writing failed: "+e.getMessage());
             }

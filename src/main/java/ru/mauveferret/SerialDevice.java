@@ -77,9 +77,9 @@ abstract class SerialDevice extends Device {
             }
             break;
             case "port": config.devicePort = command[1];
+            break;
             case "open": openPort("");
             break;
-
         }
     }
 

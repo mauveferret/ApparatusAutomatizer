@@ -15,7 +15,7 @@ class ThyracontGauge extends SerialDevice {
         logPressure2.createFile( newPath,"");
         newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr3.txt";
         logPressure3.createFile( newPath,"");
-        sendMessage(logPressure1.getPath());
+
         measureAndLog();
     }
 
@@ -39,19 +39,23 @@ class ThyracontGauge extends SerialDevice {
         String message = "00"+gaugeNumber+"M";
         writeMessage(message+checkSum(message)+"\r");
         message = readMessage();
-        //if ((message.charAt(10)+"").equals(checkSum(message.substring(0,10))))
-        if (true)
-        {
-            double mantissa  = Double.parseDouble(message.substring(4, 8)) / 1000;
-            int order = Integer.parseInt(message.substring(8, 10)) - 20;
-            double value = mantissa * 0.75 * Math.pow(10, order);
-            pressure[gaugeNumber] = value;
-            //System.out.println(value);
-            return value;
+        if (message.length()>10) {
+            if ((message.charAt(10) + "").equals(checkSum(message.substring(0, 10)))) {
+                double mantissa = Double.parseDouble(message.substring(4, 8)) / 1000;
+                int order = Integer.parseInt(message.substring(8, 10)) - 20;
+                double value = mantissa * 0.75 * Math.pow(10, order);
+                pressure[gaugeNumber] = value;
+                return value;
+            } else {
+                sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge");
+                reconnect();
+                //return previous
+                return getPressure(gaugeNumber);
+            }
         }
         else
         {
-            sendMessage("Error during measuring pressure by "+gaugeNumber+" gauge");
+            sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge");
             reconnect();
             //return previous
             return getPressure(gaugeNumber);
@@ -75,20 +79,20 @@ class ThyracontGauge extends SerialDevice {
 
     @Override
     void measureAndLog() {
+        dataLog.createFile(config.dataPath, "time  column1,torr column2,torr vessel torr  ");
         log = new Thread(new Runnable() {
             @Override
             public void run() {
-                Locale locale;
+                //TODO make scientific format
                 NumberFormat numFormat = NumberFormat.getNumberInstance(Locale.getDefault());
+                numFormat.setMaximumFractionDigits(3);
                 boolean stop = false;
                 while (!stop)
                 {
                     try {
-                        long t1 = System.currentTimeMillis();
                         measure(1);
                         measure(2);
                         //measure(3);
-                        long t2 = System.currentTimeMillis();
                         String pr1 = numFormat.format(getPressure(1));
                         String pr2 = numFormat.format(getPressure(2));
                         String pr3 = numFormat.format(getPressure(3));
@@ -97,13 +101,12 @@ class ThyracontGauge extends SerialDevice {
                         logPressure2.write("time " + pr2);
                         logPressure3.write("time " + pr3);
                         stop = Thread.currentThread().isInterrupted();
-                        Thread.currentThread().wait(30);
-                        stop = true;
+                        Thread.sleep(30);
                     }
                     catch (Exception  e)
                     {
                         e.printStackTrace();
-                        stop = true;
+
                     }
                 }
 

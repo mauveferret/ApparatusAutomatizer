@@ -1037,3 +1037,171 @@ time device message1567524559653 Port COM4 is busy
 
 1567524559655 ~\Arduino imported correctly.
 
+time device message1567524802239 COM4 is opened
+
+1567524802252 COM4 is opened
+
+1567524802252 ~\Arduino imported correctly.
+
+time device message1567524827467 COM4 is opened
+
+1567524827481 COM4 is opened
+
+1567524827481 ~\Arduino imported correctly.
+
+time device message1567524942493 COM4 is opened
+
+1567524942506 COM4 is opened
+
+1567524942507 ~\Arduino imported correctly.
+
+time device message1567524993833 COM4 is opened
+
+1567524993846 COM4 is opened
+
+1567524993846 ~\Arduino imported correctly.
+
+time device message1567525254151 COM4 is opened
+
+1567525254164 COM4 is opened
+
+1567525254165 ~\Arduino imported correctly.
+
+time device message1567525333302 COM4 is opened
+
+1567525333315 COM4 is opened
+
+1567525333315 ~\Arduino imported correctly.
+
+time device message1567525914774 COM4 is opened
+
+1567525914788 COM4 is opened
+
+1567525914788 ~\Arduino imported correctly.
+
+time device message1567526320153 COM4 is opened
+
+1567526320167 COM4 is opened
+
+1567526320169 ~\Arduino imported correctly.
+
+time device message
+1567526443978 COM4 is opened
+
+1567526443992 COM4 is opened
+
+1567526443993 ~\Arduino imported correctly.
+
+time device message
+1567526473727 COM4 is opened
+
+1567526473741 COM4 is opened
+
+1567526473742 ~\Arduino imported correctly.
+
+time device message
+1567526499383 COM4 is opened
+
+1567526499397 COM4 is opened
+
+1567526499398 ~\Arduino imported correctly.
+
+time device message
+1567526550111 COM4 is opened
+
+1567526550126 COM4 is opened
+
+1567526550127 ~\Arduino imported correctly.
+
+time device message
+1567526806120 COM4 is opened
+
+1567526806134 COM4 is opened
+
+1567526806135 ~\Arduino imported correctly.
+
+time device message
+1567526844874 COM4 is opened
+
+1567526844887 COM4 is opened
+
+1567526844888 ~\Arduino imported correctly.
+
+time device message
+1567526869227 COM4 is opened
+
+1567526869241 COM4 is opened
+
+1567526869243 ~\Arduino imported correctly.
+
+time device message
+1567526899407 COM4 is opened
+
+1567526899421 COM4 is opened
+
+1567526899422 ~\Arduino imported correctly.
+
+time device message
+1567529703863 COM4 is opened
+
+1567529703877 COM4 is opened
+
+1567529703879 ~\Arduino imported correctly.
+
+time device message
+1567529773374 COM4 is opened
+
+1567529773388 COM4 is opened
+
+1567529773390 ~\Arduino imported correctly.
+
+1567529786990 Available ports:COM1 COM4 COM5 COM6 COM7 COM8 COM18 COM19 COM22 COM23 COM46 COM51 COM57 
+
+time device message
+1567530023628 COM4 is opened
+
+1567530023641 COM4 is opened
+
+1567530023642 ~\Arduino imported correctly.
+
+time device message
+1567530056623 COM4 is opened
+
+1567530056636 COM4 is opened
+
+1567530056638 ~\Arduino imported correctly.
+
+time device message
+1567530094413 COM4 is opened
+
+1567530094426 COM4 is opened
+
+1567530094428 ~\Arduino imported correctly.
+
+time device message
+1567530111581 COM4 is opened
+
+1567530111594 COM4 is opened
+
+1567530111595 ~\Arduino imported correctly.
+
+time device message
+1567530212878 COM4 is opened
+
+1567530212908 COM4 is opened
+
+1567530212908 ~\Arduino imported correctly.
+
+time device message
+1567530376160 ~\Arduino imported correctly.
+
+time device message
+1567530390086 COM4 is opened
+
+1567530390096 ~\Arduino imported correctly.
+
+time device message
+1567530424093 COM4 is opened
+
+1567530424103 ~\Arduino imported correctly.
+

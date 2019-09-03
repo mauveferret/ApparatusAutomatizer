@@ -34464,3 +34464,7519 @@ time device message1567524559658 Enter COM port name as an option
 
 1567524562933 Available ports:COM1 COM4 COM5 COM6 COM7 COM8 COM18 COM19 COM22 COM23 COM46 COM51 
 
+time device message1567524802276 COM49 is opened
+
+1567524802282 COM49 is opened
+
+1567524802282 ~\Gauge imported correctly.
+
+1567524802283 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567524827491 COM49 is opened
+
+1567524827497 COM49 is opened
+
+1567524827497 ~\Gauge imported correctly.
+
+1567524827498 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567524942525 COM49 is opened
+
+1567524942532 COM49 is opened
+
+1567524942532 ~\Gauge imported correctly.
+
+1567524942532 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567524993855 COM49 is opened
+
+1567524993860 COM49 is opened
+
+1567524993861 ~\Gauge imported correctly.
+
+1567524993862 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567525254174 COM49 is opened
+
+1567525254179 COM49 is opened
+
+1567525254179 ~\Gauge imported correctly.
+
+1567525254180 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567525333324 COM49 is opened
+
+1567525333329 COM49 is opened
+
+1567525333330 ~\Gauge imported correctly.
+
+1567525333330 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567525914798 COM49 is opened
+
+1567525914806 COM49 is opened
+
+1567525914806 ~\Gauge imported correctly.
+
+1567525914807 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message1567526320181 COM49 is opened
+
+1567526320188 COM49 is opened
+
+1567526320189 ~\Gauge imported correctly.
+
+1567526320191 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526444006 COM49 is opened
+
+1567526444013 COM49 is opened
+
+1567526444014 ~\Gauge imported correctly.
+
+1567526444015 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+1567526448138 gauge message wasn't got.
+
+1567526448139 Error during measuring pressure by 2 gauge
+
+1567526448140 COM49 is lost. Reconnecting...
+
+1567526448144 COM49 is opened
+
+1567526448145 Reconnected.
+
+1567526448149 COM49 is opened
+
+1567526448150 Reconnected.
+
+time device message
+1567526473754 COM49 is opened
+
+1567526473761 COM49 is opened
+
+1567526473763 ~\Gauge imported correctly.
+
+1567526473764 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526499418 COM49 is opened
+
+1567526499424 COM49 is opened
+
+1567526499432 ~\Gauge imported correctly.
+
+1567526499434 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526550136 COM49 is opened
+
+1567526550143 COM49 is opened
+
+1567526550144 ~\Gauge imported correctly.
+
+1567526550145 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526806145 COM49 is opened
+
+1567526806152 COM49 is opened
+
+1567526806153 ~\Gauge imported correctly.
+
+1567526806154 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526844902 COM49 is opened
+
+1567526844909 COM49 is opened
+
+1567526844910 ~\Gauge imported correctly.
+
+1567526844911 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526869259 COM49 is opened
+
+1567526869266 COM49 is opened
+
+1567526869267 ~\Gauge imported correctly.
+
+1567526869272 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567526899434 COM49 is opened
+
+1567526899441 COM49 is opened
+
+1567526899442 ~\Gauge imported correctly.
+
+1567526899443 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567529703890 COM49 is opened
+
+1567529703899 COM49 is opened
+
+1567529703900 ~\Gauge imported correctly.
+
+1567529703901 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+1567529760385 gauge message wasn't got.
+
+1567529760388 COM49 is lost. Reconnecting...
+
+1567529760417 COM49 is lost. Reconnecting...
+
+1567529760417 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760418 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760418 COM49 is lost. Reconnecting...
+
+1567529760419 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760419 COM49 is lost. Reconnecting...
+
+1567529760420 Enter COM port name as an option
+
+1567529760421 Enter COM port name as an option
+
+1567529760422 Enter COM port name as an option
+
+1567529760422 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760423 Enter COM port name as an option
+
+1567529760424 Enter COM port name as an option
+
+1567529760425 Enter COM port name as an option
+
+1567529760426 Enter COM port name as an option
+
+1567529760426 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760427 Enter COM port name as an option
+
+1567529760428 Enter COM port name as an option
+
+1567529760429 Enter COM port name as an option
+
+1567529760430 Enter COM port name as an option
+
+1567529760431 Enter COM port name as an option
+
+1567529760432 Enter COM port name as an option
+
+1567529760433 Enter COM port name as an option
+
+1567529760434 Enter COM port name as an option
+
+1567529760435 Enter COM port name as an option
+
+1567529760436 Enter COM port name as an option
+
+1567529760437 Enter COM port name as an option
+
+1567529760438 Enter COM port name as an option
+
+1567529760439 Enter COM port name as an option
+
+1567529760440 Enter COM port name as an option
+
+1567529760441 Enter COM port name as an option
+
+1567529760442 Enter COM port name as an option
+
+1567529760443 Enter COM port name as an option
+
+1567529760444 Enter COM port name as an option
+
+1567529760445 Enter COM port name as an option
+
+1567529760446 Enter COM port name as an option
+
+1567529760447 Enter COM port name as an option
+
+1567529760448 Enter COM port name as an option
+
+1567529760449 Enter COM port name as an option
+
+1567529760449 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760450 Enter COM port name as an option
+
+1567529760451 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760452 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760452 COM49 is lost. Reconnecting...
+
+1567529760453 COM49 is lost. Reconnecting...
+
+1567529760454 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760454 COM49 is lost. Reconnecting...
+
+1567529760456 Error during measuring pressure by 2 gauge
+
+1567529760456 COM49 is lost. Reconnecting...
+
+1567529760457 Enter COM port name as an option
+
+1567529760458 Enter COM port name as an option
+
+1567529760459 Enter COM port name as an option
+
+1567529760460 Enter COM port name as an option
+
+1567529760461 Enter COM port name as an option
+
+1567529760462 Enter COM port name as an option
+
+1567529760463 Enter COM port name as an option
+
+1567529760464 Enter COM port name as an option
+
+1567529760465 Enter COM port name as an option
+
+1567529760466 Enter COM port name as an option
+
+1567529760467 Enter COM port name as an option
+
+1567529760468 Enter COM port name as an option
+
+1567529760468 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760469 Enter COM port name as an option
+
+1567529760469 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760469 Enter COM port name as an option
+
+1567529760470 Enter COM port name as an option
+
+1567529760471 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760471 Enter COM port name as an option
+
+1567529760472 Enter COM port name as an option
+
+1567529760473 Enter COM port name as an option
+
+1567529760474 Enter COM port name as an option
+
+1567529760475 Enter COM port name as an option
+
+1567529760476 Enter COM port name as an option
+
+1567529760477 Enter COM port name as an option
+
+1567529760478 Enter COM port name as an option
+
+1567529760479 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760479 Enter COM port name as an option
+
+1567529760480 Enter COM port name as an option
+
+1567529760481 Enter COM port name as an option
+
+1567529760482 Enter COM port name as an option
+
+1567529760483 Enter COM port name as an option
+
+1567529760484 Enter COM port name as an option
+
+1567529760485 Enter COM port name as an option
+
+1567529760486 Enter COM port name as an option
+
+1567529760486 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760487 Enter COM port name as an option
+
+1567529760488 Enter COM port name as an option
+
+1567529760489 Enter COM port name as an option
+
+1567529760490 Enter COM port name as an option
+
+1567529760491 Enter COM port name as an option
+
+1567529760492 Enter COM port name as an option
+
+1567529760493 Enter COM port name as an option
+
+1567529760494 Enter COM port name as an option
+
+1567529760495 Enter COM port name as an option
+
+1567529760496 Enter COM port name as an option
+
+1567529760497 Enter COM port name as an option
+
+1567529760498 Enter COM port name as an option
+
+1567529760499 Enter COM port name as an option
+
+1567529760500 Enter COM port name as an option
+
+1567529760501 Enter COM port name as an option
+
+1567529760502 Enter COM port name as an option
+
+1567529760503 Enter COM port name as an option
+
+1567529760504 Enter COM port name as an option
+
+1567529760505 Enter COM port name as an option
+
+1567529760506 Enter COM port name as an option
+
+1567529760507 Enter COM port name as an option
+
+1567529760508 Enter COM port name as an option
+
+1567529760509 Enter COM port name as an option
+
+1567529760510 Enter COM port name as an option
+
+1567529760514 Enter COM port name as an option
+
+1567529760515 Enter COM port name as an option
+
+1567529760516 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760517 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760517 COM49 is lost. Reconnecting...
+
+1567529760517 COM49 is lost. Reconnecting...
+
+1567529760519 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760519 COM49 is lost. Reconnecting...
+
+1567529760519 COM49 is lost. Reconnecting...
+
+1567529760520 Error during measuring pressure by 2 gauge
+
+1567529760520 COM49 is lost. Reconnecting...
+
+1567529760521 Enter COM port name as an option
+
+1567529760522 Enter COM port name as an option
+
+1567529760523 Enter COM port name as an option
+
+1567529760524 Enter COM port name as an option
+
+1567529760525 Enter COM port name as an option
+
+1567529760526 Enter COM port name as an option
+
+1567529760527 Enter COM port name as an option
+
+1567529760528 Enter COM port name as an option
+
+1567529760529 Enter COM port name as an option
+
+1567529760530 Enter COM port name as an option
+
+1567529760531 Enter COM port name as an option
+
+1567529760532 Enter COM port name as an option
+
+1567529760533 Enter COM port name as an option
+
+1567529760534 Enter COM port name as an option
+
+1567529760535 Enter COM port name as an option
+
+1567529760536 Enter COM port name as an option
+
+1567529760537 Enter COM port name as an option
+
+1567529760538 Enter COM port name as an option
+
+1567529760539 Enter COM port name as an option
+
+1567529760540 Enter COM port name as an option
+
+1567529760541 Enter COM port name as an option
+
+1567529760542 Enter COM port name as an option
+
+1567529760543 Enter COM port name as an option
+
+1567529760544 Enter COM port name as an option
+
+1567529760545 Enter COM port name as an option
+
+1567529760546 Enter COM port name as an option
+
+1567529760547 Enter COM port name as an option
+
+1567529760548 Enter COM port name as an option
+
+1567529760549 Enter COM port name as an option
+
+1567529760550 Enter COM port name as an option
+
+1567529760551 Enter COM port name as an option
+
+1567529760552 Enter COM port name as an option
+
+1567529760552 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760552 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760553 COM49 is lost. Reconnecting...
+
+1567529760553 COM49 is lost. Reconnecting...
+
+1567529760554 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760554 COM49 is lost. Reconnecting...
+
+1567529760555 Error during measuring pressure by 2 gauge
+
+1567529760555 COM49 is lost. Reconnecting...
+
+1567529760557 Enter COM port name as an option
+
+1567529760558 Enter COM port name as an option
+
+1567529760559 Enter COM port name as an option
+
+1567529760560 Enter COM port name as an option
+
+1567529760561 Enter COM port name as an option
+
+1567529760562 Enter COM port name as an option
+
+1567529760563 Enter COM port name as an option
+
+1567529760564 Enter COM port name as an option
+
+1567529760565 Enter COM port name as an option
+
+1567529760566 Enter COM port name as an option
+
+1567529760567 Enter COM port name as an option
+
+1567529760568 Enter COM port name as an option
+
+1567529760569 Enter COM port name as an option
+
+1567529760569 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760569 Enter COM port name as an option
+
+1567529760570 Enter COM port name as an option
+
+1567529760571 Enter COM port name as an option
+
+1567529760572 Enter COM port name as an option
+
+1567529760573 Enter COM port name as an option
+
+1567529760574 Enter COM port name as an option
+
+1567529760575 Enter COM port name as an option
+
+1567529760576 Enter COM port name as an option
+
+1567529760577 Enter COM port name as an option
+
+1567529760578 Enter COM port name as an option
+
+1567529760579 Enter COM port name as an option
+
+1567529760580 Enter COM port name as an option
+
+1567529760581 Enter COM port name as an option
+
+1567529760582 Enter COM port name as an option
+
+1567529760583 Enter COM port name as an option
+
+1567529760584 Enter COM port name as an option
+
+1567529760585 Enter COM port name as an option
+
+1567529760586 Enter COM port name as an option
+
+1567529760596 Enter COM port name as an option
+
+1567529760597 Enter COM port name as an option
+
+1567529760598 Enter COM port name as an option
+
+1567529760599 Enter COM port name as an option
+
+1567529760600 Enter COM port name as an option
+
+1567529760601 Enter COM port name as an option
+
+1567529760602 Enter COM port name as an option
+
+1567529760603 Enter COM port name as an option
+
+1567529760604 Enter COM port name as an option
+
+1567529760605 Enter COM port name as an option
+
+1567529760606 Enter COM port name as an option
+
+1567529760607 Enter COM port name as an option
+
+1567529760608 Enter COM port name as an option
+
+1567529760609 Enter COM port name as an option
+
+1567529760610 Enter COM port name as an option
+
+1567529760611 Enter COM port name as an option
+
+1567529760614 Enter COM port name as an option
+
+1567529760615 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760616 Enter COM port name as an option
+
+1567529760617 Enter COM port name as an option
+
+1567529760618 Enter COM port name as an option
+
+1567529760618 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760619 Enter COM port name as an option
+
+1567529760620 Enter COM port name as an option
+
+1567529760621 Enter COM port name as an option
+
+1567529760622 Enter COM port name as an option
+
+1567529760622 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760624 Enter COM port name as an option
+
+1567529760625 Enter COM port name as an option
+
+1567529760626 Enter COM port name as an option
+
+1567529760627 Enter COM port name as an option
+
+1567529760628 Enter COM port name as an option
+
+1567529760629 Enter COM port name as an option
+
+1567529760631 Enter COM port name as an option
+
+1567529760632 Enter COM port name as an option
+
+1567529760634 Enter COM port name as an option
+
+1567529760636 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760636 Enter COM port name as an option
+
+1567529760637 Enter COM port name as an option
+
+1567529760638 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760638 Enter COM port name as an option
+
+1567529760639 Enter COM port name as an option
+
+1567529760640 Enter COM port name as an option
+
+1567529760641 Enter COM port name as an option
+
+1567529760642 Enter COM port name as an option
+
+1567529760643 Enter COM port name as an option
+
+1567529760644 Enter COM port name as an option
+
+1567529760646 Enter COM port name as an option
+
+1567529760647 Enter COM port name as an option
+
+1567529760648 Enter COM port name as an option
+
+1567529760649 Enter COM port name as an option
+
+1567529760650 Enter COM port name as an option
+
+1567529760651 Enter COM port name as an option
+
+1567529760652 Enter COM port name as an option
+
+1567529760653 Enter COM port name as an option
+
+1567529760654 Enter COM port name as an option
+
+1567529760655 Enter COM port name as an option
+
+1567529760656 Enter COM port name as an option
+
+1567529760657 Enter COM port name as an option
+
+1567529760658 Enter COM port name as an option
+
+1567529760659 Enter COM port name as an option
+
+1567529760660 Enter COM port name as an option
+
+1567529760661 Enter COM port name as an option
+
+1567529760662 Enter COM port name as an option
+
+1567529760663 Enter COM port name as an option
+
+1567529760664 Enter COM port name as an option
+
+1567529760665 Enter COM port name as an option
+
+1567529760666 Enter COM port name as an option
+
+1567529760667 Enter COM port name as an option
+
+1567529760668 Enter COM port name as an option
+
+1567529760669 Enter COM port name as an option
+
+1567529760670 Enter COM port name as an option
+
+1567529760671 Enter COM port name as an option
+
+1567529760672 Enter COM port name as an option
+
+1567529760673 Enter COM port name as an option
+
+1567529760674 Enter COM port name as an option
+
+1567529760675 Enter COM port name as an option
+
+1567529760676 Enter COM port name as an option
+
+1567529760677 Enter COM port name as an option
+
+1567529760677 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760678 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760678 COM49 is lost. Reconnecting...
+
+1567529760680 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760680 COM49 is lost. Reconnecting...
+
+1567529760680 COM49 is lost. Reconnecting...
+
+1567529760681 Error during measuring pressure by 2 gauge
+
+1567529760681 COM49 is lost. Reconnecting...
+
+1567529760683 Enter COM port name as an option
+
+1567529760684 Enter COM port name as an option
+
+1567529760685 Enter COM port name as an option
+
+1567529760686 Enter COM port name as an option
+
+1567529760687 Enter COM port name as an option
+
+1567529760688 Enter COM port name as an option
+
+1567529760689 Enter COM port name as an option
+
+1567529760690 Enter COM port name as an option
+
+1567529760691 Enter COM port name as an option
+
+1567529760692 Enter COM port name as an option
+
+1567529760693 Enter COM port name as an option
+
+1567529760694 Enter COM port name as an option
+
+1567529760695 Enter COM port name as an option
+
+1567529760696 Enter COM port name as an option
+
+1567529760697 Enter COM port name as an option
+
+1567529760698 Enter COM port name as an option
+
+1567529760699 Enter COM port name as an option
+
+1567529760700 Enter COM port name as an option
+
+1567529760701 Enter COM port name as an option
+
+1567529760702 Enter COM port name as an option
+
+1567529760703 Enter COM port name as an option
+
+1567529760704 Enter COM port name as an option
+
+1567529760705 Enter COM port name as an option
+
+1567529760706 Enter COM port name as an option
+
+1567529760707 Enter COM port name as an option
+
+1567529760708 Enter COM port name as an option
+
+1567529760709 Enter COM port name as an option
+
+1567529760709 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760710 Enter COM port name as an option
+
+1567529760710 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760710 Enter COM port name as an option
+
+1567529760711 Enter COM port name as an option
+
+1567529760712 Enter COM port name as an option
+
+1567529760713 Enter COM port name as an option
+
+1567529760714 Enter COM port name as an option
+
+1567529760715 Enter COM port name as an option
+
+1567529760716 Enter COM port name as an option
+
+1567529760717 Enter COM port name as an option
+
+1567529760718 Enter COM port name as an option
+
+1567529760719 Enter COM port name as an option
+
+1567529760720 Enter COM port name as an option
+
+1567529760721 Enter COM port name as an option
+
+1567529760722 Enter COM port name as an option
+
+1567529760722 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760722 Enter COM port name as an option
+
+1567529760723 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760723 Enter COM port name as an option
+
+1567529760724 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760724 Enter COM port name as an option
+
+1567529760724 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760725 Enter COM port name as an option
+
+1567529760726 Enter COM port name as an option
+
+1567529760727 Enter COM port name as an option
+
+1567529760728 Enter COM port name as an option
+
+1567529760729 Enter COM port name as an option
+
+1567529760730 Enter COM port name as an option
+
+1567529760731 Enter COM port name as an option
+
+1567529760732 Enter COM port name as an option
+
+1567529760733 Enter COM port name as an option
+
+1567529760734 Enter COM port name as an option
+
+1567529760735 Enter COM port name as an option
+
+1567529760736 Enter COM port name as an option
+
+1567529760737 Enter COM port name as an option
+
+1567529760738 Enter COM port name as an option
+
+1567529760739 Enter COM port name as an option
+
+1567529760740 Enter COM port name as an option
+
+1567529760741 Enter COM port name as an option
+
+1567529760742 Enter COM port name as an option
+
+1567529760743 Enter COM port name as an option
+
+1567529760744 Enter COM port name as an option
+
+1567529760745 Enter COM port name as an option
+
+1567529760746 Enter COM port name as an option
+
+1567529760747 Enter COM port name as an option
+
+1567529760748 Enter COM port name as an option
+
+1567529760749 Enter COM port name as an option
+
+1567529760750 Enter COM port name as an option
+
+1567529760751 Enter COM port name as an option
+
+1567529760752 Enter COM port name as an option
+
+1567529760753 Enter COM port name as an option
+
+1567529760753 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760754 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760754 COM49 is lost. Reconnecting...
+
+1567529760755 COM49 is lost. Reconnecting...
+
+1567529760755 Enter COM port name as an option
+
+1567529760756 Enter COM port name as an option
+
+1567529760757 Enter COM port name as an option
+
+1567529760758 Enter COM port name as an option
+
+1567529760759 Enter COM port name as an option
+
+1567529760760 Enter COM port name as an option
+
+1567529760761 Enter COM port name as an option
+
+1567529760762 Enter COM port name as an option
+
+1567529760763 Enter COM port name as an option
+
+1567529760764 Enter COM port name as an option
+
+1567529760765 Enter COM port name as an option
+
+1567529760766 Enter COM port name as an option
+
+1567529760767 Enter COM port name as an option
+
+1567529760768 Enter COM port name as an option
+
+1567529760769 Enter COM port name as an option
+
+1567529760770 Enter COM port name as an option
+
+1567529760771 Enter COM port name as an option
+
+1567529760772 Enter COM port name as an option
+
+1567529760773 Enter COM port name as an option
+
+1567529760774 Enter COM port name as an option
+
+1567529760775 Enter COM port name as an option
+
+1567529760776 Enter COM port name as an option
+
+1567529760777 Enter COM port name as an option
+
+1567529760778 Enter COM port name as an option
+
+1567529760779 Enter COM port name as an option
+
+1567529760780 Enter COM port name as an option
+
+1567529760781 Enter COM port name as an option
+
+1567529760782 Enter COM port name as an option
+
+1567529760783 Enter COM port name as an option
+
+1567529760784 Enter COM port name as an option
+
+1567529760785 Enter COM port name as an option
+
+1567529760786 Enter COM port name as an option
+
+1567529760787 Enter COM port name as an option
+
+1567529760788 Enter COM port name as an option
+
+1567529760789 Enter COM port name as an option
+
+1567529760790 Enter COM port name as an option
+
+1567529760791 Enter COM port name as an option
+
+1567529760791 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760792 Enter COM port name as an option
+
+1567529760793 Enter COM port name as an option
+
+1567529760794 Enter COM port name as an option
+
+1567529760795 Enter COM port name as an option
+
+1567529760796 Enter COM port name as an option
+
+1567529760797 Enter COM port name as an option
+
+1567529760798 Enter COM port name as an option
+
+1567529760799 Enter COM port name as an option
+
+1567529760800 Enter COM port name as an option
+
+1567529760801 Enter COM port name as an option
+
+1567529760802 Enter COM port name as an option
+
+1567529760803 Enter COM port name as an option
+
+1567529760804 Enter COM port name as an option
+
+1567529760805 Enter COM port name as an option
+
+1567529760806 Enter COM port name as an option
+
+1567529760807 Enter COM port name as an option
+
+1567529760808 Enter COM port name as an option
+
+1567529760809 Enter COM port name as an option
+
+1567529760810 Enter COM port name as an option
+
+1567529760811 Enter COM port name as an option
+
+1567529760811 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760812 Enter COM port name as an option
+
+1567529760813 Enter COM port name as an option
+
+1567529760814 Enter COM port name as an option
+
+1567529760815 Enter COM port name as an option
+
+1567529760816 Enter COM port name as an option
+
+1567529760817 Enter COM port name as an option
+
+1567529760818 Enter COM port name as an option
+
+1567529760819 Enter COM port name as an option
+
+1567529760820 Enter COM port name as an option
+
+1567529760820 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760820 Enter COM port name as an option
+
+1567529760821 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760821 Enter COM port name as an option
+
+1567529760822 Enter COM port name as an option
+
+1567529760823 Enter COM port name as an option
+
+1567529760824 Enter COM port name as an option
+
+1567529760825 Enter COM port name as an option
+
+1567529760826 Enter COM port name as an option
+
+1567529760827 Enter COM port name as an option
+
+1567529760828 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760829 Enter COM port name as an option
+
+1567529760830 Enter COM port name as an option
+
+1567529760830 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760831 Enter COM port name as an option
+
+1567529760832 Enter COM port name as an option
+
+1567529760833 Enter COM port name as an option
+
+1567529760834 Enter COM port name as an option
+
+1567529760835 Enter COM port name as an option
+
+1567529760836 Enter COM port name as an option
+
+1567529760837 Enter COM port name as an option
+
+1567529760838 Enter COM port name as an option
+
+1567529760839 Enter COM port name as an option
+
+1567529760840 Enter COM port name as an option
+
+1567529760841 Enter COM port name as an option
+
+1567529760842 Enter COM port name as an option
+
+1567529760843 Enter COM port name as an option
+
+1567529760844 Enter COM port name as an option
+
+1567529760845 Enter COM port name as an option
+
+1567529760846 Enter COM port name as an option
+
+1567529760847 Enter COM port name as an option
+
+1567529760848 Enter COM port name as an option
+
+1567529760849 Enter COM port name as an option
+
+1567529760850 Enter COM port name as an option
+
+1567529760851 Enter COM port name as an option
+
+1567529760852 Enter COM port name as an option
+
+1567529760853 Enter COM port name as an option
+
+1567529760854 Enter COM port name as an option
+
+1567529760855 Enter COM port name as an option
+
+1567529760856 Enter COM port name as an option
+
+1567529760857 Enter COM port name as an option
+
+1567529760858 Enter COM port name as an option
+
+1567529760859 Enter COM port name as an option
+
+1567529760860 Enter COM port name as an option
+
+1567529760861 Enter COM port name as an option
+
+1567529760862 Enter COM port name as an option
+
+1567529760863 Enter COM port name as an option
+
+1567529760864 Enter COM port name as an option
+
+1567529760865 Enter COM port name as an option
+
+1567529760866 Enter COM port name as an option
+
+1567529760867 Enter COM port name as an option
+
+1567529760868 Enter COM port name as an option
+
+1567529760869 Enter COM port name as an option
+
+1567529760870 Enter COM port name as an option
+
+1567529760871 Enter COM port name as an option
+
+1567529760872 Enter COM port name as an option
+
+1567529760873 Enter COM port name as an option
+
+1567529760874 Enter COM port name as an option
+
+1567529760875 Enter COM port name as an option
+
+1567529760876 Enter COM port name as an option
+
+1567529760877 Enter COM port name as an option
+
+1567529760878 Enter COM port name as an option
+
+1567529760879 Enter COM port name as an option
+
+1567529760880 Enter COM port name as an option
+
+1567529760881 Enter COM port name as an option
+
+1567529760882 Enter COM port name as an option
+
+1567529760883 Enter COM port name as an option
+
+1567529760884 Enter COM port name as an option
+
+1567529760885 Enter COM port name as an option
+
+1567529760886 Enter COM port name as an option
+
+1567529760887 Enter COM port name as an option
+
+1567529760888 Enter COM port name as an option
+
+1567529760889 Enter COM port name as an option
+
+1567529760890 Enter COM port name as an option
+
+1567529760891 Enter COM port name as an option
+
+1567529760892 Enter COM port name as an option
+
+1567529760893 Enter COM port name as an option
+
+1567529760894 Enter COM port name as an option
+
+1567529760895 Enter COM port name as an option
+
+1567529760896 Enter COM port name as an option
+
+1567529760897 Enter COM port name as an option
+
+1567529760898 Enter COM port name as an option
+
+1567529760899 Enter COM port name as an option
+
+1567529760899 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760899 Enter COM port name as an option
+
+1567529760900 Enter COM port name as an option
+
+1567529760901 Enter COM port name as an option
+
+1567529760902 Enter COM port name as an option
+
+1567529760902 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760903 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760903 COM49 is lost. Reconnecting...
+
+1567529760903 COM49 is lost. Reconnecting...
+
+1567529760903 COM49 is lost. Reconnecting...
+
+1567529760904 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760904 COM49 is lost. Reconnecting...
+
+1567529760904 Enter COM port name as an option
+
+1567529760905 Enter COM port name as an option
+
+1567529760905 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529760906 Enter COM port name as an option
+
+1567529760907 Enter COM port name as an option
+
+1567529760908 Enter COM port name as an option
+
+1567529760909 Enter COM port name as an option
+
+1567529760910 Enter COM port name as an option
+
+1567529760911 Enter COM port name as an option
+
+1567529760912 Enter COM port name as an option
+
+1567529760913 Enter COM port name as an option
+
+1567529760914 Enter COM port name as an option
+
+1567529760915 Enter COM port name as an option
+
+1567529760916 Enter COM port name as an option
+
+1567529760917 Enter COM port name as an option
+
+1567529760918 Enter COM port name as an option
+
+1567529760919 Enter COM port name as an option
+
+1567529760920 Enter COM port name as an option
+
+1567529760921 Enter COM port name as an option
+
+1567529760922 Enter COM port name as an option
+
+1567529760923 Enter COM port name as an option
+
+1567529760924 Enter COM port name as an option
+
+1567529760925 Enter COM port name as an option
+
+1567529760926 Enter COM port name as an option
+
+1567529760927 Enter COM port name as an option
+
+1567529760928 Enter COM port name as an option
+
+1567529760929 Enter COM port name as an option
+
+1567529760930 Enter COM port name as an option
+
+1567529760931 Enter COM port name as an option
+
+1567529760932 Enter COM port name as an option
+
+1567529760933 Enter COM port name as an option
+
+1567529760934 Enter COM port name as an option
+
+1567529760935 Enter COM port name as an option
+
+1567529760936 Enter COM port name as an option
+
+1567529760937 Enter COM port name as an option
+
+1567529760938 Enter COM port name as an option
+
+1567529760939 Enter COM port name as an option
+
+1567529760940 Enter COM port name as an option
+
+1567529760941 Enter COM port name as an option
+
+1567529760942 Enter COM port name as an option
+
+1567529760943 Enter COM port name as an option
+
+1567529760944 Enter COM port name as an option
+
+1567529760945 Enter COM port name as an option
+
+1567529760946 Enter COM port name as an option
+
+1567529760947 Enter COM port name as an option
+
+1567529760948 Enter COM port name as an option
+
+1567529760949 Enter COM port name as an option
+
+1567529760950 Enter COM port name as an option
+
+1567529760951 Enter COM port name as an option
+
+1567529760952 Enter COM port name as an option
+
+1567529760953 Enter COM port name as an option
+
+1567529760954 Enter COM port name as an option
+
+1567529760955 Enter COM port name as an option
+
+1567529760956 Enter COM port name as an option
+
+1567529760957 Enter COM port name as an option
+
+1567529760958 Enter COM port name as an option
+
+1567529760959 Enter COM port name as an option
+
+1567529760960 Enter COM port name as an option
+
+1567529760961 Enter COM port name as an option
+
+1567529760962 Enter COM port name as an option
+
+1567529760963 Enter COM port name as an option
+
+1567529760964 Enter COM port name as an option
+
+1567529760965 Enter COM port name as an option
+
+1567529760966 Enter COM port name as an option
+
+1567529760967 Enter COM port name as an option
+
+1567529760968 Enter COM port name as an option
+
+1567529760969 Enter COM port name as an option
+
+1567529760970 Enter COM port name as an option
+
+1567529760971 Enter COM port name as an option
+
+1567529760972 Enter COM port name as an option
+
+1567529760973 Enter COM port name as an option
+
+1567529760974 Enter COM port name as an option
+
+1567529760975 Enter COM port name as an option
+
+1567529760976 Enter COM port name as an option
+
+1567529760977 Enter COM port name as an option
+
+1567529760978 Enter COM port name as an option
+
+1567529760979 Enter COM port name as an option
+
+1567529760980 Enter COM port name as an option
+
+1567529760981 Enter COM port name as an option
+
+1567529760982 Enter COM port name as an option
+
+1567529760983 Enter COM port name as an option
+
+1567529760984 Enter COM port name as an option
+
+1567529760985 Enter COM port name as an option
+
+1567529760986 Enter COM port name as an option
+
+1567529760987 Enter COM port name as an option
+
+1567529760988 Enter COM port name as an option
+
+1567529760989 Enter COM port name as an option
+
+1567529760990 Enter COM port name as an option
+
+1567529760991 Enter COM port name as an option
+
+1567529760992 Enter COM port name as an option
+
+1567529760993 Enter COM port name as an option
+
+1567529760994 Enter COM port name as an option
+
+1567529760994 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760995 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529760995 COM49 is lost. Reconnecting...
+
+1567529760996 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529760996 COM49 is lost. Reconnecting...
+
+1567529760996 COM49 is lost. Reconnecting...
+
+1567529760997 Error during measuring pressure by 2 gauge
+
+1567529760997 COM49 is lost. Reconnecting...
+
+1567529760999 Enter COM port name as an option
+
+1567529761000 Enter COM port name as an option
+
+1567529761001 Enter COM port name as an option
+
+1567529761002 Enter COM port name as an option
+
+1567529761003 Enter COM port name as an option
+
+1567529761004 Enter COM port name as an option
+
+1567529761005 Enter COM port name as an option
+
+1567529761006 Enter COM port name as an option
+
+1567529761007 Enter COM port name as an option
+
+1567529761008 Enter COM port name as an option
+
+1567529761009 Enter COM port name as an option
+
+1567529761010 Enter COM port name as an option
+
+1567529761011 Enter COM port name as an option
+
+1567529761012 Enter COM port name as an option
+
+1567529761013 Enter COM port name as an option
+
+1567529761014 Enter COM port name as an option
+
+1567529761015 Enter COM port name as an option
+
+1567529761016 Enter COM port name as an option
+
+1567529761017 Enter COM port name as an option
+
+1567529761018 Enter COM port name as an option
+
+1567529761019 Enter COM port name as an option
+
+1567529761020 Enter COM port name as an option
+
+1567529761021 Enter COM port name as an option
+
+1567529761022 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761022 Enter COM port name as an option
+
+1567529761023 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761023 Enter COM port name as an option
+
+1567529761024 Enter COM port name as an option
+
+1567529761025 Enter COM port name as an option
+
+1567529761026 Enter COM port name as an option
+
+1567529761026 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761027 Enter COM port name as an option
+
+1567529761028 Enter COM port name as an option
+
+1567529761029 Enter COM port name as an option
+
+1567529761030 Enter COM port name as an option
+
+1567529761036 Enter COM port name as an option
+
+1567529761037 Enter COM port name as an option
+
+1567529761038 Enter COM port name as an option
+
+1567529761039 Enter COM port name as an option
+
+1567529761040 Enter COM port name as an option
+
+1567529761041 Enter COM port name as an option
+
+1567529761042 Enter COM port name as an option
+
+1567529761043 Enter COM port name as an option
+
+1567529761044 Enter COM port name as an option
+
+1567529761045 Enter COM port name as an option
+
+1567529761046 Enter COM port name as an option
+
+1567529761047 Enter COM port name as an option
+
+1567529761048 Enter COM port name as an option
+
+1567529761049 Enter COM port name as an option
+
+1567529761050 Enter COM port name as an option
+
+1567529761051 Enter COM port name as an option
+
+1567529761052 Enter COM port name as an option
+
+1567529761053 Enter COM port name as an option
+
+1567529761054 Enter COM port name as an option
+
+1567529761055 Enter COM port name as an option
+
+1567529761056 Enter COM port name as an option
+
+1567529761057 Enter COM port name as an option
+
+1567529761058 Enter COM port name as an option
+
+1567529761059 Enter COM port name as an option
+
+1567529761060 Enter COM port name as an option
+
+1567529761061 Enter COM port name as an option
+
+1567529761062 Enter COM port name as an option
+
+1567529761063 Enter COM port name as an option
+
+1567529761064 Enter COM port name as an option
+
+1567529761065 Enter COM port name as an option
+
+1567529761066 Enter COM port name as an option
+
+1567529761067 Enter COM port name as an option
+
+1567529761068 Enter COM port name as an option
+
+1567529761069 Enter COM port name as an option
+
+1567529761070 Enter COM port name as an option
+
+1567529761071 Enter COM port name as an option
+
+1567529761072 Enter COM port name as an option
+
+1567529761073 Enter COM port name as an option
+
+1567529761074 Enter COM port name as an option
+
+1567529761075 Enter COM port name as an option
+
+1567529761076 Enter COM port name as an option
+
+1567529761077 Enter COM port name as an option
+
+1567529761078 Enter COM port name as an option
+
+1567529761079 Enter COM port name as an option
+
+1567529761080 Enter COM port name as an option
+
+1567529761081 Enter COM port name as an option
+
+1567529761082 Enter COM port name as an option
+
+1567529761083 Enter COM port name as an option
+
+1567529761084 Enter COM port name as an option
+
+1567529761085 Enter COM port name as an option
+
+1567529761086 Enter COM port name as an option
+
+1567529761087 Enter COM port name as an option
+
+1567529761088 Enter COM port name as an option
+
+1567529761089 Enter COM port name as an option
+
+1567529761090 Enter COM port name as an option
+
+1567529761091 Enter COM port name as an option
+
+1567529761092 Enter COM port name as an option
+
+1567529761093 Enter COM port name as an option
+
+1567529761094 Enter COM port name as an option
+
+1567529761095 Enter COM port name as an option
+
+1567529761096 Enter COM port name as an option
+
+1567529761097 Enter COM port name as an option
+
+1567529761098 Enter COM port name as an option
+
+1567529761099 Enter COM port name as an option
+
+1567529761100 Enter COM port name as an option
+
+1567529761101 Enter COM port name as an option
+
+1567529761102 Enter COM port name as an option
+
+1567529761103 Enter COM port name as an option
+
+1567529761104 Enter COM port name as an option
+
+1567529761105 Enter COM port name as an option
+
+1567529761106 Enter COM port name as an option
+
+1567529761107 Enter COM port name as an option
+
+1567529761108 Enter COM port name as an option
+
+1567529761109 Enter COM port name as an option
+
+1567529761110 Enter COM port name as an option
+
+1567529761111 Enter COM port name as an option
+
+1567529761112 Enter COM port name as an option
+
+1567529761113 Enter COM port name as an option
+
+1567529761114 Enter COM port name as an option
+
+1567529761115 Enter COM port name as an option
+
+1567529761116 Enter COM port name as an option
+
+1567529761117 Enter COM port name as an option
+
+1567529761118 Enter COM port name as an option
+
+1567529761119 Enter COM port name as an option
+
+1567529761120 Enter COM port name as an option
+
+1567529761121 Enter COM port name as an option
+
+1567529761122 Enter COM port name as an option
+
+1567529761123 Enter COM port name as an option
+
+1567529761124 Enter COM port name as an option
+
+1567529761125 Enter COM port name as an option
+
+1567529761126 Enter COM port name as an option
+
+1567529761127 Enter COM port name as an option
+
+1567529761128 Enter COM port name as an option
+
+1567529761129 Enter COM port name as an option
+
+1567529761130 Enter COM port name as an option
+
+1567529761131 Enter COM port name as an option
+
+1567529761132 Enter COM port name as an option
+
+1567529761133 Enter COM port name as an option
+
+1567529761134 Enter COM port name as an option
+
+1567529761135 Enter COM port name as an option
+
+1567529761136 Enter COM port name as an option
+
+1567529761137 Enter COM port name as an option
+
+1567529761138 Enter COM port name as an option
+
+1567529761139 Enter COM port name as an option
+
+1567529761140 Enter COM port name as an option
+
+1567529761141 Enter COM port name as an option
+
+1567529761142 Enter COM port name as an option
+
+1567529761143 Enter COM port name as an option
+
+1567529761144 Enter COM port name as an option
+
+1567529761145 Enter COM port name as an option
+
+1567529761146 Enter COM port name as an option
+
+1567529761147 Enter COM port name as an option
+
+1567529761148 Enter COM port name as an option
+
+1567529761149 Enter COM port name as an option
+
+1567529761150 Enter COM port name as an option
+
+1567529761151 Enter COM port name as an option
+
+1567529761152 Enter COM port name as an option
+
+1567529761153 Enter COM port name as an option
+
+1567529761154 Enter COM port name as an option
+
+1567529761155 Enter COM port name as an option
+
+1567529761156 Enter COM port name as an option
+
+1567529761157 Enter COM port name as an option
+
+1567529761158 Enter COM port name as an option
+
+1567529761159 Enter COM port name as an option
+
+1567529761160 Enter COM port name as an option
+
+1567529761161 Enter COM port name as an option
+
+1567529761175 Enter COM port name as an option
+
+1567529761176 Enter COM port name as an option
+
+1567529761177 Enter COM port name as an option
+
+1567529761178 Enter COM port name as an option
+
+1567529761179 Enter COM port name as an option
+
+1567529761180 Enter COM port name as an option
+
+1567529761181 Enter COM port name as an option
+
+1567529761182 Enter COM port name as an option
+
+1567529761183 Enter COM port name as an option
+
+1567529761184 Enter COM port name as an option
+
+1567529761185 Enter COM port name as an option
+
+1567529761186 Enter COM port name as an option
+
+1567529761186 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529761187 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529761187 COM49 is lost. Reconnecting...
+
+1567529761187 COM49 is lost. Reconnecting...
+
+1567529761187 COM49 is lost. Reconnecting...
+
+1567529761188 Enter COM port name as an option
+
+1567529761188 Enter COM port name as an option
+
+1567529761189 Enter COM port name as an option
+
+1567529761190 Enter COM port name as an option
+
+1567529761191 Enter COM port name as an option
+
+1567529761192 Enter COM port name as an option
+
+1567529761193 Enter COM port name as an option
+
+1567529761194 Enter COM port name as an option
+
+1567529761195 Enter COM port name as an option
+
+1567529761196 Enter COM port name as an option
+
+1567529761197 Enter COM port name as an option
+
+1567529761198 Enter COM port name as an option
+
+1567529761199 Enter COM port name as an option
+
+1567529761200 Enter COM port name as an option
+
+1567529761201 Enter COM port name as an option
+
+1567529761202 Enter COM port name as an option
+
+1567529761203 Enter COM port name as an option
+
+1567529761204 Enter COM port name as an option
+
+1567529761206 Enter COM port name as an option
+
+1567529761207 Enter COM port name as an option
+
+1567529761215 Enter COM port name as an option
+
+1567529761216 Enter COM port name as an option
+
+1567529761217 Enter COM port name as an option
+
+1567529761218 Enter COM port name as an option
+
+1567529761219 Enter COM port name as an option
+
+1567529761220 Enter COM port name as an option
+
+1567529761221 Enter COM port name as an option
+
+1567529761222 Enter COM port name as an option
+
+1567529761224 Enter COM port name as an option
+
+1567529761225 Enter COM port name as an option
+
+1567529761226 Enter COM port name as an option
+
+1567529761227 Enter COM port name as an option
+
+1567529761228 Enter COM port name as an option
+
+1567529761230 Enter COM port name as an option
+
+1567529761231 Enter COM port name as an option
+
+1567529761232 Enter COM port name as an option
+
+1567529761234 Enter COM port name as an option
+
+1567529761235 Enter COM port name as an option
+
+1567529761236 Enter COM port name as an option
+
+1567529761237 Enter COM port name as an option
+
+1567529761238 Enter COM port name as an option
+
+1567529761239 Enter COM port name as an option
+
+1567529761240 Enter COM port name as an option
+
+1567529761242 Enter COM port name as an option
+
+1567529761244 Enter COM port name as an option
+
+1567529761246 Enter COM port name as an option
+
+1567529761249 Enter COM port name as an option
+
+1567529761252 Enter COM port name as an option
+
+1567529761254 Enter COM port name as an option
+
+1567529761255 Enter COM port name as an option
+
+1567529761258 Enter COM port name as an option
+
+1567529761259 Enter COM port name as an option
+
+1567529761260 Enter COM port name as an option
+
+1567529761261 Enter COM port name as an option
+
+1567529761262 Enter COM port name as an option
+
+1567529761263 Enter COM port name as an option
+
+1567529761264 Enter COM port name as an option
+
+1567529761265 Enter COM port name as an option
+
+1567529761266 Enter COM port name as an option
+
+1567529761267 Enter COM port name as an option
+
+1567529761272 Enter COM port name as an option
+
+1567529761274 Enter COM port name as an option
+
+1567529761278 Enter COM port name as an option
+
+1567529761283 Enter COM port name as an option
+
+1567529761288 Enter COM port name as an option
+
+1567529761291 Enter COM port name as an option
+
+1567529761293 Enter COM port name as an option
+
+1567529761294 Enter COM port name as an option
+
+1567529761296 Enter COM port name as an option
+
+1567529761297 Enter COM port name as an option
+
+1567529761298 Enter COM port name as an option
+
+1567529761299 Enter COM port name as an option
+
+1567529761300 Enter COM port name as an option
+
+1567529761301 Enter COM port name as an option
+
+1567529761304 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761305 Enter COM port name as an option
+
+1567529761308 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761310 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761312 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761313 Enter COM port name as an option
+
+1567529761314 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761315 Enter COM port name as an option
+
+1567529761315 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761316 Enter COM port name as an option
+
+1567529761317 Enter COM port name as an option
+
+1567529761318 Enter COM port name as an option
+
+1567529761319 Enter COM port name as an option
+
+1567529761320 Enter COM port name as an option
+
+1567529761321 Enter COM port name as an option
+
+1567529761322 Enter COM port name as an option
+
+1567529761323 Enter COM port name as an option
+
+1567529761324 Enter COM port name as an option
+
+1567529761325 Enter COM port name as an option
+
+1567529761326 Enter COM port name as an option
+
+1567529761327 Enter COM port name as an option
+
+1567529761328 Enter COM port name as an option
+
+1567529761329 Enter COM port name as an option
+
+1567529761330 Enter COM port name as an option
+
+1567529761331 Enter COM port name as an option
+
+1567529761332 Enter COM port name as an option
+
+1567529761333 Enter COM port name as an option
+
+1567529761334 Enter COM port name as an option
+
+1567529761335 Enter COM port name as an option
+
+1567529761336 Enter COM port name as an option
+
+1567529761337 Enter COM port name as an option
+
+1567529761338 Enter COM port name as an option
+
+1567529761339 Enter COM port name as an option
+
+1567529761340 Enter COM port name as an option
+
+1567529761341 Enter COM port name as an option
+
+1567529761342 Enter COM port name as an option
+
+1567529761343 Enter COM port name as an option
+
+1567529761344 Enter COM port name as an option
+
+1567529761345 Enter COM port name as an option
+
+1567529761346 Enter COM port name as an option
+
+1567529761347 Enter COM port name as an option
+
+1567529761348 Enter COM port name as an option
+
+1567529761349 Enter COM port name as an option
+
+1567529761350 Enter COM port name as an option
+
+1567529761355 Enter COM port name as an option
+
+1567529761359 Enter COM port name as an option
+
+1567529761360 Enter COM port name as an option
+
+1567529761361 Enter COM port name as an option
+
+1567529761362 Enter COM port name as an option
+
+1567529761363 Enter COM port name as an option
+
+1567529761364 Enter COM port name as an option
+
+1567529761365 Enter COM port name as an option
+
+1567529761366 Enter COM port name as an option
+
+1567529761367 Enter COM port name as an option
+
+1567529761368 Enter COM port name as an option
+
+1567529761369 Enter COM port name as an option
+
+1567529761370 Enter COM port name as an option
+
+1567529761371 Enter COM port name as an option
+
+1567529761372 Enter COM port name as an option
+
+1567529761372 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761373 Enter COM port name as an option
+
+1567529761374 Enter COM port name as an option
+
+1567529761374 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529761375 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529761375 COM49 is lost. Reconnecting...
+
+1567529761376 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761376 COM49 is lost. Reconnecting...
+
+1567529761377 Enter COM port name as an option
+
+1567529761377 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761378 Enter COM port name as an option
+
+1567529761379 Enter COM port name as an option
+
+1567529761380 Enter COM port name as an option
+
+1567529761381 Enter COM port name as an option
+
+1567529761382 Enter COM port name as an option
+
+1567529761383 Enter COM port name as an option
+
+1567529761384 Enter COM port name as an option
+
+1567529761385 Enter COM port name as an option
+
+1567529761386 Enter COM port name as an option
+
+1567529761387 Enter COM port name as an option
+
+1567529761388 Enter COM port name as an option
+
+1567529761389 Enter COM port name as an option
+
+1567529761390 Enter COM port name as an option
+
+1567529761391 Enter COM port name as an option
+
+1567529761392 Enter COM port name as an option
+
+1567529761393 Enter COM port name as an option
+
+1567529761394 Enter COM port name as an option
+
+1567529761395 Enter COM port name as an option
+
+1567529761396 Enter COM port name as an option
+
+1567529761397 Enter COM port name as an option
+
+1567529761398 Enter COM port name as an option
+
+1567529761399 Enter COM port name as an option
+
+1567529761400 Enter COM port name as an option
+
+1567529761401 Enter COM port name as an option
+
+1567529761402 Enter COM port name as an option
+
+1567529761403 Enter COM port name as an option
+
+1567529761404 Enter COM port name as an option
+
+1567529761405 Enter COM port name as an option
+
+1567529761406 Enter COM port name as an option
+
+1567529761407 Enter COM port name as an option
+
+1567529761408 Enter COM port name as an option
+
+1567529761409 Enter COM port name as an option
+
+1567529761410 Enter COM port name as an option
+
+1567529761411 Enter COM port name as an option
+
+1567529761412 Enter COM port name as an option
+
+1567529761413 Enter COM port name as an option
+
+1567529761414 Enter COM port name as an option
+
+1567529761415 Enter COM port name as an option
+
+1567529761416 Enter COM port name as an option
+
+1567529761417 Enter COM port name as an option
+
+1567529761418 Enter COM port name as an option
+
+1567529761419 Enter COM port name as an option
+
+1567529761420 Enter COM port name as an option
+
+1567529761421 Enter COM port name as an option
+
+1567529761422 Enter COM port name as an option
+
+1567529761423 Enter COM port name as an option
+
+1567529761424 Enter COM port name as an option
+
+1567529761425 Enter COM port name as an option
+
+1567529761426 Enter COM port name as an option
+
+1567529761427 Enter COM port name as an option
+
+1567529761428 Enter COM port name as an option
+
+1567529761429 Enter COM port name as an option
+
+1567529761430 Enter COM port name as an option
+
+1567529761431 Enter COM port name as an option
+
+1567529761432 Enter COM port name as an option
+
+1567529761433 Enter COM port name as an option
+
+1567529761434 Enter COM port name as an option
+
+1567529761435 Enter COM port name as an option
+
+1567529761436 Enter COM port name as an option
+
+1567529761437 Enter COM port name as an option
+
+1567529761438 Enter COM port name as an option
+
+1567529761439 Enter COM port name as an option
+
+1567529761440 Enter COM port name as an option
+
+1567529761441 Enter COM port name as an option
+
+1567529761442 Enter COM port name as an option
+
+1567529761443 Enter COM port name as an option
+
+1567529761444 Enter COM port name as an option
+
+1567529761445 Enter COM port name as an option
+
+1567529761446 Enter COM port name as an option
+
+1567529761447 Enter COM port name as an option
+
+1567529761448 Enter COM port name as an option
+
+1567529761449 Enter COM port name as an option
+
+1567529761450 Enter COM port name as an option
+
+1567529761451 Enter COM port name as an option
+
+1567529761452 Enter COM port name as an option
+
+1567529761453 Enter COM port name as an option
+
+1567529761454 Enter COM port name as an option
+
+1567529761455 Enter COM port name as an option
+
+1567529761456 Enter COM port name as an option
+
+1567529761457 Enter COM port name as an option
+
+1567529761458 Enter COM port name as an option
+
+1567529761459 Enter COM port name as an option
+
+1567529761460 Enter COM port name as an option
+
+1567529761461 Enter COM port name as an option
+
+1567529761462 Enter COM port name as an option
+
+1567529761463 Enter COM port name as an option
+
+1567529761464 Enter COM port name as an option
+
+1567529761465 Enter COM port name as an option
+
+1567529761466 Enter COM port name as an option
+
+1567529761467 Enter COM port name as an option
+
+1567529761468 Enter COM port name as an option
+
+1567529761469 Enter COM port name as an option
+
+1567529761470 Enter COM port name as an option
+
+1567529761471 Enter COM port name as an option
+
+1567529761472 Enter COM port name as an option
+
+1567529761473 Enter COM port name as an option
+
+1567529761474 Enter COM port name as an option
+
+1567529761475 Enter COM port name as an option
+
+1567529761476 Enter COM port name as an option
+
+1567529761477 Enter COM port name as an option
+
+1567529761478 Enter COM port name as an option
+
+1567529761479 Enter COM port name as an option
+
+1567529761480 Enter COM port name as an option
+
+1567529761481 Enter COM port name as an option
+
+1567529761482 Enter COM port name as an option
+
+1567529761483 Enter COM port name as an option
+
+1567529761484 Enter COM port name as an option
+
+1567529761485 Enter COM port name as an option
+
+1567529761486 Enter COM port name as an option
+
+1567529761487 Enter COM port name as an option
+
+1567529761488 Enter COM port name as an option
+
+1567529761489 Enter COM port name as an option
+
+1567529761490 Enter COM port name as an option
+
+1567529761491 Enter COM port name as an option
+
+1567529761492 Enter COM port name as an option
+
+1567529761493 Enter COM port name as an option
+
+1567529761494 Enter COM port name as an option
+
+1567529761495 Enter COM port name as an option
+
+1567529761496 Enter COM port name as an option
+
+1567529761497 Enter COM port name as an option
+
+1567529761498 Enter COM port name as an option
+
+1567529761499 Enter COM port name as an option
+
+1567529761500 Enter COM port name as an option
+
+1567529761501 Enter COM port name as an option
+
+1567529761502 Enter COM port name as an option
+
+1567529761503 Enter COM port name as an option
+
+1567529761504 Enter COM port name as an option
+
+1567529761505 Enter COM port name as an option
+
+1567529761506 Enter COM port name as an option
+
+1567529761507 Enter COM port name as an option
+
+1567529761508 Enter COM port name as an option
+
+1567529761509 Enter COM port name as an option
+
+1567529761510 Enter COM port name as an option
+
+1567529761511 Enter COM port name as an option
+
+1567529761512 Enter COM port name as an option
+
+1567529761513 Enter COM port name as an option
+
+1567529761514 Enter COM port name as an option
+
+1567529761515 Enter COM port name as an option
+
+1567529761516 Enter COM port name as an option
+
+1567529761517 Enter COM port name as an option
+
+1567529761518 Enter COM port name as an option
+
+1567529761519 Enter COM port name as an option
+
+1567529761520 Enter COM port name as an option
+
+1567529761521 Enter COM port name as an option
+
+1567529761522 Enter COM port name as an option
+
+1567529761523 Enter COM port name as an option
+
+1567529761524 Enter COM port name as an option
+
+1567529761525 Enter COM port name as an option
+
+1567529761526 Enter COM port name as an option
+
+1567529761527 Enter COM port name as an option
+
+1567529761528 Enter COM port name as an option
+
+1567529761529 Enter COM port name as an option
+
+1567529761530 Enter COM port name as an option
+
+1567529761531 Enter COM port name as an option
+
+1567529761532 Enter COM port name as an option
+
+1567529761533 Enter COM port name as an option
+
+1567529761534 Enter COM port name as an option
+
+1567529761535 Enter COM port name as an option
+
+1567529761536 Enter COM port name as an option
+
+1567529761537 Enter COM port name as an option
+
+1567529761538 Enter COM port name as an option
+
+1567529761539 Enter COM port name as an option
+
+1567529761540 Enter COM port name as an option
+
+1567529761541 Enter COM port name as an option
+
+1567529761542 Enter COM port name as an option
+
+1567529761543 Enter COM port name as an option
+
+1567529761544 Enter COM port name as an option
+
+1567529761545 Enter COM port name as an option
+
+1567529761546 Enter COM port name as an option
+
+1567529761547 Enter COM port name as an option
+
+1567529761548 Enter COM port name as an option
+
+1567529761549 Enter COM port name as an option
+
+1567529761550 Enter COM port name as an option
+
+1567529761551 Enter COM port name as an option
+
+1567529761552 Enter COM port name as an option
+
+1567529761553 Enter COM port name as an option
+
+1567529761554 Enter COM port name as an option
+
+1567529761555 Enter COM port name as an option
+
+1567529761556 Enter COM port name as an option
+
+1567529761557 Enter COM port name as an option
+
+1567529761558 Enter COM port name as an option
+
+1567529761559 Enter COM port name as an option
+
+1567529761560 Enter COM port name as an option
+
+1567529761561 Enter COM port name as an option
+
+1567529761562 Enter COM port name as an option
+
+1567529761563 Enter COM port name as an option
+
+1567529761564 Enter COM port name as an option
+
+1567529761565 Enter COM port name as an option
+
+1567529761566 Enter COM port name as an option
+
+1567529761567 Enter COM port name as an option
+
+1567529761568 Enter COM port name as an option
+
+1567529761569 Enter COM port name as an option
+
+1567529761570 Enter COM port name as an option
+
+1567529761571 Enter COM port name as an option
+
+1567529761572 Enter COM port name as an option
+
+1567529761573 Enter COM port name as an option
+
+1567529761574 Enter COM port name as an option
+
+1567529761575 Enter COM port name as an option
+
+1567529761576 Enter COM port name as an option
+
+1567529761577 Enter COM port name as an option
+
+1567529761578 Enter COM port name as an option
+
+1567529761579 Enter COM port name as an option
+
+1567529761580 Enter COM port name as an option
+
+1567529761581 Enter COM port name as an option
+
+1567529761582 Enter COM port name as an option
+
+1567529761583 Enter COM port name as an option
+
+1567529761584 Enter COM port name as an option
+
+1567529761585 Enter COM port name as an option
+
+1567529761586 Enter COM port name as an option
+
+1567529761587 Enter COM port name as an option
+
+1567529761588 Enter COM port name as an option
+
+1567529761589 Enter COM port name as an option
+
+1567529761590 Enter COM port name as an option
+
+1567529761591 Enter COM port name as an option
+
+1567529761592 Enter COM port name as an option
+
+1567529761593 Enter COM port name as an option
+
+1567529761594 Enter COM port name as an option
+
+1567529761595 Enter COM port name as an option
+
+1567529761596 Enter COM port name as an option
+
+1567529761597 Enter COM port name as an option
+
+1567529761598 Enter COM port name as an option
+
+1567529761599 Enter COM port name as an option
+
+1567529761600 Enter COM port name as an option
+
+1567529761601 Enter COM port name as an option
+
+1567529761602 Enter COM port name as an option
+
+1567529761603 Enter COM port name as an option
+
+1567529761604 Enter COM port name as an option
+
+1567529761605 Enter COM port name as an option
+
+1567529761606 Enter COM port name as an option
+
+1567529761607 Enter COM port name as an option
+
+1567529761608 Enter COM port name as an option
+
+1567529761609 Enter COM port name as an option
+
+1567529761610 Enter COM port name as an option
+
+1567529761611 Enter COM port name as an option
+
+1567529761612 Enter COM port name as an option
+
+1567529761613 Enter COM port name as an option
+
+1567529761614 Enter COM port name as an option
+
+1567529761615 Enter COM port name as an option
+
+1567529761616 Enter COM port name as an option
+
+1567529761617 Enter COM port name as an option
+
+1567529761618 Enter COM port name as an option
+
+1567529761619 Enter COM port name as an option
+
+1567529761620 Enter COM port name as an option
+
+1567529761621 Enter COM port name as an option
+
+1567529761622 Enter COM port name as an option
+
+1567529761623 Enter COM port name as an option
+
+1567529761624 Enter COM port name as an option
+
+1567529761625 Enter COM port name as an option
+
+1567529761626 Enter COM port name as an option
+
+1567529761627 Enter COM port name as an option
+
+1567529761628 Enter COM port name as an option
+
+1567529761629 Enter COM port name as an option
+
+1567529761630 Enter COM port name as an option
+
+1567529761631 Enter COM port name as an option
+
+1567529761632 Enter COM port name as an option
+
+1567529761633 Enter COM port name as an option
+
+1567529761634 Enter COM port name as an option
+
+1567529761635 Enter COM port name as an option
+
+1567529761636 Enter COM port name as an option
+
+1567529761637 Enter COM port name as an option
+
+1567529761638 Enter COM port name as an option
+
+1567529761639 Enter COM port name as an option
+
+1567529761640 Enter COM port name as an option
+
+1567529761641 Enter COM port name as an option
+
+1567529761642 Enter COM port name as an option
+
+1567529761643 Enter COM port name as an option
+
+1567529761644 Enter COM port name as an option
+
+1567529761645 Enter COM port name as an option
+
+1567529761646 Enter COM port name as an option
+
+1567529761647 Enter COM port name as an option
+
+1567529761648 Enter COM port name as an option
+
+1567529761649 Enter COM port name as an option
+
+1567529761650 Enter COM port name as an option
+
+1567529761651 Enter COM port name as an option
+
+1567529761652 Enter COM port name as an option
+
+1567529761653 Enter COM port name as an option
+
+1567529761654 Enter COM port name as an option
+
+1567529761655 Enter COM port name as an option
+
+1567529761656 Enter COM port name as an option
+
+1567529761657 Enter COM port name as an option
+
+1567529761658 Enter COM port name as an option
+
+1567529761659 Enter COM port name as an option
+
+1567529761660 Enter COM port name as an option
+
+1567529761661 Enter COM port name as an option
+
+1567529761662 Enter COM port name as an option
+
+1567529761663 Enter COM port name as an option
+
+1567529761664 Enter COM port name as an option
+
+1567529761665 Enter COM port name as an option
+
+1567529761666 Enter COM port name as an option
+
+1567529761667 Enter COM port name as an option
+
+1567529761668 Enter COM port name as an option
+
+1567529761669 Enter COM port name as an option
+
+1567529761670 Enter COM port name as an option
+
+1567529761671 Enter COM port name as an option
+
+1567529761672 Enter COM port name as an option
+
+1567529761673 Enter COM port name as an option
+
+1567529761674 Enter COM port name as an option
+
+1567529761675 Enter COM port name as an option
+
+1567529761676 Enter COM port name as an option
+
+1567529761677 Enter COM port name as an option
+
+1567529761678 Enter COM port name as an option
+
+1567529761679 Enter COM port name as an option
+
+1567529761680 Enter COM port name as an option
+
+1567529761681 Enter COM port name as an option
+
+1567529761682 Enter COM port name as an option
+
+1567529761683 Enter COM port name as an option
+
+1567529761684 Enter COM port name as an option
+
+1567529761685 Enter COM port name as an option
+
+1567529761686 Enter COM port name as an option
+
+1567529761687 Enter COM port name as an option
+
+1567529761688 Enter COM port name as an option
+
+1567529761689 Enter COM port name as an option
+
+1567529761690 Enter COM port name as an option
+
+1567529761691 Enter COM port name as an option
+
+1567529761692 Enter COM port name as an option
+
+1567529761693 Enter COM port name as an option
+
+1567529761694 Enter COM port name as an option
+
+1567529761695 Enter COM port name as an option
+
+1567529761696 Enter COM port name as an option
+
+1567529761697 Enter COM port name as an option
+
+1567529761698 Enter COM port name as an option
+
+1567529761699 Enter COM port name as an option
+
+1567529761700 Enter COM port name as an option
+
+1567529761701 Enter COM port name as an option
+
+1567529761702 Enter COM port name as an option
+
+1567529761703 Enter COM port name as an option
+
+1567529761704 Enter COM port name as an option
+
+1567529761705 Enter COM port name as an option
+
+1567529761706 Enter COM port name as an option
+
+1567529761707 Enter COM port name as an option
+
+1567529761708 Enter COM port name as an option
+
+1567529761709 Enter COM port name as an option
+
+1567529761710 Enter COM port name as an option
+
+1567529761711 Enter COM port name as an option
+
+1567529761712 Enter COM port name as an option
+
+1567529761713 Enter COM port name as an option
+
+1567529761714 Enter COM port name as an option
+
+1567529761715 Enter COM port name as an option
+
+1567529761716 Enter COM port name as an option
+
+1567529761717 Enter COM port name as an option
+
+1567529761718 Enter COM port name as an option
+
+1567529761719 Enter COM port name as an option
+
+1567529761720 Enter COM port name as an option
+
+1567529761721 Enter COM port name as an option
+
+1567529761722 Enter COM port name as an option
+
+1567529761723 Enter COM port name as an option
+
+1567529761724 Enter COM port name as an option
+
+1567529761725 Enter COM port name as an option
+
+1567529761726 Enter COM port name as an option
+
+1567529761727 Enter COM port name as an option
+
+1567529761728 Enter COM port name as an option
+
+1567529761729 Enter COM port name as an option
+
+1567529761730 Enter COM port name as an option
+
+1567529761731 Enter COM port name as an option
+
+1567529761732 Enter COM port name as an option
+
+1567529761733 Enter COM port name as an option
+
+1567529761734 Enter COM port name as an option
+
+1567529761735 Enter COM port name as an option
+
+1567529761736 Enter COM port name as an option
+
+1567529761737 Enter COM port name as an option
+
+1567529761738 Enter COM port name as an option
+
+1567529761739 Enter COM port name as an option
+
+1567529761740 Enter COM port name as an option
+
+1567529761741 Enter COM port name as an option
+
+1567529761742 Enter COM port name as an option
+
+1567529761743 Enter COM port name as an option
+
+1567529761744 Enter COM port name as an option
+
+1567529761745 Enter COM port name as an option
+
+1567529761746 Enter COM port name as an option
+
+1567529761747 Enter COM port name as an option
+
+1567529761748 Enter COM port name as an option
+
+1567529761749 Enter COM port name as an option
+
+1567529761750 Enter COM port name as an option
+
+1567529761751 Enter COM port name as an option
+
+1567529761752 Enter COM port name as an option
+
+1567529761753 Enter COM port name as an option
+
+1567529761754 Enter COM port name as an option
+
+1567529761755 Enter COM port name as an option
+
+1567529761756 Enter COM port name as an option
+
+1567529761757 Enter COM port name as an option
+
+1567529761758 Enter COM port name as an option
+
+1567529761759 Enter COM port name as an option
+
+1567529761760 Enter COM port name as an option
+
+1567529761761 Enter COM port name as an option
+
+1567529761762 Enter COM port name as an option
+
+1567529761763 Enter COM port name as an option
+
+1567529761764 Enter COM port name as an option
+
+1567529761765 Enter COM port name as an option
+
+1567529761766 Enter COM port name as an option
+
+1567529761767 Enter COM port name as an option
+
+1567529761768 Enter COM port name as an option
+
+1567529761769 Enter COM port name as an option
+
+1567529761770 Enter COM port name as an option
+
+1567529761771 Enter COM port name as an option
+
+1567529761772 Enter COM port name as an option
+
+1567529761773 Enter COM port name as an option
+
+1567529761774 Enter COM port name as an option
+
+1567529761775 Enter COM port name as an option
+
+1567529761776 Enter COM port name as an option
+
+1567529761777 Enter COM port name as an option
+
+1567529761778 Enter COM port name as an option
+
+1567529761779 Enter COM port name as an option
+
+1567529761780 Enter COM port name as an option
+
+1567529761781 Enter COM port name as an option
+
+1567529761782 Enter COM port name as an option
+
+1567529761783 Enter COM port name as an option
+
+1567529761784 Enter COM port name as an option
+
+1567529761785 Enter COM port name as an option
+
+1567529761786 Enter COM port name as an option
+
+1567529761787 Enter COM port name as an option
+
+1567529761788 Enter COM port name as an option
+
+1567529761789 Enter COM port name as an option
+
+1567529761790 Enter COM port name as an option
+
+1567529761791 Enter COM port name as an option
+
+1567529761792 Enter COM port name as an option
+
+1567529761793 Enter COM port name as an option
+
+1567529761794 Enter COM port name as an option
+
+1567529761795 Enter COM port name as an option
+
+1567529761796 Enter COM port name as an option
+
+1567529761797 Enter COM port name as an option
+
+1567529761798 Enter COM port name as an option
+
+1567529761799 Enter COM port name as an option
+
+1567529761800 Enter COM port name as an option
+
+1567529761801 Enter COM port name as an option
+
+1567529761802 Enter COM port name as an option
+
+1567529761803 Enter COM port name as an option
+
+1567529761804 Enter COM port name as an option
+
+1567529761805 Enter COM port name as an option
+
+1567529761806 Enter COM port name as an option
+
+1567529761807 Enter COM port name as an option
+
+1567529761808 Enter COM port name as an option
+
+1567529761809 Enter COM port name as an option
+
+1567529761810 Enter COM port name as an option
+
+1567529761811 Enter COM port name as an option
+
+1567529761812 Enter COM port name as an option
+
+1567529761813 Enter COM port name as an option
+
+1567529761814 Enter COM port name as an option
+
+1567529761815 Enter COM port name as an option
+
+1567529761816 Enter COM port name as an option
+
+1567529761817 Enter COM port name as an option
+
+1567529761818 Enter COM port name as an option
+
+1567529761819 Enter COM port name as an option
+
+1567529761820 Enter COM port name as an option
+
+1567529761822 Enter COM port name as an option
+
+1567529761823 Enter COM port name as an option
+
+1567529761824 Enter COM port name as an option
+
+1567529761825 Enter COM port name as an option
+
+1567529761826 Enter COM port name as an option
+
+1567529761827 Enter COM port name as an option
+
+1567529761828 Enter COM port name as an option
+
+1567529761829 Enter COM port name as an option
+
+1567529761830 Enter COM port name as an option
+
+1567529761831 Enter COM port name as an option
+
+1567529761832 Enter COM port name as an option
+
+1567529761833 Enter COM port name as an option
+
+1567529761834 Enter COM port name as an option
+
+1567529761835 Enter COM port name as an option
+
+1567529761836 Enter COM port name as an option
+
+1567529761837 Enter COM port name as an option
+
+1567529761838 Enter COM port name as an option
+
+1567529761839 Enter COM port name as an option
+
+1567529761840 Enter COM port name as an option
+
+1567529761842 Enter COM port name as an option
+
+1567529761843 Enter COM port name as an option
+
+1567529761844 Enter COM port name as an option
+
+1567529761845 Enter COM port name as an option
+
+1567529761846 Enter COM port name as an option
+
+1567529761847 Enter COM port name as an option
+
+1567529761848 Enter COM port name as an option
+
+1567529761849 Enter COM port name as an option
+
+1567529761850 Enter COM port name as an option
+
+1567529761851 Enter COM port name as an option
+
+1567529761852 Enter COM port name as an option
+
+1567529761853 Enter COM port name as an option
+
+1567529761854 Enter COM port name as an option
+
+1567529761855 Enter COM port name as an option
+
+1567529761856 Enter COM port name as an option
+
+1567529761858 Enter COM port name as an option
+
+1567529761859 Enter COM port name as an option
+
+1567529761860 Enter COM port name as an option
+
+1567529761861 Enter COM port name as an option
+
+1567529761862 Enter COM port name as an option
+
+1567529761863 Enter COM port name as an option
+
+1567529761864 Enter COM port name as an option
+
+1567529761865 Enter COM port name as an option
+
+1567529761866 Enter COM port name as an option
+
+1567529761867 Enter COM port name as an option
+
+1567529761868 Enter COM port name as an option
+
+1567529761869 Enter COM port name as an option
+
+1567529761870 Enter COM port name as an option
+
+1567529761871 Enter COM port name as an option
+
+1567529761872 Enter COM port name as an option
+
+1567529761873 Enter COM port name as an option
+
+1567529761874 Enter COM port name as an option
+
+1567529761875 Enter COM port name as an option
+
+1567529761876 Enter COM port name as an option
+
+1567529761876 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529761877 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529761877 COM49 is lost. Reconnecting...
+
+1567529761878 COM49 is lost. Reconnecting...
+
+1567529761880 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529761880 COM49 is lost. Reconnecting...
+
+1567529761882 COM49 is lost. Reconnecting...
+
+1567529761885 COM49 is lost. Reconnecting...
+
+1567529761885 Enter COM port name as an option
+
+1567529761886 Enter COM port name as an option
+
+1567529761887 Enter COM port name as an option
+
+1567529761888 Enter COM port name as an option
+
+1567529761888 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761889 Enter COM port name as an option
+
+1567529761890 Enter COM port name as an option
+
+1567529761891 Enter COM port name as an option
+
+1567529761892 Enter COM port name as an option
+
+1567529761892 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761893 Enter COM port name as an option
+
+1567529761894 Enter COM port name as an option
+
+1567529761895 Enter COM port name as an option
+
+1567529761896 Enter COM port name as an option
+
+1567529761897 Enter COM port name as an option
+
+1567529761898 Enter COM port name as an option
+
+1567529761899 Enter COM port name as an option
+
+1567529761900 Enter COM port name as an option
+
+1567529761901 Enter COM port name as an option
+
+1567529761902 Enter COM port name as an option
+
+1567529761903 Enter COM port name as an option
+
+1567529761904 Enter COM port name as an option
+
+1567529761904 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529761905 Enter COM port name as an option
+
+1567529761906 Enter COM port name as an option
+
+1567529761907 Enter COM port name as an option
+
+1567529761908 Enter COM port name as an option
+
+1567529761909 Enter COM port name as an option
+
+1567529761910 Enter COM port name as an option
+
+1567529761911 Enter COM port name as an option
+
+1567529761912 Enter COM port name as an option
+
+1567529761913 Enter COM port name as an option
+
+1567529761914 Enter COM port name as an option
+
+1567529761915 Enter COM port name as an option
+
+1567529761916 Enter COM port name as an option
+
+1567529761917 Enter COM port name as an option
+
+1567529761918 Enter COM port name as an option
+
+1567529761919 Enter COM port name as an option
+
+1567529761920 Enter COM port name as an option
+
+1567529761921 Enter COM port name as an option
+
+1567529761922 Enter COM port name as an option
+
+1567529761923 Enter COM port name as an option
+
+1567529761924 Enter COM port name as an option
+
+1567529761925 Enter COM port name as an option
+
+1567529761926 Enter COM port name as an option
+
+1567529761927 Enter COM port name as an option
+
+1567529761928 Enter COM port name as an option
+
+1567529761929 Enter COM port name as an option
+
+1567529761930 Enter COM port name as an option
+
+1567529761931 Enter COM port name as an option
+
+1567529761932 Enter COM port name as an option
+
+1567529761933 Enter COM port name as an option
+
+1567529761934 Enter COM port name as an option
+
+1567529761935 Enter COM port name as an option
+
+1567529761936 Enter COM port name as an option
+
+1567529761937 Enter COM port name as an option
+
+1567529761938 Enter COM port name as an option
+
+1567529761939 Enter COM port name as an option
+
+1567529761940 Enter COM port name as an option
+
+1567529761941 Enter COM port name as an option
+
+1567529761942 Enter COM port name as an option
+
+1567529761943 Enter COM port name as an option
+
+1567529761944 Enter COM port name as an option
+
+1567529761945 Enter COM port name as an option
+
+1567529761946 Enter COM port name as an option
+
+1567529761947 Enter COM port name as an option
+
+1567529761948 Enter COM port name as an option
+
+1567529761949 Enter COM port name as an option
+
+1567529761950 Enter COM port name as an option
+
+1567529761951 Enter COM port name as an option
+
+1567529761952 Enter COM port name as an option
+
+1567529761953 Enter COM port name as an option
+
+1567529761954 Enter COM port name as an option
+
+1567529761955 Enter COM port name as an option
+
+1567529761956 Enter COM port name as an option
+
+1567529761957 Enter COM port name as an option
+
+1567529761958 Enter COM port name as an option
+
+1567529761959 Enter COM port name as an option
+
+1567529761960 Enter COM port name as an option
+
+1567529761961 Enter COM port name as an option
+
+1567529761962 Enter COM port name as an option
+
+1567529761963 Enter COM port name as an option
+
+1567529761964 Enter COM port name as an option
+
+1567529761965 Enter COM port name as an option
+
+1567529761966 Enter COM port name as an option
+
+1567529761967 Enter COM port name as an option
+
+1567529761968 Enter COM port name as an option
+
+1567529761969 Enter COM port name as an option
+
+1567529761970 Enter COM port name as an option
+
+1567529761971 Enter COM port name as an option
+
+1567529761972 Enter COM port name as an option
+
+1567529761973 Enter COM port name as an option
+
+1567529761974 Enter COM port name as an option
+
+1567529761975 Enter COM port name as an option
+
+1567529761976 Enter COM port name as an option
+
+1567529761977 Enter COM port name as an option
+
+1567529761978 Enter COM port name as an option
+
+1567529761979 Enter COM port name as an option
+
+1567529761980 Enter COM port name as an option
+
+1567529761981 Enter COM port name as an option
+
+1567529761982 Enter COM port name as an option
+
+1567529761983 Enter COM port name as an option
+
+1567529761984 Enter COM port name as an option
+
+1567529761985 Enter COM port name as an option
+
+1567529761986 Enter COM port name as an option
+
+1567529761987 Enter COM port name as an option
+
+1567529761988 Enter COM port name as an option
+
+1567529761989 Enter COM port name as an option
+
+1567529761990 Enter COM port name as an option
+
+1567529761991 Enter COM port name as an option
+
+1567529761992 Enter COM port name as an option
+
+1567529761993 Enter COM port name as an option
+
+1567529761994 Enter COM port name as an option
+
+1567529761995 Enter COM port name as an option
+
+1567529761996 Enter COM port name as an option
+
+1567529761997 Enter COM port name as an option
+
+1567529761998 Enter COM port name as an option
+
+1567529761999 Enter COM port name as an option
+
+1567529762000 Enter COM port name as an option
+
+1567529762001 Enter COM port name as an option
+
+1567529762002 Enter COM port name as an option
+
+1567529762003 Enter COM port name as an option
+
+1567529762004 Enter COM port name as an option
+
+1567529762005 Enter COM port name as an option
+
+1567529762006 Enter COM port name as an option
+
+1567529762007 Enter COM port name as an option
+
+1567529762008 Enter COM port name as an option
+
+1567529762009 Enter COM port name as an option
+
+1567529762010 Enter COM port name as an option
+
+1567529762011 Enter COM port name as an option
+
+1567529762012 Enter COM port name as an option
+
+1567529762013 Enter COM port name as an option
+
+1567529762014 Enter COM port name as an option
+
+1567529762016 Enter COM port name as an option
+
+1567529762017 Enter COM port name as an option
+
+1567529762018 Enter COM port name as an option
+
+1567529762019 Enter COM port name as an option
+
+1567529762020 Enter COM port name as an option
+
+1567529762021 Enter COM port name as an option
+
+1567529762022 Enter COM port name as an option
+
+1567529762023 Enter COM port name as an option
+
+1567529762024 Enter COM port name as an option
+
+1567529762025 Enter COM port name as an option
+
+1567529762026 Enter COM port name as an option
+
+1567529762027 Enter COM port name as an option
+
+1567529762028 Enter COM port name as an option
+
+1567529762029 Enter COM port name as an option
+
+1567529762030 Enter COM port name as an option
+
+1567529762031 Enter COM port name as an option
+
+1567529762032 Enter COM port name as an option
+
+1567529762033 Enter COM port name as an option
+
+1567529762034 Enter COM port name as an option
+
+1567529762035 Enter COM port name as an option
+
+1567529762036 Enter COM port name as an option
+
+1567529762037 Enter COM port name as an option
+
+1567529762038 Enter COM port name as an option
+
+1567529762039 Enter COM port name as an option
+
+1567529762040 Enter COM port name as an option
+
+1567529762041 Enter COM port name as an option
+
+1567529762042 Enter COM port name as an option
+
+1567529762043 Enter COM port name as an option
+
+1567529762044 Enter COM port name as an option
+
+1567529762045 Enter COM port name as an option
+
+1567529762046 Enter COM port name as an option
+
+1567529762047 Enter COM port name as an option
+
+1567529762048 Enter COM port name as an option
+
+1567529762049 Enter COM port name as an option
+
+1567529762050 Enter COM port name as an option
+
+1567529762051 Enter COM port name as an option
+
+1567529762052 Enter COM port name as an option
+
+1567529762053 Enter COM port name as an option
+
+1567529762054 Enter COM port name as an option
+
+1567529762055 Enter COM port name as an option
+
+1567529762056 Enter COM port name as an option
+
+1567529762057 Enter COM port name as an option
+
+1567529762058 Enter COM port name as an option
+
+1567529762059 Enter COM port name as an option
+
+1567529762060 Enter COM port name as an option
+
+1567529762061 Enter COM port name as an option
+
+1567529762062 Enter COM port name as an option
+
+1567529762063 Enter COM port name as an option
+
+1567529762064 Enter COM port name as an option
+
+1567529762065 Enter COM port name as an option
+
+1567529762066 Enter COM port name as an option
+
+1567529762067 Enter COM port name as an option
+
+1567529762068 Enter COM port name as an option
+
+1567529762069 Enter COM port name as an option
+
+1567529762070 Enter COM port name as an option
+
+1567529762071 Enter COM port name as an option
+
+1567529762072 Enter COM port name as an option
+
+1567529762073 Enter COM port name as an option
+
+1567529762074 Enter COM port name as an option
+
+1567529762075 Enter COM port name as an option
+
+1567529762076 Enter COM port name as an option
+
+1567529762077 Enter COM port name as an option
+
+1567529762078 Enter COM port name as an option
+
+1567529762079 Enter COM port name as an option
+
+1567529762080 Enter COM port name as an option
+
+1567529762081 Enter COM port name as an option
+
+1567529762082 Enter COM port name as an option
+
+1567529762083 Enter COM port name as an option
+
+1567529762084 Enter COM port name as an option
+
+1567529762085 Enter COM port name as an option
+
+1567529762086 Enter COM port name as an option
+
+1567529762087 Enter COM port name as an option
+
+1567529762088 Enter COM port name as an option
+
+1567529762089 Enter COM port name as an option
+
+1567529762090 Enter COM port name as an option
+
+1567529762091 Enter COM port name as an option
+
+1567529762092 Enter COM port name as an option
+
+1567529762093 Enter COM port name as an option
+
+1567529762094 Enter COM port name as an option
+
+1567529762095 Enter COM port name as an option
+
+1567529762096 Enter COM port name as an option
+
+1567529762097 Enter COM port name as an option
+
+1567529762098 Enter COM port name as an option
+
+1567529762099 Enter COM port name as an option
+
+1567529762100 Enter COM port name as an option
+
+1567529762101 Enter COM port name as an option
+
+1567529762102 Enter COM port name as an option
+
+1567529762103 Enter COM port name as an option
+
+1567529762104 Enter COM port name as an option
+
+1567529762105 Enter COM port name as an option
+
+1567529762106 Enter COM port name as an option
+
+1567529762107 Enter COM port name as an option
+
+1567529762108 Enter COM port name as an option
+
+1567529762109 Enter COM port name as an option
+
+1567529762110 Enter COM port name as an option
+
+1567529762111 Enter COM port name as an option
+
+1567529762112 Enter COM port name as an option
+
+1567529762113 Enter COM port name as an option
+
+1567529762114 Enter COM port name as an option
+
+1567529762115 Enter COM port name as an option
+
+1567529762116 Enter COM port name as an option
+
+1567529762117 Enter COM port name as an option
+
+1567529762118 Enter COM port name as an option
+
+1567529762119 Enter COM port name as an option
+
+1567529762120 Enter COM port name as an option
+
+1567529762121 Enter COM port name as an option
+
+1567529762122 Enter COM port name as an option
+
+1567529762123 Enter COM port name as an option
+
+1567529762124 Enter COM port name as an option
+
+1567529762125 Enter COM port name as an option
+
+1567529762126 Enter COM port name as an option
+
+1567529762127 Enter COM port name as an option
+
+1567529762128 Enter COM port name as an option
+
+1567529762129 Enter COM port name as an option
+
+1567529762130 Enter COM port name as an option
+
+1567529762131 Enter COM port name as an option
+
+1567529762132 Enter COM port name as an option
+
+1567529762133 Enter COM port name as an option
+
+1567529762134 Enter COM port name as an option
+
+1567529762135 Enter COM port name as an option
+
+1567529762136 Enter COM port name as an option
+
+1567529762137 Enter COM port name as an option
+
+1567529762138 Enter COM port name as an option
+
+1567529762139 Enter COM port name as an option
+
+1567529762140 Enter COM port name as an option
+
+1567529762141 Enter COM port name as an option
+
+1567529762142 Enter COM port name as an option
+
+1567529762143 Enter COM port name as an option
+
+1567529762144 Enter COM port name as an option
+
+1567529762145 Enter COM port name as an option
+
+1567529762146 Enter COM port name as an option
+
+1567529762147 Enter COM port name as an option
+
+1567529762148 Enter COM port name as an option
+
+1567529762149 Enter COM port name as an option
+
+1567529762150 Enter COM port name as an option
+
+1567529762151 Enter COM port name as an option
+
+1567529762152 Enter COM port name as an option
+
+1567529762153 Enter COM port name as an option
+
+1567529762154 Enter COM port name as an option
+
+1567529762155 Enter COM port name as an option
+
+1567529762156 Enter COM port name as an option
+
+1567529762157 Enter COM port name as an option
+
+1567529762158 Enter COM port name as an option
+
+1567529762159 Enter COM port name as an option
+
+1567529762160 Enter COM port name as an option
+
+1567529762161 Enter COM port name as an option
+
+1567529762162 Enter COM port name as an option
+
+1567529762163 Enter COM port name as an option
+
+1567529762164 Enter COM port name as an option
+
+1567529762165 Enter COM port name as an option
+
+1567529762166 Enter COM port name as an option
+
+1567529762167 Enter COM port name as an option
+
+1567529762168 Enter COM port name as an option
+
+1567529762169 Enter COM port name as an option
+
+1567529762170 Enter COM port name as an option
+
+1567529762171 Enter COM port name as an option
+
+1567529762172 Enter COM port name as an option
+
+1567529762173 Enter COM port name as an option
+
+1567529762174 Enter COM port name as an option
+
+1567529762175 Enter COM port name as an option
+
+1567529762176 Enter COM port name as an option
+
+1567529762177 Enter COM port name as an option
+
+1567529762178 Enter COM port name as an option
+
+1567529762179 Enter COM port name as an option
+
+1567529762180 Enter COM port name as an option
+
+1567529762181 Enter COM port name as an option
+
+1567529762182 Enter COM port name as an option
+
+1567529762183 Enter COM port name as an option
+
+1567529762184 Enter COM port name as an option
+
+1567529762185 Enter COM port name as an option
+
+1567529762186 Enter COM port name as an option
+
+1567529762187 Enter COM port name as an option
+
+1567529762188 Enter COM port name as an option
+
+1567529762189 Enter COM port name as an option
+
+1567529762190 Enter COM port name as an option
+
+1567529762191 Enter COM port name as an option
+
+1567529762192 Enter COM port name as an option
+
+1567529762193 Enter COM port name as an option
+
+1567529762194 Enter COM port name as an option
+
+1567529762195 Enter COM port name as an option
+
+1567529762196 Enter COM port name as an option
+
+1567529762197 Enter COM port name as an option
+
+1567529762198 Enter COM port name as an option
+
+1567529762199 Enter COM port name as an option
+
+1567529762200 Enter COM port name as an option
+
+1567529762201 Enter COM port name as an option
+
+1567529762202 Enter COM port name as an option
+
+1567529762203 Enter COM port name as an option
+
+1567529762204 Enter COM port name as an option
+
+1567529762205 Enter COM port name as an option
+
+1567529762206 Enter COM port name as an option
+
+1567529762207 Enter COM port name as an option
+
+1567529762208 Enter COM port name as an option
+
+1567529762209 Enter COM port name as an option
+
+1567529762210 Enter COM port name as an option
+
+1567529762211 Enter COM port name as an option
+
+1567529762212 Enter COM port name as an option
+
+1567529762213 Enter COM port name as an option
+
+1567529762214 Enter COM port name as an option
+
+1567529762215 Enter COM port name as an option
+
+1567529762216 Enter COM port name as an option
+
+1567529762217 Enter COM port name as an option
+
+1567529762218 Enter COM port name as an option
+
+1567529762219 Enter COM port name as an option
+
+1567529762220 Enter COM port name as an option
+
+1567529762221 Enter COM port name as an option
+
+1567529762222 Enter COM port name as an option
+
+1567529762223 Enter COM port name as an option
+
+1567529762224 Enter COM port name as an option
+
+1567529762225 Enter COM port name as an option
+
+1567529762226 Enter COM port name as an option
+
+1567529762227 Enter COM port name as an option
+
+1567529762228 Enter COM port name as an option
+
+1567529762229 Enter COM port name as an option
+
+1567529762230 Enter COM port name as an option
+
+1567529762231 Enter COM port name as an option
+
+1567529762232 Enter COM port name as an option
+
+1567529762233 Enter COM port name as an option
+
+1567529762234 Enter COM port name as an option
+
+1567529762235 Enter COM port name as an option
+
+1567529762236 Enter COM port name as an option
+
+1567529762237 Enter COM port name as an option
+
+1567529762238 Enter COM port name as an option
+
+1567529762239 Enter COM port name as an option
+
+1567529762240 Enter COM port name as an option
+
+1567529762241 Enter COM port name as an option
+
+1567529762242 Enter COM port name as an option
+
+1567529762243 Enter COM port name as an option
+
+1567529762244 Enter COM port name as an option
+
+1567529762245 Enter COM port name as an option
+
+1567529762246 Enter COM port name as an option
+
+1567529762247 Enter COM port name as an option
+
+1567529762248 Enter COM port name as an option
+
+1567529762249 Enter COM port name as an option
+
+1567529762250 Enter COM port name as an option
+
+1567529762251 Enter COM port name as an option
+
+1567529762252 Enter COM port name as an option
+
+1567529762253 Enter COM port name as an option
+
+1567529762254 Enter COM port name as an option
+
+1567529762255 Enter COM port name as an option
+
+1567529762256 Enter COM port name as an option
+
+1567529762257 Enter COM port name as an option
+
+1567529762258 Enter COM port name as an option
+
+1567529762259 Enter COM port name as an option
+
+1567529762260 Enter COM port name as an option
+
+1567529762261 Enter COM port name as an option
+
+1567529762262 Enter COM port name as an option
+
+1567529762263 Enter COM port name as an option
+
+1567529762264 Enter COM port name as an option
+
+1567529762265 Enter COM port name as an option
+
+1567529762266 Enter COM port name as an option
+
+1567529762267 Enter COM port name as an option
+
+1567529762268 Enter COM port name as an option
+
+1567529762269 Enter COM port name as an option
+
+1567529762270 Enter COM port name as an option
+
+1567529762271 Enter COM port name as an option
+
+1567529762272 Enter COM port name as an option
+
+1567529762273 Enter COM port name as an option
+
+1567529762274 Enter COM port name as an option
+
+1567529762275 Enter COM port name as an option
+
+1567529762276 Enter COM port name as an option
+
+1567529762277 Enter COM port name as an option
+
+1567529762278 Enter COM port name as an option
+
+1567529762279 Enter COM port name as an option
+
+1567529762280 Enter COM port name as an option
+
+1567529762281 Enter COM port name as an option
+
+1567529762282 Enter COM port name as an option
+
+1567529762283 Enter COM port name as an option
+
+1567529762284 Enter COM port name as an option
+
+1567529762285 Enter COM port name as an option
+
+1567529762286 Enter COM port name as an option
+
+1567529762287 Enter COM port name as an option
+
+1567529762288 Enter COM port name as an option
+
+1567529762289 Enter COM port name as an option
+
+1567529762290 Enter COM port name as an option
+
+1567529762291 Enter COM port name as an option
+
+1567529762292 Enter COM port name as an option
+
+1567529762293 Enter COM port name as an option
+
+1567529762294 Enter COM port name as an option
+
+1567529762295 Enter COM port name as an option
+
+1567529762296 Enter COM port name as an option
+
+1567529762297 Enter COM port name as an option
+
+1567529762298 Enter COM port name as an option
+
+1567529762299 Enter COM port name as an option
+
+1567529762300 Enter COM port name as an option
+
+1567529762301 Enter COM port name as an option
+
+1567529762302 Enter COM port name as an option
+
+1567529762303 Enter COM port name as an option
+
+1567529762304 Enter COM port name as an option
+
+1567529762305 Enter COM port name as an option
+
+1567529762306 Enter COM port name as an option
+
+1567529762307 Enter COM port name as an option
+
+1567529762308 Enter COM port name as an option
+
+1567529762309 Enter COM port name as an option
+
+1567529762310 Enter COM port name as an option
+
+1567529762311 Enter COM port name as an option
+
+1567529762312 Enter COM port name as an option
+
+1567529762313 Enter COM port name as an option
+
+1567529762314 Enter COM port name as an option
+
+1567529762315 Enter COM port name as an option
+
+1567529762316 Enter COM port name as an option
+
+1567529762317 Enter COM port name as an option
+
+1567529762318 Enter COM port name as an option
+
+1567529762319 Enter COM port name as an option
+
+1567529762320 Enter COM port name as an option
+
+1567529762321 Enter COM port name as an option
+
+1567529762322 Enter COM port name as an option
+
+1567529762323 Enter COM port name as an option
+
+1567529762324 Enter COM port name as an option
+
+1567529762325 Enter COM port name as an option
+
+1567529762326 Enter COM port name as an option
+
+1567529762327 Enter COM port name as an option
+
+1567529762328 Enter COM port name as an option
+
+1567529762329 Enter COM port name as an option
+
+1567529762330 Enter COM port name as an option
+
+1567529762331 Enter COM port name as an option
+
+1567529762332 Enter COM port name as an option
+
+1567529762333 Enter COM port name as an option
+
+1567529762334 Enter COM port name as an option
+
+1567529762335 Enter COM port name as an option
+
+1567529762336 Enter COM port name as an option
+
+1567529762337 Enter COM port name as an option
+
+1567529762338 Enter COM port name as an option
+
+1567529762339 Enter COM port name as an option
+
+1567529762340 Enter COM port name as an option
+
+1567529762341 Enter COM port name as an option
+
+1567529762342 Enter COM port name as an option
+
+1567529762343 Enter COM port name as an option
+
+1567529762344 Enter COM port name as an option
+
+1567529762345 Enter COM port name as an option
+
+1567529762346 Enter COM port name as an option
+
+1567529762347 Enter COM port name as an option
+
+1567529762348 Enter COM port name as an option
+
+1567529762349 Enter COM port name as an option
+
+1567529762350 Enter COM port name as an option
+
+1567529762351 Enter COM port name as an option
+
+1567529762352 Enter COM port name as an option
+
+1567529762353 Enter COM port name as an option
+
+1567529762354 Enter COM port name as an option
+
+1567529762355 Enter COM port name as an option
+
+1567529762356 Enter COM port name as an option
+
+1567529762357 Enter COM port name as an option
+
+1567529762358 Enter COM port name as an option
+
+1567529762359 Enter COM port name as an option
+
+1567529762360 Enter COM port name as an option
+
+1567529762361 Enter COM port name as an option
+
+1567529762362 Enter COM port name as an option
+
+1567529762363 Enter COM port name as an option
+
+1567529762364 Enter COM port name as an option
+
+1567529762365 Enter COM port name as an option
+
+1567529762366 Enter COM port name as an option
+
+1567529762367 Enter COM port name as an option
+
+1567529762368 Enter COM port name as an option
+
+1567529762369 Enter COM port name as an option
+
+1567529762370 Enter COM port name as an option
+
+1567529762371 Enter COM port name as an option
+
+1567529762372 Enter COM port name as an option
+
+1567529762373 Enter COM port name as an option
+
+1567529762374 Enter COM port name as an option
+
+1567529762375 Enter COM port name as an option
+
+1567529762376 Enter COM port name as an option
+
+1567529762377 Enter COM port name as an option
+
+1567529762378 Enter COM port name as an option
+
+1567529762379 Enter COM port name as an option
+
+1567529762380 Enter COM port name as an option
+
+1567529762381 Enter COM port name as an option
+
+1567529762381 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529762382 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529762382 COM49 is lost. Reconnecting...
+
+1567529762382 COM49 is lost. Reconnecting...
+
+1567529762382 COM49 is lost. Reconnecting...
+
+1567529762383 Enter COM port name as an option
+
+1567529762383 Enter COM port name as an option
+
+1567529762384 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762384 Enter COM port name as an option
+
+1567529762385 Enter COM port name as an option
+
+1567529762386 Enter COM port name as an option
+
+1567529762387 Enter COM port name as an option
+
+1567529762388 Enter COM port name as an option
+
+1567529762389 Enter COM port name as an option
+
+1567529762390 Enter COM port name as an option
+
+1567529762391 Enter COM port name as an option
+
+1567529762392 Enter COM port name as an option
+
+1567529762393 Enter COM port name as an option
+
+1567529762394 Enter COM port name as an option
+
+1567529762395 Enter COM port name as an option
+
+1567529762396 Enter COM port name as an option
+
+1567529762397 Enter COM port name as an option
+
+1567529762398 Enter COM port name as an option
+
+1567529762399 Enter COM port name as an option
+
+1567529762400 Enter COM port name as an option
+
+1567529762401 Enter COM port name as an option
+
+1567529762402 Enter COM port name as an option
+
+1567529762403 Enter COM port name as an option
+
+1567529762404 Enter COM port name as an option
+
+1567529762404 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762404 Enter COM port name as an option
+
+1567529762405 Enter COM port name as an option
+
+1567529762406 Enter COM port name as an option
+
+1567529762407 Enter COM port name as an option
+
+1567529762407 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762407 Enter COM port name as an option
+
+1567529762408 Enter COM port name as an option
+
+1567529762409 Enter COM port name as an option
+
+1567529762410 Enter COM port name as an option
+
+1567529762411 Enter COM port name as an option
+
+1567529762411 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762411 Enter COM port name as an option
+
+1567529762412 Enter COM port name as an option
+
+1567529762413 Enter COM port name as an option
+
+1567529762413 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762413 Enter COM port name as an option
+
+1567529762414 Enter COM port name as an option
+
+1567529762415 Enter COM port name as an option
+
+1567529762416 Enter COM port name as an option
+
+1567529762417 Enter COM port name as an option
+
+1567529762418 Enter COM port name as an option
+
+1567529762419 Enter COM port name as an option
+
+1567529762420 Enter COM port name as an option
+
+1567529762421 Enter COM port name as an option
+
+1567529762422 Enter COM port name as an option
+
+1567529762423 Enter COM port name as an option
+
+1567529762425 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762426 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762427 Enter COM port name as an option
+
+1567529762428 Enter COM port name as an option
+
+1567529762429 Enter COM port name as an option
+
+1567529762430 Enter COM port name as an option
+
+1567529762431 Enter COM port name as an option
+
+1567529762432 Enter COM port name as an option
+
+1567529762433 Enter COM port name as an option
+
+1567529762434 Enter COM port name as an option
+
+1567529762435 Enter COM port name as an option
+
+1567529762436 Enter COM port name as an option
+
+1567529762437 Enter COM port name as an option
+
+1567529762438 Enter COM port name as an option
+
+1567529762439 Enter COM port name as an option
+
+1567529762440 Enter COM port name as an option
+
+1567529762441 Enter COM port name as an option
+
+1567529762442 Enter COM port name as an option
+
+1567529762443 Enter COM port name as an option
+
+1567529762444 Enter COM port name as an option
+
+1567529762445 Enter COM port name as an option
+
+1567529762446 Enter COM port name as an option
+
+1567529762447 Enter COM port name as an option
+
+1567529762448 Enter COM port name as an option
+
+1567529762449 Enter COM port name as an option
+
+1567529762450 Enter COM port name as an option
+
+1567529762451 Enter COM port name as an option
+
+1567529762452 Enter COM port name as an option
+
+1567529762453 Enter COM port name as an option
+
+1567529762454 Enter COM port name as an option
+
+1567529762455 Enter COM port name as an option
+
+1567529762456 Enter COM port name as an option
+
+1567529762457 Enter COM port name as an option
+
+1567529762458 Enter COM port name as an option
+
+1567529762459 Enter COM port name as an option
+
+1567529762460 Enter COM port name as an option
+
+1567529762462 Enter COM port name as an option
+
+1567529762464 Enter COM port name as an option
+
+1567529762465 Enter COM port name as an option
+
+1567529762466 Enter COM port name as an option
+
+1567529762467 Enter COM port name as an option
+
+1567529762468 Enter COM port name as an option
+
+1567529762469 Enter COM port name as an option
+
+1567529762470 Enter COM port name as an option
+
+1567529762471 Enter COM port name as an option
+
+1567529762472 Enter COM port name as an option
+
+1567529762473 Enter COM port name as an option
+
+1567529762474 Enter COM port name as an option
+
+1567529762475 Enter COM port name as an option
+
+1567529762476 Enter COM port name as an option
+
+1567529762477 Enter COM port name as an option
+
+1567529762478 Enter COM port name as an option
+
+1567529762479 Enter COM port name as an option
+
+1567529762480 Enter COM port name as an option
+
+1567529762481 Enter COM port name as an option
+
+1567529762482 Enter COM port name as an option
+
+1567529762483 Enter COM port name as an option
+
+1567529762484 Enter COM port name as an option
+
+1567529762485 Enter COM port name as an option
+
+1567529762486 Enter COM port name as an option
+
+1567529762487 Enter COM port name as an option
+
+1567529762488 Enter COM port name as an option
+
+1567529762489 Enter COM port name as an option
+
+1567529762490 Enter COM port name as an option
+
+1567529762491 Enter COM port name as an option
+
+1567529762492 Enter COM port name as an option
+
+1567529762493 Enter COM port name as an option
+
+1567529762494 Enter COM port name as an option
+
+1567529762495 Enter COM port name as an option
+
+1567529762496 Enter COM port name as an option
+
+1567529762497 Enter COM port name as an option
+
+1567529762498 Enter COM port name as an option
+
+1567529762499 Enter COM port name as an option
+
+1567529762500 Enter COM port name as an option
+
+1567529762501 Enter COM port name as an option
+
+1567529762502 Enter COM port name as an option
+
+1567529762503 Enter COM port name as an option
+
+1567529762504 Enter COM port name as an option
+
+1567529762505 Enter COM port name as an option
+
+1567529762506 Enter COM port name as an option
+
+1567529762507 Enter COM port name as an option
+
+1567529762508 Enter COM port name as an option
+
+1567529762509 Enter COM port name as an option
+
+1567529762510 Enter COM port name as an option
+
+1567529762511 Enter COM port name as an option
+
+1567529762512 Enter COM port name as an option
+
+1567529762513 Enter COM port name as an option
+
+1567529762514 Enter COM port name as an option
+
+1567529762515 Enter COM port name as an option
+
+1567529762516 Enter COM port name as an option
+
+1567529762517 Enter COM port name as an option
+
+1567529762518 Enter COM port name as an option
+
+1567529762519 Enter COM port name as an option
+
+1567529762520 Enter COM port name as an option
+
+1567529762521 Enter COM port name as an option
+
+1567529762522 Enter COM port name as an option
+
+1567529762523 Enter COM port name as an option
+
+1567529762524 Enter COM port name as an option
+
+1567529762525 Enter COM port name as an option
+
+1567529762526 Enter COM port name as an option
+
+1567529762527 Enter COM port name as an option
+
+1567529762528 Enter COM port name as an option
+
+1567529762529 Enter COM port name as an option
+
+1567529762530 Enter COM port name as an option
+
+1567529762531 Enter COM port name as an option
+
+1567529762532 Enter COM port name as an option
+
+1567529762533 Enter COM port name as an option
+
+1567529762534 Enter COM port name as an option
+
+1567529762535 Enter COM port name as an option
+
+1567529762536 Enter COM port name as an option
+
+1567529762537 Enter COM port name as an option
+
+1567529762538 Enter COM port name as an option
+
+1567529762539 Enter COM port name as an option
+
+1567529762540 Enter COM port name as an option
+
+1567529762541 Enter COM port name as an option
+
+1567529762542 Enter COM port name as an option
+
+1567529762543 Enter COM port name as an option
+
+1567529762544 Enter COM port name as an option
+
+1567529762545 Enter COM port name as an option
+
+1567529762546 Enter COM port name as an option
+
+1567529762547 Enter COM port name as an option
+
+1567529762548 Enter COM port name as an option
+
+1567529762549 Enter COM port name as an option
+
+1567529762550 Enter COM port name as an option
+
+1567529762551 Enter COM port name as an option
+
+1567529762552 Enter COM port name as an option
+
+1567529762553 Enter COM port name as an option
+
+1567529762554 Enter COM port name as an option
+
+1567529762555 Enter COM port name as an option
+
+1567529762556 Enter COM port name as an option
+
+1567529762557 Enter COM port name as an option
+
+1567529762558 Enter COM port name as an option
+
+1567529762559 Enter COM port name as an option
+
+1567529762560 Enter COM port name as an option
+
+1567529762561 Enter COM port name as an option
+
+1567529762562 Enter COM port name as an option
+
+1567529762563 Enter COM port name as an option
+
+1567529762564 Enter COM port name as an option
+
+1567529762565 Enter COM port name as an option
+
+1567529762566 Enter COM port name as an option
+
+1567529762567 Enter COM port name as an option
+
+1567529762568 Enter COM port name as an option
+
+1567529762569 Enter COM port name as an option
+
+1567529762570 Enter COM port name as an option
+
+1567529762571 Enter COM port name as an option
+
+1567529762572 Enter COM port name as an option
+
+1567529762573 Enter COM port name as an option
+
+1567529762574 Enter COM port name as an option
+
+1567529762575 Enter COM port name as an option
+
+1567529762576 Enter COM port name as an option
+
+1567529762577 Enter COM port name as an option
+
+1567529762578 Enter COM port name as an option
+
+1567529762579 Enter COM port name as an option
+
+1567529762580 Enter COM port name as an option
+
+1567529762581 Enter COM port name as an option
+
+1567529762582 Enter COM port name as an option
+
+1567529762583 Enter COM port name as an option
+
+1567529762584 Enter COM port name as an option
+
+1567529762585 Enter COM port name as an option
+
+1567529762586 Enter COM port name as an option
+
+1567529762587 Enter COM port name as an option
+
+1567529762588 Enter COM port name as an option
+
+1567529762589 Enter COM port name as an option
+
+1567529762590 Enter COM port name as an option
+
+1567529762591 Enter COM port name as an option
+
+1567529762592 Enter COM port name as an option
+
+1567529762593 Enter COM port name as an option
+
+1567529762594 Enter COM port name as an option
+
+1567529762595 Enter COM port name as an option
+
+1567529762596 Enter COM port name as an option
+
+1567529762597 Enter COM port name as an option
+
+1567529762598 Enter COM port name as an option
+
+1567529762599 Enter COM port name as an option
+
+1567529762600 Enter COM port name as an option
+
+1567529762601 Enter COM port name as an option
+
+1567529762602 Enter COM port name as an option
+
+1567529762603 Enter COM port name as an option
+
+1567529762604 Enter COM port name as an option
+
+1567529762605 Enter COM port name as an option
+
+1567529762606 Enter COM port name as an option
+
+1567529762607 Enter COM port name as an option
+
+1567529762608 Enter COM port name as an option
+
+1567529762609 Enter COM port name as an option
+
+1567529762610 Enter COM port name as an option
+
+1567529762611 Enter COM port name as an option
+
+1567529762612 Enter COM port name as an option
+
+1567529762613 Enter COM port name as an option
+
+1567529762614 Enter COM port name as an option
+
+1567529762615 Enter COM port name as an option
+
+1567529762616 Enter COM port name as an option
+
+1567529762617 Enter COM port name as an option
+
+1567529762618 Enter COM port name as an option
+
+1567529762619 Enter COM port name as an option
+
+1567529762620 Enter COM port name as an option
+
+1567529762621 Enter COM port name as an option
+
+1567529762622 Enter COM port name as an option
+
+1567529762623 Enter COM port name as an option
+
+1567529762624 Enter COM port name as an option
+
+1567529762625 Enter COM port name as an option
+
+1567529762626 Enter COM port name as an option
+
+1567529762627 Enter COM port name as an option
+
+1567529762628 Enter COM port name as an option
+
+1567529762629 Enter COM port name as an option
+
+1567529762630 Enter COM port name as an option
+
+1567529762631 Enter COM port name as an option
+
+1567529762632 Enter COM port name as an option
+
+1567529762633 Enter COM port name as an option
+
+1567529762634 Enter COM port name as an option
+
+1567529762635 Enter COM port name as an option
+
+1567529762636 Enter COM port name as an option
+
+1567529762637 Enter COM port name as an option
+
+1567529762638 Enter COM port name as an option
+
+1567529762639 Enter COM port name as an option
+
+1567529762640 Enter COM port name as an option
+
+1567529762641 Enter COM port name as an option
+
+1567529762642 Enter COM port name as an option
+
+1567529762643 Enter COM port name as an option
+
+1567529762644 Enter COM port name as an option
+
+1567529762645 Enter COM port name as an option
+
+1567529762646 Enter COM port name as an option
+
+1567529762647 Enter COM port name as an option
+
+1567529762648 Enter COM port name as an option
+
+1567529762649 Enter COM port name as an option
+
+1567529762650 Enter COM port name as an option
+
+1567529762651 Enter COM port name as an option
+
+1567529762652 Enter COM port name as an option
+
+1567529762653 Enter COM port name as an option
+
+1567529762654 Enter COM port name as an option
+
+1567529762655 Enter COM port name as an option
+
+1567529762656 Enter COM port name as an option
+
+1567529762657 Enter COM port name as an option
+
+1567529762658 Enter COM port name as an option
+
+1567529762659 Enter COM port name as an option
+
+1567529762660 Enter COM port name as an option
+
+1567529762661 Enter COM port name as an option
+
+1567529762662 Enter COM port name as an option
+
+1567529762663 Enter COM port name as an option
+
+1567529762664 Enter COM port name as an option
+
+1567529762665 Enter COM port name as an option
+
+1567529762666 Enter COM port name as an option
+
+1567529762667 Enter COM port name as an option
+
+1567529762668 Enter COM port name as an option
+
+1567529762669 Enter COM port name as an option
+
+1567529762670 Enter COM port name as an option
+
+1567529762671 Enter COM port name as an option
+
+1567529762672 Enter COM port name as an option
+
+1567529762673 Enter COM port name as an option
+
+1567529762674 Enter COM port name as an option
+
+1567529762675 Enter COM port name as an option
+
+1567529762676 Enter COM port name as an option
+
+1567529762677 Enter COM port name as an option
+
+1567529762678 Enter COM port name as an option
+
+1567529762679 Enter COM port name as an option
+
+1567529762680 Enter COM port name as an option
+
+1567529762681 Enter COM port name as an option
+
+1567529762682 Enter COM port name as an option
+
+1567529762683 Enter COM port name as an option
+
+1567529762693 Enter COM port name as an option
+
+1567529762695 Enter COM port name as an option
+
+1567529762696 Enter COM port name as an option
+
+1567529762697 Enter COM port name as an option
+
+1567529762698 Enter COM port name as an option
+
+1567529762699 Enter COM port name as an option
+
+1567529762700 Enter COM port name as an option
+
+1567529762701 Enter COM port name as an option
+
+1567529762702 Enter COM port name as an option
+
+1567529762703 Enter COM port name as an option
+
+1567529762704 Enter COM port name as an option
+
+1567529762705 Enter COM port name as an option
+
+1567529762706 Enter COM port name as an option
+
+1567529762707 Enter COM port name as an option
+
+1567529762708 Enter COM port name as an option
+
+1567529762709 Enter COM port name as an option
+
+1567529762710 Enter COM port name as an option
+
+1567529762711 Enter COM port name as an option
+
+1567529762712 Enter COM port name as an option
+
+1567529762713 Enter COM port name as an option
+
+1567529762714 Enter COM port name as an option
+
+1567529762715 Enter COM port name as an option
+
+1567529762716 Enter COM port name as an option
+
+1567529762717 Enter COM port name as an option
+
+1567529762718 Enter COM port name as an option
+
+1567529762719 Enter COM port name as an option
+
+1567529762720 Enter COM port name as an option
+
+1567529762721 Enter COM port name as an option
+
+1567529762722 Enter COM port name as an option
+
+1567529762723 Enter COM port name as an option
+
+1567529762724 Enter COM port name as an option
+
+1567529762725 Enter COM port name as an option
+
+1567529762726 Enter COM port name as an option
+
+1567529762727 Enter COM port name as an option
+
+1567529762728 Enter COM port name as an option
+
+1567529762729 Enter COM port name as an option
+
+1567529762730 Enter COM port name as an option
+
+1567529762731 Enter COM port name as an option
+
+1567529762732 Enter COM port name as an option
+
+1567529762733 Enter COM port name as an option
+
+1567529762734 Enter COM port name as an option
+
+1567529762735 Enter COM port name as an option
+
+1567529762736 Enter COM port name as an option
+
+1567529762737 Enter COM port name as an option
+
+1567529762738 Enter COM port name as an option
+
+1567529762739 Enter COM port name as an option
+
+1567529762740 Enter COM port name as an option
+
+1567529762741 Enter COM port name as an option
+
+1567529762742 Enter COM port name as an option
+
+1567529762743 Enter COM port name as an option
+
+1567529762744 Enter COM port name as an option
+
+1567529762745 Enter COM port name as an option
+
+1567529762746 Enter COM port name as an option
+
+1567529762747 Enter COM port name as an option
+
+1567529762748 Enter COM port name as an option
+
+1567529762749 Enter COM port name as an option
+
+1567529762750 Enter COM port name as an option
+
+1567529762751 Enter COM port name as an option
+
+1567529762752 Enter COM port name as an option
+
+1567529762753 Enter COM port name as an option
+
+1567529762754 Enter COM port name as an option
+
+1567529762755 Enter COM port name as an option
+
+1567529762756 Enter COM port name as an option
+
+1567529762757 Enter COM port name as an option
+
+1567529762758 Enter COM port name as an option
+
+1567529762759 Enter COM port name as an option
+
+1567529762760 Enter COM port name as an option
+
+1567529762761 Enter COM port name as an option
+
+1567529762762 Enter COM port name as an option
+
+1567529762763 Enter COM port name as an option
+
+1567529762764 Enter COM port name as an option
+
+1567529762765 Enter COM port name as an option
+
+1567529762766 Enter COM port name as an option
+
+1567529762767 Enter COM port name as an option
+
+1567529762768 Enter COM port name as an option
+
+1567529762769 Enter COM port name as an option
+
+1567529762770 Enter COM port name as an option
+
+1567529762771 Enter COM port name as an option
+
+1567529762772 Enter COM port name as an option
+
+1567529762773 Enter COM port name as an option
+
+1567529762774 Enter COM port name as an option
+
+1567529762775 Enter COM port name as an option
+
+1567529762776 Enter COM port name as an option
+
+1567529762777 Enter COM port name as an option
+
+1567529762778 Enter COM port name as an option
+
+1567529762779 Enter COM port name as an option
+
+1567529762780 Enter COM port name as an option
+
+1567529762781 Enter COM port name as an option
+
+1567529762782 Enter COM port name as an option
+
+1567529762783 Enter COM port name as an option
+
+1567529762784 Enter COM port name as an option
+
+1567529762785 Enter COM port name as an option
+
+1567529762786 Enter COM port name as an option
+
+1567529762787 Enter COM port name as an option
+
+1567529762788 Enter COM port name as an option
+
+1567529762789 Enter COM port name as an option
+
+1567529762790 Enter COM port name as an option
+
+1567529762791 Enter COM port name as an option
+
+1567529762792 Enter COM port name as an option
+
+1567529762793 Enter COM port name as an option
+
+1567529762794 Enter COM port name as an option
+
+1567529762795 Enter COM port name as an option
+
+1567529762796 Enter COM port name as an option
+
+1567529762797 Enter COM port name as an option
+
+1567529762798 Enter COM port name as an option
+
+1567529762799 Enter COM port name as an option
+
+1567529762800 Enter COM port name as an option
+
+1567529762801 Enter COM port name as an option
+
+1567529762802 Enter COM port name as an option
+
+1567529762803 Enter COM port name as an option
+
+1567529762804 Enter COM port name as an option
+
+1567529762805 Enter COM port name as an option
+
+1567529762806 Enter COM port name as an option
+
+1567529762807 Enter COM port name as an option
+
+1567529762808 Enter COM port name as an option
+
+1567529762809 Enter COM port name as an option
+
+1567529762810 Enter COM port name as an option
+
+1567529762811 Enter COM port name as an option
+
+1567529762812 Enter COM port name as an option
+
+1567529762813 Enter COM port name as an option
+
+1567529762814 Enter COM port name as an option
+
+1567529762815 Enter COM port name as an option
+
+1567529762816 Enter COM port name as an option
+
+1567529762817 Enter COM port name as an option
+
+1567529762818 Enter COM port name as an option
+
+1567529762819 Enter COM port name as an option
+
+1567529762820 Enter COM port name as an option
+
+1567529762821 Enter COM port name as an option
+
+1567529762822 Enter COM port name as an option
+
+1567529762823 Enter COM port name as an option
+
+1567529762824 Enter COM port name as an option
+
+1567529762825 Enter COM port name as an option
+
+1567529762826 Enter COM port name as an option
+
+1567529762827 Enter COM port name as an option
+
+1567529762828 Enter COM port name as an option
+
+1567529762829 Enter COM port name as an option
+
+1567529762830 Enter COM port name as an option
+
+1567529762831 Enter COM port name as an option
+
+1567529762832 Enter COM port name as an option
+
+1567529762833 Enter COM port name as an option
+
+1567529762834 Enter COM port name as an option
+
+1567529762835 Enter COM port name as an option
+
+1567529762836 Enter COM port name as an option
+
+1567529762837 Enter COM port name as an option
+
+1567529762838 Enter COM port name as an option
+
+1567529762839 Enter COM port name as an option
+
+1567529762840 Enter COM port name as an option
+
+1567529762841 Enter COM port name as an option
+
+1567529762842 Enter COM port name as an option
+
+1567529762843 Enter COM port name as an option
+
+1567529762844 Enter COM port name as an option
+
+1567529762845 Enter COM port name as an option
+
+1567529762846 Enter COM port name as an option
+
+1567529762847 Enter COM port name as an option
+
+1567529762848 Enter COM port name as an option
+
+1567529762849 Enter COM port name as an option
+
+1567529762850 Enter COM port name as an option
+
+1567529762851 Enter COM port name as an option
+
+1567529762852 Enter COM port name as an option
+
+1567529762853 Enter COM port name as an option
+
+1567529762854 Enter COM port name as an option
+
+1567529762855 Enter COM port name as an option
+
+1567529762856 Enter COM port name as an option
+
+1567529762857 Enter COM port name as an option
+
+1567529762858 Enter COM port name as an option
+
+1567529762859 Enter COM port name as an option
+
+1567529762860 Enter COM port name as an option
+
+1567529762861 Enter COM port name as an option
+
+1567529762862 Enter COM port name as an option
+
+1567529762863 Enter COM port name as an option
+
+1567529762864 Enter COM port name as an option
+
+1567529762865 Enter COM port name as an option
+
+1567529762866 Enter COM port name as an option
+
+1567529762867 Enter COM port name as an option
+
+1567529762868 Enter COM port name as an option
+
+1567529762869 Enter COM port name as an option
+
+1567529762870 Enter COM port name as an option
+
+1567529762871 Enter COM port name as an option
+
+1567529762872 Enter COM port name as an option
+
+1567529762873 Enter COM port name as an option
+
+1567529762874 Enter COM port name as an option
+
+1567529762875 Enter COM port name as an option
+
+1567529762876 Enter COM port name as an option
+
+1567529762877 Enter COM port name as an option
+
+1567529762878 Enter COM port name as an option
+
+1567529762879 Enter COM port name as an option
+
+1567529762880 Enter COM port name as an option
+
+1567529762881 Enter COM port name as an option
+
+1567529762882 Enter COM port name as an option
+
+1567529762883 Enter COM port name as an option
+
+1567529762884 Enter COM port name as an option
+
+1567529762885 Enter COM port name as an option
+
+1567529762886 Enter COM port name as an option
+
+1567529762887 Enter COM port name as an option
+
+1567529762888 Enter COM port name as an option
+
+1567529762889 Enter COM port name as an option
+
+1567529762890 Enter COM port name as an option
+
+1567529762891 Enter COM port name as an option
+
+1567529762892 Enter COM port name as an option
+
+1567529762893 Enter COM port name as an option
+
+1567529762894 Enter COM port name as an option
+
+1567529762895 Enter COM port name as an option
+
+1567529762896 Enter COM port name as an option
+
+1567529762897 Enter COM port name as an option
+
+1567529762898 Enter COM port name as an option
+
+1567529762899 Enter COM port name as an option
+
+1567529762900 Enter COM port name as an option
+
+1567529762901 Enter COM port name as an option
+
+1567529762902 Enter COM port name as an option
+
+1567529762903 Enter COM port name as an option
+
+1567529762904 Enter COM port name as an option
+
+1567529762905 Enter COM port name as an option
+
+1567529762906 Enter COM port name as an option
+
+1567529762907 Enter COM port name as an option
+
+1567529762908 Enter COM port name as an option
+
+1567529762909 Enter COM port name as an option
+
+1567529762910 Enter COM port name as an option
+
+1567529762911 Enter COM port name as an option
+
+1567529762912 Enter COM port name as an option
+
+1567529762913 Enter COM port name as an option
+
+1567529762914 Enter COM port name as an option
+
+1567529762915 Enter COM port name as an option
+
+1567529762916 Enter COM port name as an option
+
+1567529762916 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529762917 Enter COM port name as an option
+
+1567529762918 Enter COM port name as an option
+
+1567529762919 Enter COM port name as an option
+
+1567529762920 Enter COM port name as an option
+
+1567529762921 Enter COM port name as an option
+
+1567529762922 Enter COM port name as an option
+
+1567529762923 Enter COM port name as an option
+
+1567529762924 Enter COM port name as an option
+
+1567529762925 Enter COM port name as an option
+
+1567529762926 Enter COM port name as an option
+
+1567529762927 Enter COM port name as an option
+
+1567529762928 Enter COM port name as an option
+
+1567529762929 Enter COM port name as an option
+
+1567529762930 Enter COM port name as an option
+
+1567529762931 Enter COM port name as an option
+
+1567529762932 Enter COM port name as an option
+
+1567529762933 Enter COM port name as an option
+
+1567529762934 Enter COM port name as an option
+
+1567529762935 Enter COM port name as an option
+
+1567529762936 Enter COM port name as an option
+
+1567529762937 Enter COM port name as an option
+
+1567529762938 Enter COM port name as an option
+
+1567529762939 Enter COM port name as an option
+
+1567529762940 Enter COM port name as an option
+
+1567529762941 Enter COM port name as an option
+
+1567529762942 Enter COM port name as an option
+
+1567529762943 Enter COM port name as an option
+
+1567529762944 Enter COM port name as an option
+
+1567529762945 Enter COM port name as an option
+
+1567529762946 Enter COM port name as an option
+
+1567529762947 Enter COM port name as an option
+
+1567529762948 Enter COM port name as an option
+
+1567529762949 Enter COM port name as an option
+
+1567529762950 Enter COM port name as an option
+
+1567529762951 Enter COM port name as an option
+
+1567529762952 Enter COM port name as an option
+
+1567529762953 Enter COM port name as an option
+
+1567529762953 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529762954 COM49 is lost. Reconnecting...
+
+1567529762955 Error during measuring pressure by 2 gauge
+
+1567529762955 COM49 is lost. Reconnecting...
+
+1567529762956 Enter COM port name as an option
+
+1567529762957 Enter COM port name as an option
+
+1567529762958 Enter COM port name as an option
+
+1567529762959 Enter COM port name as an option
+
+1567529762960 Enter COM port name as an option
+
+1567529762961 Enter COM port name as an option
+
+1567529762962 Enter COM port name as an option
+
+1567529762963 Enter COM port name as an option
+
+1567529762964 Enter COM port name as an option
+
+1567529762965 Enter COM port name as an option
+
+1567529762966 Enter COM port name as an option
+
+1567529762967 Enter COM port name as an option
+
+1567529762968 Enter COM port name as an option
+
+1567529762969 Enter COM port name as an option
+
+1567529762970 Enter COM port name as an option
+
+1567529762971 Enter COM port name as an option
+
+1567529762972 Enter COM port name as an option
+
+1567529762973 Enter COM port name as an option
+
+1567529762974 Enter COM port name as an option
+
+1567529762975 Enter COM port name as an option
+
+1567529762976 Enter COM port name as an option
+
+1567529762977 Enter COM port name as an option
+
+1567529762978 Enter COM port name as an option
+
+1567529762979 Enter COM port name as an option
+
+1567529762980 Enter COM port name as an option
+
+1567529762981 Enter COM port name as an option
+
+1567529762982 Enter COM port name as an option
+
+1567529762983 Enter COM port name as an option
+
+1567529762984 Enter COM port name as an option
+
+1567529762985 Enter COM port name as an option
+
+1567529762986 Enter COM port name as an option
+
+1567529762987 Enter COM port name as an option
+
+1567529762988 Enter COM port name as an option
+
+1567529762989 Enter COM port name as an option
+
+1567529762990 Enter COM port name as an option
+
+1567529762991 Enter COM port name as an option
+
+1567529762992 Enter COM port name as an option
+
+1567529762993 Enter COM port name as an option
+
+1567529762994 Enter COM port name as an option
+
+1567529762995 Enter COM port name as an option
+
+1567529762996 Enter COM port name as an option
+
+1567529762997 Enter COM port name as an option
+
+1567529762998 Enter COM port name as an option
+
+1567529762999 Enter COM port name as an option
+
+1567529763000 Enter COM port name as an option
+
+1567529763001 Enter COM port name as an option
+
+1567529763002 Enter COM port name as an option
+
+1567529763003 Enter COM port name as an option
+
+1567529763004 Enter COM port name as an option
+
+1567529763005 Enter COM port name as an option
+
+1567529763006 Enter COM port name as an option
+
+1567529763007 Enter COM port name as an option
+
+1567529763008 Enter COM port name as an option
+
+1567529763009 Enter COM port name as an option
+
+1567529763010 Enter COM port name as an option
+
+1567529763011 Enter COM port name as an option
+
+1567529763012 Enter COM port name as an option
+
+1567529763013 Enter COM port name as an option
+
+1567529763014 Enter COM port name as an option
+
+1567529763015 Enter COM port name as an option
+
+1567529763016 Enter COM port name as an option
+
+1567529763017 Enter COM port name as an option
+
+1567529763018 Enter COM port name as an option
+
+1567529763019 Enter COM port name as an option
+
+1567529763020 Enter COM port name as an option
+
+1567529763021 Enter COM port name as an option
+
+1567529763022 Enter COM port name as an option
+
+1567529763023 Enter COM port name as an option
+
+1567529763024 Enter COM port name as an option
+
+1567529763025 Enter COM port name as an option
+
+1567529763026 Enter COM port name as an option
+
+1567529763027 Enter COM port name as an option
+
+1567529763028 Enter COM port name as an option
+
+1567529763029 Enter COM port name as an option
+
+1567529763030 Enter COM port name as an option
+
+1567529763031 Enter COM port name as an option
+
+1567529763032 Enter COM port name as an option
+
+1567529763033 Enter COM port name as an option
+
+1567529763034 Enter COM port name as an option
+
+1567529763035 Enter COM port name as an option
+
+1567529763036 Enter COM port name as an option
+
+1567529763037 Enter COM port name as an option
+
+1567529763038 Enter COM port name as an option
+
+1567529763039 Enter COM port name as an option
+
+1567529763040 Enter COM port name as an option
+
+1567529763041 Enter COM port name as an option
+
+1567529763042 Enter COM port name as an option
+
+1567529763043 Enter COM port name as an option
+
+1567529763044 Enter COM port name as an option
+
+1567529763045 Enter COM port name as an option
+
+1567529763046 Enter COM port name as an option
+
+1567529763047 Enter COM port name as an option
+
+1567529763048 Enter COM port name as an option
+
+1567529763049 Enter COM port name as an option
+
+1567529763050 Enter COM port name as an option
+
+1567529763051 Enter COM port name as an option
+
+1567529763052 Enter COM port name as an option
+
+1567529763053 Enter COM port name as an option
+
+1567529763054 Enter COM port name as an option
+
+1567529763055 Enter COM port name as an option
+
+1567529763056 Enter COM port name as an option
+
+1567529763057 Enter COM port name as an option
+
+1567529763058 Enter COM port name as an option
+
+1567529763059 Enter COM port name as an option
+
+1567529763060 Enter COM port name as an option
+
+1567529763061 Enter COM port name as an option
+
+1567529763062 Enter COM port name as an option
+
+1567529763063 Enter COM port name as an option
+
+1567529763064 Enter COM port name as an option
+
+1567529763065 Enter COM port name as an option
+
+1567529763066 Enter COM port name as an option
+
+1567529763067 Enter COM port name as an option
+
+1567529763068 Enter COM port name as an option
+
+1567529763069 Enter COM port name as an option
+
+1567529763070 Enter COM port name as an option
+
+1567529763071 Enter COM port name as an option
+
+1567529763072 Enter COM port name as an option
+
+1567529763073 Enter COM port name as an option
+
+1567529763074 Enter COM port name as an option
+
+1567529763075 Enter COM port name as an option
+
+1567529763076 Enter COM port name as an option
+
+1567529763077 Enter COM port name as an option
+
+1567529763078 Enter COM port name as an option
+
+1567529763079 Enter COM port name as an option
+
+1567529763080 Enter COM port name as an option
+
+1567529763081 Enter COM port name as an option
+
+1567529763082 Enter COM port name as an option
+
+1567529763083 Enter COM port name as an option
+
+1567529763084 Enter COM port name as an option
+
+1567529763085 Enter COM port name as an option
+
+1567529763086 Enter COM port name as an option
+
+1567529763087 Enter COM port name as an option
+
+1567529763088 Enter COM port name as an option
+
+1567529763089 Enter COM port name as an option
+
+1567529763090 Enter COM port name as an option
+
+1567529763091 Enter COM port name as an option
+
+1567529763092 Enter COM port name as an option
+
+1567529763093 Enter COM port name as an option
+
+1567529763094 Enter COM port name as an option
+
+1567529763095 Enter COM port name as an option
+
+1567529763096 Enter COM port name as an option
+
+1567529763097 Enter COM port name as an option
+
+1567529763098 Enter COM port name as an option
+
+1567529763099 Enter COM port name as an option
+
+1567529763100 Enter COM port name as an option
+
+1567529763101 Enter COM port name as an option
+
+1567529763102 Enter COM port name as an option
+
+1567529763103 Enter COM port name as an option
+
+1567529763104 Enter COM port name as an option
+
+1567529763105 Enter COM port name as an option
+
+1567529763106 Enter COM port name as an option
+
+1567529763107 Enter COM port name as an option
+
+1567529763108 Enter COM port name as an option
+
+1567529763109 Enter COM port name as an option
+
+1567529763110 Enter COM port name as an option
+
+1567529763111 Enter COM port name as an option
+
+1567529763112 Enter COM port name as an option
+
+1567529763113 Enter COM port name as an option
+
+1567529763114 Enter COM port name as an option
+
+1567529763115 Enter COM port name as an option
+
+1567529763116 Enter COM port name as an option
+
+1567529763117 Enter COM port name as an option
+
+1567529763118 Enter COM port name as an option
+
+1567529763119 Enter COM port name as an option
+
+1567529763120 Enter COM port name as an option
+
+1567529763121 Enter COM port name as an option
+
+1567529763122 Enter COM port name as an option
+
+1567529763123 Enter COM port name as an option
+
+1567529763124 Enter COM port name as an option
+
+1567529763125 Enter COM port name as an option
+
+1567529763126 Enter COM port name as an option
+
+1567529763127 Enter COM port name as an option
+
+1567529763128 Enter COM port name as an option
+
+1567529763129 Enter COM port name as an option
+
+1567529763130 Enter COM port name as an option
+
+1567529763131 Enter COM port name as an option
+
+1567529763132 Enter COM port name as an option
+
+1567529763133 Enter COM port name as an option
+
+1567529763134 Enter COM port name as an option
+
+1567529763135 Enter COM port name as an option
+
+1567529763136 Enter COM port name as an option
+
+1567529763137 Enter COM port name as an option
+
+1567529763138 Enter COM port name as an option
+
+1567529763139 Enter COM port name as an option
+
+1567529763140 Enter COM port name as an option
+
+1567529763141 Enter COM port name as an option
+
+1567529763142 Enter COM port name as an option
+
+1567529763143 Enter COM port name as an option
+
+1567529763144 Enter COM port name as an option
+
+1567529763145 Enter COM port name as an option
+
+1567529763146 Enter COM port name as an option
+
+1567529763147 Enter COM port name as an option
+
+1567529763148 Enter COM port name as an option
+
+1567529763149 Enter COM port name as an option
+
+1567529763150 Enter COM port name as an option
+
+1567529763151 Enter COM port name as an option
+
+1567529763152 Enter COM port name as an option
+
+1567529763153 Enter COM port name as an option
+
+1567529763154 Enter COM port name as an option
+
+1567529763155 Enter COM port name as an option
+
+1567529763156 Enter COM port name as an option
+
+1567529763157 Enter COM port name as an option
+
+1567529763158 Enter COM port name as an option
+
+1567529763159 Enter COM port name as an option
+
+1567529763160 Enter COM port name as an option
+
+1567529763161 Enter COM port name as an option
+
+1567529763162 Enter COM port name as an option
+
+1567529763163 Enter COM port name as an option
+
+1567529763164 Enter COM port name as an option
+
+1567529763165 Enter COM port name as an option
+
+1567529763166 Enter COM port name as an option
+
+1567529763167 Enter COM port name as an option
+
+1567529763168 Enter COM port name as an option
+
+1567529763169 Enter COM port name as an option
+
+1567529763170 Enter COM port name as an option
+
+1567529763171 Enter COM port name as an option
+
+1567529763172 Enter COM port name as an option
+
+1567529763173 Enter COM port name as an option
+
+1567529763174 Enter COM port name as an option
+
+1567529763175 Enter COM port name as an option
+
+1567529763176 Enter COM port name as an option
+
+1567529763177 Enter COM port name as an option
+
+1567529763178 Enter COM port name as an option
+
+1567529763179 Enter COM port name as an option
+
+1567529763180 Enter COM port name as an option
+
+1567529763181 Enter COM port name as an option
+
+1567529763182 Enter COM port name as an option
+
+1567529763183 Enter COM port name as an option
+
+1567529763184 Enter COM port name as an option
+
+1567529763185 Enter COM port name as an option
+
+1567529763186 Enter COM port name as an option
+
+1567529763187 Enter COM port name as an option
+
+1567529763188 Enter COM port name as an option
+
+1567529763189 Enter COM port name as an option
+
+1567529763190 Enter COM port name as an option
+
+1567529763191 Enter COM port name as an option
+
+1567529763192 Enter COM port name as an option
+
+1567529763193 Enter COM port name as an option
+
+1567529763194 Enter COM port name as an option
+
+1567529763195 Enter COM port name as an option
+
+1567529763196 Enter COM port name as an option
+
+1567529763197 Enter COM port name as an option
+
+1567529763198 Enter COM port name as an option
+
+1567529763199 Enter COM port name as an option
+
+1567529763200 Enter COM port name as an option
+
+1567529763201 Enter COM port name as an option
+
+1567529763202 Enter COM port name as an option
+
+1567529763203 Enter COM port name as an option
+
+1567529763204 Enter COM port name as an option
+
+1567529763205 Enter COM port name as an option
+
+1567529763206 Enter COM port name as an option
+
+1567529763207 Enter COM port name as an option
+
+1567529763208 Enter COM port name as an option
+
+1567529763209 Enter COM port name as an option
+
+1567529763210 Enter COM port name as an option
+
+1567529763211 Enter COM port name as an option
+
+1567529763212 Enter COM port name as an option
+
+1567529763213 Enter COM port name as an option
+
+1567529763214 Enter COM port name as an option
+
+1567529763215 Enter COM port name as an option
+
+1567529763216 Enter COM port name as an option
+
+1567529763217 Enter COM port name as an option
+
+1567529763218 Enter COM port name as an option
+
+1567529763219 Enter COM port name as an option
+
+1567529763220 Enter COM port name as an option
+
+1567529763221 Enter COM port name as an option
+
+1567529763222 Enter COM port name as an option
+
+1567529763223 Enter COM port name as an option
+
+1567529763224 Enter COM port name as an option
+
+1567529763225 Enter COM port name as an option
+
+1567529763226 Enter COM port name as an option
+
+1567529763227 Enter COM port name as an option
+
+1567529763228 Enter COM port name as an option
+
+1567529763229 Enter COM port name as an option
+
+1567529763230 Enter COM port name as an option
+
+1567529763231 Enter COM port name as an option
+
+1567529763232 Enter COM port name as an option
+
+1567529763233 Enter COM port name as an option
+
+1567529763234 Enter COM port name as an option
+
+1567529763235 Enter COM port name as an option
+
+1567529763235 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529763235 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529763236 COM49 is lost. Reconnecting...
+
+1567529763236 COM49 is lost. Reconnecting...
+
+1567529763236 COM49 is lost. Reconnecting...
+
+1567529763237 COM49 is lost. Reconnecting...
+
+1567529763237 COM49 is lost. Reconnecting...
+
+1567529763237 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529763237 COM49 is lost. Reconnecting...
+
+1567529763239 Enter COM port name as an option
+
+1567529763240 Enter COM port name as an option
+
+1567529763241 Enter COM port name as an option
+
+1567529763242 Enter COM port name as an option
+
+1567529763243 Enter COM port name as an option
+
+1567529763244 Enter COM port name as an option
+
+1567529763245 Enter COM port name as an option
+
+1567529763246 Enter COM port name as an option
+
+1567529763247 Enter COM port name as an option
+
+1567529763248 Enter COM port name as an option
+
+1567529763249 Enter COM port name as an option
+
+1567529763250 Enter COM port name as an option
+
+1567529763251 Enter COM port name as an option
+
+1567529763252 Enter COM port name as an option
+
+1567529763253 Enter COM port name as an option
+
+1567529763254 Enter COM port name as an option
+
+1567529763255 Enter COM port name as an option
+
+1567529763256 Enter COM port name as an option
+
+1567529763257 Enter COM port name as an option
+
+1567529763258 Enter COM port name as an option
+
+1567529763259 Enter COM port name as an option
+
+1567529763260 Enter COM port name as an option
+
+1567529763261 Enter COM port name as an option
+
+1567529763262 Enter COM port name as an option
+
+1567529763263 Enter COM port name as an option
+
+1567529763264 Enter COM port name as an option
+
+1567529763265 Enter COM port name as an option
+
+1567529763266 Enter COM port name as an option
+
+1567529763267 Enter COM port name as an option
+
+1567529763268 Enter COM port name as an option
+
+1567529763269 Enter COM port name as an option
+
+1567529763270 Enter COM port name as an option
+
+1567529763271 Enter COM port name as an option
+
+1567529763272 Enter COM port name as an option
+
+1567529763273 Enter COM port name as an option
+
+1567529763273 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763274 Enter COM port name as an option
+
+1567529763275 Enter COM port name as an option
+
+1567529763276 Enter COM port name as an option
+
+1567529763277 Enter COM port name as an option
+
+1567529763278 Enter COM port name as an option
+
+1567529763279 Enter COM port name as an option
+
+1567529763280 Enter COM port name as an option
+
+1567529763281 Enter COM port name as an option
+
+1567529763282 Enter COM port name as an option
+
+1567529763283 Enter COM port name as an option
+
+1567529763284 Enter COM port name as an option
+
+1567529763285 Enter COM port name as an option
+
+1567529763285 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763286 Enter COM port name as an option
+
+1567529763287 Enter COM port name as an option
+
+1567529763288 Enter COM port name as an option
+
+1567529763289 Enter COM port name as an option
+
+1567529763290 Enter COM port name as an option
+
+1567529763291 Enter COM port name as an option
+
+1567529763292 Enter COM port name as an option
+
+1567529763293 Enter COM port name as an option
+
+1567529763294 Enter COM port name as an option
+
+1567529763295 Enter COM port name as an option
+
+1567529763296 Enter COM port name as an option
+
+1567529763296 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763296 Enter COM port name as an option
+
+1567529763297 Enter COM port name as an option
+
+1567529763298 Enter COM port name as an option
+
+1567529763299 Enter COM port name as an option
+
+1567529763300 Enter COM port name as an option
+
+1567529763301 Enter COM port name as an option
+
+1567529763302 Enter COM port name as an option
+
+1567529763303 Enter COM port name as an option
+
+1567529763304 Enter COM port name as an option
+
+1567529763305 Enter COM port name as an option
+
+1567529763306 Enter COM port name as an option
+
+1567529763307 Enter COM port name as an option
+
+1567529763308 Enter COM port name as an option
+
+1567529763309 Enter COM port name as an option
+
+1567529763310 Enter COM port name as an option
+
+1567529763311 Enter COM port name as an option
+
+1567529763312 Enter COM port name as an option
+
+1567529763313 Enter COM port name as an option
+
+1567529763314 Enter COM port name as an option
+
+1567529763315 Enter COM port name as an option
+
+1567529763316 Enter COM port name as an option
+
+1567529763317 Enter COM port name as an option
+
+1567529763318 Enter COM port name as an option
+
+1567529763319 Enter COM port name as an option
+
+1567529763320 Enter COM port name as an option
+
+1567529763321 Enter COM port name as an option
+
+1567529763322 Enter COM port name as an option
+
+1567529763323 Enter COM port name as an option
+
+1567529763324 Enter COM port name as an option
+
+1567529763325 Enter COM port name as an option
+
+1567529763326 Enter COM port name as an option
+
+1567529763327 Enter COM port name as an option
+
+1567529763328 Enter COM port name as an option
+
+1567529763329 Enter COM port name as an option
+
+1567529763330 Enter COM port name as an option
+
+1567529763331 Enter COM port name as an option
+
+1567529763332 Enter COM port name as an option
+
+1567529763333 Enter COM port name as an option
+
+1567529763334 Enter COM port name as an option
+
+1567529763335 Enter COM port name as an option
+
+1567529763336 Enter COM port name as an option
+
+1567529763337 Enter COM port name as an option
+
+1567529763338 Enter COM port name as an option
+
+1567529763339 Enter COM port name as an option
+
+1567529763340 Enter COM port name as an option
+
+1567529763341 Enter COM port name as an option
+
+1567529763342 Enter COM port name as an option
+
+1567529763343 Enter COM port name as an option
+
+1567529763344 Enter COM port name as an option
+
+1567529763345 Enter COM port name as an option
+
+1567529763346 Enter COM port name as an option
+
+1567529763347 Enter COM port name as an option
+
+1567529763348 Enter COM port name as an option
+
+1567529763349 Enter COM port name as an option
+
+1567529763350 Enter COM port name as an option
+
+1567529763351 Enter COM port name as an option
+
+1567529763352 Enter COM port name as an option
+
+1567529763353 Enter COM port name as an option
+
+1567529763354 Enter COM port name as an option
+
+1567529763355 Enter COM port name as an option
+
+1567529763356 Enter COM port name as an option
+
+1567529763357 Enter COM port name as an option
+
+1567529763358 Enter COM port name as an option
+
+1567529763359 Enter COM port name as an option
+
+1567529763360 Enter COM port name as an option
+
+1567529763361 Enter COM port name as an option
+
+1567529763362 Enter COM port name as an option
+
+1567529763363 Enter COM port name as an option
+
+1567529763364 Enter COM port name as an option
+
+1567529763365 Enter COM port name as an option
+
+1567529763366 Enter COM port name as an option
+
+1567529763367 Enter COM port name as an option
+
+1567529763368 Enter COM port name as an option
+
+1567529763369 Enter COM port name as an option
+
+1567529763370 Enter COM port name as an option
+
+1567529763371 Enter COM port name as an option
+
+1567529763372 Enter COM port name as an option
+
+1567529763373 Enter COM port name as an option
+
+1567529763374 Enter COM port name as an option
+
+1567529763375 Enter COM port name as an option
+
+1567529763376 Enter COM port name as an option
+
+1567529763377 Enter COM port name as an option
+
+1567529763378 Enter COM port name as an option
+
+1567529763379 Enter COM port name as an option
+
+1567529763380 Enter COM port name as an option
+
+1567529763381 Enter COM port name as an option
+
+1567529763382 Enter COM port name as an option
+
+1567529763383 Enter COM port name as an option
+
+1567529763384 Enter COM port name as an option
+
+1567529763385 Enter COM port name as an option
+
+1567529763386 Enter COM port name as an option
+
+1567529763387 Enter COM port name as an option
+
+1567529763388 Enter COM port name as an option
+
+1567529763389 Enter COM port name as an option
+
+1567529763390 Enter COM port name as an option
+
+1567529763391 Enter COM port name as an option
+
+1567529763392 Enter COM port name as an option
+
+1567529763393 Enter COM port name as an option
+
+1567529763394 Enter COM port name as an option
+
+1567529763395 Enter COM port name as an option
+
+1567529763396 Enter COM port name as an option
+
+1567529763397 Enter COM port name as an option
+
+1567529763398 Enter COM port name as an option
+
+1567529763399 Enter COM port name as an option
+
+1567529763400 Enter COM port name as an option
+
+1567529763401 Enter COM port name as an option
+
+1567529763402 Enter COM port name as an option
+
+1567529763403 Enter COM port name as an option
+
+1567529763404 Enter COM port name as an option
+
+1567529763405 Enter COM port name as an option
+
+1567529763406 Enter COM port name as an option
+
+1567529763407 Enter COM port name as an option
+
+1567529763408 Enter COM port name as an option
+
+1567529763409 Enter COM port name as an option
+
+1567529763410 Enter COM port name as an option
+
+1567529763411 Enter COM port name as an option
+
+1567529763412 Enter COM port name as an option
+
+1567529763413 Enter COM port name as an option
+
+1567529763414 Enter COM port name as an option
+
+1567529763415 Enter COM port name as an option
+
+1567529763416 Enter COM port name as an option
+
+1567529763417 Enter COM port name as an option
+
+1567529763418 Enter COM port name as an option
+
+1567529763419 Enter COM port name as an option
+
+1567529763420 Enter COM port name as an option
+
+1567529763421 Enter COM port name as an option
+
+1567529763422 Enter COM port name as an option
+
+1567529763423 Enter COM port name as an option
+
+1567529763424 Enter COM port name as an option
+
+1567529763425 Enter COM port name as an option
+
+1567529763426 Enter COM port name as an option
+
+1567529763427 Enter COM port name as an option
+
+1567529763428 Enter COM port name as an option
+
+1567529763429 Enter COM port name as an option
+
+1567529763430 Enter COM port name as an option
+
+1567529763431 Enter COM port name as an option
+
+1567529763432 Enter COM port name as an option
+
+1567529763433 Enter COM port name as an option
+
+1567529763434 Enter COM port name as an option
+
+1567529763435 Enter COM port name as an option
+
+1567529763436 Enter COM port name as an option
+
+1567529763437 Enter COM port name as an option
+
+1567529763438 Enter COM port name as an option
+
+1567529763439 Enter COM port name as an option
+
+1567529763440 Enter COM port name as an option
+
+1567529763441 Enter COM port name as an option
+
+1567529763442 Enter COM port name as an option
+
+1567529763443 Enter COM port name as an option
+
+1567529763444 Enter COM port name as an option
+
+1567529763445 Enter COM port name as an option
+
+1567529763446 Enter COM port name as an option
+
+1567529763447 Enter COM port name as an option
+
+1567529763448 Enter COM port name as an option
+
+1567529763449 Enter COM port name as an option
+
+1567529763450 Enter COM port name as an option
+
+1567529763451 Enter COM port name as an option
+
+1567529763452 Enter COM port name as an option
+
+1567529763453 Enter COM port name as an option
+
+1567529763454 Enter COM port name as an option
+
+1567529763455 Enter COM port name as an option
+
+1567529763456 Enter COM port name as an option
+
+1567529763457 Enter COM port name as an option
+
+1567529763458 Enter COM port name as an option
+
+1567529763459 Enter COM port name as an option
+
+1567529763460 Enter COM port name as an option
+
+1567529763461 Enter COM port name as an option
+
+1567529763462 Enter COM port name as an option
+
+1567529763463 Enter COM port name as an option
+
+1567529763464 Enter COM port name as an option
+
+1567529763465 Enter COM port name as an option
+
+1567529763466 Enter COM port name as an option
+
+1567529763467 Enter COM port name as an option
+
+1567529763468 Enter COM port name as an option
+
+1567529763469 Enter COM port name as an option
+
+1567529763470 Enter COM port name as an option
+
+1567529763471 Enter COM port name as an option
+
+1567529763472 Enter COM port name as an option
+
+1567529763473 Enter COM port name as an option
+
+1567529763474 Enter COM port name as an option
+
+1567529763475 Enter COM port name as an option
+
+1567529763476 Enter COM port name as an option
+
+1567529763477 Enter COM port name as an option
+
+1567529763478 Enter COM port name as an option
+
+1567529763479 Enter COM port name as an option
+
+1567529763480 Enter COM port name as an option
+
+1567529763481 Enter COM port name as an option
+
+1567529763482 Enter COM port name as an option
+
+1567529763483 Enter COM port name as an option
+
+1567529763484 Enter COM port name as an option
+
+1567529763485 Enter COM port name as an option
+
+1567529763486 Enter COM port name as an option
+
+1567529763487 Enter COM port name as an option
+
+1567529763488 Enter COM port name as an option
+
+1567529763489 Enter COM port name as an option
+
+1567529763490 Enter COM port name as an option
+
+1567529763491 Enter COM port name as an option
+
+1567529763492 Enter COM port name as an option
+
+1567529763493 Enter COM port name as an option
+
+1567529763494 Enter COM port name as an option
+
+1567529763495 Enter COM port name as an option
+
+1567529763496 Enter COM port name as an option
+
+1567529763497 Enter COM port name as an option
+
+1567529763498 Enter COM port name as an option
+
+1567529763499 Enter COM port name as an option
+
+1567529763500 Enter COM port name as an option
+
+1567529763501 Enter COM port name as an option
+
+1567529763502 Enter COM port name as an option
+
+1567529763503 Enter COM port name as an option
+
+1567529763504 Enter COM port name as an option
+
+1567529763505 Enter COM port name as an option
+
+1567529763506 Enter COM port name as an option
+
+1567529763507 Enter COM port name as an option
+
+1567529763508 Enter COM port name as an option
+
+1567529763509 Enter COM port name as an option
+
+1567529763510 Enter COM port name as an option
+
+1567529763511 Enter COM port name as an option
+
+1567529763512 Enter COM port name as an option
+
+1567529763513 Enter COM port name as an option
+
+1567529763514 Enter COM port name as an option
+
+1567529763515 Enter COM port name as an option
+
+1567529763516 Enter COM port name as an option
+
+1567529763517 Enter COM port name as an option
+
+1567529763518 Enter COM port name as an option
+
+1567529763519 Enter COM port name as an option
+
+1567529763520 Enter COM port name as an option
+
+1567529763521 Enter COM port name as an option
+
+1567529763522 Enter COM port name as an option
+
+1567529763523 Enter COM port name as an option
+
+1567529763524 Enter COM port name as an option
+
+1567529763525 Enter COM port name as an option
+
+1567529763526 Enter COM port name as an option
+
+1567529763527 Enter COM port name as an option
+
+1567529763528 Enter COM port name as an option
+
+1567529763529 Enter COM port name as an option
+
+1567529763530 Enter COM port name as an option
+
+1567529763531 Enter COM port name as an option
+
+1567529763532 Enter COM port name as an option
+
+1567529763533 Enter COM port name as an option
+
+1567529763534 Enter COM port name as an option
+
+1567529763535 Enter COM port name as an option
+
+1567529763536 Enter COM port name as an option
+
+1567529763537 Enter COM port name as an option
+
+1567529763538 Enter COM port name as an option
+
+1567529763539 Enter COM port name as an option
+
+1567529763540 Enter COM port name as an option
+
+1567529763541 Enter COM port name as an option
+
+1567529763542 Enter COM port name as an option
+
+1567529763543 Enter COM port name as an option
+
+1567529763544 Enter COM port name as an option
+
+1567529763545 Enter COM port name as an option
+
+1567529763546 Enter COM port name as an option
+
+1567529763547 Enter COM port name as an option
+
+1567529763548 Enter COM port name as an option
+
+1567529763549 Enter COM port name as an option
+
+1567529763550 Enter COM port name as an option
+
+1567529763551 Enter COM port name as an option
+
+1567529763552 Enter COM port name as an option
+
+1567529763553 Enter COM port name as an option
+
+1567529763554 Enter COM port name as an option
+
+1567529763555 Enter COM port name as an option
+
+1567529763556 Enter COM port name as an option
+
+1567529763557 Enter COM port name as an option
+
+1567529763558 Enter COM port name as an option
+
+1567529763559 Enter COM port name as an option
+
+1567529763560 Enter COM port name as an option
+
+1567529763561 Enter COM port name as an option
+
+1567529763562 Enter COM port name as an option
+
+1567529763563 Enter COM port name as an option
+
+1567529763564 Enter COM port name as an option
+
+1567529763565 Enter COM port name as an option
+
+1567529763566 Enter COM port name as an option
+
+1567529763567 Enter COM port name as an option
+
+1567529763568 Enter COM port name as an option
+
+1567529763569 Enter COM port name as an option
+
+1567529763570 Enter COM port name as an option
+
+1567529763571 Enter COM port name as an option
+
+1567529763572 Enter COM port name as an option
+
+1567529763573 Enter COM port name as an option
+
+1567529763574 Enter COM port name as an option
+
+1567529763575 Enter COM port name as an option
+
+1567529763576 Enter COM port name as an option
+
+1567529763577 Enter COM port name as an option
+
+1567529763578 Enter COM port name as an option
+
+1567529763579 Enter COM port name as an option
+
+1567529763580 Enter COM port name as an option
+
+1567529763581 Enter COM port name as an option
+
+1567529763582 Enter COM port name as an option
+
+1567529763583 Enter COM port name as an option
+
+1567529763584 Enter COM port name as an option
+
+1567529763585 Enter COM port name as an option
+
+1567529763586 Enter COM port name as an option
+
+1567529763587 Enter COM port name as an option
+
+1567529763588 Enter COM port name as an option
+
+1567529763589 Enter COM port name as an option
+
+1567529763590 Enter COM port name as an option
+
+1567529763591 Enter COM port name as an option
+
+1567529763592 Enter COM port name as an option
+
+1567529763593 Enter COM port name as an option
+
+1567529763594 Enter COM port name as an option
+
+1567529763595 Enter COM port name as an option
+
+1567529763596 Enter COM port name as an option
+
+1567529763597 Enter COM port name as an option
+
+1567529763598 Enter COM port name as an option
+
+1567529763599 Enter COM port name as an option
+
+1567529763600 Enter COM port name as an option
+
+1567529763601 Enter COM port name as an option
+
+1567529763602 Enter COM port name as an option
+
+1567529763603 Enter COM port name as an option
+
+1567529763604 Enter COM port name as an option
+
+1567529763605 Enter COM port name as an option
+
+1567529763606 Enter COM port name as an option
+
+1567529763607 Enter COM port name as an option
+
+1567529763608 Enter COM port name as an option
+
+1567529763609 Enter COM port name as an option
+
+1567529763610 Enter COM port name as an option
+
+1567529763611 Enter COM port name as an option
+
+1567529763612 Enter COM port name as an option
+
+1567529763613 Enter COM port name as an option
+
+1567529763614 Enter COM port name as an option
+
+1567529763615 Enter COM port name as an option
+
+1567529763616 Enter COM port name as an option
+
+1567529763617 Enter COM port name as an option
+
+1567529763618 Enter COM port name as an option
+
+1567529763619 Enter COM port name as an option
+
+1567529763620 Enter COM port name as an option
+
+1567529763621 Enter COM port name as an option
+
+1567529763622 Enter COM port name as an option
+
+1567529763623 Enter COM port name as an option
+
+1567529763624 Enter COM port name as an option
+
+1567529763625 Enter COM port name as an option
+
+1567529763626 Enter COM port name as an option
+
+1567529763627 Enter COM port name as an option
+
+1567529763628 Enter COM port name as an option
+
+1567529763629 Enter COM port name as an option
+
+1567529763630 Enter COM port name as an option
+
+1567529763631 Enter COM port name as an option
+
+1567529763632 Enter COM port name as an option
+
+1567529763633 Enter COM port name as an option
+
+1567529763634 Enter COM port name as an option
+
+1567529763635 Enter COM port name as an option
+
+1567529763636 Enter COM port name as an option
+
+1567529763637 Enter COM port name as an option
+
+1567529763638 Enter COM port name as an option
+
+1567529763639 Enter COM port name as an option
+
+1567529763640 Enter COM port name as an option
+
+1567529763641 Enter COM port name as an option
+
+1567529763642 Enter COM port name as an option
+
+1567529763643 Enter COM port name as an option
+
+1567529763644 Enter COM port name as an option
+
+1567529763645 Enter COM port name as an option
+
+1567529763646 Enter COM port name as an option
+
+1567529763647 Enter COM port name as an option
+
+1567529763648 Enter COM port name as an option
+
+1567529763649 Enter COM port name as an option
+
+1567529763650 Enter COM port name as an option
+
+1567529763651 Enter COM port name as an option
+
+1567529763652 Enter COM port name as an option
+
+1567529763653 Enter COM port name as an option
+
+1567529763654 Enter COM port name as an option
+
+1567529763655 Enter COM port name as an option
+
+1567529763656 Enter COM port name as an option
+
+1567529763662 Enter COM port name as an option
+
+1567529763663 Enter COM port name as an option
+
+1567529763664 Enter COM port name as an option
+
+1567529763665 Enter COM port name as an option
+
+1567529763666 Enter COM port name as an option
+
+1567529763667 Enter COM port name as an option
+
+1567529763668 Enter COM port name as an option
+
+1567529763669 Enter COM port name as an option
+
+1567529763670 Enter COM port name as an option
+
+1567529763671 Enter COM port name as an option
+
+1567529763672 Enter COM port name as an option
+
+1567529763673 Enter COM port name as an option
+
+1567529763674 Enter COM port name as an option
+
+1567529763675 Enter COM port name as an option
+
+1567529763676 Enter COM port name as an option
+
+1567529763677 Enter COM port name as an option
+
+1567529763678 Enter COM port name as an option
+
+1567529763679 Enter COM port name as an option
+
+1567529763680 Enter COM port name as an option
+
+1567529763681 Enter COM port name as an option
+
+1567529763682 Enter COM port name as an option
+
+1567529763683 Enter COM port name as an option
+
+1567529763684 Enter COM port name as an option
+
+1567529763685 Enter COM port name as an option
+
+1567529763686 Enter COM port name as an option
+
+1567529763687 Enter COM port name as an option
+
+1567529763688 Enter COM port name as an option
+
+1567529763689 Enter COM port name as an option
+
+1567529763690 Enter COM port name as an option
+
+1567529763691 Enter COM port name as an option
+
+1567529763692 Enter COM port name as an option
+
+1567529763693 Enter COM port name as an option
+
+1567529763694 Enter COM port name as an option
+
+1567529763695 Enter COM port name as an option
+
+1567529763696 Enter COM port name as an option
+
+1567529763697 Enter COM port name as an option
+
+1567529763698 Enter COM port name as an option
+
+1567529763699 Enter COM port name as an option
+
+1567529763700 Enter COM port name as an option
+
+1567529763701 Enter COM port name as an option
+
+1567529763702 Enter COM port name as an option
+
+1567529763703 Enter COM port name as an option
+
+1567529763704 Enter COM port name as an option
+
+1567529763705 Enter COM port name as an option
+
+1567529763706 Enter COM port name as an option
+
+1567529763707 Enter COM port name as an option
+
+1567529763708 Enter COM port name as an option
+
+1567529763709 Enter COM port name as an option
+
+1567529763710 Enter COM port name as an option
+
+1567529763711 Enter COM port name as an option
+
+1567529763712 Enter COM port name as an option
+
+1567529763713 Enter COM port name as an option
+
+1567529763714 Enter COM port name as an option
+
+1567529763715 Enter COM port name as an option
+
+1567529763716 Enter COM port name as an option
+
+1567529763717 Enter COM port name as an option
+
+1567529763718 Enter COM port name as an option
+
+1567529763719 Enter COM port name as an option
+
+1567529763720 Enter COM port name as an option
+
+1567529763721 Enter COM port name as an option
+
+1567529763722 Enter COM port name as an option
+
+1567529763723 Enter COM port name as an option
+
+1567529763724 Enter COM port name as an option
+
+1567529763725 Enter COM port name as an option
+
+1567529763726 Enter COM port name as an option
+
+1567529763727 Enter COM port name as an option
+
+1567529763728 Enter COM port name as an option
+
+1567529763729 Enter COM port name as an option
+
+1567529763730 Enter COM port name as an option
+
+1567529763731 Enter COM port name as an option
+
+1567529763732 Enter COM port name as an option
+
+1567529763733 Enter COM port name as an option
+
+1567529763734 Enter COM port name as an option
+
+1567529763735 Enter COM port name as an option
+
+1567529763736 Enter COM port name as an option
+
+1567529763737 Enter COM port name as an option
+
+1567529763738 Enter COM port name as an option
+
+1567529763739 Enter COM port name as an option
+
+1567529763740 Enter COM port name as an option
+
+1567529763741 Enter COM port name as an option
+
+1567529763742 Enter COM port name as an option
+
+1567529763743 Enter COM port name as an option
+
+1567529763744 Enter COM port name as an option
+
+1567529763745 Enter COM port name as an option
+
+1567529763746 Enter COM port name as an option
+
+1567529763747 Enter COM port name as an option
+
+1567529763748 Enter COM port name as an option
+
+1567529763749 Enter COM port name as an option
+
+1567529763750 Enter COM port name as an option
+
+1567529763751 Enter COM port name as an option
+
+1567529763752 Enter COM port name as an option
+
+1567529763753 Enter COM port name as an option
+
+1567529763754 Enter COM port name as an option
+
+1567529763755 Enter COM port name as an option
+
+1567529763756 Enter COM port name as an option
+
+1567529763757 Enter COM port name as an option
+
+1567529763758 Enter COM port name as an option
+
+1567529763759 Enter COM port name as an option
+
+1567529763760 Enter COM port name as an option
+
+1567529763761 Enter COM port name as an option
+
+1567529763762 Enter COM port name as an option
+
+1567529763763 Enter COM port name as an option
+
+1567529763764 Enter COM port name as an option
+
+1567529763765 Enter COM port name as an option
+
+1567529763766 Enter COM port name as an option
+
+1567529763767 Enter COM port name as an option
+
+1567529763768 Enter COM port name as an option
+
+1567529763769 Enter COM port name as an option
+
+1567529763770 Enter COM port name as an option
+
+1567529763771 Enter COM port name as an option
+
+1567529763772 Enter COM port name as an option
+
+1567529763773 Enter COM port name as an option
+
+1567529763774 Enter COM port name as an option
+
+1567529763775 Enter COM port name as an option
+
+1567529763776 Enter COM port name as an option
+
+1567529763777 Enter COM port name as an option
+
+1567529763778 Enter COM port name as an option
+
+1567529763779 Enter COM port name as an option
+
+1567529763780 Enter COM port name as an option
+
+1567529763781 Enter COM port name as an option
+
+1567529763782 Enter COM port name as an option
+
+1567529763783 Enter COM port name as an option
+
+1567529763784 Enter COM port name as an option
+
+1567529763785 Enter COM port name as an option
+
+1567529763786 Enter COM port name as an option
+
+1567529763787 Enter COM port name as an option
+
+1567529763788 Enter COM port name as an option
+
+1567529763789 Enter COM port name as an option
+
+1567529763790 Enter COM port name as an option
+
+1567529763791 Enter COM port name as an option
+
+1567529763792 Enter COM port name as an option
+
+1567529763793 Enter COM port name as an option
+
+1567529763794 Enter COM port name as an option
+
+1567529763795 Enter COM port name as an option
+
+1567529763796 Enter COM port name as an option
+
+1567529763797 Enter COM port name as an option
+
+1567529763798 Enter COM port name as an option
+
+1567529763799 Enter COM port name as an option
+
+1567529763800 Enter COM port name as an option
+
+1567529763801 Enter COM port name as an option
+
+1567529763802 Enter COM port name as an option
+
+1567529763803 Enter COM port name as an option
+
+1567529763804 Enter COM port name as an option
+
+1567529763805 Enter COM port name as an option
+
+1567529763806 Enter COM port name as an option
+
+1567529763807 Enter COM port name as an option
+
+1567529763808 Enter COM port name as an option
+
+1567529763809 Enter COM port name as an option
+
+1567529763810 Enter COM port name as an option
+
+1567529763811 Enter COM port name as an option
+
+1567529763812 Enter COM port name as an option
+
+1567529763813 Enter COM port name as an option
+
+1567529763814 Enter COM port name as an option
+
+1567529763815 Enter COM port name as an option
+
+1567529763816 Enter COM port name as an option
+
+1567529763817 Enter COM port name as an option
+
+1567529763818 Enter COM port name as an option
+
+1567529763819 Enter COM port name as an option
+
+1567529763820 Enter COM port name as an option
+
+1567529763821 Enter COM port name as an option
+
+1567529763822 Enter COM port name as an option
+
+1567529763823 Enter COM port name as an option
+
+1567529763824 Enter COM port name as an option
+
+1567529763825 Enter COM port name as an option
+
+1567529763826 Enter COM port name as an option
+
+1567529763827 Enter COM port name as an option
+
+1567529763828 Enter COM port name as an option
+
+1567529763829 Enter COM port name as an option
+
+1567529763830 Enter COM port name as an option
+
+1567529763831 Enter COM port name as an option
+
+1567529763832 Enter COM port name as an option
+
+1567529763833 Enter COM port name as an option
+
+1567529763834 Enter COM port name as an option
+
+1567529763835 Enter COM port name as an option
+
+1567529763836 Enter COM port name as an option
+
+1567529763837 Enter COM port name as an option
+
+1567529763838 Enter COM port name as an option
+
+1567529763839 Enter COM port name as an option
+
+1567529763840 Enter COM port name as an option
+
+1567529763841 Enter COM port name as an option
+
+1567529763842 Enter COM port name as an option
+
+1567529763843 Enter COM port name as an option
+
+1567529763844 Enter COM port name as an option
+
+1567529763845 Enter COM port name as an option
+
+1567529763846 Enter COM port name as an option
+
+1567529763847 Enter COM port name as an option
+
+1567529763848 Enter COM port name as an option
+
+1567529763849 Enter COM port name as an option
+
+1567529763850 Enter COM port name as an option
+
+1567529763851 Enter COM port name as an option
+
+1567529763852 Enter COM port name as an option
+
+1567529763853 Enter COM port name as an option
+
+1567529763854 Enter COM port name as an option
+
+1567529763855 Enter COM port name as an option
+
+1567529763856 Enter COM port name as an option
+
+1567529763857 Enter COM port name as an option
+
+1567529763858 Enter COM port name as an option
+
+1567529763859 Enter COM port name as an option
+
+1567529763860 Enter COM port name as an option
+
+1567529763861 Enter COM port name as an option
+
+1567529763862 Enter COM port name as an option
+
+1567529763863 Enter COM port name as an option
+
+1567529763864 Enter COM port name as an option
+
+1567529763866 Enter COM port name as an option
+
+1567529763867 Enter COM port name as an option
+
+1567529763868 Enter COM port name as an option
+
+1567529763869 Enter COM port name as an option
+
+1567529763870 Enter COM port name as an option
+
+1567529763871 Enter COM port name as an option
+
+1567529763872 Enter COM port name as an option
+
+1567529763873 Enter COM port name as an option
+
+1567529763874 Enter COM port name as an option
+
+1567529763875 Enter COM port name as an option
+
+1567529763876 Enter COM port name as an option
+
+1567529763877 Enter COM port name as an option
+
+1567529763879 Enter COM port name as an option
+
+1567529763881 Enter COM port name as an option
+
+1567529763882 Enter COM port name as an option
+
+1567529763883 Enter COM port name as an option
+
+1567529763884 Enter COM port name as an option
+
+1567529763885 Enter COM port name as an option
+
+1567529763886 Enter COM port name as an option
+
+1567529763887 Enter COM port name as an option
+
+1567529763888 Enter COM port name as an option
+
+1567529763889 Enter COM port name as an option
+
+1567529763891 Enter COM port name as an option
+
+1567529763892 Enter COM port name as an option
+
+1567529763893 Enter COM port name as an option
+
+1567529763894 Enter COM port name as an option
+
+1567529763895 Enter COM port name as an option
+
+1567529763896 Enter COM port name as an option
+
+1567529763897 Enter COM port name as an option
+
+1567529763898 Enter COM port name as an option
+
+1567529763899 Enter COM port name as an option
+
+1567529763900 Enter COM port name as an option
+
+1567529763901 Enter COM port name as an option
+
+1567529763902 Enter COM port name as an option
+
+1567529763903 Enter COM port name as an option
+
+1567529763904 Enter COM port name as an option
+
+1567529763905 Enter COM port name as an option
+
+1567529763906 Enter COM port name as an option
+
+1567529763908 Enter COM port name as an option
+
+1567529763909 Enter COM port name as an option
+
+1567529763910 Enter COM port name as an option
+
+1567529763911 Enter COM port name as an option
+
+1567529763912 Enter COM port name as an option
+
+1567529763913 Enter COM port name as an option
+
+1567529763914 Enter COM port name as an option
+
+1567529763915 Enter COM port name as an option
+
+1567529763916 Enter COM port name as an option
+
+1567529763919 Enter COM port name as an option
+
+1567529763920 Enter COM port name as an option
+
+1567529763921 Enter COM port name as an option
+
+1567529763922 Enter COM port name as an option
+
+1567529763923 Enter COM port name as an option
+
+1567529763924 Enter COM port name as an option
+
+1567529763925 Enter COM port name as an option
+
+1567529763926 Enter COM port name as an option
+
+1567529763927 Enter COM port name as an option
+
+1567529763928 Enter COM port name as an option
+
+1567529763929 Enter COM port name as an option
+
+1567529763930 Enter COM port name as an option
+
+1567529763931 Enter COM port name as an option
+
+1567529763932 Enter COM port name as an option
+
+1567529763933 Enter COM port name as an option
+
+1567529763934 Enter COM port name as an option
+
+1567529763935 Enter COM port name as an option
+
+1567529763936 Enter COM port name as an option
+
+1567529763937 Enter COM port name as an option
+
+1567529763938 Enter COM port name as an option
+
+1567529763939 Enter COM port name as an option
+
+1567529763940 Enter COM port name as an option
+
+1567529763941 Enter COM port name as an option
+
+1567529763942 Enter COM port name as an option
+
+1567529763943 Enter COM port name as an option
+
+1567529763946 Enter COM port name as an option
+
+1567529763949 Enter COM port name as an option
+
+1567529763950 Enter COM port name as an option
+
+1567529763951 Enter COM port name as an option
+
+1567529763952 Enter COM port name as an option
+
+1567529763953 Enter COM port name as an option
+
+1567529763954 Enter COM port name as an option
+
+1567529763954 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529763955 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567529763955 COM49 is lost. Reconnecting...
+
+1567529763956 COM49 is lost. Reconnecting...
+
+1567529763956 COM49 is lost. Reconnecting...
+
+1567529763957 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567529763957 COM49 is lost. Reconnecting...
+
+1567529763959 Error during measuring pressure by 2 gauge
+
+1567529763959 COM49 is lost. Reconnecting...
+
+1567529763959 Enter COM port name as an option
+
+1567529763960 Enter COM port name as an option
+
+1567529763961 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763962 Enter COM port name as an option
+
+1567529763963 Enter COM port name as an option
+
+1567529763964 Enter COM port name as an option
+
+1567529763965 Enter COM port name as an option
+
+1567529763966 Enter COM port name as an option
+
+1567529763967 Enter COM port name as an option
+
+1567529763967 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763968 Enter COM port name as an option
+
+1567529763969 Enter COM port name as an option
+
+1567529763970 Enter COM port name as an option
+
+1567529763971 Enter COM port name as an option
+
+1567529763972 Enter COM port name as an option
+
+1567529763973 Enter COM port name as an option
+
+1567529763974 Enter COM port name as an option
+
+1567529763975 Enter COM port name as an option
+
+1567529763976 Enter COM port name as an option
+
+1567529763977 Enter COM port name as an option
+
+1567529763978 Enter COM port name as an option
+
+1567529763979 Enter COM port name as an option
+
+1567529763982 Enter COM port name as an option
+
+1567529763983 Enter COM port name as an option
+
+1567529763984 Enter COM port name as an option
+
+1567529763985 Enter COM port name as an option
+
+1567529763986 Enter COM port name as an option
+
+1567529763986 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763987 Enter COM port name as an option
+
+1567529763988 Enter COM port name as an option
+
+1567529763989 Enter COM port name as an option
+
+1567529763990 Enter COM port name as an option
+
+1567529763991 Enter COM port name as an option
+
+1567529763992 Enter COM port name as an option
+
+1567529763992 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567529763992 Enter COM port name as an option
+
+1567529763993 Enter COM port name as an option
+
+time device message
+1567529773411 COM57 is opened
+
+1567529773417 COM57 is opened
+
+1567529773419 ~\Gauge imported correctly.
+
+1567529773420 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567530023652 COM57 is opened
+
+1567530023658 COM57 is opened
+
+1567530023659 ~\Gauge imported correctly.
+
+1567530023660 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+1567530030807 gauge message wasn't got.
+
+1567530030812 COM57 is lost. Reconnecting...
+
+1567530030816 COM57 is opened
+
+1567530030817 Reconnected.
+
+1567530030821 COM57 is opened
+
+1567530030823 Reconnected.
+
+1567530035006 gauge message wasn't got.
+
+1567530035008 COM57 is lost. Reconnecting...
+
+1567530035009 Port name - COM57; Method name - closePort(); Exception type - Port not opened.
+
+1567530035014 COM57 is opened
+
+1567530035015 Reconnected.
+
+1567530035020 COM57 is opened
+
+1567530035022 Reconnected.
+
+1567530040998 gauge message wasn't got.
+
+1567530040999 Error during measuring pressure by 2 gauge
+
+1567530040999 COM57 is lost. Reconnecting...
+
+1567530041000 COM57 is lost. Reconnecting...
+
+1567530041004 COM57 is opened
+
+1567530041005 Reconnected.
+
+1567530041010 COM57 is opened
+
+1567530041011 Reconnected.
+
+time device message
+1567530056654 COM57 is opened
+
+1567530056661 COM57 is opened
+
+1567530056662 ~\Gauge imported correctly.
+
+1567530056663 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567530094442 COM57 is opened
+
+1567530094449 COM57 is opened
+
+1567530094450 ~\Gauge imported correctly.
+
+1567530094451 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+1567530098994 gauge message wasn't got.
+
+1567530098997 COM57 is lost. Reconnecting...
+
+1567530099000 COM57 is lost. Reconnecting...
+
+1567530099005 COM57 is opened
+
+1567530099007 Reconnected.
+
+1567530099012 COM57 is opened
+
+1567530099013 Reconnected.
+
+1567530104195 gauge message wasn't got.
+
+1567530104197 Error during measuring pressure by 2 gauge
+
+1567530104197 COM57 is lost. Reconnecting...
+
+1567530104198 COM57 is lost. Reconnecting...
+
+1567530104203 COM57 is opened
+
+1567530104204 Reconnected.
+
+1567530104209 COM57 is opened
+
+1567530104210 Reconnected.
+
+time device message
+1567530111611 COM57 is opened
+
+1567530111617 COM57 is opened
+
+1567530111618 ~\Gauge imported correctly.
+
+1567530111619 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+time device message
+1567530212928 COM57 is opened
+
+1567530212938 COM57 is opened
+
+1567530212938 ~\Gauge imported correctly.
+
+1567530212938 C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources\datapr1.txt
+
+1567530331995 gauge message wasn't got.
+
+1567530331995 COM57 is lost. Reconnecting...
+
+1567530331995 Port name - COM57; Method name - closePort(); Exception type - Port not opened.
+
+1567530332005 COM57 is opened
+
+1567530332005 Reconnected.
+
+1567530332005 COM57 is opened
+
+1567530332005 Reconnected.
+
+time device message
+1567530376160 ~\Gauge imported correctly.
+
+time device message
+1567530390106 COM57 is opened
+
+1567530390106 ~\Gauge imported correctly.
+
+1567530408198 gauge message wasn't got.
+
+1567530408198 COM57 is lost. Reconnecting...
+
+1567530408198 COM57 is lost. Reconnecting...
+
+1567530408198 Port name - COM57; Method name - closePort(); Exception type - Port not opened.
+
+1567530408208 COM57 is opened
+
+1567530408208 Reconnected.
+
+1567530408218 COM57 is opened
+
+1567530408218 Reconnected.
+
+1567530412408 gauge message wasn't got.
+
+1567530412408 Error during measuring pressure by 2 gauge
+
+1567530412408 COM57 is lost. Reconnecting...
+
+1567530412408 COM57 is opened
+
+1567530412408 Reconnected.
+
+1567530412418 COM57 is opened
+
+1567530412418 Reconnected.
+
+1567530416808 gauge message wasn't got.
+
+1567530416808 Error during measuring pressure by 2 gauge
+
+1567530416808 COM57 is lost. Reconnecting...
+
+1567530416808 COM57 is opened
+
+1567530416808 Reconnected.
+
+1567530416818 COM57 is opened
+
+1567530416818 Reconnected.
+
+time device message
+1567530424113 COM57 is opened
+
+1567530424113 ~\Gauge imported correctly.
+
+1567530508143 gauge message wasn't got.
+
+1567530508143 COM57 is lost. Reconnecting...
+
+1567530508153 COM57 is opened
+
+1567530508153 Reconnected.
+
+1567530508153 COM57 is opened
+
+1567530508153 Reconnected.
+
+1567530554408 gauge message wasn't got.
+
+1567530554408 Error during measuring pressure by 2 gauge
+
+1567530554408 COM57 is lost. Reconnecting...
+
+1567530554408 COM57 is opened
+
+1567530554408 Reconnected.
+
+1567530554418 COM57 is opened
+
+1567530554418 Reconnected.
+

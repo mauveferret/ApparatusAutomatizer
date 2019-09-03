@@ -189,7 +189,6 @@ abstract  class Device extends Thread{
             case "datapath" :
             {
                 config.dataPath = command[1];
-                dataLog.createFile(command[1], "");
             }
                 break;
             case "run" : runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
