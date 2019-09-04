@@ -1,16 +1,21 @@
 package ru.mauveferret;
 
-public class User {
+import java.util.TreeMap;
+
+public class PasswordManager {
 
     private String login;
     private String passwordMD5;
+    private long startOfAccessTime;
     private  long endOfAccessTime; //hours
+    //load from file passwords and check if some password equals with entered one
+    private TreeMap<String,String> passwords = new TreeMap<>();
 
-    User(String login, String password, long duration) {
-        this.login = login;
-        this.passwordMD5 = password+1000;
-        endOfAccessTime = System.currentTimeMillis()/(1000*60*60)+duration;
+    void createPassword()
+    {
+
     }
+
 
     boolean hasAccess()
     {
@@ -22,7 +27,7 @@ public class User {
         return login;
     }
 
-    boolean passwordIsValid(String password)
+    boolean IsPasswordValid(String password)
     {
         return  false;
     }

@@ -3,13 +3,23 @@ package ru.mauveferret;
 import java.util.TreeMap;
 
 
-public class LeyboldTMP extends Device {
+public class LeyboldTMP extends SerialDevice {
 
     private int  temperature;
     private int frequency;
     private double voltage;
     private double current;
     private boolean enabled = false;
+
+    @Override
+    void type() {
+
+    }
+
+    @Override
+    boolean callDevice() {
+        return false;
+    }
 
     public LeyboldTMP(String path) {
         super(path);
