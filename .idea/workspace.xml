@@ -2,16 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ByPass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AutoPumping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Gauge" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Gauge" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/logs/TMP.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/logs/angel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/logs/arduino1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/logs/gauge.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/logs/terminal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/User.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -156,6 +195,9 @@
       <workItem from="1566932647897" duration="8971000" />
       <workItem from="1567524768045" duration="3459000" />
       <workItem from="1567573142086" duration="6638000" />
+      <workItem from="1567593111414" duration="1215000" />
+      <workItem from="1567604355322" duration="554000" />
+      <workItem from="1567604930664" duration="6767000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>

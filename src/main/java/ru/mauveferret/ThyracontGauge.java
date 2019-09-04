@@ -32,9 +32,20 @@ class ThyracontGauge extends SerialDevice {
 
     private synchronized double measure(int gaugeNumber)
     {
+        //FIXME thread sleep is very bad!
+        try
+        {
+            Thread.sleep(30);
+        }
+        catch (Exception ignored){}
         String message = "00"+gaugeNumber+"M";
         writeMessage(message+checkSum(message)+"\r");
+        try {
+            Thread.sleep(30);
+        }
+        catch (Exception ignored){}
         message = readMessage();
+
         if (message.length()>10) {
             if ((message.charAt(10) + "").equals(checkSum(message.substring(0, 10))))
             {
@@ -46,16 +57,15 @@ class ThyracontGauge extends SerialDevice {
             }
             else
                 {
-                sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge");
-                reconnect();
+                sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
                 //return previous
                 return getPressure(gaugeNumber);
                 }
         }
         else
         {
-            sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge");
-            reconnect();
+            sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
+            System.out.println(message);
             //return previous
             return getPressure(gaugeNumber);
         }
@@ -80,30 +90,30 @@ class ThyracontGauge extends SerialDevice {
         log = new Thread(new Runnable() {
             @Override
             public void run() {
-                //TODO make scientific format
-                NumberFormat numFormat = NumberFormat.getNumberInstance(Locale.getDefault());
-                numFormat.setMaximumFractionDigits(3);
                 boolean stop = false;
                 while (!stop)
                 {
                     try {
                         measure(1);
+                        //long t1 = System.currentTimeMillis();
+                        //System.out.println(System.currentTimeMillis()-t1);
                         measure(2);
                         //measure(3);
-                        String pr1 = numFormat.format(getPressure(1));
-                        String pr2 = numFormat.format(getPressure(2));
-                        String pr3 = numFormat.format(getPressure(3));
+                        String pr1 = String.format("%6.3e",getPressure(1));
+                        String pr2 = String.format("%6.3e",getPressure(2));
+                        String pr3 = String.format("%6.3e",getPressure(3));
                         dataLog.write("time " + pr1 + " " + pr2+" "+pr3);
                         logPressure1.write("time " + pr1);
                         logPressure2.write("time " + pr2);
                         logPressure3.write("time " + pr3);
                         stop = Thread.currentThread().isInterrupted();
-                        //FIXME sleep is very bad decision!
-                        Thread.sleep(10);
                     }
                     catch (Exception  e)
                     {
-                        sendMessage("ERROR while log: "+e.getMessage());
+                        e.printStackTrace();
+                        sendMessage("ERROR while log: "+e.toString());
+                        reconnect();
+                        break;
                     }
                 }
 

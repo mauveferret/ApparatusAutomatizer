@@ -43,6 +43,7 @@ abstract class SerialDevice extends Device {
         commands.put("connect", "trying to reconnect to the Device in case of the failure");
         commands.put("write", "write command on the port");
         commands.put("read", "read message from the port");
+        commands.put("enable","");
         return super.getCommands();
     }
 
@@ -71,6 +72,8 @@ abstract class SerialDevice extends Device {
             case "read":
                 sendMessage(readMessage());
                 break;
+            case  "enable" :  measureAndLog();
+            break;
         }
     }
 
@@ -120,34 +123,40 @@ abstract class SerialDevice extends Device {
     private synchronized boolean openPort(String portName) {
         //if it wasn'r set, trying to load from the config file
         String port = config.devicePort;
-        if (!doesPortExist(portName) && !doesPortExist(port)) {
-            sendMessage("Enter COM port name as an option");
+        try {
+            serialPort.closePort();
+        }
+        catch (Exception ignored) {}
+        if (!(doesPortExist(portName) || doesPortExist(port)))
+        {
+            if (!isReconnectActive)
+                sendMessage("Enter COM port name as an option");
             return false;
-        } else {
-            try {
-                serialPort.closePort();
-            } catch (Exception ignored) {
-            }
-
+        }
+        else
+            {
             if (doesPortExist(portName) || doesPortExist(port)) {
                 if (!doesPortExist(portName)) portName = port;
-                try {
+                try
+                {
                     serialPort = new SerialPort(portName);
                     serialPort.openPort();
                     serialPort.setParams(config.baudRate,
                             SerialPort.DATABITS_8,
                             SerialPort.STOPBITS_1,
                             SerialPort.PARITY_NONE);
-                    //!--it shouldn't exist in extands method!
                     //don't know why, but arduino  need these 2000
                     //Thread.sleep(2000);
-                } catch (Exception ex) {
+                }
+                catch (Exception ex)
+                {
                     //FIXME is busy wouldnt ever appear is seems
                     if (!isReconnectActive)
                         sendMessage("Port " + portName + " is busy");
                     return false;
                 }
-            } else {
+            }
+            else {
                 if (!isReconnectActive)
                     sendMessage(portName + " doesn't exist!");
                 return false;
@@ -158,11 +167,13 @@ abstract class SerialDevice extends Device {
     }
 
     private synchronized boolean closePort() {
-        try {
+        try
+        {
             serialPort.closePort();
             if (!isReconnectActive) sendMessage(serialPort.getPortName() + " is closed");
             return true;
-        } catch (SerialPortException ex) {
+        }
+        catch (SerialPortException ex) {
             sendMessage(ex.getLocalizedMessage());
             return false;
         }
@@ -173,19 +184,24 @@ abstract class SerialDevice extends Device {
             String answer = "";
             long startTime = System.currentTimeMillis();
             //&& !answer.contains("\n")
-            while (!answer.contains("\r")) {
+            while (!(answer.contains("\r") || answer.contains("\n"))) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
                 if (serialPort.getInputBufferBytesCount() > 0) {
                     answer += (new String(serialPort.readBytes(1)));
                 }
                 if (System.currentTimeMillis() - startTime > 3000) {
                     sendMessage(config.deviceName + " message wasn't got.");
-                    reconnect();
+                    if (!serialPort.isOpened())
+                    {
+                        sendMessage("serial port has closed");
+                        reconnect();
+                    }
                     break;
                 }
             }
             return answer;
-        } catch (SerialPortException e) {
+        }
+        catch (SerialPortException e) {
             sendMessage(e.getLocalizedMessage());
             reconnect();
             return "error";
@@ -193,11 +209,13 @@ abstract class SerialDevice extends Device {
     }
 
     synchronized boolean writeMessage(String message) {
-        try {
-            boolean success = serialPort.writeString(message);
-            return success;
-        } catch (SerialPortException e) {
-            sendMessage(e.getLocalizedMessage());
+        try
+        {
+            return serialPort.writeString(message);
+        }
+        catch (SerialPortException e) {
+            sendMessage("message wasn't written on"+config.deviceName);
+            sendMessage(e.getMessage());
             reconnect();
             return false;
         }
@@ -205,22 +223,26 @@ abstract class SerialDevice extends Device {
 
     synchronized void reconnect() {
         //sometime tis method is call without need so iv added if
-        if (!serialPort.isOpened())
+       // if (!serialPort.isOpened())
         {
         reconnectionThread = new Thread(new Runnable() {
             @Override
             public void run() {
-
                 try {
-                    String comPortName = serialPort.getPortName();
+                    try {
+                        closePort();
+                    }
+                    catch (Exception ignored){}
+                    String comPortName = config.devicePort;
+                    serialPort = new SerialPort(comPortName);
                     sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
                     isReconnectActive = true;
-                    closePort();
                     long t1 = System.currentTimeMillis();
                     while (!serialPort.isOpened()) {
                         openPort(comPortName);
-                        if (System.currentTimeMillis() - t1 > 10000) {
+                        if (System.currentTimeMillis() - t1 > 3000) {
                             //probably, device changed port
+                            sendMessage("probably, port has changed...looking");
                             findPort();
                             break;
                         }
@@ -232,7 +254,7 @@ abstract class SerialDevice extends Device {
                     //runCommand(getReceivedDevice(), getReceivedCommand());
                 } catch (NullPointerException e) {
                     isReconnectActive = false;
-                    sendMessage("COM port name isn't set.");
+                    sendMessage("port wasn't found.");
                 }
             }
         }
@@ -244,7 +266,7 @@ abstract class SerialDevice extends Device {
 
     private void findPort()
     {
-        for (String port: showAvailableCOMPorts())
+        /*for (String port: showAvailableCOMPorts())
         {
             try {
                 openPort(port);
@@ -257,8 +279,9 @@ abstract class SerialDevice extends Device {
             }
             catch (Exception ignored) {}
         }
-    }
 
+         */
+    }
 
     private boolean stopReconnection()
     {

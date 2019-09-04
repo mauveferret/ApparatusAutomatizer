@@ -8,5 +8,5 @@ this
 */
 ID 1
 name gauge
-port COM57
-open
+port COM49
+open 22

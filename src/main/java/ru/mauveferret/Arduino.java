@@ -201,7 +201,7 @@ class Arduino extends SerialDevice {
                         dataLog.write(dataToLog);
                         stop = Thread.currentThread().isInterrupted();
                         //FIXME sleep is very bad decision!
-                        Thread.sleep(100);
+                        //Thread.sleep(100);
                     }
                     catch (Exception  e)
                     {
