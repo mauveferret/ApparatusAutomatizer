@@ -1,0 +1,18 @@
+time  digitalPinsStatus analogPinsStatus
+1567609236180 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567609698764 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567613607080 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567613637073 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567613669968 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567613741311 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567617040702 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567617182644 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1567617200838 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 

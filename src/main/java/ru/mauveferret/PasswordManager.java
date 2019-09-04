@@ -3,15 +3,13 @@ package ru.mauveferret;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class PasswordManager {
 
-    private long startOfAccessTime;
-    private  long endOfAccessTime; //hours
+    Date dateNow = new Date();
+    SimpleDateFormat formatForDate = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
     private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
     private String path;
 
@@ -19,6 +17,7 @@ public class PasswordManager {
         this.path = path;
     }
 
+    //FIXME make dates
     void writeLoginAndPassword(String login, String password)
     {
 
@@ -48,7 +47,7 @@ public class PasswordManager {
 
     boolean hasAccess(String login)
     {
-        return System.currentTimeMillis() / (1000 * 60 * 60) > endOfAccessTime;
+        return true;
     }
 
     boolean IsPasswordValid(String login, String password)

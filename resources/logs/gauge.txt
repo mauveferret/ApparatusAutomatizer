@@ -1,0 +1,143 @@
+time device message
+1567609236209 COM49 is opened
+
+1567609236210 ~\Gauge imported correctly.
+
+time device message
+1567609698778 COM49 is opened
+
+1567609698779 ~\Gauge imported correctly.
+
+1567609747889 Available ports:COM1 COM4 COM5 COM6 COM7 COM8 COM10 COM18 COM19 COM22 COM23 COM49 COM51 COM62 COM68 
+
+1567609752157 Unknown error during command gag measure
+
+1567609756585 COM49 is closed
+
+1567609756616 message wasn't written ongauge
+
+1567609756616 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567609756647 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567609756648 Error during measuring pressure by 1 gauge.Message too short
+
+1567609756678 message wasn't written ongauge
+
+1567609756678 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567609756708 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567609756708 Error during measuring pressure by 2 gauge.Message too short
+
+1567609756709 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567609756709 COM49 is lost. Reconnecting...
+
+1567609756739 message wasn't written ongauge
+
+1567609756739 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567609756770 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567609756770 Error during measuring pressure by 1 gauge.Message too short
+
+1567609756801 message wasn't written ongauge
+
+1567609756801 Port name - COM49; Method name - writeString(); Exception type - Port not opened.
+
+1567609756832 Port name - COM49; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+1567609756833 Error during measuring pressure by 2 gauge.Message too short
+
+1567609756833 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567609756833 COM49 is lost. Reconnecting...
+
+1567609756833 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567609756834 COM49 is lost. Reconnecting...
+
+1567609756838 COM49 is opened
+
+1567609756839 Reconnected.
+
+1567609756840 COM49 is closed
+
+1567609756840 COM49 is lost. Reconnecting...
+
+1567609756841 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567609756841 COM49 is lost. Reconnecting...
+
+1567609756845 COM49 is opened
+
+1567609756845 Reconnected.
+
+1567609756846 COM49 is closed
+
+1567609756846 COM49 is lost. Reconnecting...
+
+1567609756846 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+
+1567609756846 COM49 is lost. Reconnecting...
+
+1567609756852 COM49 is opened
+
+1567609756852 Reconnected.
+
+1567609756857 COM49 is opened
+
+1567609756857 Reconnected.
+
+1567609756862 COM49 is opened
+
+1567609756862 Reconnected.
+
+1567609756867 COM49 is opened
+
+1567609756868 Reconnected.
+
+1567609756872 COM49 is opened
+
+1567609756873 Reconnected.
+
+1567609756997 COM49 is opened
+
+1567609756998 Reconnected.
+
+time device message
+1567613607108 COM49 is opened
+
+1567613607109 ~\Gauge imported correctly.
+
+time device message
+1567613637088 COM49 is opened
+
+1567613637088 ~\Gauge imported correctly.
+
+time device message
+1567613669977 COM49 is opened
+
+1567613669977 ~\Gauge imported correctly.
+
+time device message
+1567613741331 COM49 is opened
+
+1567613741332 ~\Gauge imported correctly.
+
+time device message
+1567617040762 COM49 is opened
+
+1567617040762 ~\Gauge imported correctly.
+
+time device message
+1567617182669 COM49 is opened
+
+1567617182669 ~\Gauge imported correctly.
+
+time device message
+1567617200849 COM49 is opened
+
+1567617200849 ~\Gauge imported correctly.
+

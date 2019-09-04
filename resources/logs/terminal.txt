@@ -1,0 +1,21 @@
+time device message
+1567609236163 ~\terminal imported correctly.
+
+time device message
+1567609698747 ~\terminal imported correctly.
+
+time device message
+1567613607067 ~\terminal imported correctly.
+
+time device message
+1567613637059 ~\terminal imported correctly.
+
+time device message
+1567613669953 ~\terminal imported correctly.
+
+time device message
+1567613741292 ~\terminal imported correctly.
+
+time device message
+1567617040599 ~\terminal imported correctly.
+
