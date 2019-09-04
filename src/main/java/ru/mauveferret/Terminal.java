@@ -60,6 +60,7 @@ public class Terminal extends Device {
         else
         {
             deviceMap.put(deviceName,someDevice);
+            someDevice.terminalSample = this;
         }
 
        // deviceCommandMap.put(someDevice.getDeviceName(), someDevice);

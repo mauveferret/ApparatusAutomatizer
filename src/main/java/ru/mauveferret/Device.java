@@ -33,6 +33,7 @@ abstract  class Device extends Thread{
     //key == alias, value == command + options which is represented by the alias
     private HashMap<String,String[]> aliases = new HashMap<>();
     //key == alias, value == options.
+    Terminal terminalSample;
 
     //Setters and Getters
 
@@ -40,12 +41,6 @@ abstract  class Device extends Thread{
     String getReceivedCommand() {
         return receivedCommand;
     }
-
-    Device getReceivedDevice() {
-        return receivedDevice;
-    }
-
-
 
     HashMap<String,String[]> getAliases()
     {

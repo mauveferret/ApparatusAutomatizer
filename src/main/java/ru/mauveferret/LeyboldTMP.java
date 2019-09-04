@@ -9,6 +9,7 @@ public class LeyboldTMP extends Device {
     private int frequency;
     private double voltage;
     private double current;
+    private boolean enabled = false;
 
     public LeyboldTMP(String path) {
         super(path);
@@ -33,6 +34,9 @@ public class LeyboldTMP extends Device {
         return current;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
 
     //Device related commands
 
@@ -41,14 +45,17 @@ public class LeyboldTMP extends Device {
     void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
-            case "enable": enable();
+            case "run": activate(true);
+            break;
+            case "stop": activate(false);
+            break;
             case "measure": measure();
             break;
         }
         super.chooseTerminalCommand(command);
     }
 
-    private void enable() {
+    private void activate(boolean enable) {
 
         //TODO TMP
 
@@ -81,7 +88,7 @@ public class LeyboldTMP extends Device {
 
     @Override
     TreeMap<String, String> getCommands() {
-        commands.put("enable", "launches the TMP in form $run$");
+        commands.put("run", "launches the TMP in form $run$");
         commands.put("stop","stops the TMP in form: $stop$");
         commands.put("measure","");
         commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");

@@ -185,19 +185,30 @@ class Arduino extends SerialDevice {
 
     @Override
     void measureAndLog() {
-         log = new Thread(new Runnable() {
+        dataLog.createFile(config.dataPath, "time  digitalPinsStatus analogPinsStatus");
+        log = new Thread(new Runnable() {
             @Override
             public void run() {
-                boolean stop = true;
-                while (stop) {
-                    String time = "time";
-                    String dataToLog =time+" digital ";
-                    for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
-                    dataToLog+="\n"+time+" analog ";
-                    for (double d: analogPinsRead) dataToLog+=d+" ";
-                    dataLog.write(dataToLog);
-                    stop = !Thread.currentThread().isInterrupted();
+                boolean stop = false;
+                while (!stop)
+                {
+                    try {
+                        String time = "time";
+                        String dataToLog =time+" digital: ";
+                        for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
+                        dataToLog+=" analog: ";
+                        for (double d: analogPinsRead) dataToLog+=d+" ";
+                        dataLog.write(dataToLog);
+                        stop = Thread.currentThread().isInterrupted();
+                        //FIXME sleep is very bad decision!
+                        Thread.sleep(100);
+                    }
+                    catch (Exception  e)
+                    {
+                        sendMessage("ERROR while log: "+e.getMessage());
+                    }
                 }
+
             }
         });
         log.setName(config.deviceName);

@@ -12,10 +12,10 @@ public class GuardianAngel extends Device {
      */
 
     private boolean continueChecking = true;
-
-
-    //TODO Command interpretator
-
+    private ThyracontGauge gauge;
+    private GateControl gateControl;
+    private LeyboldTMP tmp;
+    private  GuardianAngel angel = this;
 
     //Getters and Setters
 
@@ -26,43 +26,57 @@ public class GuardianAngel extends Device {
 
     //command related methods
 
-    @Override
-    public void run() {
-        while (true) {
-
-            // FIXME so...?
-        }
-
-    }
-
     public GuardianAngel(String path) {
-
         super(path);
         measureAndLog();
     }
 
-    @Override
-    void measureAndLog() {
+    private void startCheckingPressure() {
+        Thread checkerThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                boolean stop = false;
+                while (!stop)
+                {
+                    while (continueChecking) {
+                        double pressureColumn = gauge.getPressure(gateControl.getColumnNumber());
+                        double pressureVessel = gauge.getPressure(3);
+                        boolean gate = gateControl.isGateOpened();
+                        //FIXME checking valve
+                        boolean valve = gateControl.isValveOpened();
+                        boolean pump = gateControl.isPumpEnabled();
+                        boolean turboPump = tmp.isEnabled();
+                        int temperature = tmp.getTemperature();
 
-    }
+                        //if pressure difference is too much or pressureVessel to much -> close gate
+                        if ((Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10) && gate)
+                        {
+                            sendMessage("i'm closing the gates!");
+                            gateControl.runCommand(angel,"bla gate close");
+                        }
+                        if ((pressureColumn>10 || (temperature>42)) && turboPump)
+                        {
+                            sendMessage("i'm closing the gates and stop the TMP!");
+                            tmp.runCommand(angel, "bla stop");
+                            gateControl.runCommand(angel,"bla gate close");
+                            //FIXME find better indication of  valve closing need
+                            gateControl.runCommand(angel,"bla valve close");
+                        }
 
-    private void startCheckingPressure(Device device) {
-        while (continueChecking) {
-            //TODO very dangerous, what if device is not a termonal?
-            Terminal terminal = (Terminal) device;
-            ThyracontGauge gauge = (ThyracontGauge) ((Terminal) device).getDevice("gauge");
-            double pressureColumn1 = gauge.getPressure(1);
-            double pressureColumn2 = gauge.getPressure(2);
-            double pressureVessel = gauge.getPressure(3);
-            Arduino arduino = (Arduino) ((Terminal) device).getDevice("arduino");
-            double gate1 = arduino.getAnalogPinsRead()[3];
+                    }
 
-            //if pressure difference is too much or pressureVessel to much -> close gate
-            if ((Math.abs(pressureColumn1 - pressureVessel) > 10 || pressureVessel > 10) && gate1 > 2.5) {
-                terminal.runCommand(terminal, "arduino dwrite 8 0");
+                    try {
+                        Thread.sleep(1000);
+                    }
+                    catch (Exception ignored){}
+
+                    stop = Thread.currentThread().isInterrupted();
+                }
+
             }
-
-        }
+        });
+        checkerThread.setName(config.deviceName);
+        checkerThread.start();
     }
 
     //for commandline
@@ -71,6 +85,7 @@ public class GuardianAngel extends Device {
     TreeMap<String, String> getCommands() {
         commands.put("start", "");
         commands.put("pause", "");
+        commands.put("resume","");
 
         return commands;
     }
@@ -80,19 +95,36 @@ public class GuardianAngel extends Device {
 
         super.chooseTerminalCommand(command);
         switch (command[1]) {
-            case ("start"): {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        startCheckingPressure(getReceivedDevice());
-                    }
-                }
-                ).start(); //FIXME received device?!
-            }
+            case ("start"): startCheckingPressure();
             break;
-            case ("pause"): {
-                setContinueChecking(false);
-            }
+            case ("pause"): setContinueChecking(false);
+            break;
+            case ("resume") : setContinueChecking(true);
+            break;
         }
     }
+
+    @Override
+    void chooseImportCommand(String line) {
+        super.chooseImportCommand(line);
+        String[] command = line.split(" ");
+        try {
+            switch (command[0]) {
+                case "gauge": gauge =(ThyracontGauge) terminalSample.getDevice(command[1]);
+                    break;
+                case "gatecontrol": gateControl = (GateControl) terminalSample.getDevice(command[1]);
+                    break;
+                case "tmp" : tmp = (LeyboldTMP)  terminalSample.getDevice(command[1]);
+                break;
+            }
+        }
+        catch (Exception e)
+        {
+            sendMessage("incorrect option.");
+            sendMessage(e.getMessage());
+        }
+    }
+
+    @Override
+    void measureAndLog() {}
 }
