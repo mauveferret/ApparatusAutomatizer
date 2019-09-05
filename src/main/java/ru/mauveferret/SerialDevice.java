@@ -72,7 +72,7 @@ abstract class SerialDevice extends Device {
             case "read":
                 sendMessage(readMessage());
                 break;
-            case  "enable" :  measureAndLog();
+            case  "enablelog" :  measureAndLog();
             break;
         }
     }
@@ -147,6 +147,9 @@ abstract class SerialDevice extends Device {
                             SerialPort.PARITY_NONE);
                     //don't know why, but arduino  need these 2000
                     //Thread.sleep(2000);
+                    //Включаем аппаратное управление потоком
+                    serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
+                            SerialPort.FLOWCONTROL_RTSCTS_OUT);
                 }
                 catch (Exception ex)
                 {
@@ -211,10 +214,28 @@ abstract class SerialDevice extends Device {
     synchronized boolean writeMessage(String message) {
         try
         {
+          try {
+              if (!serialPort.isOpened())
+              {
+                  System.out.println("port is closed!!");
+                  return false;
+              }
+          }
+          catch (Exception e)
+          {
+              sendMessage("port wasn't created!");
+          }
             return serialPort.writeString(message);
         }
         catch (SerialPortException e) {
             sendMessage("message wasn't written on"+config.deviceName);
+            try {
+                serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
+            }
+            catch (SerialPortException ex)
+            {
+                sendMessage(ex.getPortName()+" не прокатило!!");
+            }
             sendMessage(e.getMessage());
             reconnect();
             return false;

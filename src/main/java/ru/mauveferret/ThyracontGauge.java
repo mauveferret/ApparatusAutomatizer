@@ -108,10 +108,9 @@ class ThyracontGauge extends SerialDevice {
                         logPressure3.write("time " + pr3);
                         stop = Thread.currentThread().isInterrupted();
                     }
-                    catch (Exception  e)
+                    catch (NullPointerException  e)
                     {
-                        e.printStackTrace();
-                        sendMessage("ERROR while log: "+e.toString());
+                        sendMessage("ERROR while log: port wasn't created\n ");
                         reconnect();
                         break;
                     }
