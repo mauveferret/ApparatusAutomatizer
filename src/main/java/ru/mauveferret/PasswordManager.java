@@ -3,22 +3,26 @@ package ru.mauveferret;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class PasswordManager {
+
+    public PasswordManager() {
+        String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
+        path = path.replaceAll("/","\\\\");
+        path+="\\resources\\passwords.txt";
+    }
 
     Date dateNow = new Date();
     SimpleDateFormat formatForDate = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
     private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
     private String path;
 
-    public void setPath(String path) {
-        this.path = path;
-    }
-
     //FIXME make dates
-    void writeLoginAndPassword(String login, String password)
+    void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
     {
 
         if (login.equals(""))
@@ -29,6 +33,8 @@ public class PasswordManager {
         System.out.println(login+" "+password);
         loadLoginsAndPasswords();
         boolean valid = true;
+
+        //check if the login already exists
         for (String someLogin: loginsAndPasswords.keySet())
         {
             if (someLogin.equals(login))
@@ -38,11 +44,23 @@ public class PasswordManager {
                 break;
             }
         }
+        //if login doesn't exist, checking if date is valid
+        if (valid)
+        {
+
+        }
         if (valid)
         {
             addLoginAndPassword(login,password);
             System.out.println("Pair added successfully!");
         }
+    }
+
+    private Date StringToDate(String date) throws ParseException
+    {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        dateFormat.applyPattern("dd.mm.yyyy");
+            return dateFormat.parse(date);
     }
 
     boolean hasAccess(String login)

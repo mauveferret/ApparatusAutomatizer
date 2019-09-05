@@ -146,10 +146,12 @@ abstract class SerialDevice extends Device {
                             SerialPort.STOPBITS_1,
                             SerialPort.PARITY_NONE);
                     //don't know why, but arduino  need these 2000
-                    //Thread.sleep(2000);
+                    // Thread.sleep(2000);
                     //Включаем аппаратное управление потоком
-                    serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
-                            SerialPort.FLOWCONTROL_RTSCTS_OUT);
+                    //serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
+                          //  SerialPort.FLOWCONTROL_RTSCTS_OUT);
+
+
                 }
                 catch (Exception ex)
                 {
@@ -251,7 +253,22 @@ abstract class SerialDevice extends Device {
             public void run() {
                 try {
                     try {
+                        try {
+                            serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
+                        }
+                        catch (SerialPortException ex)
+                        {
+                            ex.printStackTrace();
+                            sendMessage(ex.getPortName()+" не прокатило!!"+ ex.getMessage());
+                        }
                         closePort();
+                        try {
+                            serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
+                        }
+                        catch (SerialPortException ex)
+                        {
+                            sendMessage(ex.getPortName()+" не прокатило!!");
+                        }
                     }
                     catch (Exception ignored){}
                     String comPortName = config.devicePort;

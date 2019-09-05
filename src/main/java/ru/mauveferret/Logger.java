@@ -32,6 +32,7 @@ public class Logger {
 
     //TODO выравнивание колонок
 
+    // TODO проверять на совпадение предыдущую строку и препредыдущую!
      void write(String data) {
         if (!data.equals(dataToLog)) {
             dataToLog = data;
