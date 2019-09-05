@@ -8,6 +8,9 @@ import java.util.TreeMap;
 
 abstract class SerialDevice extends Device {
 
+    SerialDevice(String fileName) {
+        super(fileName);
+    }
 
     abstract void type();
 
@@ -20,9 +23,6 @@ abstract class SerialDevice extends Device {
     //indicates if the reconnection is active
     private boolean isReconnectActive = false;
 
-    SerialDevice(String path) {
-        super(path);
-    }
 
     //SerialDevice(){}
 

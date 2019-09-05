@@ -1,0 +1,12 @@
+command ard
+/* 1
+
+this
+
+*/
+ID 1
+type nano
+name arduino1
+port COM4
+open
+info

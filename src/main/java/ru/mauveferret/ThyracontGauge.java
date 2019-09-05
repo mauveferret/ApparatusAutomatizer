@@ -1,5 +1,6 @@
 package ru.mauveferret;
 
+import java.io.File;
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.TreeMap;
@@ -8,12 +9,11 @@ class ThyracontGauge extends SerialDevice {
 
     ThyracontGauge(String path) {
         super(path);
-        String newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr1.txt";
-        logPressure1.createFile( newPath, "");
-        newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr2.txt";
-        logPressure2.createFile( newPath,"");
-        newPath = config.dataPath.substring(0,config.dataPath.lastIndexOf("\\"))+"pr3.txt";
-        logPressure3.createFile( newPath,"");
+        String newPath =(new File(config.dataPath)).getParent();
+        System.out.println(newPath);
+        logPressure1.createFile( newPath+"\\pr1.txt", "");
+        logPressure2.createFile( newPath+"\\pr2.txt","");
+        logPressure3.createFile( newPath+"\\pr3.txt","");
         measureAndLog();
     }
 

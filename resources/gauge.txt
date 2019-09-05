@@ -1,0 +1,10 @@
+command gag
+/* 1
+
+this
+
+*/
+ID 1
+name gauge
+port COM49
+open 22

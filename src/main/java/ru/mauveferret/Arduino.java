@@ -14,8 +14,8 @@ import java.util.TreeMap;
 
 class Arduino extends SerialDevice {
 
-    Arduino(String path) {
-        super(path);
+    Arduino(String fileName) {
+        super(fileName);
         measureAndLog();
     }
 
@@ -28,7 +28,6 @@ class Arduino extends SerialDevice {
 
     private ArrayList<Integer> actualDigitalPins;
     private ArrayList<Integer> actualAnalogPins;
-
 
     //Getters and Setters
 

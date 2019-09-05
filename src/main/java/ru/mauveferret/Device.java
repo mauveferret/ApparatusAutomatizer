@@ -1,17 +1,24 @@
 package ru.mauveferret;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
 abstract  class Device extends Thread{
 
-    Device(String path)
+    Device(String fileName)
     {
         getCommands();
-        importConfigurationFile(path);
+        String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
+        path = path.replaceAll("/","\\\\");
+        path+="\\resources\\";
+        String pathToConfig = path+"\\"+fileName+".txt";
+        config.logPath = path+"\\logs\\"+fileName+"Log.txt";
+        messageLog.createFile(config.logPath,"time device message");
+        config.dataPath = path+"\\data\\"+fileName+"Data.txt";
+        importConfigurationFile(pathToConfig);
     }
 
     Device(){}
@@ -174,17 +181,6 @@ abstract  class Device extends Thread{
             case "name": config.deviceName = command[1];
                 break;
             case "command": config.deviceCommand = command[1];
-                break;
-            case "logpath":
-            {
-                config.logPath = command[1];
-                messageLog.createFile(command[1],"time device message");
-            }
-                break;
-            case "datapath" :
-            {
-                config.dataPath = command[1];
-            }
                 break;
             case "run" : runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
             break;
