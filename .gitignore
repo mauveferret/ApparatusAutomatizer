@@ -1,4 +1,8 @@
 /resources/data
 /resources/logs
-/.idea/workspace.xml
 /.idea/misc.xml
+!/.idea/workspace.xml
+target/generated-sources/
+target/generated-test-sources/
+!/.idea/misc.xml
+
