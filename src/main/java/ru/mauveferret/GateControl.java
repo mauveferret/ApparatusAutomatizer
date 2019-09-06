@@ -26,6 +26,9 @@ public class GateControl extends Device{
     private Arduino arduino;
     private ThyracontGauge gauge;
     private GateControl gateControl = this;
+    private String arduinoName;
+    private String gaugeName;
+
 
     public GateControl(String path)
     {
@@ -214,9 +217,9 @@ public class GateControl extends Device{
                        gateAnalogOpenedPin =  Integer.parseInt(command[2]);
                    }
                    break;
-                   case "gauge": gauge= (ThyracontGauge) (terminalSample.getDevice(command[1]));
+                   case "gauge": gaugeName = command[1];
                    break;
-                   case "arduino": arduino = (Arduino) (terminalSample.getDevice(command[1]));
+                   case "arduino": arduinoName = command[1];
                    break;
                    case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
                    break;
@@ -273,6 +276,12 @@ public class GateControl extends Device{
         });
         log.setName(config.deviceName);
         log.start();
+    }
+
+    @Override
+    void initialize() {
+        gauge= (ThyracontGauge) (terminalSample.getDevice(gaugeName));
+        arduino= (Arduino) (terminalSample.getDevice(arduinoName));
     }
 
 }

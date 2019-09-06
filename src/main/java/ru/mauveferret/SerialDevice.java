@@ -179,7 +179,7 @@ abstract class SerialDevice extends Device {
             return true;
         }
         catch (SerialPortException ex) {
-            sendMessage(ex.getLocalizedMessage());
+            if (!isReconnectActive) sendMessage(ex.getLocalizedMessage());
             return false;
         }
     }
@@ -196,11 +196,7 @@ abstract class SerialDevice extends Device {
                 }
                 if (System.currentTimeMillis() - startTime > 3000) {
                     sendMessage(config.deviceName + " message wasn't got.");
-                    if (!serialPort.isOpened())
-                    {
-                        sendMessage("serial port has closed");
-                        reconnect();
-                    }
+                    reconnect();
                     break;
                 }
             }
@@ -219,7 +215,7 @@ abstract class SerialDevice extends Device {
           try {
               if (!serialPort.isOpened())
               {
-                  System.out.println("port is closed!!");
+                  if (!isReconnectActive) sendMessage("port is closed!!");
                   return false;
               }
           }
@@ -245,30 +241,13 @@ abstract class SerialDevice extends Device {
     }
 
     synchronized void reconnect() {
-        //sometime tis method is call without need so iv added if
-       // if (!serialPort.isOpened())
-        {
         reconnectionThread = new Thread(new Runnable() {
+            final String commandNotSent = getReceivedCommand();
             @Override
             public void run() {
                 try {
                     try {
-                        try {
-                            serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
-                        }
-                        catch (SerialPortException ex)
-                        {
-                            ex.printStackTrace();
-                            sendMessage(ex.getPortName()+" не прокатило!!"+ ex.getMessage());
-                        }
                         closePort();
-                        try {
-                            serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
-                        }
-                        catch (SerialPortException ex)
-                        {
-                            sendMessage(ex.getPortName()+" не прокатило!!");
-                        }
                     }
                     catch (Exception ignored){}
                     String comPortName = config.devicePort;
@@ -278,18 +257,29 @@ abstract class SerialDevice extends Device {
                     long t1 = System.currentTimeMillis();
                     while (!serialPort.isOpened()) {
                         openPort(comPortName);
-                        if (System.currentTimeMillis() - t1 > 3000) {
+                        /*if (System.currentTimeMillis() - t1 > 20000) {
                             //probably, device changed port
                             sendMessage("probably, port has changed...looking");
                             findPort();
                             break;
                         }
+
+                         */
                     }
-                    if (serialPort.isOpened()) sendMessage("Reconnected.");
+                    sendMessage("Reconnected.");
                     isReconnectActive = false;
                     //rerunning command which caused the reconnection
                     //FIXME бесконечный цикл в случае неправильной команды
-                    //runCommand(getReceivedDevice(), getReceivedCommand());
+                    //TODO create reconnection disabling
+                    //FIXME very bad!!!
+                    try {
+                        Thread.sleep(3000);
+                    }
+                    catch (Exception ignored){}
+
+                    if (!"".equals(getReceivedCommand()))
+                        terminalSample.launchCommand(commandNotSent, true);
+
                 } catch (NullPointerException e) {
                     isReconnectActive = false;
                     sendMessage("port wasn't found.");
@@ -299,7 +289,6 @@ abstract class SerialDevice extends Device {
         );
         reconnectionThread.setName("reconnection");
         reconnectionThread.start();
-        }
     }
 
     private void findPort()

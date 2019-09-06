@@ -30,11 +30,14 @@ public class Logger {
         }
     }
 
+    //TODO сделать флаг "перезаписать файл или записать в конец"
+    // пригодится для записи в файл сиюминнутных значений давления
+
     //TODO выравнивание колонок
 
     // TODO проверять на совпадение предыдущую строку и препредыдущую!
      void write(String data) {
-        if (!data.equals(dataToLog)) {
+        if (!data.equals(dataToLog) && !data.equals("")) {
             dataToLog = data;
             try {
                 writer = new FileWriter(new File(path), true);

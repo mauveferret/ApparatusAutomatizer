@@ -24,6 +24,7 @@ abstract  class Device extends Thread{
     Device(){}
 
     abstract void measureAndLog();
+    void  initialize(){}
 
     // some config data
 
@@ -44,6 +45,10 @@ abstract  class Device extends Thread{
 
     //Setters and Getters
 
+
+    Device getReceivedDevice() {
+        return receivedDevice;
+    }
 
     String getReceivedCommand() {
         return receivedCommand;

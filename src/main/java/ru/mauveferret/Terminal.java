@@ -39,7 +39,8 @@ public class Terminal extends Device {
 
 
     void addDevice(Device someDevice) {
-
+        someDevice.terminalSample = Terminal.this;
+        someDevice.initialize();
         String deviceName = someDevice.config.deviceName;
         String deviceCommand = someDevice.config.deviceCommand;
 

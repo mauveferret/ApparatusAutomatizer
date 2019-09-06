@@ -57,15 +57,16 @@ class ThyracontGauge extends SerialDevice {
             }
             else
                 {
-                sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
+                if (!isReconnectActive())
+                    sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
                 //return previous
                 return getPressure(gaugeNumber);
                 }
         }
         else
         {
-            sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
-            System.out.println(message);
+            if (!isReconnectActive())
+                sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
             //return previous
             return getPressure(gaugeNumber);
         }
@@ -93,27 +94,37 @@ class ThyracontGauge extends SerialDevice {
                 boolean stop = false;
                 while (!stop)
                 {
-                    try {
-                        measure(1);
-                        //long t1 = System.currentTimeMillis();
-                        //System.out.println(System.currentTimeMillis()-t1);
-                        measure(2);
-                        //measure(3);
-                        String pr1 = String.format("%6.3e",getPressure(1));
-                        String pr2 = String.format("%6.3e",getPressure(2));
-                        String pr3 = String.format("%6.3e",getPressure(3));
-                        dataLog.write("time " + pr1 + " " + pr2+" "+pr3);
-                        logPressure1.write("time " + pr1);
-                        logPressure2.write("time " + pr2);
-                        logPressure3.write("time " + pr3);
-                        stop = Thread.currentThread().isInterrupted();
-                    }
-                    catch (NullPointerException  e)
+                    if (!isReconnectActive())
                     {
-                        sendMessage("ERROR while log: port wasn't created\n ");
-                        reconnect();
-                        break;
+                        try {
+                            measure(1);
+                            //long t1 = System.currentTimeMillis();
+                            //System.out.println(System.currentTimeMillis()-t1);
+                            measure(2);
+                            //measure(3);
+                            String pr1 = String.format("%6.3e",getPressure(1));
+                            String pr2 = String.format("%6.3e",getPressure(2));
+                            String pr3 = String.format("%6.3e",getPressure(3));
+                            dataLog.write("time " + pr1 + " " + pr2+" "+pr3);
+                            logPressure1.write("time " + pr1);
+                            logPressure2.write("time " + pr2);
+                            logPressure3.write("time " + pr3);
+                            stop = Thread.currentThread().isInterrupted();
+                        }
+                        catch (NullPointerException  e)
+                        {
+                            sendMessage("ERROR while log: port wasn't created\n ");
+                            reconnect();
+                            break;
+                        }
                     }
+
+                    //FIXME very bad!!
+                    try {
+                        Thread.sleep(1000);
+                    }
+                    catch (Exception ignored){}
+
                 }
 
             }
