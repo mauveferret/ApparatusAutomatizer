@@ -9,6 +9,11 @@ public class Logger {
     private String dataToLog = "";
     private String path;
     private FileWriter writer;
+    private boolean append;
+
+    Logger(boolean append) {
+        this.append = append;
+    }
 
     //Getters and Setters
 
@@ -19,10 +24,17 @@ public class Logger {
     void createFile(String path, String header) {
         this.path = path;
         try {
-            writer = new FileWriter(new File(path), true);
-            if (!"".equals(header))
-                writer.write(header+"\n");
-            writer.close();
+            File file = new File(new File(path).getParent());
+            file.mkdirs();
+            if (file.exists())
+            {
+                writer = new FileWriter(new File(path), append);
+                if (!"".equals(header))
+                    writer.write(header + "\n");
+                writer.close();
+            }
+            else
+                System.out.println("path "+path+" doesn't exist and can't be created");
         }
         catch (IOException ex)
         {
@@ -30,8 +42,11 @@ public class Logger {
         }
     }
 
-    //TODO сделать флаг "перезаписать файл или записать в конец"
-    // пригодится для записи в файл сиюминнутных значений давления
+    private boolean createPath(String path)
+    {
+        return true;
+
+    }
 
     //TODO выравнивание колонок
 

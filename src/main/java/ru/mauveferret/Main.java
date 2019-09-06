@@ -5,6 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        PasswordManager passwordManager = new PasswordManager();
+        passwordManager.setSecretKey("fcwsefvwefaesf");
+        passwordManager.writeLoginAndPassword("admin", "password", "01.04.2020 12", "02.04.2020 12");
+        passwordManager.writeLoginAndPassword("admin1", "password", "01.04.2020 12", "02.04.2020 12");
+        passwordManager.writeLoginAndPassword("admi12n", "password", "01.04.2010 12", "02.04.2020 12");
+        passwordManager.writeLoginAndPassword("adm2222in", "password", "01.04.2020 12", "02.03.2020 12");
         Terminal terminal = new Terminal("terminal");
         Arduino arduino = new Arduino("arduino");
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");

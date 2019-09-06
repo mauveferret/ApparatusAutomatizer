@@ -1,9 +1,0 @@
-command ter
-/* 1
-
-this
-
-*/
-ID 1
-name terminal
-port COM1

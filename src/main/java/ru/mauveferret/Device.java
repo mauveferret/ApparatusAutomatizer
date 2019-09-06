@@ -1,6 +1,7 @@
 package ru.mauveferret;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -11,13 +12,15 @@ abstract  class Device extends Thread{
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        //just during development
+        //FIXME splitter won't work in Linux
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\";
         String pathToConfig = path+"\\"+fileName+".txt";
-        config.logPath = path+"\\logs\\"+fileName+"Log.txt";
+        config.logPath = path+"logs\\"+fileName+"Log.txt";
+        config.dataPath = path+"data\\"+fileName+"Data.txt";
         messageLog.createFile(config.logPath,"time device message");
-        config.dataPath = path+"\\data\\"+fileName+"Data.txt";
         importConfigurationFile(pathToConfig);
     }
 
@@ -29,8 +32,8 @@ abstract  class Device extends Thread{
     // some config data
 
     Config config = new Config();
-    private Logger messageLog = new Logger();
-    Logger dataLog = new Logger();
+    private Logger messageLog = new Logger(true);
+    Logger dataLog = new Logger(true);
     Thread log;
     //used in reconnect method to rerun command which cause reconnect
     private String receivedCommand = "";
@@ -151,6 +154,13 @@ abstract  class Device extends Thread{
 
      private void importConfigurationFile(String path) {
         try {
+            new File(new File(path).getParent()).mkdirs();
+            File configFile = new File(path);
+            if (!configFile.exists())
+            {
+                configFile.createNewFile();
+                sendMessage("Config file wasn't created. Please fill it and run \"import\" command");
+            }
             boolean isComment = false;
             String line;
             Scanner scanner = new Scanner(new File(path));
@@ -162,17 +172,21 @@ abstract  class Device extends Thread{
                     line = line.substring(line.indexOf("*") + 2);
                 }
                 if (!isComment && !line.equals("")) {
-                   chooseImportCommand (line);
+                   try {
+                       chooseImportCommand (line);
+                   }
+                   catch (Exception e)
+                   {
+                       sendMessage("Probably, import command options are incorrect "+e.getMessage());
+                   }
                 }
             }
             scanner.close();
             sendMessage("~"+path.substring(path.lastIndexOf("\\")) + " imported correctly.");
         }
-        catch (Exception e)
+        catch (IOException e)
         {
-            e.printStackTrace();
-            sendMessage(path + " FileNotFound or some commands are incorrect");
-            sendMessage(e.getLocalizedMessage());
+            sendMessage("File "+path.substring(path.lastIndexOf(File.separator))+" doesn't exist and can't be created.");
         }
     }
 

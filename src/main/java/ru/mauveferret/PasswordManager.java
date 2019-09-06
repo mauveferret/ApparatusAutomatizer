@@ -7,19 +7,27 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class PasswordManager {
+class PasswordManager {
 
-    public PasswordManager() {
-        String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+
+    private SimpleDateFormat formatForDate = new SimpleDateFormat("dd.MM.yyyy");
+    private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
+    private String path;
+    private String secretKey;
+
+    void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    PasswordManager() {
+        //FIXME universal path
+         path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\passwords.txt";
     }
 
-    Date dateNow = new Date();
-    SimpleDateFormat formatForDate = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
-    private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
-    private String path;
+
 
     //FIXME make dates
     void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
@@ -30,7 +38,6 @@ public class PasswordManager {
         if (password.equals(""))
             password = createRandomString();
         //FIXME shouldn't appear in terminal
-        System.out.println(login+" "+password);
         loadLoginsAndPasswords();
         boolean valid = true;
 
@@ -47,20 +54,33 @@ public class PasswordManager {
         //if login doesn't exist, checking if date is valid
         if (valid)
         {
+            try {
+                Date date = new Date();
+                Date startDate = StringToDate(dateStart);
+                Date expirationDate = StringToDate(dateExpiration);
+                valid = startDate.after(date) && expirationDate.after(startDate);
+                System.out.println(expirationDate.toString()+"  "+startDate.toString());
+                if (!valid) System.out.println("incorrect date! (it is past of expiration date is before start date)");
+            }
+            catch (ParseException ex)
+            {
+                System.out.println("wrong date format: "+ex.getMessage());
+            }
 
         }
         if (valid)
         {
-            addLoginAndPassword(login,password);
+            //TODO add try block?!
+            addLoginAndPassword(login,password, dateStart,dateExpiration);
             System.out.println("Pair added successfully!");
         }
     }
 
     private Date StringToDate(String date) throws ParseException
     {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        dateFormat.applyPattern("dd.mm.yyyy");
-            return dateFormat.parse(date);
+        //TODO разобраться с датами
+        //formatForDate.applyPattern("dd.mm.yyyy hh");
+        return formatForDate.parse(date);
     }
 
     boolean hasAccess(String login)
@@ -102,6 +122,7 @@ public class PasswordManager {
     private void loadLoginsAndPasswords()
     {
         try {
+            //FIXME куда запинуть даты?!
             Scanner scanner = new Scanner(new FileReader(new File(path)));
             while (scanner.hasNextLine())
             {
@@ -118,24 +139,16 @@ public class PasswordManager {
         }
     }
 
-    private void addLoginAndPassword(String login, String password)
+    private void addLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
     {
         try
         {
-            FileWriter writer = new FileWriter(new File(path));
+            FileWriter writer = new FileWriter(new File(path), true);
             String line = login;
-            try {
-                MessageDigest passw = MessageDigest.getInstance("SHA-256");
-                passw.update(password.getBytes());
-                password = Arrays.toString(passw.digest());
-                System.out.println(password);
-            }
-            catch (NoSuchAlgorithmException e)
-            {
-                System.out.println("no such algorithm");
-            }
-            line+=" "+password;
-            System.out.println(line);
+
+            password = AES.encrypt(password, secretKey) ;
+
+            line+=" "+password+" "+dateStart+" "+dateExpiration+"\n";
             writer.write(line);
             writer.flush();
             writer.close();

@@ -18,9 +18,9 @@ class ThyracontGauge extends SerialDevice {
     }
 
     private double[] pressure = new double[4];
-    private Logger logPressure1 = new Logger();
-    private Logger logPressure2 = new Logger();
-    private Logger logPressure3 = new Logger();
+    private Logger logPressure1 = new Logger(false);
+    private Logger logPressure2 = new Logger(false);
+    private Logger logPressure3 = new Logger(false);
 
     //Getters
 
