@@ -10,6 +10,7 @@ public class Logger {
     private String path;
     private FileWriter writer;
     private boolean append;
+    private int columnLength = 20;
 
     Logger(boolean append) {
         this.append = append;
@@ -17,7 +18,12 @@ public class Logger {
 
     //Getters and Setters
 
-    public String getPath() {
+
+    public void setColumnLength(int columnLength) {
+        this.columnLength = columnLength;
+    }
+
+    String getPath() {
         return path;
     }
 
@@ -42,21 +48,32 @@ public class Logger {
         }
     }
 
-    private boolean createPath(String path)
+
+    private String fillLineByTabs(String line)
     {
-        return true;
-
+        //TODO check how it works
+        String[] lineArray = line.split(" ");
+        String newLine = "";
+        for (String message: lineArray) {
+            String tabs = "";
+            if (message.length()<columnLength) {
+                for (int i = 0; i < columnLength - message.length(); i++) tabs += " ";
+                {
+                    newLine += message + tabs;
+                }
+            }
+        }
+        return newLine;
     }
-
-    //TODO выравнивание колонок
 
     // TODO проверять на совпадение предыдущую строку и препредыдущую!
      void write(String data) {
-        if (!data.equals(dataToLog) && !data.equals("")) {
+        if (!(data.equals(dataToLog) || data.equals(""))) {
             dataToLog = data;
             try {
                 writer = new FileWriter(new File(path), true);
-                writer.write(dataToLog.replaceAll("time", System.currentTimeMillis()+"")+"\n");
+                String str = dataToLog.replaceAll("time", System.currentTimeMillis()+"");
+                writer.write(str+"\n");
                 writer.flush();
                 writer.close();
             } catch (Exception e) {

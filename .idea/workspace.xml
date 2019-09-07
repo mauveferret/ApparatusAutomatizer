@@ -2,42 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AES.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/passwords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/terminal.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AES.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AES.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/AutoPumping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/AutoPumping.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ByPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/ByPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Logger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/PasswordManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/PasswordManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SomeShit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/SomeShit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/mauveferret/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/mauveferret/AppTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +57,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/resources/data/arduinoData.txt" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScatterAnalyzer" />
     <property name="project.structure.last.edited" value="Project" />
@@ -205,6 +179,7 @@
       <workItem from="1567593111414" duration="1215000" />
       <workItem from="1567604355322" duration="554000" />
       <workItem from="1567604930664" duration="9798000" />
+      <workItem from="1567838211510" duration="6738000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -360,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567672027817</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="password manager improved">
+      <created>1567811203629</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567811203630</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +384,7 @@
     <MESSAGE value="made passwordManager, tried to improve gaugeMeasuring" />
     <MESSAGE value="file loading improved: now you don't have to show the path" />
     <MESSAGE value="Some JSSC based improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some JSSC based improvements" />
+    <MESSAGE value="password manager improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="password manager improved" />
   </component>
 </project>

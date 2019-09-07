@@ -1,8 +1,6 @@
 package ru.mauveferret;
 
 import java.io.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -10,8 +8,11 @@ import java.util.*;
 class PasswordManager {
 
 
-    private SimpleDateFormat formatForDate = new SimpleDateFormat("dd.MM.yyyy");
+    private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
+    // key == login, value == password
     private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
+    private TreeMap<String, String> loginAndStartDates = new TreeMap<>();
+    private TreeMap<String, String> loginAndExpireDates = new TreeMap<>();
     private String path;
     private String secretKey;
 
@@ -21,23 +22,14 @@ class PasswordManager {
 
     PasswordManager() {
         //FIXME universal path
-         path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+        path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\passwords.txt";
     }
 
-
-
-    //FIXME make dates
     void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
     {
-
-        if (login.equals(""))
-            login = createRandomString();
-        if (password.equals(""))
-            password = createRandomString();
-        //FIXME shouldn't appear in terminal
         loadLoginsAndPasswords();
         boolean valid = true;
 
@@ -59,76 +51,84 @@ class PasswordManager {
                 Date startDate = StringToDate(dateStart);
                 Date expirationDate = StringToDate(dateExpiration);
                 valid = startDate.after(date) && expirationDate.after(startDate);
-                System.out.println(expirationDate.toString()+"  "+startDate.toString());
-                if (!valid) System.out.println("incorrect date! (it is past of expiration date is before start date)");
+                if (startDate.before(date))
+                    System.out.println("ERROR: Date of access start has expired. Pair not added.");
+                if (startDate.before(expirationDate))
+                    System.out.println("ERROR: Expiration date is before start date. Pair not added");
             }
             catch (ParseException ex)
             {
+                valid = false;
                 System.out.println("wrong date format: "+ex.getMessage());
             }
 
         }
         if (valid)
         {
-            //TODO add try block?!
             addLoginAndPassword(login,password, dateStart,dateExpiration);
             System.out.println("Pair added successfully!");
         }
     }
 
-    private Date StringToDate(String date) throws ParseException
+    boolean userHasAccess(String login)
     {
-        //TODO разобраться с датами
-        //formatForDate.applyPattern("dd.mm.yyyy hh");
-        return formatForDate.parse(date);
-    }
-
-    boolean hasAccess(String login)
-    {
-        return true;
-    }
-
-    boolean IsPasswordValid(String login, String password)
-    {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            md.update(password.getBytes());
-            password = Arrays.toString(md.digest());
-        }
-        catch (NoSuchAlgorithmException ignored){}
         loadLoginsAndPasswords();
-        boolean isValid = false;
-        for (String somelogin: loginsAndPasswords.keySet())
+        if (!loginsAndPasswords.containsKey(login))
         {
-            if (login.equals(somelogin))
-                if (loginsAndPasswords.get(somelogin).equals(password))
-                {
-                    isValid = true;
-                    break;
-                }
+            System.out.println(login+" doesn't exist");
+            return false;
         }
-        return false;
+        try {
+            Date currentDate = new Date();
+            Date startDate = StringToDate(loginAndStartDates.get(login));
+            Date expirationDate = StringToDate(loginAndExpireDates.get(login));
+            return  (startDate.before(currentDate) && expirationDate.after(currentDate));
+        }
+        catch (Exception e)
+        {
+            System.out.println("This error expected not to happen"+e.getMessage());
+            return  false;
+        }
     }
 
-    private String createRandomString()
+    boolean IsPasswordValid(String someLogin, String somePassword)
+    {
+        loadLoginsAndPasswords();
+        String cryptedPassword = AES.encrypt(somePassword,secretKey);
+        if (!loginsAndPasswords.containsKey(someLogin))
+        {
+            System.out.println(someLogin+" doesn't exist");
+            return false;
+        }
+        return  (loginsAndPasswords.get(someLogin).equals(cryptedPassword));
+    }
+
+    String createRandom(int length)
     {
         Random random = new Random();
         String login = "";
-        for (int i=0; i<6;i++)
+        for (int i=0; i<length;i++)
             login+= ((char) (random.nextInt(26) + 'a'))+"";
         return login;
+    }
+
+    private Date StringToDate(String date) throws ParseException
+    {
+        return formatForDate.parse(date);
     }
 
     private void loadLoginsAndPasswords()
     {
         try {
-            //FIXME куда запинуть даты?!
             Scanner scanner = new Scanner(new FileReader(new File(path)));
             while (scanner.hasNextLine())
             {
                 String[] line = scanner.nextLine().split(" ");
-                if (line.length>1)
-                    loginsAndPasswords.put(line[0],line[1]);
+                if (line.length>1) {
+                    loginsAndPasswords.put(line[0], line[1]);
+                    loginAndStartDates.put(line[0], line[2]+" "+line[3]);
+                    loginAndExpireDates.put(line[0], line[4]+" "+line[5]);
+                }
                 else
                     System.out.println("file was damaged!");
             }
