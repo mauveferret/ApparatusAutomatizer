@@ -144,7 +144,7 @@ public class Terminal extends Device {
 
     //for commandline
 
-    void launchCommand(String command, final boolean silentMode)  {
+    String launchCommand(String command, final boolean silentMode)  {
 
         final String[] commandArray = commandToStringArray(command);
         final String internalCommand = command;
@@ -165,6 +165,8 @@ public class Terminal extends Device {
         {
             sendMessage("Command \""+commandArray[0]+"\" not found.");
         }
+        //FIXME
+        return "";
     }
 
     @Override

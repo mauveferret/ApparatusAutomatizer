@@ -48,12 +48,12 @@ class PasswordManager {
         {
             try {
                 Date date = new Date();
-                Date startDate = StringToDate(dateStart);
-                Date expirationDate = StringToDate(dateExpiration);
-                valid = startDate.after(date) && expirationDate.after(startDate);
-                if (startDate.before(date))
-                    System.out.println("ERROR: Date of access start has expired. Pair not added.");
-                if (startDate.before(expirationDate))
+                Date startDate = stringToDate(dateStart);
+                Date expirationDate = stringToDate(dateExpiration);
+                valid = expirationDate.after(date) && expirationDate.after(startDate);
+                if (expirationDate.before(date))
+                    System.out.println("ERROR: Date of access has expired. Pair not added.");
+                if (startDate.after(expirationDate))
                     System.out.println("ERROR: Expiration date is before start date. Pair not added");
             }
             catch (ParseException ex)
@@ -80,8 +80,8 @@ class PasswordManager {
         }
         try {
             Date currentDate = new Date();
-            Date startDate = StringToDate(loginAndStartDates.get(login));
-            Date expirationDate = StringToDate(loginAndExpireDates.get(login));
+            Date startDate = stringToDate(loginAndStartDates.get(login));
+            Date expirationDate = stringToDate(loginAndExpireDates.get(login));
             return  (startDate.before(currentDate) && expirationDate.after(currentDate));
         }
         catch (Exception e)
@@ -103,6 +103,24 @@ class PasswordManager {
         return  (loginsAndPasswords.get(someLogin).equals(cryptedPassword));
     }
 
+    Date getExpireDate(String login)
+    {
+        loadLoginsAndPasswords();
+        if (!loginsAndPasswords.containsKey(login))
+        {
+            System.out.println(login+" doesn't exist!");
+            return new Date();
+        }
+        try {
+            return stringToDate(loginAndExpireDates.get(login));
+        }
+        catch (Exception e)
+        {
+            System.out.println("ooh, that's terrible");
+            return  new Date();
+        }
+    }
+
     String createRandom(int length)
     {
         Random random = new Random();
@@ -112,7 +130,7 @@ class PasswordManager {
         return login;
     }
 
-    private Date StringToDate(String date) throws ParseException
+    private Date stringToDate(String date) throws ParseException
     {
         return formatForDate.parse(date);
     }
@@ -138,6 +156,7 @@ class PasswordManager {
             System.out.println("FileNotFound!");
         }
     }
+
 
     private void addLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
     {
