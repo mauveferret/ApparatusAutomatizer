@@ -6,9 +6,9 @@ import java.security.KeyPair;
 import java.security.PublicKey;
 import java.util.Date;
 
-class Communicator extends Device{
+class ServerCommunicator extends Device{
 
-    public Communicator(String fileName, Socket socket) {
+    public ServerCommunicator(String fileName, Socket socket) {
         super(fileName);
         this.socket = socket;
         try {
