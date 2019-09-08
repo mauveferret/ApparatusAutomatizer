@@ -128,7 +128,9 @@ class ServerCommunicator extends Device{
             long t1 = System.currentTimeMillis();
             String message  = rsa.decrypt(line, serverKeyPair.getPrivate());
             long t2 = System.currentTimeMillis();
-            System.out.println(message+" readTime, ms :"+(t2-t1));
+
+
+             System.out.println(message+" readTime, ms :"+(t2-t1));
             return message;
         }
         catch (IOException ex)
