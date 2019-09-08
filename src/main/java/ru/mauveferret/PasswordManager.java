@@ -1,6 +1,12 @@
 package ru.mauveferret;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -14,11 +20,6 @@ class PasswordManager {
     private TreeMap<String, String> loginAndStartDates = new TreeMap<>();
     private TreeMap<String, String> loginAndExpireDates = new TreeMap<>();
     private String path;
-    private String secretKey;
-
-    void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
 
     PasswordManager() {
         //FIXME universal path
@@ -94,7 +95,7 @@ class PasswordManager {
     boolean IsPasswordValid(String someLogin, String somePassword)
     {
         loadLoginsAndPasswords();
-        String cryptedPassword = AES.encrypt(somePassword,secretKey);
+        String cryptedPassword = createHash(somePassword);
         if (!loginsAndPasswords.containsKey(someLogin))
         {
             System.out.println(someLogin+" doesn't exist");
@@ -123,7 +124,7 @@ class PasswordManager {
 
     String createRandom(int length)
     {
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
         String login = "";
         for (int i=0; i<length;i++)
             login+= ((char) (random.nextInt(26) + 'a'))+"";
@@ -158,15 +159,20 @@ class PasswordManager {
     }
 
 
+
+    private String createHash(String password)
+    {
+        return DigestUtils.sha256Hex(password);
+    }
+
+
     private void addLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
     {
         try
         {
             FileWriter writer = new FileWriter(new File(path), true);
             String line = login;
-
-            password = AES.encrypt(password, secretKey) ;
-
+            password = createHash(password) ;
             line+=" "+password+" "+dateStart+" "+dateExpiration+"\n";
             writer.write(line);
             writer.flush();

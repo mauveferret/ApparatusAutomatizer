@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         PasswordManager passwordManager = new PasswordManager();
-        passwordManager.setSecretKey("12345");
         passwordManager.writeLoginAndPassword("admin", "password", "14:30 01.01.2019", "13:00 01.01.2021");
         System.out.println(passwordManager.IsPasswordValid("admin", "password"));
         System.out.println(passwordManager.userHasAccess("admin"));
+
         Terminal terminal = new Terminal("terminal");
         Arduino arduino = new Arduino("arduino");
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");

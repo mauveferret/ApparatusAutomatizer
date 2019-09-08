@@ -2,8 +2,12 @@ package ru.mauveferret;
 
 import java.io.*;
 import java.net.Socket;
+import java.security.KeyPair;
+import java.security.PublicKey;
+import java.util.Base64;
+import java.util.Random;
 
-    public class Client {
+public class Client {
 
         private static Socket clientSocket; //сокет для общения
         private static BufferedReader reader; // нам нужен ридер читающий с консоли, иначе как
@@ -22,18 +26,28 @@ import java.net.Socket;
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                     // писать туда же
                     out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-
+                    RSA rsa = new RSA();
+                    KeyPair keyPair =rsa.generateKeyPair();
                     String stop = "";
                     while (!stop.equals("stop")) {
+
                         System.out.println("Вы что-то хотели сказать? Введите это здесь:");
+                        out.write("efefge \n");
+                        out.flush();
+
+                        PublicKey serverPublicKey = rsa.bytesToPublicKey(Base64.getDecoder().decode(in.readLine()));
+                        System.out.println("ключ сервера получен");
+                        out.write(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded())+"\n");
+                        out.flush();
+                        System.out.println("ключ отправлен");
                         // если соединение произошло и потоки успешно созданы - мы можем
                         //  работать дальше и предложить клиенту что то ввести
                         // если нет - вылетит исключение
                         String word = reader.readLine(); // ждём пока клиент что-нибудь
                         stop = word;
                         // не напишет в консоль
-                        System.out.println(word);
-                        out.write(word + "\n"); // отправляем сообщение на сервер
+                        System.out.println(rsa.encrypt(word,serverPublicKey));
+                        out.write(rsa.encrypt(word,serverPublicKey) + "\n"); // отправляем сообщение на сервер
                         out.flush();
                         String serverWord = in.readLine(); // ждём, что скажет сервер
                         System.out.println(serverWord); // получив - выводим на экран

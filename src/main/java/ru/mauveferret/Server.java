@@ -3,6 +3,9 @@ package ru.mauveferret;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.security.KeyPair;
+import java.security.PublicKey;
+import java.util.Base64;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.TreeMap;
@@ -55,11 +58,24 @@ public class Server  extends  Device{
 
     private void checkAuthentificatino(Socket socket) throws IOException
     {
+        String userName;
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         PasswordManager passwordManager = new PasswordManager();
-        passwordManager.setSecretKey("12345");
-        String[] authentification = in.readLine().split(" ");
+        RSA rsa = new RSA();
+        KeyPair keyPair =rsa.generateKeyPair();
+        System.out.println("sefggsegfe32");
+        userName = in.readLine();
+        System.out.println(userName);
+        out.write(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded())+"\n");
+        out.flush();
+        System.out.println("Открытый ключ отправлен пользователю"+userName);
+        PublicKey ClientPublicKey = rsa.bytesToPublicKey( Base64.getDecoder().decode(in.readLine()));
+        System.out.println("Открытый ключ пользователя получен");
+
+        String authentification1 = rsa.decrypt(in.readLine(), keyPair.getPrivate());
+        System.out.println(authentification1);
+        String[] authentification = authentification1.split(" ");
         boolean passworIsValid = passwordManager.IsPasswordValid(authentification[0],authentification[1]);
         boolean pairIssNotExpired = passwordManager.userHasAccess(authentification[0]);
         System.out.println(passworIsValid+" "+pairIssNotExpired);
