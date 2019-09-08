@@ -26,8 +26,9 @@ class RSA {
         }
     }
 
-    PublicKey bytesToPublicKey(byte[] bytes)
+    PublicKey stringToPublicKey(String line)
     {
+        byte[] bytes = Base64.getDecoder().decode(line);
         try {
             X509EncodedKeySpec ks = new X509EncodedKeySpec(bytes);
             KeyFactory kf = KeyFactory.getInstance("RSA");
@@ -38,6 +39,11 @@ class RSA {
             e.printStackTrace();
             return null;
         }
+    }
+
+    String publicKeyToString (PublicKey key)
+    {
+        return Base64.getEncoder().encodeToString(key.getEncoded());
     }
 
    /* PublicKey bytesToPrivateKey(byte[] bytes)

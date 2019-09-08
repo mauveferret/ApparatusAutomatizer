@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Communicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/passwords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/PasswordManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/PasswordManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/mauveferret/Server.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +193,7 @@
       <workItem from="1567604930664" duration="9798000" />
       <workItem from="1567838211510" duration="19795000" />
       <workItem from="1567923714670" duration="82000" />
-      <workItem from="1567923876180" duration="8141000" />
+      <workItem from="1567923876180" duration="14045000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -376,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567882821203</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="first encrypted string transfer success!">
+      <created>1567933277305</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1567933277305</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="alias added but don't not work" />
     <MESSAGE value="alias works, trying to make deviceCommandMap workable" />
     <MESSAGE value="help fixed, some problems remained" />
     <MESSAGE value="help works" />
@@ -421,6 +421,7 @@
     <MESSAGE value="password manager improved" />
     <MESSAGE value="fates and validation added to passwordmanager, some TODO were made" />
     <MESSAGE value="server made" />
-    <option name="LAST_COMMIT_MESSAGE" value="server made" />
+    <MESSAGE value="first encrypted string transfer success!" />
+    <option name="LAST_COMMIT_MESSAGE" value="first encrypted string transfer success!" />
   </component>
 </project>

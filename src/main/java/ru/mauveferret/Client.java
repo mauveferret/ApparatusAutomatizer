@@ -5,7 +5,6 @@ import java.net.Socket;
 import java.security.KeyPair;
 import java.security.PublicKey;
 import java.util.Base64;
-import java.util.Random;
 
 public class Client {
 
@@ -31,18 +30,18 @@ public class Client {
                     String stop = "";
                     while (!stop.equals("stop")) {
 
-                        System.out.println("Вы что-то хотели сказать? Введите это здесь:");
-                        out.write("efefge \n");
-                        out.flush();
 
-                        PublicKey serverPublicKey = rsa.bytesToPublicKey(Base64.getDecoder().decode(in.readLine()));
+                        out.write("someClient \n");
+                        out.flush();
+                        PublicKey serverPublicKey = rsa.stringToPublicKey(in.readLine());
                         System.out.println("ключ сервера получен");
-                        out.write(Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded())+"\n");
+                        out.write(rsa.publicKeyToString(keyPair.getPublic())+"\n");
                         out.flush();
                         System.out.println("ключ отправлен");
                         // если соединение произошло и потоки успешно созданы - мы можем
                         //  работать дальше и предложить клиенту что то ввести
                         // если нет - вылетит исключение
+                        System.out.println("Вы что-то хотели сказать? Введите это здесь:");
                         String word = reader.readLine(); // ждём пока клиент что-нибудь
                         stop = word;
                         // не напишет в консоль
