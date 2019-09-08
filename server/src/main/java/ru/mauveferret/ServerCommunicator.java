@@ -35,9 +35,17 @@ class ServerCommunicator extends Device{
     public synchronized void start() {
         if (createSecureCommunicationLine()) {
             if (canAccess()) {
+                writeEncryptionToClient("granted");
                 sendMessage("Access granted to " + login);
                 while (expireDate.after(new Date()) && !stopCommunication) {
-                    terminalSample.launchCommand(secureReadFromClient(), false);
+                    try {
+                        String someCommand = readEncryptionFromClient();
+                        terminalSample.launchCommand(someCommand, false);
+                    }
+                    catch (Exception e)
+                    {
+                        sendMessage("segf?");
+                    }
                 }
                 sendMessage(login + " was disconnected");
             }
@@ -50,16 +58,25 @@ class ServerCommunicator extends Device{
         {
             sendMessage("WTF");
         }
+        try {
+            out.close();
+            in.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     private boolean createSecureCommunicationLine()
     {
         try {
-            long t1 = System.nanoTime();
+            long t1 = System.currentTimeMillis();
             serverKeyPair = rsa.generateKeyPair();
-            long t2 = System.nanoTime();
-            System.out.println("pair generation, ns " + (t2 - t1));
+            long t2 = System.currentTimeMillis();
+            System.out.println("pair generation, ms " + (t2 - t1));
             out.write(rsa.publicKeyToString(serverKeyPair.getPublic()) + "\n");
+            out.flush();
             sendMessage("Открытый ключ сервера отправлен пользователю");
             clientPublicKey = rsa.stringToPublicKey(in.readLine());
             sendMessage("Открытый ключ пользователя получен");
@@ -76,7 +93,7 @@ class ServerCommunicator extends Device{
     private boolean canAccess()
     {
         PasswordManager passwordManager = new PasswordManager();
-        String[] loginAndPassword = secureReadFromClient().split(" ");
+        String[] loginAndPassword = readEncryptionFromClient().split(" ");
         boolean passworIsValid = passwordManager.IsPasswordValid(loginAndPassword[0],loginAndPassword[1]);
         boolean pairIssNotExpired = passwordManager.userHasAccess(loginAndPassword[0]);
         login = loginAndPassword[0];
@@ -86,12 +103,13 @@ class ServerCommunicator extends Device{
     }
 
 
-    private void secureWriteToClient(String message)
+    private void writeEncryptionToClient(String message)
     {
         try {
-            long t1 = System.nanoTime();
+            long t1 = System.currentTimeMillis();
             out.write(rsa.encrypt(message,clientPublicKey)+"\n");
-            long t2 = System.nanoTime();
+            out.flush();
+            long t2 = System.currentTimeMillis();
             System.out.println(message+" time:"+(t2-t1));
         }
         catch (Exception e)
@@ -102,14 +120,15 @@ class ServerCommunicator extends Device{
 
     }
 
-    private String secureReadFromClient()
+    private String readEncryptionFromClient()
     {
         try
         {
-            long t1 = System.nanoTime();
-            String message  = rsa.decrypt(in.readLine(), serverKeyPair.getPrivate());
-            long t2 = System.nanoTime();
-            System.out.println(message+" time:"+(t2-t1));
+            String line = in.readLine();
+            long t1 = System.currentTimeMillis();
+            String message  = rsa.decrypt(line, serverKeyPair.getPrivate());
+            long t2 = System.currentTimeMillis();
+            System.out.println(message+" readTime, ms :"+(t2-t1));
             return message;
         }
         catch (IOException ex)

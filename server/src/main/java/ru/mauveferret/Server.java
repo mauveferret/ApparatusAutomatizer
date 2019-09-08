@@ -10,6 +10,7 @@ public class Server  extends  Device{
 
     Server(String fileName) {
         super(fileName);
+        //FIXME
     }
 
     public static ArrayList<Socket> socketList = new ArrayList<>();
@@ -26,7 +27,9 @@ public class Server  extends  Device{
             while (!stopServer)
             {
                 Socket socket = server.accept();
-                new ServerCommunicator("clients", socket).start();
+                ServerCommunicator communicator = new ServerCommunicator("clients", socket);
+                communicator.terminalSample = terminalSample;
+                communicator.start();
                 socketList.add(socket);
             }
 
@@ -36,6 +39,12 @@ public class Server  extends  Device{
             System.out.println("very strange things");
             ex.printStackTrace();
         }
+    }
+
+    @Override
+    void initialize() {
+        launchServer();
+        super.initialize();
     }
 
     @Override
