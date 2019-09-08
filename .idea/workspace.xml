@@ -2,11 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Communicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AES.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/AES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/AutoPumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ByPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ByPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Communicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/RSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/SomeShit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SomeShit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/mauveferret/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApparatusAutomatizer-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApparatusAutomatizer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ApparatusAutomatizer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Arduino.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/AutoPumping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ByPass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GateControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/GuardianAngel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/LeyboldTMP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/PasswordManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SerialDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/SomeShit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/Terminal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/mauveferret/ThyracontGauge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.mauveferret.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ru.mauveferret.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/mauveferret/AppTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +114,22 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/resources/data/arduinoData.txt" />
+    <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScatterAnalyzer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java\ru\mauveferret" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\server\src\main\java\ru\mauveferret" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\resources" />
       <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\src\main\java\ru\mauveferret" />
@@ -79,26 +147,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
-    <configuration name="Server" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Server" />
-      <module name="ApparatusAutomatizer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Maven.ApparatusAutomatizer [package]">
     <configuration name="client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Client" />
-      <module name="ApparatusAutomatizer" />
+      <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
+      <module name="client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="run" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_221\jre" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
-      <module name="ApparatusAutomatizer" />
+      <module name="server" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,9 +215,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.run" />
+      <item itemvalue="Application.server" />
       <item itemvalue="Application.client" />
-      <item itemvalue="Application.Server" />
       <item itemvalue="Maven.ApparatusAutomatizer [package]" />
     </list>
   </component>
@@ -193,7 +253,7 @@
       <workItem from="1567604930664" duration="9798000" />
       <workItem from="1567838211510" duration="19795000" />
       <workItem from="1567923714670" duration="82000" />
-      <workItem from="1567923876180" duration="14045000" />
+      <workItem from="1567923876180" duration="16330000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -377,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567933277305</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="starting separation">
+      <created>1567939429719</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1567939429719</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="alias works, trying to make deviceCommandMap workable" />
     <MESSAGE value="help fixed, some problems remained" />
     <MESSAGE value="help works" />
     <MESSAGE value="devices run commands in separate thread, guard added" />
@@ -422,6 +488,7 @@
     <MESSAGE value="fates and validation added to passwordmanager, some TODO were made" />
     <MESSAGE value="server made" />
     <MESSAGE value="first encrypted string transfer success!" />
-    <option name="LAST_COMMIT_MESSAGE" value="first encrypted string transfer success!" />
+    <MESSAGE value="starting separation" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting separation" />
   </component>
 </project>
