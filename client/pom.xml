@@ -34,13 +34,13 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx</artifactId>
-      <version>11</version>
+      <version>12</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>11-ea+25</version>
+      <version>12</version>
     </dependency>
     <dependency>
       <groupId>commons-cli</groupId>
@@ -66,7 +66,6 @@
   </dependencies>
 
   <build>
-
     <plugins>
       <plugin>
         <groupId>com.akathist.maven.plugins.launch4j</groupId>
@@ -112,8 +111,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>8</source>
-          <target>8</target>
+          <source>9</source>
+          <target>9</target>
         </configuration>
       </plugin>
 

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/pics/carlson.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/recources/carlson.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/recources/fxml/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LoginWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,23 +60,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScatterAnalyzer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\resources" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\src\main\java\ru\mauveferret" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.mauveferret" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\server\src\main\java\ru\mauveferret" />
     </key>
@@ -202,6 +205,7 @@
       <workItem from="1567923714670" duration="82000" />
       <workItem from="1567923876180" duration="29044000" />
       <workItem from="1567961617418" duration="2345000" />
+      <workItem from="1568005657572" duration="2892000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
