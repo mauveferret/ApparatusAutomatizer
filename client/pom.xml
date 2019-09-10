@@ -4,7 +4,6 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ru.mauveferret</groupId>
   <artifactId>client</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -148,14 +147,6 @@
           </execution>
         </executions>
         <version>2.5.1</version>
-      </plugin>
-      <plugin>
-        <groupId>com.zenjava</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>8.8.3</version>
-        <configuration>
-          <mainClass>ru.mauveferret.Main</mainClass>
-        </configuration>
       </plugin>
     </plugins>
   </build>

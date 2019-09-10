@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/recources/carlson.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/recources/fxml/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Login.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/sample.fxml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +204,8 @@
       <workItem from="1567923714670" duration="82000" />
       <workItem from="1567923876180" duration="29044000" />
       <workItem from="1567961617418" duration="2345000" />
-      <workItem from="1568005657572" duration="2892000" />
+      <workItem from="1568005657572" duration="3264000" />
+      <workItem from="1568099934342" duration="1279000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -417,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567947178343</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="client/server conection works good, encryption made">
+      <created>1568008935701</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568008935701</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
