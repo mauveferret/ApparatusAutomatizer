@@ -79,27 +79,29 @@ abstract  class Device extends Thread{
     //associates a command with a method the command dedicated to
     void runTerminalCommand(String someCommand, int accessLevel)
     {
-        try {
-            long t1 = System.currentTimeMillis();
-            String[] command = commandToStringArray(someCommand);
-            command[1] = command[1].toLowerCase();
-            command = replaceAliasByCommand(command);
-            if (commands.containsKey(command[1])) {
-                receivedCommand = someCommand;
-                long t2 = System.currentTimeMillis();
-                chooseTerminalCommand(command);
-                long t3 = System.currentTimeMillis();
-                System.out.println("DEV logic time "+(t2-t1)+" command time: "+(t3-t2));
+        if (accessLevel>=deviceAccessLevel) {
+            try {
+                long t1 = System.currentTimeMillis();
+                String[] command = commandToStringArray(someCommand);
+                command[1] = command[1].toLowerCase();
+                command = replaceAliasByCommand(command);
+                if (commands.containsKey(command[1])) {
+                    receivedCommand = someCommand;
+                    long t2 = System.currentTimeMillis();
+                    chooseTerminalCommand(command);
+                    long t3 = System.currentTimeMillis();
+                    System.out.println("DEV logic time " + (t2 - t1) + " command time: " + (t3 - t2));
 
-            } else {
-                sendMessage("command \"" + command[1] + "\" doesn't exist");
+                } else {
+                    sendMessage("command \"" + command[1] + "\" doesn't exist");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                sendMessage("some internal error happened" + someCommand);
             }
         }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            sendMessage("some internal error happened"+someCommand);
-        }
+        else
+            sendMessage("Access denied.");
     }
 
     void chooseTerminalCommand(String[] command)

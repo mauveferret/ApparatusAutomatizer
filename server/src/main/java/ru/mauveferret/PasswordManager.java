@@ -3,9 +3,6 @@ package ru.mauveferret;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,13 +10,12 @@ import java.util.*;
 
 class PasswordManager {
 
-    //TODO accessLevel!!!
-
     private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
     // key == login, value == password
     private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
     private TreeMap<String, String> loginAndStartDates = new TreeMap<>();
     private TreeMap<String, String> loginAndExpireDates = new TreeMap<>();
+    private TreeMap<String, Integer> loginAndAccessLevels = new TreeMap<>();
     private String path;
 
     PasswordManager() {
@@ -30,11 +26,14 @@ class PasswordManager {
         path+="\\resources\\passwords.txt";
     }
 
-    void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
+
+    //TODO crypt passwords.txt
+    void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration, int accessLevel)
     {
         loadLoginsAndPasswords();
         boolean valid = true;
 
+        if (accessLevel>10) valid=false;
         //check if the login already exists
         for (String someLogin: loginsAndPasswords.keySet())
         {
@@ -67,12 +66,18 @@ class PasswordManager {
         }
         if (valid)
         {
-            addLoginAndPassword(login,password, dateStart,dateExpiration);
+            addLoginAndPassword(login,password, dateStart,dateExpiration, accessLevel);
             System.out.println("Pair added successfully!");
         }
     }
 
-    boolean userHasAccess(String login)
+    boolean loginExists(String login)
+    {
+        loadLoginsAndPasswords();
+        return loginsAndPasswords.containsKey(login);
+    }
+
+    boolean loginHasNotExpired(String login)
     {
         loadLoginsAndPasswords();
         if (!loginsAndPasswords.containsKey(login))
@@ -123,6 +128,17 @@ class PasswordManager {
         }
     }
 
+    int getAccessLevel(String login)
+    {
+        loadLoginsAndPasswords();
+        if (!loginsAndPasswords.containsKey(login))
+        {
+            System.out.println(login+" doesn't exist!");
+            return 0;
+        }
+        return loginAndAccessLevels.get(login);
+    }
+
     String createRandom(int length)
     {
         SecureRandom random = new SecureRandom();
@@ -148,6 +164,7 @@ class PasswordManager {
                     loginsAndPasswords.put(line[0], line[1]);
                     loginAndStartDates.put(line[0], line[2]+" "+line[3]);
                     loginAndExpireDates.put(line[0], line[4]+" "+line[5]);
+                    loginAndAccessLevels.put(line[0],Integer.parseInt(line[6]));
                 }
                 else
                     System.out.println("file was damaged!");
@@ -167,14 +184,15 @@ class PasswordManager {
     }
 
 
-    private void addLoginAndPassword(String login, String password, String dateStart, String dateExpiration)
+    private void addLoginAndPassword(String login, String password,
+                                     String dateStart, String dateExpiration, int accessLevel)
     {
         try
         {
             FileWriter writer = new FileWriter(new File(path), true);
             String line = login;
             password = createHash(password) ;
-            line+=" "+password+" "+dateStart+" "+dateExpiration+"\n";
+            line+=" "+password+" "+dateStart+" "+dateExpiration+" "+accessLevel+"\n";
             writer.write(line);
             writer.flush();
             writer.close();

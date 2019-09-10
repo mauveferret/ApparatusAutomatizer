@@ -100,7 +100,7 @@ class ServerComunicator extends Device{
         PasswordManager passwordManager = new PasswordManager();
         String[] loginAndPassword = readEncryptionFromClient().split(" ");
         boolean passworIsValid = passwordManager.IsPasswordValid(loginAndPassword[0],loginAndPassword[1]);
-        boolean pairIssNotExpired = passwordManager.userHasAccess(loginAndPassword[0]);
+        boolean pairIssNotExpired = passwordManager.loginHasNotExpired(loginAndPassword[0]);
         login = loginAndPassword[0];
         expireDate = passwordManager.getExpireDate(loginAndPassword[0]);
         accessType = 10;

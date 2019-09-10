@@ -125,19 +125,37 @@ public class Terminal extends Device {
         return  returnString;
     }
 
-    @Override
-    public void run() {
+
+    //FIXME: it can stop the program?!
+    public void startNewSession() {
         Scanner scanner = new Scanner(System.in);
+        sendMessage("Enter login and password, please.");
         String command = scanner.nextLine();
-        while (!command.equals("exit"))
-        {
-            launchCommand(command,false);
-            command = scanner.nextLine();
+        PasswordManager passwordManager = new PasswordManager();
+        String login = command.split(" ")[0];
+        String password = command.split(" ")[1];
+        if (passwordManager.loginExists(login)) {
+            if (passwordManager.IsPasswordValid(login, password))
+                if (passwordManager.loginHasNotExpired(login)) {
+                    sendMessage("Access granted. Your level of access is "+passwordManager.getAccessLevel(login));
+                    command = scanner.nextLine();
+                    while (!command.equals("exit")) {
+                        launchCommand(command, false);
+                        command = scanner.nextLine();
+                    }
+                    sendMessage("Goodbye, "+login);
+                } else
+                {
+                    sendMessage("your account has no access to the system!");
+                }
+            else
+            {
+                sendMessage("Password is not valid. Try again.");
+            }
         }
-        sendMessage("Goodbye, my Lord.");
-        for (Thread thr: Thread.getAllStackTraces().keySet())
+        else
         {
-            thr.interrupt();
+            sendMessage("login "+login+" doesn't exist.");
         }
     }
 
@@ -175,6 +193,8 @@ public class Terminal extends Device {
         commands.put("help", "this page");
         // commands.put("exit", "stops program");
         commands.put("threads","");
+        commands.put("exit", "stop current terminal session");
+        commands.put("terminate", "stop the program");
         return super.getCommands();
     }
 
@@ -188,6 +208,15 @@ public class Terminal extends Device {
             case "threads":
             {
                 for (Thread thread: Thread.getAllStackTraces().keySet()) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
+            }
+            break;
+            case "terminate":
+            {
+                for (Thread thr: Thread.getAllStackTraces().keySet())
+                {
+                    thr.interrupt();
+                }
+                sendMessage("Goodbye, my Lord.");
             }
             break;
         }
