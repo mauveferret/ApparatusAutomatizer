@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.mauveferret.ChooserController">
+   <effect>
+      <DropShadow radius="11.4825" width="26.93" />
+   </effect>
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="815.0" pickOnBounds="true">
+         <image>
+            <Image url="@../pics/burn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/close.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="34.0" layoutY="46.0" opacity="0.8" prefHeight="368.0" prefWidth="280.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
+         <children>
+            <JFXButton layoutX="13.0" layoutY="23.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="VACUUM" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="13.0" layoutY="77.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DISCHARGE" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="13.0" layoutY="132.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DIAGNOSTICS" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="13.0" layoutY="189.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DATABASE" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="13.0" layoutY="243.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="TIMETABLE" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="console" layoutX="13.0" layoutY="298.0" onAction="#openConsole" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="CONSOLE" textAlignment="CENTER">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</Pane>

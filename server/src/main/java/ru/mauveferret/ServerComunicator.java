@@ -6,9 +6,10 @@ import java.security.KeyPair;
 import java.security.PublicKey;
 import java.util.Date;
 
-class ServerCommunicator extends Device{
+class ServerComunicator extends Device{
 
-    public ServerCommunicator(String fileName, Socket socket) {
+
+    public ServerComunicator(String fileName, Socket socket) {
         super(fileName);
         this.socket = socket;
         try {
@@ -37,20 +38,23 @@ class ServerCommunicator extends Device{
             if (canAccess()) {
                 writeEncryptionToClient("granted");
                 sendMessage("Access granted to " + login);
+
                 while (expireDate.after(new Date()) && !stopCommunication) {
                     try {
+                        //FIXME it dont wait for read
                         String someCommand = readEncryptionFromClient();
                         terminalSample.launchCommand(someCommand, false);
                     }
                     catch (Exception e)
                     {
-                        sendMessage("segf?");
+                        sendMessage("client doesn't write me");
                     }
                 }
                 sendMessage(login + " was disconnected");
             }
             else
             {
+                writeEncryptionToClient("denied");
                 sendMessage("Access denied!");
             }
         }
@@ -77,6 +81,7 @@ class ServerCommunicator extends Device{
             System.out.println("pair generation, ms " + (t2 - t1));
             out.write(rsa.publicKeyToString(serverKeyPair.getPublic()) + "\n");
             out.flush();
+
             sendMessage("Открытый ключ сервера отправлен пользователю");
             clientPublicKey = rsa.stringToPublicKey(in.readLine());
             sendMessage("Открытый ключ пользователя получен");

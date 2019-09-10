@@ -1,21 +1,33 @@
 package ru.mauveferret;
 
+
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.*;
 import java.net.Socket;
 import java.security.KeyPair;
 import java.security.PublicKey;
 
-class ClientCommunicator extends Thread{
+class ClientConnector extends Thread{
 
-    public ClientCommunicator(String host, int port) {
-       
+
+    public ClientConnector(String host, int port, LoginWindowController controller) {
+
+        loginWindow = controller;
         try {
             clientSocket = new Socket(host, port);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+            Platform.runLater((() -> loginWindow.setConnectionStatus("Server is ONLINE")));
         }
         catch (IOException e)
         {
+            Platform.runLater((() -> loginWindow.setConnectionStatus("Server is OFFLINE")));
             e.printStackTrace();
         }
     }
@@ -26,28 +38,41 @@ class ClientCommunicator extends Thread{
     private PublicKey serverPublicKey;
     private BufferedReader in;
     private BufferedWriter out;
+    private LoginWindowController loginWindow;
     //TODO
     private int accessType;
     private boolean stopCommunication = false;
-    private String login;
     
     //temp
     private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+
     @Override
     public synchronized void start() {
+
         if (createSecureCommunicationLine()) {
-            try {
-                sendMessage("enter login and password");
-                writeEncryptionToServer(reader.readLine());
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-                sendMessage("suka");
-            }
+            Platform.runLater((() -> loginWindow.setConnectionStatus("data encryption enabled")));
+            Platform.runLater((() ->
+                    writeEncryptionToServer(loginWindow.getLogin()+" "+loginWindow.getPassword())));
             if ("granted".equals(readEncryptionFromServer()))
             {
+                Platform.runLater((() -> loginWindow.setConnectionStatus("Access GRANTED.")));
+                Platform.runLater((() -> loginWindow.closeWindow()));
+                Platform.runLater((() ->
+                {
+                    try {
+                        Stage windowsChooser = new Stage();
+                        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Chooser.fxml"));
+                        windowsChooser.initStyle(StageStyle.UNDECORATED);
+                        windowsChooser.setScene(new Scene(root, 800, 430));
+                        windowsChooser.show();
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println("shit shit");
+                    }
+                }));
+
                 while (!stopCommunication)
                 {
                     try {
@@ -63,10 +88,12 @@ class ClientCommunicator extends Thread{
                         stopCommunication = true;
                     }
                 }
+
+
             }
             else
             {
-                sendMessage("Access denied!");
+                Platform.runLater((() -> loginWindow.setConnectionStatus("Access DENIED.")));
             }
         }
         else
@@ -108,7 +135,7 @@ class ClientCommunicator extends Thread{
 
     
 
-    private void writeEncryptionToServer(String message)
+     void writeEncryptionToServer(String message)
     {
         try {
             long t1 = System.nanoTime();
@@ -125,7 +152,7 @@ class ClientCommunicator extends Thread{
 
     }
 
-    private String readEncryptionFromServer()
+     String readEncryptionFromServer()
     {
         try
         {
@@ -144,7 +171,7 @@ class ClientCommunicator extends Thread{
     }
 
 
-    private void sendMessage(String message)
+     void sendMessage(String message)
     {
         System.out.println(message);
     }

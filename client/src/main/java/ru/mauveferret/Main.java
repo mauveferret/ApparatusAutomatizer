@@ -8,8 +8,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 public class Main extends Application {
 
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(new Scene(root, 800, 430));
@@ -20,7 +22,7 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         launch(args);
-        new ClientCommunicator("localhost", 4004).start();
+        //new ClientCommunicator("localhost", 4004).start();
         System.out.println("?!");
     }
 }

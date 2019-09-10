@@ -27,7 +27,7 @@ public class Server  extends  Device{
             while (!stopServer)
             {
                 Socket socket = server.accept();
-                ServerCommunicator communicator = new ServerCommunicator("clients", socket);
+                ServerComunicator communicator = new ServerComunicator("clients", socket);
                 communicator.terminalSample = terminalSample;
                 communicator.start();
                 socketList.add(socket);
