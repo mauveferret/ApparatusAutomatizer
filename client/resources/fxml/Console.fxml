@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.ConsoleController">
+   <effect>
+      <DropShadow radius="11.4825" width="26.93" />
+   </effect>
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="815.0" pickOnBounds="true">
+         <image>
+            <Image url="@../pics/burn.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/close.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="34.0" layoutY="46.0" opacity="0.8" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
+         <children>
+            <JFXTextField fx:id="command" focusColor="#333333" layoutX="39.0" layoutY="40.0" prefHeight="51.0" prefWidth="464.0" promptText="Command" style="-fx-text-fill: #ffffff" unFocusColor="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="27.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="sendButton" layoutX="544.0" layoutY="40.0" onAction="#send" prefHeight="36.0" prefWidth="132.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="send">
+               <font>
+                  <Font name="HP Simplified" size="27.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+      <Pane layoutX="34.0" layoutY="236.0" opacity="0.8" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
+         <children>
+            <JFXTextField fx:id="message" focusColor="#333333" layoutX="37.0" layoutY="40.0" prefHeight="51.0" prefWidth="464.0" promptText="message" style="-fx-text-fill: #ffffff" unFocusColor="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="27.0" />
+               </font>
+            </JFXTextField>
+         </children></Pane>
+   </children>
+</Pane>

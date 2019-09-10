@@ -48,7 +48,6 @@ public class LoginWindowController {
     {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
-        System.exit(0);
     }
 
     //event handlers

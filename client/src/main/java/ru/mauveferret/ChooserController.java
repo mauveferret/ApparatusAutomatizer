@@ -16,7 +16,7 @@ public class ChooserController {
     {
         Stage stage = (Stage) console.getScene().getWindow();
         stage.close();
-
+        System.exit(0);
     }
 
     @FXML
