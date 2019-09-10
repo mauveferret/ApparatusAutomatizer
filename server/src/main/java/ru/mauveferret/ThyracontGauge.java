@@ -14,7 +14,6 @@ class ThyracontGauge extends SerialDevice {
         logPressure1.createFile( newPath+"\\pr1.txt", "");
         logPressure2.createFile( newPath+"\\pr2.txt","");
         logPressure3.createFile( newPath+"\\pr3.txt","");
-        measureAndLog();
     }
 
     private double[] pressure = new double[4];

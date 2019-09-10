@@ -16,7 +16,6 @@ abstract class SerialDevice extends Device {
 
     //just to check if the Device works properly (for find ports method)
     abstract boolean callDevice();
-
     private SerialPort serialPort;
     //in this thread reconnection to the device happening
     private Thread reconnectionThread;

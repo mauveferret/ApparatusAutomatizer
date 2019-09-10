@@ -12,25 +12,37 @@ abstract  class Device extends Thread{
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-        //just during development
+        //FIXME "Apparatus..." can be used only during development
         //FIXME splitter won't work in Linux
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\";
-        String pathToConfig = path+"\\"+fileName+".txt";
+        config.configPath = path+"\\"+fileName+".txt";
         config.logPath = path+"logs\\"+fileName+"Log.txt";
         config.dataPath = path+"data\\"+fileName+"Data.txt";
         messageLog.createFile(config.logPath,"time device message");
-        importConfigurationFile(pathToConfig);
+        importConfigurationFile();
     }
+
+    /*TODO class with huge Map, which connects some number with error type.
+    It will help to send errors to client
+     */
 
     Device(){}
 
     abstract void measureAndLog();
-    void  initialize(){}
+    void  initialize()
+    {
+        measureAndLog();
+    }
 
-    // some config data
 
+    //TODO move to config?!
+    //limits access to device
+    float deviceAccessLevel = 100;
+    //keeps terminal object
+    Terminal terminalSample;
+    // some config dat
     Config config = new Config();
     private Logger messageLog = new Logger(true);
     Logger dataLog = new Logger(true);
@@ -44,7 +56,7 @@ abstract  class Device extends Thread{
     //key == alias, value == command + options which is represented by the alias
     private HashMap<String,String[]> aliases = new HashMap<>();
     //key == alias, value == options.
-    Terminal terminalSample;
+
 
     //Setters and Getters
 
@@ -65,7 +77,7 @@ abstract  class Device extends Thread{
     // terminal related
 
     //associates a command with a method the command dedicated to
-    void runCommand(Device device, String someCommand)
+    void runTerminalCommand(String someCommand, int accessLevel)
     {
         try {
             long t1 = System.currentTimeMillis();
@@ -74,11 +86,10 @@ abstract  class Device extends Thread{
             command = replaceAliasByCommand(command);
             if (commands.containsKey(command[1])) {
                 receivedCommand = someCommand;
-                receivedDevice = device;
                 long t2 = System.currentTimeMillis();
                 chooseTerminalCommand(command);
                 long t3 = System.currentTimeMillis();
-                System.out.println(" logic time "+(t2-t1)+" command time: "+(t3-t2));
+                System.out.println("DEV logic time "+(t2-t1)+" command time: "+(t3-t2));
 
             } else {
                 sendMessage("command \"" + command[1] + "\" doesn't exist");
@@ -87,7 +98,7 @@ abstract  class Device extends Thread{
         catch (Exception e)
         {
             e.printStackTrace();
-            sendMessage("Unknown error during command "+someCommand);
+            sendMessage("some internal error happened"+someCommand);
         }
     }
 
@@ -99,60 +110,13 @@ abstract  class Device extends Thread{
             break;
             case "alias": sendMessage(addAlias(command) ? command[2]+" added" : command[2]+" isn't added");
             break;
-            case  "import": importConfigurationFile(command[2]);
+            case  "import": importConfigurationFile();
             break;
         }
     }
 
-    //actually not only returns a commands Map, but also forms it
-      TreeMap<String, String> getCommands()
-      {
-
-          commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
-          commands.put("import", "import parameters from the file if form: import $path$");
-          commands.put("info", "info");
-          return commands;
-      }
-
-    private boolean addAlias(String[] command)
-    {
-        String alias = command[2];
-        String someCommand = command[3];
-        boolean canBeAdded=true;
-        for (String str: aliases.keySet())
-        {
-            if (alias.equals(str))
-            {
-                canBeAdded=false;
-                sendMessage("alias "+alias+" already exist.");
-                break;
-            }
-        }
-        for (String str: commands.keySet())
-        {
-            if (alias.equals(str))
-            {
-                canBeAdded=false;
-                sendMessage("alias "+alias+" already exist as a command.");
-                break;
-            }
-        }
-        if (!commands.containsKey(someCommand))
-        {
-            canBeAdded=false;
-            sendMessage("command "+someCommand+" doesn't exist");
-        }
-
-        String[] commandToReplace = new String[command.length-2];
-        for (int i = 3; i<command.length; i++)
-            commandToReplace[i-2] = command[i];
-        if (canBeAdded) aliases.put(alias,commandToReplace);
-        return canBeAdded;
-    }
-
-
-
-     private void importConfigurationFile(String path) {
+    private void importConfigurationFile() {
+        String path = config.configPath;
         try {
             new File(new File(path).getParent()).mkdirs();
             File configFile = new File(path);
@@ -201,9 +165,55 @@ abstract  class Device extends Thread{
                 break;
             case "command": config.deviceCommand = command[1];
                 break;
-            case "run" : runCommand(receivedDevice, "somecommand"+" "+line+" bug bug");
+            case "run" : runTerminalCommand( "somecommand"+" "+line+" bug bug", 10);
             break;
         }
+    }
+
+    //actually not only returns a commands Map, but also forms it
+    TreeMap<String, String> getCommands()
+    {
+
+        commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
+        commands.put("import", "import parameters from the file if form: import");
+        commands.put("info", "info");
+        return commands;
+    }
+
+    private boolean addAlias(String[] command)
+    {
+        String alias = command[2];
+        String someCommand = command[3];
+        boolean canBeAdded=true;
+        for (String str: aliases.keySet())
+        {
+            if (alias.equals(str))
+            {
+                canBeAdded=false;
+                sendMessage("alias "+alias+" already exist.");
+                break;
+            }
+        }
+        for (String str: commands.keySet())
+        {
+            if (alias.equals(str))
+            {
+                canBeAdded=false;
+                sendMessage("alias "+alias+" already exist as a command.");
+                break;
+            }
+        }
+        if (!commands.containsKey(someCommand))
+        {
+            canBeAdded=false;
+            sendMessage("command "+someCommand+" doesn't exist");
+        }
+
+        String[] commandToReplace = new String[command.length-2];
+        for (int i = 3; i<command.length; i++)
+            commandToReplace[i-2] = command[i];
+        if (canBeAdded) aliases.put(alias,commandToReplace);
+        return canBeAdded;
     }
 
     /*

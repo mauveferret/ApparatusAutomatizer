@@ -13,6 +13,7 @@ import java.util.*;
 
 class PasswordManager {
 
+    //TODO accessLevel!!!
 
     private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
     // key == login, value == password

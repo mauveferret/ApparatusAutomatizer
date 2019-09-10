@@ -3,7 +3,13 @@ package ru.mauveferret;
 import java.util.TreeMap;
 
 //an example of the  virtual device which would be made by some user to configure Automizer for his personal needs
-public class GateControl extends Device{
+class GateControl extends Device{
+
+
+    GateControl(String fileName) {
+        super(fileName);
+        deviceAccessLevel = 6;
+    }
 
     private int columnNumber;
     //in torr
@@ -30,26 +36,19 @@ public class GateControl extends Device{
     private String gaugeName;
 
 
-    public GateControl(String path)
-    {
-        super(path);
-        measureAndLog();
-    }
-
-
-    public boolean isPumpEnabled() {
+    boolean isPumpEnabled() {
         return pumpEnabled;
     }
 
-    public boolean isValveOpened() {
+    boolean isValveOpened() {
         return valveOpened;
     }
 
-    public boolean isGateOpened() {
+    boolean isGateOpened() {
         return gateOpened;
     }
 
-    public int getColumnNumber() {
+    int getColumnNumber() {
         return columnNumber;
     }
 
@@ -71,10 +70,10 @@ public class GateControl extends Device{
         String digitalOutput = (enablePump) ? " 1" : " 0";
         if (pumpEnabled ^ enablePump && isCorrectControl)
         {
-            arduino.runCommand(gateControl, "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput);
+            String someCommand = "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput;
+            terminalSample.runTerminalCommand(someCommand, 10);
             pumpEnabled = enablePump;
         }
-
     }
 
     private void control(final String type, String control)
@@ -106,14 +105,20 @@ public class GateControl extends Device{
                     boolean isforlinePumpOn = arduino.getDigitalPinsWritten()[forlinePumpDigitalPin];
                     if (type.equals("valve")) { //valve
                         if (isforlinePumpOn || (columnPressure > 700))
-                            arduino.runCommand(gateControl, "deviceCommand dwrite " + valveDigitalPin + " 1");
+                        {
+                            String someCommand = "deviceCommand dwrite " + valveDigitalPin + " 1";
+                            arduino.runTerminalCommand(someCommand, 10);
+                        }
                         else
                             sendMessage("pressure difference is too high.");
                     }
                     else
                         {   //gate
                         if (pressureDifference < maxPresDifference && vesselPressure < maxPresDifference)
-                            arduino.runCommand(gateControl,"deviceCommand dwrite "+gateDigitalPin+" 1");
+                        {
+                            String someCommand = "deviceCommand dwrite "+gateDigitalPin+" 1";
+                            arduino.runTerminalCommand(someCommand, 10);
+                        }
                         else
                         {
                             if (pressureDifference>maxPresDifference)
@@ -125,40 +130,38 @@ public class GateControl extends Device{
                 }
                 else //close
                 {
-                    arduino.runCommand(gateControl, "deviceCommand dwrite " + pin + " 0");
+                    String someCommand = "deviceCommand dwrite " + pin + " 0";
+                    arduino.runTerminalCommand(someCommand, 10);
                 }
             }
 
             //FIXME sleep is very very bad!
             final  boolean triedToOpen = openValve;
             final boolean wasOpened = isOpened(type);
-            Thread checkGate = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Thread.sleep(1000);
+            Thread checkGate = new Thread(() -> {
+                try {
+                    Thread.sleep(1000);
 
-                        String status = ((wasOpened) ? "opened" : "closed");
-                        if (triedToOpen ^ wasOpened)
-                        {
-                            //TODO add closing of the gates!
-                            sendMessage("!!!!!!!ERROR!!!!"+ type+columnNumber+"is not "+status);
-                            if (type.equals("gate"))
-                                gateOpened = false;
-                            else
-                                valveOpened = false;
-                        }
-                            else
-                        {
-                            sendMessage(type+columnNumber+" is "+status);
-                            if (type.equals("gate"))
-                                gateOpened = wasOpened;
-                            else
-                                valveOpened = wasOpened;
-                        }
+                    String status = ((wasOpened) ? "opened" : "closed");
+                    if (triedToOpen ^ wasOpened)
+                    {
+                        //TODO add closing of the gates!
+                        sendMessage("!!!!!!!ERROR!!!!"+ type+columnNumber+"is not "+status);
+                        if (type.equals("gate"))
+                            gateOpened = false;
+                        else
+                            valveOpened = false;
                     }
-                    catch (InterruptedException ignored){}
+                        else
+                    {
+                        sendMessage(type+columnNumber+" is "+status);
+                        if (type.equals("gate"))
+                            gateOpened = wasOpened;
+                        else
+                            valveOpened = wasOpened;
+                    }
                 }
+                catch (InterruptedException ignored){}
             });
 
         }
@@ -170,8 +173,8 @@ public class GateControl extends Device{
         boolean closed,opened;
         int closedPin = (gate.equals("gate")) ? gateAnalogClosedPin : valveAnalogClosedPin;
         int openedPin = (gate.equals("gate")) ? gateAnalogOpenedPin : valveAnalogOpenedPin;
-        arduino.runCommand(this, "deviceCommand aread "+openedPin);
-        arduino.runCommand(this, "deviceCommand aread "+closedPin);
+        terminalSample.runTerminalCommand( "deviceCommand aread "+openedPin, 10);
+        terminalSample.runTerminalCommand( "deviceCommand aread "+closedPin, 10);
         closed = (arduino.getAnalogPinsRead()[closedPin]>2.5);
         opened = (arduino.getAnalogPinsRead()[openedPin]>2.5);
         if (opened ^ closed) return opened;
@@ -222,6 +225,8 @@ public class GateControl extends Device{
                    case "arduino": arduinoName = command[1];
                    break;
                    case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
+                   break;
+                   case "maxpressuredifference" : maxPresDifference = Integer.parseInt(command[1]);
                    break;
                }
            }

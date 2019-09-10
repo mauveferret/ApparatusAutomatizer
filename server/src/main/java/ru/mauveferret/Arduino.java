@@ -16,26 +16,24 @@ class Arduino extends SerialDevice {
 
     Arduino(String fileName) {
         super(fileName);
-        measureAndLog();
+        deviceAccessLevel = 9;
     }
 
-    //TODO create list with active pin numbers for log
-
-
-    //TODO list of pins status
+    //arrays with pins status (only for dwrite, aread)
     private boolean[] digitalPinsWritten = new boolean[14];
     private double[] analogPinsRead = new double[14];
 
+    //TODO create list with active pin numbers for log in order to save freespace
     private ArrayList<Integer> actualDigitalPins;
     private ArrayList<Integer> actualAnalogPins;
 
     //Getters and Setters
 
-    public boolean[] getDigitalPinsWritten() {
+    boolean[] getDigitalPinsWritten() {
         return digitalPinsWritten;
     }
 
-    public double[] getAnalogPinsRead() {
+    double[] getAnalogPinsRead() {
         return analogPinsRead;
     }
 
@@ -185,30 +183,27 @@ class Arduino extends SerialDevice {
     @Override
     void measureAndLog() {
         dataLog.createFile(config.dataPath, "time  digitalPinsStatus analogPinsStatus");
-        log = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean stop = false;
-                while (!stop)
-                {
-                    try {
-                        String time = "time";
-                        String dataToLog =time+" digital: ";
-                        for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
-                        dataToLog+=" analog: ";
-                        for (double d: analogPinsRead) dataToLog+=d+" ";
-                        dataLog.write(dataToLog);
-                        stop = Thread.currentThread().isInterrupted();
-                        //FIXME sleep is very bad decision!
-                        //Thread.sleep(100);
-                    }
-                    catch (Exception  e)
-                    {
-                        sendMessage("ERROR while log: "+e.getMessage());
-                    }
+        log = new Thread(() -> {
+            boolean stop = false;
+            while (!stop)
+            {
+                try {
+                    String time = "time";
+                    String dataToLog =time+" digital: ";
+                    for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
+                    dataToLog+=" analog: ";
+                    for (double d: analogPinsRead) dataToLog+=d+" ";
+                    dataLog.write(dataToLog);
+                    stop = Thread.currentThread().isInterrupted();
+                    //FIXME sleep is very bad decision!
+                    //Thread.sleep(100);
                 }
-
+                catch (Exception  e)
+                {
+                    sendMessage("ERROR while log: "+e.getMessage());
+                }
             }
+
         });
         log.setName(config.deviceName);
         log.start();

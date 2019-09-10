@@ -4,19 +4,18 @@ import java.util.TreeMap;
 
 class Config {
 
-
-
     String deviceID="ID isn't set";
     String deviceName = "name isn't set";
     String deviceCommand = "name isn't set";
     String devicePort = "port isn't set";
     String deviceType = "type isn't set";
     int baudRate = 9600;
-    String logPath;
-    String dataPath;
-    String units;
+    String configPath = "";
+    String logPath = "";
+    String dataPath = "";
+    String units = "";
     TreeMap<String,Object> parameters = new TreeMap<>();
-//TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
+    //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 
    // private String logPath;
 

@@ -1,0 +1,2 @@
+command trm
+name terminal

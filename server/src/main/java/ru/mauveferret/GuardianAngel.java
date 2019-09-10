@@ -2,7 +2,13 @@ package ru.mauveferret;
 
 import java.util.TreeMap;
 
-public class GuardianAngel extends Device {
+class GuardianAngel extends Device {
+
+    //FIXME WTF?!
+    GuardianAngel(String fileName) {
+        super(fileName);
+        deviceAccessLevel = 2;
+    }
 
     /*
     used to check if the temperature and pressure conditions are comfortable
@@ -26,10 +32,6 @@ public class GuardianAngel extends Device {
 
     //command related methods
 
-    public GuardianAngel(String path) {
-        super(path);
-        measureAndLog();
-    }
 
     private void startCheckingPressure() {
         Thread checkerThread = new Thread(new Runnable() {
@@ -52,15 +54,15 @@ public class GuardianAngel extends Device {
                         if ((Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10) && gate)
                         {
                             sendMessage("i'm closing the gates!");
-                            gateControl.runCommand(angel,"bla gate close");
+                            gateControl.runTerminalCommand("bla gate close", 10);
                         }
                         if ((pressureColumn>10 || (temperature>42)) && turboPump)
                         {
                             sendMessage("i'm closing the gates and stop the TMP!");
-                            tmp.runCommand(angel, "bla stop");
-                            gateControl.runCommand(angel,"bla gate close");
+                            tmp.runTerminalCommand( "bla stop",10);
+                            gateControl.runTerminalCommand("bla gate close", 10);
                             //FIXME find better indication of  valve closing need
-                            gateControl.runCommand(angel,"bla valve close");
+                            gateControl.runTerminalCommand("bla valve close", 10);
                         }
 
                     }

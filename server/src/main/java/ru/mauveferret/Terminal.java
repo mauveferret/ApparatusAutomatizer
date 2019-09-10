@@ -15,7 +15,7 @@ public class Terminal extends Device {
     private TreeMap<String, Device> deviceMap = new TreeMap<>();
 
 
-    public Terminal(String path) {
+    Terminal(String path) {
         super(path);
         measureAndLog();
     }
@@ -153,7 +153,8 @@ public class Terminal extends Device {
             Thread commandThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    commandMap.get(commandArray[0]).runCommand(Terminal.this, internalCommand);
+                    //FIXME accesslevel
+                    commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, 1);
                    // TODO silentmode
                 }
             }

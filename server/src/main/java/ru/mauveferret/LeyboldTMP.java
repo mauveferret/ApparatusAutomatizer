@@ -11,6 +11,11 @@ public class LeyboldTMP extends SerialDevice {
     private double current;
     private boolean enabled = false;
 
+    LeyboldTMP(String fileName) {
+        super(fileName);
+        deviceAccessLevel = 6;
+    }
+
     @Override
     void type() {
 
@@ -21,10 +26,6 @@ public class LeyboldTMP extends SerialDevice {
         return false;
     }
 
-    public LeyboldTMP(String path) {
-        super(path);
-        measureAndLog();
-    }
 
 //Getters
 
