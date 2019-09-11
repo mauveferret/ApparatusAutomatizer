@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/thyracontGauge.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/console.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gateControl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gateControl.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gauge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pfeifferGauge.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/pfeifferGauge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pfeifferGauge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/LeyboldTMP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,29 +67,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/target/classes" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\resources" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\target\classes" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\resources" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client" />
     </key>
   </component>
   <component name="RunDashboard">

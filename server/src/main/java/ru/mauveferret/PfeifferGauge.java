@@ -1,11 +1,10 @@
 package ru.mauveferret;
 
 
-//driver for TPG 256a controller Unit
+//driver for Pfeiffer MaxiGauge TPG 256A controller Unit
 
-import java.io.File;
 
-public class PfeifferGauge extends Gauge {
+class PfeifferGauge extends Gauge {
 
 
     PfeifferGauge(String fileName) {
@@ -13,22 +12,22 @@ public class PfeifferGauge extends Gauge {
     }
 
     @Override
-    double measure(int gauge) {
-        try
-        {
-            Thread.sleep(30);
-        }
-        catch (Exception ignored){}
-
+    synchronized double  measure(int gauge) {
         String command = "PR"+gauge+"\n";
         writeMessage(command);
-        if (('\6'+"").equals(readMessage()))
-        {
-            writeMessage(""+'\5');
+       readMessage("\r\n");
+        writeMessage(""+'\5');
+        String message = readMessage("\r\n");
+        //TODO Status
+        try {
+            double measurement = Double.parseDouble(message.substring(2,10))*0.75;
+            pressure[gauge] = measurement;
+            return measurement;
         }
-        String message = readMessage();
-        //FIXME
-        return 0;
+        catch (Exception e)
+        {
+            return getPressure(gauge);
+        }
     }
 
     @Override
@@ -41,21 +40,5 @@ public class PfeifferGauge extends Gauge {
 
     synchronized double getPressure(int gaugeNumber) {
         return pressure[gaugeNumber];
-    }
-
-
-    @Override
-    void type() {
-
-    }
-
-    @Override
-    boolean callDevice() {
-        return false;
-    }
-
-    @Override
-    void measureAndLog() {
-
     }
 }

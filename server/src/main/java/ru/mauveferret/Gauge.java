@@ -16,7 +16,6 @@ abstract class Gauge extends SerialDevice {
     @Override
     void initialize() {
         String newPath =(new File(config.dataPath)).getParent();
-        System.out.println(newPath);
         logPressure1.createFile( newPath+"\\pr1.txt", "");
         logPressure2.createFile( newPath+"\\pr2.txt","");
         logPressure3.createFile( newPath+"\\pr3.txt","");

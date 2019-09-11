@@ -69,7 +69,7 @@ abstract class SerialDevice extends Device {
                 writeMessage(command[2]);
                 break;
             case "read":
-                sendMessage(readMessage());
+                sendMessage(readMessage(command[2]));
                 break;
             case  "enablelog" :  measureAndLog();
             break;
@@ -183,12 +183,12 @@ abstract class SerialDevice extends Device {
         }
     }
 
-    synchronized String readMessage() {
+    synchronized String readMessage(String endOfLine) {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
             //&& !answer.contains("\n")
-            while (!(answer.contains("\r") || answer.contains("\n"))) {
+            while (!(answer.contains(endOfLine))) {
                 //FIXME зависает в случае, если порт не отвечает, addlistener
                 if (serialPort.getInputBufferBytesCount() > 0) {
                     answer += (new String(serialPort.readBytes(1)));

@@ -5,10 +5,10 @@ import java.util.TreeMap;
 
 public class LeyboldTMP extends SerialDevice {
 
-    private int  temperature;
-    private int frequency;
-    private double voltage;
-    private double current;
+    private int  temperature = 0;
+    private int frequency = 0;
+    private double voltage = 0;
+    private double current = 0;
     private boolean enabled = false;
 
     LeyboldTMP(String fileName) {
@@ -81,15 +81,13 @@ public class LeyboldTMP extends SerialDevice {
 
     @Override
     void measureAndLog() {
-        Thread log = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean stop = true;
-                while (stop)
-                {
-                    dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current);
-                    stop = Thread.currentThread().isInterrupted();
-                }
+        dataLog.createFile(config.dataPath, "time  temperature,C  frequency, Hz   voltage, 0.1V   current,A ");
+        Thread log = new Thread(() -> {
+            boolean stop = true;
+            while (stop)
+            {
+                dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current);
+                stop = Thread.currentThread().isInterrupted();
             }
         });
         log.setName(config.deviceName);

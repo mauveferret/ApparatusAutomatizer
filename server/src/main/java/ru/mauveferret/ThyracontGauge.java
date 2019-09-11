@@ -24,7 +24,7 @@ class ThyracontGauge extends Gauge {
             Thread.sleep(30);
         }
         catch (Exception ignored){}
-        message = readMessage();
+        message = readMessage("\r");
 
         if (message.length()>10) {
             if ((message.charAt(10) + "").equals(checkSum(message.substring(0, 10))))

@@ -1,10 +1,10 @@
-command pgag
+command con
 /* 1
 
 this
 
 */
 ID 1
-name pfeifferGauge
+name console
 port COM8
 open 22
