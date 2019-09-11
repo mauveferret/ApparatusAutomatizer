@@ -1,0 +1,10 @@
+command pgag
+/* 1
+
+this
+
+*/
+ID 1
+name pfeifferGauge
+port COM49
+open 22

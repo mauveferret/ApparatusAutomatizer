@@ -240,49 +240,45 @@ abstract class SerialDevice extends Device {
     }
 
     synchronized void reconnect() {
-        reconnectionThread = new Thread(new Runnable() {
-            final String commandNotSent = getReceivedCommand();
-            @Override
-            public void run() {
+        reconnectionThread = new Thread(() -> {
+            try {
                 try {
-                    try {
-                        closePort();
-                    }
-                    catch (Exception ignored){}
-                    String comPortName = config.devicePort;
-                    serialPort = new SerialPort(comPortName);
-                    sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
-                    isReconnectActive = true;
-                    long t1 = System.currentTimeMillis();
-                    while (!serialPort.isOpened()) {
-                        openPort(comPortName);
-                        /*if (System.currentTimeMillis() - t1 > 20000) {
-                            //probably, device changed port
-                            sendMessage("probably, port has changed...looking");
-                            findPort();
-                            break;
-                        }
-
-                         */
-                    }
-                    sendMessage("Reconnected.");
-                    isReconnectActive = false;
-                    //rerunning command which caused the reconnection
-                    //FIXME бесконечный цикл в случае неправильной команды
-                    //TODO create reconnection disabling
-                    //FIXME very bad!!!
-                    try {
-                        Thread.sleep(3000);
-                    }
-                    catch (Exception ignored){}
-
-                    if (!"".equals(getReceivedCommand()))
-                        terminalSample.launchCommand(commandNotSent, true);
-
-                } catch (NullPointerException e) {
-                    isReconnectActive = false;
-                    sendMessage("port wasn't found.");
+                    closePort();
                 }
+                catch (Exception ignored){}
+                String comPortName = config.devicePort;
+                serialPort = new SerialPort(comPortName);
+                sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
+                isReconnectActive = true;
+                long t1 = System.currentTimeMillis();
+                while (!serialPort.isOpened()) {
+                    openPort(comPortName);
+                    /*if (System.currentTimeMillis() - t1 > 20000) {
+                        //probably, device changed port
+                        sendMessage("probably, port has changed...looking");
+                        findPort();
+                        break;
+                    }
+
+                     */
+                }
+                sendMessage("Reconnected.");
+                isReconnectActive = false;
+                //rerunning command which caused the reconnection
+                //FIXME бесконечный цикл в случае неправильной команды
+                //TODO create reconnection disabling
+                //FIXME very bad!!!
+                try {
+                    Thread.sleep(3000);
+                }
+                catch (Exception ignored){}
+
+                if (!"".equals(getReceivedCommand()))
+                    terminalSample.launchCommand(receivedCommand, true, receivedAccessLevel);
+                //FIXME
+            } catch (NullPointerException e) {
+                isReconnectActive = false;
+                sendMessage("port wasn't found.");
             }
         }
         );

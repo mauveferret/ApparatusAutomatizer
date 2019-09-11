@@ -38,12 +38,12 @@ class ServerComunicator extends Device{
             if (canAccess()) {
                 writeEncryptionToClient("granted");
                 sendMessage("Access granted to " + login);
-
+                int accessLevel = new PasswordManager().getAccessLevel(login);
                 while (expireDate.after(new Date()) && !stopCommunication) {
                     try {
                         //FIXME it dont wait for read
                         String someCommand = readEncryptionFromClient();
-                        terminalSample.launchCommand(someCommand, false);
+                        terminalSample.launchCommand(someCommand, false, accessLevel);
                     }
                     catch (Exception e)
                     {

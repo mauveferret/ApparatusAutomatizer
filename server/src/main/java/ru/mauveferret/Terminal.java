@@ -17,7 +17,7 @@ public class Terminal extends Device {
 
     Terminal(String path) {
         super(path);
-        measureAndLog();
+        deviceAccessLevel = 9;
     }
 
     //Getters
@@ -40,7 +40,7 @@ public class Terminal extends Device {
 
     void addDevice(Device someDevice) {
         someDevice.terminalSample = Terminal.this;
-        someDevice.initialize();
+        new Thread(someDevice::initialize).start();
         String deviceName = someDevice.config.deviceName;
         String deviceCommand = someDevice.config.deviceCommand;
 
@@ -127,20 +127,28 @@ public class Terminal extends Device {
 
 
     //FIXME: it can stop the program?!
-    public void startNewSession() {
+    void startNewSession() {
         Scanner scanner = new Scanner(System.in);
         sendMessage("Enter login and password, please.");
         String command = scanner.nextLine();
         PasswordManager passwordManager = new PasswordManager();
-        String login = command.split(" ")[0];
-        String password = command.split(" ")[1];
+        String login = "";
+        String password = "";
+        try {
+            login = command.split(" ")[0];
+            password = command.split(" ")[1];
+        }
+        catch (Exception e)
+        {
+            sendMessage("Enter correct login and password, please.");
+        }
         if (passwordManager.loginExists(login)) {
             if (passwordManager.IsPasswordValid(login, password))
                 if (passwordManager.loginHasNotExpired(login)) {
                     sendMessage("Access granted. Your level of access is "+passwordManager.getAccessLevel(login));
                     command = scanner.nextLine();
                     while (!command.equals("exit")) {
-                        launchCommand(command, false);
+                        launchCommand(command, false, passwordManager.getAccessLevel(login));
                         command = scanner.nextLine();
                     }
                     sendMessage("Goodbye, "+login);
@@ -157,12 +165,15 @@ public class Terminal extends Device {
         {
             sendMessage("login "+login+" doesn't exist.");
         }
+        scanner.close();
+        if (!stopDevice)
+            startNewSession();
     }
 
 
     //for commandline
 
-    String launchCommand(String command, final boolean silentMode)  {
+    String launchCommand(String command, final boolean silentMode, int accessLevel)  {
 
         final String[] commandArray = commandToStringArray(command);
         final String internalCommand = command;
@@ -172,7 +183,7 @@ public class Terminal extends Device {
                 @Override
                 public void run() {
                     //FIXME accesslevel
-                    commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, 1);
+                    commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, accessLevel);
                    // TODO silentmode
                 }
             }
@@ -210,17 +221,25 @@ public class Terminal extends Device {
                 for (Thread thread: Thread.getAllStackTraces().keySet()) System.out.println(thread.getName()+" "+thread.getPriority()+" "+thread.isAlive());
             }
             break;
-            case "terminate":
-            {
-                for (Thread thr: Thread.getAllStackTraces().keySet())
-                {
-                    thr.interrupt();
-                }
-                sendMessage("Goodbye, my Lord.");
-            }
+            case "terminate": terminate();
             break;
         }
         super.chooseTerminalCommand(command);
+    }
+
+    private void terminate()
+    {
+        for (Thread thr: Thread.getAllStackTraces().keySet())
+        {
+            thr.interrupt();
+        }
+        stopDevice = true;
+        sendMessage("Goodbye, my Lord.");
+        try {
+            Thread.sleep(500);
+        }
+        catch (Exception ignored){}
+        System.exit(0);
     }
 
     @Override

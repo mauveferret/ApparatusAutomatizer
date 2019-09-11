@@ -36,7 +36,8 @@ abstract  class Device extends Thread{
         measureAndLog();
     }
 
-
+    //disable all proccesses, threads in order to exit program correctly
+    boolean stopDevice = false;
     //TODO move to config?!
     //limits access to device
     float deviceAccessLevel = 100;
@@ -48,8 +49,8 @@ abstract  class Device extends Thread{
     Logger dataLog = new Logger(true);
     Thread log;
     //used in reconnect method to rerun command which cause reconnect
-    private String receivedCommand = "";
-    private Device receivedDevice;
+     String receivedCommand = "";
+     int receivedAccessLevel = 0;
     //it is used in help
     //key == command, value == its desciption for help
     TreeMap<String, String> commands = new TreeMap<>();
@@ -57,13 +58,7 @@ abstract  class Device extends Thread{
     private HashMap<String,String[]> aliases = new HashMap<>();
     //key == alias, value == options.
 
-
     //Setters and Getters
-
-
-    Device getReceivedDevice() {
-        return receivedDevice;
-    }
 
     String getReceivedCommand() {
         return receivedCommand;
@@ -87,6 +82,7 @@ abstract  class Device extends Thread{
                 command = replaceAliasByCommand(command);
                 if (commands.containsKey(command[1])) {
                     receivedCommand = someCommand;
+                    receivedAccessLevel = accessLevel;
                     long t2 = System.currentTimeMillis();
                     chooseTerminalCommand(command);
                     long t3 = System.currentTimeMillis();

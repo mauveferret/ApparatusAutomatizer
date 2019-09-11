@@ -1,10 +1,10 @@
-command gag
+command tgag
 /* 1
 
 this
 
 */
 ID 1
-name gauge
+name thyracontGauge
 port COM49
 open 22

@@ -13,7 +13,8 @@ public class Main {
         Terminal terminal = new Terminal("terminal");
         Arduino arduino = new Arduino("arduino");
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");
-        ThyracontGauge thyracontGauge = new ThyracontGauge("gauge");
+        ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
+        PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
         GateControl gateControl = new GateControl("gateControl");
         Server server = new Server("server");
         //GuardianAngel guardianAngel = new GuardianAngel("angel");
