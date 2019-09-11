@@ -10,6 +10,7 @@ import java.util.*;
 
 class PasswordManager {
 
+    private AES aes = new AES();
     private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
     // key == login, value == password
     private TreeMap<String,String> loginsAndPasswords = new TreeMap<>();
@@ -18,21 +19,26 @@ class PasswordManager {
     private TreeMap<String, Integer> loginAndAccessLevels = new TreeMap<>();
     private String path;
 
-    PasswordManager() {
+    PasswordManager(String key) {
         //FIXME universal path
         path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\passwords.txt";
+        aes.setKey(key);
+        loadLoginsAndPasswords();
     }
 
     //TODO crypt passwords.txt
     void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration, int accessLevel)
     {
-        loadLoginsAndPasswords();
         boolean valid = true;
 
-        if (accessLevel>10) valid=false;
+        if (accessLevel>10)
+        {
+            valid=false;
+            System.out.println("access level is too high!");
+        }
         //check if the login already exists
         for (String someLogin: loginsAndPasswords.keySet())
         {
@@ -72,13 +78,11 @@ class PasswordManager {
 
     boolean loginExists(String login)
     {
-        loadLoginsAndPasswords();
         return loginsAndPasswords.containsKey(login);
     }
 
     boolean loginHasNotExpired(String login)
     {
-        loadLoginsAndPasswords();
         if (!loginsAndPasswords.containsKey(login))
         {
             System.out.println(login+" doesn't exist");
@@ -99,7 +103,6 @@ class PasswordManager {
 
     boolean IsPasswordValid(String someLogin, String somePassword)
     {
-        loadLoginsAndPasswords();
         String cryptedPassword = createHash(somePassword);
         if (!loginsAndPasswords.containsKey(someLogin))
         {
@@ -147,6 +150,25 @@ class PasswordManager {
         return login;
     }
 
+    boolean createDecryptedFileVersion()
+    {
+        try
+        {
+            FileWriter writer = new FileWriter(new File(path.replace(".txt", "1.txt")), true);
+            for (String login : loginsAndPasswords.keySet())
+                writer.write(login + " " + loginAndStartDates.get(login) + " " +
+                        loginAndExpireDates.get(login) + " " + loginAndAccessLevels.get(login) + "\n");
+            writer.flush();
+            writer.close();
+            return true;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
+
     private Date stringToDate(String date) throws ParseException
     {
         return formatForDate.parse(date);
@@ -158,24 +180,29 @@ class PasswordManager {
             Scanner scanner = new Scanner(new FileReader(new File(path)));
             while (scanner.hasNextLine())
             {
-                String[] line = scanner.nextLine().split(" ");
-                if (line.length>1) {
-                    loginsAndPasswords.put(line[0], line[1]);
-                    loginAndStartDates.put(line[0], line[2]+" "+line[3]);
-                    loginAndExpireDates.put(line[0], line[4]+" "+line[5]);
-                    loginAndAccessLevels.put(line[0],Integer.parseInt(line[6]));
+                try {
+                    String decryptedLine = aes.decrypt(scanner.nextLine());
+                    String[] line = decryptedLine.split(" ");
+                    if (line.length > 1) {
+                        loginsAndPasswords.put(line[0], line[1]);
+                        loginAndStartDates.put(line[0], line[2] + " " + line[3]);
+                        loginAndExpireDates.put(line[0], line[4] + " " + line[5]);
+                        loginAndAccessLevels.put(line[0], Integer.parseInt(line[6]));
+                    } else
+                        System.out.println("file was damaged!");
                 }
-                else
-                    System.out.println("file was damaged!");
+                catch (Exception e)
+                {
+                    System.out.println("key is not valid or file was damaged");
+                }
             }
+            scanner.close();
         }
         catch (FileNotFoundException e)
         {
             System.out.println("FileNotFound!");
         }
     }
-
-
 
     private String createHash(String password)
     {
@@ -192,7 +219,13 @@ class PasswordManager {
             String line = login;
             password = createHash(password) ;
             line+=" "+password+" "+dateStart+" "+dateExpiration+" "+accessLevel+"\n";
-            writer.write(line);
+            try {
+                writer.write(aes.encrypt(line));
+            }
+            catch (Exception e)
+            {
+                System.out.println("shit");
+            }
             writer.flush();
             writer.close();
         }

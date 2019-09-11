@@ -22,7 +22,8 @@ abstract class Gauge extends SerialDevice {
         {
             //FIXME files are not updated, values ar added to the end.
             loggerMap.put(number, new Logger(false));
-            loggerMap.get(number).createFile(newPath+File.separator+config.deviceName+number+".txt","");
+            String pressurePath = newPath+File.separator+"pressure"+File.separator+config.deviceName+number+".txt";
+            loggerMap.get(number).createFile(pressurePath,"");
         }
         super.initialize();
     }

@@ -7,12 +7,14 @@ import java.util.TreeMap;
 needs to send some command to its owner through LaunchCommand
 also realises help command
  */
-public class Terminal extends Device {
+class Terminal extends Device {
 
     //key == deviceCommand, value == device object
     private TreeMap<String, Device> commandMap = new TreeMap<>();
     //key == device name, value == device object
     private TreeMap<String, Device> deviceMap = new TreeMap<>();
+    //FIXME password
+    PasswordManager passwords = new PasswordManager("12345");
 
 
     Terminal(String path) {
@@ -24,10 +26,6 @@ public class Terminal extends Device {
 
     TreeMap<String, Device> getCommandMap() {
         return commandMap;
-    }
-
-    public TreeMap<String, Device> getDeviceMap() {
-        return deviceMap;
     }
 
     Device getDevice(String deviceName)
@@ -131,7 +129,6 @@ public class Terminal extends Device {
         Scanner scanner = new Scanner(System.in);
         sendMessage("Enter login and password, please.");
         String command = scanner.nextLine();
-        PasswordManager passwordManager = new PasswordManager();
         String login = "";
         String password = "";
         try {
@@ -142,13 +139,13 @@ public class Terminal extends Device {
         {
             sendMessage("Enter correct login and password, please.");
         }
-        if (passwordManager.loginExists(login)) {
-            if (passwordManager.IsPasswordValid(login, password))
-                if (passwordManager.loginHasNotExpired(login)) {
-                    sendMessage("Access granted. Your level of access is "+passwordManager.getAccessLevel(login));
+        if (passwords.loginExists(login)) {
+            if (passwords.IsPasswordValid(login, password))
+                if (passwords.loginHasNotExpired(login)) {
+                    sendMessage("Access granted. Your level of access is "+passwords.getAccessLevel(login));
                     command = scanner.nextLine();
                     while (!command.equals("exit")) {
-                        launchCommand(command, false, passwordManager.getAccessLevel(login));
+                        launchCommand(command, false,passwords.getAccessLevel(login));
                         command = scanner.nextLine();
                     }
                     sendMessage("Goodbye, "+login);
