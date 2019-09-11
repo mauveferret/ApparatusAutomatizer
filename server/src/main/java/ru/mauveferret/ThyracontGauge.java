@@ -40,7 +40,7 @@ class ThyracontGauge extends Gauge {
                 if (!isReconnectActive())
                     sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
                 //return previous
-                return getPressure(gaugeNumber);
+                return pressure[gaugeNumber];
                 }
         }
         else
@@ -48,7 +48,7 @@ class ThyracontGauge extends Gauge {
             if (!isReconnectActive())
                 sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
             //return previous
-            return getPressure(gaugeNumber);
+            return pressure[gaugeNumber];
         }
     }
 

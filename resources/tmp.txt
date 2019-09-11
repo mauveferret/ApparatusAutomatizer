@@ -7,4 +7,5 @@ this
 ID 1
 name tmppump
 command tmp
-port COM5
+port COM51
+open

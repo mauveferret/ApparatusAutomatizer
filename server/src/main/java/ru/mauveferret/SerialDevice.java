@@ -94,6 +94,20 @@ abstract class SerialDevice extends Device {
                 break;
             case "baudrate":
                 config.baudRate = Integer.parseInt(command[1]);
+            case "devices":
+            {
+                for (int i=1; i<command.length;i++)
+                {
+                    try {
+                        config.devices.add(Integer.parseInt(command[i]));
+                    }
+                    catch (Exception e)
+                    {
+                        sendMessage("Incorrect device number "+command[i]);
+                    }
+                }
+            }
+            break;
         }
     }
 
@@ -149,8 +163,6 @@ abstract class SerialDevice extends Device {
                     //Включаем аппаратное управление потоком
                     //serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
                           //  SerialPort.FLOWCONTROL_RTSCTS_OUT);
-
-
                 }
                 catch (Exception ex)
                 {

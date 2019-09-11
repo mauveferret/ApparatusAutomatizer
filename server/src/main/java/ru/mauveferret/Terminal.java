@@ -202,7 +202,6 @@ public class Terminal extends Device {
     @Override
     TreeMap<String, String> getCommands() {
         commands.put("help", "this page");
-        // commands.put("exit", "stops program");
         commands.put("threads","");
         commands.put("exit", "stop current terminal session");
         commands.put("terminate", "stop the program");

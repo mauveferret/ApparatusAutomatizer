@@ -94,8 +94,8 @@ class GateControl extends Device{
             sendMessage("no $type$ option or its incorrect");
         }
         if (isCorrectControl) {
-            double columnPressure = gauge.getPressure(columnNumber);
-            double vesselPressure = gauge.getPressure(3);
+            double columnPressure = gauge.pressure[columnNumber];
+            double vesselPressure = gauge.pressure[columnNumber];
             double pressureDifference = Math.abs(columnPressure-vesselPressure);
             int pin = (type.equals("gate")) ? gateDigitalPin : valveDigitalPin;
             final boolean isOpened = arduino.getDigitalPinsWritten()[pin];

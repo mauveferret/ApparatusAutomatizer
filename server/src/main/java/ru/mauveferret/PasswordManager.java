@@ -26,7 +26,6 @@ class PasswordManager {
         path+="\\resources\\passwords.txt";
     }
 
-
     //TODO crypt passwords.txt
     void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration, int accessLevel)
     {

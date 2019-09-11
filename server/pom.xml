@@ -30,12 +30,7 @@
       <artifactId>jfoenix</artifactId>
       <version>9.0.9</version>
     </dependency>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx</artifactId>
-      <version>12.0.2</version>
-      <type>pom</type>
-    </dependency>
+
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
@@ -44,12 +39,12 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>12</version>
+      <version>11</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>12</version>
+      <version>11</version>
     </dependency>
     <dependency>
       <groupId>commons-cli</groupId>

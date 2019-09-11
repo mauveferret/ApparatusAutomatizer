@@ -1,5 +1,6 @@
 package ru.mauveferret;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 class Config {
@@ -14,6 +15,7 @@ class Config {
     String logPath = "";
     String dataPath = "";
     String units = "";
+    ArrayList<Integer> devices = new ArrayList<>();
     TreeMap<String,Object> parameters = new TreeMap<>();
     //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 

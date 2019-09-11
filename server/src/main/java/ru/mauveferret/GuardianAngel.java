@@ -41,8 +41,8 @@ class GuardianAngel extends Device {
                 while (!stop)
                 {
                     while (continueChecking) {
-                        double pressureColumn = gauge.getPressure(gateControl.getColumnNumber());
-                        double pressureVessel = gauge.getPressure(3);
+                        double pressureColumn = gauge.pressure[gateControl.getColumnNumber()];
+                        double pressureVessel = gauge.pressure[3];
                         boolean gate = gateControl.isGateOpened();
                         //FIXME checking valve
                         boolean valve = gateControl.isValveOpened();

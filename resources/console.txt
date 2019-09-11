@@ -6,5 +6,3 @@ this
 */
 ID 1
 name console
-port COM8
-open 22

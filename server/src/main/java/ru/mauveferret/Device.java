@@ -133,7 +133,7 @@ abstract  class Device extends Thread{
                     isComment = false;
                     line = line.substring(line.indexOf("*") + 2);
                 }
-                if (!isComment && !line.equals("")) {
+                if (!(isComment || line.equals("") || line.contains("//"))) {
                    try {
                        chooseImportCommand (line);
                    }

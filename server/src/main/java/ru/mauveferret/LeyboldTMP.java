@@ -29,23 +29,23 @@ public class LeyboldTMP extends SerialDevice {
 
 //Getters
 
-    public int getTemperature() {
+    int getTemperature() {
         return temperature;
     }
 
-    public int getFrequency() {
+    int getFrequency() {
         return frequency;
     }
 
-    public double getVoltage() {
+    double getVoltage() {
         return voltage;
     }
 
-    public double getCurrent() {
+    double getCurrent() {
         return current;
     }
 
-    public boolean isEnabled() {
+    boolean isEnabled() {
         return enabled;
     }
 
@@ -75,6 +75,7 @@ public class LeyboldTMP extends SerialDevice {
     private void measure()
     {
 
+        System.out.println(readMessage("\n"));
     }
 
     //terminal related
@@ -86,6 +87,7 @@ public class LeyboldTMP extends SerialDevice {
             boolean stop = true;
             while (stop)
             {
+                //measure();
                 dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current);
                 stop = Thread.currentThread().isInterrupted();
             }

@@ -1,6 +1,8 @@
 package ru.mauveferret;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.TreeMap;
 
 abstract class Gauge extends SerialDevice {
@@ -16,66 +18,55 @@ abstract class Gauge extends SerialDevice {
     @Override
     void initialize() {
         String newPath =(new File(config.dataPath)).getParent();
-        logPressure1.createFile( newPath+"\\pr1.txt", "");
-        logPressure2.createFile( newPath+"\\pr2.txt","");
-        logPressure3.createFile( newPath+"\\pr3.txt","");
+        for (int number: config.devices)
+        {
+            //FIXME files are not updated, values ar added to the end.
+            loggerMap.put(number, new Logger(false));
+            loggerMap.get(number).createFile(newPath+File.separator+config.deviceName+number+".txt","");
+        }
         super.initialize();
     }
 
+    //keeps pressures current value
     double[] pressure = new double[4];
-    Logger logPressure1 = new Logger(false);
-    Logger logPressure2 = new Logger(false);
-    Logger logPressure3 = new Logger(false);
-
-    //Getters
-
-    synchronized double getPressure(int gaugeNumber) {
-        return pressure[gaugeNumber];
-    }
+    //used to write single pressure from every gauge/ Can be used by third party software
+    private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
     @Override
     void measureAndLog() {
         dataLog.createFile(config.dataPath, "time  column1,torr column2,torr vessel torr  ");
-        log = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean stop = false;
-                while (!stop)
+        log = new Thread(() -> {
+            boolean stop = false;
+            while (!stop)
+            {
+                if (!isReconnectActive())
                 {
-                    if (!isReconnectActive())
-                    {
-                        try {
-                            measure(1);
-                            //long t1 = System.currentTimeMillis();
-                            //System.out.println(System.currentTimeMillis()-t1);
-                            measure(2);
-                            //measure(3);
-                            String pr1 = String.format("%6.3e",getPressure(1));
-                            String pr2 = String.format("%6.3e",getPressure(2));
-                            String pr3 = String.format("%6.3e",getPressure(3));
-                            dataLog.write("time " + pr1 + " " + pr2+" "+pr3);
-                            logPressure1.write("time " + pr1);
-                            logPressure2.write("time " + pr2);
-                            logPressure3.write("time " + pr3);
-                            stop = Thread.currentThread().isInterrupted();
-                        }
-                        catch (NullPointerException  e)
-                        {
-                            sendMessage("ERROR while log: port wasn't created\n ");
-                            reconnect();
-                            break;
-                        }
-                    }
-
-                    //FIXME very bad!!
                     try {
-                        Thread.sleep(1000);
+                        String logPressures = "time ";
+                        for (int deviceNumber : config.devices)
+                        {
+                            measure(deviceNumber);
+                            String pr = String.format("%6.3e",pressure[deviceNumber]);
+                            loggerMap.get(deviceNumber).write("time " + pr);
+                            logPressures+=pr+" ";
+                        }
+                        dataLog.write(logPressures);
+                        stop = Thread.currentThread().isInterrupted();
                     }
-                    catch (Exception ignored){}
-
+                    catch (NullPointerException  e)
+                    {
+                        sendMessage("ERROR while log: port wasn't created\n ");
+                        reconnect();
+                        break;
+                    }
                 }
-
+                //FIXME very bad!!
+                try {
+                    Thread.sleep(100);
+                }
+                catch (Exception ignored){}
             }
+
         });
         log.setName(config.deviceName);
         log.start();

@@ -75,6 +75,16 @@
   </dependencies>
 
   <build>
+
+      <resources>
+          <resource>
+              <filtering>false</filtering>
+              <directory>resources</directory>
+          </resource>
+      </resources>
+
+
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -83,6 +93,15 @@
         <configuration>
           <source>11</source>
           <target>11</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.3</version>
+        <configuration>
+          <mainClass>ru.mauveferret.Main</mainClass>
         </configuration>
       </plugin>
 
