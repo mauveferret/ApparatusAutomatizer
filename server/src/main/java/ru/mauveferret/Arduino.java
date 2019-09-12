@@ -1,5 +1,6 @@
 package ru.mauveferret;
 
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -18,6 +19,7 @@ class Arduino extends SerialDevice {
         super(fileName);
         deviceAccessLevel = 9;
     }
+
 
     //arrays with pins status (only for dwrite, aread)
     private boolean[] digitalPinsWritten = new boolean[14];
@@ -185,6 +187,7 @@ class Arduino extends SerialDevice {
         dataLog.createFile(config.dataPath, "time  digitalPinsStatus analogPinsStatus");
         log = new Thread(() -> {
             boolean stop = false;
+            //FIXME you don't have to use while
             while (!stop)
             {
                 try {

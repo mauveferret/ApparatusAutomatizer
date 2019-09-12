@@ -14,11 +14,14 @@ class Terminal extends Device {
     //key == device name, value == device object
     private TreeMap<String, Device> deviceMap = new TreeMap<>();
     //FIXME password
-    PasswordManager passwords = new PasswordManager("12345");
+    PasswordManager passwords = new PasswordManager();
+
 
 
     Terminal(String path) {
         super(path);
+        passwords.setKey("12345");
+        passwords.initialize();
         deviceAccessLevel = 9;
     }
 
@@ -202,6 +205,7 @@ class Terminal extends Device {
         commands.put("threads","");
         commands.put("exit", "stop current terminal session");
         commands.put("terminate", "stop the program");
+        commands.put("create","");
         return super.getCommands();
     }
 

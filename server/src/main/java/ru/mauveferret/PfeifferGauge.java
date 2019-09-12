@@ -1,8 +1,6 @@
 package ru.mauveferret;
 
-
 //driver for Pfeiffer MaxiGauge TPG 256A controller Unit
-
 
 class PfeifferGauge extends Gauge {
 
@@ -22,11 +20,13 @@ class PfeifferGauge extends Gauge {
         try {
             double measurement = Double.parseDouble(message.substring(2,10))*0.75;
             pressure[gauge] = measurement;
+            deviceWorks = true;
             return measurement;
         }
         catch (Exception e)
         {
-            return getPressure(gauge);
+            deviceWorks = false;
+            return pressure[gauge];
         }
     }
 
@@ -35,10 +35,4 @@ class PfeifferGauge extends Gauge {
 
     }
 
-
-    //Getters
-
-    synchronized double getPressure(int gaugeNumber) {
-        return pressure[gaugeNumber];
-    }
 }

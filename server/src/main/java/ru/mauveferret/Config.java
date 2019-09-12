@@ -15,7 +15,8 @@ class Config {
     String logPath = "";
     String dataPath = "";
     String units = "";
-    ArrayList<Integer> devices = new ArrayList<>();
+    //used to add several elements of one device like gauge amount or arduino pins
+    ArrayList<Integer> elements = new ArrayList<>();
     TreeMap<String,Object> parameters = new TreeMap<>();
     //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 

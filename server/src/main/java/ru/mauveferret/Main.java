@@ -5,6 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //PasswordManager passwords = new PasswordManager("12345");
+        //passwords.writeAccount("admin", "password", "14:30 01.01.2019", "13:00 01.01.2021", 10);
+        //passwords.createDecryptedFileVersion();
+
         //PasswordManager passwordManager = new PasswordManager();
         //passwordManager.writeLoginAndPassword("admin", "password", "14:30 01.01.2019", "13:00 01.01.2021", 10);
         //System.out.println(passwordManager.IsPasswordValid("admin", "password"));

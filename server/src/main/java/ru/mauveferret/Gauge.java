@@ -1,7 +1,6 @@
 package ru.mauveferret;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
 
@@ -18,9 +17,8 @@ abstract class Gauge extends SerialDevice {
     @Override
     void initialize() {
         String newPath =(new File(config.dataPath)).getParent();
-        for (int number: config.devices)
+        for (int number: config.elements)
         {
-            //FIXME files are not updated, values ar added to the end.
             loggerMap.put(number, new Logger(false));
             String pressurePath = newPath+File.separator+"pressure"+File.separator+config.deviceName+number+".txt";
             loggerMap.get(number).createFile(pressurePath,"");
@@ -28,6 +26,9 @@ abstract class Gauge extends SerialDevice {
         super.initialize();
     }
 
+    //FIXMe it is not a cool solution
+    //made to realize call method
+    boolean deviceWorks=true;
     //keeps pressures current value
     double[] pressure = new double[4];
     //used to write single pressure from every gauge/ Can be used by third party software
@@ -44,7 +45,7 @@ abstract class Gauge extends SerialDevice {
                 {
                     try {
                         String logPressures = "time ";
-                        for (int deviceNumber : config.devices)
+                        for (int deviceNumber : config.elements)
                         {
                             measure(deviceNumber);
                             String pr = String.format("%6.3e",pressure[deviceNumber]);
@@ -61,11 +62,14 @@ abstract class Gauge extends SerialDevice {
                         break;
                     }
                 }
-                //FIXME very bad!!
-                try {
-                    Thread.sleep(100);
+               else
+                {
+                    //FIXME very bad!!
+                    try {
+                        Thread.sleep(1000);
+                    }
+                    catch (Exception ignored){}
                 }
-                catch (Exception ignored){}
             }
 
         });
@@ -110,8 +114,9 @@ abstract class Gauge extends SerialDevice {
     @Override
     boolean callDevice() {
         try {
+            //FIXME
             measure(1);
-            return  true;
+            return  deviceWorks;
         }
         catch (Exception e)
         {

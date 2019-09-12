@@ -71,7 +71,7 @@ public class Logger {
         if (!(data.equals(dataToLog) || data.equals(""))) {
             dataToLog = data;
             try {
-                writer = new FileWriter(new File(path), true);
+                writer = new FileWriter(new File(path), append);
                 String str = dataToLog.replaceAll("time", System.currentTimeMillis()+"");
                 writer.write(str+"\n");
                 writer.flush();

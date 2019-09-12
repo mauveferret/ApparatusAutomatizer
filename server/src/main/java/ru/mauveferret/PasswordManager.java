@@ -1,14 +1,13 @@
 package ru.mauveferret;
 
 import org.apache.commons.codec.digest.DigestUtils;
-
 import java.io.*;
 import java.security.SecureRandom;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-class PasswordManager {
+class PasswordManager extends Device {
 
     private AES aes = new AES();
     private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
@@ -19,18 +18,34 @@ class PasswordManager {
     private TreeMap<String, Integer> loginAndAccessLevels = new TreeMap<>();
     private String path;
 
-    PasswordManager(String key) {
+    PasswordManager() {
         //FIXME universal path
+        //FIXME take path frome Device
         path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\passwords.txt";
-        aes.setKey(key);
-        loadLoginsAndPasswords();
+
+        deviceAccessLevel = 10;
     }
 
-    //TODO crypt passwords.txt
-    void writeLoginAndPassword(String login, String password, String dateStart, String dateExpiration, int accessLevel)
+    void setKey(String key)
+    {
+        aes.setKey(key);
+    }
+
+    @Override
+    void measureAndLog() {
+
+    }
+
+    @Override
+    void initialize() {
+        loadLoginsAndPasswords();
+        super.initialize();
+    }
+
+    synchronized void writeAccount(String login, String password, String dateStart, String dateExpiration, int accessLevel)
     {
         boolean valid = true;
 
@@ -71,8 +86,28 @@ class PasswordManager {
         }
         if (valid)
         {
-            addLoginAndPassword(login,password, dateStart,dateExpiration, accessLevel);
+            addAccount(login,password, dateStart,dateExpiration, accessLevel);
             System.out.println("Pair added successfully!");
+        }
+    }
+
+    void changePassword(String login, String oldPassword, String newPassword) {
+        if (loginsAndPasswords.containsKey(login))
+        {
+            if (loginsAndPasswords.get(login).equals(oldPassword))
+            {
+                try {
+                    if (stringToDate(loginAndExpireDates.get(login)).after(new Date()))
+                    {
+                        String startDate = loginAndStartDates.get(login);
+                        String expireDate = loginAndExpireDates.get(login);
+                        int accessLevel = loginAndAccessLevels.get(login);
+                        removeAccount(login);
+                        addAccount(login,newPassword,startDate,expireDate,accessLevel);
+                    }
+                }
+                catch (Exception ignored){}
+            }
         }
     }
 
@@ -150,22 +185,22 @@ class PasswordManager {
         return login;
     }
 
-    boolean createDecryptedFileVersion()
+    synchronized void createDecryptedFileVersion()
     {
         try
         {
-            FileWriter writer = new FileWriter(new File(path.replace(".txt", "1.txt")), true);
-            for (String login : loginsAndPasswords.keySet())
-                writer.write(login + " " + loginAndStartDates.get(login) + " " +
+            String pathForDecrypted = path.replace(".txt", "_decrypted.txt");
+            FileWriter writer = new FileWriter(new File(pathForDecrypted), false);
+            for (String login : loginsAndPasswords.keySet()) {
+                writer.write(login + " " + loginAndStartDates.get(login) + " ******** " +
                         loginAndExpireDates.get(login) + " " + loginAndAccessLevels.get(login) + "\n");
-            writer.flush();
+                writer.flush();
+            }
             writer.close();
-            return true;
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
-            return false;
         }
     }
 
@@ -174,44 +209,43 @@ class PasswordManager {
         return formatForDate.parse(date);
     }
 
-    private void loadLoginsAndPasswords()
-    {
-        try {
-            Scanner scanner = new Scanner(new FileReader(new File(path)));
-            while (scanner.hasNextLine())
-            {
-                try {
-                    String decryptedLine = aes.decrypt(scanner.nextLine());
-                    String[] line = decryptedLine.split(" ");
-                    if (line.length > 1) {
-                        loginsAndPasswords.put(line[0], line[1]);
-                        loginAndStartDates.put(line[0], line[2] + " " + line[3]);
-                        loginAndExpireDates.put(line[0], line[4] + " " + line[5]);
-                        loginAndAccessLevels.put(line[0], Integer.parseInt(line[6]));
-                    } else
-                        System.out.println("file was damaged!");
-                }
-                catch (Exception e)
-                {
-                    System.out.println("key is not valid or file was damaged");
-                }
-            }
-            scanner.close();
-        }
-        catch (FileNotFoundException e)
-        {
-            System.out.println("FileNotFound!");
-        }
-    }
-
     private String createHash(String password)
     {
         return DigestUtils.sha256Hex(password);
     }
 
+    synchronized private void removeAccount(String login) {
+        try {
+            ArrayList<String> fileLines= new ArrayList<>();
+            Scanner scanner = new Scanner(new FileReader(new File(path)));
+            while (scanner.hasNextLine()) {
+                try {
+                    String line = aes.decrypt(scanner.nextLine());
+                   if (!line.contains(login))
+                       fileLines.add(aes.encrypt(line));
 
-    private void addLoginAndPassword(String login, String password,
-                                     String dateStart, String dateExpiration, int accessLevel)
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("key is not valid or file was damaged");
+                }
+            }
+            scanner.close();
+            FileWriter writer= new FileWriter(new File(path), false);
+            for (String line: fileLines)
+            {
+                writer.write(line);
+                writer.flush();
+            }
+            writer.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    synchronized private void addAccount(String login, String password,
+                                         String dateStart, String dateExpiration, int accessLevel)
     {
         try
         {
@@ -228,11 +262,47 @@ class PasswordManager {
             }
             writer.flush();
             writer.close();
+            loadLoginsAndPasswords();
         }
         catch (IOException e)
         {
             System.out.println("FileIsBusy!");
         }
 
+    }
+
+    synchronized private void loadLoginsAndPasswords()
+    {
+        loginsAndPasswords = new TreeMap<>();
+        loginAndStartDates = new TreeMap<>();
+        loginAndExpireDates = new TreeMap<>();
+        loginAndAccessLevels = new TreeMap<>();
+        try {
+            Scanner scanner = new Scanner(new FileReader(new File(path)));
+            while (scanner.hasNextLine())
+            {
+                try {
+                    String decryptedLine = aes.decrypt(scanner.nextLine());
+                    String[] line = decryptedLine.split(" ");
+                    if (line.length > 1) {
+                        loginsAndPasswords.put(line[0], line[1]);
+                        loginAndStartDates.put(line[0], line[2] + " " + line[3]);
+                        loginAndExpireDates.put(line[0], line[4] + " " + line[5]);
+                        loginAndAccessLevels.put(line[0], Integer.parseInt(line[6].trim()));
+                    } else
+                        System.out.println("file was damaged!");
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                    System.out.println("key is not valid or file was damaged");
+                }
+            }
+            scanner.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("FileNotFound!");
+        }
     }
 }
