@@ -29,11 +29,6 @@ class PasswordManager extends Device {
         deviceAccessLevel = 10;
     }
 
-    void setKey(String key)
-    {
-        aes.setKey(key);
-    }
-
     @Override
     void measureAndLog() {
 
@@ -43,6 +38,11 @@ class PasswordManager extends Device {
     void initialize() {
         loadLoginsAndPasswords();
         super.initialize();
+    }
+
+    void setKey(String key)
+    {
+        aes.setKey(key);
     }
 
     synchronized void writeAccount(String login, String password, String dateStart, String dateExpiration, int accessLevel)
@@ -91,7 +91,7 @@ class PasswordManager extends Device {
         }
     }
 
-    void changePassword(String login, String oldPassword, String newPassword) {
+    synchronized void changePassword(String login, String oldPassword, String newPassword) {
         if (loginsAndPasswords.containsKey(login))
         {
             if (loginsAndPasswords.get(login).equals(oldPassword))
@@ -203,6 +203,20 @@ class PasswordManager extends Device {
             System.out.println(e.getMessage());
         }
     }
+
+    //Terminal related methods
+
+    @Override
+    TreeMap<String, String> getCommands() {
+        commands.put("setkey", "sets password for passwords.txt file decryption");
+        commands.put("addaccount", "adds account in form: addaccount $login$ $password$ $start date$ $expire date$ $access level$ ");
+        commands.put("changepassword", "change accaoun password in form: changepassword $login$ $oldpassword$ $newpassword$");
+        commands.put("getfile","returns decrypted version of the file with account data. Without passwords, obviously");
+        return super.getCommands();
+    }
+
+
+    //Internal methods
 
     private Date stringToDate(String date) throws ParseException
     {

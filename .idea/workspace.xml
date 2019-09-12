@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/passwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/passwords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pfeifferGauge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pfeifferGauge.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/arduino.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/console.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gateControl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/pfeifferGauge.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/terminal.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/thyracontGauge.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ByPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ByPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GateControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +63,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -225,7 +228,7 @@
       <workItem from="1568237259954" duration="41000" />
       <workItem from="1568267086268" duration="2384000" />
       <workItem from="1568289757974" duration="1736000" />
-      <workItem from="1568291498529" duration="11853000" />
+      <workItem from="1568291498529" duration="16287000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -486,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568237288802</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control">
+      <created>1568307744100</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568307744100</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gate control added" />
     <MESSAGE value="serialdevice added" />
     <MESSAGE value="logs and info added, some problems with serial found" />
     <MESSAGE value="help don't work, data log needs to be fixed" />
@@ -531,6 +540,7 @@
     <MESSAGE value="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog" />
     <MESSAGE value="Pfeiffer gauges added" />
     <MESSAGE value="passwords.txt crypted" />
-    <option name="LAST_COMMIT_MESSAGE" value="passwords.txt crypted" />
+    <MESSAGE value="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control" />
+    <option name="LAST_COMMIT_MESSAGE" value="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control" />
   </component>
 </project>

@@ -22,7 +22,6 @@ abstract class SerialDevice extends Device {
     //indicates if the reconnection is active
     private boolean isReconnectActive = false;
 
-
     //SerialDevice(){}
 
     //Getters
@@ -42,7 +41,7 @@ abstract class SerialDevice extends Device {
         commands.put("connect", "trying to reconnect to the Device in case of the failure");
         commands.put("write", "write command on the port");
         commands.put("read", "read message from the port");
-        commands.put("enable","");
+        commands.put("enablelog","");
         return super.getCommands();
     }
 
@@ -160,7 +159,7 @@ abstract class SerialDevice extends Device {
                             SerialPort.PARITY_NONE);
                     //don't know why, but arduino  need these 2000
                     // Thread.sleep(2000);
-                    //Включаем аппаратное управление потоком
+                    //Turn on hardware flow control
                     //serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
                           //  SerialPort.FLOWCONTROL_RTSCTS_OUT);
                 }
@@ -200,16 +199,15 @@ abstract class SerialDevice extends Device {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
-            //&& !answer.contains("\n")
             while (!(answer.contains(endOfLine))) {
-                //FIXME зависает в случае, если порт не отвечает, addlistener
+                //FIXME зависает в случае, если порт не отвечает, addlistener. А правда ли?
                 if (serialPort.getInputBufferBytesCount() > 0) {
                     answer += (new String(serialPort.readBytes(1)));
                 }
                 if (System.currentTimeMillis() - startTime > 3000) {
                     if (!isReconnectActive)
                         sendMessage(config.deviceName + " message wasn't got.");
-                    //FIXME
+                    //FIXME is it really necessary?
                     reconnect();
                     break;
                 }
@@ -277,10 +275,7 @@ abstract class SerialDevice extends Device {
                         //probably, device changed port
                         sendMessage("probably, port has changed...looking");
                         findPort();
-                        break;
-                    }
-
-                     */
+                        break;}*/
                     //FIXME very bad!!!
                     try {
                         Thread.sleep(3000);
@@ -289,18 +284,17 @@ abstract class SerialDevice extends Device {
                 }
                 sendMessage("Reconnected.");
                 isReconnectActive = false;
-                //rerunning command which caused the reconnection
-                //FIXME бесконечный цикл в случае неправильной команды
-                //TODO create reconnection disabling
-                //FIXME very bad!!!
+
                 try {
                     Thread.sleep(3000);
                 }
                 catch (Exception ignored){}
-
+                //rerunning command which caused the reconnection
+                //FIXME бесконечный цикл в случае неправильной команды
+                //TODO create reconnection disabling
+                //FIXME very bad!!!
                 if (!"".equals(getReceivedCommand()))
-                    new Thread(() -> terminalSample.launchCommand(receivedCommand, true, receivedAccessLevel)).start();
-                //FIXME
+                terminalSample.launchCommand(receivedCommand, true, receivedAccessLevel);
             } catch (NullPointerException e) {
                 isReconnectActive = false;
                 sendMessage("port wasn't found.");

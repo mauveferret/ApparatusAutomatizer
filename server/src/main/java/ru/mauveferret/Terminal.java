@@ -179,15 +179,10 @@ class Terminal extends Device {
         final String internalCommand = command;
         if (commandMap.containsKey(commandArray[0]))
         {
-            Thread commandThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    //FIXME accesslevel
-                    commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, accessLevel);
-                   // TODO silentmode
-                }
-            }
-            );
+            Thread commandThread = new Thread(() -> {
+                commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, accessLevel);
+               // TODO silentmode
+            });
             commandThread.setName(command);
             commandThread.start();
         }

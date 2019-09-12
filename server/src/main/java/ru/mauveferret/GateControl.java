@@ -2,7 +2,14 @@ package ru.mauveferret;
 
 import java.util.TreeMap;
 
-//an example of the  virtual device which would be made by some user to configure Automizer for his personal needs
+/*
+an example of the  virtual device which would be made by some user to configure Automizer for his personal needs
+Generally, its is a simulation of the vacuum column number with forline pump, bypass (separate class),
+pneumatic valve controlled by the arduino, some TMP with temperature sensor, pneumatic gate after the TMP
+also controlled by the arduino. Gate control allows to control forlinePump, valve and gate and dosen't allow some
+potentially crucial actions like "please open turn off forline pump while TMp is on"
+or "please open valve when pressure before is much another tha pressure after"
+ */
 class GateControl extends Device{
 
 
@@ -30,7 +37,9 @@ class GateControl extends Device{
     private boolean gateOpened = false;
 
     private Arduino arduino;
-    private ThyracontGauge gauge;
+    private Gauge gauge;
+    private ByPass byPass;
+    //private TMP tmp;
     private GateControl gateControl = this;
     private String arduinoName;
     private String gaugeName;
