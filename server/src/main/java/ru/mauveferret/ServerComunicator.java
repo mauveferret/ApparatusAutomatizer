@@ -38,7 +38,7 @@ class ServerComunicator extends Device{
             if (canAccess()) {
                 writeEncryptionToClient("granted");
                 sendMessage("Access granted to " + login);
-                int accessLevel = new PasswordManager().getAccessLevel(login);
+                int accessLevel = terminalSample.passwords.getAccessLevel(login);
                 while (expireDate.after(new Date()) && !stopCommunication) {
                     try {
                         //FIXME it dont wait for read
@@ -97,12 +97,11 @@ class ServerComunicator extends Device{
 
     private boolean canAccess()
     {
-        PasswordManager passwordManager = new PasswordManager();
         String[] loginAndPassword = readEncryptionFromClient().split(" ");
-        boolean passworIsValid = passwordManager.IsPasswordValid(loginAndPassword[0],loginAndPassword[1]);
-        boolean pairIssNotExpired = passwordManager.loginHasNotExpired(loginAndPassword[0]);
+        boolean passworIsValid = terminalSample.passwords.IsPasswordValid(loginAndPassword[0],loginAndPassword[1]);
+        boolean pairIssNotExpired = terminalSample.passwords.loginHasNotExpired(loginAndPassword[0]);
         login = loginAndPassword[0];
-        expireDate = passwordManager.getExpireDate(loginAndPassword[0]);
+        expireDate = terminalSample.passwords.getExpireDate(loginAndPassword[0]);
         accessType = 10;
         return (passworIsValid && pairIssNotExpired);
     }

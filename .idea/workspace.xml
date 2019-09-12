@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/resources/pics/login.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/AES.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/AES.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,29 +57,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/target/classes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/resources/pics" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\target\classes" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\java" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\target\classes" />
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources" />
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main" />
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,7 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -213,6 +210,8 @@
       <workItem from="1568138779806" duration="8838000" />
       <workItem from="1568178131287" duration="3526000" />
       <workItem from="1568205404483" duration="9165000" />
+      <workItem from="1568237259954" duration="41000" />
+      <workItem from="1568267086268" duration="2384000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -466,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568199296804</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="passwords.txt crypted">
+      <created>1568237288802</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1568237288802</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="alias added, some optimization made" />
     <MESSAGE value="gate control added" />
     <MESSAGE value="serialdevice added" />
     <MESSAGE value="logs and info added, some problems with serial found" />
@@ -511,6 +516,7 @@
     <MESSAGE value="some errors removed, some graphics added to client" />
     <MESSAGE value="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog" />
     <MESSAGE value="Pfeiffer gauges added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pfeiffer gauges added" />
+    <MESSAGE value="passwords.txt crypted" />
+    <option name="LAST_COMMIT_MESSAGE" value="passwords.txt crypted" />
   </component>
 </project>
