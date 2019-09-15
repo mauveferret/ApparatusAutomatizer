@@ -86,7 +86,7 @@ abstract  class Device extends Thread{
                     long t2 = System.currentTimeMillis();
                     chooseTerminalCommand(command);
                     long t3 = System.currentTimeMillis();
-                    System.out.println("DEV logic time " + (t2 - t1) + " command time: " + (t3 - t2));
+                    sendMessage("DEV logic time " + (t2 - t1) + " command time: " + (t3 - t2));
 
                 } else {
                     sendMessage("command \"" + command[1] + "\" doesn't exist");

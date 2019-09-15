@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/fxml/Chooser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Chooser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/fxml/Console.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Console.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/pics/RickandMorty.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/RickandMorty.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/pics/burn.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/burn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/pics/icons/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/icons/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resources/pics/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/login.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Chooser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Chooser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/clients.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/clients.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,29 +70,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/target/classes/ru/mauveferret" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\target\classes" />
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,6 +108,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.client">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
+      <module name="client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.mauveferret.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -173,7 +191,13 @@
       <item itemvalue="Application.server" />
       <item itemvalue="Application.client" />
       <item itemvalue="Maven.ApparatusAutomatizer [package]" />
+      <item itemvalue="Application.Main" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -222,6 +246,7 @@
       <workItem from="1568267086268" duration="2384000" />
       <workItem from="1568289757974" duration="1736000" />
       <workItem from="1568291498529" duration="16287000" />
+      <workItem from="1568533359083" duration="15619000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -489,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568307744100</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin">
+      <created>1568471707620</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1568471707620</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="serialdevice added" />
     <MESSAGE value="logs and info added, some problems with serial found" />
     <MESSAGE value="help don't work, data log needs to be fixed" />
     <MESSAGE value="logs work, help works" />
@@ -534,6 +565,7 @@
     <MESSAGE value="Pfeiffer gauges added" />
     <MESSAGE value="passwords.txt crypted" />
     <MESSAGE value="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control" />
-    <option name="LAST_COMMIT_MESSAGE" value="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control" />
+    <MESSAGE value="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin" />
   </component>
 </project>

@@ -21,7 +21,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>11</maven.compiler.release>
-    <javafx.version>11</javafx.version>
+    <javafx.version>13</javafx.version>
   </properties>
 
   <dependencies>
@@ -75,8 +75,17 @@
         <version>0.0.3</version>
         <configuration>
           <release>${maven.compiler.release}</release>
-          <jlinkImageName>hellofx</jlinkImageName>
-          <launcher>launcher</launcher>
+
+          <options>
+            <option>--add-opens</option>
+            <option>javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix</option>
+            <option>--add-opens</option>
+            <option>javafx.controls/com.sun.javafx.scene.control=com.jfoenix</option>
+            <option>--add-exports</option>
+            <option>javafx.controls/com.sun.javafx.scene.control.behavior=com.jfoenix</option>
+            <option>--add-exports</option>
+            <option>javafx.controls/com.sun.javafx.scene.control=com.jfoenix</option>
+          </options>
           <mainClass>ru.mauveferret.Main</mainClass>
         </configuration>
       </plugin>

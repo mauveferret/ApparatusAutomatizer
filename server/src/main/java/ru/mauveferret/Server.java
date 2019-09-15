@@ -29,6 +29,7 @@ public class Server  extends  Device{
                 Socket socket = server.accept();
                 ServerComunicator communicator = new ServerComunicator("clients", socket);
                 communicator.terminalSample = terminalSample;
+                communicator.initialize();
                 communicator.start();
                 socketList.add(socket);
             }

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.mauveferret.ChooserController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.ChooserController">
    <effect>
       <DropShadow radius="11.4825" width="26.93" />
    </effect>
@@ -24,12 +24,12 @@
       </ImageView>
       <Pane layoutX="34.0" layoutY="46.0" opacity="0.8" prefHeight="368.0" prefWidth="280.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
          <children>
-            <JFXButton layoutX="13.0" layoutY="23.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="VACUUM" textAlignment="CENTER">
+            <JFXButton fx:id="vacuum" layoutX="13.0" layoutY="23.0" onAction="#openVacuumWindow" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="VACUUM" textAlignment="CENTER">
                <font>
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="13.0" layoutY="77.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DISCHARGE" textAlignment="CENTER">
+            <JFXButton layoutX="13.0" layoutY="77.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DISCHARGE1" textAlignment="CENTER">
                <font>
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>

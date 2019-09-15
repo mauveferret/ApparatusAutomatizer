@@ -1,0 +1,23 @@
+package ru.mauveferret;
+
+import javafx.application.Platform;
+
+class Vacuum extends  Thread {
+
+    VacuumController controller;
+    SocketCryptedCommunicator communicator;
+    Vacuum(VacuumController controller, SocketCryptedCommunicator communicator) {
+        this.controller = controller;
+        this.communicator = communicator;
+    }
+
+
+    @Override
+    public void run() {
+
+        String message = communicator.makeRequest("nocommand", true);
+        Integer time = Integer.parseInt(message.split(" ")[0]);
+        double value = Double.parseDouble(message.split(" ")[1]);
+        Platform.runLater((() -> controller.addData(time,value)));
+    }
+}
