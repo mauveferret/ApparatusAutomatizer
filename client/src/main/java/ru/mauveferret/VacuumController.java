@@ -20,22 +20,23 @@ public class VacuumController {
     }
 
     @FXML
-    private LineChart<Integer,Double> chart;
-    private ObservableList<XYChart.Series<Integer, Double>> datas = FXCollections.observableArrayList();
-    XYChart.Series<Integer, Double> series = new XYChart.Series<Integer, Double>();
+    private LineChart<Number,Number> chart;
+    private ObservableList<XYChart.Series<Number, Number>> datas = FXCollections.observableArrayList();
+    XYChart.Series<Number, Number> series = new XYChart.Series<Number, Number>();
     @FXML
     protected NumberAxis yAxis;
     @FXML
     protected NumberAxis xAxis;
 
-    void addData(Integer xValue, double yValue)
+    void addData(Number xValue, Number yValue)
     {
+        System.out.println(xValue+" "+yValue);
         //series = new XYChart.Series();
-        series.getData().add(new XYChart.Data(xValue,yValue));
+        //series.getData().add(new XYChart.Data<Number,Number>(xValue,yValue));
         //series.setData(datas);
         //chart.getData().add(series);
-        datas.addAll(series);
-        chart.setData(datas);
+        //datas.addAll(series);
+        //chart.getData().add(series);
     }
 
 }

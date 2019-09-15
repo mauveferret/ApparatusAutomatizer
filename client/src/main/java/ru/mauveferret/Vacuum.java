@@ -14,10 +14,12 @@ class Vacuum extends  Thread {
 
     @Override
     public void run() {
-
-        String message = communicator.makeRequest("nocommand", true);
-        Integer time = Integer.parseInt(message.split(" ")[0]);
-        double value = Double.parseDouble(message.split(" ")[1]);
-        Platform.runLater((() -> controller.addData(time,value)));
+        while (true) {
+            String message = communicator.makeRequest("nocommand", true);
+            int time = Integer.parseInt(message.split(" ")[0]);
+            double value = Double.parseDouble(message.split(" ")[1]);
+            System.out.println(time + " " + value);
+            // Platform.runLater((() -> controller.addData(time,value)));
+        }
     }
 }
