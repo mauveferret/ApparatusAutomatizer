@@ -7,39 +7,61 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-
-<AnchorPane style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
+<AnchorPane prefHeight="800.0" prefWidth="1074.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
    <children>
-      <TabPane layoutY="176.0" prefHeight="549.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-        <tabs>
-          <Tab text="Gauges">
-            <content>
-                  <LineChart fx:id="pressureChart" createSymbols="true" legendVisible="true" prefHeight="441.0" prefWidth="1074.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
-                    <xAxis>
-                      <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis fx:id="pressureChartYAxis" prefHeight="367.0" prefWidth="25.0" side="LEFT" />
-                    </yAxis>
-
-                                          </LineChart>
-            </content>
-          </Tab>
-          <Tab text="TMP">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="394.0" fitWidth="716.0" layoutX="69.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <AnchorPane layoutY="244.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="244.0">
+         <children>
+            <TabPane prefHeight="549.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Gauges">
+                  <content>
+                        <LineChart fx:id="pressureChart" createSymbols="true" legendVisible="true" prefHeight="431.0" prefWidth="967.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
+                          <xAxis>
+                            <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="pressureChartYAxis" prefHeight="456.0" prefWidth="36.0" side="LEFT" />
+                          </yAxis>
+      
+                                                </LineChart>
+                  </content>
+                </Tab>
+                <Tab text="TMP">
+                  <content>
+                        <ImageView fitHeight="520.0" fitWidth="1048.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../pics/login.png" />
                            </image>
                         </ImageView>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="45.0" prefHeight="193.0" prefWidth="897.0" AnchorPane.bottomAnchor="562.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="8.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="105.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="203.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="300.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="399.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="496.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="594.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="691.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="788.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="9.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="799.0" AnchorPane.topAnchor="48.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="106.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="204.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="301.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="400.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="497.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="595.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="692.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="789.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

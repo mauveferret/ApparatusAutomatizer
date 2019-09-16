@@ -17,6 +17,9 @@ class Terminal extends Device {
     PasswordManager passwords = new PasswordManager();
 
 
+    //TODO VERY BIG improvement: make device class which keeps all devices, keeos their help and initialize them
+    //Terminal would be used only  for commandline, aliases. Password manager has to become separate class
+    // entering of the key for PasswordManager must be made from the password manager (separate screen?)
 
     Terminal(String path) {
         super(path);

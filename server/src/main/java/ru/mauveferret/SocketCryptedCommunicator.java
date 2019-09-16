@@ -24,6 +24,8 @@ class SocketCryptedCommunicator {
     private String Login;
 
 
+
+
     //for clients
     SocketCryptedCommunicator(String host, int port) {
         deviceType = "client";
@@ -168,6 +170,8 @@ class SocketCryptedCommunicator {
         writeEncryption(request);
         return readEncryption();
     }
+
+    //TODO add some HAsh to messages in order to check that the data package is sent correctly
 
     void writeEncryption(String message)
     {

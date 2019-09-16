@@ -38,7 +38,7 @@ class ServerCommunicator extends Device{
                 int accessLevel = terminalSample.passwords.getAccessLevel(login);
                 while (expireDate.after(new Date()) && !communicator.isStopCommunication()) {
                     try {
-                        //FIXME it dont wait for read
+                        //FIXME it dont wait for read enough long
                         String someCommand = communicator.readEncryption();
                         if (!someCommand.contains("nocommand"))
                         {
@@ -80,6 +80,7 @@ class ServerCommunicator extends Device{
     }
 
 
+    //Fixme vacuumResponse. make methods for all?
     String response(int columnNumber)
     {
         String response =""+System.currentTimeMillis();
@@ -88,6 +89,11 @@ class ServerCommunicator extends Device{
         response= (System.currentTimeMillis()+" "+gauge.pressure[1]+" "+gauge.pressure[2]);
         return response;
     }
+
+    //FIXME probably, it's possible to move it to "virtual device"?
+    /*you can make some abstract class which contains references to real device like in initialize block
+    that can be got from the united config with devices name like in ChooseImportCommand method
+     */
 
     @Override
     void chooseImportCommand(String line) {

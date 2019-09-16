@@ -17,10 +17,10 @@ public class VacuumController {
         this.communicator = communicator;
         pressureChartXAxis.setLabel("Time, ms");
         pressureChartXAxis.setAnimated(true); // axis animations are removed
+        pressureChartXAxis.setForceZeroInRange(false);
         pressureChartYAxis.setLabel("Pressure,torr");
         pressureChartYAxis.setAnimated(true); // axis animations are removed
         pressureChartYAxis.setForceZeroInRange(false);
-        pressureChartXAxis.setForceZeroInRange(false);
         pressureColumn1Series = new XYChart.Series();
         pressureColumn1Series.setName("First column pressure, torr");
         pressureColumn2Series = new XYChart.Series();
