@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="client improved, vacuum module added, charts don't work">
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/chart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,22 +76,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +106,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -217,6 +227,7 @@
       <workItem from="1568289757974" duration="1736000" />
       <workItem from="1568291498529" duration="16287000" />
       <workItem from="1568533359083" duration="17246000" />
+      <workItem from="1568647813840" duration="876000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>

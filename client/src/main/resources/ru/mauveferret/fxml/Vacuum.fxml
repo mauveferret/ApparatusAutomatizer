@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Tab?>
@@ -10,28 +9,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="901.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="1074.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
    <children>
-      <TabPane layoutX="14.0" layoutY="129.0" prefHeight="461.0" prefWidth="870.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutY="176.0" prefHeight="549.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Gauges">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="481.0" prefWidth="982.0">
                      <children>
-                        <LineChart fx:id="chart" layoutX="35.0" layoutY="7.0" style="-fx-background-color: #333333;">
+                        <LineChart fx:id="pressureChart" createSymbols="true" layoutX="5.0" layoutY="78.0" legendVisible="true" prefHeight="441.0" prefWidth="1074.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                            <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis side="LEFT" />
+                            <NumberAxis fx:id="pressureChartYAxis" prefHeight="367.0" prefWidth="25.0" side="LEFT" />
                           </yAxis>
+
                         </LineChart>
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="TMP">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

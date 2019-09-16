@@ -19,7 +19,11 @@ class Vacuum extends  Thread {
             int time = Integer.parseInt(message.split(" ")[0]);
             double value = Double.parseDouble(message.split(" ")[1]);
             System.out.println(time + " " + value);
-            // Platform.runLater((() -> controller.addData(time,value)));
+             //Platform.runLater((() -> controller.addData(time,value)));
+             try {
+                 Thread.sleep(500);
+             }
+             catch (Exception ignored){}
         }
     }
 }

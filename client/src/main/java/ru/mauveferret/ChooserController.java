@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -34,17 +35,17 @@ public class ChooserController {
     @FXML
     private void openVacuumWindow()
     {
-        System.out.println("segsegfe");
         Platform.runLater((() ->
         {
-            System.out.println("segvwegvweg");
             try {
                 Stage windowsChooser = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Vacuum.fxml"));
                 //windowsChooser.initStyle(StageStyle.UNDECORATED);
+                windowsChooser.setResizable(true);
+                windowsChooser.initModality(Modality.NONE);
                 windowsChooser.setScene(new Scene(loader.load(), 800, 430));
                 windowsChooser.show();
-                ((VacuumController) loader.getController()).setCommunicator(communicator);
+                ((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("shit shit");
@@ -55,7 +56,22 @@ public class ChooserController {
     @FXML
     private void openConsole()
     {
-        System.out.println("segf");
+        Platform.runLater((() ->
+        {
+            try {
+                Stage windowsChooser = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Console.fxml"));
+                //windowsChooser.initStyle(StageStyle.UNDECORATED);
+                windowsChooser.setResizable(true);
+                windowsChooser.initModality(Modality.NONE);
+                windowsChooser.setScene(new Scene(loader.load(), 800, 430));
+                windowsChooser.show();
+                //((VacuumController) loader.getController()).initialize(communicator);
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("shit shit");
+            }
+        }));
 
     }
 

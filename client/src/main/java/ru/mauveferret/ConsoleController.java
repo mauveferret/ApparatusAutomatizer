@@ -3,6 +3,7 @@ package ru.mauveferret;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.stage.Stage;
 
 public class ConsoleController {
 
@@ -22,7 +23,8 @@ public class ConsoleController {
     @FXML
     private void closeWindow()
     {
-
+        Stage stage = (Stage) command.getScene().getWindow();
+        stage.close();
     }
 
 

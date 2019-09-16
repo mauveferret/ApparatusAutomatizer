@@ -30,9 +30,9 @@ class ClientConnector extends Thread{
 
         if (communicator.createSecureCommunicationLine()) {
             //Platform.runLater((() -> loginWindow.setConnectionStatus("data encryption enabled")));+
-            Platform.runLater((() -> communicator.writeEncryptionToServer(loginWindow.getLogin()+" "+loginWindow.getPassword())));
+            Platform.runLater((() -> communicator.writeEncryption(loginWindow.getLogin()+" "+loginWindow.getPassword())));
            // System.out.println("ewaf "+loginANdPassword);
-            boolean isGranted = "granted".equals(communicator.readEncryptionFromServer());
+            boolean isGranted = "granted".equals(communicator.readEncryption());
             if (isGranted)
             {
                 Platform.runLater((() -> loginWindow.setConnectionStatus("Access GRANTED.")));
