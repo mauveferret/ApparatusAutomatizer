@@ -6,18 +6,19 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-public class Server  extends  Device{
+class Server  extends  Device{
 
     Server(String fileName) {
         super(fileName);
         //FIXME
     }
 
-    public static ArrayList<Socket> socketList = new ArrayList<>();
+    static ArrayList<Socket> socketList = new ArrayList<>();
 
 
     private boolean stopServer = false;
     private int port = 4004;
+
 
     private void launchServer()
     {

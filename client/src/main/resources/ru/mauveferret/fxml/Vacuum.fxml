@@ -7,27 +7,23 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="1074.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
+
+<AnchorPane style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
    <children>
-      <TabPane layoutY="176.0" prefHeight="549.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutY="176.0" prefHeight="549.0" prefWidth="1074.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <tabs>
           <Tab text="Gauges">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="481.0" prefWidth="982.0">
-                     <children>
-                        <LineChart fx:id="pressureChart" createSymbols="true" layoutX="5.0" layoutY="78.0" legendVisible="true" prefHeight="441.0" prefWidth="1074.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
-                          <xAxis>
-                            <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis fx:id="pressureChartYAxis" prefHeight="367.0" prefWidth="25.0" side="LEFT" />
-                          </yAxis>
+                  <LineChart fx:id="pressureChart" createSymbols="true" legendVisible="true" prefHeight="441.0" prefWidth="1074.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
+                    <xAxis>
+                      <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="pressureChartYAxis" prefHeight="367.0" prefWidth="25.0" side="LEFT" />
+                    </yAxis>
 
-                        </LineChart>
-                     </children>
-                  </AnchorPane>
+                                          </LineChart>
             </content>
           </Tab>
           <Tab text="TMP">
@@ -46,4 +42,4 @@
         </tabs>
       </TabPane>
    </children>
-</Pane>
+</AnchorPane>

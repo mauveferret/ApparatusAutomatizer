@@ -53,9 +53,11 @@ public class VacuumController {
             // Update the chart
             Platform.runLater(() -> {
                 String message = communicator.makeRequest("nocommand", true);
-                int time = Integer.parseInt(message.split(" ")[0]);
-                double value = Double.parseDouble(message.split(" ")[1]);
-                pressureColumn1Series.getData().add(new XYChart.Data<>(time, value));
+                long time = Long.parseLong(message.split(" ")[0]);
+                double pressure1 = Double.parseDouble(message.split(" ")[1]);
+                double pressure2 = Double.parseDouble(message.split(" ")[2]);
+                pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
+                pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
                 /*show only part of the chart (left part is gragually deleting)
                 if (pressureSeries.getData().size() > WINDOW_SIZE)
                     pressureSeries.getData().remove(0);

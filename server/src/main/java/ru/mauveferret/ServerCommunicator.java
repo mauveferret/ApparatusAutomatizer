@@ -13,6 +13,11 @@ class ServerCommunicator extends Device{
     }
 
 
+    //TODO divide commands handler into separete pieces in Terminal style
+    //Here you'll have several 'devices' like vacuum, discharge, console (all that is in Chooser.fxml in client)
+    //First word will be a 'device' command
+    //TODO make packages
+
     private Date expireDate;
     private int accessType;
     private String login;
@@ -75,14 +80,12 @@ class ServerCommunicator extends Device{
     }
 
 
-
-
     String response(int columnNumber)
     {
         String response =""+System.currentTimeMillis();
        // response+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
        // response+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
-        response= (System.currentTimeMillis()+" "+gauge.pressure[0]+" "+gauge.pressure[1]);
+        response= (System.currentTimeMillis()+" "+gauge.pressure[1]+" "+gauge.pressure[2]);
         return response;
     }
 

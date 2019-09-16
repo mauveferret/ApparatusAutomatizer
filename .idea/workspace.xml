@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerComunicator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.server">
+  <component name="RunManager" selected="Application.client">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -227,7 +220,7 @@
       <workItem from="1568289757974" duration="1736000" />
       <workItem from="1568291498529" duration="16287000" />
       <workItem from="1568533359083" duration="17246000" />
-      <workItem from="1568647813840" duration="876000" />
+      <workItem from="1568647813840" duration="5964000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -509,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568551238587</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="charts work, client GUI works good, socketCryptedCommunicator improved, now can work both in server and client apps">
+      <created>1568648763461</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1568648763461</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +529,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="help don't work, data log needs to be fixed" />
     <MESSAGE value="logs work, help works" />
     <MESSAGE value="some tiny improvements, filecorrector added, gauge log added" />
     <MESSAGE value="reading from COM fixed" />
@@ -554,6 +553,7 @@
     <MESSAGE value="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control" />
     <MESSAGE value="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin" />
     <MESSAGE value="client improved, vacuum module added, charts don't work" />
-    <option name="LAST_COMMIT_MESSAGE" value="client improved, vacuum module added, charts don't work" />
+    <MESSAGE value="charts work, client GUI works good, socketCryptedCommunicator improved, now can work both in server and client apps" />
+    <option name="LAST_COMMIT_MESSAGE" value="charts work, client GUI works good, socketCryptedCommunicator improved, now can work both in server and client apps" />
   </component>
 </project>
