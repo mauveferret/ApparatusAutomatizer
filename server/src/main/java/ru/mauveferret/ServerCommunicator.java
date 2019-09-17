@@ -63,6 +63,7 @@ class ServerCommunicator extends ControlDevice{
     }
 
 
+    //TODO move servercommunicator to server
 
     //Fixme vacuumResponse. make methods for all?
     private String createResponse(String request)
@@ -74,8 +75,6 @@ class ServerCommunicator extends ControlDevice{
             if (request.contains("nocom"))
            {
                response = System.currentTimeMillis()+" ";
-               System.out.println(bypass.isOpened);
-               System.out.println(gateControl1.isGateOpened());
                String columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl1.isPumpEnabled());
                columnData+=booleanToString(gateControl1.isValveOpened())+booleanToString(gateControl1.isGateOpened());
                columnData+=booleanToString(tmp1.isEnabled())+" ";

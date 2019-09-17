@@ -13,22 +13,42 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="ru.mauveferret.LoginWindowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.LoginWindowController">
    <effect>
       <DropShadow radius="11.4825" width="26.93" />
    </effect>
    <children>
-      <Pane layoutX="500.0" layoutY="44.0" prefHeight="369.0" prefWidth="280.0" style="-fx-background-color: #FF6600;">
-         <effect>
-            <DropShadow color="#ff6600" />
-         </effect>
+      <ImageView fitHeight="453.0" fitWidth="823.0" layoutX="-10.0" layoutY="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@../pics/fusion.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="34.0" layoutY="36.0" opacity="0.92" prefHeight="369.0" prefWidth="280.0" style="-fx-background-color: #333333;">
          <children>
-            <Label layoutX="78.0" layoutY="21.0" prefHeight="52.0" prefWidth="125.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="78.0" layoutY="21.0" prefHeight="52.0" prefWidth="168.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="HP Simplified Bold" size="43.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#333333" layoutX="27.0" layoutY="103.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" style="-fx-fill: white;" unFocusColor="WHITE">
+            <JFXPasswordField fx:id="password" alignment="CENTER" focusColor="#1a0dc5" layoutX="27.0" layoutY="177.0" prefHeight="25.0" prefWidth="226.0" promptText="password" unFocusColor="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="22.0" />
+               </font>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXPasswordField>
+            <JFXButton fx:id="connectButton" layoutX="28.0" layoutY="264.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#862727" style="-fx-background-color: #ffffff;" text="CONNECT" textAlignment="CENTER" textFill="#222020">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="32.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="statusLabel" layoutX="63.0" layoutY="336.0" prefHeight="17.0" prefWidth="133.0" text="searching server..." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="HP Simplified Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#1a0dc5" layoutX="27.0" layoutY="103.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="22.0" />
                </font>
@@ -39,32 +59,12 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
                <effect>
-                  <ColorAdjust />
+                  <ColorAdjust brightness="1.0" />
                </effect>
             </JFXTextField>
-            <JFXPasswordField fx:id="password" alignment="CENTER" focusColor="#333333" layoutX="27.0" layoutY="171.0" prefHeight="25.0" prefWidth="226.0" promptText="password" unFocusColor="WHITE">
-               <font>
-                  <Font name="HP Simplified" size="22.0" />
-               </font>
-            </JFXPasswordField>
-            <JFXButton fx:id="connectButton" layoutX="27.0" layoutY="270.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#862727" style="-fx-background-color: #FF9966;" text="connect" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="HP Simplified" size="32.0" />
-               </font>
-            </JFXButton>
-            <Label fx:id="statusLabel" layoutX="63.0" layoutY="336.0" prefHeight="17.0" prefWidth="133.0" text="searching server..." textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="HP Simplified Bold Italic" size="15.0" />
-               </font>
-            </Label>
          </children>
       </Pane>
-      <ImageView fitHeight="440.0" fitWidth="406.0" layoutX="24.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../pics/RickandMorty.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#closeLoginWindows" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="766.0" layoutY="14.0" onMouseClicked="#closeLoginWindows" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pics/icons/close.png" />
          </image>

@@ -43,7 +43,7 @@ public class ChooserController {
                 //windowsChooser.initStyle(StageStyle.UNDECORATED);
                 windowsChooser.setResizable(true);
                 windowsChooser.initModality(Modality.NONE);
-                windowsChooser.setScene(new Scene(loader.load(), 800, 430));
+                windowsChooser.setScene(new Scene(loader.load()));
                 windowsChooser.show();
                 ((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {
@@ -64,7 +64,7 @@ public class ChooserController {
                 //windowsChooser.initStyle(StageStyle.UNDECORATED);
                 windowsChooser.setResizable(true);
                 windowsChooser.initModality(Modality.NONE);
-                windowsChooser.setScene(new Scene(loader.load(), 800, 430));
+                windowsChooser.setScene(new Scene(loader.load()));
                 windowsChooser.show();
                 //((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {

@@ -57,7 +57,7 @@ public class VacuumController {
         pressureScheduledExecutorService.scheduleAtFixedRate(() -> {
             // Update the chart
             Platform.runLater(() -> {
-                pumpIndicator.setFill(Paint.valueOf("green"));
+                //pumpIndicator.setFill(Paint.valueOf("green"));
                 String message = communicator.makeRequest("vac nocom", true);
                 System.out.println(message);
                 long time = Long.parseLong(message.split(" ")[0]);

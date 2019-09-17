@@ -24,6 +24,7 @@ public class Main {
         GateControl gateControl = new GateControl("gateControl");
         Server server = new Server("server");
         GuardianAngel guardianAngel = new GuardianAngel("angel");
+
         terminal.addDevice(server);
         terminal.addDevice(thyracontGauge);
         terminal.addDevice(pfeifferGauge);

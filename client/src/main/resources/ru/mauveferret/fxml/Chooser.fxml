@@ -17,7 +17,7 @@
             <Image url="@../pics/burn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="775.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pics/icons/close.png" />
          </image>

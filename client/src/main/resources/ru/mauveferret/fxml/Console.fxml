@@ -15,15 +15,15 @@
    <children>
       <ImageView fitHeight="448.0" fitWidth="815.0" pickOnBounds="true">
          <image>
-            <Image url="@../pics/burn.png" />
+            <Image url="@../pics/consolePic.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="774.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pics/icons/close.png" />
          </image>
       </ImageView>
-      <Pane layoutX="34.0" layoutY="46.0" opacity="0.8" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
+      <Pane layoutX="34.0" layoutY="46.0" opacity="0.92" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
          <children>
             <JFXTextField fx:id="command" focusColor="#333333" layoutX="39.0" layoutY="40.0" prefHeight="51.0" prefWidth="464.0" promptText="Command" style="-fx-text-fill: #ffffff" unFocusColor="WHITE">
                <font>
@@ -35,7 +35,7 @@
                </font>
             </JFXButton>
          </children></Pane>
-      <Pane layoutX="34.0" layoutY="236.0" opacity="0.8" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
+      <Pane layoutX="38.0" layoutY="265.0" opacity="0.92" prefHeight="130.0" prefWidth="740.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
          <children>
             <JFXTextField fx:id="message" focusColor="#333333" layoutX="37.0" layoutY="40.0" prefHeight="51.0" prefWidth="464.0" promptText="message" style="-fx-text-fill: #ffffff" unFocusColor="WHITE">
                <font>
