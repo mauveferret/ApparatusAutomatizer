@@ -5,12 +5,10 @@ import java.util.Date;
 
 class ServerCommunicator extends ControlDevice{
 
-
     ServerCommunicator(String fileName, Socket socket) {
         super(fileName);
         communicator = new SocketCryptedCommunicator(socket);
     }
-
 
     //TODO divide commands handler into separete pieces in Terminal style
     //Here you'll have several 'devices' like vacuum, discharge, console (all that is in Chooser.fxml in client)
@@ -62,16 +60,14 @@ class ServerCommunicator extends ControlDevice{
         return (passworIsValid && pairIssNotExpired);
     }
 
-
     //TODO move servercommunicator to server
-
     //Fixme vacuumResponse. make methods for all?
+
     private String createResponse(String request)
     {
         String response = "";
         if (request.startsWith("vac"))
         {
-
             if (request.contains("nocom"))
            {
                response = System.currentTimeMillis()+" ";
@@ -93,10 +89,8 @@ class ServerCommunicator extends ControlDevice{
             }
 
         }
-
        // createResponse+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
        // createResponse+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
         return response;
     }
-
 }
