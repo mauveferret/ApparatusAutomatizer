@@ -10,15 +10,15 @@ also controlled by the arduino. Gate control allows to control forlinePump, valv
 potentially crucial actions like "please open turn off forline pump while TMp is on"
 or "please open valve when pressure before is much another tha pressure after"
  */
-class GateControl extends Device{
+class GateControl extends ControlDevice{
 
 
     GateControl(String fileName) {
         super(fileName);
         deviceAccessLevel = 6;
+        dataLog.createFile(config.dataPath, "forlineStatus  valveStatus   gateStatus");
     }
 
-    private int columnNumber;
     //in torr
     private int maxPresDifference = 10;
 
@@ -36,15 +36,6 @@ class GateControl extends Device{
     private boolean valveOpened = false;
     private boolean gateOpened = false;
 
-    private Arduino arduino;
-    private Gauge gauge;
-    private ByPass byPass;
-    //private TMP tmp;
-    private GateControl gateControl = this;
-    private String arduinoName;
-    private String gaugeName;
-
-
     boolean isPumpEnabled() {
         return pumpEnabled;
     }
@@ -57,9 +48,6 @@ class GateControl extends Device{
         return gateOpened;
     }
 
-    int getColumnNumber() {
-        return columnNumber;
-    }
 
     //GateControl Methods
 
@@ -82,9 +70,11 @@ class GateControl extends Device{
             String someCommand = "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput;
             terminalSample.runTerminalCommand(someCommand, 10);
             pumpEnabled = enablePump;
+            measureAndLog();
         }
     }
 
+    //FIXME it looks too large and seems not working
     private void control(final String type, String control)
     {
         boolean isCorrectControl = false;
@@ -109,7 +99,6 @@ class GateControl extends Device{
             int pin = (type.equals("gate")) ? gateDigitalPin : valveDigitalPin;
             final boolean isOpened = arduino.getDigitalPinsWritten()[pin];
             if (openValve ^ isOpened) {
-                //FIXME ?!
                 if (openValve) {   //control
                     boolean isforlinePumpOn = arduino.getDigitalPinsWritten()[forlinePumpDigitalPin];
                     if (type.equals("valve")) { //valve
@@ -117,6 +106,8 @@ class GateControl extends Device{
                         {
                             String someCommand = "deviceCommand dwrite " + valveDigitalPin + " 1";
                             arduino.runTerminalCommand(someCommand, 10);
+                            valveOpened=true;
+                            measureAndLog();
                         }
                         else
                             sendMessage("pressure difference is too high.");
@@ -127,6 +118,8 @@ class GateControl extends Device{
                         {
                             String someCommand = "deviceCommand dwrite "+gateDigitalPin+" 1";
                             arduino.runTerminalCommand(someCommand, 10);
+                            gateOpened = true;
+                            measureAndLog();
                         }
                         else
                         {
@@ -141,6 +134,11 @@ class GateControl extends Device{
                 {
                     String someCommand = "deviceCommand dwrite " + pin + " 0";
                     arduino.runTerminalCommand(someCommand, 10);
+                    if (type.equals("gate"))
+                        gateOpened=false;
+                    else
+                        valveOpened = false;
+                    measureAndLog();
                 }
             }
 
@@ -169,6 +167,7 @@ class GateControl extends Device{
                         else
                             valveOpened = wasOpened;
                     }
+                        measureAndLog();
                 }
                 catch (InterruptedException ignored){}
             });
@@ -208,8 +207,8 @@ class GateControl extends Device{
     @Override
     void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
-        String[] command = line.split(" ");
-           try {
+               String[] command = line.split(" ");
+               try {
                switch (command[0]) {
                    case "forlinepin": forlinePumpDigitalPin =  Integer.parseInt(command[1]);
                    break;
@@ -228,12 +227,6 @@ class GateControl extends Device{
                        gateAnalogClosedPin =  Integer.parseInt(command[1]);
                        gateAnalogOpenedPin =  Integer.parseInt(command[2]);
                    }
-                   break;
-                   case "gauge": gaugeName = command[1];
-                   break;
-                   case "arduino": arduinoName = command[1];
-                   break;
-                   case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
                    break;
                    case "maxpressuredifference" : maxPresDifference = Integer.parseInt(command[1]);
                    break;
@@ -264,38 +257,15 @@ class GateControl extends Device{
 
     @Override
     void measureAndLog() {
-        dataLog.createFile(config.dataPath, "forlineStatus  valveStatus   gateStatus");
-        log = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean stop = false;
-                while (!stop)
-                {
-                    try {
-                        String pump = (pumpEnabled) ? "enabled" : "disabled";
-                        String valve = (valveOpened) ? "opened" : "closed";
-                        String gate = (gateOpened) ? "opened" : "closed";
-                        dataLog.write("time "+pump+" "+valve+" "+gate);
-                        stop = Thread.currentThread().isInterrupted();
-                        //FIXME sleep is very bad decision!
-                        Thread.sleep(100);
-                    }
-                    catch (Exception  e)
-                    {
-                        sendMessage("ERROR while log: "+e.getMessage());
-                    }
-                }
-
-            }
-        });
-        log.setName(config.deviceName);
-        log.start();
+        try {
+            String pump = (pumpEnabled) ? "enabled" : "disabled";
+            String valve = (valveOpened) ? "opened" : "closed";
+            String gate = (gateOpened) ? "opened" : "closed";
+            dataLog.write("time "+pump+" "+valve+" "+gate);
+        }
+        catch (Exception  e)
+        {
+            sendMessage("ERROR while log: "+e.getMessage());
+        }
     }
-
-    @Override
-    void initialize() {
-        gauge= (ThyracontGauge) (terminalSample.getDevice(gaugeName));
-        arduino= (Arduino) (terminalSample.getDevice(arduinoName));
-    }
-
 }

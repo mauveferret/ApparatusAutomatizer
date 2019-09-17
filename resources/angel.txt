@@ -1,7 +1,9 @@
-command angel
+command ang
 /* 1
 
 this
 
 */
-name ang
+name angel
+tmp1 tmppump
+bypass bypass

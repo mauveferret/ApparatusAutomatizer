@@ -3,7 +3,7 @@ package ru.mauveferret;
 import java.util.TreeMap;
 
 
-public class LeyboldTMP extends SerialDevice {
+public class LeyboldTMP extends TMP {
 
     private int  temperature = 0;
     private int frequency = 0;

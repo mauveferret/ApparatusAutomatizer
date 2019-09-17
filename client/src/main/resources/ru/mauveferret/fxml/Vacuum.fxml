@@ -2,12 +2,14 @@
 
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1074.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.VacuumController">
    <children>
@@ -17,15 +19,14 @@
               <tabs>
                 <Tab text="Gauges">
                   <content>
-                        <LineChart fx:id="pressureChart" createSymbols="true" legendVisible="true" prefHeight="431.0" prefWidth="967.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
+                        <LineChart fx:id="pressureChart" createSymbols="true" legendVisible="true" prefHeight="431.0" prefWidth="767.0" style="-fx-background-color: transparent; -fx-fill:transparent; -fx-stroke: transparent;" stylesheets="@chart.css">
                           <xAxis>
                             <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis fx:id="pressureChartYAxis" prefHeight="456.0" prefWidth="36.0" side="LEFT" />
                           </yAxis>
-      
-                                                </LineChart>
+                        </LineChart>
                   </content>
                 </Tab>
                 <Tab text="TMP">
@@ -44,7 +45,7 @@
       <AnchorPane layoutY="45.0" prefHeight="193.0" prefWidth="897.0" AnchorPane.bottomAnchor="562.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="45.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="8.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="105.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Rectangle fx:id="pumpIndicator" arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="105.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="203.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="300.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="399.0" layoutY="130.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
@@ -61,6 +62,26 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="595.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="692.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b53131" height="56.0" layoutX="789.0" layoutY="48.0" stroke="WHITE" strokeType="INSIDE" width="89.0" />
+            <Label layoutX="135.0" layoutY="26.0" text="pump" textFill="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="26.0" text="valve" textFill="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="112.0" text="pump" textFill="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="233.0" layoutY="112.0" text="valve" textFill="WHITE">
+               <font>
+                  <Font name="HP Simplified" size="13.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

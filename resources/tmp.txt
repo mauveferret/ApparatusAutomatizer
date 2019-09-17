@@ -6,5 +6,4 @@ this
 */
 ID 1
 name tmppump
-command tmp
 port COM51

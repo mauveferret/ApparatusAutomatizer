@@ -1,3 +1,5 @@
 gauge thyracontGauge
-gatecontrol gate
-tmp tmppump
+gatecontrol1 gate
+tmp1 tmppump
+bypass bypass
+name someclient

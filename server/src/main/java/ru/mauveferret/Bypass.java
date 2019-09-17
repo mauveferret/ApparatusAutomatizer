@@ -5,9 +5,14 @@ package ru.mauveferret;
 In order to minimaze amount of parameters in GateControl lets take as a rule that
 bypass line ALWAYS accompany FIRST column number
  */
-class ByPass extends Device {
+class Bypass extends ControlDevice {
 
-    private boolean isOpened;
+
+   boolean isOpened =false;
+
+    Bypass(String fileName) {
+        super(fileName);
+    }
 
     @Override
     void measureAndLog() {

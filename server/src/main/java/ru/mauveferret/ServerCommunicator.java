@@ -1,10 +1,9 @@
 package ru.mauveferret;
 
-import java.io.*;
 import java.net.Socket;
 import java.util.Date;
 
-class ServerCommunicator extends Device{
+class ServerCommunicator extends ControlDevice{
 
 
     ServerCommunicator(String fileName, Socket socket) {
@@ -19,15 +18,9 @@ class ServerCommunicator extends Device{
     //TODO make packages
 
     private Date expireDate;
-    private int accessType;
+    private int accessLevel;
     private String login;
     private SocketCryptedCommunicator communicator;
-    private Gauge gauge;
-    private String gaugeName;
-    private GateControl gateControl;
-    private  String gateControlName;
-    private  LeyboldTMP tmp;
-    private  String tmpName;
 
     @Override
     public synchronized void start() {
@@ -40,17 +33,7 @@ class ServerCommunicator extends Device{
                     try {
                         //FIXME it dont wait for read enough long
                         String someCommand = communicator.readEncryption();
-                        if (!someCommand.contains("nocommand"))
-                        {
-                            System.out.println("comsecommand launched "+someCommand);
-                            terminalSample.launchCommand(someCommand, true, accessLevel);
-                        }
-                        if (someCommand.equals("stop"))
-                        {
-                            communicator.stopCommunication();
-                        }
-                        else
-                            communicator.writeEncryption(response(1));
+                        communicator.writeEncryption(createResponse(someCommand));
                     }
                     catch (Exception e)
                     {
@@ -75,59 +58,46 @@ class ServerCommunicator extends Device{
         boolean pairIssNotExpired = terminalSample.passwords.loginHasNotExpired(loginAndPassword[0]);
         login = loginAndPassword[0];
         expireDate = terminalSample.passwords.getExpireDate(loginAndPassword[0]);
-        accessType = 10;
+        accessLevel = 10;
         return (passworIsValid && pairIssNotExpired);
     }
 
 
+
     //Fixme vacuumResponse. make methods for all?
-    String response(int columnNumber)
+    private String createResponse(String request)
     {
-        String response =""+System.currentTimeMillis();
-       // response+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
-       // response+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
-        response= (System.currentTimeMillis()+" "+gauge.pressure[1]+" "+gauge.pressure[2]);
+        String response = "";
+        if (request.startsWith("vac"))
+        {
+
+            if (request.contains("nocom"))
+           {
+               response = System.currentTimeMillis()+" ";
+               System.out.println(bypass.isOpened);
+               System.out.println(gateControl1.isGateOpened());
+               String columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl1.isPumpEnabled());
+               columnData+=booleanToString(gateControl1.isValveOpened())+booleanToString(gateControl1.isGateOpened());
+               columnData+=booleanToString(tmp1.isEnabled())+" ";
+               //add "auto pumping block"
+              // response+=columnData;
+              // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.isPumpEnabled());
+               //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
+               //columnData+=booleanToString(tmp2.isEnabled())+" ";
+               response+=columnData+gauge.pressure[1]+" "+gauge.pressure[2]+" "+gauge.pressure[3]+" ";
+               response+=tmp1.getTemperature()+" "+tmp1.getFrequency()+" "+tmp1.getVoltage()+" ";
+               response+=tmp1.getCurrent()+" ";
+           }
+           else
+            {//TODO create separate vacuum terminal
+                terminalSample.launchCommand(request.substring(3), true, accessLevel);
+            }
+
+        }
+
+       // createResponse+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
+       // createResponse+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
         return response;
     }
 
-    //FIXME probably, it's possible to move it to "virtual device"?
-    /*you can make some abstract class which contains references to real device like in initialize block
-    that can be got from the united config with devices name like in ChooseImportCommand method
-     */
-
-    @Override
-    void chooseImportCommand(String line) {
-        super.chooseImportCommand(line);
-        String[] command = line.split(" ");
-        try {
-            switch (command[0]) {
-
-                case "gauge": gaugeName = command[1];
-                break;
-                case "gatecontrol": gateControlName = command[1];
-                break;
-                case "tmp" : tmpName = command[1];
-                break;
-            }
-        }
-        catch (Exception e)
-        {
-            sendMessage("incorrect option.");
-            sendMessage(e.getMessage());
-        }
-
-    }
-
-    @Override
-    void initialize() {
-        super.initialize();
-        gauge= (ThyracontGauge) (terminalSample.getDevice(gaugeName));
-        gateControl = (GateControl) (terminalSample.getDevice(gateControlName));
-        tmp = (LeyboldTMP) (terminalSample.getDevice(tmpName));
-    }
-
-    @Override
-    void measureAndLog() {
-
-    }
 }

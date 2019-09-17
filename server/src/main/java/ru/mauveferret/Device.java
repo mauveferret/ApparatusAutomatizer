@@ -31,10 +31,7 @@ abstract  class Device extends Thread{
     Device(){}
 
     abstract void measureAndLog();
-    void  initialize()
-    {
-        measureAndLog();
-    }
+    void  initialize()  { measureAndLog(); }
 
     //disable all proccesses, threads in order to exit program correctly
     boolean stopDevice = false;
@@ -245,6 +242,8 @@ abstract  class Device extends Thread{
         System.out.println(message);
         messageLog.write(message + "\n");
     }
+
+    String booleanToString(boolean b) {return (b) ? "1" : "0";}
 
 }
 

@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Rectangle;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -33,11 +35,13 @@ public class VacuumController {
 
     private SocketCryptedCommunicator communicator;
     @FXML
+    private Rectangle pumpIndicator;
+    @FXML
     private  NumberAxis pressureChartYAxis = new NumberAxis();
     @FXML
     private  NumberAxis pressureChartXAxis = new NumberAxis();
     @FXML
-    private LineChart<Number,Number> pressureChart = new LineChart<>(pressureChartXAxis, pressureChartYAxis);;
+    private LineChart<Number,Number> pressureChart = new LineChart<>(pressureChartXAxis, pressureChartYAxis);
     // Array
     private XYChart.Series pressureColumn1Series;
     private XYChart.Series pressureColumn2Series;
@@ -48,14 +52,17 @@ public class VacuumController {
 
 
     private void enablePressurePlotting() {
+
         // setup a scheduled executor to periodically put data into the chart
         pressureScheduledExecutorService.scheduleAtFixedRate(() -> {
             // Update the chart
             Platform.runLater(() -> {
-                String message = communicator.makeRequest("nocommand", true);
+                pumpIndicator.setFill(Paint.valueOf("green"));
+                String message = communicator.makeRequest("vac nocom", true);
+                System.out.println(message);
                 long time = Long.parseLong(message.split(" ")[0]);
-                double pressure1 = Double.parseDouble(message.split(" ")[1]);
-                double pressure2 = Double.parseDouble(message.split(" ")[2]);
+                double pressure1 = Double.parseDouble(message.split(" ")[3]);
+                double pressure2 = Double.parseDouble(message.split(" ")[4]);
                 pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
                 pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
                 /*show only part of the chart (left part is gragually deleting)

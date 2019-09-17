@@ -2,7 +2,7 @@ package ru.mauveferret;
 
 import java.util.TreeMap;
 
-class GuardianAngel extends Device {
+class GuardianAngel extends ControlDevice{
 
     //FIXME WTF?!
     GuardianAngel(String fileName) {
@@ -41,7 +41,7 @@ class GuardianAngel extends Device {
                 while (!stop)
                 {
                     while (continueChecking) {
-                        double pressureColumn = gauge.pressure[gateControl.getColumnNumber()];
+                        double pressureColumn = gauge.pressure[gateControl.columnNumber];
                         double pressureVessel = gauge.pressure[3];
                         boolean gate = gateControl.isGateOpened();
                         //FIXME checking valve

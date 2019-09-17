@@ -14,22 +14,25 @@ public class Main {
         //System.out.println(passwordManager.IsPasswordValid("admin", "password"));
         //System.out.println(passwordManager.loginHasNotExpired("admin"));
         SerialConsole serialConsole = new SerialConsole("console");
+
         Terminal terminal = new Terminal("terminal");
         Arduino arduino = new Arduino("arduino");
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");
         ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
         PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
+        Bypass bypass = new Bypass("bypass");
         GateControl gateControl = new GateControl("gateControl");
         Server server = new Server("server");
         GuardianAngel guardianAngel = new GuardianAngel("angel");
         terminal.addDevice(server);
-        terminal.addDevice(guardianAngel);
-        terminal.addDevice(serialConsole);
         terminal.addDevice(thyracontGauge);
         terminal.addDevice(pfeifferGauge);
         terminal.addDevice(leyboldTMP);
         terminal.addDevice(arduino);
+        terminal.addDevice(bypass);
+        terminal.addDevice(serialConsole);
         terminal.addDevice(gateControl);
+        terminal.addDevice(guardianAngel);
         terminal.addDevice(terminal);
         try {
             Thread.sleep(500);
