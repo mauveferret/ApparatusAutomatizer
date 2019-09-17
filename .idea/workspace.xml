@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.server">
+  <component name="RunManager" selected="Application.client">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -216,7 +217,7 @@
       <workItem from="1568291498529" duration="16287000" />
       <workItem from="1568533359083" duration="17246000" />
       <workItem from="1568647813840" duration="5964000" />
-      <workItem from="1568705434226" duration="24224000" />
+      <workItem from="1568705434226" duration="26592000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -526,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568735485769</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="GUI impovement">
+      <created>1568735749779</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1568735749779</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reading from COM fixed" />
     <MESSAGE value="gauge logging fixed" />
     <MESSAGE value="gateControl made" />
     <MESSAGE value="gateControl, angelGuard made, need testing" />
@@ -571,6 +578,7 @@
     <MESSAGE value="charts work, client GUI works good, socketCryptedCommunicator improved, now can work both in server and client apps" />
     <MESSAGE value="just some TODO added" />
     <MESSAGE value="some shit made" />
-    <option name="LAST_COMMIT_MESSAGE" value="some shit made" />
+    <MESSAGE value="GUI impovement" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI impovement" />
   </component>
 </project>
