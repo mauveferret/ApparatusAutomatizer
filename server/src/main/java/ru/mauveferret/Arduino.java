@@ -13,7 +13,7 @@ import java.util.TreeMap;
 
 //TODO проверка корректного ввода пинов
 
-class Arduino extends SerialDevice {
+public class Arduino extends SerialDevice {
 
     Arduino(String fileName) {
         super(fileName);
@@ -31,11 +31,11 @@ class Arduino extends SerialDevice {
 
     //Getters and Setters
 
-    boolean[] getDigitalPinsWritten() {
+    public boolean[] getDigitalPinsWritten() {
         return digitalPinsWritten;
     }
 
-    double[] getAnalogPinsRead() {
+    public double[] getAnalogPinsRead() {
         return analogPinsRead;
     }
 
@@ -134,7 +134,7 @@ class Arduino extends SerialDevice {
     //for commandline
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("dwrite", "Write on Arduino digital port in form: DO $pin number$ $value(0,1)$");
         commands.put("dread", "Read from Arduino digital  port in form: DI $pin number$");
         commands.put("awrite", "Write on Arduino analog port(PWM~) in form: AO $pin number$ $value(0-5)$");
@@ -143,7 +143,7 @@ class Arduino extends SerialDevice {
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         super.chooseTerminalCommand(command);
         switch (command[1]) {
             case "dwrite": {
@@ -183,7 +183,7 @@ class Arduino extends SerialDevice {
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
         dataLog.createFile(config.dataPath, "time  digitalPinsStatus analogPinsStatus");
         log = new Thread(() -> {
             boolean stop = false;
@@ -230,7 +230,7 @@ class Arduino extends SerialDevice {
     }
 
     @Override
-    boolean callDevice() {
+    protected boolean callDevice() {
         try {
             analogRead(""+1);
             return true;

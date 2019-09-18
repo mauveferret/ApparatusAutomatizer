@@ -18,7 +18,7 @@ public class SerialConsole extends SerialDevice {
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
             case "write":
@@ -34,17 +34,17 @@ public class SerialConsole extends SerialDevice {
     }
 
     @Override
-    void type() {
+    protected void type() {
 
     }
 
     @Override
-    boolean callDevice() {
+    protected boolean callDevice() {
         return false;
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 }

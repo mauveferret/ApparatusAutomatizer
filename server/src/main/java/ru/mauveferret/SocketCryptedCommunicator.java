@@ -6,7 +6,7 @@ import java.security.KeyPair;
 import java.security.PublicKey;
 import java.util.Date;
 
-class SocketCryptedCommunicator {
+public class SocketCryptedCommunicator {
 
     private int port;
     private String host;
@@ -130,7 +130,7 @@ class SocketCryptedCommunicator {
         }
     }
 
-    boolean createSecureCommunicationLine()
+    public boolean createSecureCommunicationLine()
     {
         /* take as a rule:
            firstly client sends its public key, server takes it and sends its own punlic key

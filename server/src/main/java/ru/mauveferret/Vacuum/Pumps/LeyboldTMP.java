@@ -1,4 +1,6 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum.Pumps;
+
+import ru.mauveferret.Vacuum.TMP;
 
 import java.util.TreeMap;
 
@@ -11,41 +13,41 @@ public class LeyboldTMP extends TMP {
     private double current = 0;
     private boolean enabled = false;
 
-    LeyboldTMP(String fileName) {
+    public LeyboldTMP(String fileName) {
         super(fileName);
         deviceAccessLevel = 6;
     }
 
     @Override
-    void type() {
+    protected void type() {
 
     }
 
     @Override
-    boolean callDevice() {
+    protected boolean callDevice() {
         return false;
     }
 
 
 //Getters
 
-    int getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
-    int getFrequency() {
+    public int getFrequency() {
         return frequency;
     }
 
-    double getVoltage() {
+    public double getVoltage() {
         return voltage;
     }
 
-    double getCurrent() {
+    public double getCurrent() {
         return current;
     }
 
-    boolean isEnabled() {
+    public boolean isEnabled() {
         return enabled;
     }
 
@@ -53,7 +55,7 @@ public class LeyboldTMP extends TMP {
 
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
             case "run": activate(true);
@@ -81,7 +83,7 @@ public class LeyboldTMP extends TMP {
     //terminal related
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
         dataLog.createFile(config.dataPath, "time  temperature,C  frequency, Hz   voltage, 0.1V   current,A ");
         Thread log = new Thread(() -> {
             boolean stop = true;
@@ -98,7 +100,7 @@ public class LeyboldTMP extends TMP {
     }
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("run", "launches the TMP in form $run$");
         commands.put("stop","stops the TMP in form: $stop$");
         commands.put("measure","");

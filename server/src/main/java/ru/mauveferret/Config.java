@@ -3,20 +3,21 @@ package ru.mauveferret;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-class Config {
+public class Config {
 
     String deviceID="ID isn't set";
-    String deviceName = "name isn't set";
+    public String deviceName = "name isn't set";
     String deviceCommand = "name isn't set";
     String devicePort = "port isn't set";
     String deviceType = "type isn't set";
     int baudRate = 9600;
     String configPath = "";
     String logPath = "";
-    String dataPath = "";
+    public String dataPath = "";
+    public String fileName = "";
     String units = "";
     //used to add several elements of one device like gauge amount or arduino pins
-    ArrayList<Integer> elements = new ArrayList<>();
+    public ArrayList<Integer> elements = new ArrayList<>();
     TreeMap<String,Object> parameters = new TreeMap<>();
     //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 

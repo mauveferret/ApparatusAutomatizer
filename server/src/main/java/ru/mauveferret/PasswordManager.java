@@ -30,12 +30,12 @@ class PasswordManager extends Device {
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 
     @Override
-    void initialize() {
+    protected void initialize() {
         loadLoginsAndPasswords();
         super.initialize();
     }
@@ -207,7 +207,7 @@ class PasswordManager extends Device {
     //Terminal related methods
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("setkey", "sets password for passwords.txt file decryption");
         commands.put("addaccount", "adds account in form: addaccount $login$ $password$ $start date$ $expire date$ $access level$ ");
         commands.put("changepassword", "change accaoun password in form: changepassword $login$ $oldpassword$ $newpassword$");

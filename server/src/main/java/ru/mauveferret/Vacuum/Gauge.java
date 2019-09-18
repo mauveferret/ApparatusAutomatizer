@@ -1,21 +1,24 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum;
+
+import ru.mauveferret.Logger;
+import ru.mauveferret.SerialDevice;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-abstract class Gauge extends SerialDevice {
+public abstract class Gauge extends SerialDevice {
 
-    Gauge(String fileName) {
+    protected Gauge(String fileName) {
         super(fileName);
         deviceAccessLevel = 1;
     }
 
-    abstract double measure(int gauge);
-    abstract void calibrate(String gaugeType);
+    protected abstract double measure(int gauge);
+    protected abstract void calibrate(String gaugeType);
 
     @Override
-    void initialize() {
+    protected void initialize() {
         String newPath =(new File(config.dataPath)).getParent();
         for (int number: config.elements)
         {
@@ -28,14 +31,14 @@ abstract class Gauge extends SerialDevice {
 
     //FIXMe it is not a cool solution
     //made to realize call method
-    boolean deviceWorks=true;
+    protected boolean deviceWorks=true;
     //keeps pressures current value. pressure[0] - is always null!
-    double[] pressure = new double[4];
+    public double[] pressure = new double[4];
     //used to write single pressure from every gauge/ Can be used by third party software
     private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
         dataLog.createFile(config.dataPath, "time  column1,torr column2,torr vessel torr  ");
         log = new Thread(() -> {
             boolean stop = false;
@@ -80,7 +83,7 @@ abstract class Gauge extends SerialDevice {
     //for commandline
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         switch (command[1])
         {
             case "measure":
@@ -102,17 +105,17 @@ abstract class Gauge extends SerialDevice {
     }
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("measure", "measures pressure in mBar by some gauge in form: measure $gauge number$ ");
         commands.put("calibrate", "makes a calibration of the pirani or cold cathode in form: calibrate $type$");
         return super.getCommands();
     }
 
     @Override
-    void type() {}
+    protected void type() {}
 
     @Override
-    boolean callDevice() {
+    protected boolean callDevice() {
         try {
             //FIXME
             measure(1);

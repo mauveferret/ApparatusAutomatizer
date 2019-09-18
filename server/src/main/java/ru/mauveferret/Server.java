@@ -4,18 +4,22 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.TreeMap;
 
-class Server  extends  ControlDevice{
+public abstract class Server extends Device  {
 
-    Server(String fileName) {
+    public Server(String fileName) {
         super(fileName);
     }
 
-    private ArrayList<Socket> socketList = new ArrayList<>();
-    private boolean stopServer = false;
-    private int port = 4004;
+    protected ArrayList<Socket> socketList = new ArrayList<>();
+    protected boolean stopServer = false;
+    protected int port = 4004;
+
+
+    protected abstract String createResponse(String someCommand);
 
 
     //waits for clientSocket's answer and launch in separate thread "meetClient"
@@ -23,7 +27,7 @@ class Server  extends  ControlDevice{
     {
         try {
             ServerSocket server = new ServerSocket(port);
-            sendMessage("server launched at port "+port+". Its IP is "+server.getInetAddress().getHostAddress());
+            sendMessage(config.deviceName+" launched at port "+port+". Its IP is "+ server.getInetAddress().getHostName());
             while (!stopServer)
             {
                 Socket socket = server.accept();
@@ -79,74 +83,31 @@ class Server  extends  ControlDevice{
         return (passwordValid && pairIssNotExpired);
     }
 
-    //TODO divide commands handler into separete pieces in Terminal style
-    //Here you'll have several 'devices' like vacuum, discharge, console (all that is in Chooser.fxml in client)
-    //First word will be a 'device' command
-    //TODO make packages
-
-    //Fixme vacuumResponse. make methods for all?
-    private String createResponse(String request)
-    {
-        String response = "";
-        if (request.startsWith("vac"))
-        {
-
-            if (request.contains("nocom"))
-            {
-                response = System.currentTimeMillis()+" ";
-                System.out.println(bypass.isOpened);
-                System.out.println(gateControl1.isGateOpened());
-                String columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl1.isPumpEnabled());
-                columnData+=booleanToString(gateControl1.isValveOpened())+booleanToString(gateControl1.isGateOpened());
-                columnData+=booleanToString(tmp1.isEnabled())+" ";
-                // response+=columnData;
-                // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.isPumpEnabled());
-                //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
-                //columnData+=booleanToString(tmp2.isEnabled())+" ";
-                response+=columnData+gauge.pressure[1]+" "+gauge.pressure[2]+" "+gauge.pressure[3]+" ";
-                response+=tmp1.getTemperature()+" "+tmp1.getFrequency()+" "+tmp1.getVoltage()+" ";
-                response+=tmp1.getCurrent()+" ";
-            }
-            else
-            {//TODO create separate vacuum terminal
-                terminalSample.launchCommand(request.substring(3), true, 10);
-            }
-
-        }
-
-        // createResponse+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
-        // createResponse+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
-        return response;
-    }
 
     //terminal related commands
 
     @Override
-    void initialize() {
-       new Thread(new Runnable() {
-           @Override
-           public void run() {
-               launchServer();
-           }
-       }).start();
+    protected void initialize() {
+        //FIXME is the order correct?
         super.initialize();
+        new Thread(() -> launchServer()).start();
     }
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("launch","");
         return super.getCommands();
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         if (command[1].equals("launch"))
             launchServer();
         super.chooseTerminalCommand(command);
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 

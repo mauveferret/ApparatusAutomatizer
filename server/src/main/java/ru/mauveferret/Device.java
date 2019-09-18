@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-abstract  class Device extends Thread{
+public abstract  class Device extends Thread{
 
-    Device(String fileName)
+    public Device(String fileName)
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -17,6 +17,7 @@ abstract  class Device extends Thread{
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\";
+        config.fileName = fileName;
         config.configPath = path+"\\"+fileName+".txt";
         config.logPath = path+"logs\\"+fileName+"Log.txt";
         config.dataPath = path+"data\\"+fileName+"Data.txt";
@@ -30,27 +31,27 @@ abstract  class Device extends Thread{
 
     Device(){}
 
-    abstract void measureAndLog();
-    void  initialize()  { measureAndLog(); }
+    protected abstract void measureAndLog();
+    protected void  initialize()  { measureAndLog(); }
 
     //disable all proccesses, threads in order to exit program correctly
     boolean stopDevice = false;
     //TODO move to config?!
     //limits access to device
-    float deviceAccessLevel = 100;
+    protected float deviceAccessLevel = 100;
     //keeps terminal object
-    Terminal terminalSample;
+    protected Terminal terminalSample;
     // some config dat
-    Config config = new Config();
+    protected Config config = new Config();
     private Logger messageLog = new Logger(true);
-    Logger dataLog = new Logger(true);
-    Thread log;
+    protected Logger dataLog = new Logger(true);
+    protected Thread log;
     //used in reconnect method to rerun command which cause reconnect
      String receivedCommand = "";
      int receivedAccessLevel = 0;
     //it is used in help
     //key == command, value == its desciption for help
-    TreeMap<String, String> commands = new TreeMap<>();
+    protected TreeMap<String, String> commands = new TreeMap<>();
     //key == alias, value == command + options which is represented by the alias
     private HashMap<String,String[]> aliases = new HashMap<>();
     //key == alias, value == options.
@@ -69,7 +70,7 @@ abstract  class Device extends Thread{
     // terminal related
 
     //associates a command with a method the command dedicated to
-    void runTerminalCommand(String someCommand, int accessLevel)
+    public void runTerminalCommand(String someCommand, int accessLevel)
     {
         if (accessLevel>=deviceAccessLevel) {
             try {
@@ -97,7 +98,7 @@ abstract  class Device extends Thread{
             sendMessage("Access denied.");
     }
 
-    void chooseTerminalCommand(String[] command)
+    protected void chooseTerminalCommand(String[] command)
     {
         switch (command[1]) {
 
@@ -149,7 +150,7 @@ abstract  class Device extends Thread{
         }
     }
 
-    void chooseImportCommand(String line)
+    protected void chooseImportCommand(String line)
     {
         String[] command = line.split(" ");
         switch (command[0].toLowerCase())
@@ -166,7 +167,7 @@ abstract  class Device extends Thread{
     }
 
     //actually not only returns a commands Map, but also forms it
-    TreeMap<String, String> getCommands()
+    protected TreeMap<String, String> getCommands()
     {
 
         commands.put("alias", "adds alias to the specific command in form: alias $alias$  $command$ $options$");
@@ -237,13 +238,13 @@ abstract  class Device extends Thread{
         return  command.split(" ");
     }
 
-    void sendMessage(String message) {
+    protected void sendMessage(String message) {
         message = System.currentTimeMillis() + " " + message;
         System.out.println(message);
         messageLog.write(message + "\n");
     }
 
-    String booleanToString(boolean b) {return (b) ? "1" : "0";}
+    protected String booleanToString(boolean b) {return (b) ? "1" : "0";}
 
 }
 

@@ -1,8 +1,10 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum;
+
+
 
 import java.util.TreeMap;
 
-class GuardianAngel extends ControlDevice{
+class GuardianAngel extends ControlDevice {
 
     //FIXME WTF?!
     GuardianAngel(String fileName) {
@@ -18,9 +20,9 @@ class GuardianAngel extends ControlDevice{
      */
 
     private boolean continueChecking = true;
-    private ThyracontGauge gauge;
+    private Gauge gauge;
     private GateControl gateControl;
-    private LeyboldTMP tmp;
+    private TMP tmp;
     private  GuardianAngel angel = this;
 
     //Getters and Setters
@@ -84,7 +86,7 @@ class GuardianAngel extends ControlDevice{
     //for commandline
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("start", "");
         commands.put("pause", "");
         commands.put("resume","");
@@ -93,7 +95,7 @@ class GuardianAngel extends ControlDevice{
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
 
         super.chooseTerminalCommand(command);
         switch (command[1]) {
@@ -107,16 +109,16 @@ class GuardianAngel extends ControlDevice{
     }
 
     @Override
-    void chooseImportCommand(String line) {
+    protected void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
-                case "gauge": gauge =(ThyracontGauge) terminalSample.getDevice(command[1]);
+                case "gauge": gauge =(Gauge) terminalSample.getDevice(command[1]);
                     break;
                 case "gatecontrol": gateControl = (GateControl) terminalSample.getDevice(command[1]);
                     break;
-                case "tmp" : tmp = (LeyboldTMP)  terminalSample.getDevice(command[1]);
+                case "tmp" : tmp = (TMP)  terminalSample.getDevice(command[1]);
                 break;
             }
         }
@@ -128,5 +130,5 @@ class GuardianAngel extends ControlDevice{
     }
 
     @Override
-    void measureAndLog() {}
+    protected void measureAndLog() {}
 }

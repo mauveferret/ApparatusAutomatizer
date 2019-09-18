@@ -6,16 +6,16 @@ import jssc.SerialPortList;
 
 import java.util.TreeMap;
 
-abstract class SerialDevice extends Device {
+public abstract class SerialDevice extends Device {
 
-    SerialDevice(String fileName) {
+    public SerialDevice(String fileName) {
         super(fileName);
     }
 
-    abstract void type();
+    protected abstract void type();
 
     //just to check if the Device works properly (for find ports method)
-    abstract boolean callDevice();
+    protected abstract boolean callDevice();
     private SerialPort serialPort;
     //in this thread reconnection to the device happening
     private Thread reconnectionThread;
@@ -26,14 +26,14 @@ abstract class SerialDevice extends Device {
 
     //Getters
 
-    boolean isReconnectActive() {
+    protected boolean isReconnectActive() {
         return isReconnectActive;
     }
 
     //terminal related methods
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("ports", "shows available COM port's names");
         commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
         commands.put("close", "close Arduino port");
@@ -46,7 +46,7 @@ abstract class SerialDevice extends Device {
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         super.chooseTerminalCommand(command);
         switch (command[1]) {
             case "ports":
@@ -76,7 +76,7 @@ abstract class SerialDevice extends Device {
     }
 
     @Override
-    void chooseImportCommand(String line) {
+    protected void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
         String[] command = line.split(" ");
         switch (command[0].toLowerCase()) {
@@ -195,7 +195,7 @@ abstract class SerialDevice extends Device {
         }
     }
 
-    synchronized String readMessage(String endOfLine) {
+    protected synchronized String readMessage(String endOfLine) {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
@@ -222,7 +222,7 @@ abstract class SerialDevice extends Device {
         }
     }
 
-    synchronized boolean writeMessage(String message) {
+    protected synchronized boolean writeMessage(String message) {
         try
         {
           try {
@@ -256,7 +256,7 @@ abstract class SerialDevice extends Device {
         }
     }
 
-    synchronized void reconnect() {
+    protected synchronized void reconnect() {
         reconnectionThread = new Thread(() -> {
             try {
                 try {

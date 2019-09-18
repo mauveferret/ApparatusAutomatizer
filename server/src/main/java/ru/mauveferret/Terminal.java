@@ -7,7 +7,7 @@ import java.util.TreeMap;
 needs to send some command to its owner through LaunchCommand
 also realises help command
  */
-class Terminal extends Device {
+public class Terminal extends Device {
 
     //key == deviceCommand, value == device object
     private TreeMap<String, Device> commandMap = new TreeMap<>();
@@ -34,7 +34,7 @@ class Terminal extends Device {
         return commandMap;
     }
 
-    Device getDevice(String deviceName)
+    public Device getDevice(String deviceName)
     {
         return deviceMap.get(deviceName);
     }
@@ -42,7 +42,7 @@ class Terminal extends Device {
     //commands
 
 
-    void addDevice(Device someDevice) {
+    public void addDevice(Device someDevice) {
         someDevice.terminalSample = Terminal.this;
         new Thread(someDevice::initialize).start();
         String deviceName = someDevice.config.deviceName;
@@ -176,7 +176,7 @@ class Terminal extends Device {
 
     //for commandline
 
-    String launchCommand(String command, final boolean silentMode, int accessLevel)  {
+    public String launchCommand(String command, final boolean silentMode, int accessLevel)  {
 
         final String[] commandArray = commandToStringArray(command);
         final String internalCommand = command;
@@ -198,7 +198,7 @@ class Terminal extends Device {
     }
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("help", "this page");
         commands.put("threads","");
         commands.put("exit", "stop current terminal session");
@@ -208,7 +208,7 @@ class Terminal extends Device {
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         switch (command[1]) {
             case "help":
                 showHelp();
@@ -241,7 +241,7 @@ class Terminal extends Device {
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 }

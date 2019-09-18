@@ -1,16 +1,18 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum.Gauges;
 
 //driver for VD10 controller Unit
 
-class ThyracontGauge extends Gauge {
+import ru.mauveferret.Vacuum.Gauge;
 
-    ThyracontGauge(String path) {
+public class ThyracontGauge extends Gauge {
+
+    public ThyracontGauge(String path) {
         super(path);
     }
 
     //gauge related commands
 
-    synchronized double measure(int gaugeNumber)
+    protected synchronized double measure(int gaugeNumber)
     {
 
         //FIXME very bad!!
@@ -52,7 +54,7 @@ class ThyracontGauge extends Gauge {
         }
     }
 
-    synchronized void calibrate(String sensorType){}
+    protected synchronized void calibrate(String sensorType){}
 
     private String checkSum(String message)
     {

@@ -1,12 +1,26 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum;
 
-abstract class ControlDevice extends Device{
+import ru.mauveferret.Arduino;
+import ru.mauveferret.Device;
+import ru.mauveferret.Terminal;
+
+class ControlDevice extends Device {
+
+
+     //TODO it
 
     ControlDevice(String fileName) {
         super(fileName);
     }
 
-    int columnNumber;
+    //specially for VacuumServer
+     void setTerminal(Terminal someTerminal) {
+         terminalSample = someTerminal;
+     }
+
+
+
+     int columnNumber;
     Arduino arduino;
     Gauge gauge;
     TMP tmp1;
@@ -25,26 +39,24 @@ abstract class ControlDevice extends Device{
   static private String bypassName;
 
     @Override
-    void initialize() {
+    protected void initialize() {
 
         super.initialize();
-       // System.out.println("OIWEHJFIOHQWE*(#URF*(  "+config.deviceName);
-       try {
-           bypass = (Bypass) (terminalSample.getDevice(bypassName));
-           arduino = (Arduino) (terminalSample.getDevice(arduinoName));
-           gauge = (Gauge) (terminalSample.getDevice(gaugeName));
-           tmp1 = (TMP) (terminalSample.getDevice(tmp1Name));
-           tmp2 = (TMP) (terminalSample.getDevice(tmp2Name));
-           gateControl1 = (GateControl) (terminalSample.getDevice(gateControl1Name));
-           gateControl2 = (GateControl) (terminalSample.getDevice(gateControl2Name));
 
-       }
-       catch (Exception ignored) {}
+        //I'm sorry for this, i'l fix it!
+        //FIXME exterminate this shit!!!
 
+        try { bypass = (Bypass) (terminalSample.getDevice(bypassName));} catch (Exception ignored) {ignored.printStackTrace();}
+        try { arduino = (Arduino) (terminalSample.getDevice(arduinoName));} catch (Exception ignored) {}
+        try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
+        try {  tmp1 = (TMP) (terminalSample.getDevice(tmp1Name));} catch (Exception ignored) {}
+        try { tmp2 = (TMP) (terminalSample.getDevice(tmp2Name));} catch (Exception ignored) {}
+        try { gateControl1 = (GateControl) (terminalSample.getDevice(gateControl1Name));} catch (Exception ignored) {}
+        try {  gateControl2 = (GateControl) (terminalSample.getDevice(gateControl2Name));} catch (Exception ignored) {}
     }
 
     @Override
-    void chooseImportCommand(String line) {
+    protected void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
         String[] command = line.split(" ");
         try {
@@ -75,7 +87,7 @@ abstract class ControlDevice extends Device{
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 }

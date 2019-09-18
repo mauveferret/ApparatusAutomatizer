@@ -1,8 +1,10 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum.Gauges;
 
 //driver for Pfeiffer MaxiGauge TPG 256A controller Unit
 
-class PfeifferGauge extends Gauge {
+import ru.mauveferret.Vacuum.Gauge;
+
+public class PfeifferGauge extends Gauge {
 
     private int[] status = {0,0,0,0,0,0,0};
     private String[] statuses = {
@@ -14,12 +16,12 @@ class PfeifferGauge extends Gauge {
             "no sensor",
             "identification error" };
 
-    PfeifferGauge(String fileName) {
+    public PfeifferGauge(String fileName) {
         super(fileName);
     }
 
     @Override
-    synchronized double  measure(int gauge) {
+    protected synchronized double  measure(int gauge) {
         String command = "PR"+gauge+"\n";
         writeMessage(command);
         readMessage("\r\n");
@@ -45,7 +47,7 @@ class PfeifferGauge extends Gauge {
     }
 
     @Override
-    void calibrate(String gaugeType) {
+    protected void calibrate(String gaugeType) {
 
     }
 

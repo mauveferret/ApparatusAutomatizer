@@ -1,4 +1,6 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum;
+
+import ru.mauveferret.Vacuum.ControlDevice;
 
 import java.util.TreeMap;
 
@@ -10,7 +12,7 @@ also controlled by the arduino. Gate control allows to control forlinePump, valv
 potentially crucial actions like "please open turn off forline pump while TMp is on"
 or "please open valve when pressure before is much another tha pressure after"
  */
-class GateControl extends ControlDevice{
+class GateControl extends ControlDevice {
 
 
     GateControl(String fileName) {
@@ -196,7 +198,7 @@ class GateControl extends ControlDevice{
     //terminal related methods
 
     @Override
-    TreeMap<String, String> getCommands() {
+    protected TreeMap<String, String> getCommands() {
         commands.put("forline","");
         commands.put("valve","open or close valve in form: valve $control$");
         commands.put("gate","open or close gate in form: gate $control$");
@@ -205,7 +207,7 @@ class GateControl extends ControlDevice{
     }
 
     @Override
-    void chooseImportCommand(String line) {
+    protected void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
                String[] command = line.split(" ");
                try {
@@ -241,7 +243,7 @@ class GateControl extends ControlDevice{
     }
 
     @Override
-    void chooseTerminalCommand(String[] command) {
+    protected void chooseTerminalCommand(String[] command) {
         super.chooseTerminalCommand(command);
         switch (command[1]) {
             case "valve": control("valve", command[2]);
@@ -256,7 +258,7 @@ class GateControl extends ControlDevice{
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
         try {
             String pump = (pumpEnabled) ? "enabled" : "disabled";
             String valve = (valveOpened) ? "opened" : "closed";

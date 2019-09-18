@@ -12,7 +12,7 @@ public class Logger {
     private boolean append;
     private int columnLength = 20;
 
-    Logger(boolean append) {
+    public Logger(boolean append) {
         this.append = append;
     }
 
@@ -27,7 +27,7 @@ public class Logger {
         return path;
     }
 
-    void createFile(String path, String header) {
+    public void createFile(String path, String header) {
         this.path = path;
         try {
             File file = new File(new File(path).getParent());
@@ -67,7 +67,7 @@ public class Logger {
     }
 
     // TODO проверять на совпадение предыдущую строку и препредыдущую!
-     void write(String data) {
+    public void write(String data) {
         if (!(data.equals(dataToLog) || data.equals(""))) {
             dataToLog = data;
             try {

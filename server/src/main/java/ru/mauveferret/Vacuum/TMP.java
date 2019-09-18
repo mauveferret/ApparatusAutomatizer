@@ -1,7 +1,9 @@
-package ru.mauveferret;
+package ru.mauveferret.Vacuum;
 
-class TMP extends SerialDevice {
-    TMP(String fileName) {
+import ru.mauveferret.SerialDevice;
+
+public class TMP extends SerialDevice {
+    protected TMP(String fileName) {
         super(fileName);
     }
 
@@ -11,38 +13,38 @@ class TMP extends SerialDevice {
     private double voltage = 0;
     private double current = 0;
 
-    int getTemperature() {
+    public int getTemperature() {
         return temperature;
     }
 
-    int getFrequency() {
+    public int getFrequency() {
         return frequency;
     }
 
-    double getVoltage() {
+    public double getVoltage() {
         return voltage;
     }
 
-    double getCurrent() {
+    public double getCurrent() {
         return current;
     }
 
-    boolean isEnabled() {
+    public boolean isEnabled() {
         return enabled;
     }
 
     @Override
-    void type() {
+    protected void type() {
 
     }
 
     @Override
-    boolean callDevice() {
+    protected boolean callDevice() {
         return false;
     }
 
     @Override
-    void measureAndLog() {
+    protected void measureAndLog() {
 
     }
 }
