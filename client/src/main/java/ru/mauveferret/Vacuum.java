@@ -1,6 +1,6 @@
 package ru.mauveferret;
 
-import javafx.application.Platform;
+import ru.mauveferret.Controllers.VacuumController;
 
 class Vacuum extends  Thread {
 

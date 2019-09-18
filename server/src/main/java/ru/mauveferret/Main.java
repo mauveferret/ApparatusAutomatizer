@@ -15,13 +15,16 @@ public class Main {
         //passwordManager.writeLoginAndPassword("admin", "password", "14:30 01.01.2019", "13:00 01.01.2021", 10);
         //System.out.println(passwordManager.IsPasswordValid("admin", "password"));
         //System.out.println(passwordManager.loginHasNotExpired("admin"));
+
+        //TODO it would be MUCH more comfortable if the filename equals deviceName
+        //TODO  configPath should bi in directories  vacuum, discharge etc.
+
         SerialConsole serialConsole = new SerialConsole("console");
         Terminal terminal = new Terminal("terminal");
-        Arduino arduino = new Arduino("arduino");
-        terminal.addDevice(arduino);
         terminal.addDevice(serialConsole);
         terminal.addDevice(terminal);
-        Vacuum vacuum = new Vacuum(terminal);
+        
+        new Vacuum(terminal);
 
         try {
             Thread.sleep(500);

@@ -3,15 +3,16 @@ package ru.mauveferret;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import ru.mauveferret.Controllers.ChooserController;
+import ru.mauveferret.Controllers.LoginWindowController;
 
-class ClientConnector extends Thread{
+public class ClientConnector extends Thread{
 
 
-    ClientConnector(String host, int port, LoginWindowController controller) {
+    public ClientConnector(String host, int port, LoginWindowController controller) {
         loginWindow = controller;
         communicator = new SocketCryptedCommunicator(host,port);
         String serverStatus = (communicator.connectToServer()) ? "server is ONLINE" : "server is OFFLINE";
@@ -39,7 +40,7 @@ class ClientConnector extends Thread{
                 Platform.runLater((() ->
                 {try {
                         Stage windowsChooser = new Stage();
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Chooser.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Controllers/fxml/Chooser.fxml"));
                         windowsChooser.initStyle(StageStyle.UNDECORATED);
                         windowsChooser.setScene(new Scene(loader.load(), 800, 430));
                         windowsChooser.show();

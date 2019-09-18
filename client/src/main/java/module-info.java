@@ -3,6 +3,6 @@ module client {
     requires javafx.fxml;
     requires com.jfoenix;
 
-    opens ru.mauveferret to javafx.fxml;
+    opens ru.mauveferret.Controllers to javafx.fxml;
     exports ru.mauveferret;
 }

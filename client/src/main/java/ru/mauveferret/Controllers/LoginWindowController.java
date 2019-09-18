@@ -1,4 +1,4 @@
-package ru.mauveferret;
+package ru.mauveferret.Controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+import ru.mauveferret.ClientConnector;
 
 public class LoginWindowController {
 
@@ -27,24 +28,24 @@ public class LoginWindowController {
 
     //Setters and Getters
 
-    void  setConnectionStatus(String message)
+    public void  setConnectionStatus(String message)
     {
         statusLabel.setText(message);
     }
 
-    String getLogin()
+    public String getLogin()
     {
         return login.getText();
     }
 
-    String getPassword()
+    public String getPassword()
     {
         return password.getText();
     }
 
     //...
 
-    void closeWindow()
+    public void closeWindow()
     {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();

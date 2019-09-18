@@ -1,12 +1,12 @@
-package ru.mauveferret;
+package ru.mauveferret.Controllers;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import ru.mauveferret.SocketCryptedCommunicator;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

@@ -1,4 +1,4 @@
-package ru.mauveferret;
+package ru.mauveferret.Controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;

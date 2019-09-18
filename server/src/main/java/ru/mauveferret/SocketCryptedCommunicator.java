@@ -168,7 +168,7 @@ public class SocketCryptedCommunicator {
     }
 
     //only for clients, server shouldn't speak without permission!
-    synchronized String makeRequest(String request, boolean useCryptedChannel)
+    public synchronized String makeRequest(String request, boolean useCryptedChannel)
     {
 
          /*

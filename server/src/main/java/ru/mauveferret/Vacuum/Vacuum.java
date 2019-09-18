@@ -1,5 +1,6 @@
 package ru.mauveferret.Vacuum;
 
+import ru.mauveferret.Arduino;
 import ru.mauveferret.Terminal;
 import ru.mauveferret.Vacuum.Gauges.PfeifferGauge;
 import ru.mauveferret.Vacuum.Gauges.ThyracontGauge;
@@ -14,10 +15,12 @@ public class Vacuum {
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");
         ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
         PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
+        Arduino arduino = new Arduino("arduino");
         Bypass bypass = new Bypass("bypass");
         GateControl gateControl = new GateControl("gateControl");
         VacuumServer server = new VacuumServer("server");
         GuardianAngel guardianAngel = new GuardianAngel("angel");
+        terminal.addDevice(arduino);
         terminal.addDevice(server);
         terminal.addDevice(thyracontGauge);
         terminal.addDevice(pfeifferGauge);

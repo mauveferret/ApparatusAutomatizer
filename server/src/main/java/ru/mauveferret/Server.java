@@ -4,7 +4,6 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.TreeMap;
 
@@ -14,6 +13,7 @@ public abstract class Server extends Device  {
         super(fileName);
     }
 
+    //TODO
     protected ArrayList<Socket> socketList = new ArrayList<>();
     protected boolean stopServer = false;
     protected int port = 4004;

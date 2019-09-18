@@ -2,33 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Discharge/Discharge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Discharge/DischargeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Conttrollers/ChooserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Conttrollers/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LoginWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Conttrollers/LoginWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Conttrollers/VacuumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Chooser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Chooser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Console.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Console.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/fxml/chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/chart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/RickandMorty.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/RickandMorty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/burn.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/burn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/consolePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/consolePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/fusion.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/fusion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/icons/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/pics/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/login.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Bypass.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Bypass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ControlDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/ControlDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PasswordManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/TMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ThyracontGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/ThyracontGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,24 +89,24 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+      <recent name="ru.mauveferret.Discharge" />
+      <recent name="ru.mauveferret.Vacuum" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret.Discharge" />
-      <recent name="ru.mauveferret.Vacuum" />
-      <recent name="ru.mauveferret" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -245,7 +244,8 @@
       <workItem from="1568533359083" duration="17246000" />
       <workItem from="1568647813840" duration="5964000" />
       <workItem from="1568705434226" duration="26721000" />
-      <workItem from="1568794523648" duration="9493000" />
+      <workItem from="1568794523648" duration="10185000" />
+      <workItem from="1568808385928" duration="577000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -576,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568800130686</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="packaging made, vaccuum package addded, everything works">
+      <created>1568807730155</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1568807730155</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +603,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gateControl, angelGuard made, need testing" />
     <MESSAGE value="made passwordManager, tried to improve gaugeMeasuring" />
     <MESSAGE value="file loading improved: now you don't have to show the path" />
     <MESSAGE value="Some JSSC based improvements" />
@@ -621,6 +627,7 @@
     <MESSAGE value="GUI impovement" />
     <MESSAGE value="everybody seems to work, som porn solutions in ControlDevice" />
     <MESSAGE value="ServerCommunicator moved to server" />
-    <option name="LAST_COMMIT_MESSAGE" value="ServerCommunicator moved to server" />
+    <MESSAGE value="packaging made, vaccuum package addded, everything works" />
+    <option name="LAST_COMMIT_MESSAGE" value="packaging made, vaccuum package addded, everything works" />
   </component>
 </project>

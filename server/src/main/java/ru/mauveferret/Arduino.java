@@ -15,7 +15,7 @@ import java.util.TreeMap;
 
 public class Arduino extends SerialDevice {
 
-    Arduino(String fileName) {
+    public Arduino(String fileName) {
         super(fileName);
         deviceAccessLevel = 9;
     }

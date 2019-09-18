@@ -1,4 +1,4 @@
-package ru.mauveferret;
+package ru.mauveferret.Controllers;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
@@ -7,12 +7,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import ru.mauveferret.SocketCryptedCommunicator;
 
 public class ChooserController {
 
     private SocketCryptedCommunicator communicator;
-    void setCommunicator(SocketCryptedCommunicator communicator)
+    public void setCommunicator(SocketCryptedCommunicator communicator)
     {
         this.communicator = communicator;
         System.out.println("получилось!");
