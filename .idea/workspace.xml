@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/clients.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ServerCommunicator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,22 +70,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\fxml" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,7 +222,8 @@
       <workItem from="1568291498529" duration="16287000" />
       <workItem from="1568533359083" duration="17246000" />
       <workItem from="1568647813840" duration="5964000" />
-      <workItem from="1568705434226" duration="26592000" />
+      <workItem from="1568705434226" duration="26721000" />
+      <workItem from="1568794523648" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="alias added but don't not work">
       <created>1565715225860</created>
@@ -534,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568735749779</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="everybody seems to work, som porn solutions in ControlDevice">
+      <created>1568741288627</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1568741288627</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gauge logging fixed" />
     <MESSAGE value="gateControl made" />
     <MESSAGE value="gateControl, angelGuard made, need testing" />
     <MESSAGE value="made passwordManager, tried to improve gaugeMeasuring" />
@@ -579,6 +591,7 @@
     <MESSAGE value="just some TODO added" />
     <MESSAGE value="some shit made" />
     <MESSAGE value="GUI impovement" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI impovement" />
+    <MESSAGE value="everybody seems to work, som porn solutions in ControlDevice" />
+    <option name="LAST_COMMIT_MESSAGE" value="everybody seems to work, som porn solutions in ControlDevice" />
   </component>
 </project>

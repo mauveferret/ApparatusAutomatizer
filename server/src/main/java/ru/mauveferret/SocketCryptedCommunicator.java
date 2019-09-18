@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.security.KeyPair;
 import java.security.PublicKey;
+import java.util.Date;
 
 class SocketCryptedCommunicator {
 
@@ -20,9 +21,10 @@ class SocketCryptedCommunicator {
     private boolean isConnected=false;
     //account parameters for the current session
     private int timeout = 100000;
-    private int accessLevel;
-    private String Login;
 
+    private int accessLevel = 0;
+    private Date expireDate;
+    private String Login;
 
 
 
@@ -51,6 +53,14 @@ class SocketCryptedCommunicator {
 
     //Getters and Setters
 
+
+    public Date getExpireDate() {
+        return expireDate;
+    }
+
+    public void setExpireDate(Date expireDate) {
+        this.expireDate = expireDate;
+    }
 
     public boolean isStopCommunication() {
         return stopCommunication;
@@ -176,10 +186,10 @@ class SocketCryptedCommunicator {
     void writeEncryption(String message)
     {
         try {
-            long t1 = System.nanoTime();
+            long t1 = System.currentTimeMillis();
             out.write(rsa.encrypt(message, otherDevicePublicKey)+"\n");
             out.flush();
-            long t2 = System.nanoTime();
+            long t2 = System.currentTimeMillis();
             System.out.println(message+" time:"+(t2-t1));
         }
         catch (Exception e)
@@ -194,9 +204,9 @@ class SocketCryptedCommunicator {
     {
         try
         {
-            long t1 = System.nanoTime();
+            long t1 = System.currentTimeMillis();
             String message  = rsa.decrypt(in.readLine(), deviceKeyPair.getPrivate());
-            long t2 = System.nanoTime();
+            long t2 = System.currentTimeMillis();
             System.out.println(message+" time:"+(t2-t1));
             return message;
         }

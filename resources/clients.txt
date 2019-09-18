@@ -1,5 +1,0 @@
-gauge thyracontGauge
-gatecontrol1 gate
-tmp1 tmppump
-bypass bypass
-name someclient

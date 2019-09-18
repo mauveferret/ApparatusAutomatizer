@@ -1,2 +1,8 @@
 command srv
 name server
+gauge thyracontGauge
+gatecontrol1 gate
+tmp1 tmppump
+bypass bypass
+name someclient
+port 4004
