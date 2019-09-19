@@ -72,15 +72,13 @@ public class ChooserController {
                     }
                 });
 
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent event) {
-                        if (resizebottom[0] == false) {
-                            windowsChooser.setX(event.getScreenX() - xOffset[0]);
-                            windowsChooser.setY(event.getScreenY() - yOffset[0]);
-                        } else {
-                            windowsChooser.setWidth(event.getX() + dx[0]);
-                            windowsChooser.setHeight(event.getY() + dy[0]);
-                        }
+                root.setOnMouseDragged(event -> {
+                    if (resizebottom[0] == false) {
+                        windowsChooser.setX(event.getScreenX() - xOffset[0]);
+                        windowsChooser.setY(event.getScreenY() - yOffset[0]);
+                    } else {
+                        windowsChooser.setWidth(event.getX() + dx[0]);
+                        windowsChooser.setHeight(event.getY() + dy[0]);
                     }
                 });
 
