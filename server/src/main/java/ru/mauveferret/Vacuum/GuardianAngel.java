@@ -45,15 +45,15 @@ class GuardianAngel extends ControlDevice {
                     while (continueChecking) {
                         double pressureColumn = gauge.pressure[gateControl.columnNumber];
                         double pressureVessel = gauge.pressure[3];
-                        boolean gate = gateControl.isGateOpened();
+                        //boolean gate = gateControl.isGateOpened();
                         //FIXME checking valve
-                        boolean valve = gateControl.isValveOpened();
-                        boolean pump = gateControl.isPumpEnabled();
+                        //boolean valve = gateControl.isValveOpened();
+                        //boolean pump = gateControl.pumpStatus();
                         boolean turboPump = tmp.isEnabled();
                         int temperature = tmp.getTemperature();
 
                         //if pressure difference is too much or pressureVessel to much -> close gate
-                        if ((Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10) && gate)
+                       // if ((Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10) && gate)
                         {
                             sendMessage("i'm closing the gates!");
                             gateControl.runTerminalCommand("bla gate close", 10);

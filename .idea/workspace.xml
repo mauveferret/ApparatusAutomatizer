@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LogarithmicNumberAxis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ResizeHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/caspian.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/facility.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/client.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/ChooserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Vacuum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,14 +228,8 @@
       <workItem from="1568647813840" duration="5964000" />
       <workItem from="1568705434226" duration="26721000" />
       <workItem from="1568794523648" duration="10185000" />
-      <workItem from="1568808385928" duration="13244000" />
-    </task>
-    <task id="LOCAL-00001" summary="alias added but don't not work">
-      <created>1565715225860</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1565715225860</updated>
+      <workItem from="1568808385928" duration="13758000" />
+      <workItem from="1568866032821" duration="6049000" />
     </task>
     <task id="LOCAL-00002" summary="alias works, trying to make deviceCommandMap workable">
       <created>1565785345327</created>
@@ -574,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568809216162</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="some rubbish added">
+      <created>1568840523492</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1568840523493</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="file loading improved: now you don't have to show the path" />
     <MESSAGE value="Some JSSC based improvements" />
     <MESSAGE value="password manager improved" />
     <MESSAGE value="fates and validation added to passwordmanager, some TODO were made" />
@@ -619,6 +618,7 @@
     <MESSAGE value="ServerCommunicator moved to server" />
     <MESSAGE value="packaging made, vaccuum package addded, everything works" />
     <MESSAGE value="packaging in client made, works" />
-    <option name="LAST_COMMIT_MESSAGE" value="packaging in client made, works" />
+    <MESSAGE value="some rubbish added" />
+    <option name="LAST_COMMIT_MESSAGE" value="some rubbish added" />
   </component>
 </project>

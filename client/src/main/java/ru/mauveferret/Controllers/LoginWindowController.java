@@ -2,18 +2,18 @@ package ru.mauveferret.Controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import ru.mauveferret.ClientConnector;
 
 public class LoginWindowController {
 
+    private boolean isMenuVisible = false;
 
-    @FXML
-    private ImageView closeButton;
     @FXML
     private JFXTextField login;
     @FXML
@@ -22,9 +22,20 @@ public class LoginWindowController {
     private JFXButton connectButton;
     @FXML
     private Label statusLabel;
+    @FXML
+    private JFXTextArea infoTextArea;
+    @FXML
+    private Pane info;
+    @FXML
+    private Pane setup;
+    @FXML
+    private JFXTextField vacuumIP;
+    @FXML
+    private JFXTextField vacuumPort;
 
-    private String host = "localhost";
-    private int port = 4004;
+
+
+
 
     //Setters and Getters
 
@@ -47,7 +58,7 @@ public class LoginWindowController {
 
     public void closeWindow()
     {
-        Stage stage = (Stage) closeButton.getScene().getWindow();
+        Stage stage = (Stage) connectButton.getScene().getWindow();
         stage.close();
     }
 
@@ -57,10 +68,16 @@ public class LoginWindowController {
     private void closeLoginWindows()
     {
         // get a handle to the stage
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        // do what you have to do
+        Stage stage = (Stage) connectButton.getScene().getWindow();
         stage.close();
         System.exit(0);
+    }
+
+    @FXML
+    private void menu()
+    {
+        isMenuVisible=!isMenuVisible;
+        setup.setVisible(isMenuVisible);
     }
 
     @FXML
@@ -68,9 +85,13 @@ public class LoginWindowController {
     {
         if ((!"".equals(login.getText())) && (!"".equals(password.getText())))
             new Thread(() -> {
-                new ClientConnector(host, port, this).start();
+                new ClientConnector(vacuumIP.getText(), Integer.parseInt(vacuumPort.getText()), this).start();
             }).start();
         else
-            statusLabel.setText("enter login and password, please!");
+        {
+            info.setVisible(true);
+            infoTextArea.setText("enter login and password, please!");
+            //statusLabel.setText("enter login and password, please!");
+        }
     }
 }

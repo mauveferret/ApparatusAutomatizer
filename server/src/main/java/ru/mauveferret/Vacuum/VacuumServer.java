@@ -27,14 +27,12 @@ class VacuumServer extends Server {
 
             if (request.contains("nocom"))
             {
-                response = System.currentTimeMillis()+" ";
-                System.out.println(devices.bypass.isOpened);
-                System.out.println(devices.gateControl1.isGateOpened());
-                String columnData = booleanToString(devices.bypass.isOpened)+booleanToString(devices.gateControl1.isPumpEnabled());
-                columnData+=booleanToString(devices.gateControl1.isValveOpened())+booleanToString(devices.gateControl1.isGateOpened());
+                String columnData =System.currentTimeMillis()+" ";
+                columnData+=booleanToString(devices.bypass.isOpened)+""+devices.gateControl1.getPumpStatus();
+                columnData+=devices.gateControl1.getValveStatus()+""+devices.gateControl1.getGateStatus();
                 columnData+=booleanToString(devices.tmp1.isEnabled())+" ";
                 // response+=columnData;
-                // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.isPumpEnabled());
+                // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.pumpStatus());
                 //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
                 //columnData+=booleanToString(tmp2.isEnabled())+" ";
                 response+=columnData+devices.gauge.pressure[1]+" "+devices.gauge.pressure[2]+" "+devices.gauge.pressure[3]+" ";
@@ -42,13 +40,13 @@ class VacuumServer extends Server {
                 response+=devices.tmp1.getCurrent()+" ";
             }
             else
-            {//TODO create separate vacuum terminal
+            {
                 terminalSample.launchCommand(request.substring(3), true, 10);
             }
 
         }
 
-        // createResponse+=""+gateControl.isPumpEnabled()+gateControl.isValveOpened()+gateControl.isGateOpened();
+        // createResponse+=""+gateControl.pumpStatus()+gateControl.isValveOpened()+gateControl.isGateOpened();
         // createResponse+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
         return response;
     }

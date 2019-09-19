@@ -34,22 +34,25 @@ class GateControl extends ControlDevice {
     private int gateAnalogOpenedPin;
     private int gateAnalogClosedPin;
 
-    private boolean pumpEnabled = false;
-    private boolean valveOpened = false;
-    private boolean gateOpened = false;
+    private boolean pumpEnabled;
+    private boolean valveOpened;
+    private boolean gateOpened;
 
-    boolean isPumpEnabled() {
-        return pumpEnabled;
+    private int pumpStatus = 5;
+    private int valveStatus = 5;
+    private int gateStatus = 5;
+
+    public int getPumpStatus() {
+        return pumpStatus;
     }
 
-    boolean isValveOpened() {
-        return valveOpened;
+    public int getValveStatus() {
+        return valveStatus;
     }
 
-    boolean isGateOpened() {
-        return gateOpened;
+    public int getGateStatus() {
+        return gateStatus;
     }
-
 
     //GateControl Methods
 

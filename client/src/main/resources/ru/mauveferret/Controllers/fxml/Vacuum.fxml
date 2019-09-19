@@ -119,12 +119,12 @@
                </font>
             </Label>
             <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button fx:id="pump1" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="bypass1" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="valve1" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="gate1" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="tmp1" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button fx:id="temp" mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="7" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="108.0" style="-fx-background-color: #66FF00; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;" text=" " textAlignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1" />
             <Label alignment="CENTER" contentDisplay="CENTER" text="valve" textAlignment="CENTER" textFill="WHITE" wrapText="true">
@@ -174,5 +174,20 @@
             </Label>
          </children>
       </GridPane>
+      <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="27.0" layoutX="1113.0" layoutY="17.0" onMouseReleased="#closeLoginWindows" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/whiteClose.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="43.0" fitWidth="33.0" layoutX="1040.0" layoutY="14.0" onMouseReleased="#menu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/whiteMenu.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="27.0" layoutX="1080.0" layoutY="17.0" onMouseReleased="#fullscreen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/whiteFullscreen.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

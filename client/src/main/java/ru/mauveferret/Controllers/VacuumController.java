@@ -7,6 +7,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Background;
+import javafx.stage.Stage;
 import ru.mauveferret.SocketCryptedCommunicator;
 
 import java.util.concurrent.Executors;
@@ -34,7 +35,10 @@ public class VacuumController {
         enableDataUpdating();
     }
 
+    private boolean isMenuVisible = false;
+    private boolean isFullscreen = false;
     private SocketCryptedCommunicator communicator;
+
     @FXML
     private Button pump1;
     @FXML
@@ -68,21 +72,24 @@ public class VacuumController {
             // Update the chart
             Platform.runLater(() -> {
                 //pumpIndicator.setFill(Paint.valueOf("green"));
-                String[] message = communicator.makeRequest("vac nocom", true).split(" ");
-                long time = Long.parseLong(message[0]);
-                setIndicatorColor(bypass1,message[1].charAt(0)+"");
-                setIndicatorColor(pump1,message[1].charAt(1)+"");
-                setIndicatorColor(valve1,message[1].charAt(2)+"");
-                setIndicatorColor(gate1,message[1].charAt(3)+"");
-                setIndicatorColor(tmp1,message[1].charAt(4)+"");
-                double pressure1 = Double.parseDouble(message[3]);
-                double pressure2 = Double.parseDouble(message[4]);
-                pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
-                pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
+                if (!disableUpdating) {
+                    String[] message = communicator.makeRequest("vac nocom", true).split(" ");
+                    long time = Long.parseLong(message[0]);
+                    setIndicatorColor(bypass1, message[1].charAt(0) + "");
+                    setIndicatorColor(pump1, message[1].charAt(1) + "");
+                    setIndicatorColor(valve1, message[1].charAt(2) + "");
+                    setIndicatorColor(gate1, message[1].charAt(3) + "");
+                    setIndicatorColor(tmp1, message[1].charAt(4) + "");
+                    double pressure1 = Double.parseDouble(message[3]);
+                    double pressure2 = Double.parseDouble(message[4]);
+                    pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
+                    pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
                 /*show only part of the chart (left part is gragually deleting)
                 if (pressureSeries.getData().size() > WINDOW_SIZE)
                     pressureSeries.getData().remove(0);
+
                  */
+                }
             });
         }, 0, 1, TimeUnit.SECONDS);
     }
@@ -103,6 +110,33 @@ public class VacuumController {
         }
     }
 
-    private void disablePressurePlotting(){}
+    @FXML
+    private void closeLoginWindows()
+    {
+        // get a handle to the stage
+        Stage stage = (Stage) pressureChart.getScene().getWindow();
+        stage.close();
+        disableUpdating();
+        //System.exit(0);
+    }
+
+    @FXML
+    private void fullscreen()
+    {
+        isFullscreen = !isFullscreen;
+        Stage stage = (Stage) pressureChart.getScene().getWindow();
+        stage.setMaximized(isFullscreen);
+
+    }
+
+    @FXML
+    private void menu()
+    {
+        isMenuVisible=!isMenuVisible;
+        //setup.setVisible(isMenuVisible);
+    }
+
+    private boolean disableUpdating = false;
+    private void disableUpdating(){disableUpdating = true;}
 }
 
