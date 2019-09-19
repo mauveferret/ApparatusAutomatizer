@@ -9,10 +9,12 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import ru.mauveferret.ClientConnector;
+import ru.mauveferret.SectionsKeeper;
 
 public class LoginWindowController {
 
     private boolean isMenuVisible = false;
+    private String messages = "";
 
     @FXML
     private JFXTextField login;
@@ -32,9 +34,14 @@ public class LoginWindowController {
     private JFXTextField vacuumIP;
     @FXML
     private JFXTextField vacuumPort;
-
-
-
+    @FXML
+    private JFXTextField dischargeIP;
+    @FXML
+    private JFXTextField dischargePort;
+    @FXML
+    private JFXTextField diagnosticsIP;
+    @FXML
+    private JFXTextField diagnosticsPort;
 
 
     //Setters and Getters
@@ -56,14 +63,6 @@ public class LoginWindowController {
 
     //...
 
-    public void closeWindow()
-    {
-        Stage stage = (Stage) connectButton.getScene().getWindow();
-        stage.close();
-    }
-
-    //event handlers
-
     @FXML
     private void closeLoginWindows()
     {
@@ -71,6 +70,13 @@ public class LoginWindowController {
         Stage stage = (Stage) connectButton.getScene().getWindow();
         stage.close();
         System.exit(0);
+    }
+
+    public void closeWindow()
+    {
+        // get a handle to the stage
+        Stage stage = (Stage) connectButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
@@ -83,15 +89,48 @@ public class LoginWindowController {
     @FXML
     private void connectToServer()
     {
-        if ((!"".equals(login.getText())) && (!"".equals(password.getText())))
+        if ((!"".equals(login.getText())) && (!"".equals(password.getText()))) {
+            SectionsKeeper keeper = new SectionsKeeper();
+            try
+            {
+                keeper.addSection(SectionsKeeper.VACUUM,vacuumIP.getText(),vacuumPort.getText());
+            }
+            catch (Exception e)
+            {
+                addMessage(SectionsKeeper.VACUUM+" host or port is incorrect");
+            }
+            try
+            {
+                keeper.addSection(SectionsKeeper.DISCHARGE,dischargeIP.getText(),dischargePort.getText());
+            }
+            catch (Exception e)
+            {
+                addMessage(SectionsKeeper.DISCHARGE+" host or port is incorrect");
+            }
+            try
+            {
+                keeper.addSection(SectionsKeeper.DIAGNOSTICS,diagnosticsIP.getText(),diagnosticsPort.getText());
+            }
+            catch (Exception e)
+            {
+                addMessage(SectionsKeeper.DIAGNOSTICS+" host or port is incorrect");
+            }
+
             new Thread(() -> {
-                new ClientConnector(vacuumIP.getText(), Integer.parseInt(vacuumPort.getText()), this).start();
+                new ClientConnector(keeper, this).start();
             }).start();
+        }
         else
         {
             info.setVisible(true);
-            infoTextArea.setText("enter login and password, please!");
+            addMessage("enter login and password, please.");
             //statusLabel.setText("enter login and password, please!");
         }
+    }
+
+    private void addMessage(String message)
+    {
+        messages+="\n"+message;
+        infoTextArea.setText(messages);
     }
 }

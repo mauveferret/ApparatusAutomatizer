@@ -1,6 +1,5 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Vacuum.ControlDevice;
 
 import java.util.TreeMap;
 
@@ -70,11 +69,12 @@ class GateControl extends ControlDevice {
             sendMessage("No $control$ options or it's incorrect (should use \"on\" or \"off\")");
 
         String digitalOutput = (enablePump) ? " 1" : " 0";
-        if (pumpEnabled ^ enablePump && isCorrectControl)
+        if ((pumpEnabled ^ enablePump) && isCorrectControl)
         {
             String someCommand = "deviceCommand dwrite "+ forlinePumpDigitalPin+digitalOutput;
             terminalSample.runTerminalCommand(someCommand, 10);
             pumpEnabled = enablePump;
+            pumpStatus = (enablePump) ? 1 : 0;
             measureAndLog();
         }
     }

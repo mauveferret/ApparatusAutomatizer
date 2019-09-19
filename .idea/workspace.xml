@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/GraySetup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/WhiteSetup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/grayClose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/grayMenu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/greyFullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteClose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteFullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteMenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SectionsKeeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Chooser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Chooser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Console.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Console.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/caspian.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/caspian.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/thyracontGauge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/thyracontGauge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -239,14 +230,8 @@
       <workItem from="1568808385928" duration="13758000" />
       <workItem from="1568866032821" duration="6703000" />
       <workItem from="1568883938299" duration="431000" />
-      <workItem from="1568884638945" duration="1518000" />
-    </task>
-    <task id="LOCAL-00003" summary="help fixed, some problems remained">
-      <created>1565800703295</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1565800703295</updated>
+      <workItem from="1568884638945" duration="4400000" />
+      <workItem from="1568889864139" duration="8077000" />
     </task>
     <task id="LOCAL-00004" summary="help works">
       <created>1565815368730</created>
@@ -584,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568874654711</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="some GUI elements added">
+      <created>1568886191958</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1568886191959</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -117,7 +117,7 @@
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login12" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="104.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="dischargeIP" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="104.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -131,7 +131,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </JFXTextField>
-            <JFXTextField fx:id="login111" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="104.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="DischargePort" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="104.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -150,7 +150,7 @@
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login121" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="160.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="diagnosticsIP" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="160.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -164,7 +164,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </JFXTextField>
-            <JFXTextField fx:id="login1111" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="160.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="diagnosticsPort" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="160.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>

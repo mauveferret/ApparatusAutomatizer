@@ -12,28 +12,33 @@ import ru.mauveferret.Controllers.LoginWindowController;
 public class ClientConnector extends Thread{
 
 
-    public ClientConnector(String host, int port, LoginWindowController controller) {
+    public ClientConnector(SectionsKeeper keeper, LoginWindowController controller) {
         loginWindow = controller;
-        communicator = new SocketCryptedCommunicator(host,port);
-        String serverStatus = (communicator.connectToServer()) ? "server is ONLINE" : "server is OFFLINE";
+        this.keeper = keeper;
+        vacuum = keeper.getCommunicator(SectionsKeeper.VACUUM);
+        //FIXME for other servers too
+        String serverStatus = (vacuum.connectToServer()) ? "server is ONLINE" : "server is OFFLINE";
         Platform.runLater((() -> loginWindow.setConnectionStatus(serverStatus)));
     }
 
-    private SocketCryptedCommunicator communicator;
+    private SectionsKeeper keeper;
     private LoginWindowController loginWindow;
     //TODO
     private int accessType;
+    private SocketCryptedCommunicator vacuum;
+    private SocketCryptedCommunicator discharge;
+    private SocketCryptedCommunicator diagnostics;
 
 
 
     @Override
     public synchronized void start() {
 
-        if (communicator.createSecureCommunicationLine()) {
+        if (vacuum.createSecureCommunicationLine()) {
             //Platform.runLater((() -> loginWindow.setConnectionStatus("data encryption enabled")));+
-            Platform.runLater((() -> communicator.writeEncryption(loginWindow.getLogin()+" "+loginWindow.getPassword())));
+            Platform.runLater((() -> vacuum.writeEncryption(loginWindow.getLogin()+" "+loginWindow.getPassword())));
            // System.out.println("ewaf "+loginANdPassword);
-            boolean isGranted = "granted".equals(communicator.readEncryption());
+            boolean isGranted = "granted".equals(vacuum.readEncryption());
             if (isGranted)
             {
                 Platform.runLater((() -> loginWindow.setConnectionStatus("Access GRANTED.")));
@@ -44,7 +49,7 @@ public class ClientConnector extends Thread{
                         windowsChooser.initStyle(StageStyle.UNDECORATED);
                         windowsChooser.setScene(new Scene(loader.load(), 800, 430));
                         windowsChooser.show();
-                        ((ChooserController) loader.getController()).setCommunicator(communicator);
+                        ((ChooserController) loader.getController()).setCommunicator(vacuum);
                     }
                     catch (Exception e)
                     {
