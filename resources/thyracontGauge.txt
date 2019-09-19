@@ -8,4 +8,4 @@ ID 1
 name thyracontGauge
 port COM49
 devices 1 2
-open 22
+open COM49

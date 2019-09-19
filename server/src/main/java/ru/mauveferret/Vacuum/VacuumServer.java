@@ -21,10 +21,10 @@ class VacuumServer extends Server {
     @Override
     public String createResponse(String request)
     {
+        //TODO since you have separate SOckets for different parts, you don't have to use "vac"
         String response = "";
         if (request.startsWith("vac"))
         {
-
             if (request.contains("nocom"))
             {
                 String columnData =System.currentTimeMillis()+" ";
@@ -35,7 +35,9 @@ class VacuumServer extends Server {
                 // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.pumpStatus());
                 //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
                 //columnData+=booleanToString(tmp2.isEnabled())+" ";
-                response+=columnData+devices.gauge.pressure[1]+" "+devices.gauge.pressure[2]+" "+devices.gauge.pressure[3]+" ";
+                response+=columnData+String.format("%6.3e",devices.gauge.pressure[1])+" ";
+                response+=String.format("%6.3e",devices.gauge.pressure[2])+" ";
+                response+=String.format("%6.3e",devices.gauge.pressure[3])+" ";
                 response+=devices.tmp1.getTemperature()+" "+devices.tmp1.getFrequency()+" "+devices.tmp1.getVoltage()+" ";
                 response+=devices.tmp1.getCurrent()+" ";
             }

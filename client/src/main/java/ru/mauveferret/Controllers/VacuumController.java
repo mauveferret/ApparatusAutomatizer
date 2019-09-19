@@ -80,8 +80,8 @@ public class VacuumController {
                     setIndicatorColor(valve1, message[1].charAt(2) + "");
                     setIndicatorColor(gate1, message[1].charAt(3) + "");
                     setIndicatorColor(tmp1, message[1].charAt(4) + "");
-                    double pressure1 = Double.parseDouble(message[3]);
-                    double pressure2 = Double.parseDouble(message[4]);
+                    double pressure1 = Double.parseDouble(message[2]);
+                    double pressure2 = Double.parseDouble(message[3]);
                     pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
                 /*show only part of the chart (left part is gragually deleting)
