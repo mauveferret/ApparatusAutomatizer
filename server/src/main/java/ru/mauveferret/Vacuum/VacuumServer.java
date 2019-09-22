@@ -35,9 +35,10 @@ class VacuumServer extends Server {
                 // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.pumpStatus());
                 //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
                 //columnData+=booleanToString(tmp2.isEnabled())+" ";
-                response+=columnData+String.format("%6.3e",devices.gauge.pressure[1])+" ";
-                response+=String.format("%6.3e",devices.gauge.pressure[2])+" ";
-                response+=String.format("%6.3e",devices.gauge.pressure[3])+" ";
+                response+=columnData;
+                response+=String.format("%6.3e",devices.gauge.pressure[1]).replace(",",".")+" ";
+                response+=String.format("%6.3e",devices.gauge.pressure[2]).replace(",",".")+" ";
+                response+=String.format("%6.3e",devices.gauge.pressure[3]).replace(",",".")+" ";
                 response+=devices.tmp1.getTemperature()+" "+devices.tmp1.getFrequency()+" "+devices.tmp1.getVoltage()+" ";
                 response+=devices.tmp1.getCurrent()+" ";
             }

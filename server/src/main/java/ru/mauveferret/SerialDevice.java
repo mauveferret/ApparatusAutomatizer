@@ -139,10 +139,8 @@ public abstract class SerialDevice extends Device {
             serialPort.closePort();
         }
         catch (Exception ignored) {}
-        if (!(doesPortExist(portName) || doesPortExist(port)))
-        {
-            if (!isReconnectActive)
-                sendMessage("Enter COM port name as an option");
+        if (!(doesPortExist(portName) || doesPortExist(port))) {
+            if (!isReconnectActive) sendMessage("Port name doesn't exist");
             return false;
         }
         else

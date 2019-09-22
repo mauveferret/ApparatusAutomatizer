@@ -1,13 +1,11 @@
 package ru.mauveferret.Controllers;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -19,22 +17,21 @@ public class ChooserController {
     public void setCommunicator(SocketCryptedCommunicator communicator)
     {
         this.communicator = communicator;
-        System.out.println("получилось!");
     }
 
     @FXML
-    private JFXButton console;
-    @FXML
-    private JFXButton vacuum;
-
+    private ImageView closeButton;
 
     @FXML
-    private void closeWindow()
+    private void closeChooserWindow()
     {
-        Stage stage = (Stage) console.getScene().getWindow();
+        Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
         System.exit(0);
     }
+
+    @FXML
+    private void menu() {}
 
     @FXML
     private void openVacuumWindow()
@@ -45,47 +42,8 @@ public class ChooserController {
                 Stage windowsChooser = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Vacuum.fxml"));
                 Parent root = loader.load();
-                windowsChooser.initStyle(StageStyle.UNDECORATED);
-                windowsChooser.setResizable(true);
-                windowsChooser.initModality(Modality.NONE);
-
-                final boolean[] resizebottom = {false};
-                final double[] dx = new double[1];
-                final double[] dy = new double[1];
-                final double[] xOffset = new double[1];
-                final double[] yOffset = new double[1];
-
-                root.setOnMousePressed(new EventHandler<MouseEvent>() {
-                    public void handle(MouseEvent event) {
-                        if (event.getX() > windowsChooser.getWidth() - 10
-                                && event.getX() < windowsChooser.getWidth() + 10
-                                && event.getY() > windowsChooser.getHeight() - 10
-                                && event.getY() < windowsChooser.getHeight() + 10) {
-                            resizebottom[0] = true;
-                            dx[0] = windowsChooser.getWidth() - event.getX();
-                            dy[0] = windowsChooser.getHeight() - event.getY();
-                        } else {
-                            resizebottom[0] = false;
-                            xOffset[0] = event.getSceneX();
-                            yOffset[0] = event.getSceneY();
-                        }
-                    }
-                });
-
-                root.setOnMouseDragged(event -> {
-                    if (resizebottom[0] == false) {
-                        windowsChooser.setX(event.getScreenX() - xOffset[0]);
-                        windowsChooser.setY(event.getScreenY() - yOffset[0]);
-                    } else {
-                        windowsChooser.setWidth(event.getX() + dx[0]);
-                        windowsChooser.setHeight(event.getY() + dy[0]);
-                    }
-                });
-
-
-                Scene scene = new Scene(root);
-                windowsChooser.setScene(scene);
-                //scene.getStylesheets().add(getClass().getResource("fxml/css/Caspian.css").toExternalForm());
+                setMovable(root,windowsChooser);
+                windowsChooser.setScene(new Scene(root));
                 windowsChooser.show();
                 ((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {
@@ -101,13 +59,12 @@ public class ChooserController {
         Platform.runLater((() ->
         {
             try {
-                Stage windowsChooser = new Stage();
+                Stage console = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Console.fxml"));
-                //windowsChooser.initStyle(StageStyle.UNDECORATED);
-                windowsChooser.setResizable(true);
-                windowsChooser.initModality(Modality.NONE);
-                windowsChooser.setScene(new Scene(loader.load()));
-                windowsChooser.show();
+                Parent root = loader.load();
+                setMovable(root,console);
+                console.setScene(new Scene(root));
+                console.show();
                 //((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -115,6 +72,45 @@ public class ChooserController {
             }
         }));
 
+    }
+
+
+    private void setMovable(Parent root, Stage stage)
+    {
+        final boolean[] resizebottom = {false};
+        final double[] dx = new double[1];
+        final double[] dy = new double[1];
+        final double[] xOffset = new double[1];
+        final double[] yOffset = new double[1];
+
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setResizable(true);
+        stage.initModality(Modality.NONE);
+
+        root.setOnMousePressed(event -> {
+            if (event.getX() > stage.getWidth() - 10
+                    && event.getX() < stage.getWidth() + 10
+                    && event.getY() > stage.getHeight() - 10
+                    && event.getY() < stage.getHeight() + 10) {
+                resizebottom[0] = true;
+                dx[0] = stage.getWidth() - event.getX();
+                dy[0] = stage.getHeight() - event.getY();
+            } else {
+                resizebottom[0] = false;
+                xOffset[0] = event.getSceneX();
+                yOffset[0] = event.getSceneY();
+            }
+        });
+
+        root.setOnMouseDragged(event -> {
+            if (resizebottom[0] == false) {
+                stage.setX(event.getScreenX() - xOffset[0]);
+                stage.setY(event.getScreenY() - yOffset[0]);
+            } else {
+                stage.setWidth(event.getX() + dx[0]);
+                stage.setHeight(event.getY() + dy[0]);
+            }
+        });
     }
 
 }

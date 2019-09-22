@@ -14,7 +14,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.Controllers.LoginWindowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="809.0" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.Controllers.LoginWindowController">
+
+
    <effect>
       <DropShadow radius="11.4825" width="26.93" />
    </effect>
@@ -24,22 +26,19 @@
             <Image url="@../pics/fusion.png" />
          </image>
       </ImageView>
-      <Pane layoutX="34.0" layoutY="50.0" opacity="0.92" prefHeight="355.0" prefWidth="280.0" style="-fx-background-color: #333333;">
+      <Pane layoutX="34.0" layoutY="50.0" opacity="0.92" prefHeight="355.0" prefWidth="280.0" styleClass="pane">
          <children>
-            <Label layoutX="78.0" layoutY="21.0" prefHeight="52.0" prefWidth="168.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="62.0" layoutY="20.0" prefHeight="52.0" prefWidth="168.0" styleClass="large-Label" text="Sign In">
                <font>
                   <Font name="HP Simplified Bold" size="43.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="password" alignment="CENTER" focusColor="#1a0dc5" layoutX="27.0" layoutY="172.0" prefHeight="25.0" prefWidth="226.0" promptText="password" unFocusColor="WHITE">
+            <JFXPasswordField fx:id="password" focusColor="#663366" layoutX="27.0" layoutY="172.0" prefHeight="25.0" prefWidth="226.0" promptText="password" styleClass="large-text-field" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="22.0" />
                </font>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXPasswordField>
-            <JFXButton fx:id="connectButton" layoutX="27.0" layoutY="253.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#862727" style="-fx-background-color: #ffffff;" text="CONNECT" textAlignment="CENTER" textFill="#222020">
+            <JFXButton fx:id="connectButton" layoutX="27.0" layoutY="253.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#663366" text="CONNECT" textAlignment="CENTER" textFill="#222020">
                <font>
                   <Font name="HP Simplified Bold Italic" size="32.0" />
                </font>
@@ -49,7 +48,7 @@
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#1a0dc5" layoutX="27.0" layoutY="98.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#663366" layoutX="27.0" layoutY="98.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" styleClass="large-text-field" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="22.0" />
                </font>
@@ -59,32 +58,26 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXTextField>
          </children>
       </Pane>
-      <Pane fx:id="info" layoutX="328.0" layoutY="278.0" opacity="0.92" prefHeight="127.0" prefWidth="300.0" style="-fx-background-color: #333333; -fx-background-radius: 1;" visible="false">
+      <Pane fx:id="info" layoutX="328.0" layoutY="278.0" opacity="0.92" prefHeight="127.0" prefWidth="300.0" styleClass="pane" visible="false">
          <children>
-            <JFXTextArea fx:id="infoTextArea" layoutX="10.0" layoutY="10.0" prefHeight="112.0" prefWidth="280.0" unFocusColor="#333333">
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
+            <JFXTextArea fx:id="infoTextArea" layoutX="10.0" layoutY="10.0" prefHeight="112.0" prefWidth="280.0" promptText="some message" unFocusColor="#333333">
                <font>
                   <Font name="HP Simplified" size="20.0" />
                </font>
             </JFXTextArea>
          </children>
       </Pane>
-      <Pane fx:id="setup" layoutX="328.0" layoutY="50.0" opacity="0.92" prefHeight="215.0" prefWidth="300.0" style="-fx-background-color: #333333; -fx-background-radius: 1;" visible="false">
+      <Pane fx:id="setup" layoutX="328.0" layoutY="50.0" opacity="0.92" prefHeight="215.0" prefWidth="300.0" styleClass="pane" visible="false">
          <children>
-            <Label layoutX="100.0" layoutY="30.0" text="VACUUMSERVER" textFill="WHITE">
+            <Label layoutX="83.0" layoutY="14.0" text="VACUUMSERVER" textFill="WHITE">
                <font>
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="vacuumIP" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="49.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" text="localhost" unFocusColor="WHITE">
+            <JFXTextField fx:id="vacuumIP" alignment="CENTER" focusColor="#663366" layoutX="31.0" layoutY="40.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" text="localhost" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -98,7 +91,7 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </JFXTextField>
-            <JFXTextField fx:id="vacuumPort" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="49.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" text="4004" unFocusColor="WHITE">
+            <JFXTextField fx:id="vacuumPort" alignment="CENTER" focusColor="#663366" layoutX="166.0" layoutY="40.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" text="4004" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -112,12 +105,12 @@
                   <ColorAdjust brightness="1.0" />
                </effect>
             </JFXTextField>
-            <Label layoutX="91.0" layoutY="85.0" text="DISCHARGESERVER" textFill="WHITE">
+            <Label layoutX="72.0" layoutY="80.0" text="DISCHARGESERVER" textFill="WHITE">
                <font>
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login12" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="104.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="login12" alignment="CENTER" focusColor="#663366" layoutX="31.0" layoutY="107.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -127,11 +120,8 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXTextField>
-            <JFXTextField fx:id="login111" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="104.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="login111" alignment="CENTER" focusColor="#663366" layoutX="166.0" layoutY="107.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -141,16 +131,13 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXTextField>
-            <Label layoutX="84.0" layoutY="141.0" text="DIAGNOSTICSSERVER" textFill="WHITE">
+            <Label layoutX="63.0" layoutY="147.0" text="DIAGNOSTICSSERVER" textFill="WHITE">
                <font>
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login121" alignment="CENTER" focusColor="#1a0dc5" layoutX="31.0" layoutY="160.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="login121" alignment="CENTER" focusColor="#663366" layoutX="31.0" layoutY="171.0" prefHeight="26.0" prefWidth="120.0" promptText="enter IP adress" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -160,11 +147,8 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXTextField>
-            <JFXTextField fx:id="login1111" alignment="CENTER" focusColor="#1a0dc5" layoutX="166.0" layoutY="160.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" style="-fx-fill: #ffffff;" unFocusColor="WHITE">
+            <JFXTextField fx:id="login1111" alignment="CENTER" focusColor="#663366" layoutX="166.0" layoutY="171.0" prefHeight="26.0" prefWidth="76.0" promptText="enter port" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="14.0" />
                </font>
@@ -174,13 +158,10 @@
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <effect>
-                  <ColorAdjust brightness="1.0" />
-               </effect>
             </JFXTextField>
          </children>
       </Pane>
-      <ImageView  accessibleRole="BUTTON" fitHeight="26.0" fitWidth="27.0" layoutX="766.0" layoutY="14.0" onMouseReleased="#closeLoginWindows" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="27.0" layoutX="766.0" layoutY="14.0" onMouseReleased="#closeLoginWindows" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pics/icons/grayClose.png" />
          </image>

@@ -1,0 +1,69 @@
+
+.root {
+    -fx-background: #333333;
+    -fx-text-background-color: transparent;
+
+    -fx-text-fill: #ffffff;
+    -fx-control-inner-background: transparent;
+
+    -fx-accent: #663366;
+    -fx-focus-color: red;
+
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #333333;
+    -fx-font-style: italic;
+    -fx-font-weight: bolder;
+    -fx-cursor: hand;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-size: 25pt;
+    -fx-alignment: center;
+}
+
+.button:hover {
+    -fx-background-color: #999999;
+}
+
+.text-field,.text-area{
+    -fx-font-size: 12pt;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: #999999;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-weight: normal;
+    -fx-font-style: normal;
+}
+
+.large-text-field{
+    -fx-font-size: 18pt;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: #999999;
+    -fx-font-family: "HP Simplified Bold";
+}
+
+.label {
+    -fx-font-size: 13pt;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 1;
+}
+
+.large-Label{
+    -fx-font-size: 36pt;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-weight: bold;
+    -fx-font-style: normal;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 1;
+}
+
+.pane{
+    -fx-background-color: #333333;
+    -fx-opacity: 0.88;
+}

@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/GraySetup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/WhiteSetup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/grayClose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/grayMenu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/greyFullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteClose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteFullscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/icons/whiteMenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/ChooserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/ChooserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Chooser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Chooser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Console.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Console.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/caspian.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/caspian.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/thyracontGauge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/thyracontGauge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/chart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/client.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/client.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +66,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/HelloJPro-Maven-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
@@ -80,24 +74,24 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-      <recent name="ru.mauveferret.Discharge" />
-      <recent name="ru.mauveferret.Vacuum" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+      <recent name="ru.mauveferret.Discharge" />
+      <recent name="ru.mauveferret.Vacuum" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,6 +234,10 @@
       <workItem from="1568866032821" duration="6703000" />
       <workItem from="1568883938299" duration="431000" />
       <workItem from="1568884638945" duration="1518000" />
+      <workItem from="1569079450569" duration="2831000" />
+      <workItem from="1569125148061" duration="2488000" />
+      <workItem from="1569165463042" duration="2510000" />
+      <workItem from="1569171202056" duration="9397000" />
     </task>
     <task id="LOCAL-00003" summary="help fixed, some problems remained">
       <created>1565800703295</created>
