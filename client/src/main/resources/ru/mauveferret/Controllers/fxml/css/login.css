@@ -38,8 +38,10 @@
 }
 
 .large-text-field{
-    -fx-font-size: 18pt;
+    -fx-font-size: 20pt;
     -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
     -fx-background-color: transparent;
     -fx-prompt-text-fill: #999999;
     -fx-font-family: "HP Simplified Bold";

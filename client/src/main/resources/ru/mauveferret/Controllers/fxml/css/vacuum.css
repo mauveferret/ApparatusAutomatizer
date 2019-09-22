@@ -3,19 +3,19 @@
     /* A light grey that is the base color for objects.  Instead of using
      * -fx-base directly, the sections in this file will typically use -fx-color.
      */
-    -fx-base: #ffffff;
+    -fx-base: black;
     -fx-background: #333333;
     -fx-text-background-color: transparent;
 
     -fx-text-fill: #ffffff;
     -fx-control-inner-background: transparent;
-    -fx-dark-text-color: orangered;
+    -fx-dark-text-color: #993366;
     -fx-mid-text-color: #ffffff;
     -fx-light-text-color: #ffffff;
 
     -fx-accent: #993366;
     -fx-focus-color: #0093ff;
-    -fx-color: #CCCCCC;
+    -fx-color: #666666;
 }
 
 
@@ -26,6 +26,29 @@
     -fx-prompt-text-fill: #999999;
     -fx-font-family: "HP Simplified Bold";
     -fx-font-size: 16pt;
+}
+.large-text-field{
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: #999999;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-size: 45pt;
+    -fx-font-weight: bolder;
+}
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #333333;
+    -fx-font-style: italic;
+    -fx-font-weight: bolder;
+    -fx-cursor: hand;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-size: 25pt;
+    -fx-alignment: center;
+}
+
+.button:hover {
+    -fx-background-color: #999999;
 }
 /*
 label
@@ -115,7 +138,14 @@ LineChart related
 .axis-minor-tick-mark {
     -fx-stroke: #ffffff;
 }
-
+.chart-vertical-zero-line{
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 5px;
+}
+.chart-horizontal-zero-line{
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 5px;
+}
 
 .default-color0.chart-series-line { -fx-stroke: #FF6600; }
 .default-color1.chart-series-line { -fx-stroke: #a9e200; }

@@ -28,17 +28,17 @@
       </ImageView>
       <Pane layoutX="34.0" layoutY="50.0" opacity="0.92" prefHeight="355.0" prefWidth="280.0" styleClass="pane">
          <children>
-            <Label layoutX="62.0" layoutY="20.0" prefHeight="52.0" prefWidth="168.0" styleClass="large-Label" text="Sign In">
+            <Label layoutX="62.0" layoutY="14.0" prefHeight="52.0" prefWidth="168.0" styleClass="large-Label" text="Sign In">
                <font>
                   <Font name="HP Simplified Bold" size="43.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="password" focusColor="#663366" layoutX="27.0" layoutY="172.0" prefHeight="25.0" prefWidth="226.0" promptText="password" styleClass="large-text-field" unFocusColor="WHITE">
+            <JFXPasswordField fx:id="password" focusColor="#663366" layoutX="27.0" layoutY="164.0" prefHeight="25.0" prefWidth="226.0" promptText="password" styleClass="large-text-field" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="22.0" />
                </font>
             </JFXPasswordField>
-            <JFXButton fx:id="connectButton" layoutX="27.0" layoutY="253.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#663366" text="CONNECT" textAlignment="CENTER" textFill="#222020">
+            <JFXButton fx:id="connectButton" layoutX="27.0" layoutY="250.0" onAction="#connectToServer" prefHeight="34.0" prefWidth="226.0" ripplerFill="#663366" text="CONNECT" textAlignment="CENTER" textFill="#222020">
                <font>
                   <Font name="HP Simplified Bold Italic" size="32.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Font name="HP Simplified Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#663366" layoutX="27.0" layoutY="98.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" styleClass="large-text-field" unFocusColor="WHITE">
+            <JFXTextField fx:id="login" alignment="CENTER" focusColor="#663366" layoutX="27.0" layoutY="90.0" prefHeight="25.0" prefWidth="226.0" promptText="username/email" styleClass="large-text-field" unFocusColor="WHITE">
                <font>
                   <Font name="HP Simplified" size="22.0" />
                </font>
