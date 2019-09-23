@@ -6,6 +6,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 import ru.mauveferret.SocketCryptedCommunicator;
@@ -62,7 +63,14 @@ public class VacuumController {
     //used to delete ol data
     final int WINDOW_SIZE = 10;
     private ScheduledExecutorService pressureScheduledExecutorService;
-
+    @FXML
+    private TextField pressure1;
+    @FXML
+    private TextField pressure2;
+    @FXML
+    private TextField pressure3;
+    @FXML
+    private TextField time;
 
 
     private void enableDataUpdating() {
@@ -74,16 +82,19 @@ public class VacuumController {
                 //pumpIndicator.setFill(Paint.valueOf("green"));
                 if (!disableUpdating) {
                     String[] message = communicator.makeRequest("vac nocom", true).split(" ");
-                    long time = Long.parseLong(message[0]);
+                    long ltime = Long.parseLong(message[0]);
                     setIndicatorColor(bypass1, message[1].charAt(0) + "");
                     setIndicatorColor(pump1, message[1].charAt(1) + "");
                     setIndicatorColor(valve1, message[1].charAt(2) + "");
                     setIndicatorColor(gate1, message[1].charAt(3) + "");
                     setIndicatorColor(tmp1, message[1].charAt(4) + "");
-                    double pressure1 = Double.parseDouble(message[2]);
-                    double pressure2 = Double.parseDouble(message[3]);
-                    pressureColumn1Series.getData().add(new XYChart.Data<>(time, pressure1));
-                    pressureColumn2Series.getData().add(new XYChart.Data<>(time, pressure2));
+                    double dpressure1 = Double.parseDouble(message[2]);
+                    double dpressure2 = Double.parseDouble(message[3]);
+                    pressure1.setText(dpressure1+", torr");
+                    pressure2.setText(dpressure2+", torr");
+                    time.setText(".."+message[0].substring(4));
+                    pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
+                    pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
                 /*show only part of the chart (left part is gragually deleting)
                 if (pressureSeries.getData().size() > WINDOW_SIZE)
                     pressureSeries.getData().remove(0);

@@ -17,19 +17,24 @@
             <Image url="@../pics/burn.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="closeButton" fitHeight="25.0" fitWidth="20.0" layoutX="775.0" layoutY="14.0" onMouseReleased="#closeWindow" pickOnBounds="true" preserveRatio="true">
+      <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="27.0" layoutX="766.0" layoutY="14.0" fx:id="closeButton" onMouseReleased="#closeChooserWindow" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../pics/icons/close.png" />
+            <Image url="@../pics/icons/grayClose.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="43.0" fitWidth="33.0" layoutX="725.0" layoutY="11.0" onMouseReleased="#menu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/icons/grayMenu.png" />
          </image>
       </ImageView>
       <Pane layoutX="34.0" layoutY="46.0" opacity="0.8" prefHeight="368.0" prefWidth="280.0" style="-fx-background-color: #333333; -fx-background-radius: 50; -fx-border-radius: 50;">
          <children>
-            <JFXButton fx:id="vacuum" layoutX="13.0" layoutY="23.0" onAction="#openVacuumWindow" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="VACUUM" textAlignment="CENTER">
+            <JFXButton  layoutX="13.0" layoutY="23.0" onAction="#openVacuumWindow" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="VACUUM" textAlignment="CENTER">
                <font>
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="13.0" layoutY="77.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DISCHARGE1" textAlignment="CENTER">
+            <JFXButton layoutX="13.0" layoutY="77.0" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="DISCHARGE" textAlignment="CENTER">
                <font>
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>
@@ -49,7 +54,7 @@
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="console" layoutX="13.0" layoutY="298.0" onAction="#openConsole" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="CONSOLE" textAlignment="CENTER">
+            <JFXButton  layoutX="13.0" layoutY="298.0" onAction="#openConsole" prefHeight="45.0" prefWidth="255.0" style="-fx-background-color: #ffffff; -fx-border-radius: 50; -fx-background-radius: 50;" text="CONSOLE" textAlignment="CENTER">
                <font>
                   <Font name="HP Simplified Bold Italic" size="25.0" />
                </font>

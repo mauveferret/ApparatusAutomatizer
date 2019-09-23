@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SectionsKeeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/ClientConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/LoginWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +62,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/HelloJPro-Maven-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
@@ -71,24 +70,24 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-      <recent name="ru.mauveferret.Discharge" />
-      <recent name="ru.mauveferret.Vacuum" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+      <recent name="ru.mauveferret.Discharge" />
+      <recent name="ru.mauveferret.Vacuum" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,8 +229,11 @@
       <workItem from="1568808385928" duration="13758000" />
       <workItem from="1568866032821" duration="6703000" />
       <workItem from="1568883938299" duration="431000" />
-      <workItem from="1568884638945" duration="4400000" />
-      <workItem from="1568889864139" duration="8077000" />
+      <workItem from="1568884638945" duration="1518000" />
+      <workItem from="1569079450569" duration="2831000" />
+      <workItem from="1569125148061" duration="2488000" />
+      <workItem from="1569165463042" duration="2510000" />
+      <workItem from="1569171202056" duration="14946000" />
     </task>
     <task id="LOCAL-00004" summary="help works">
       <created>1565815368730</created>
@@ -569,12 +571,12 @@
       <option name="project" value="LOCAL" />
       <updated>1568874654711</updated>
     </task>
-    <task id="LOCAL-00052" summary="some GUI elements added">
-      <created>1568886191958</created>
+    <task id="LOCAL-00052" summary="some css added">
+      <created>1569181424547</created>
       <option name="number" value="00052" />
       <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1568886191959</updated>
+      <updated>1569181424548</updated>
     </task>
     <option name="localTasksCounter" value="53" />
     <servers />
@@ -596,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="password manager improved" />
     <MESSAGE value="fates and validation added to passwordmanager, some TODO were made" />
     <MESSAGE value="server made" />
     <MESSAGE value="first encrypted string transfer success!" />
@@ -621,6 +622,7 @@
     <MESSAGE value="packaging in client made, works" />
     <MESSAGE value="some rubbish added" />
     <MESSAGE value="some GUI elements added" />
-    <option name="LAST_COMMIT_MESSAGE" value="some GUI elements added" />
+    <MESSAGE value="some css added" />
+    <option name="LAST_COMMIT_MESSAGE" value="some css added" />
   </component>
 </project>
