@@ -72,6 +72,7 @@ public class VacuumController {
     @FXML
     private TextField time;
 
+    //TODO preferences with choosing units and plot updating regime
 
     private void enableDataUpdating() {
 
