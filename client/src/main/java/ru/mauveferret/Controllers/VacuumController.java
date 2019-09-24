@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.stage.Stage;
+import ru.mauveferret.LogarithmicNumberAxis;
 import ru.mauveferret.SocketCryptedCommunicator;
 
 import java.util.concurrent.Executors;
@@ -25,7 +26,7 @@ public class VacuumController {
         pressureChartXAxis.setForceZeroInRange(false);
         pressureChartYAxis.setLabel("Pressure,torr");
         pressureChartYAxis.setAnimated(true); // axis animations are removed
-        pressureChartYAxis.setForceZeroInRange(false);
+        //pressureChartYAxis.setForceZeroInRange(false);
         pressureColumn1Series = new XYChart.Series();
         pressureColumn1Series.setName("First column pressure, torr");
         pressureColumn2Series = new XYChart.Series();
@@ -51,7 +52,7 @@ public class VacuumController {
     @FXML
     private Button tmp1;
     @FXML
-    private NumberAxis pressureChartYAxis = new NumberAxis();
+    private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis();
     //private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.0000000001, 1000);
     @FXML
     private  NumberAxis pressureChartXAxis = new NumberAxis();
@@ -61,7 +62,7 @@ public class VacuumController {
     private XYChart.Series pressureColumn1Series;
     private XYChart.Series pressureColumn2Series;
     //used to delete ol data
-    final int WINDOW_SIZE = 10;
+    final int WINDOW_SIZE = 100000;
     private ScheduledExecutorService pressureScheduledExecutorService;
     @FXML
     private TextField pressure1;
@@ -95,14 +96,17 @@ public class VacuumController {
                     time.setText(".."+message[0].substring(4));
                     pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
-                /*show only part of the chart (left part is gragually deleting)
-                if (pressureSeries.getData().size() > WINDOW_SIZE)
-                    pressureSeries.getData().remove(0);
+                //show only part of the chart (left part is gragually deleting)
+                /*if ( pressureColumn1Series.getData().size() > WINDOW_SIZE)
+                    pressureColumn1Series.getData().remove(0);
+                    if ( pressureColumn2Series.getData().size() > WINDOW_SIZE)
+                        pressureColumn2Series.getData().remove(0);
 
                  */
+
                 }
             });
-        }, 0, 1, TimeUnit.SECONDS);
+        }, 0, 1000, TimeUnit.MILLISECONDS);
     }
 
 

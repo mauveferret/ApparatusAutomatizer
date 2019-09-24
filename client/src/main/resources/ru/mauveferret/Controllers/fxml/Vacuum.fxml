@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<?import ru.mauveferret.LogarithmicNumberAxis?>
 <AnchorPane prefHeight="800.0" prefWidth="1153.0" style="-fx-background-color: #333333;" stylesheets="@css/vacuum.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.Controllers.VacuumController">
    <children>
       <AnchorPane layoutY="244.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="244.0">
@@ -30,7 +31,7 @@
                             <NumberAxis fx:id="pressureChartXAxis" side="BOTTOM" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis fx:id="pressureChartYAxis" prefHeight="456.0" prefWidth="36.0" side="LEFT" />
+                            <LogarithmicNumberAxis fx:id="pressureChartYAxis" prefHeight="456.0" prefWidth="36.0" side="LEFT" />
                           </yAxis>
                         </LineChart>
                            <GridPane layoutX="857.0" layoutY="27.0" prefHeight="466.0" prefWidth="433.0" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="27.0">

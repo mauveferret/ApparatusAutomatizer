@@ -23,7 +23,7 @@ public class Main {
         Terminal terminal = new Terminal("terminal");
         terminal.addDevice(serialConsole);
         terminal.addDevice(terminal);
-        
+
         new Vacuum(terminal);
 
         try {
