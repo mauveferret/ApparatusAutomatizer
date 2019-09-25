@@ -56,6 +56,7 @@ public abstract class Gauge extends SerialDevice {
                             logPressures+=pr+" ";
                         }
                         dataLog.write(logPressures);
+
                         stop = Thread.currentThread().isInterrupted();
                     }
                     catch (NullPointerException  e)

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/analyzer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ProgramAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,7 @@
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.34988454" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -99,7 +103,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -231,14 +235,8 @@
       <workItem from="1569125148061" duration="2488000" />
       <workItem from="1569165463042" duration="2510000" />
       <workItem from="1569171202056" duration="14946000" />
-      <workItem from="1569331799674" duration="3849000" />
-    </task>
-    <task id="LOCAL-00004" summary="help works">
-      <created>1565815368730</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1565815368730</updated>
+      <workItem from="1569331799674" duration="3893000" />
+      <workItem from="1569400075423" duration="5860000" />
     </task>
     <task id="LOCAL-00005" summary="devices run commands in separate thread, guard added">
       <created>1566135907740</created>
@@ -576,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569181424548</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="plot improved">
+      <created>1569344827550</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1569344827550</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fates and validation added to passwordmanager, some TODO were made" />
     <MESSAGE value="server made" />
     <MESSAGE value="first encrypted string transfer success!" />
     <MESSAGE value="starting separation" />
@@ -621,6 +625,7 @@
     <MESSAGE value="some rubbish added" />
     <MESSAGE value="some GUI elements added" />
     <MESSAGE value="some css added" />
-    <option name="LAST_COMMIT_MESSAGE" value="some css added" />
+    <MESSAGE value="plot improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="plot improved" />
   </component>
 </project>

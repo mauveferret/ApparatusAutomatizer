@@ -153,6 +153,7 @@ public class Terminal extends Device {
                     while (!command.equals("exit")) {
                         launchCommand(command, false,passwords.getAccessLevel(login));
                         command = scanner.nextLine();
+
                     }
                     sendMessage("Goodbye, "+login);
                 } else

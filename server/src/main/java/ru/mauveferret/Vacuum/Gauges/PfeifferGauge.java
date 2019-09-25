@@ -28,6 +28,7 @@ public class PfeifferGauge extends Gauge {
         writeMessage(""+'\5');
         String message = readMessage("\r\n");
         try {
+
             int somestatus = Integer.parseInt(message.charAt(0)+"");
             if (somestatus!=status[gauge])
             {

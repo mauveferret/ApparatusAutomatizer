@@ -20,9 +20,11 @@ public class Main {
         //TODO  configPath should bi in directories  vacuum, discharge etc.
 
         SerialConsole serialConsole = new SerialConsole("console");
+        ProgramAnalyzer analyzer = new ProgramAnalyzer("analyzer");
         Terminal terminal = new Terminal("terminal");
         terminal.addDevice(serialConsole);
         terminal.addDevice(terminal);
+        terminal.addDevice(analyzer);
 
         new Vacuum(terminal);
 

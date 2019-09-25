@@ -198,8 +198,11 @@ public class Arduino extends SerialDevice {
                     for (double d: analogPinsRead) dataToLog+=d+" ";
                     dataLog.write(dataToLog);
                     stop = Thread.currentThread().isInterrupted();
-                    //FIXME sleep is very bad decision!
-                    //Thread.sleep(100);
+                    //TODO very bad
+                    try {
+                        Thread.sleep(1000);
+                    }
+                    catch (Exception ignored){}
                 }
                 catch (Exception  e)
                 {
