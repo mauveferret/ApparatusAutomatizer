@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/analyzer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/ProgramAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.server">
+  <component name="RunManager" selected="Application.client">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -236,14 +231,7 @@
       <workItem from="1569165463042" duration="2510000" />
       <workItem from="1569171202056" duration="14946000" />
       <workItem from="1569331799674" duration="3893000" />
-      <workItem from="1569400075423" duration="5860000" />
-    </task>
-    <task id="LOCAL-00005" summary="devices run commands in separate thread, guard added">
-      <created>1566135907740</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1566135907740</updated>
+      <workItem from="1569400075423" duration="9769000" />
     </task>
     <task id="LOCAL-00006" summary="some bags fixed, reconnection added, angel is the device now">
       <created>1566241152598</created>
@@ -581,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569344827550</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="ROM and CPU consume reduced">
+      <created>1569414770724</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1569414770724</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="server made" />
     <MESSAGE value="first encrypted string transfer success!" />
     <MESSAGE value="starting separation" />
     <MESSAGE value="separation made (gitignore changed very much)" />
@@ -626,6 +620,7 @@
     <MESSAGE value="some GUI elements added" />
     <MESSAGE value="some css added" />
     <MESSAGE value="plot improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="plot improved" />
+    <MESSAGE value="ROM and CPU consume reduced" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROM and CPU consume reduced" />
   </component>
 </project>
