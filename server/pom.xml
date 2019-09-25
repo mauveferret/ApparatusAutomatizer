@@ -7,7 +7,7 @@
   <artifactId>server</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>client</name>
+  <name>server</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -18,12 +18,6 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <maven.compiler.release>11</maven.compiler.release>
-  </properties>
 
   <dependencies>
     <dependency>
@@ -55,20 +49,18 @@
             <phase>package</phase>
             <goals><goal>launch4j</goal></goals>
             <configuration>
-              <headerType>gui</headerType>
-              <jar>${project.build.directory}/${project.artifactId}-${project.version}.jar</jar>
+              <headerType>console</headerType>
+              <jar>${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.jar</jar>
               <outfile>${project.build.directory}/${project.artifactId}.exe</outfile>
               <errTitle>some went wrong</errTitle>
               <classPath>
                 <mainClass>ru.mauveferret.Main</mainClass>
-                <addDependencies>true</addDependencies>
+                <addDependencies>false</addDependencies>
                 <preCp>anything</preCp>
               </classPath>
               <jre>
-                <minVersion>1.5.0</minVersion>
-                <opts>
-                  <opt>-Djava.endorsed.dirs=./endorsed</opt>
-                </opts>
+                <minVersion>11</minVersion>
+                <jdkPreference>jdkOnly</jdkPreference>
               </jre>
               <versionInfo>
                 <fileVersion>1.0.0.0</fileVersion>
@@ -85,8 +77,6 @@
           </execution>
         </executions>
       </plugin>
-
-
     </plugins>
   </build>
 </project>

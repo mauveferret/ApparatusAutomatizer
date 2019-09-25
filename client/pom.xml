@@ -19,8 +19,6 @@
   </parent>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>11</maven.compiler.release>
     <javafx.version>13</javafx.version>
   </properties>
 
@@ -75,7 +73,7 @@
             <goals><goal>launch4j</goal></goals>
             <configuration>
               <headerType>gui</headerType>
-              <jar>${project.build.directory}/${project.artifactId}-${project.version}.jar</jar>
+              <jar>${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.jar</jar>
               <outfile>${project.build.directory}/${project.artifactId}.exe</outfile>
               <errTitle>some went wrong</errTitle>
               <classPath>
@@ -84,10 +82,8 @@
                 <preCp>anything</preCp>
               </classPath>
               <jre>
-                <minVersion>1.5.0</minVersion>
-                <opts>
-                  <opt>-Djava.endorsed.dirs=./endorsed</opt>
-                </opts>
+                <minVersion>11</minVersion>
+                <jdkPreference>jdkOnly</jdkPreference>
               </jre>
               <versionInfo>
                 <fileVersion>1.0.0.0</fileVersion>
