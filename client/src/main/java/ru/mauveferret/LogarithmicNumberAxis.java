@@ -33,7 +33,7 @@ public class LogarithmicNumberAxis extends ValueAxis<Number> {
     private final DoubleProperty logLowerBound = new SimpleDoubleProperty();
 
     public LogarithmicNumberAxis() {
-        super(0.000000001, 1000);
+        super(0.000000001,1000);
         bindLogBoundsToDefaultBounds();
     }
 
@@ -98,14 +98,17 @@ public class LogarithmicNumberAxis extends ValueAxis<Number> {
         Number[] range = getRange();
         List<Number> minorTickMarksPositions = new ArrayList<Number>();
         if (range != null) {
-
+            Number lowerBound = range[0];
             Number upperBound = range[1];
+            //fix by mauveferret: i=0 -> i=logLowerBound for small values lower than 1 (like 0.001)
+            double logLowerBound = Math.log10(lowerBound.doubleValue());
             double logUpperBound = Math.log10(upperBound.doubleValue());
             int minorTickMarkCount = getMinorTickCount();
 
-            for (double i = 0; i <= logUpperBound; i += 1) {
-                for (double j = 0; j <= 9; j += (1. / minorTickMarkCount)) {
-                    double value = j * Math.pow(10, i);
+            for (double i = logLowerBound; i <= logUpperBound; i += 1) {
+                //for (double j = 0; j <= 9; j += (1. / minorTickMarkCount)) {
+                for (double j = 0; j <= 9; j +=1) {
+                double value = j * Math.pow(10, i);
                     minorTickMarksPositions.add(value);
                 }
             }
@@ -124,10 +127,14 @@ public class LogarithmicNumberAxis extends ValueAxis<Number> {
             Number upperBound = ((Number[]) range)[1];
             double logLowerBound = Math.log10(lowerBound.doubleValue());
             double logUpperBound = Math.log10(upperBound.doubleValue());
-
-            for (double i = 0; i <= logUpperBound; i += 1) {
-                for (double j = 1; j <= 9; j++) {
+            //fix by mauveferret: i=0 -> i=logLowerBound for small values lower than 1 (like 0.001)
+            for (double i = logLowerBound; i <= logUpperBound; i += 1) {
+               /* for (double j = 1; j <= 9; j++) {
                     double value = j * Math.pow(10, i);
+
+                */
+                {
+                    double value =  Math.pow(10, i);
                     tickPositions.add(value);
                 }
             }
@@ -142,10 +149,12 @@ public class LogarithmicNumberAxis extends ValueAxis<Number> {
 
     @Override
     protected String getTickMarkLabel(Number value) {
-        NumberFormat formatter = NumberFormat.getInstance();
+       /* NumberFormat formatter = NumberFormat.getInstance();
         formatter.setMaximumIntegerDigits(6);
         formatter.setMinimumIntegerDigits(1);
         return formatter.format(value);
+        */
+        return String.format("%6.0e",(double) value);
     }
 
     /**

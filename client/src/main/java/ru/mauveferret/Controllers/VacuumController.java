@@ -7,11 +7,9 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 import ru.mauveferret.LogarithmicNumberAxis;
 import ru.mauveferret.SocketCryptedCommunicator;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -52,7 +50,7 @@ public class VacuumController {
     @FXML
     private Button tmp1;
     @FXML
-    private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis();
+    private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.000000001,1000);
     //private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.0000000001, 1000);
     @FXML
     private  NumberAxis pressureChartXAxis = new NumberAxis();
