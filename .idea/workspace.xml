@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Login.java" afterDir="false" />
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="correct jar files can be now created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -231,14 +232,8 @@
       <workItem from="1569165463042" duration="2510000" />
       <workItem from="1569171202056" duration="14946000" />
       <workItem from="1569331799674" duration="3893000" />
-      <workItem from="1569400075423" duration="9769000" />
-    </task>
-    <task id="LOCAL-00006" summary="some bags fixed, reconnection added, angel is the device now">
-      <created>1566241152598</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1566241152598</updated>
+      <workItem from="1569400075423" duration="9804000" />
+      <workItem from="1569432286797" duration="1493000" />
     </task>
     <task id="LOCAL-00007" summary="some bags fixed, angel get some functions">
       <created>1566244753902</created>
@@ -576,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569414770724</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="correct jar files can be now created">
+      <created>1569425008729</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1569425008729</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first encrypted string transfer success!" />
     <MESSAGE value="starting separation" />
     <MESSAGE value="separation made (gitignore changed very much)" />
     <MESSAGE value="client/server conection works good, encryption made" />
@@ -621,6 +622,7 @@
     <MESSAGE value="some css added" />
     <MESSAGE value="plot improved" />
     <MESSAGE value="ROM and CPU consume reduced" />
-    <option name="LAST_COMMIT_MESSAGE" value="ROM and CPU consume reduced" />
+    <MESSAGE value="correct jar files can be now created" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct jar files can be now created" />
   </component>
 </project>
