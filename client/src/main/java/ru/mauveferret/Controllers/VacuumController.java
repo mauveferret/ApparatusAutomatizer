@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.ValueAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -82,16 +83,16 @@ public class VacuumController {
                 if (!disableUpdating) {
                     String[] message = communicator.makeRequest("vac nocom", true).split(" ");
                     long ltime = Long.parseLong(message[0]);
-                    setIndicatorColor(bypass1, message[1].charAt(0) + "");
-                    setIndicatorColor(pump1, message[1].charAt(1) + "");
-                    setIndicatorColor(valve1, message[1].charAt(2) + "");
-                    setIndicatorColor(gate1, message[1].charAt(3) + "");
-                    setIndicatorColor(tmp1, message[1].charAt(4) + "");
+                    //setIndicatorColor(bypass1, message[1].charAt(0) + "");
+                   // setIndicatorColor(pump1, message[1].charAt(1) + "");
+                   // setIndicatorColor(valve1, message[1].charAt(2) + "");
+                   // setIndicatorColor(gate1, message[1].charAt(3) + "");
+                   // setIndicatorColor(tmp1, message[1].charAt(4) + "");
                     double dpressure1 = Double.parseDouble(message[2]);
                     double dpressure2 = Double.parseDouble(message[3]);
-                    pressure1.setText(dpressure1+", torr");
-                    pressure2.setText(dpressure2+", torr");
-                    time.setText(".."+message[0].substring(4));
+                   // pressure1.setText(dpressure1+", torr");
+                    //pressure2.setText(dpressure2+", torr");
+                   // time.setText(".."+message[0].substring(4));
                     pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
                 //show only part of the chart (left part is gragually deleting)

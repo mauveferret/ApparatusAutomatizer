@@ -31,34 +31,79 @@
     -fx-alignment: center;
     -fx-background-color: transparent;
     -fx-prompt-text-fill: #999999;
+    -fx-text-fill: #FFFFFF;
     -fx-font-family: "HP Simplified Bold";
-    -fx-font-size: 45pt;
+    -fx-font-size: 60pt;
     -fx-font-weight: bolder;
 }
 .button {
     -fx-background-color: #ffffff;
+    -fx-background-radius: 4px;
     -fx-border-radius: 4px;
     -fx-text-fill: #333333;
     -fx-font-style: italic;
     -fx-font-weight: bolder;
     -fx-cursor: hand;
     -fx-font-family: "HP Simplified Bold";
-    -fx-font-size: 25pt;
+    -fx-font-size: 20pt;
     -fx-alignment: center;
 }
+.menuButton{
+    -fx-background-color: transparent;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 10pt;
+    -fx-alignment: center;
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-border-width: 0;
+    -fx-cell-size: 1;
+}
 
-.button:hover {
-    -fx-background-color: #999999;
+.topBar{
+    -fx-background-color:  #424242;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+.topBarButton{
+    -fx-font-size: 12pt;
+    -fx-font-family: "HP Simplified Bold";
+    -fx-font-weight: bold;
+    -fx-font-style: normal;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 1;
+}
+
+.vacuumSpecialIndicator{
+    -fx-background-color: #000000;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-animated: true;
+    -fx-alignment: center;
+    -fx-min-width: 96;
+    -fx-min-height: 72;
+}
+.vacuumSpecialIndicator:pressed, .button:pressed{
+    -fx-background-color: #993399;
+}
+
+.vacuumSpecialIndicator:hover, .button:hover {
+    -fx-background-color: #666666;
 }
 /*
 label
  */
 .label {
-    -fx-font-size: 10pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "HP Simplified Bold";
     -fx-font-weight: bold;
-    -fx-font-style: italic;
-    -fx-text-fill: #ffffff;
+    -fx-font-style: normal;
+    -fx-text-fill: #666666;
     -fx-opacity: 1;
 }
 .large-Label{
@@ -93,10 +138,11 @@ LineChart related
 }
 .axis
 {
-    -fx-tick-label-fill: #ffffff;
+    -fx-tick-label-fill: #999999;
     -fx-stroke: transparent;
     -fx-font-family: "HP Simplified Bold";
-    -fx-font-size: 13pt;
+    -fx-font-size: 25pt;
+    -fx-font-weight: bolder;
 
 }
 
@@ -147,11 +193,11 @@ LineChart related
     -fx-stroke-width: 5px;
 }
 
-.default-color0.chart-series-line { -fx-stroke: #FF6600; }
-.default-color1.chart-series-line { -fx-stroke: #a9e200; }
+.default-color0.chart-series-line { -fx-stroke: #ffffff; }
+.default-color1.chart-series-line { -fx-stroke: #FF6600; }
 .default-color2.chart-series-line { -fx-stroke: #0000FF; }
-.default-color3.chart-series-line { -fx-stroke: #FFFFFF; }
-.default-color0.chart-line-symbol { -fx-background-color: #FF6600, #333333; }
-.default-color1.chart-line-symbol { -fx-background-color: #a9e200, #333333; }
+.default-color3.chart-series-line { -fx-stroke: #00FF00; }
+.default-color0.chart-line-symbol { -fx-background-color: #ffffff, #333333; }
+.default-color1.chart-line-symbol { -fx-background-color: #FF6600, #333333; }
 .default-color2.chart-line-symbol { -fx-background-color: #0000FF, #333333; }
-.default-color2.chart-line-symbol { -fx-background-color: #FFFFFF, #333333; }
+.default-color2.chart-line-symbol { -fx-background-color: #00FF00, #333333; }
