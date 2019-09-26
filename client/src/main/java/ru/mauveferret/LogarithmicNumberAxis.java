@@ -11,7 +11,11 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.chart.ValueAxis;
 import javafx.util.Duration;
-
+/* comment by mauveferret:
+in order to edit *.fxml data with log plots you should firstly
+import this class in Scene Builder.
+You can do it by importing random *.jar, which contain this class
+ */
 /**
  * A logarithmic axis implementation for JavaFX 2 charts<br>
  * <br>
