@@ -51,7 +51,6 @@ public class VacuumController {
     private Button tmp1;
     @FXML
     private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.000000001,1000);
-    //private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.0000000001, 1000);
     @FXML
     private  NumberAxis pressureChartXAxis = new NumberAxis();
     @FXML

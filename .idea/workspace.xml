@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LogarithmicNumberAxis.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/LogarithmicNumberAxis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,17 +67,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-      <recent name="ru.mauveferret.Discharge" />
-      <recent name="ru.mauveferret.Vacuum" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret.Controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
@@ -84,6 +76,18 @@
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+      <recent name="ru.mauveferret.Discharge" />
+      <recent name="ru.mauveferret.Vacuum" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -233,13 +237,7 @@
       <workItem from="1569331799674" duration="3893000" />
       <workItem from="1569400075423" duration="9804000" />
       <workItem from="1569432286797" duration="1493000" />
-    </task>
-    <task id="LOCAL-00008" summary="abstract methods removed, some became private, config import added, hardware wasnt checked, gitignore added">
-      <created>1566426381006</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1566426381006</updated>
+      <workItem from="1569476441998" duration="1759000" />
     </task>
     <task id="LOCAL-00009" summary="alias added, some optimization made">
       <created>1566428940546</created>
@@ -577,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569444945680</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="log scale fixed">
+      <created>1569447037892</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1569447037892</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="separation made (gitignore changed very much)" />
     <MESSAGE value="client/server conection works good, encryption made" />
     <MESSAGE value="everything works, checked" />
     <MESSAGE value="some errors removed, some graphics added to client" />
@@ -622,6 +626,7 @@
     <MESSAGE value="ROM and CPU consume reduced" />
     <MESSAGE value="correct jar files can be now created" />
     <MESSAGE value="Launch4J maven plugin works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Launch4J maven plugin works" />
+    <MESSAGE value="log scale fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="log scale fixed" />
   </component>
 </project>

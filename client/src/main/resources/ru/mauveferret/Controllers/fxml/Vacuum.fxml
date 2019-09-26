@@ -15,8 +15,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-
 <?import ru.mauveferret.LogarithmicNumberAxis?>
+
 <AnchorPane prefHeight="800.0" prefWidth="1153.0" style="-fx-background-color: #333333;" stylesheets="@css/vacuum.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.mauveferret.Controllers.VacuumController">
    <children>
       <AnchorPane layoutY="244.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="244.0">
