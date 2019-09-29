@@ -24,6 +24,19 @@
          <children>
             <TabPane layoutY="18.0" prefHeight="631.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
               <tabs>
+                  <Tab text="Manual">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fitHeight="580.0" fitWidth="1155.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                                 <image>
+                                    <Image url="@../pics/scheme.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
                 <Tab text="Gauges">
                   <content>
                      <AnchorPane>
@@ -123,22 +136,6 @@
                   </content>
                 </Tab>
                   <Tab text="TMP" />
-                  <Tab text="Gauges">
-                     <content>
-                        <AnchorPane>
-                           <children>
-                              <LineChart fx:id="pressureChart1" prefHeight="520.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="0.0">
-                                 <xAxis>
-                                    <NumberAxis fx:id="pressureChartXAxis1" side="BOTTOM" />
-                                 </xAxis>
-                                 <yAxis>
-                                    <LogarithmicNumberAxis fx:id="pressureChartYAxis1" prefHeight="456.0" prefWidth="36.0" side="LEFT" />
-                                 </yAxis>
-                              </LineChart>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </Tab>
               </tabs>
             </TabPane>
          </children>

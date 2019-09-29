@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="" />
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/pics/scheme.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -234,6 +239,8 @@
       <workItem from="1569432286797" duration="1493000" />
       <workItem from="1569476441998" duration="1759000" />
       <workItem from="1569501040137" duration="12683000" />
+      <workItem from="1569716245788" duration="321000" />
+      <workItem from="1569770921217" duration="2786000" />
     </task>
     <task id="LOCAL-00009" summary="alias added, some optimization made">
       <created>1566428940546</created>
@@ -598,6 +605,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="client/server conection works good, encryption made" />
     <MESSAGE value="everything works, checked" />
     <MESSAGE value="some errors removed, some graphics added to client" />
