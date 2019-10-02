@@ -51,6 +51,8 @@ public class VacuumController {
     @FXML
     private Button tmp1;
     @FXML
+    private Button auto2;
+    @FXML
     private LogarithmicNumberAxis pressureChartYAxis = new LogarithmicNumberAxis(0.000000001,1000);
     @FXML
     private  NumberAxis pressureChartXAxis = new NumberAxis();
@@ -83,16 +85,16 @@ public class VacuumController {
                 if (!disableUpdating) {
                     String[] message = communicator.makeRequest("vac nocom", true).split(" ");
                     long ltime = Long.parseLong(message[0]);
-                    //setIndicatorColor(bypass1, message[1].charAt(0) + "");
-                   // setIndicatorColor(pump1, message[1].charAt(1) + "");
-                   // setIndicatorColor(valve1, message[1].charAt(2) + "");
-                   // setIndicatorColor(gate1, message[1].charAt(3) + "");
-                   // setIndicatorColor(tmp1, message[1].charAt(4) + "");
+                    setIndicatorColor(bypass1, message[1].charAt(0) + "");
+                    setIndicatorColor(pump1, message[1].charAt(1) + "");
+                    setIndicatorColor(auto2, message[1].charAt(2) + "");
+                    setIndicatorColor(gate1, message[1].charAt(3) + "");
+                    setIndicatorColor(tmp1, message[1].charAt(4) + "");
                     double dpressure1 = Double.parseDouble(message[2]);
                     double dpressure2 = Double.parseDouble(message[3]);
-                   // pressure1.setText(dpressure1+", torr");
-                    //pressure2.setText(dpressure2+", torr");
-                   // time.setText(".."+message[0].substring(4));
+                    pressure1.setText(String.format("%6.2E", dpressure1));
+                    pressure2.setText(String.format("%6.2E", dpressure2));
+                    time.setText(""+message[0].substring(6));
                     pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
                 //show only part of the chart (left part is gragually deleting)
@@ -105,23 +107,32 @@ public class VacuumController {
 
                 }
             });
-        }, 0, 1000, TimeUnit.MILLISECONDS);
+        }, 0, 300, TimeUnit.MILLISECONDS);
     }
 
 
     private void setIndicatorColor(Button button, String flag)
     {
-
-        switch (Integer.parseInt(flag))
-        {
-
-            case 0: button.setStyle("-fx-background-color: #0000FF; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;");
-            break;
-            case 1: button.setStyle("-fx-background-color: #66CC33; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;");
-            break;
-            case 2: button.setStyle("-fx-background-color: #990000; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 1;");
-            break;
-        }
+            switch (Integer.parseInt(flag)) {
+                case 0:
+                    button.setStyle(".IndicatorDeviceIsOff");
+                    break;
+                case 1:
+                {
+                    System.out.println(button.getStyle());
+                    button.setStyle(".IndicatorDeviceIsOn");
+                }
+                    break;
+                case 2:
+                case 3:
+                case 4: {
+                    button.setStyle(".IndicatorDeviceError");
+                }
+                break;
+                case 5:
+                    button.setStyle(".IndicatorDeviceIsDisconnected");
+                    break;
+            }
     }
 
     @FXML

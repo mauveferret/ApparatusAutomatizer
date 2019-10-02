@@ -77,7 +77,7 @@
     -fx-opacity: 1;
 }
 
-.vacuumSpecialIndicator{
+.IndicatorDeviceIsDisconnected{
     -fx-background-color: #000000;
     -fx-border-radius: 13px;
     -fx-background-radius: 13px;
@@ -88,11 +88,48 @@
     -fx-min-width: 96;
     -fx-min-height: 72;
 }
-.vacuumSpecialIndicator:pressed, .button:pressed{
+
+.IndicatorDeviceIsOff{
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-animated: true;
+    -fx-alignment: center;
+    -fx-min-width: 96;
+    -fx-min-height: 72;
+}
+
+.IndicatorDeviceIsOn{
+    -fx-background-color: #99FF33;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-animated: true;
+    -fx-alignment: center;
+    -fx-min-width: 96;
+    -fx-min-height: 72;
+}
+
+.IndicatorDeviceError{
+    -fx-background-color: #FF0000;
+    -fx-border-radius: 13px;
+    -fx-background-radius: 13px;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-animated: true;
+    -fx-alignment: center;
+    -fx-min-width: 96;
+    -fx-min-height: 72;
+}
+
+.IndicatorDeviceIsDisconnected:pressed, .button:pressed, .IndicatorDeviceIsOff:pressed, .IndicatorDeviceIsOn:pressed{
     -fx-background-color: #993399;
 }
 
-.vacuumSpecialIndicator:hover, .button:hover {
+.IndicatorDeviceError:hover, .button:hover {
     -fx-background-color: #666666;
 }
 /*

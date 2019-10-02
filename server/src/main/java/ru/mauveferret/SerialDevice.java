@@ -193,6 +193,16 @@ public abstract class SerialDevice extends Device {
         }
     }
 
+    protected synchronized String sendCommandToDevice(String command, int delay, String endOfLine)
+    {
+        writeMessage(command);
+        try {
+            Thread.sleep(delay);
+        }
+        catch (Exception ignored){}
+        return readMessage(endOfLine);
+    }
+
     protected synchronized String readMessage(String endOfLine) {
         try {
             String answer = "";

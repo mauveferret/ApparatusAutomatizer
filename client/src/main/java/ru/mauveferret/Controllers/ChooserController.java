@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import ru.mauveferret.SocketCryptedCommunicator;
 
+import java.net.URL;
+
 public class ChooserController {
 
     private SocketCryptedCommunicator communicator;
@@ -43,7 +45,15 @@ public class ChooserController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Vacuum.fxml"));
                 Parent root = loader.load();
                 setMovable(root,windowsChooser);
-                windowsChooser.setScene(new Scene(root));
+                Scene scene  = new Scene(root);
+                windowsChooser.setScene(scene);
+                //FIXME
+                URL url = this.getClass().getResource("fxml/css/vacuum.css");
+                if (url == null) {
+                    System.out.println("Resource not found. Aborting.");
+                }
+                String css = url.toExternalForm();
+                scene.getStylesheets().add(css);
                 windowsChooser.show();
                 ((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {

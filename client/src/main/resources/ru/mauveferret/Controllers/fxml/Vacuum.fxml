@@ -24,19 +24,6 @@
          <children>
             <TabPane layoutY="18.0" prefHeight="631.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
               <tabs>
-                  <Tab text="Manual">
-                     <content>
-                        <AnchorPane>
-                           <children>
-                              <ImageView fitHeight="580.0" fitWidth="1155.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
-                                 <image>
-                                    <Image url="@../pics/scheme.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </Tab>
                 <Tab text="Gauges">
                   <content>
                      <AnchorPane>
@@ -116,7 +103,7 @@
                                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="CLEAN PLOT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
                                  </GridPane>
-                                 <TextField fx:id="pressure11" prefHeight="93.0" prefWidth="381.0" promptText="no data" styleClass="large-text-field" text="1234567" GridPane.rowIndex="8">
+                                 <TextField fx:id="time" prefHeight="93.0" prefWidth="381.0" promptText="no data" styleClass="large-text-field" text="1234567" GridPane.rowIndex="8">
                                     <font>
                                        <Font size="29.0" />
                                     </font>
@@ -136,6 +123,19 @@
                   </content>
                 </Tab>
                   <Tab text="TMP" />
+                  <Tab text="Manual">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fitHeight="580.0" fitWidth="1155.0" layoutX="15.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+                                 <image>
+                                    <Image url="@../pics/scheme.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
               </tabs>
             </TabPane>
          </children>
@@ -190,7 +190,7 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="auto2" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0"  text=" " textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label text="auto2" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Times New Roman" size="12.0" />
@@ -206,15 +206,15 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="valve2" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="valve2" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text=" " textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label text="emergency" GridPane.columnIndex="9" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Times New Roman" size="12.0" />
@@ -291,11 +291,11 @@
                      </font>
                   </Label>
                   <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="pump1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="bypass1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button fx:id="valve1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="gate1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="tmp1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" />

@@ -37,9 +37,9 @@ class GateControl extends ControlDevice {
     private boolean valveOpened;
     private boolean gateOpened;
 
-    private int pumpStatus = 5;
-    private int valveStatus = 5;
-    private int gateStatus = 5;
+    private int pumpStatus = 0;
+    private int valveStatus = 1;
+    private int gateStatus = 2;
 
     public int getPumpStatus() {
         return pumpStatus;

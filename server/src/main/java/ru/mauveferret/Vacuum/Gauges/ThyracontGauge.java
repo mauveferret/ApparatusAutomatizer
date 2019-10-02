@@ -21,9 +21,7 @@ public class ThyracontGauge extends Gauge {
         }
         catch (Exception ignored){}
         String message = "00"+gaugeNumber+"M";
-        writeMessage(message+checkSum(message)+"\r");
-
-        message = readMessage("\r");
+        message = sendCommandToDevice(message+checkSum(message)+"\r",1,"\r");
 
         if (message.length()>10) {
             if ((message.charAt(10) + "").equals(checkSum(message.substring(0, 10))))
