@@ -7,11 +7,18 @@ import java.util.TreeMap;
 
 public class LeyboldTMP extends TMP {
 
+
+
+    private byte[] request = new byte[]{0x02,0x16,0x00,0x00, 0x00,0x00,0x00, 0x00,0x00,0x00, 0x00,0x04, 0x01,0x00,
+            0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x12};
+    private byte[] answer = new byte[24];
+
     private int  temperature = 0;
     private int frequency = 0;
     private double voltage = 0;
     private double current = 0;
     private boolean enabled = false;
+
 
     public LeyboldTMP(String fileName) {
         super(fileName);
@@ -76,6 +83,7 @@ public class LeyboldTMP extends TMP {
 
     private void measure()
     {
+
 
         System.out.println(readMessage("\n"));
     }
