@@ -68,7 +68,7 @@ public abstract class SerialDevice extends Device {
                 writeMessage(command[2]);
                 break;
             case "read":
-                sendMessage(readMessage(command[2]));
+                sendMessage(readString(command[2]));
                 break;
             case  "enablelog" :  measureAndLog();
             break;
@@ -200,10 +200,10 @@ public abstract class SerialDevice extends Device {
             Thread.sleep(delay);
         }
         catch (Exception ignored){}
-        return readMessage(endOfLine);
+        return readString(endOfLine);
     }
 
-    protected synchronized String readMessage(String endOfLine) {
+    protected synchronized String readString(String endOfLine) {
         try {
             String answer = "";
             long startTime = System.currentTimeMillis();
@@ -228,6 +228,26 @@ public abstract class SerialDevice extends Device {
             reconnect();
             return "error";
         }
+    }
+
+    protected synchronized byte[] readBytes(int bytesCount)
+    {
+       try {
+          if (serialPort.getInputBufferBytesCount() < bytesCount)
+           {
+               return serialPort.readBytes(bytesCount);
+           }
+           else
+          {
+              sendMessage("NO response found");
+              return null;
+          }
+       }
+       catch (SerialPortException e)
+       {
+           sendMessage(e.getMessage());
+           return  null;
+       }
     }
 
     protected synchronized boolean writeMessage(String message) {

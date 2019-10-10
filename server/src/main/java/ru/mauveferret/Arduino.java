@@ -1,6 +1,5 @@
 package ru.mauveferret;
 
-import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -46,7 +45,7 @@ public class Arduino extends SerialDevice {
            String message=fillStringByZeros(config.deviceID,3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");
-           String answer = readMessage("\n");
+           String answer = readString("\n");
            if (answer.contains("SETTED"))
            {
                sendMessage(((value) ? "HIGH" : "LOW")+" on pin "+pin+" is set");
@@ -65,7 +64,7 @@ public class Arduino extends SerialDevice {
             String message = fillStringByZeros(config.deviceID,3);
             message +="DI" + fillStringByZeros(pin, 2);
             writeMessage(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
-            String answer = readMessage("\n");
+            String answer = readString("\n");
             int signal = checkSum(answer.substring(0, answer.length() - 4));
             int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
             if ((signal == checksum) && (!answer.contains("ERROR"))) {
@@ -84,7 +83,7 @@ public class Arduino extends SerialDevice {
             String message=fillStringByZeros(config.deviceID,3);
             message+="AO"+fillStringByZeros(pin,2)+fillStringByZeros(""+value*51, 4);
             writeMessage(message+fillStringByZeros(""+checkSum(message),3)+"\n");
-            String answer = readMessage("\n");
+            String answer = readString("\n");
             if (answer.contains("SETTED")) sendMessage(value+" on pin "+pin+" is set");;
             return (answer.contains("SETTED"));
     }
@@ -94,7 +93,7 @@ public class Arduino extends SerialDevice {
             String message = fillStringByZeros(config.deviceID,3);
             message += "AI" + fillStringByZeros(pin, 2);
             writeMessage(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
-            String answer = readMessage("\n");
+            String answer = readString("\n");
             int signal = checkSum(answer.substring(0, answer.length() - 4));
             int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
             if ((signal == checksum) && (!answer.contains("ERROR"))) {

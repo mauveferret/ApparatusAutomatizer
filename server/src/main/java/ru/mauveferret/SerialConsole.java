@@ -14,7 +14,7 @@ public class SerialConsole extends SerialDevice {
 
     void read()
     {
-        sendMessage(readMessage("\n"));
+        sendMessage(readString("\n"));
     }
 
     @Override

@@ -76,16 +76,24 @@ public class LeyboldTMP extends TMP {
     }
 
     private void activate(boolean enable) {
+        request[11] = (enable) ? (byte) 0x5 : 0x4;
 
-        //TODO TMP
-
+        String binaryStr = "101111101010100";
+        int decimal = Integer.parseInt(binaryStr,2);
+        String hexStr = Integer.toString(decimal,16);
+        byte[] b = ("0x"+ hexStr).getBytes();
+        for (byte bu: b) System.out.println(bu);
+        System.out.println(decimal);
+        System.out.println(hexStr);
     }
+
+
 
     private void measure()
     {
 
 
-        System.out.println(readMessage("\n"));
+        System.out.println(readString("\n"));
     }
 
     //terminal related
