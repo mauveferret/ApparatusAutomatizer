@@ -105,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -246,6 +246,7 @@
       <workItem from="1569770921217" duration="2786000" />
       <workItem from="1570092522718" duration="599000" />
       <workItem from="1570094544860" duration="599000" />
+      <workItem from="1570708256844" duration="7351000" />
     </task>
     <task id="LOCAL-00010" summary="gate control added">
       <created>1566432611079</created>

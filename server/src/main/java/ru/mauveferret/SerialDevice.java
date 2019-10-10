@@ -4,6 +4,7 @@ import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 
+import java.util.Arrays;
 import java.util.TreeMap;
 
 public abstract class SerialDevice extends Device {
@@ -65,7 +66,7 @@ public abstract class SerialDevice extends Device {
                 closePort();
                 break;
             case "write":
-                writeMessage(command[2]);
+                writeString(command[2]);
                 break;
             case "read":
                 sendMessage(readString(command[2]));
@@ -195,7 +196,7 @@ public abstract class SerialDevice extends Device {
 
     protected synchronized String sendCommandToDevice(String command, int delay, String endOfLine)
     {
-        writeMessage(command);
+        writeString(command);
         try {
             Thread.sleep(delay);
         }
@@ -250,7 +251,32 @@ public abstract class SerialDevice extends Device {
        }
     }
 
-    protected synchronized boolean writeMessage(String message) {
+    //FIXME repeating code
+    protected synchronized boolean writeBytes(byte[] message)
+    {
+        try
+        {
+            try {
+                if (!serialPort.isOpened())
+                {
+                    if (!isReconnectActive) sendMessage("port is closed!!");
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                if (!isReconnectActive)
+                    sendMessage("port wasn't created!");
+            }
+            return serialPort.writeBytes(message);
+        }
+        catch (SerialPortException e) {
+            checkWhyMessageWasntSent(e);
+            return false;
+        }
+    }
+
+    protected synchronized boolean writeString(String message) {
         try
         {
           try {
@@ -268,20 +294,25 @@ public abstract class SerialDevice extends Device {
             return serialPort.writeString(message);
         }
         catch (SerialPortException e) {
-            if (!isReconnectActive)
-                sendMessage("message wasn't written on"+config.deviceName);
-            try {
-                serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
-            }
-            catch (SerialPortException ex)
-            {
-                sendMessage(ex.getPortName()+" не прокатило!!");
-            }
-            if (!isReconnectActive)
-                sendMessage(e.getMessage());
-            reconnect();
+            checkWhyMessageWasntSent(e);
             return false;
         }
+    }
+
+    private void checkWhyMessageWasntSent(Exception e)
+    {
+        if (!isReconnectActive)
+            sendMessage("message wasn't written on"+config.deviceName);
+        try {
+            serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
+        }
+        catch (SerialPortException ex)
+        {
+            sendMessage(ex.getPortName()+" не прокатило!!");
+        }
+        if (!isReconnectActive)
+            sendMessage(e.getMessage());
+        reconnect();
     }
 
     protected synchronized void reconnect() {

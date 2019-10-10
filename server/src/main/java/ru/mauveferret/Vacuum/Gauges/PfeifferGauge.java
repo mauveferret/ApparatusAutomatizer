@@ -23,9 +23,9 @@ public class PfeifferGauge extends Gauge {
     @Override
     protected synchronized double  measure(int gauge) {
         String command = "PR"+gauge+"\n";
-        writeMessage(command);
+        writeString(command);
         readString("\r\n");
-        writeMessage(""+'\5');
+        writeString(""+'\5');
         String message = readString("\r\n");
         try {
 

@@ -9,7 +9,7 @@ public class SerialConsole extends SerialDevice {
 
     void write(String message)
     {
-        writeMessage(message+"\n");
+        writeString(message+"\n");
     }
 
     void read()
