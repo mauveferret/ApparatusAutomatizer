@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -246,14 +245,8 @@
       <workItem from="1569770921217" duration="2786000" />
       <workItem from="1570092522718" duration="599000" />
       <workItem from="1570094544860" duration="599000" />
-      <workItem from="1570708256844" duration="7351000" />
-    </task>
-    <task id="LOCAL-00010" summary="gate control added">
-      <created>1566432611079</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1566432611079</updated>
+      <workItem from="1570708256844" duration="8293000" />
+      <workItem from="1570727614086" duration="2811000" />
     </task>
     <task id="LOCAL-00011" summary="serialdevice added">
       <created>1566639366486</created>
@@ -591,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570035975511</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Leybold control and measuring made, strange error happens">
+      <created>1570726893198</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1570726893198</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="everything works, checked" />
     <MESSAGE value="some errors removed, some graphics added to client" />
     <MESSAGE value="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog" />
     <MESSAGE value="Pfeiffer gauges added" />
@@ -637,6 +636,7 @@
     <MESSAGE value="Launch4J maven plugin works" />
     <MESSAGE value="log scale fixed" />
     <MESSAGE value="indicators made" />
-    <option name="LAST_COMMIT_MESSAGE" value="indicators made" />
+    <MESSAGE value="Leybold control and measuring made, strange error happens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leybold control and measuring made, strange error happens" />
   </component>
 </project>

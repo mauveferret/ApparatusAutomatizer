@@ -3,15 +3,17 @@ package ru.mauveferret.Vacuum;
 import ru.mauveferret.SerialDevice;
 
 public class TMP extends SerialDevice {
+
     protected TMP(String fileName) {
         super(fileName);
     }
 
+
     private boolean enabled = false;
-    private int  temperature = 0;
-    private int frequency = 0;
-    private double voltage = 0;
-    private double current = 0;
+    protected int  temperature = 0;
+    protected int frequency = 0;
+    protected double voltage = 0;
+    protected double current = 0;
 
     public int getTemperature() {
         return temperature;
@@ -32,6 +34,8 @@ public class TMP extends SerialDevice {
     public boolean isEnabled() {
         return enabled;
     }
+
+
 
     @Override
     protected void type() {

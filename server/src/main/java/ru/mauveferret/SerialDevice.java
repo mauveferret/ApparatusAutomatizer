@@ -234,13 +234,14 @@ public abstract class SerialDevice extends Device {
     protected synchronized byte[] readBytes(int bytesCount)
     {
        try {
-          if (serialPort.getInputBufferBytesCount() < bytesCount)
+           //FIXME wait while bytes wouldn't come
+          if (serialPort.getInputBufferBytesCount() > bytesCount-1)
            {
                return serialPort.readBytes(bytesCount);
            }
            else
           {
-              sendMessage("NO response found");
+              sendMessage("No response found");
               return null;
           }
        }
@@ -266,7 +267,7 @@ public abstract class SerialDevice extends Device {
             catch (Exception e)
             {
                 if (!isReconnectActive)
-                    sendMessage("port wasn't created!");
+                    sendMessage(config.devicePort+"port wasn't created!");
             }
             return serialPort.writeBytes(message);
         }

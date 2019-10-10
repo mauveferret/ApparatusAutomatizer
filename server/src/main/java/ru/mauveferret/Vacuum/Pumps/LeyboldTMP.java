@@ -15,10 +15,7 @@ public class LeyboldTMP extends TMP {
     private boolean[] statusRequest;
     private boolean[] statusResponse;
 
-    private int  temperature = 0;
-    private int frequency = 0;
-    private double voltage = 0;
-    private double current = 0;
+
     //for logging
     private String status;
 
@@ -57,22 +54,6 @@ public class LeyboldTMP extends TMP {
 
 //Getters
 
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public int getFrequency() {
-        return frequency;
-    }
-
-    public double getVoltage() {
-        return voltage;
-    }
-
-    public double getCurrent() {
-        return current;
-    }
-
     public boolean isEnabled() {
         return enabled;
     }
@@ -84,7 +65,11 @@ public class LeyboldTMP extends TMP {
         switch (command[1])
         {
             //FIXME
-            case "run": setEnabled(true);
+            case "run":
+            {
+                setControl(true);
+                setEnabled(true);
+            }
             break;
             case "stop": setEnabled(false);
             break;
@@ -167,7 +152,6 @@ public class LeyboldTMP extends TMP {
         temperature = Integer.parseInt(bytesToBinaryString(15), 2);
         current = Integer.parseInt(bytesToBinaryString(17), 2) *0.1;
         voltage = Integer.parseInt(bytesToBinaryString(21), 2) * 0.1;
-        System.out.println(frequency+" "+temperature+" "+current+" "+voltage);
     }
 
     private String bytesToBinaryString(int firstByteIndex)
@@ -198,11 +182,15 @@ public class LeyboldTMP extends TMP {
 
     private void measure()
     {
-
         setStatusRequest();
         checkSum();
         writeBytes(request);
-        response = readBytes(24);
+        //FIXME very bad!! but withous this TMP doesn't response
+        try {
+            Thread.sleep(300);
+        }
+        catch (Exception ignored){}
+        response =  readBytes(24);
         getStatusResponse();
         getData();
     }
@@ -214,17 +202,15 @@ public class LeyboldTMP extends TMP {
         dataLog.createFile(config.dataPath, "time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) ");
         Thread log = new Thread(() -> {
             boolean stop = true;
-            try {
+
                 while (stop)
                 {
-                    //FIXME very bad!
-                    Thread.sleep(100);
+                    //FIXME in case of loss of the message it stops measauring! Check it
                     measure();
                     dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current+" "+status);
-                    stop = Thread.currentThread().isInterrupted();
+                    stop = !Thread.currentThread().isInterrupted();
                 }
-            }
-            catch (InterruptedException ignored) { }
+
         });
         log.setName(config.deviceName);
         log.start();
@@ -234,6 +220,7 @@ public class LeyboldTMP extends TMP {
     protected TreeMap<String, String> getCommands() {
         commands.put("run", "launches the TMP in form $run$");
         commands.put("stop","stops the TMP in form: $stop$");
+        commands.put("data","");
         commands.put("measure","");
         commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");
         commands.put("frequency", "...");

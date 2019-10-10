@@ -7,3 +7,4 @@ this
 ID 1
 name tmppump
 port COM51
+open
