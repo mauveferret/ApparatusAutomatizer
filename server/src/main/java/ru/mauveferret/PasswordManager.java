@@ -18,16 +18,11 @@ class PasswordManager extends Device {
     private TreeMap<String, Integer> loginAndAccessLevels = new TreeMap<>();
     private String path;
 
-    PasswordManager() {
-        //FIXME universal path
-        //FIXME take path frome Device
-        path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-        path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
-        path = path.replaceAll("/","\\\\");
-        path+="\\resources\\passwords.txt";
-
-        deviceAccessLevel = 10;
+    public PasswordManager(String fileName) {
+        super(fileName);
     }
+
+    //TODO Make a part of the Device
 
     @Override
     protected void measureAndLog() {
