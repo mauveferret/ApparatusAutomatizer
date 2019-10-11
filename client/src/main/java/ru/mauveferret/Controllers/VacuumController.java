@@ -46,13 +46,13 @@ public class VacuumController {
         pressureColumn1Series.setName("First column pressure, torr");
         pressureColumn2Series = new XYChart.Series();
         pressureColumn2Series.setName("Second column pressure, torr");
-        temp1Series = new XYChart.Series();
-        temp1Series.setName("temperature, celsium");
+        freq1Series = new XYChart.Series();
+        freq1Series.setName("frequency, Hz");
         pressureScheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         pressureChart.getData().add(pressureColumn1Series);
         pressureChart.getData().add(pressureColumn2Series);
 
-        tmp1Chart.getData().add(temp1Series);
+        tmp1Chart.getData().add(freq1Series);
 
         enableDataUpdating();
     }
@@ -60,6 +60,13 @@ public class VacuumController {
     private boolean isMenuVisible = false;
     private boolean isFullscreen = false;
     private SocketCryptedCommunicator communicator;
+
+    // menu buttons
+
+    @FXML
+    private Button tmp1Run;
+    @FXML
+    private Button tmp1Control;
 
     @FXML
     private Button pump1;
@@ -139,14 +146,21 @@ public class VacuumController {
     private void tmp1ControlPressed()
     {
         buttons[4] = !buttons[4];
+        if (buttons[4])
+            tmp1Control.setText("CONTROL ON");
+        else
+            tmp1Control.setText("CONTROL OFF");
     }
 
     @FXML
     private void tmp1RunPressed()
     {
         buttons[5] = !buttons[5];
+        if (buttons[5])
+            tmp1Run.setText("RUN ON");
+        else
+            tmp1Run.setText("RUN OFF");
     }
-
 
     //data updating
 
@@ -193,7 +207,7 @@ public class VacuumController {
 
                     pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
-                    temp1Series.getData().add(new XYChart.Data<>(ltime, itemp1));
+                    freq1Series.getData().add(new XYChart.Data<>(ltime, ifreq1));
                 //show only part of the chart (left part is gragually deleting)
                 /*if ( pressureColumn1Series.getData().size() > WINDOW_SIZE)
                     pressureColumn1Series.getData().remove(0);
@@ -204,7 +218,7 @@ public class VacuumController {
 
                 }
             });
-        }, 0, 300, TimeUnit.MILLISECONDS);
+        }, 0, 500, TimeUnit.MILLISECONDS);
     }
 
     private void setIndicatorColor(Button button, String flag)

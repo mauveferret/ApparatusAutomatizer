@@ -2,11 +2,11 @@ package ru.mauveferret.Vacuum;
 
 import ru.mauveferret.SerialDevice;
 
-public class TMP extends SerialDevice {
+public abstract class TMP extends SerialDevice {
 
     protected TMP(String fileName) {
         super(fileName);
-        temperature = 0;
+        temperature = 24;
         frequency = 0;
         voltage = 0;
         current = 0;
@@ -16,14 +16,21 @@ public class TMP extends SerialDevice {
     }
 
 
+    public abstract void measure();
+
+
     protected int  temperature = 0;
     protected int frequency = 0;
     protected double voltage = 0;
     protected double current = 0;
     //for logging
     protected String status;
+    //shows if the device answer on the requests
+    protected boolean deviceIsOn = false;
+
     protected boolean isEnabled;
     protected boolean isControlOn;
+    protected boolean isCoolingOn;
 
 
 
@@ -63,7 +70,13 @@ public class TMP extends SerialDevice {
 
     @Override
     protected boolean callDevice() {
-        return false;
+        try {
+            measure();
+            return  deviceIsOn;
+        }
+        catch (Exception e){
+            return  false;
+        }
     }
 
     @Override

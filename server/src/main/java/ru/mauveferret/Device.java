@@ -12,8 +12,10 @@ public abstract  class Device extends Thread{
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+
         //FIXME "Apparatus..." can be used only during development
         //FIXME splitter won't work in Linux
+
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         path = path.replaceAll("/","\\\\");
         path+="\\resources\\";
@@ -42,7 +44,7 @@ public abstract  class Device extends Thread{
     //keeps terminal object
     protected Terminal terminalSample;
     // some config dat
-    protected Config config = new Config();
+    public Config config = new Config();
     private Logger messageLog = new Logger(true);
     protected Logger dataLog = new Logger(true);
     protected Thread log;

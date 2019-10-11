@@ -7,7 +7,7 @@ public class Config {
 
     String deviceID="ID isn't set";
     public String deviceName = "name isn't set";
-    String deviceCommand = "name isn't set";
+    public String deviceCommand = "name isn't set";
     String devicePort = "port isn't set";
     String deviceType = "type isn't set";
     int baudRate = 9600;

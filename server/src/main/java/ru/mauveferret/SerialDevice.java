@@ -13,9 +13,10 @@ public abstract class SerialDevice extends Device {
         super(fileName);
     }
 
-    protected abstract void type();
 
-    //just to check if the Device works properly (for find ports method)
+
+    protected abstract void type();
+    //just to check if the Device works properly (for finding the port and checking if the reconnection was successful)
     protected abstract boolean callDevice();
     private SerialPort serialPort;
     //in this thread reconnection to the device happening
@@ -235,19 +236,20 @@ public abstract class SerialDevice extends Device {
     {
        try {
            //FIXME wait while bytes wouldn't come
-          if (serialPort.getInputBufferBytesCount() > bytesCount-1)
-           {
+          if (serialPort.getInputBufferBytesCount() > bytesCount-1) {
                return serialPort.readBytes(bytesCount);
            }
-           else
-          {
-              sendMessage("No response found");
+           else {
+              if (!isReconnectActive) sendMessage("No response found");
               return null;
           }
        }
        catch (SerialPortException e)
        {
-           sendMessage(e.getMessage());
+           if (!isReconnectActive) {
+               sendMessage(e.getMessage());
+               reconnect();
+           }
            return  null;
        }
     }
@@ -266,8 +268,10 @@ public abstract class SerialDevice extends Device {
             }
             catch (Exception e)
             {
-                if (!isReconnectActive)
-                    sendMessage(config.devicePort+"port wasn't created!");
+                if (!isReconnectActive) {
+                    sendMessage(config.devicePort + " port wasn't created!");
+                    reconnect();
+                }
             }
             return serialPort.writeBytes(message);
         }
@@ -287,10 +291,11 @@ public abstract class SerialDevice extends Device {
                   return false;
               }
           }
-          catch (Exception e)
-          {
-              if (!isReconnectActive)
+          catch (Exception e) {
+              if (!isReconnectActive) {
                   sendMessage("port wasn't created!");
+                  reconnect();
+              }
           }
             return serialPort.writeString(message);
         }

@@ -23,13 +23,6 @@ public class LeyboldTMP extends TMP {
         deviceAccessLevel = 6;
     }
 
-
-
-    @Override
-    protected void type() {
-
-    }
-
     @Override
     protected boolean callDevice() {
         return false;
@@ -45,8 +38,18 @@ public class LeyboldTMP extends TMP {
             //FIXME
             case "run":
             {
-                setControl(true);
                 setEnabled(true);
+            }
+            break;
+            case "control":
+            {
+                if (command.length>2)
+                {
+                    if (command[2].equals("on")) setControl(true);
+                    else
+                        setControl(false);
+                }
+                else sendMessage("Enter option for $control$. Either $on$ or $off$");
             }
             break;
             case "stop": setEnabled(false);
@@ -160,19 +163,26 @@ public class LeyboldTMP extends TMP {
         return strBuilder.toString();
     }
 
-    private void measure()
+    //Generally, its not only measure parameters of the TMP, but also send commands
+    @Override
+    public void measure()
     {
-        setStatusRequest();
-        checkSum();
-        writeBytes(request);
-        //FIXME very bad!! but withous this TMP doesn't response
         try {
-            Thread.sleep(300);
+            setStatusRequest();
+            checkSum();
+            writeBytes(request);
+            //FIXME very bad!! but withous this TMP doesn't response
+            try {
+                Thread.sleep(300);
+            } catch (Exception ignored) {
+            }
+            response = readBytes(24);
+            getStatusResponse();
+            getData();
         }
-        catch (Exception ignored){}
-        response =  readBytes(24);
-        getStatusResponse();
-        getData();
+        catch (Exception e){
+            deviceIsOn = false;
+        }
     }
 
     //terminal related
@@ -204,6 +214,7 @@ public class LeyboldTMP extends TMP {
         commands.put("measure","");
         commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");
         commands.put("frequency", "...");
+        commands.put("control","enables or disables control of the TMP  in form control $on/off$");
         return super.getCommands();
     }
 

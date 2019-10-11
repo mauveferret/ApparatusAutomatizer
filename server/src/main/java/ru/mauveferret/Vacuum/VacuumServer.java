@@ -19,7 +19,7 @@ class VacuumServer extends Server {
     }
 
     private ControlDevice devices;
-    DecimalFormat decFormat = new DecimalFormat("#0.00");
+    private DecimalFormat decFormat = new DecimalFormat("#0.00");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
     // FIXME why 6?
     private boolean[] previousCommands = new boolean[6];
@@ -27,7 +27,10 @@ class VacuumServer extends Server {
     public String createResponse(String request)
     {
 
-        fullfillOrders(request.split(" ")[1]);
+        try {
+            fullfillOrders(request.split(" ")[1]);
+        }
+        catch (ArrayIndexOutOfBoundsException ignored){}
 
         //TODO since you have separate SOckets for different parts, you don't have to use "vac"
         String response = "";
@@ -51,14 +54,6 @@ class VacuumServer extends Server {
                 response+=devices.tmp1.getFrequency()+" "+devices.tmp1.getTemperature()+" ";
                 response+=decFormat.format(devices.tmp1.getVoltage()).replace(",",".")+" ";
                 response+=decFormat.format(devices.tmp1.getCurrent()).replace(",",".");
-
-            /*
-            {
-                terminalSample.launchCommand(request.substring(3), true, 10);
-            }
-
-             */
-
         }
 
         // createResponse+=""+gateControl.pumpStatus()+gateControl.isValveOpened()+gateControl.isGateOpened();
@@ -66,7 +61,7 @@ class VacuumServer extends Server {
         return response;
     }
 
-    public void fullfillOrders(String commands)
+    private void fullfillOrders(String commands)
     {
         boolean[] newCommands = stringToBooleanArray(commands);
         for (int i=0;i<newCommands.length;i++)
@@ -89,15 +84,25 @@ class VacuumServer extends Server {
 
     private void executeCommand(int commandIndex)
     {
+
+        String tmp1 = devices.tmp1.config.deviceCommand;
         //FIXME accessLevel
         switch (commandIndex)
         {
             case 5:
             {
                 if (previousCommands[commandIndex])
-                    terminalSample.launchCommand("tmp run", true, 10);
+                    terminalSample.launchCommand(tmp1+" run", true, 10);
                 else
-                    terminalSample.launchCommand("tmp stop", true, 10);
+                    terminalSample.launchCommand(tmp1+" stop", true, 10);
+            }
+            break;
+            case 4:
+            {
+                if (previousCommands[commandIndex])
+                    terminalSample.launchCommand(tmp1+" control on", true, 10);
+                else
+                    terminalSample.launchCommand(tmp1+" control off", true, 10);
             }
             break;
         }

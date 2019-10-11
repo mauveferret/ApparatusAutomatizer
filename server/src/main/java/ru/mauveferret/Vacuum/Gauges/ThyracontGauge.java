@@ -14,7 +14,6 @@ public class ThyracontGauge extends Gauge {
 
     protected synchronized double measure(int gaugeNumber)
     {
-
         //FIXME very bad!!
         try {
             Thread.sleep(30);
@@ -30,14 +29,14 @@ public class ThyracontGauge extends Gauge {
                 int order = Integer.parseInt(message.substring(8, 10)) - 20;
                 double value = mantissa * 0.75 * Math.pow(10, order);
                 pressure[gaugeNumber] = value;
-                deviceWorks = true;
+                deviceIsOn = true;
                 return value;
             }
             else
                 {
                 if (!isReconnectActive())
                     sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
-                    deviceWorks=false;
+                    deviceIsOn=false;
                 //return previous
                 return pressure[gaugeNumber];
                 }
@@ -46,7 +45,7 @@ public class ThyracontGauge extends Gauge {
         {
             if (!isReconnectActive())
                 sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
-            deviceWorks=false;
+            deviceIsOn=false;
             //return previous
             return pressure[gaugeNumber];
         }

@@ -6,15 +6,15 @@ import ru.mauveferret.Vacuum.Gauge;
 
 public class PfeifferGauge extends Gauge {
 
-    private int[] status = {0,0,0,0,0,0,0};
+    private int[] status = {4,4,4,4,4,4,4};
     private String[] statuses = {
             "Sensor is on. Measurement data okey",
             "Underrange",
             "Overrange",
             "Sensor error",
             "Sensor off",
-            "no sensor",
-            "identification error" };
+            "No sensor",
+            "Identification error" };
 
     public PfeifferGauge(String fileName) {
         super(fileName);
@@ -32,24 +32,21 @@ public class PfeifferGauge extends Gauge {
             int somestatus = Integer.parseInt(message.charAt(0)+"");
             if (somestatus!=status[gauge])
             {
-                sendMessage(statuses[somestatus]);
+                sendMessage("Gauge "+gauge+":"+statuses[somestatus]);
                 status[gauge] = somestatus;
             }
             double measurement = Double.parseDouble(message.substring(2,10))*0.75;
             pressure[gauge] = measurement;
-            deviceWorks = true;
+            deviceIsOn = true;
             return measurement;
         }
         catch (Exception e)
         {
-            deviceWorks = false;
+            deviceIsOn = false;
             return pressure[gauge];
         }
     }
 
     @Override
-    protected void calibrate(String gaugeType) {
-
-    }
-
+    protected void calibrate(String gaugeType) {}
 }
