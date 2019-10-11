@@ -294,7 +294,7 @@ public abstract class SerialDevice extends Device {
           }
             return serialPort.writeString(message);
         }
-        catch (SerialPortException e) {
+        catch (Exception e) {
             checkWhyMessageWasntSent(e);
             return false;
         }

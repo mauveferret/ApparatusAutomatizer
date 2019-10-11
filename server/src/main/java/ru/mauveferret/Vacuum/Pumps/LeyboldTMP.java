@@ -2,24 +2,16 @@ package ru.mauveferret.Vacuum.Pumps;
 
 import ru.mauveferret.Vacuum.TMP;
 
-import java.util.Arrays;
 import java.util.TreeMap;
 
 
 public class LeyboldTMP extends TMP {
 
-
-
-    private byte[] request = new byte[]{0x02,0x16,0x00,0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};;
+    private byte[] request;
     private byte[] response;
     private boolean[] statusRequest;
     private boolean[] statusResponse;
 
-
-    //for logging
-    private String status;
-
-    private boolean enabled = false;
 
     public LeyboldTMP(String fileName) {
         super(fileName);
@@ -27,19 +19,11 @@ public class LeyboldTMP extends TMP {
         response = new byte[24];
         statusRequest = new boolean[16];
         statusResponse = new boolean[16];
-        temperature = 0;
-        frequency = 0;
-        voltage = 0;
-        current = 0;
-        status = "";
 
         deviceAccessLevel = 6;
     }
 
-    @Override
-    protected void initialize() {
-        super.initialize();
-    }
+
 
     @Override
     protected void type() {
@@ -51,12 +35,6 @@ public class LeyboldTMP extends TMP {
         return false;
     }
 
-
-//Getters
-
-    public boolean isEnabled() {
-        return enabled;
-    }
 
     //Device related commands
 
@@ -143,6 +121,8 @@ public class LeyboldTMP extends TMP {
         {
             statusResponse[i] = (binary.charAt(i)+"").equals("1");
         }
+        isEnabled = statusResponse[2];
+        isControlOn = statusResponse[15];
     }
 
     //decryptes some TMP data from the receives message
@@ -154,6 +134,7 @@ public class LeyboldTMP extends TMP {
         voltage = Integer.parseInt(bytesToBinaryString(21), 2) * 0.1;
     }
 
+    //convert to sequential bytes in TMP response into binary String
     private String bytesToBinaryString(int firstByteIndex)
     {
         int firstDecimal = Integer.parseInt(String.format("%02x", response[firstByteIndex]&0xff), 16);
@@ -178,7 +159,6 @@ public class LeyboldTMP extends TMP {
         }
         return strBuilder.toString();
     }
-
 
     private void measure()
     {
@@ -205,7 +185,7 @@ public class LeyboldTMP extends TMP {
 
                 while (stop)
                 {
-                    //FIXME in case of loss of the message it stops measauring! Check it
+                    //FIXME in case of loss of the message it stops measuring! Check it
                     measure();
                     dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current+" "+status);
                     stop = !Thread.currentThread().isInterrupted();
