@@ -183,7 +183,7 @@ public class SocketCryptedCommunicator {
 
     //TODO add some HAsh to messages in order to check that the data package is sent correctly
 
-    void writeEncryption(String message)
+    public void writeEncryption(String message)
     {
         try {
             long t1 = System.currentTimeMillis();
@@ -200,7 +200,7 @@ public class SocketCryptedCommunicator {
 
     }
 
-     String readEncryption()
+     public String readEncryption()
     {
         try
         {

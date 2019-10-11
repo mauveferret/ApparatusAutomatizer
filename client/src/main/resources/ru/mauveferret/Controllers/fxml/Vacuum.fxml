@@ -116,7 +116,7 @@
                  <Tab text="TMP1">
                     <content>
                        <AnchorPane>
-                          <LineChart fx:id="tmp1Chart" prefHeight="602.0" prefWidth="717.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="483.0" AnchorPane.topAnchor="0.0">
+                          <LineChart fx:id="tmp1Chart" layoutX="-5.0" prefHeight="602.0" prefWidth="722.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="483.0" AnchorPane.topAnchor="0.0">
                              <xAxis>
                                 <NumberAxis fx:id="tmp1ChartXAxis" side="BOTTOM" />
                              </xAxis>

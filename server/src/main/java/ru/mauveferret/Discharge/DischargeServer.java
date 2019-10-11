@@ -1,6 +1,7 @@
 package ru.mauveferret.Discharge;
 
 import ru.mauveferret.Server;
+import ru.mauveferret.SocketCryptedCommunicator;
 
 class DischargeServer extends Server {
 
@@ -8,6 +9,10 @@ class DischargeServer extends Server {
         super(fileName);
     }
 
+    @Override
+    protected void communicate(SocketCryptedCommunicator communicator) {
+
+    }
 
 
     //TODO divide commands handler into separete pieces in Terminal style
@@ -15,13 +20,6 @@ class DischargeServer extends Server {
     //First word will be a 'device' command
     //TODO make packages
 
-    //Fixme vacuumResponse. make methods for all?
-    @Override
-    public String createResponse(String request)
-    {
-        String response = "";
-        return response;
-    }
 
 
 }

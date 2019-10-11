@@ -89,12 +89,13 @@ public class VacuumController {
     private  NumberAxis pressureChartXAxis = new NumberAxis();
     @FXML
     private LineChart<Number,Number> pressureChart = new LineChart<>(pressureChartXAxis, pressureChartYAxis);
-    @FXML
-    private LineChart<Number,Number> tmp1Chart = new LineChart<>(pressureChartXAxis, pressureChartYAxis);
+
     @FXML
     private  NumberAxis tmp1ChartXAxis = new NumberAxis();
     @FXML
     private  NumberAxis tmp1ChartYAxis = new NumberAxis();
+    @FXML
+    private LineChart<Number,Number> tmp1Chart = new LineChart<>(tmp1ChartXAxis, tmp1ChartYAxis);
 
     DecimalFormat decFormat = new DecimalFormat("#0.00");
     //used to sent commands from the buttons to the server

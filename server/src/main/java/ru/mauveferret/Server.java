@@ -19,7 +19,7 @@ public abstract class Server extends Device  {
     protected int port = 4004;
 
 
-    protected abstract String createResponse(String someCommand);
+    protected abstract void communicate(SocketCryptedCommunicator communicator);
 
 
     //waits for clientSocket's answer and launch in separate thread "meetClient"
@@ -53,8 +53,7 @@ public abstract class Server extends Device  {
                 Date currentDate = new Date();
                 while (communicator.getExpireDate().after(currentDate) && !communicator.isStopCommunication()) {
                     try {
-                        String someCommand = communicator.readEncryption();
-                        communicator.writeEncryption(createResponse(someCommand));
+                        communicate(communicator);
                     }
                     catch (Exception e)
                     {
