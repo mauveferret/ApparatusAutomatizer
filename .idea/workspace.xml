@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gateControl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gateControl.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bypass.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Bypass.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -248,14 +247,7 @@
       <workItem from="1570727614086" duration="2868000" />
       <workItem from="1570781539251" duration="25870000" />
       <workItem from="1571041752192" duration="2790000" />
-      <workItem from="1571133403887" duration="23226000" />
-    </task>
-    <task id="LOCAL-00017" summary="gauge logging fixed">
-      <created>1567524595281</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1567524595281</updated>
+      <workItem from="1571133403887" duration="23762000" />
     </task>
     <task id="LOCAL-00018" summary="gateControl made">
       <created>1567543566719</created>
@@ -593,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571141455847</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="gateControl fixed, Bypass moved">
+      <created>1571162776082</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1571162776082</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin" />
     <MESSAGE value="client improved, vacuum module added, charts don't work" />
     <MESSAGE value="charts work, client GUI works good, socketCryptedCommunicator improved, now can work both in server and client apps" />
     <MESSAGE value="just some TODO added" />
@@ -639,6 +637,7 @@
     <MESSAGE value="tmp button bugs fixed" />
     <MESSAGE value="server access levels added" />
     <MESSAGE value="config name now is a device name&#10;starting moving Bypass to GateControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="config name now is a device name&#10;starting moving Bypass to GateControl" />
+    <MESSAGE value="gateControl fixed, Bypass moved" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateControl fixed, Bypass moved" />
   </component>
 </project>
