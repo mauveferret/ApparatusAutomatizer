@@ -3,6 +3,7 @@ name gate
 columnnumber 1
 arduino arduino
 gatecontrolpin 6
+bypassControlPin 8
 gateanalogpins 0 1
 maxPressureDifference 10
 gauge thyracontGauge

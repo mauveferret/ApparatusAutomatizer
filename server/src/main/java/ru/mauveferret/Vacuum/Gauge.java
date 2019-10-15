@@ -33,7 +33,7 @@ public abstract class Gauge extends SerialDevice {
     //made to realize call method
     protected boolean deviceIsOn=false;
     //keeps pressures current value. pressure[0] - is always null!
-    protected double[] pressure = new double[]{-1,0.0001,0.1,700};
+    protected double[] pressure = new double[]{-1,0.0001,0.1,0};
     //used to write single pressure from every gauge/ Can be used by third party software
     private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
