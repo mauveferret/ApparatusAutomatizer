@@ -6,7 +6,6 @@ this
 */
 ID 1
 type nano
-name arduino1
 baudrate 19200
 port COM10
 open

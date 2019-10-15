@@ -23,7 +23,7 @@ public abstract class Gauge extends SerialDevice {
         for (int number: config.elements)
         {
             loggerMap.put(number, new Logger(false));
-            String pressurePath = newPath+File.separator+"pressure"+File.separator+config.deviceName+number+".txt";
+            String pressurePath = newPath+File.separator+"pressure"+File.separator+config.name +number+".txt";
             loggerMap.get(number).createFile(pressurePath,"");
         }
         super.initialize();
@@ -33,7 +33,7 @@ public abstract class Gauge extends SerialDevice {
     //made to realize call method
     protected boolean deviceIsOn=false;
     //keeps pressures current value. pressure[0] - is always null!
-    protected double[] pressure = new double[]{0.00001,0.0001,0.1,0.1};
+    protected double[] pressure = new double[]{-1,0.0001,0.1,700};
     //used to write single pressure from every gauge/ Can be used by third party software
     private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
@@ -77,7 +77,7 @@ public abstract class Gauge extends SerialDevice {
             }
 
         });
-        log.setName(config.deviceName);
+        log.setName(config.name);
         log.start();
     }
 

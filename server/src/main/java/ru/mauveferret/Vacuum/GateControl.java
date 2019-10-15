@@ -23,6 +23,10 @@ class GateControl extends ControlDevice {
     //in torr
     private int maxPresDifference = 10;
 
+    //for Gauge
+    private int columnGaugeNumber;
+    private int vesselGaugeNumber;
+
     //for Arduino
     private int forlinePumpDigitalPin;
     private int valveDigitalPin;
@@ -55,7 +59,7 @@ class GateControl extends ControlDevice {
 
     //GateControl Methods
 
-    private void forlinePump(String enable)
+    synchronized private void forlinePump(String enable)
     {
         boolean isCorrectControl = false;
         boolean enablePump=false;
@@ -80,7 +84,7 @@ class GateControl extends ControlDevice {
     }
 
     //FIXME it looks too large and seems not working
-    private void control(final String type, String control)
+    synchronized private void control(final String type, String control)
     {
         boolean isCorrectControl = false;
         boolean openValve=false;
@@ -98,8 +102,8 @@ class GateControl extends ControlDevice {
             sendMessage("no $type$ option or its incorrect");
         }
         if (isCorrectControl) {
-            double columnPressure = gauge.pressure[columnNumber];
-            double vesselPressure = gauge.pressure[columnNumber];
+            double columnPressure = gauge.pressure[columnGaugeNumber];
+            double vesselPressure = gauge.pressure[vesselGaugeNumber];
             double pressureDifference = Math.abs(columnPressure-vesselPressure);
             int pin = (type.equals("gate")) ? gateDigitalPin : valveDigitalPin;
             final boolean isOpened = arduino.getDigitalPinsWritten()[pin];
@@ -149,10 +153,11 @@ class GateControl extends ControlDevice {
 
             //FIXME sleep is very very bad!
             final  boolean triedToOpen = openValve;
-            final boolean wasOpened = isOpened(type);
             Thread checkGate = new Thread(() -> {
                 try {
                     Thread.sleep(1000);
+
+                    boolean wasOpened = isOpened(type);
 
                     String status = ((wasOpened) ? "opened" : "closed");
                     if (triedToOpen ^ wasOpened)
@@ -176,18 +181,20 @@ class GateControl extends ControlDevice {
                 }
                 catch (InterruptedException ignored){}
             });
+            checkGate.setName("CheckingGateStatus");
+            checkGate.start();
 
         }
     }
 
 
-    private boolean isOpened(String gate)
+    synchronized private boolean isOpened(String gate)
     {
         boolean closed,opened;
         int closedPin = (gate.equals("gate")) ? gateAnalogClosedPin : valveAnalogClosedPin;
         int openedPin = (gate.equals("gate")) ? gateAnalogOpenedPin : valveAnalogOpenedPin;
-        terminalSample.runTerminalCommand( "deviceCommand aread "+openedPin, 10);
-        terminalSample.runTerminalCommand( "deviceCommand aread "+closedPin, 10);
+        arduino.runTerminalCommand( "deviceCommand aread "+openedPin, 10);
+        arduino.runTerminalCommand( "deviceCommand aread "+closedPin, 10);
         closed = (arduino.getAnalogPinsRead()[closedPin]>2.5);
         opened = (arduino.getAnalogPinsRead()[openedPin]>2.5);
         if (opened ^ closed) return opened;
@@ -214,7 +221,7 @@ class GateControl extends ControlDevice {
         super.chooseImportCommand(line);
                String[] command = line.split(" ");
                try {
-               switch (command[0]) {
+               switch (command[0].toLowerCase()) {
                    case "forlinepin": forlinePumpDigitalPin =  Integer.parseInt(command[1]);
                    break;
                    case "valvecontrolpin": valveDigitalPin =  Integer.parseInt(command[1]);
@@ -234,6 +241,10 @@ class GateControl extends ControlDevice {
                    }
                    break;
                    case "maxpressuredifference" : maxPresDifference = Integer.parseInt(command[1]);
+                   break;
+                   case "columngauge" : columnGaugeNumber = Integer.parseInt(command[1]);
+                   break;
+                   case "vesselgauge" : vesselGaugeNumber = Integer.parseInt(command[1]);
                    break;
                }
            }

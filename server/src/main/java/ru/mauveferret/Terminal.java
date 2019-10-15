@@ -13,8 +13,8 @@ public class Terminal extends Device {
     private TreeMap<String, Device> commandMap = new TreeMap<>();
     //key == device name, value == device object
     private TreeMap<String, Device> deviceMap = new TreeMap<>();
-    //FIXME password
-    PasswordManager passwords = new PasswordManager();
+    //FIXME passwords
+    PasswordManager passwords = new PasswordManager("passwords");
 
 
     //TODO VERY BIG improvement: make device class which keeps all devices, keeos their help and initialize them
@@ -45,7 +45,7 @@ public class Terminal extends Device {
     public void addDevice(Device someDevice) {
         someDevice.terminalSample = Terminal.this;
         new Thread(someDevice::initialize).start();
-        String deviceName = someDevice.config.deviceName;
+        String deviceName = someDevice.config.name;
         String deviceCommand = someDevice.config.deviceCommand;
 
         // get commands should not be launched several times!

@@ -21,9 +21,9 @@ public class Main {
 
         SerialConsole serialConsole = new SerialConsole("console");
         ProgramAnalyzer analyzer = new ProgramAnalyzer("analyzer");
-        PasswordManager passwordManager = new PasswordManager();
+        //PasswordManager passwordManager = new PasswordManager();
         Terminal terminal = new Terminal("terminal");
-        terminal.addDevice(passwordManager);
+        //terminal.addDevice(passwordManager);
         terminal.addDevice(serialConsole);
         terminal.addDevice(terminal);
         terminal.addDevice(analyzer);

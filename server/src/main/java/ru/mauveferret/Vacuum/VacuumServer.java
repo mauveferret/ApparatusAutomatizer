@@ -14,7 +14,7 @@ class VacuumServer extends Server {
     @Override
     protected void initialize() {
         super.initialize();
-        devices = new ControlDevice(config.fileName);
+        devices = new ControlDevice(config.name);
         devices.setTerminal(terminalSample);
         devices.initialize();
     }

@@ -17,8 +17,9 @@ public class Arduino extends SerialDevice {
     public Arduino(String fileName) {
         super(fileName);
         deviceAccessLevel = 9;
+        digitalPinsWritten = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false,false};
+        analogPinsRead = new double[14];
     }
-
 
     //arrays with pins status (only for dwrite, aread)
     private boolean[] digitalPinsWritten = new boolean[14];
@@ -175,7 +176,7 @@ public class Arduino extends SerialDevice {
                 if (command[2].equals(""))
                     sendMessage("Enter pin number as an option");
                 else
-                    sendMessage("" + analogRead(command[2]));
+                    sendMessage("Analog signal on pin "+command[2]+" is  "+ analogRead(command[2]));
                 break;
         }
 
@@ -210,7 +211,7 @@ public class Arduino extends SerialDevice {
             }
 
         });
-        log.setName(config.deviceName);
+        log.setName(config.name);
         log.start();
     }
 

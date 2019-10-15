@@ -202,7 +202,7 @@ public class LeyboldTMP extends TMP {
                 }
 
         });
-        log.setName(config.deviceName);
+        log.setName(config.name);
         log.start();
     }
 

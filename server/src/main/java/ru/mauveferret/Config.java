@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class Config {
 
     String deviceID="ID isn't set";
-    public String deviceName = "name isn't set";
+    public String name = "name isn't set";
     public String deviceCommand = "name isn't set";
     String devicePort = "port isn't set";
     String deviceType = "type isn't set";
@@ -14,7 +14,6 @@ public class Config {
     String configPath = "";
     String logPath = "";
     public String dataPath = "";
-    public String fileName = "";
     String units = "";
     //used to add several elements of one device like gauge amount or arduino pins
     public ArrayList<Integer> elements = new ArrayList<>();
@@ -45,7 +44,7 @@ public class Config {
     {
         String info = "\n";
         String line = "\n--------------------\n";
-        info+="device: "+deviceName+line+"deviceID: "+deviceID+line+"command: "+deviceCommand+line;
+        info+="device: "+ name +line+"deviceID: "+deviceID+line+"command: "+deviceCommand+line;
         info+="device COM port: "+devicePort+line;
         for (String str: parameters.keySet())
             info+=str+" "+parameters.get(str)+line;

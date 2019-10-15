@@ -27,7 +27,7 @@ public abstract class Server extends Device  {
     {
         try {
             ServerSocket server = new ServerSocket(port);
-            sendMessage(config.deviceName+" launched at port "+port+". Its IP is "+ server.getInetAddress().getHostName());
+            sendMessage(config.name +" launched at port "+port+". Its IP is "+ server.getInetAddress().getHostName());
             while (!stopServer)
             {
                 Socket socket = server.accept();

@@ -14,15 +14,20 @@ public abstract  class Device extends Thread{
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
 
         //FIXME "Apparatus..." can be used only during development
-        //FIXME splitter won't work in Linux
 
+        String separator = File.separator ;
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
-        path = path.replaceAll("/","\\\\");
-        path+="\\resources\\";
-        config.fileName = fileName;
-        config.configPath = path+"\\"+fileName+".txt";
-        config.logPath = path+"logs\\"+fileName+"Log.txt";
-        config.dataPath = path+"data\\"+fileName+"Data.txt";
+        /*
+        You need double separator because replacement is a regex and "\" is interpreted incorrect
+        So to get real \ thr replacement should look like \\
+        FIXME this might cause troubles in systems where line separator is /
+         */
+        path = path.replaceAll("/", separator+separator);
+        path+=separator+"resources"+separator;
+        config.name = fileName;
+        config.configPath = path+separator+fileName+".txt";
+        config.logPath = path+"logs"+separator+fileName+"Log.txt";
+        config.dataPath = path+"data"+separator+fileName+"Data.txt";
         messageLog.createFile(config.logPath,"time device message");
         importConfigurationFile();
     }
@@ -159,7 +164,7 @@ public abstract  class Device extends Thread{
         {
             case "id": config.deviceID = command[1];
                 break;
-            case "name": config.deviceName = command[1];
+            case "name": config.name = command[1];
                 break;
             case "command": config.deviceCommand = command[1];
                 break;

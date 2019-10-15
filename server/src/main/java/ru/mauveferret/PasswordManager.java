@@ -287,7 +287,8 @@ class PasswordManager extends Device {
         loginAndExpireDates = new TreeMap<>();
         loginAndAccessLevels = new TreeMap<>();
         try {
-            Scanner scanner = new Scanner(new FileReader(new File(path)));
+            //FIXME it shouldn't use config path
+            Scanner scanner = new Scanner(new FileReader(new File(config.configPath)));
             while (scanner.hasNextLine())
             {
                 try {

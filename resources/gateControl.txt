@@ -1,9 +1,11 @@
 command gate
 name gate
 columnnumber 1
-arduino arduino1
+arduino arduino
 gatecontrolpin 6
 gateanalogpins 0 1
 maxPressureDifference 10
 gauge thyracontGauge
 tmp1 tmppump
+ColumnGauge 1
+VesselGauge 3

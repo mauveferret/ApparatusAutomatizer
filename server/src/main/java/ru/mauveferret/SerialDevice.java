@@ -4,7 +4,6 @@ import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 
-import java.util.Arrays;
 import java.util.TreeMap;
 
 public abstract class SerialDevice extends Device {
@@ -216,7 +215,7 @@ public abstract class SerialDevice extends Device {
                 }
                 if (System.currentTimeMillis() - startTime > 3000) {
                     if (!isReconnectActive)
-                        sendMessage(config.deviceName + " message wasn't got.");
+                        sendMessage(config.name + " message wasn't got.");
                     //FIXME is it really necessary?
                     reconnect();
                     break;
@@ -308,7 +307,7 @@ public abstract class SerialDevice extends Device {
     private void checkWhyMessageWasntSent(Exception e)
     {
         if (!isReconnectActive)
-            sendMessage("message wasn't written on"+config.deviceName);
+            sendMessage("message wasn't written on"+config.name);
         try {
             serialPort.purgePort(SerialPort.PURGE_TXCLEAR | SerialPort.PURGE_RXCLEAR);
         }

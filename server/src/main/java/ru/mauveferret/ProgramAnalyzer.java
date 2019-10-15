@@ -42,7 +42,7 @@ class ProgramAnalyzer extends Device {
                 catch (Exception ignored){}
             }
         });
-        log.setName(config.deviceName);
+        log.setName(config.name);
         log.start();
     }
 

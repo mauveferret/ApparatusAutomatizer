@@ -79,7 +79,7 @@ class GuardianAngel extends ControlDevice {
 
             }
         });
-        checkerThread.setName(config.deviceName);
+        checkerThread.setName(config.name);
         checkerThread.start();
     }
 
