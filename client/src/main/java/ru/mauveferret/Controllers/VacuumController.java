@@ -157,6 +157,7 @@ public class VacuumController {
 
 
     //Buttons methods
+    //TMP
 
     @FXML
     private void tmp1ControlPressed()
@@ -198,6 +199,8 @@ public class VacuumController {
             tmp1Cooling.setText("COOL OFF");
     }
 
+    //GAUGES
+
     @FXML
     private void gaugeControlPressed()
     {
@@ -214,6 +217,13 @@ public class VacuumController {
         gauges[1] = !gauges[1];
     }
 
+    //Button Panel
+
+    @FXML
+    private void gate1Pressed()
+    {
+        buttons1[4] = !buttons1[4];
+    }
 
     //data updating
 
@@ -291,7 +301,7 @@ public class VacuumController {
         request[17] = (gauges[0]) ? 1 : 0;
         request[18] = (gauges[1]) ? 1 : 0;
         String sRequest = (System.currentTimeMillis()+"").substring(7)+" ";
-        for (int s: request) sRequest+=s;
+        for (int i=1;i<19;i++) sRequest+=request[i];
         return  sRequest;
     }
 

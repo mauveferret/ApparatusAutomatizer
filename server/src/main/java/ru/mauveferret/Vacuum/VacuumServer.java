@@ -24,17 +24,16 @@ class VacuumServer extends Server {
     private DecimalFormat decFormat = new DecimalFormat("#0.00");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
     // FIXME why 6?
-    private boolean[] previousCommands = new boolean[6];
+    private int[] previousCommands = new int[20];
 
     @Override
     public void communicate(SocketCryptedCommunicator communicator)
     {
         String request = communicator.readEncryption();
-
         try {
             fullfillOrders(request.split(" ")[1], communicator);
         }
-        catch (ArrayIndexOutOfBoundsException ignored){}
+        catch (ArrayIndexOutOfBoundsException ignored){ignored.printStackTrace();}
 
         //TODO since you have separate SOckets for different parts, you don't have to use "vac"
         if (request.startsWith("vac"))
@@ -69,13 +68,14 @@ class VacuumServer extends Server {
     }
     private void fullfillOrders(String commands, SocketCryptedCommunicator communicator)
     {
-        boolean[] newCommands = stringToBooleanArray(commands);
-        for (int i=0;i<newCommands.length;i++)
+        //FIXME new communication protocol
+        //boolean[] newCommands = stringToBooleanArray(commands);
+        for (int i=0;i<commands.length();i++)
         {
-            if (newCommands[i]^previousCommands[i])
+            if (commands.charAt(i)!=previousCommands[i])
             {
-                previousCommands[i] = newCommands[i];
-                executeCommand(i, communicator);
+                previousCommands[i] = commands.charAt(i);
+                executeCommand(i+1, communicator);
             }
         }
     }
@@ -91,27 +91,36 @@ class VacuumServer extends Server {
     {
 
         String tmp1 = devices.tmp1.config.deviceCommand;
+        String gate1 = devices.gateControl1.config.deviceCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
         //FIXME accessLevel
+        //FIXME change two commands to one by adding a String which either "on" or "stop"
         switch (commandIndex)
         {
-            case 5:
+            case 6:
             {
-                if (previousCommands[commandIndex])
+                if (previousCommands[commandIndex]==1)
                     terminalSample.launchCommand(tmp1+" run", true, accessLevel);
                 else
                     terminalSample.launchCommand(tmp1+" stop", true, accessLevel);
             }
             break;
-            case 4:
+            case 5:
             {
-                if (previousCommands[commandIndex])
+                if (previousCommands[commandIndex]==1)
                     terminalSample.launchCommand(tmp1+" control on", true, accessLevel);
                 else
                     terminalSample.launchCommand(tmp1+" control off", true, accessLevel);
             }
             break;
+            case 4:
+            {
+                if (previousCommands[commandIndex]==2)
+                    terminalSample.launchCommand(gate1+" gate open", true, accessLevel);
+                else
+                    terminalSample.launchCommand(gate1+" gate close", true, accessLevel);
+            }
         }
     }
 
