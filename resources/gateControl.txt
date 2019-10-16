@@ -1,6 +1,7 @@
 command gate
 name gate
 columnnumber 1
+devices 1 2 3 4
 arduino arduino
 gatecontrolpin 6
 bypassControlPin 8

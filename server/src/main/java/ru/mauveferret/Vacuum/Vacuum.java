@@ -16,7 +16,6 @@ public class Vacuum {
         ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
         PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
         Arduino arduino = new Arduino("arduino");
-        Bypass bypass = new Bypass("bypass");
         GateControl gateControl = new GateControl("gateControl");
         VacuumServer server = new VacuumServer("server");
         GuardianAngel guardianAngel = new GuardianAngel("angel");
@@ -25,7 +24,6 @@ public class Vacuum {
         terminal.addDevice(thyracontGauge);
         terminal.addDevice(pfeifferGauge);
         terminal.addDevice(leyboldTMP);
-        terminal.addDevice(bypass);
         terminal.addDevice(gateControl);
         terminal.addDevice(guardianAngel);
     }

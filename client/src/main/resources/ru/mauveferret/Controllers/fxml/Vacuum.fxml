@@ -97,8 +97,8 @@
                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                       <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="GAUGES OFF" />
-                                       <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="CALIBRATE" GridPane.columnIndex="1" />
+                                       <Button fx:id="gaugeControl" mnemonicParsing="false" onAction="#gaugeControlPressed" prefHeight="57.0" prefWidth="200.0" text="GAUGES OFF" />
+                                       <Button fx:id="gaugeCalibrate" mnemonicParsing="false" onAction="#gaugeCalibratePressed" prefHeight="57.0" prefWidth="200.0" text="CALIBRATE" GridPane.columnIndex="1" />
                                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="LOGGER" GridPane.rowIndex="1" />
                                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="200.0" text="CLEAN PLOT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
@@ -200,8 +200,8 @@
                                    <children>
                                       <Button fx:id="tmp1Control" mnemonicParsing="false" onAction="#tmp1ControlPressed" prefHeight="57.0" prefWidth="225.0" text="CONTROL OFF" />
                                       <Button fx:id="tmp1Run" mnemonicParsing="false" onAction="#tmp1RunPressed" prefHeight="57.0" prefWidth="225.0" text="RUN OFF" GridPane.columnIndex="1" />
-                                      <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="225.0" text="STANDBY OFF" GridPane.rowIndex="1" />
-                                      <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="225.0" text="COOL OFF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Button fx:id="tmp1Standby" mnemonicParsing="false" onAction="#tmp1StandbyPressed" prefHeight="57.0" prefWidth="225.0" text="STANDBY OFF" GridPane.rowIndex="1" />
+                                      <Button fx:id="tmp1Cooling" mnemonicParsing="false" onAction="#tmp1CoolingPressed" prefHeight="57.0" prefWidth="225.0" text="COOL OFF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                    </children>
                                 </GridPane>
                                 <TextField fx:id="tmp1Time" prefHeight="93.0" prefWidth="381.0" promptText="no data" styleClass="large-text-field" text="1234567" GridPane.rowIndex="10">

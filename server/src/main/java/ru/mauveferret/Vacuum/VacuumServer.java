@@ -1,5 +1,6 @@
 package ru.mauveferret.Vacuum;
 
+import ru.mauveferret.Device;
 import ru.mauveferret.Server;
 import ru.mauveferret.SocketCryptedCommunicator;
 
@@ -36,32 +37,36 @@ class VacuumServer extends Server {
         catch (ArrayIndexOutOfBoundsException ignored){}
 
         //TODO since you have separate SOckets for different parts, you don't have to use "vac"
-        String response = "";
         if (request.startsWith("vac"))
         {
-                String columnData =System.currentTimeMillis()+" ";
-                columnData+=booleanToString(devices.bypass.isOpened)+""+devices.gateControl1.getPumpStatus();
-                columnData+=devices.gateControl1.getValveStatus()+""+devices.gateControl1.getGateStatus()+"";
-                columnData+=booleanToString(devices.tmp1.isEnabled())+" "+booleanToString(devices.tmp1.isControlOn);
-                // response+=columnData;
-                // columnData = booleanToString(bypass.isOpened)+booleanToString(gateControl2.pumpStatus());
-                //columnData+=booleanToString(gateControl2.isValveOpened())+booleanToString(gateControl2.isGateOpened());
-                //columnData+=booleanToString(tmp2.isEnabled())+" ";
-                response+=columnData;
-                //FIXME do you need replace?!
-                response+=String.format("%6.3e",devices.gauge.pressure[1]).replace(",",".")+" ";
-                response+=String.format("%6.3e",devices.gauge.pressure[2]).replace(",",".")+" ";
-                response+=String.format("%6.3e",devices.gauge.pressure[3]).replace(",",".")+" ";
-                response+=devices.tmp1.getFrequency()+" "+devices.tmp1.getTemperature()+" ";
-                response+=decFormat.format(devices.tmp1.getVoltage()).replace(",",".")+" ";
-                response+=decFormat.format(devices.tmp1.getCurrent()).replace(",",".");
-        }
 
-        // createResponse+=""+gateControl.pumpStatus()+gateControl.isValveOpened()+gateControl.isGateOpened();
-        // createResponse+=""+tmp.isEnabled()+gauge.pressure[1]+""+gauge.pressure[2];
-       communicator.writeEncryption(response);
+        }
+       communicator.writeEncryption(createResponse());
     }
 
+    private String createResponse()
+    {
+        //its useless to send first 7 digits, the ping of our system is little so client can calculate first digits
+        String response =(System.currentTimeMillis()+" ").substring(7);
+        //gatecontrol2 and gauges are not controlled yet
+        response+=columnData(devices.gateControl1, devices.tmp1)+" "+"00000000 "+"00 ";
+        //FIXME do you need replace?!
+        response+=String.format("%6.3e",devices.gauge.pressure[1]).replace(",",".")+" ";
+        response+=String.format("%6.3e",devices.gauge.pressure[2]).replace(",",".")+" ";
+        response+=String.format("%6.3e",devices.gauge.pressure[3]).replace(",",".")+" ";
+        response+=devices.tmp1.getFrequency()+" "+devices.tmp1.getTemperature()+" ";
+        response+=decFormat.format(devices.tmp1.getVoltage()).replace(",",".")+" ";
+        response+=decFormat.format(devices.tmp1.getCurrent()).replace(",",".");
+        return  response;
+    }
+
+    private String columnData(GateControl gateControl, TMP tmp){
+        String columnData=gateControl.getPumpStatus()+""+gateControl.getBypassStatus();
+        columnData+=gateControl.getValveStatus()+""+gateControl.getGateStatus();
+        columnData+=booleanToString(tmp.isControlOn())+""+booleanToString(tmp.isEnabled());
+        columnData+=booleanToString(tmp.isStandbyOn())+""+booleanToString(tmp.isCoolingOn());
+        return columnData;
+    }
     private void fullfillOrders(String commands, SocketCryptedCommunicator communicator)
     {
         boolean[] newCommands = stringToBooleanArray(commands);

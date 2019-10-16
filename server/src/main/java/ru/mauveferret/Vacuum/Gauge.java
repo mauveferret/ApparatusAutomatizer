@@ -23,7 +23,8 @@ public abstract class Gauge extends SerialDevice {
         for (int number: config.elements)
         {
             loggerMap.put(number, new Logger(false));
-            String pressurePath = newPath+File.separator+"pressure"+File.separator+config.name +number+".txt";
+            String sep = File.separator;
+            String pressurePath = newPath+sep+"values"+sep+"pressure"+sep+config.name +number+".txt";
             loggerMap.get(number).createFile(pressurePath,"");
         }
         super.initialize();

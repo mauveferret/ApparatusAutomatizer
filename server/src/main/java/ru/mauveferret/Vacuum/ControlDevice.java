@@ -27,16 +27,14 @@ class ControlDevice extends Device {
     TMP tmp2;
     GateControl gateControl1;
     GateControl gateControl2;
-    Bypass bypass;
 
     //fixme
      static private String arduinoName;
      static private String gaugeName;
      static private String tmp1Name ;
     static private String tmp2Name = "tmp2";
-   static private String gateControl1Name ;
+   static private String gateControl1Name  = "gate";
      static private String gateControl2Name = "gate2" ;
-  static private String bypassName;
 
     @Override
     protected void initialize() {
@@ -46,7 +44,6 @@ class ControlDevice extends Device {
         //I'm sorry for this, i'l fix it!
         //FIXME exterminate this shit!!!
 
-        try { bypass = (Bypass) (terminalSample.getDevice(bypassName));} catch (Exception ignored) {ignored.printStackTrace();}
         try { arduino = (Arduino) (terminalSample.getDevice(arduinoName));} catch (Exception ignored) {}
         try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
         try {  tmp1 = (TMP) (terminalSample.getDevice(tmp1Name));} catch (Exception ignored) {}
@@ -74,8 +71,6 @@ class ControlDevice extends Device {
                 case  "tmp2" : tmp2Name = command[1];
                 break;
                 case  "gatecontrol2" : gateControl2Name = command[1];
-                break;
-                case  "bypass" : bypassName = command[1];
                 break;
             }
         }

@@ -170,6 +170,20 @@ public abstract  class Device extends Thread{
                 break;
             case "run" : runTerminalCommand( "somecommand"+" "+line+" bug bug", 10);
             break;
+            case "devices":
+            {
+                for (int i=1; i<command.length;i++)
+                {
+                    try {
+                        config.elements.add(Integer.parseInt(command[i]));
+                    }
+                    catch (Exception e)
+                    {
+                        sendMessage("Incorrect device number "+command[i]);
+                    }
+                }
+            }
+            break;
         }
     }
 

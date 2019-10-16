@@ -31,6 +31,7 @@ public abstract class TMP extends SerialDevice {
     protected boolean isEnabled;
     protected boolean isControlOn;
     protected boolean isCoolingOn;
+    protected boolean isStandbyOn;
 
 
 
@@ -61,6 +62,14 @@ public abstract class TMP extends SerialDevice {
 
     public boolean isControlOn() {
         return isControlOn;
+    }
+
+    public boolean isCoolingOn() {
+        return isCoolingOn;
+    }
+
+    public boolean isStandbyOn() {
+        return isStandbyOn;
     }
 
     @Override

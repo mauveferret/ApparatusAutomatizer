@@ -1,5 +1,9 @@
 package ru.mauveferret.Vacuum;
 
+import ru.mauveferret.Logger;
+
+import java.io.File;
+import java.util.HashMap;
 import java.util.TreeMap;
 
 /*
@@ -21,6 +25,20 @@ class GateControl extends ControlDevice {
         dataLog.createFile(config.dataPath, "forlineStatus  bypassStatus valveStatus   gateStatus");
     }
 
+    @Override
+    protected void initialize() {
+        super.initialize();
+            String newPath = (new File(config.dataPath)).getParent();
+            for (int number : config.elements) {
+                loggerMap.put(number, new Logger(false));
+                String sep = File.separator;
+                String pressurePath = newPath + sep + "values" + sep + "valves" + sep + types[number] + columnNumber + ".txt";
+                loggerMap.get(number).createFile(pressurePath, "");
+            }
+    }
+
+    //used to write single pressure from every gauge/ Can be used by third party software
+    private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
     public final String[] statuses = new String[]{
             "device switched off",                                //0
@@ -384,6 +402,10 @@ class GateControl extends ControlDevice {
     protected void measureAndLog() {
         try {
             dataLog.write("time "+status[1]+" "+status[2]+" "+status[3]+" "+status[4]);
+            for (int deviceNumber : config.elements)
+            {
+                loggerMap.get(deviceNumber).write("time " + status[deviceNumber]);
+            }
         }
         catch (Exception  e)
         {

@@ -94,19 +94,6 @@ public abstract class SerialDevice extends Device {
                 break;
             case "baudrate":
                 config.baudRate = Integer.parseInt(command[1]);
-            case "devices":
-            {
-                for (int i=1; i<command.length;i++)
-                {
-                    try {
-                        config.elements.add(Integer.parseInt(command[i]));
-                    }
-                    catch (Exception e)
-                    {
-                        sendMessage("Incorrect device number "+command[i]);
-                    }
-                }
-            }
             break;
         }
     }

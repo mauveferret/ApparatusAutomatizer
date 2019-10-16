@@ -63,10 +63,21 @@ public class VacuumController {
 
     // menu buttons
 
+    //TMP
     @FXML
     private Button tmp1Run;
     @FXML
     private Button tmp1Control;
+    @FXML
+    private Button tmp1Standby;
+    @FXML
+    private Button tmp1Cooling;
+
+    //Gauges
+    @FXML
+    private Button gaugeControl;
+    @FXML
+    private Button gaugeCalibrate;
 
     @FXML
     private Button pump1;
@@ -101,8 +112,12 @@ public class VacuumController {
     //used to sent commands from the buttons to the server
 
     //FIXME when program is opened, it turns off all devices. Probably you nedd "enable connection button" ?!
-    //bypass, pump, valve, gate, tmpCOntrol,tmpEnable
-    boolean[] buttons = new boolean[]{false,false,false,false,false,false};
+    // pump, bypass valve, gate, tmpCOntrol,tmpEnable, tmpStandBy, tmpCooling
+    private boolean[] buttons1 = new boolean[]{false,false,false,false,false,false,false,false,false};
+    private boolean[] buttons2 = new boolean[]{false, false,false,false,false,false,false,false,false};
+    private boolean[] gauges = new boolean[]{false,false};
+    private int[] response =  new int[20];
+    private int[] request =  new int[20];
 
     // Array
     private XYChart.Series pressureColumn1Series;
@@ -146,8 +161,8 @@ public class VacuumController {
     @FXML
     private void tmp1ControlPressed()
     {
-        buttons[4] = !buttons[4];
-        if (buttons[4])
+        buttons1[5] = !buttons1[5];
+        if (buttons1[5])
             tmp1Control.setText("CONTROL ON");
         else
             tmp1Control.setText("CONTROL OFF");
@@ -156,18 +171,56 @@ public class VacuumController {
     @FXML
     private void tmp1RunPressed()
     {
-        buttons[5] = !buttons[5];
-        if (buttons[5])
+        buttons1[6] = !buttons1[6];
+        if (buttons1[6])
             tmp1Run.setText("RUN ON");
         else
             tmp1Run.setText("RUN OFF");
     }
+
+    @FXML
+    private void tmp1StandbyPressed()
+    {
+        buttons1[7] = !buttons1[6];
+        if (buttons1[7])
+            tmp1Standby.setText("STANDBY ON");
+        else
+            tmp1Standby.setText("STANDBY OFF");
+    }
+
+    @FXML
+    private void tmp1CoolingPressed()
+    {
+        buttons1[8] = !buttons1[6];
+        if (buttons1[8])
+            tmp1Cooling.setText("COOL ON");
+        else
+            tmp1Cooling.setText("COOL OFF");
+    }
+
+    @FXML
+    private void gaugeControlPressed()
+    {
+        gauges[0] = !gauges[0];
+        if (gauges[0])
+            gaugeControl.setText("GAUGES ON");
+        else
+            gaugeControl.setText("GAUGES OFF");
+    }
+
+    @FXML
+    private void gaugeCalibratePressed()
+    {
+        gauges[1] = !gauges[1];
+    }
+
 
     //data updating
 
     //TODO preferences with choosing units and plot updating regime
 
     private void enableDataUpdating() {
+
 
         // setup a scheduled executor to periodically put data into the chart
         pressureScheduledExecutorService.scheduleAtFixedRate(() -> {
@@ -176,25 +229,24 @@ public class VacuumController {
                 //pumpIndicator.setFill(Paint.valueOf("green"));
                 if (!disableUpdating) {
 
-                    String command =  "";
-                    for (int i=0; i< buttons.length;i++) command+= (buttons[i]) ? "1" : "0";
-                    String[] message = communicator.makeRequest("vac "+command, true).split(" ");
+                    String[] message;
+                    message = communicator.makeRequest(refreshRequest(), true).split(" ");
+
                     long ltime = Long.parseLong(message[0]);
-                    setIndicatorColor(bypass1, message[1].charAt(0) + "");
-                    setIndicatorColor(pump1, message[1].charAt(1) + "");
+                    setIndicatorColor(pump1, message[1].charAt(0) + "");
+                    setIndicatorColor(bypass1, message[1].charAt(1) + "");
                     setIndicatorColor(auto2, message[1].charAt(2) + "");
                     setIndicatorColor(gate1, message[1].charAt(3) + "");
                     setIndicatorColor(tmp1, message[1].charAt(4) + "");
 
-                    //setIndicatorColor();
 
-                    double dpressure1 = Double.parseDouble(message[2]);
-                    double dpressure2 = Double.parseDouble(message[3]);
-                    double dpressure3 = Double.parseDouble(message[4]);
-                    int ifreq1 = Integer.parseInt(message[5]);
-                    int itemp1 = Integer.parseInt(message[6]);
-                    double dvolt1 = Double.parseDouble(message[7]);
-                    double dcurr1 = Double.parseDouble(message[8]);
+                    double dpressure1 = Double.parseDouble(message[4]);
+                    double dpressure2 = Double.parseDouble(message[5]);
+                    double dpressure3 = Double.parseDouble(message[6]);
+                    int ifreq1 = Integer.parseInt(message[7]);
+                    int itemp1 = Integer.parseInt(message[8]);
+                    double dvolt1 = Double.parseDouble(message[9]);
+                    double dcurr1 = Double.parseDouble(message[10]);
                     pressure1.setText(String.format("%6.2E", dpressure1));
                     pressure2.setText(String.format("%6.2E", dpressure2));
                     pressure3.setText(String.format("%6.2E", dpressure3));
@@ -222,26 +274,48 @@ public class VacuumController {
         }, 0, 500, TimeUnit.MILLISECONDS);
     }
 
+    private String refreshRequest()
+    {
+
+        //for pump, bypass, valve and gate of both lines
+        for (int i=1; i< 5;i++) {
+            request[i] = (buttons1[i]) ? 2 : 1;
+            request[i+8] = (buttons2[i]) ? 2 : 1;
+        }
+        //for tmp control, enable, standby, cooling of both lines
+        for (int i=5; i<9;i++){
+            request[i] = (buttons1[i]) ? 1 : 0;
+            request[i+8] = (buttons2[i]) ? 1 : 0;
+        }
+        //for gauges
+        request[17] = (gauges[0]) ? 1 : 0;
+        request[18] = (gauges[1]) ? 1 : 0;
+        String sRequest = (System.currentTimeMillis()+"").substring(7)+" ";
+        for (int s: request) sRequest+=s;
+        return  sRequest;
+    }
+
     private void setIndicatorColor(Button button, String flag)
     {
             switch (Integer.parseInt(flag)) {
                 case 0:
-                    button.setStyle(".IndicatorDeviceIsOff");
+                    button.setStyle(".IndicatorDeviceIsDisconnected");
                     break;
-                case 1:
-                {
-                    button.setStyle(".IndicatorDeviceIsOn");
+                case 1: {
+                    button.setStyle(".IndicatorDeviceIsOff");
                 }
                     break;
-                case 2:
+                case 2:{
+                    button.setStyle(".IndicatorDeviceIsOn");
+                }
+                break;
                 case 3:
-                case 4: {
+                case 4:
+                case 5:
+                {
                     button.setStyle(".IndicatorDeviceError");
                 }
                 break;
-                case 5:
-                    button.setStyle(".IndicatorDeviceIsDisconnected");
-                    break;
             }
     }
 
