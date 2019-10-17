@@ -21,7 +21,7 @@ class VacuumServer extends Server {
     }
 
     private ControlDevice devices;
-    private DecimalFormat decFormat = new DecimalFormat("#0.00");
+    private DecimalFormat decFormat = new DecimalFormat("#0.0");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
     // FIXME why 6?
     private int[] previousCommands = new int[20];
@@ -50,9 +50,9 @@ class VacuumServer extends Server {
         //gatecontrol2 and gauges are not controlled yet
         response+=columnData(devices.gateControl1, devices.tmp1)+" "+"00000000 "+"00 ";
         //FIXME do you need replace?!
-        response+=String.format("%6.3e",devices.gauge.pressure[1]).replace(",",".")+" ";
-        response+=String.format("%6.3e",devices.gauge.pressure[2]).replace(",",".")+" ";
-        response+=String.format("%6.3e",devices.gauge.pressure[3]).replace(",",".")+" ";
+        response+=String.format("%6.2e",devices.gauge.pressure[1]).replace(",",".")+" ";
+        response+=String.format("%6.2e",devices.gauge.pressure[2]).replace(",",".")+" ";
+        response+=String.format("%6.2e",devices.gauge.pressure[3]).replace(",",".")+" ";
         response+=devices.tmp1.getFrequency()+" "+devices.tmp1.getTemperature()+" ";
         response+=decFormat.format(devices.tmp1.getVoltage()).replace(",",".")+" ";
         response+=decFormat.format(devices.tmp1.getCurrent()).replace(",",".");

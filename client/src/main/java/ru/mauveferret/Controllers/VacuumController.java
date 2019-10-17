@@ -10,6 +10,7 @@ import javafx.scene.chart.ValueAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.stage.Stage;
 import ru.mauveferret.LogarithmicNumberAxis;
 import ru.mauveferret.SocketCryptedCommunicator;
@@ -58,6 +59,16 @@ public class VacuumController {
 
         line1ButtonControls = new Button[]{null, pump1,bypass1,valve1,gate1,tmp1Control,tmp1Run,tmp1Standby,tmp1Cooling};
 
+        pump1.setTooltip(pumpTooltip);
+        bypass1.setTooltip(bypass1Tooltip);
+        valve1.setTooltip(valve1Tooltip);
+        gate1.setTooltip(gate1Tooltip);
+        tmp1.setTooltip(tmp1Tooltip);
+        for (int i=1; i<5; i++)
+        {
+            line1ButtonControls[i].getTooltip().getStyleClass().add("tooltip");
+        }
+
         enableDataUpdating();
     }
 
@@ -86,13 +97,23 @@ public class VacuumController {
     @FXML
     private Button pump1;
     @FXML
+    private Tooltip pumpTooltip = new Tooltip();
+    @FXML
     private Button bypass1;
+    @FXML
+    private Tooltip bypass1Tooltip = new Tooltip();
     @FXML
     private Button valve1;
     @FXML
+    private Tooltip valve1Tooltip = new Tooltip();
+    @FXML
     private Button gate1;
     @FXML
+    private Tooltip gate1Tooltip = new Tooltip();
+    @FXML
     private Button tmp1;
+    @FXML
+    private Tooltip tmp1Tooltip = new Tooltip();
     @FXML
     private Button auto2;
 
@@ -277,8 +298,8 @@ public class VacuumController {
                     String[] message;
                     message = communicator.makeRequest(refreshRequest(), true).split(" ");
 
-                    long first7TimeDigits = Long.parseLong((System.currentTimeMillis()+"").substring(0,7));
-                    long ltime = first7TimeDigits+Long.parseLong(message[0]);
+                    String first7TimeDigits =(System.currentTimeMillis()+"").substring(0,7);
+                   long ltime = Long.parseLong((first7TimeDigits+""+message[0]));
 
                     //FIXME ypu indicate not the propper TMP: indicate  control, but need run.
                     // So change their positions in protocol
@@ -363,14 +384,17 @@ public class VacuumController {
                 case 0:
                 {
                     button.setStyle("-fx-background-color: #000000");
+                    button.getTooltip().setText("device switched off");
                 }
                     break;
                 case 1: {
                     button.setStyle("-fx-background-color: #ffffff");
+                    button.getTooltip().setText("device switched on and disabled");
                 }
                     break;
                 case 2:{
                     button.setStyle("-fx-background-color: #99FF33");
+                    button.getTooltip().setText("device switched on and enabled");
                 }
                 break;
                 case 3:
@@ -378,6 +402,7 @@ public class VacuumController {
                 case 5:
                 {
                     button.setStyle("-fx-background-color: #FF0000");
+                    button.getTooltip().setText("device switched on, low pneumo line pressure");
                 }
                 break;
             }
