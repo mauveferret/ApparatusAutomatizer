@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RecordingDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,14 +250,7 @@
       <workItem from="1571133403887" duration="23896000" />
       <workItem from="1571216381116" duration="17706000" />
       <workItem from="1571296909164" duration="17853000" />
-      <workItem from="1571322478084" duration="3285000" />
-    </task>
-    <task id="LOCAL-00022" summary="Some JSSC based improvements">
-      <created>1567672027817</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1567672027817</updated>
+      <workItem from="1571322478084" duration="7304000" />
     </task>
     <task id="LOCAL-00023" summary="password manager improved">
       <created>1567811203629</created>
@@ -596,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571317701391</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="tooltips added to GUI, works">
+      <created>1571326320160</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1571326320160</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="just some TODO added" />
     <MESSAGE value="some shit made" />
     <MESSAGE value="GUI impovement" />
     <MESSAGE value="everybody seems to work, som porn solutions in ControlDevice" />
@@ -642,6 +640,7 @@
     <MESSAGE value="gateControl fixed, Bypass moved" />
     <MESSAGE value="commands sending fixed, some added to GUI" />
     <MESSAGE value="buttons added to GUI, works" />
-    <option name="LAST_COMMIT_MESSAGE" value="buttons added to GUI, works" />
+    <MESSAGE value="tooltips added to GUI, works" />
+    <option name="LAST_COMMIT_MESSAGE" value="tooltips added to GUI, works" />
   </component>
 </project>

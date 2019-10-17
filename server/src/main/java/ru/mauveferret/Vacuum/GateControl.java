@@ -47,6 +47,10 @@ class GateControl extends ControlDevice {
             "device doesn't response",                            //3
             "device switched on, low pneumo line pressure",        //4
             "device switched on, but there is an unknown error",  //5
+            "Cant't open. Pressure difference is too high",        //6
+            "pressure in vessel is too high",                        //7
+            "Hardware error. Device doesn't response. Check the cable.", //8
+            "close valve for bypass pumping!"                           //9
     };
 
     public final String[] types =  new String[]{
