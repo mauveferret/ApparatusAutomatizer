@@ -41,20 +41,21 @@ public class ChooserController {
         Platform.runLater((() ->
         {
             try {
-                Stage windowsChooser = new Stage();
+                Stage vacuumStage = new Stage();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/Vacuum.fxml"));
                 Parent root = loader.load();
-                setMovable(root,windowsChooser);
-                Scene scene  = new Scene(root);
-                windowsChooser.setScene(scene);
+                setMovable(root,vacuumStage);
+                Scene vacuumScene  = new Scene(root);
+
                 //FIXME
                 URL url = this.getClass().getResource("fxml/css/vacuum.css");
                 if (url == null) {
                     System.out.println("Resource not found. Aborting.");
                 }
                 String css = url.toExternalForm();
-                scene.getStylesheets().add(css);
-                windowsChooser.show();
+                vacuumScene.getStylesheets().add(css);
+                vacuumStage.setScene(vacuumScene);
+                vacuumStage.show();
                 ((VacuumController) loader.getController()).initialize(communicator);
             } catch (Exception e) {
                 e.printStackTrace();

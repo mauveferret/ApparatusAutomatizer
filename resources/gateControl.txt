@@ -4,6 +4,7 @@ columnnumber 1
 devices 1 2 3 4
 arduino arduino
 gatecontrolpin 6
+forlinepin 4
 bypassControlPin 8
 gateanalogpins 0 1
 maxPressureDifference 10

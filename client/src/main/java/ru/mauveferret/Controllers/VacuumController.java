@@ -1,7 +1,9 @@
 package ru.mauveferret.Controllers;
 
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.ValueAxis;
@@ -53,6 +55,8 @@ public class VacuumController {
         pressureChart.getData().add(pressureColumn2Series);
 
         tmp1Chart.getData().add(freq1Series);
+
+        line1ButtonControls = new Button[]{null, pump1,bypass1,valve1,gate1,tmp1Control,tmp1Run,tmp1Standby,tmp1Cooling};
 
         enableDataUpdating();
     }
@@ -118,6 +122,8 @@ public class VacuumController {
     private boolean[] gauges = new boolean[]{false,false};
     private int[] response =  new int[20];
     private int[] request =  new int[20];
+    private Button[] line1ButtonControls;
+    private Button[] line2ButtonControls;
 
     // Array
     private XYChart.Series pressureColumn1Series;
@@ -218,11 +224,40 @@ public class VacuumController {
     }
 
     //Button Panel
+    @FXML
+    private void pump1Pressed()
+    {
+        buttons1[1] = !buttons1[1];
+        line1ButtonControls[1].setText((buttons1[1]) ? ">" : "<");
+    }
+
+    @FXML
+    private void bypass1Pressed()
+    {
+        buttons1[2] = !buttons1[2];
+        line1ButtonControls[2].setText((buttons1[2]) ? ">" : "<");
+    }
+
+    @FXML
+    private void valve1Pressed()
+    {
+        buttons1[3] = !buttons1[3];
+        line1ButtonControls[3].setText((buttons1[3]) ? ">" : "<");
+    }
 
     @FXML
     private void gate1Pressed()
     {
         buttons1[4] = !buttons1[4];
+        line1ButtonControls[4].setText((buttons1[4]) ? ">" : "<");
+    }
+
+    @FXML
+    private void tmp1Pressed()
+    {
+        //FIXME it should simultaneouslu turn on/off both of control and run
+       tmp1ControlPressed();
+       tmp1RunPressed();
     }
 
     //data updating
@@ -242,13 +277,19 @@ public class VacuumController {
                     String[] message;
                     message = communicator.makeRequest(refreshRequest(), true).split(" ");
 
-                    long ltime = Long.parseLong(message[0]);
-                    setIndicatorColor(pump1, message[1].charAt(0) + "");
-                    setIndicatorColor(bypass1, message[1].charAt(1) + "");
-                    setIndicatorColor(auto2, message[1].charAt(2) + "");
-                    setIndicatorColor(gate1, message[1].charAt(3) + "");
-                    setIndicatorColor(tmp1, message[1].charAt(4) + "");
+                    long first7TimeDigits = Long.parseLong((System.currentTimeMillis()+"").substring(0,7));
+                    long ltime = first7TimeDigits+Long.parseLong(message[0]);
 
+                    //FIXME ypu indicate not the propper TMP: indicate  control, but need run.
+                    // So change their positions in protocol
+
+                    for (int i=0;i<5;i++) {
+                        if (response[i + 1] != Integer.parseInt(message[1].charAt(i) + "")) {
+                            setIndicatorColor(line1ButtonControls[i+1], message[1].charAt(i) + "");
+                        }
+                    }
+
+                    refreshResponse(message);
 
                     double dpressure1 = Double.parseDouble(message[4]);
                     double dpressure2 = Double.parseDouble(message[5]);
@@ -260,13 +301,13 @@ public class VacuumController {
                     pressure1.setText(String.format("%6.2E", dpressure1));
                     pressure2.setText(String.format("%6.2E", dpressure2));
                     pressure3.setText(String.format("%6.2E", dpressure3));
-                    time.setText(""+message[0].substring(6));
+                    time.setText((ltime+"").substring(6));
 
                     freq1.setText(ifreq1+"");
                     temp1.setText(itemp1+"");
                     volt1.setText(decFormat.format(dvolt1));
                     curr1.setText(decFormat.format(dcurr1));
-                    tmp1Time.setText(""+message[0].substring(6));
+                    tmp1Time.setText((ltime+"").substring(6));
 
                     pressureColumn1Series.getData().add(new XYChart.Data<>(ltime, dpressure1));
                     pressureColumn2Series.getData().add(new XYChart.Data<>(ltime, dpressure2));
@@ -301,29 +342,42 @@ public class VacuumController {
         request[17] = (gauges[0]) ? 1 : 0;
         request[18] = (gauges[1]) ? 1 : 0;
         String sRequest = (System.currentTimeMillis()+"").substring(7)+" ";
-        for (int i=1;i<19;i++) sRequest+=request[i];
+        for (int i=1;i<9;i++) sRequest+=request[i]; //first line
+        sRequest+=" ";
+        for (int i=9;i<17;i++) sRequest+=request[i]; //second line
+        sRequest+=" ";
+        sRequest+=request[17]; //gauge on/off
+        sRequest+=request[18]; //gauge calibrate
         return  sRequest;
+    }
+
+    private void refreshResponse(String[] message)
+    {
+        String mes = message[1]+""+message[2]+""+message[3];
+        for (int i=0; i<mes.length();i++) response[i+1] = Integer.parseInt(mes.charAt(i)+"");
     }
 
     private void setIndicatorColor(Button button, String flag)
     {
             switch (Integer.parseInt(flag)) {
                 case 0:
-                    button.setStyle(".IndicatorDeviceIsDisconnected");
+                {
+                    button.setStyle("-fx-background-color: #000000");
+                }
                     break;
                 case 1: {
-                    button.setStyle(".IndicatorDeviceIsOff");
+                    button.setStyle("-fx-background-color: #ffffff");
                 }
                     break;
                 case 2:{
-                    button.setStyle(".IndicatorDeviceIsOn");
+                    button.setStyle("-fx-background-color: #99FF33");
                 }
                 break;
                 case 3:
                 case 4:
                 case 5:
                 {
-                    button.setStyle(".IndicatorDeviceError");
+                    button.setStyle("-fx-background-color: #FF0000");
                 }
                 break;
             }

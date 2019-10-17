@@ -20,7 +20,7 @@ class GateControl extends ControlDevice {
     GateControl(String fileName) {
         super(fileName);
         deviceAccessLevel = 6;
-        opened = new boolean[6];
+        opened = new boolean[]{false,false,false,false,false,false,false};
         status = new int[]{0,0,0,0,0,0};
         dataLog.createFile(config.dataPath, "forlineStatus  bypassStatus valveStatus   gateStatus");
     }
@@ -133,7 +133,7 @@ class GateControl extends ControlDevice {
         if ((opened[1] ^ enablePump) && isCorrectControl)
         {
             String someCommand = "deviceCommand dwrite "+ pumpDigitalPin +digitalOutput;
-            terminalSample.runTerminalCommand(someCommand, 10);
+            arduino.runTerminalCommand(someCommand, 10);
             new Thread(() -> {
                 opened[1] = arduino.getDigitalPinsWritten()[pumpDigitalPin];
                 status[1] = (opened[1]) ? 2 : 1;
@@ -335,10 +335,11 @@ class GateControl extends ControlDevice {
 
     @Override
     protected TreeMap<String, String> getCommands() {
-        commands.put("forline","");
+        commands.put("pump","");
         commands.put("valve","open or close valve in form: valve $control$");
         commands.put("gate","open or close gate in form: gate $control$");
         commands.put("isOpened","shows the isOpened of the gates in form: isOpened $gate type(valve, gate)$");
+        commands.put("bypass","shows the isOpened of the gates in form: isOpened $gate type(valve, gate)$");
         return super.getCommands();
     }
 
@@ -391,7 +392,9 @@ class GateControl extends ControlDevice {
                 break;
             case "gate": control("gate", command[2]);
                 break;
-            case "forline": pump(command[2]);
+            case "bypass": control("bypass", command[2]);
+                break;
+            case "pump": pump(command[2]);
                 break;
             case "isOpened":
                 break;

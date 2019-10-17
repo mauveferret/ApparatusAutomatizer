@@ -391,15 +391,15 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="pump1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="bypass1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="valve1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="gate1" mnemonicParsing="false" onAction="#gate1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="tmp1" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="vacuumSpecialIndicator" text=" " textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="pump1" mnemonicParsing="false" onAction="#pump1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="bypass1" mnemonicParsing="false" onAction="#bypass1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="valve1" mnemonicParsing="false" onAction="#valve1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="gate1" mnemonicParsing="false" onAction="#gate1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="tmp1" mnemonicParsing="false" onAction="#tmp1Pressed" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" styleClass="IndicatorDeviceIsDisconnected" text="o" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label text="kill" GridPane.columnIndex="9" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Times New Roman" size="12.0" />

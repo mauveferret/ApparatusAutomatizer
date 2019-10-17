@@ -33,7 +33,7 @@ class VacuumServer extends Server {
         try {
             fullfillOrders(request.split(" ")[1], communicator);
         }
-        catch (ArrayIndexOutOfBoundsException ignored){ignored.printStackTrace();}
+        catch (ArrayIndexOutOfBoundsException ignored){sendMessage(ignored.getMessage());}
 
         //TODO since you have separate SOckets for different parts, you don't have to use "vac"
         if (request.startsWith("vac"))
@@ -72,9 +72,10 @@ class VacuumServer extends Server {
         //boolean[] newCommands = stringToBooleanArray(commands);
         for (int i=0;i<commands.length();i++)
         {
-            if (commands.charAt(i)!=previousCommands[i])
+            int commandValue = Integer.parseInt(commands.charAt(i)+"");
+            if (commandValue !=previousCommands[i+1])
             {
-                previousCommands[i] = commands.charAt(i);
+                previousCommands[i+1] =commandValue ;
                 executeCommand(i+1, communicator);
             }
         }
@@ -121,6 +122,31 @@ class VacuumServer extends Server {
                 else
                     terminalSample.launchCommand(gate1+" gate close", true, accessLevel);
             }
+            break;
+            case 3:
+            {
+                if (previousCommands[commandIndex]==2)
+                    terminalSample.launchCommand(gate1+" valve open", true, accessLevel);
+                else
+                    terminalSample.launchCommand(gate1+" valve close", true, accessLevel);
+            }
+            break;
+            case 2:
+            {
+                if (previousCommands[commandIndex]==2)
+                    terminalSample.launchCommand(gate1+" bypass open", true, accessLevel);
+                else
+                    terminalSample.launchCommand(gate1+" bypass close", true, accessLevel);
+            }
+            break;
+            case 1:
+            {
+                if (previousCommands[commandIndex]==2)
+                    terminalSample.launchCommand(gate1+" pump on", true, accessLevel);
+                else
+                    terminalSample.launchCommand(gate1+" pump off", true, accessLevel);
+            }
+            break;
         }
     }
 

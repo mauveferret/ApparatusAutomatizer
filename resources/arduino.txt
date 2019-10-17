@@ -7,7 +7,7 @@ this
 ID 1
 type nano
 baudrate 19200
-port COM10
+port COM63
 open
 info
 
