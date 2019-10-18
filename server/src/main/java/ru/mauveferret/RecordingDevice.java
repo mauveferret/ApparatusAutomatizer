@@ -64,6 +64,7 @@ abstract public class RecordingDevice extends Unit {
                 loggerMap.get(someDevice).setAppend(false);
         }
         convertDataFromInitializeToLocalType(dataFromInitialize);
+        measureAndLog();
     }
 
     @Override

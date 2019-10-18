@@ -39,7 +39,7 @@ public abstract  class Unit extends Thread{
     Unit(){}
 
     protected abstract void measureAndLog();
-    protected void  initialize()  { measureAndLog(); }
+    protected void  initialize()  {  }
 
     //disable all proccesses, threads in order to exit program correctly
     boolean stopUnit = false;
