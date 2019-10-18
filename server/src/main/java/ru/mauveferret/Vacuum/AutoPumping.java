@@ -1,8 +1,8 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Device;
+import ru.mauveferret.Unit;
 
-public class AutoPumping extends Device {
+public class AutoPumping extends Unit {
 
     public AutoPumping(String fileName) {
         super(fileName);

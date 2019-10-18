@@ -28,7 +28,7 @@ public class ThyracontGauge extends Gauge {
                 double mantissa = Double.parseDouble(message.substring(4, 8)) / 1000;
                 int order = Integer.parseInt(message.substring(8, 10)) - 20;
                 double value = mantissa * 0.75 * Math.pow(10, order);
-                pressure[gaugeNumber] = value;
+                pressure.put(config.devices.get(gaugeNumber-1),value);
                 deviceIsOn = true;
                 return value;
             }
@@ -38,7 +38,7 @@ public class ThyracontGauge extends Gauge {
                     sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge. Wrong checksum.");
                     deviceIsOn=false;
                 //return previous
-                return pressure[gaugeNumber];
+                return pressure.get(config.devices.get(gaugeNumber-1));
                 }
         }
         else
@@ -47,7 +47,7 @@ public class ThyracontGauge extends Gauge {
                 sendMessage("Error during measuring pressure by " + gaugeNumber + " gauge.Message too short");
             deviceIsOn=false;
             //return previous
-            return pressure[gaugeNumber];
+            return pressure.get(config.devices.get(gaugeNumber-1));
         }
     }
 

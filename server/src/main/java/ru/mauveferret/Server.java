@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeMap;
 
-public abstract class Server extends Device  {
+public abstract class Server extends Unit {
 
     public Server(String fileName) {
         super(fileName);

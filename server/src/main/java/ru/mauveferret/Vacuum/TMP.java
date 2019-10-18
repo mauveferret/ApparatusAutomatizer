@@ -2,6 +2,8 @@ package ru.mauveferret.Vacuum;
 
 import ru.mauveferret.SerialDevice;
 
+import java.util.HashMap;
+
 public abstract class TMP extends SerialDevice {
 
     protected TMP(String fileName) {
@@ -15,6 +17,10 @@ public abstract class TMP extends SerialDevice {
         isControlOn = false;
     }
 
+    @Override
+    protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+        //FIXME
+    }
 
     public abstract void measure();
 

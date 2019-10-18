@@ -2,6 +2,7 @@ package ru.mauveferret.Vacuum.Pumps;
 
 import ru.mauveferret.Vacuum.TMP;
 
+import java.util.HashMap;
 import java.util.TreeMap;
 
 
@@ -20,7 +21,7 @@ public class LeyboldTMP extends TMP {
         statusRequest = new boolean[16];
         statusResponse = new boolean[16];
 
-        deviceAccessLevel = 6;
+        unitAccessLevel = 6;
     }
 
     @Override
@@ -29,7 +30,7 @@ public class LeyboldTMP extends TMP {
     }
 
 
-    //Device related commands
+    //Unit related commands
 
     @Override
     protected void chooseTerminalCommand(String[] command) {

@@ -2,14 +2,22 @@ package ru.mauveferret.Vacuum;
 
 
 
+import ru.mauveferret.RecordingDevice;
+
+import java.util.HashMap;
 import java.util.TreeMap;
 
-class GuardianAngel extends ControlDevice {
+class GuardianAngel extends RecordingDevice {
 
     //FIXME WTF?!
     GuardianAngel(String fileName) {
         super(fileName);
-        deviceAccessLevel = 2;
+        unitAccessLevel = 2;
+    }
+
+    @Override
+    protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+
     }
 
     /*
@@ -43,8 +51,8 @@ class GuardianAngel extends ControlDevice {
                 while (!stop)
                 {
                     while (continueChecking) {
-                        double pressureColumn = gauge.pressure[gateControl.columnNumber];
-                        double pressureVessel = gauge.pressure[3];
+                        double pressureColumn = gauge.pressure.get("column");
+                        double pressureVessel = gauge.pressure.get("vessel");
                         //boolean gate = gateControl.isGateOpened();
                         //FIXME checking valve
                         //boolean valve = gateControl.isValveOpened();

@@ -5,18 +5,19 @@ import java.util.TreeMap;
 
 public class Config {
 
-    String deviceID="ID isn't set";
+    //like ID or columnNumber
+    String unitNumber ="ID isn't set";
     public String name = "name isn't set";
-    public String deviceCommand = "name isn't set";
-    String devicePort = "port isn't set";
-    String deviceType = "type isn't set";
+    public String unitCommand = "name isn't set";
+    String unitPort = "port isn't set";
+    String unitType = "type isn't set";
     int baudRate = 9600;
     String configPath = "";
     String logPath = "";
     public String dataPath = "";
     String units = "";
     //used to add several elements of one device like gauge amount or arduino pins
-    public ArrayList<Integer> elements = new ArrayList<>();
+    public ArrayList<String> devices = new ArrayList<>();
     TreeMap<String,Object> parameters = new TreeMap<>();
     //TODO перенеси все параметры сюда! заодно решишь проблемы с инициализацией!
 
@@ -44,8 +45,8 @@ public class Config {
     {
         String info = "\n";
         String line = "\n--------------------\n";
-        info+="device: "+ name +line+"deviceID: "+deviceID+line+"command: "+deviceCommand+line;
-        info+="device COM port: "+devicePort+line;
+        info+="device: "+ name +line+"deviceID: "+ unitNumber +line+"command: "+ unitCommand +line;
+        info+="device COM port: "+ unitPort +line;
         for (String str: parameters.keySet())
             info+=str+" "+parameters.get(str)+line;
         return info;

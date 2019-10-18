@@ -6,7 +6,7 @@ import jssc.SerialPortList;
 
 import java.util.TreeMap;
 
-public abstract class SerialDevice extends Device {
+public abstract class SerialDevice extends RecordingDevice {
 
     public SerialDevice(String fileName) {
         super(fileName);
@@ -15,7 +15,7 @@ public abstract class SerialDevice extends Device {
 
 
     protected abstract void type();
-    //just to check if the Device works properly (for finding the port and checking if the reconnection was successful)
+    //just to check if the Unit works properly (for finding the port and checking if the reconnection was successful)
     protected abstract boolean callDevice();
     private SerialPort serialPort;
     //in this thread reconnection to the device happening
@@ -38,8 +38,8 @@ public abstract class SerialDevice extends Device {
         commands.put("ports", "shows available COM port's names");
         commands.put("open", "Open Arduino Port in form: OP $arduino number$ $COM port name$");
         commands.put("close", "close Arduino port");
-        commands.put("break", "stops the reconnection to the Device");
-        commands.put("connect", "trying to reconnect to the Device in case of the failure");
+        commands.put("break", "stops the reconnection to the Unit");
+        commands.put("connect", "trying to reconnect to the Unit in case of the failure");
         commands.put("write", "write command on the port");
         commands.put("read", "read message from the port");
         commands.put("enablelog","");
@@ -82,12 +82,12 @@ public abstract class SerialDevice extends Device {
         String[] command = line.split(" ");
         switch (command[0].toLowerCase()) {
             case "type": {
-                config.deviceType = command[1];
+                config.unitType = command[1];
                 type();
             }
             break;
             case "port":
-                config.devicePort = command[1];
+                config.unitPort = command[1];
                 break;
             case "open":
                 openPort("");
@@ -122,7 +122,7 @@ public abstract class SerialDevice extends Device {
 
     private synchronized boolean openPort(String portName) {
         //if it wasn'r set, trying to load from the config file
-        String port = config.devicePort;
+        String port = config.unitPort;
         try {
             serialPort.closePort();
         }
@@ -255,7 +255,7 @@ public abstract class SerialDevice extends Device {
             catch (Exception e)
             {
                 if (!isReconnectActive) {
-                    sendMessage(config.devicePort + " port wasn't created!");
+                    sendMessage(config.unitPort + " port wasn't created!");
                     reconnect();
                 }
             }
@@ -314,7 +314,7 @@ public abstract class SerialDevice extends Device {
                     closePort();
                 }
                 catch (Exception ignored){}
-                String comPortName = config.devicePort;
+                String comPortName = config.unitPort;
                 serialPort = new SerialPort(comPortName);
                 if (!isReconnectActive)
                     sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
@@ -364,7 +364,7 @@ public abstract class SerialDevice extends Device {
                 if (callDevice())
                 {
                     config.devicePort = port;
-                    sendMessage("Device "+config.deviceName+" changed its port to "+port);
+                    sendMessage("Unit "+config.deviceName+" changed its port to "+port);
                     break;
                 }
             }

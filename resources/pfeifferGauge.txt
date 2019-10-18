@@ -4,7 +4,7 @@ command pgag
 this
 
 */
-ID 1
+number 1
 name pfeifferGauge
 devices 1 2
 port COM8

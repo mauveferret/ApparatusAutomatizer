@@ -4,7 +4,7 @@ command ard
 this
 
 */
-ID 1
+number 1
 type nano
 baudrate 19200
 port COM63

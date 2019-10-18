@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public abstract  class Device extends Thread{
+public abstract  class Unit extends Thread{
 
-    public Device(String fileName)
+    public Unit(String fileName)
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -36,16 +36,16 @@ public abstract  class Device extends Thread{
     It will help to send errors to client
      */
 
-    Device(){}
+    Unit(){}
 
     protected abstract void measureAndLog();
     protected void  initialize()  { measureAndLog(); }
 
     //disable all proccesses, threads in order to exit program correctly
-    boolean stopDevice = false;
+    boolean stopUnit = false;
     //TODO move to config?!
     //limits access to device
-    protected float deviceAccessLevel = 100;
+    protected float unitAccessLevel = 100;
     //keeps terminal object
     protected Terminal terminalSample;
     // some config dat
@@ -79,7 +79,7 @@ public abstract  class Device extends Thread{
     //associates a command with a method the command dedicated to
     public void runTerminalCommand(String someCommand, int accessLevel)
     {
-        if (accessLevel>=deviceAccessLevel) {
+        if (accessLevel>= unitAccessLevel) {
             try {
                 long t1 = System.currentTimeMillis();
                 String[] command = commandToStringArray(someCommand);
@@ -162,11 +162,11 @@ public abstract  class Device extends Thread{
         String[] command = line.split(" ");
         switch (command[0].toLowerCase())
         {
-            case "id": config.deviceID = command[1];
+            case "number": config.unitNumber = command[1];
                 break;
             case "name": config.name = command[1];
                 break;
-            case "command": config.deviceCommand = command[1];
+            case "command": config.unitCommand = command[1];
                 break;
             case "run" : runTerminalCommand( "somecommand"+" "+line+" bug bug", 10);
             break;
@@ -175,7 +175,7 @@ public abstract  class Device extends Thread{
                 for (int i=1; i<command.length;i++)
                 {
                     try {
-                        config.elements.add(Integer.parseInt(command[i]));
+                        config.devices.add(command[i]);
                     }
                     catch (Exception e)
                     {

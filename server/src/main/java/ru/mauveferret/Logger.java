@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Logger {
 
     private String dataToLog = "";
-    private String path;
+    public String path;
     private FileWriter writer;
     private boolean append;
     private int columnLength = 20;
@@ -22,6 +22,8 @@ public class Logger {
     public void setColumnLength(int columnLength) {
         this.columnLength = columnLength;
     }
+
+    public void setAppend(boolean appendValue) {append = appendValue;}
 
     String getPath() {
         return path;

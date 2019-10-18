@@ -1,6 +1,5 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Device;
 import ru.mauveferret.Server;
 import ru.mauveferret.SocketCryptedCommunicator;
 
@@ -15,12 +14,26 @@ class VacuumServer extends Server {
     @Override
     protected void initialize() {
         super.initialize();
-        devices = new ControlDevice(config.name);
-        devices.setTerminal(terminalSample);
-        devices.initialize();
+        try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
+        try {  tmp1 = (TMP) (terminalSample.getDevice(tmp1Name));} catch (Exception ignored) {}
+        try { tmp2 = (TMP) (terminalSample.getDevice(tmp2Name));} catch (Exception ignored) {}
+        try { gateControl1 = (GateControl) (terminalSample.getDevice(gateControl1Name));} catch (Exception ignored) {}
+        try {  gateControl2 = (GateControl) (terminalSample.getDevice(gateControl2Name));} catch (Exception ignored) {}
     }
 
-    private ControlDevice devices;
+    Gauge gauge;
+    TMP tmp1;
+    TMP tmp2;
+    GateControl gateControl1;
+    GateControl gateControl2;
+
+    private String gaugeName;
+    private String tmp1Name ;
+    private String tmp2Name = "tmp2";
+    private String gateControl1Name  = "gate";
+    private String gateControl2Name = "gate2" ;
+
+
     private DecimalFormat decFormat = new DecimalFormat("#0.0");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
     // FIXME why 6?
@@ -48,14 +61,14 @@ class VacuumServer extends Server {
         //its useless to send first 7 digits, the ping of our system is little so client can calculate first digits
         String response =(System.currentTimeMillis()+" ").substring(7);
         //gatecontrol2 and gauges are not controlled yet
-        response+=columnData(devices.gateControl1, devices.tmp1)+" "+"00000000 "+"00 ";
+        response+=columnData(gateControl1, tmp1)+" "+"00000000 "+"00 ";
         //FIXME do you need replace?!
-        response+=String.format("%6.2e",devices.gauge.pressure[1]).replace(",",".")+" ";
-        response+=String.format("%6.2e",devices.gauge.pressure[2]).replace(",",".")+" ";
-        response+=String.format("%6.2e",devices.gauge.pressure[3]).replace(",",".")+" ";
-        response+=devices.tmp1.getFrequency()+" "+devices.tmp1.getTemperature()+" ";
-        response+=decFormat.format(devices.tmp1.getVoltage()).replace(",",".")+" ";
-        response+=decFormat.format(devices.tmp1.getCurrent()).replace(",",".");
+        response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
+        response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
+        response+=String.format("%6.2e",gauge.pressure.get("vessel")).replace(",",".")+" ";
+        response+=tmp1.getFrequency()+" "+tmp1.getTemperature()+" ";
+        response+=decFormat.format(tmp1.getVoltage()).replace(",",".")+" ";
+        response+=decFormat.format(tmp1.getCurrent()).replace(",",".");
         return  response;
     }
 
@@ -91,8 +104,8 @@ class VacuumServer extends Server {
     private void executeCommand(int commandIndex, SocketCryptedCommunicator communicator)
     {
 
-        String tmp1 = devices.tmp1.config.deviceCommand;
-        String gate1 = devices.gateControl1.config.deviceCommand;
+        String stmp1 = tmp1.config.unitCommand;
+        String gate1 = gateControl1.config.unitCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
         //FIXME accessLevel
@@ -102,17 +115,17 @@ class VacuumServer extends Server {
             case 6:
             {
                 if (previousCommands[commandIndex]==1)
-                    terminalSample.launchCommand(tmp1+" run", true, accessLevel);
+                    terminalSample.launchCommand(stmp1+" run", true, accessLevel);
                 else
-                    terminalSample.launchCommand(tmp1+" stop", true, accessLevel);
+                    terminalSample.launchCommand(stmp1+" stop", true, accessLevel);
             }
             break;
             case 5:
             {
                 if (previousCommands[commandIndex]==1)
-                    terminalSample.launchCommand(tmp1+" control on", true, accessLevel);
+                    terminalSample.launchCommand(stmp1+" control on", true, accessLevel);
                 else
-                    terminalSample.launchCommand(tmp1+" control off", true, accessLevel);
+                    terminalSample.launchCommand(stmp1+" control off", true, accessLevel);
             }
             break;
             case 4:
@@ -147,6 +160,31 @@ class VacuumServer extends Server {
                     terminalSample.launchCommand(gate1+" pump off", true, accessLevel);
             }
             break;
+        }
+    }
+
+    @Override
+    protected void chooseImportCommand(String line) {
+        super.chooseImportCommand(line);
+        String[] command = line.split(" ");
+        try {
+            switch (command[0]) {
+                case "gauge": gaugeName = command[1];
+                    break;
+                case  "tmp1" : tmp1Name = command[1];
+                    break;
+                case  "gatecontrol1" : gateControl1Name = command[1];
+                    break;
+                case  "tmp2" : tmp2Name = command[1];
+                    break;
+                case  "gatecontrol2" : gateControl2Name = command[1];
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            sendMessage("incorrect option.");
+            sendMessage(e.getMessage());
         }
     }
 

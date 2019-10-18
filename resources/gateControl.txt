@@ -1,7 +1,7 @@
 command gate
 name gate
-columnnumber 1
-devices 1 2 3 4
+number 1
+devices pump bypass valve gate
 arduino arduino
 gatecontrolpin 6
 forlinepin 4
@@ -10,5 +10,5 @@ gateanalogpins 0 1
 maxPressureDifference 10
 gauge thyracontGauge
 tmp1 tmppump
-ColumnGauge 1
-VesselGauge 3
+ColumnGauge column1
+VesselGauge vessel

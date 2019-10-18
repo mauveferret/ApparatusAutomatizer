@@ -7,12 +7,12 @@ import java.util.TreeMap;
 needs to send some command to its owner through LaunchCommand
 also realises help command
  */
-public class Terminal extends Device {
+public class Terminal extends Unit {
 
     //key == deviceCommand, value == device object
-    private TreeMap<String, Device> commandMap = new TreeMap<>();
+    private TreeMap<String, Unit> commandMap = new TreeMap<>();
     //key == device name, value == device object
-    private TreeMap<String, Device> deviceMap = new TreeMap<>();
+    private TreeMap<String, Unit> deviceMap = new TreeMap<>();
     //FIXME passwords
     PasswordManager passwords = new PasswordManager("passwords");
 
@@ -25,16 +25,16 @@ public class Terminal extends Device {
         super(path);
         passwords.setKey("12345");
         passwords.initialize();
-        deviceAccessLevel = 9;
+        unitAccessLevel = 9;
     }
 
     //Getters
 
-    TreeMap<String, Device> getCommandMap() {
+    TreeMap<String, Unit> getCommandMap() {
         return commandMap;
     }
 
-    public Device getDevice(String deviceName)
+    public Unit getDevice(String deviceName)
     {
         return deviceMap.get(deviceName);
     }
@@ -42,34 +42,34 @@ public class Terminal extends Device {
     //commands
 
 
-    public void addDevice(Device someDevice) {
-        someDevice.terminalSample = Terminal.this;
-        new Thread(someDevice::initialize).start();
-        String deviceName = someDevice.config.name;
-        String deviceCommand = someDevice.config.deviceCommand;
+    public void addDevice(Unit someUnit) {
+        someUnit.terminalSample = Terminal.this;
+        new Thread(someUnit::initialize).start();
+        String deviceName = someUnit.config.name;
+        String deviceCommand = someUnit.config.unitCommand;
 
         // get commands should not be launched several times!
 
         if (commandMap.containsKey(deviceCommand))
         {
-            sendMessage("Device command \""+deviceCommand+"\" repeats.");
+            sendMessage("Unit command \""+deviceCommand+"\" repeats.");
         }
         else
         {
-            commandMap.put(deviceCommand, someDevice);
+            commandMap.put(deviceCommand, someUnit);
         }
         if (deviceMap.containsKey(deviceName ))
         {
-            sendMessage("Device name \""+deviceName+"\" repeats.");
+            sendMessage("Unit name \""+deviceName+"\" repeats.");
         }
         else
         {
-            deviceMap.put(deviceName,someDevice);
-            someDevice.terminalSample = this;
+            deviceMap.put(deviceName, someUnit);
+            someUnit.terminalSample = this;
         }
 
-       // deviceCommandMap.put(someDevice.getDeviceName(), someDevice);
-       /* for (String str : someDevice.getCommands().keySet())
+       // deviceCommandMap.put(someUnit.getDeviceName(), someUnit);
+       /* for (String str : someUnit.getCommands().keySet())
         {
             if (!commandSet.add(str))
                 sendMessage("WARNING: Command "+str +" is used by several devices");
@@ -170,7 +170,7 @@ public class Terminal extends Device {
             sendMessage("login "+login+" doesn't exist.");
         }
         scanner.close();
-        if (!stopDevice)
+        if (!stopUnit)
             startNewSession();
     }
 
@@ -232,7 +232,7 @@ public class Terminal extends Device {
         {
             thr.interrupt();
         }
-        stopDevice = true;
+        stopUnit = true;
         sendMessage("Goodbye, my Lord.");
         try {
             Thread.sleep(500);

@@ -36,14 +36,14 @@ public class PfeifferGauge extends Gauge {
                 status[gauge] = somestatus;
             }
             double measurement = Double.parseDouble(message.substring(2,10))*0.75;
-            pressure[gauge] = measurement;
+            pressure.put(config.devices.get(gauge),measurement);
             deviceIsOn = true;
             return measurement;
         }
         catch (Exception e)
         {
             deviceIsOn = false;
-            return pressure[gauge];
+            return pressure.get(config.devices.get(gauge));
         }
     }
 

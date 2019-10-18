@@ -1,8 +1,8 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Logger;
+import ru.mauveferret.Arduino;
+import ru.mauveferret.RecordingDevice;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.TreeMap;
 
@@ -14,31 +14,53 @@ also controlled by the arduino. Gate control allows to control forlinePump, valv
 potentially crucial actions like "please open turn off forline pump while TMp is on"
 or "please open valve when pressure before is much another tha pressure after"
  */
-class GateControl extends ControlDevice {
+class GateControl extends RecordingDevice {
 
+    //FIXME remove Control device
 
     GateControl(String fileName) {
         super(fileName);
-        deviceAccessLevel = 6;
-        opened = new boolean[]{false,false,false,false,false,false,false};
-        status = new int[]{0,0,0,0,0,0};
+        unitAccessLevel = 6;
         dataLog.createFile(config.dataPath, "forlineStatus  bypassStatus valveStatus   gateStatus");
+
     }
 
     @Override
     protected void initialize() {
         super.initialize();
-            String newPath = (new File(config.dataPath)).getParent();
-            for (int number : config.elements) {
-                loggerMap.put(number, new Logger(false));
-                String sep = File.separator;
-                String pressurePath = newPath + sep + "values" + sep + "valves" + sep + types[number] + columnNumber + ".txt";
-                loggerMap.get(number).createFile(pressurePath, "");
-            }
+        try { arduino = (Arduino) (terminalSample.getDevice(arduinoName));} catch (Exception ignored) {}
+        try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
     }
 
-    //used to write single pressure from every gauge/ Can be used by third party software
-    private HashMap<Integer, Logger> loggerMap = new HashMap<>();
+
+
+    protected  void convertDataFromInitializeToLocalType(HashMap<String,String> initializeData)
+    {
+
+        for (String someDevice: config.devices)
+        {
+            try {
+                status.put(someDevice, Integer.parseInt(initializeData.get(someDevice).split(" ")[1]));
+                opened.put(someDevice, Integer.parseInt(initializeData.get(someDevice).split(" ")[1])==2);
+            }
+            catch (Exception e)
+            {
+                sendMessage(e.getMessage());
+            }
+        }
+    }
+
+    //key - device name (pump, bypass, valve, gate), value - ststus int number or boolean number
+    private HashMap<String, Integer> status = new HashMap<>();
+    private HashMap<String, Boolean> opened = new HashMap<>();
+
+    private String arduinoName;
+    private String gaugeName;
+    int columnNumber;
+    private Arduino arduino;
+    private Gauge gauge;
+
+
 
     public final String[] statuses = new String[]{
             "device switched off",                                //0
@@ -49,17 +71,10 @@ class GateControl extends ControlDevice {
             "device switched on, but there is an unknown error",  //5
             "Cant't open. Pressure difference is too high",        //6
             "pressure in vessel is too high",                        //7
-            "Hardware error. Device doesn't response. Check the cable.", //8
+            "Hardware error. Unit doesn't response. Check the cable.", //8
             "close valve for bypass pumping!"                           //9
     };
 
-    public final String[] types =  new String[]{
-            "some bug",
-            "pump",
-            "bypass",
-            "valve",
-            "gate"
-    };
 
     private double columnPressure;
     private double vesselPressure;
@@ -72,8 +87,8 @@ class GateControl extends ControlDevice {
     private int maxPresDifference = 10;
 
     //for Gauge
-    private int columnGaugeNumber;
-    private int vesselGaugeNumber;
+    private String columnGaugeName;
+    private String vesselGaugeName;
 
     //for Arduino
     private int pumpDigitalPin;
@@ -88,31 +103,21 @@ class GateControl extends ControlDevice {
     private int bypassAnalogOpenedPin;
     private int bypassAnalogClosedPin;
 
-    /*
-    sound not normal for pump -> opened but this way is more compact
 
-    0 -> some bug
-    1 -> pump
-    2 -> bypass
-    3 -> valve
-    4 -> gate
-    5 -> nothing yet
-     */
-    private boolean[] opened;
-    private int[] status;
+
 
 
     public int getPumpStatus() {
-        return status[1];
+        return status.get("pump");
     }
 
-    public int getBypassStatus() { return status[2];}
+    public int getBypassStatus() { return status.get("bypass");}
 
     public int getValveStatus() {
-        return status[3];
+        return status.get("valve");
     }
 
-    public int getGateStatus() { return status[4];}
+    public int getGateStatus() { return status.get("pump");}
 
     //GateControl Methods
 
@@ -134,13 +139,13 @@ class GateControl extends ControlDevice {
         }
 
         String digitalOutput = (enablePump) ? " 1" : " 0";
-        if ((opened[1] ^ enablePump) && isCorrectControl)
+        if ((opened.get("pump") ^ enablePump) && isCorrectControl)
         {
             String someCommand = "deviceCommand dwrite "+ pumpDigitalPin +digitalOutput;
             arduino.runTerminalCommand(someCommand, 10);
             new Thread(() -> {
-                opened[1] = arduino.getDigitalPinsWritten()[pumpDigitalPin];
-                status[1] = (opened[1]) ? 2 : 1;
+                opened.put("pump",arduino.getDigitalPinsWritten()[pumpDigitalPin]);
+                status.put ("pump", (opened.get("pump")) ? 2 : 1);
             }).start();
 
             measureAndLog();
@@ -151,7 +156,6 @@ class GateControl extends ControlDevice {
     {
         boolean isCorrectControl;
         boolean openControl=false;
-        int typeNumber = 0;
 
         if (control.equals("open") || control.equals("close"))
         {
@@ -171,38 +175,35 @@ class GateControl extends ControlDevice {
         }
 
         if (isCorrectControl) {
-            columnPressure = gauge.pressure[columnGaugeNumber];
-            vesselPressure = gauge.pressure[vesselGaugeNumber];
+            columnPressure = gauge.pressure.get(columnGaugeName);
+            vesselPressure = gauge.pressure.get(vesselGaugeName);
             pressureDifference = Math.abs(columnPressure-vesselPressure);
             isPumpOn = arduino.getDigitalPinsWritten()[pumpDigitalPin];
 
             switch (type)
             {
                 case "valve" : {
-                    typeNumber = 3;
                     valve(openControl);
                 }
                 break;
                 case "gate" : {
-                    typeNumber = 4;
                     gate(openControl);
                 }
                 break;
                 case "bypass" : {
-                    typeNumber = 2;
                     bypass(openControl);
                 }
                 break;
             }
 
-            isOpened(typeNumber, openControl);
+            isOpened(type, openControl);
         }
     }
 
 
     private void valve(boolean open)
     {
-        if (open ^ opened[3]) {
+        if (open ^ opened.get("valve")) {
             if (open) {
                 if (isPumpOn || (columnPressure > 700)) {
                     String someCommand = "deviceCommand dwrite " + valveDigitalPin + " 1";
@@ -221,12 +222,11 @@ class GateControl extends ControlDevice {
 
     private void gate(boolean open)
     {
-        if (open ^ opened[4])
+        if (open ^ opened.get("gate"))
         {
             if (open) {
                 if (pressureDifference < maxPresDifference && vesselPressure < maxPresDifference) {
                     String someCommand = "deviceCommand dwrite " + gateDigitalPin + " 1";
-                    System.out.println(someCommand);
                     arduino.runTerminalCommand(someCommand, 10);
                     measureAndLog();
                 } else {
@@ -247,14 +247,14 @@ class GateControl extends ControlDevice {
 
     private void bypass(boolean open)
     {
-        if (open ^ opened[2]) {
+        if (open ^ opened.get("bypass")) {
             if (open) {
-                if ((isPumpOn || (columnPressure > 700)) && (!opened[3])) {
+                if ((isPumpOn || (columnPressure > 700)) && (!opened.get("valve"))) {
                     String someCommand = "deviceCommand dwrite " + bypassDigitalPin + " 1";
                     arduino.runTerminalCommand(someCommand, 10);
 
                 } else{
-                    if (!opened[3]) sendMessage("close valve"+columnNumber+" for bypass pumping!");
+                    if (!opened.get("valve")) sendMessage("close valve"+columnNumber+" for bypass pumping!");
                     else sendMessage("pressure difference is too high.");
                 }
             } else {
@@ -267,7 +267,7 @@ class GateControl extends ControlDevice {
     }
 
     //compares the user request with the sensors measurements and sets real status of the valve
-    synchronized private void isOpened(int type, boolean wasOpened)
+    synchronized private void isOpened(String type, boolean wasOpened)
     {
 
         Thread checkGate = new Thread(new Runnable() {
@@ -285,17 +285,17 @@ class GateControl extends ControlDevice {
                     int openedPin = 1;
 
                     switch (type) {
-                        case 3: {
+                        case "valve": {
                             closedPin = valveAnalogClosedPin;
                             openedPin = valveAnalogOpenedPin;
                         }
                         break;
-                        case 4: {
+                        case "gate": {
                             closedPin = gateAnalogClosedPin;
                             openedPin = gateAnalogOpenedPin;
                         }
                         break;
-                        case 2: {
+                        case "bypass": {
                             closedPin = bypassAnalogClosedPin;
                             openedPin = bypassAnalogOpenedPin;
                         }
@@ -312,26 +312,26 @@ class GateControl extends ControlDevice {
                         if (openedSignal ^ wasOpened)  //means that the real position of the valve is not you wanted
                         {
                             //TODO add closing of the gates in case of errors!
-                            status[type] = 5;
-                            sendMessage("ERROR: " + types[type] + columnNumber + " wasn't " + action );
+                            status.put(type,5);
+                            sendMessage("ERROR: " + type + columnNumber + " wasn't " + action );
                         } else  //everything is good!
                         {
-                            status[type] = (openedSignal) ? 2 : 1;
-                            sendMessage(types[type] + columnNumber + " was " + action);
+                            status.put(type,(openedSignal) ? 2 : 1);
+                            sendMessage(type + columnNumber + " was " + action);
                         }
                     } else //sensors contradict. They are either broken or the pressure in pneumo line is low
                     {
-                        status[type] = 4;
-                        sendMessage("ERROR: " + types[type] + columnNumber + " wasn't " + action +
+                        status.put(type,4);
+                        sendMessage("ERROR: " + type + columnNumber + " wasn't " + action +
                                 ". Low pressure in pneumo line");
                     }
-                    opened[type] = openedSignal;
+                    opened.put(type,openedSignal);
                 }
                 catch (InterruptedException ignored){}
                 measureAndLog();
             }
         });
-        checkGate.setName("Defining the status of the device "+types[type]);
+        checkGate.setName("Defining the status of the device "+type);
         checkGate.start();
     }
 
@@ -374,10 +374,16 @@ class GateControl extends ControlDevice {
                    break;
                    case "maxpressuredifference" : maxPresDifference = Integer.parseInt(command[1]);
                    break;
-                   case "columngauge" : columnGaugeNumber = Integer.parseInt(command[1]);
+                   case "columngauge" : columnGaugeName = command[1];
                    break;
-                   case "vesselgauge" : vesselGaugeNumber = Integer.parseInt(command[1]);
+                   case "vesselgauge" : vesselGaugeName = command[1];
                    break;
+                   case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
+                       break;
+                   case "gauge": gaugeName = command[1];
+                       break;
+                   case "arduino": arduinoName = command[1];
+                       break;
                }
            }
            catch (Exception e)
@@ -408,10 +414,12 @@ class GateControl extends ControlDevice {
     @Override
     protected void measureAndLog() {
         try {
-            dataLog.write("time "+status[1]+" "+status[2]+" "+status[3]+" "+status[4]);
-            for (int deviceNumber : config.elements)
+            String mes = "time ";
+            for (int someValue: status.values()) mes+=someValue+" ";
+            dataLog.write(mes);
+            for (String someDevice: config.devices)
             {
-                loggerMap.get(deviceNumber).write("time " + status[deviceNumber]);
+                loggerMap.get(someDevice).write("time " + status.get(someDevice));
             }
         }
         catch (Exception  e)

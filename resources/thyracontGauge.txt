@@ -4,8 +4,8 @@ command tgag
 this
 
 */
-ID 1
+number 1
 name thyracontGauge
 port COM49
-devices 1 2
+devices column1 vessel
 open COM49

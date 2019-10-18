@@ -1,10 +1,17 @@
 package ru.mauveferret;
 
+import java.util.HashMap;
+
 public class SerialConsole extends SerialDevice {
 
     SerialConsole(String fileName) {
         super(fileName);
-        deviceAccessLevel = 9;
+        unitAccessLevel = 9;
+    }
+
+    @Override
+    protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+
     }
 
     void write(String message)

@@ -11,33 +11,36 @@ public abstract class Gauge extends SerialDevice {
 
     protected Gauge(String fileName) {
         super(fileName);
-        deviceAccessLevel = 2;
+        unitAccessLevel = 2;
     }
 
     protected abstract double measure(int gauge);
     protected abstract void calibrate(String gaugeType);
 
+
     @Override
-    protected void initialize() {
-        String newPath =(new File(config.dataPath)).getParent();
-        for (int number: config.elements)
+    protected void convertDataFromInitializeToLocalType(HashMap<String,String> initializeData)
+    {
+
+        for (String someDevice: config.devices)
         {
-            loggerMap.put(number, new Logger(false));
-            String sep = File.separator;
-            String pressurePath = newPath+sep+"values"+sep+"pressure"+sep+config.name +number+".txt";
-            loggerMap.get(number).createFile(pressurePath,"");
+            try {
+                String pres = initializeData.get(someDevice).split(" ")[1].replaceAll(",",".");
+                pressure.put(someDevice, Double.parseDouble(pres));
+            }
+            catch (Exception e)
+            {
+                sendMessage("Pressure input failed: "+e.getMessage());
+            }
         }
-        super.initialize();
     }
 
 
+    //key - device name (column1, vessel), value - double pressure
+    protected HashMap<String, Double> pressure = new HashMap<>();
+
     //made to realize call method
     protected boolean deviceIsOn=false;
-    //keeps pressures current value. pressure[0] - is always null!
-    //FIXME take values from the DataLog
-    protected double[] pressure = new double[]{-1,0.0001,0.1,0};
-    //used to write single pressure from every gauge/ Can be used by third party software
-    private HashMap<Integer, Logger> loggerMap = new HashMap<>();
 
     @Override
     protected void measureAndLog() {
@@ -50,11 +53,11 @@ public abstract class Gauge extends SerialDevice {
                 {
                     try {
                         String logPressures = "time ";
-                        for (int deviceNumber : config.elements)
+                        for (String someDevice : config.devices)
                         {
-                            measure(deviceNumber);
-                            String pr = String.format("%6.3e",pressure[deviceNumber]);
-                            loggerMap.get(deviceNumber).write("time " + pr);
+                            measure(config.devices.indexOf(someDevice)+1);
+                            String pr = String.format("%6.3e",pressure.get(someDevice));
+                            loggerMap.get(someDevice).write("time " + pr);
                             logPressures+=pr+" ";
                         }
                         dataLog.write(logPressures);
@@ -92,13 +95,14 @@ public abstract class Gauge extends SerialDevice {
             case "measure":
             {
                 //check if the user entered gauge number and if yes - checking if its valid
-                if ((command.length>2) && (command[2].matches("[123]")))
+                if ((command.length>2) && (config.devices.contains(command[2])))
                 {
-                    measure(Integer.parseInt(command[2]));
-                    sendMessage("pressure in gauge "+command[2]+" is "+pressure[Integer.parseInt(command[2])]);
+                    //FIXME +1
+                    measure(config.devices.indexOf(command[2])+1);
+                    sendMessage("pressure in gauge "+command[2]+" is "+pressure.get(command[2]));
                 }
                 else
-                    sendMessage("enter gauge number (1-3) as an option");
+                    sendMessage("enter correct gauge name as an option");
             }
             break;
             case "calibrate":
@@ -116,7 +120,7 @@ public abstract class Gauge extends SerialDevice {
 
     @Override
     protected TreeMap<String, String> getCommands() {
-        commands.put("measure", "measures pressure in mBar by some gauge in form: measure $gauge number$ ");
+        commands.put("measure", "measures pressure in mBar by some gauge in form: measure $gauge name$ ");
         commands.put("calibrate", "makes a calibration of the pirani or cold cathode in form: calibrate $type$");
         commands.put("turn","enable or disable the gauge in form: turn $on/off$ $gauge_number$ ");
         return super.getCommands();

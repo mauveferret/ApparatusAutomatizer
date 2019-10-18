@@ -2,49 +2,68 @@ package ru.mauveferret;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.HashMap;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-abstract public class RecordingDevice extends Device {
+abstract public class RecordingDevice extends Unit {
 
-
-
-    //TODO must be filled!
-     String pathForValueFile;
-    protected String[] types = new String[50];
-
-    //like columnNumber
-    int deviceIndex;
+    public RecordingDevice(String fileName) {
+        super(fileName);
+    }
 
     //used to write single pressure from every gauge/ Can be used by third party software
-    private HashMap<Integer, Logger> loggerMap = new HashMap<>();
+    protected HashMap<String, Logger> loggerMap = new HashMap<>();
 
-    //is filled by the initialize data from the logs
-   protected String[] dataFromInitialize = new String[50];
-    abstract void convertDataFromInitializeToArray(String[] initializeData);
+
+    //contains initial values for all devices, key = device, value = value (String)
+    private HashMap<String,String> dataFromInitialize = new HashMap<>();
+    protected abstract void convertDataFromInitializeToLocalType(HashMap<String,String> initializeData);
 
     @Override
     protected void initialize() {
         super.initialize();
         String newPath = (new File(config.dataPath)).getParent();
-        for (int number : config.elements) {
-            loggerMap.put(number, new Logger(false));
+        for (String someDevice : config.devices) {
+           //int deviceNumber = config.devices.indexOf(someDevice);
+            loggerMap.put(someDevice, new Logger(true));
             String sep = File.separator;
-            String pressurePath = newPath + sep + "values" + sep + config.name + sep + types[number] + deviceIndex + ".txt";
+            String pressurePath = newPath + sep + "values" + sep + config.name +
+                    sep + someDevice + config.unitNumber + ".txt";
             File singleValue = new File(pressurePath);
             if (singleValue.exists())
             {
                try {
                    Scanner reader = new Scanner(singleValue);
-                   dataFromInitialize[number] = reader.nextLine();
+                   dataFromInitialize.put(someDevice, reader.nextLine());
                    reader.close();
                }
                catch (FileNotFoundException ignored){}
+               catch (NoSuchElementException e) {
+                   try {
+                       sendMessage(someDevice+" log is empty! Filliling by some gag");
+                       FileWriter writer = new FileWriter(singleValue, true);
+                       writer.write("0 0");
+                       writer.close();
+                       dataFromInitialize.put(someDevice, "0 0");
+                   }
+                   catch (Exception ex)
+                   {
+                       ex.printStackTrace();
+                   }
+               }
             }
                 else
-                    loggerMap.get(number).createFile(pressurePath, "");
+            {
+                //FIXME 0 can cause problems for the first launch!
+                dataFromInitialize.put(someDevice, "0 0");
+            }
+            loggerMap.get(someDevice).createFile(pressurePath, "");
+                //
+                loggerMap.get(someDevice).setAppend(false);
         }
+        convertDataFromInitializeToLocalType(dataFromInitialize);
     }
 
     @Override

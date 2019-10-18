@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-class PasswordManager extends Device {
+class PasswordManager extends Unit {
 
     private AES aes = new AES();
     private SimpleDateFormat formatForDate = new SimpleDateFormat("HH:mm dd.MM.yyyy");
@@ -22,7 +22,7 @@ class PasswordManager extends Device {
         super(fileName);
     }
 
-    //TODO Make a part of the Device
+    //TODO Make a part of the Unit
 
     @Override
     protected void measureAndLog() {
