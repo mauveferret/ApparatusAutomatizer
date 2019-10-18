@@ -18,17 +18,33 @@ public class Arduino extends SerialUnit {
     public Arduino(String fileName) {
         super(fileName);
         unitAccessLevel = 9;
-        digitalPinsWritten = new boolean[]{false,false,false,false,false,false,false,false,false,false,false,false,false};
         analogPinsRead = new double[14];
     }
 
+
+
+
     @Override
     protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
-        //FIXME
+        for (String someDevice: config.devices)
+        {
+            String[] digitalpinsfromTHeFile = initializeData.get(someDevice).split(" ");
+            try {
+                //FIXME write loaded values on the ardino?! or it may cause relay rebooting?
+                for (int i=1; i<digitalpinsfromTHeFile.length;i++)
+                {
+                    digitalPinsWritten[i-1] = digitalpinsfromTHeFile[i].equals("1");
+                }
+            }
+            catch (Exception e)
+            {
+                sendMessage("12123 "+e.getMessage());
+            }
+        }
     }
 
     //arrays with pins status (only for dwrite, aread)
-    private boolean[] digitalPinsWritten = new boolean[14];
+    private boolean[] digitalPinsWritten;
     private double[] analogPinsRead = new double[14];
 
     //TODO create list with active pin numbers for log in order to save freespace
@@ -199,10 +215,20 @@ public class Arduino extends SerialUnit {
                 try {
                     String time = "time";
                     String dataToLog =time+" digital: ";
-                    for (boolean b: digitalPinsWritten) dataToLog+=(b) ? "1 " : "0 ";
-                    dataToLog+=" analog: ";
+                    String digitalPins = "";
+                    for (boolean b: digitalPinsWritten) digitalPins+=(b) ? "1 " : "0 ";
+
+                    for (String someDevice: config.devices)
+                    {
+                        loggerMap.get(someDevice).write("time " + digitalPins);
+                    }
+
+                    dataToLog+=digitalPins+" analog: ";
                     for (double d: analogPinsRead) dataToLog+=d+" ";
                     dataLog.write(dataToLog);
+
+
+
                     stop = Thread.currentThread().isInterrupted();
                     //TODO very bad
                     try {
