@@ -1,10 +1,10 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.SerialDevice;
+import ru.mauveferret.SerialUnit;
 
 import java.util.HashMap;
 
-public abstract class TMP extends SerialDevice {
+public abstract class TMP extends SerialUnit {
 
     protected TMP(String fileName) {
         super(fileName);

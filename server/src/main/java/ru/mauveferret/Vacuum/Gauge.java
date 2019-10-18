@@ -1,13 +1,11 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Logger;
-import ru.mauveferret.SerialDevice;
+import ru.mauveferret.SerialUnit;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-public abstract class Gauge extends SerialDevice {
+public abstract class Gauge extends SerialUnit {
 
     protected Gauge(String fileName) {
         super(fileName);

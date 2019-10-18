@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gateControl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gateControl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RecordingDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RecordingUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,21 +260,7 @@
       <workItem from="1571216381116" duration="17706000" />
       <workItem from="1571296909164" duration="17853000" />
       <workItem from="1571322478084" duration="8601000" />
-      <workItem from="1571399072465" duration="16299000" />
-    </task>
-    <task id="LOCAL-00025" summary="server made">
-      <created>1567882821203</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1567882821203</updated>
-    </task>
-    <task id="LOCAL-00026" summary="first encrypted string transfer success!">
-      <created>1567933277305</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1567933277305</updated>
+      <workItem from="1571399072465" duration="17160000" />
     </task>
     <task id="LOCAL-00027" summary="starting separation">
       <created>1567939429719</created>
@@ -598,7 +591,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571415643617</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="some bugs fixed, everything works">
+      <created>1571417607526</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1571417607526</updated>
+    </task>
+    <task id="LOCAL-00075" summary="moved measureAndLog() to recodingUnit">
+      <created>1571417663531</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1571417663531</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,8 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="everybody seems to work, som porn solutions in ControlDevice" />
-    <MESSAGE value="ServerCommunicator moved to server" />
     <MESSAGE value="packaging made, vaccuum package addded, everything works" />
     <MESSAGE value="packaging in client made, works" />
     <MESSAGE value="some rubbish added" />
@@ -644,6 +649,8 @@
     <MESSAGE value="tooltips added to GUI, works" />
     <MESSAGE value="recordingDevice added" />
     <MESSAGE value="Device renaimed to Unit&#10;ConrolDevice exterminated&#10;Initialize values input made" />
-    <option name="LAST_COMMIT_MESSAGE" value="Device renaimed to Unit&#10;ConrolDevice exterminated&#10;Initialize values input made" />
+    <MESSAGE value="some bugs fixed, everything works" />
+    <MESSAGE value="moved measureAndLog() to recodingUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved measureAndLog() to recodingUnit" />
   </component>
 </project>

@@ -16,8 +16,7 @@ public class Main {
         //System.out.println(passwordManager.IsPasswordValid("admin", "password"));
         //System.out.println(passwordManager.loginHasNotExpired("admin"));
 
-        //TODO it would be MUCH more comfortable if the filename equals deviceName
-        //TODO  configPath should bi in directories  vacuum, discharge etc.
+
 
         SerialConsole serialConsole = new SerialConsole("console");
         ProgramAnalyzer analyzer = new ProgramAnalyzer("analyzer");

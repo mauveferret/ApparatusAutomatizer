@@ -6,9 +6,9 @@ import jssc.SerialPortList;
 
 import java.util.TreeMap;
 
-public abstract class SerialDevice extends RecordingDevice {
+public abstract class SerialUnit extends RecordingUnit {
 
-    public SerialDevice(String fileName) {
+    public SerialUnit(String fileName) {
         super(fileName);
     }
 
@@ -23,7 +23,7 @@ public abstract class SerialDevice extends RecordingDevice {
     //indicates if the reconnection is active
     private boolean isReconnectActive = false;
 
-    //SerialDevice(){}
+    //SerialUnit(){}
 
     //Getters
 

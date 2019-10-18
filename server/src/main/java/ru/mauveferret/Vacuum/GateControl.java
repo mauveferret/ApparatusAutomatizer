@@ -1,7 +1,7 @@
 package ru.mauveferret.Vacuum;
 
 import ru.mauveferret.Arduino;
-import ru.mauveferret.RecordingDevice;
+import ru.mauveferret.RecordingUnit;
 
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -14,7 +14,7 @@ also controlled by the arduino. Gate control allows to control forlinePump, valv
 potentially crucial actions like "please open turn off forline pump while TMp is on"
 or "please open valve when pressure before is much another tha pressure after"
  */
-class GateControl extends RecordingDevice {
+class GateControl extends RecordingUnit {
 
     //FIXME remove Control device
 
@@ -56,7 +56,6 @@ class GateControl extends RecordingDevice {
 
     private String arduinoName;
     private String gaugeName;
-    int columnNumber;
     private Arduino arduino;
     private Gauge gauge;
 
@@ -216,7 +215,7 @@ class GateControl extends RecordingDevice {
                 arduino.runTerminalCommand(someCommand, 10);
             }
         }else {
-            sendMessage("valve"+columnNumber+" already "+((open) ? "opened" : "closed"));
+            sendMessage("valve"+config.unitNumber+" already "+((open) ? "opened" : "closed"));
         }
     }
 
@@ -241,7 +240,7 @@ class GateControl extends RecordingDevice {
             }
         }
         else {
-            sendMessage("gate"+columnNumber+" already "+((open) ? "opened" : "closed"));
+            sendMessage("gate"+config.unitNumber+" already "+((open) ? "opened" : "closed"));
         }
     }
 
@@ -254,7 +253,7 @@ class GateControl extends RecordingDevice {
                     arduino.runTerminalCommand(someCommand, 10);
 
                 } else{
-                    if (!opened.get("valve")) sendMessage("close valve"+columnNumber+" for bypass pumping!");
+                    if (!opened.get("valve")) sendMessage("close valve"+config.unitNumber+" for bypass pumping!");
                     else sendMessage("pressure difference is too high.");
                 }
             } else {
@@ -262,7 +261,7 @@ class GateControl extends RecordingDevice {
                 arduino.runTerminalCommand(someCommand, 10);
             }
         }    else {
-            sendMessage("bypass"+columnNumber+" already "+((open) ? "opened" : "closed"));
+            sendMessage("bypass"+config.unitNumber+" already "+((open) ? "opened" : "closed"));
         }
     }
 
@@ -313,16 +312,16 @@ class GateControl extends RecordingDevice {
                         {
                             //TODO add closing of the gates in case of errors!
                             status.put(type,5);
-                            sendMessage("ERROR: " + type + columnNumber + " wasn't " + action );
+                            sendMessage("ERROR: " + type + config.unitNumber + " wasn't " + action );
                         } else  //everything is good!
                         {
                             status.put(type,(openedSignal) ? 2 : 1);
-                            sendMessage(type + columnNumber + " was " + action);
+                            sendMessage(type + config.unitNumber + " was " + action);
                         }
                     } else //sensors contradict. They are either broken or the pressure in pneumo line is low
                     {
                         status.put(type,4);
-                        sendMessage("ERROR: " + type + columnNumber + " wasn't " + action +
+                        sendMessage("ERROR: " + type + config.unitNumber + " wasn't " + action +
                                 ". Low pressure in pneumo line");
                     }
                     opened.put(type,openedSignal);
@@ -378,8 +377,6 @@ class GateControl extends RecordingDevice {
                    case "columngauge" : columnGaugeName = command[1];
                    break;
                    case "vesselgauge" : vesselGaugeName = command[1];
-                   break;
-                   case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
                    break;
                    case "gauge": gaugeName = command[1];
                    break;

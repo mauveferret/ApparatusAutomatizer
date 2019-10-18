@@ -2,7 +2,7 @@ package ru.mauveferret;
 
 import java.util.HashMap;
 
-public class SerialConsole extends SerialDevice {
+public class SerialConsole extends SerialUnit {
 
     SerialConsole(String fileName) {
         super(fileName);

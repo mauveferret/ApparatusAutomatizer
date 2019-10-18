@@ -2,12 +2,12 @@ package ru.mauveferret.Vacuum;
 
 
 
-import ru.mauveferret.RecordingDevice;
+import ru.mauveferret.RecordingUnit;
 
 import java.util.HashMap;
 import java.util.TreeMap;
 
-class GuardianAngel extends RecordingDevice {
+class GuardianAngel extends RecordingUnit {
 
     //FIXME WTF?!
     GuardianAngel(String fileName) {

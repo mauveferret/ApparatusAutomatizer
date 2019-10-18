@@ -6,7 +6,7 @@ import java.util.TreeMap;
 public class Config {
 
     //like ID or columnNumber
-    String unitNumber ="ID isn't set";
+    public int unitNumber =1;
     public String name = "name isn't set";
     public String unitCommand = "name isn't set";
     String unitPort = "port isn't set";

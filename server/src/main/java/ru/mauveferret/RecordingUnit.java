@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-abstract public class RecordingDevice extends Unit {
+abstract public class RecordingUnit extends Unit {
 
-    public RecordingDevice(String fileName) {
+    public RecordingUnit(String fileName) {
         super(fileName);
     }
 
@@ -29,9 +29,9 @@ abstract public class RecordingDevice extends Unit {
            //int deviceNumber = config.devices.indexOf(someDevice);
             loggerMap.put(someDevice, new Logger(true));
             String sep = File.separator;
-            String pressurePath = newPath + sep + "values" + sep + config.name +
+            String singleValueLogPath = newPath + sep + "values" + sep + config.name +
                     sep + someDevice + config.unitNumber + ".txt";
-            File singleValue = new File(pressurePath);
+            File singleValue = new File(singleValueLogPath);
             if (singleValue.exists())
             {
                try {
@@ -59,7 +59,7 @@ abstract public class RecordingDevice extends Unit {
                 //FIXME 0 can cause problems for the first launch!
                 dataFromInitialize.put(someDevice, "0 0");
             }
-            loggerMap.get(someDevice).createFile(pressurePath, "");
+            loggerMap.get(someDevice).createFile(singleValueLogPath, "");
                 //
                 loggerMap.get(someDevice).setAppend(false);
         }

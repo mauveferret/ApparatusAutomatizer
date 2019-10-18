@@ -26,20 +26,19 @@ public abstract  class Unit extends Thread{
         path+=separator+"resources"+separator;
         config.name = fileName;
         config.configPath = path+separator+fileName+".txt";
+
+        //TODO  configPath should be in directories  vacuum, discharge etc.
+
         config.logPath = path+"logs"+separator+fileName+"Log.txt";
         config.dataPath = path+"data"+separator+fileName+"Data.txt";
         messageLog.createFile(config.logPath,"time device message");
         importConfigurationFile();
     }
 
-    /*TODO class with huge Map, which connects some number with error type.
-    It will help to send errors to client
-     */
-
     Unit(){}
 
     protected abstract void measureAndLog();
-    protected void  initialize()  {  }
+    protected void  initialize() {}
 
     //disable all proccesses, threads in order to exit program correctly
     boolean stopUnit = false;
@@ -163,7 +162,15 @@ public abstract  class Unit extends Thread{
         String[] command = line.split(" ");
         switch (command[0].toLowerCase())
         {
-            case "number": config.unitNumber = command[1];
+            case "number": {
+                try {
+                    config.unitNumber = Integer.parseInt(command[1]);
+                }
+                catch (Exception e)
+                {
+                    sendMessage("Number option is incorrect.");
+                }
+            }
                 break;
             case "name": config.name = command[1];
                 break;

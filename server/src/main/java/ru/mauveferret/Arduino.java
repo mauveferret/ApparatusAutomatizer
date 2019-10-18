@@ -13,7 +13,7 @@ import java.util.TreeMap;
 
 //TODO проверка корректного ввода пинов
 
-public class Arduino extends SerialDevice {
+public class Arduino extends SerialUnit {
 
     public Arduino(String fileName) {
         super(fileName);
@@ -49,7 +49,7 @@ public class Arduino extends SerialDevice {
 
     synchronized private boolean digitalWrite(String pin, boolean value)
     {
-           String message=fillStringByZeros(config.unitNumber,3);
+           String message=fillStringByZeros(config.unitNumber+"",3);
            message+="DO"+fillStringByZeros(pin,2)+(value ? 1 : 0);
            writeString(message+fillStringByZeros(""+checkSum(message),3)+"\n");
            String answer = readString("\n");
@@ -68,7 +68,7 @@ public class Arduino extends SerialDevice {
 
     synchronized private boolean digitalRead(String pin)
     {
-            String message = fillStringByZeros(config.unitNumber,3);
+            String message = fillStringByZeros(config.unitNumber+"",3);
             message +="DI" + fillStringByZeros(pin, 2);
             writeString(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
             String answer = readString("\n");
@@ -87,7 +87,7 @@ public class Arduino extends SerialDevice {
 
     synchronized private boolean analogWrite(String pin, int value)
     {
-            String message=fillStringByZeros(config.unitNumber,3);
+            String message=fillStringByZeros(config.unitNumber+"",3);
             message+="AO"+fillStringByZeros(pin,2)+fillStringByZeros(""+value*51, 4);
             writeString(message+fillStringByZeros(""+checkSum(message),3)+"\n");
             String answer = readString("\n");
@@ -97,7 +97,7 @@ public class Arduino extends SerialDevice {
 
     synchronized private double analogRead(String pin)
     {
-            String message = fillStringByZeros(config.unitNumber,3);
+            String message = fillStringByZeros(config.unitNumber+"",3);
             message += "AI" + fillStringByZeros(pin, 2);
             writeString(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
             String answer = readString("\n");
