@@ -14,7 +14,7 @@ public class Vacuum {
     public Vacuum(Terminal terminal) {
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");
         ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
-        PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
+      //  PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
         Arduino arduino = new Arduino("arduino");
         GateControl gateControl = new GateControl("gateControl");
         VacuumServer server = new VacuumServer("server");
@@ -22,7 +22,7 @@ public class Vacuum {
         terminal.addDevice(arduino);
         terminal.addDevice(server);
         terminal.addDevice(thyracontGauge);
-        terminal.addDevice(pfeifferGauge);
+        //terminal.addDevice(pfeifferGauge);
         terminal.addDevice(leyboldTMP);
         terminal.addDevice(gateControl);
         terminal.addDevice(guardianAngel);

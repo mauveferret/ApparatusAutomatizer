@@ -45,7 +45,7 @@ class GateControl extends RecordingDevice {
             }
             catch (Exception e)
             {
-                sendMessage(e.getMessage());
+                sendMessage("12123 "+e.getMessage());
             }
         }
     }
@@ -366,6 +366,7 @@ class GateControl extends RecordingDevice {
                    case "gatecontrolpin": gateDigitalPin =  Integer.parseInt(command[1]);
                    break;
                    case "bypasscontrolpin" : bypassDigitalPin = Integer.parseInt(command[1]);
+                   break;
                    case "gateanalogpins" :
                    {
                        gateAnalogClosedPin =  Integer.parseInt(command[1]);
@@ -379,17 +380,16 @@ class GateControl extends RecordingDevice {
                    case "vesselgauge" : vesselGaugeName = command[1];
                    break;
                    case "columnnumber": columnNumber =  Integer.parseInt(command[1]);
-                       break;
+                   break;
                    case "gauge": gaugeName = command[1];
-                       break;
+                   break;
                    case "arduino": arduinoName = command[1];
-                       break;
+                   break;
                }
            }
            catch (Exception e)
            {
-               sendMessage("incorrect option.");
-               sendMessage(e.getMessage());
+               sendMessage("incorrect option: "+ command[1]+". "+e.getMessage());
            }
 
     }
@@ -425,6 +425,7 @@ class GateControl extends RecordingDevice {
         catch (Exception  e)
         {
             sendMessage("ERROR while log: "+e.getMessage());
+            e.printStackTrace();
         }
     }
 }

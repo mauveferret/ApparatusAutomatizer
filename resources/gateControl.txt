@@ -5,7 +5,7 @@ devices pump bypass valve gate
 arduino arduino
 gatecontrolpin 6
 forlinepin 4
-bypassControlPin 8
+bypassControlPin 9
 gateanalogpins 0 1
 maxPressureDifference 10
 gauge thyracontGauge

@@ -149,7 +149,8 @@ public abstract  class Unit extends Thread{
                 }
             }
             scanner.close();
-            sendMessage("~"+path.substring(path.lastIndexOf("\\")) + " imported correctly.");
+            //FIXME
+            //sendMessage("~"+path.substring(path.lastIndexOf("\\")) + " imported correctly.");
         }
         catch (IOException e)
         {
@@ -260,7 +261,7 @@ public abstract  class Unit extends Thread{
     }
 
     protected void sendMessage(String message) {
-        message = System.currentTimeMillis() + " " + message;
+        message = config.name+" "+System.currentTimeMillis() + " " + message;
         System.out.println(message);
         messageLog.write(message + "\n");
     }
