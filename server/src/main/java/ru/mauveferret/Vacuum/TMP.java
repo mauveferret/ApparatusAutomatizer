@@ -21,51 +21,29 @@ public abstract class TMP extends SerialUnit {
         for (String someDevice: config.devices)
         {
             try {
-                try {
-                    for (String dataType: initializeData.keySet())
-                    {
-                        switch (dataType)
-                        {
-                            case "temperature" : {
-                               String temp =  initializeData.get(dataType).split(" ")[1];
-                                temperature = Integer.parseInt(temp.replaceAll(",","."));
-                            }
-                            break;
-                            case "frequency" : {
-                                String freq =  initializeData.get(dataType).split(" ")[1];
-                                frequency = Integer.parseInt(freq.replaceAll(",","."));
-                            }
-                            break;
-                            case "voltage" : {
-                                String volt =  initializeData.get(dataType).split(" ")[1];
-                                voltage = Double.parseDouble(volt.replaceAll(",","."));
-                            }
-                            break;
-                            case "current" : {
-                                String curr =  initializeData.get(dataType).split(" ")[1];
-                                current = Double.parseDouble(curr.replaceAll(",","."));
-                            }
-                            break;
-                            case "status" : {
-                                String buttonStatus = initializeData.get(dataType).split(" ")[1];
-                               isEnabled = (buttonStatus.charAt(0)+"").equals("1");
-                               isCoolingOn = (buttonStatus.charAt(1)+"").equals("1");
-                               isControlOn = (buttonStatus.charAt(2)+"").equals("1");
-                               isStandbyOn = (buttonStatus.charAt(3)+"").equals("1");
-                            }
-                            break;
-                        }
-                    }
-                }
-                catch (Exception e)
+                String sData = initializeData.get(someDevice).split(" ")[1].replaceAll(",",".");
+                switch (someDevice)
                 {
-                    sendMessage("12123 "+e.getMessage());
+                    case "temperature" : temperature = Integer.parseInt(sData);
+                    break;
+                    case "frequency" : frequency = Integer.parseInt(sData);
+                    break;
+                    case "voltage" : voltage = Double.parseDouble(sData);
+                    break;
+                    case "current" : current = Double.parseDouble(sData);
+                    break;
+                    case "status" : {
+                        isEnabled = (sData.charAt(0)+"").equals("1");
+                        isCoolingOn = (sData.charAt(1)+"").equals("1");
+                        isControlOn = (sData.charAt(2)+"").equals("1");
+                        isStandbyOn = (sData.charAt(3)+"").equals("1");
+                    }
+                    break;
                 }
-
             }
             catch (Exception e)
             {
-                sendMessage("Pressure input failed: "+e.getMessage());
+                sendMessage("12123 "+e.getMessage());
             }
         }
     }
