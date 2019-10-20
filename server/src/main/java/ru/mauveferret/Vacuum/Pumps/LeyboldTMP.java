@@ -71,6 +71,8 @@ public class LeyboldTMP extends TMP {
         statusRequest[10] = control;
     }
 
+    //FIXME realize standby and cooling
+
     private void setStandBy(boolean standBy)
     {
         statusRequest[8] = standBy;
@@ -185,38 +187,4 @@ public class LeyboldTMP extends TMP {
             deviceIsOn = false;
         }
     }
-
-    //terminal related
-
-    @Override
-    protected void measureAndLog() {
-        dataLog.createFile(config.dataPath, "time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) ");
-        Thread log = new Thread(() -> {
-            boolean stop = true;
-
-                while (stop)
-                {
-                    //FIXME in case of loss of the message it stops measuring! Check it
-                    measure();
-                    dataLog.write("time "+temperature+" "+frequency+" "+voltage+" "+current+" "+status);
-                    stop = !Thread.currentThread().isInterrupted();
-                }
-
-        });
-        log.setName(config.name);
-        log.start();
-    }
-
-    @Override
-    protected TreeMap<String, String> getCommands() {
-        commands.put("run", "launches the TMP in form $run$");
-        commands.put("stop","stops the TMP in form: $stop$");
-        commands.put("data","");
-        commands.put("measure","");
-        commands.put("temperature", "returnes the temperature of the TMP in celsium in form: $temperature$");
-        commands.put("frequency", "...");
-        commands.put("control","enables or disables control of the TMP  in form control $on/off$");
-        return super.getCommands();
-    }
-
 }

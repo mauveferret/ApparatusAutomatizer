@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="some bugs fixed">
+    <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="TMP initialize made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/arduino.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/arduino.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -253,6 +254,8 @@
       <workItem from="1571296909164" duration="17853000" />
       <workItem from="1571322478084" duration="8601000" />
       <workItem from="1571399072465" duration="19666000" />
+      <workItem from="1571475157310" duration="5850000" />
+      <workItem from="1571551124611" duration="4385000" />
     </task>
     <task id="LOCAL-00028" summary="separation made (gitignore changed very much)">
       <created>1567941601685</created>
@@ -618,7 +621,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="packaging in client made, works" />
     <MESSAGE value="some rubbish added" />
     <MESSAGE value="some GUI elements added" />
     <MESSAGE value="some css added" />
@@ -643,6 +645,7 @@
     <MESSAGE value="some bugs fixed, everything works" />
     <MESSAGE value="moved measureAndLog() to recodingUnit" />
     <MESSAGE value="some bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="some bugs fixed" />
+    <MESSAGE value="TMP initialize made" />
+    <option name="LAST_COMMIT_MESSAGE" value="TMP initialize made" />
   </component>
 </project>
