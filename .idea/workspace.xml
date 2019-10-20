@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/TMP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/ControlUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/angel.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,14 +256,7 @@
       <workItem from="1571322478084" duration="8601000" />
       <workItem from="1571399072465" duration="19666000" />
       <workItem from="1571475157310" duration="5850000" />
-      <workItem from="1571551124611" duration="4667000" />
-    </task>
-    <task id="LOCAL-00029" summary="separation made (gitignore changed very much)">
-      <created>1567942522487</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1567942522487</updated>
+      <workItem from="1571551124611" duration="11149000" />
     </task>
     <task id="LOCAL-00030" summary="client/server conection works good, encryption made">
       <created>1567947178342</created>
@@ -596,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571556855159</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="TMP initialize made">
+      <created>1571557133845</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1571557133845</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

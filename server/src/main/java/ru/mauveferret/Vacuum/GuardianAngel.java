@@ -9,7 +9,6 @@ import java.util.TreeMap;
 
 class GuardianAngel extends RecordingUnit {
 
-    //FIXME WTF?!
     GuardianAngel(String fileName) {
         super(fileName);
         unitAccessLevel = 2;
@@ -23,7 +22,7 @@ class GuardianAngel extends RecordingUnit {
     /*
     used to check if the temperature and pressure conditions are comfortable
     for devices.
-    In case of emergency it tries to save the devices: closes gates and valves
+    In case of emergency it tries to defend the devices: closes gates and valves
     works as thread
      */
 
@@ -31,7 +30,6 @@ class GuardianAngel extends RecordingUnit {
     private Gauge gauge;
     private GateControl gateControl;
     private TMP tmp;
-    private  GuardianAngel angel = this;
 
     //Getters and Setters
 
@@ -44,48 +42,65 @@ class GuardianAngel extends RecordingUnit {
 
 
     private void startCheckingPressure() {
-        Thread checkerThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                boolean stop = false;
-                while (!stop)
-                {
-                    while (continueChecking) {
-                        double pressureColumn = gauge.pressure.get("column");
-                        double pressureVessel = gauge.pressure.get("vessel");
-                        //boolean gate = gateControl.isGateOpened();
-                        //FIXME checking valve
-                        //boolean valve = gateControl.isValveOpened();
-                        //boolean pump = gateControl.pumpStatus();
-                        boolean turboPump = tmp.isEnabled();
-                        int temperature = tmp.getTemperature();
+        Thread checkerThread = new Thread(() -> {
+            boolean stop = false;
+            while (!stop)
+            {
+                while (continueChecking) {
+                    //fixme gauge names
+                    double pressureColumn = gauge.pressure.get("column1");
+                    double pressureVessel = gauge.pressure.get("vessel");
+                    int gate = gateControl.getGateStatus();
+                    int valve = gateControl.getValveStatus();
+                    int bypass = gateControl.getBypassStatus();
+                    int pump = gateControl.getPumpStatus();
+                    boolean turboPump = tmp.isEnabled();
+                    int temperature = tmp.getTemperature();
 
-                        //if pressure difference is too much or pressureVessel to much -> close gate
-                       // if ((Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10) && gate)
-                        {
-                            sendMessage("i'm closing the gates!");
-                            gateControl.runTerminalCommand("bla gate close", 10);
-                        }
-                        if ((pressureColumn>10 || (temperature>42)) && turboPump)
-                        {
-                            sendMessage("i'm closing the gates and stop the TMP!");
-                            tmp.runTerminalCommand( "bla stop",10);
-                            gateControl.runTerminalCommand("bla gate close", 10);
-                            //FIXME find better indication of  valve closing need
-                            gateControl.runTerminalCommand("bla valve close", 10);
-                        }
+                    //if pressure difference is too much or pressureVessel to much
+                    boolean highPressure = (Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10);
 
+                    if ((highPressure && (gate==2 || valve ==2)) || (gate>2 || valve >2))
+                    {
+                        if (gate>2 || valve >2)
+                            sendMessage("Valve error occured. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
+                            else
+                                sendMessage("High pressure. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
+                        gateControl.runTerminalCommand("bla gate close", 10);
+                        gateControl.runTerminalCommand("bla valve close", 10);
+                    }
+
+
+                    if ((pressureColumn>10 || (temperature>42)) && turboPump)
+                    {
+                        sendMessage("i'm closing the gates and stop the TMP!");
+                        tmp.runTerminalCommand( "bla stop",10);
+                        gateControl.runTerminalCommand("bla gate close", 10);
+                        //FIXME find better indication of  valve closing need
+                        gateControl.runTerminalCommand("bla valve close", 10);
                     }
 
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(100);
                     }
                     catch (Exception ignored){}
 
-                    stop = Thread.currentThread().isInterrupted();
                 }
 
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (Exception ignored){}
+
+                stop = Thread.currentThread().isInterrupted();
             }
+
+            //FIXME very bad
+            try {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException ignored){}
+
         });
         checkerThread.setName(config.name);
         checkerThread.start();
@@ -122,6 +137,7 @@ class GuardianAngel extends RecordingUnit {
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
+                //FIXME might be initialize will work only from the ...?
                 case "gauge": gauge =(Gauge) terminalSample.getDevice(command[1]);
                     break;
                 case "gatecontrol": gateControl = (GateControl) terminalSample.getDevice(command[1]);

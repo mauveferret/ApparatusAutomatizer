@@ -3,6 +3,5 @@ name server
 gauge thyracontGauge
 gatecontrol1 gate
 tmp1 tmppump
-bypass bypass
 name vacuumServer
 port 4004

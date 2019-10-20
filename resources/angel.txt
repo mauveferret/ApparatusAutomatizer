@@ -5,5 +5,8 @@ this
 
 */
 name angel
+number 1
+gauge thyracontGauge
+gatecontrol1 gate
 tmp1 tmppump
-bypass bypass
+start
