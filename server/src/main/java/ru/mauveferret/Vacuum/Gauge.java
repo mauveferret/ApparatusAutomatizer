@@ -10,6 +10,7 @@ public abstract class Gauge extends SerialUnit {
     protected Gauge(String fileName) {
         super(fileName);
         unitAccessLevel = 2;
+        enabled = 2;
     }
 
     protected abstract double measure(int gauge);
@@ -36,6 +37,12 @@ public abstract class Gauge extends SerialUnit {
 
     //key - device name (column1, vessel), value - double pressure
     protected HashMap<String, Double> pressure = new HashMap<>();
+    private int enabled = 2;
+
+
+    public int getEnabled() {
+        return enabled;
+    }
 
     //made to realize call method
     protected boolean deviceIsOn=false;
@@ -61,11 +68,14 @@ public abstract class Gauge extends SerialUnit {
                         dataLog.write(logPressures);
 
                         stop = Thread.currentThread().isInterrupted();
+                        enabled = 1;
                     }
                     catch (NullPointerException  e)
                     {
+                        enabled = 0;
                         sendMessage("ERROR while log: port wasn't created\n ");
                         reconnect();
+
                         break;
                     }
                 }

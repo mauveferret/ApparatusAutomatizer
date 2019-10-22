@@ -12,6 +12,15 @@ class GuardianAngel extends RecordingUnit {
     GuardianAngel(String fileName) {
         super(fileName);
         unitAccessLevel = 2;
+        enabled = 0;
+    }
+
+    @Override
+    protected void initialize() {
+        super.initialize();
+        gauge =(Gauge) terminalSample.getDevice(gaugeName);
+        gateControl = (GateControl) terminalSample.getDevice(gateName);
+        terminalSample.getDevice(tmpName);
     }
 
     @Override
@@ -30,7 +39,16 @@ class GuardianAngel extends RecordingUnit {
     private Gauge gauge;
     private GateControl gateControl;
     private TMP tmp;
+    private int enabled = 0;
 
+    private  String gaugeName;
+    private String gateName;
+    private String tmpName;
+
+
+    public int getEnabled() {
+        return enabled;
+    }
     //Getters and Setters
 
     private void setContinueChecking(boolean continueChecking) {
@@ -138,11 +156,11 @@ class GuardianAngel extends RecordingUnit {
         try {
             switch (command[0]) {
                 //FIXME might be initialize will work only from the ...?
-                case "gauge": gauge =(Gauge) terminalSample.getDevice(command[1]);
+                case "gauge": gaugeName = command[1];
                     break;
-                case "gatecontrol": gateControl = (GateControl) terminalSample.getDevice(command[1]);
+                case "gatecontrol": gateName = command[1];
                     break;
-                case "tmp" : tmp = (TMP)  terminalSample.getDevice(command[1]);
+                case "tmp" :  tmpName = command[1];
                 break;
             }
         }

@@ -2,6 +2,10 @@ command srv
 name server
 gauge thyracontGauge
 gatecontrol1 gate
+angel1 angel
+auto1 auto
 tmp1 tmppump
 name vacuumServer
 port 4004
+number 1
+devices column1previousCommands column2previousCommands

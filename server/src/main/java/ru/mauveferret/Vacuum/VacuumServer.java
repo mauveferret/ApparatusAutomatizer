@@ -2,8 +2,10 @@ package ru.mauveferret.Vacuum;
 
 import ru.mauveferret.Server;
 import ru.mauveferret.SocketCryptedCommunicator;
+import ru.mauveferret.Terminal;
 
 import java.text.DecimalFormat;
+import java.util.HashMap;
 
 class VacuumServer extends Server {
 
@@ -12,84 +14,129 @@ class VacuumServer extends Server {
     }
 
     @Override
-    protected void initialize() {
-        super.initialize();
-        try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
-        try {  tmp1 = (TMP) (terminalSample.getDevice(tmp1Name));} catch (Exception ignored) {}
-        try { tmp2 = (TMP) (terminalSample.getDevice(tmp2Name));} catch (Exception ignored) {}
-        try { gateControl1 = (GateControl) (terminalSample.getDevice(gateControl1Name));} catch (Exception ignored) {}
-        try {  gateControl2 = (GateControl) (terminalSample.getDevice(gateControl2Name));} catch (Exception ignored) {}
+    protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+        for (String someDevice: config.devices)
+        {
+            String[] digitalpinsfromTHeFile = initializeData.get(someDevice).split(" ");
+            try {
+                for (int i=1; i<digitalpinsfromTHeFile.length;i++)
+                {
+                    commandsFromClient[i-1] = Integer.parseInt(digitalpinsfromTHeFile[i]);
+                }
+            }
+            catch (Exception e)
+            {
+                sendMessage("12123 "+e.getMessage());
+            }
+        }
     }
 
+    @Override
+    protected void initialize() {
+        super.initialize();
+        try {  gauge= (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
+        try {tmp = (TMP) (terminalSample.getDevice(tmpName));} catch (Exception ignored) {ignored.printStackTrace();}
+        try {  gateControl = (GateControl) (terminalSample.getDevice(gateControlName));} catch (Exception ignored) {}
+        try {  angel = (GuardianAngel) (terminalSample.getDevice(angelName));} catch (Exception ignored) {}
+        try {  autoPumping = (AutoPumping) (terminalSample.getDevice(autoName));} catch (Exception ignored) {}
+    }
+
+
     Gauge gauge;
-    TMP tmp1;
-    TMP tmp2;
-    GateControl gateControl1;
-    GateControl gateControl2;
+    private TMP tmp;
+    AutoPumping autoPumping;
+    GuardianAngel angel;
+    GateControl gateControl;
 
-    private String gaugeName;
-    private String tmp1Name ;
-    private String tmp2Name = "tmp2";
-    private String gateControl1Name  = "gate";
-    private String gateControl2Name = "gate2" ;
-
+    String gaugeName;
+    private String tmpName ;
+    String gateControlName;
+    String autoName;
+    String angelName;
 
     private DecimalFormat decFormat = new DecimalFormat("#0.0");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
-    // FIXME why 6?
-    private int[] previousCommands = new int[20];
+    // 0 -> auto, angel, gauge,pump, bypass,valve,6 ->gate, 7 -> tmp control,
+    // tmp run, 9 -> tmp cool, 10 -> tmp standby   == 11 buttons
+    private int[] commandsFromClient = new int[11];
 
     @Override
     public void communicate(SocketCryptedCommunicator communicator)
     {
         String request = communicator.readEncryption();
-        try {
-            fullfillOrders(request.split(" ")[1], communicator);
+        String[] commandsArray = request.split(" ");
+        switch (commandsArray[1]) {
+            case ("vac"): {
+                try {
+                    //first column
+                    fullfillOrders(request.split(" ")[2], communicator);
+                    //second column
+                    //fullfillOrders(request.split(" ")[3], communicator);
+                } catch (ArrayIndexOutOfBoundsException ignored) {
+                    sendMessage(ignored.getMessage());
+                }
+                communicator.writeEncryption(createResponse());
+            }
+            break;
+            case ("but"): //to set button position in order not to change units by opening the client
+            {
+                String buttonPositions = (System.currentTimeMillis()+"").substring(7)+" but ";
+                for (int i=0;i < commandsFromClient.length; i++) buttonPositions+=commandsFromClient[i];
+                communicator.writeEncryption(buttonPositions);
+            }
+            break;
         }
-        catch (ArrayIndexOutOfBoundsException ignored){sendMessage(ignored.getMessage());}
-
-        //TODO since you have separate SOckets for different parts, you don't have to use "vac"
-        if (request.startsWith("vac"))
-        {
-
-        }
-       communicator.writeEncryption(createResponse());
     }
 
     private String createResponse()
     {
         //its useless to send first 7 digits, the ping of our system is little so client can calculate first digits
-        String response =(System.currentTimeMillis()+" ").substring(7);
-        //gatecontrol2 and gauges are not controlled yet
-        response+=columnData(gateControl1, tmp1)+" "+"00000000 "+"00 ";
+        //You can use vac to send error messages!!
+        String response =(System.currentTimeMillis()+"").substring(7)+" xyz ";
+        response+= columnMainParameters(1)+" "+"00000000000 ";
         //FIXME do you need replace?!
         response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
+        //Gauges TODO change it to column 2
         response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
         response+=String.format("%6.2e",gauge.pressure.get("vessel")).replace(",",".")+" ";
-        response+=tmp1.getFrequency()+" "+tmp1.getTemperature()+" ";
-        response+=decFormat.format(tmp1.getVoltage()).replace(",",".")+" ";
-        response+=decFormat.format(tmp1.getCurrent()).replace(",",".");
+        //tmp TODO  change  the first column to the second
+        response+=tmpMainParameters(1)+" "+tmpMainParameters(1);
+
         return  response;
     }
 
-    private String columnData(GateControl gateControl, TMP tmp){
-        String columnData=gateControl.getPumpStatus()+""+gateControl.getBypassStatus();
+    private String columnMainParameters(int columnNumber){
+        //PumpingColumn local = (columnNumber==1) ? column1 :column2;
+        //FIXME
+        //String columnData = autoPumping.getEnabled()+""+angel.getEnabled()+""+gauge.getEnabled();
+        String columnData = "002";
+        columnData+=gateControl.getPumpStatus()+""+gateControl.getBypassStatus();
         columnData+=gateControl.getValveStatus()+""+gateControl.getGateStatus();
         columnData+=booleanToString(tmp.isControlOn())+""+booleanToString(tmp.isEnabled());
-        columnData+=booleanToString(tmp.isStandbyOn())+""+booleanToString(tmp.isCoolingOn());
+        columnData+=booleanToString(tmp.isCoolingOn())+""+booleanToString(tmp.isStandbyOn());
         return columnData;
     }
+
+    private String tmpMainParameters(int columnNumber)
+    {
+        //PumpingColumn local = (columnNumber==1) ? column1 :column2;
+        String columnData =tmp.getFrequency()+" "+tmp.getTemperature()+" ";
+        columnData+=decFormat.format(tmp.getVoltage()).replace(",",".")+" ";
+        columnData+=decFormat.format(tmp.getCurrent()).replace(",",".");
+        return columnData;
+    }
+
+
     private void fullfillOrders(String commands, SocketCryptedCommunicator communicator)
     {
-        //FIXME new communication protocol
         //boolean[] newCommands = stringToBooleanArray(commands);
         for (int i=0;i<commands.length();i++)
         {
             int commandValue = Integer.parseInt(commands.charAt(i)+"");
-            if (commandValue !=previousCommands[i+1])
+            if (commandValue != commandsFromClient[i])
             {
-                previousCommands[i+1] =commandValue ;
-                executeCommand(i+1, communicator);
+                commandsFromClient[i] =commandValue ;
+                executeCommand(i, communicator);
             }
         }
     }
@@ -104,60 +151,41 @@ class VacuumServer extends Server {
     private void executeCommand(int commandIndex, SocketCryptedCommunicator communicator)
     {
 
-        String stmp1 = tmp1.config.unitCommand;
-        String gate1 = gateControl1.config.unitCommand;
+        String stmp1 =tmp.config.unitCommand;
+        String gate1 = gateControl.config.unitCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
-        //FIXME accessLevel
-        //FIXME change two commands to one by adding a String which either "on" or "stop"
-        switch (commandIndex)
-        {
-            case 6:
-            {
-                if (previousCommands[commandIndex]==1)
-                    terminalSample.launchCommand(stmp1+" run", true, accessLevel);
-                else
-                    terminalSample.launchCommand(stmp1+" stop", true, accessLevel);
+        boolean comIs1 = commandsFromClient[commandIndex]==1;
+        boolean comIs2 = commandsFromClient[commandIndex]==2;
+        switch (commandIndex){
+            case 8: {
+                terminalSample.launchCommand(stmp1+(comIs1 ? " run" : " stop"),
+                        true, accessLevel);
             }
             break;
-            case 5:
-            {
-                if (previousCommands[commandIndex]==1)
-                    terminalSample.launchCommand(stmp1+" control on", true, accessLevel);
-                else
-                    terminalSample.launchCommand(stmp1+" control off", true, accessLevel);
+            case 7: {
+                terminalSample.launchCommand(stmp1+" control "+(comIs1 ? "on" : "off"),
+                        true, accessLevel);
             }
             break;
-            case 4:
-            {
-                if (previousCommands[commandIndex]==2)
-                    terminalSample.launchCommand(gate1+" gate open", true, accessLevel);
-                else
-                    terminalSample.launchCommand(gate1+" gate close", true, accessLevel);
+            case 6: {
+                terminalSample.launchCommand(gate1+" gate "+(comIs2? "open" : "close"),
+                        true, accessLevel);
             }
             break;
-            case 3:
-            {
-                if (previousCommands[commandIndex]==2)
-                    terminalSample.launchCommand(gate1+" valve open", true, accessLevel);
-                else
-                    terminalSample.launchCommand(gate1+" valve close", true, accessLevel);
+            case 5: {
+               terminalSample.launchCommand(gate1+" valve "+(comIs2? "open" : "close"),
+                       true, accessLevel);
             }
             break;
-            case 2:
-            {
-                if (previousCommands[commandIndex]==2)
-                    terminalSample.launchCommand(gate1+" bypass open", true, accessLevel);
-                else
-                    terminalSample.launchCommand(gate1+" bypass close", true, accessLevel);
+            case 4: {
+                terminalSample.launchCommand(gate1+" bypass "+(comIs2? "open" : "close"),
+                        true, accessLevel);
             }
             break;
-            case 1:
-            {
-                if (previousCommands[commandIndex]==2)
-                    terminalSample.launchCommand(gate1+" pump on", true, accessLevel);
-                else
-                    terminalSample.launchCommand(gate1+" pump off", true, accessLevel);
+            case 3: {
+                terminalSample.launchCommand(gate1+" pump "+(comIs2? "on" : "off"),
+                        true, accessLevel);
             }
             break;
         }
@@ -166,19 +194,21 @@ class VacuumServer extends Server {
     @Override
     protected void chooseImportCommand(String line) {
         super.chooseImportCommand(line);
+
+
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
                 case "gauge": gaugeName = command[1];
-                    break;
-                case  "tmp1" : tmp1Name = command[1];
-                    break;
-                case  "gatecontrol1" : gateControl1Name = command[1];
-                    break;
-                case  "tmp2" : tmp2Name = command[1];
-                    break;
-                case  "gatecontrol2" : gateControl2Name = command[1];
-                    break;
+                break;
+                case  "tmp1" : { tmpName = command[1]; }
+                break;
+                case  "gatecontrol1" : gateControlName= command[1];
+                break;
+                case "angel1" : angelName = command[1];
+                break;
+                case "auto1" : autoName = command[1];
+                break;
             }
         }
         catch (Exception e)
@@ -188,4 +218,37 @@ class VacuumServer extends Server {
         }
     }
 
+    @Override
+    protected void measureAndLog() {
+        log = new Thread(() -> {
+            boolean stop = false;
+            //FIXME you don't have to use while
+            while (!stop)
+            {
+                try {
+                    String buttonsValues = "";
+                    for (int i: commandsFromClient) buttonsValues+=i+" ";
+
+                    for (String someDevice: config.devices)
+                    {
+                        loggerMap.get(someDevice).write("time " + buttonsValues);
+                    }
+
+                    stop = Thread.currentThread().isInterrupted();
+                    //TODO very bad
+                    try {
+                        Thread.sleep(500);
+                    }
+                    catch (Exception ignored){}
+                }
+                catch (Exception  e)
+                {
+                    sendMessage("ERROR while log: "+e.getMessage());
+                }
+            }
+
+        });
+        log.setName(config.name);
+        log.start();
+    }
 }

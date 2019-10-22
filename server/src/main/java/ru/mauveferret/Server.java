@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.TreeMap;
 
-public abstract class Server extends Unit {
+public abstract class Server extends RecordingUnit {
 
     public Server(String fileName) {
         super(fileName);
@@ -103,11 +103,6 @@ public abstract class Server extends Unit {
         if (command[1].equals("launch"))
             launchServer();
         super.chooseTerminalCommand(command);
-    }
-
-    @Override
-    protected void measureAndLog() {
-
     }
 
 }

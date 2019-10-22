@@ -28,48 +28,76 @@ public class VacuumController {
         //Gauges axis
 
         this.communicator = communicator;
-        pressureChartXAxis.setLabel("Time, ms");
-        pressureChartXAxis.setAnimated(true); // axis animations are removed
+        //pressureChartXAxis.setLabel("Time, ms");
+        pressureChartXAxis.setAnimated(false); // axis animations are removed
         pressureChartXAxis.setForceZeroInRange(false);
         pressureChartYAxis.setLabel("Pressure,torr");
-        pressureChartYAxis.setAnimated(true); // axis animations are removed
-        //pressureChartYAxis.setForceZeroInRange(false);
+        pressureChartYAxis.setAnimated(false); // axis animations are removed
 
         //FIXME how to make several axis/ Now only frequency is
         //TMP1 axis
-        tmp1ChartXAxis.setLabel("Time, ms");
-        tmp1ChartXAxis.setAnimated(true);
+        //tmp1ChartXAxis.setLabel("Time, ms");
+        tmp1ChartXAxis.setAnimated(false);
         tmp1ChartXAxis.setAutoRanging(true);
         tmp1ChartXAxis.setForceZeroInRange(false);
-        tmp1ChartYAxis.setLabel("temperature, celsium");
-        tmp1ChartYAxis.setAnimated(true);
+        tmp1ChartYAxis.setLabel("frequency, Hz");
+        tmp1ChartYAxis.setAnimated(false);
         tmp1ChartYAxis.setAutoRanging(true);
 
         pressureColumn1Series = new XYChart.Series();
-        pressureColumn1Series.setName("First column pressure, torr");
+        //pressureColumn1Series.setName("First column pressure, torr");
         pressureColumn2Series = new XYChart.Series();
-        pressureColumn2Series.setName("Second column pressure, torr");
+        //pressureColumn2Series.setName("Second column pressure, torr");
+        pressureColumn3Series = new XYChart.Series();
         freq1Series = new XYChart.Series();
-        freq1Series.setName("frequency, Hz");
+        //freq1Series.setName("frequency, Hz");
         pressureScheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         pressureChart.getData().add(pressureColumn1Series);
         pressureChart.getData().add(pressureColumn2Series);
+        pressureChart.getData().add(pressureColumn3Series);
 
         tmp1Chart.getData().add(freq1Series);
 
-        line1ButtonControls = new Button[]{null, pump1,bypass1,valve1,gate1,tmp1Control,tmp1Run,tmp1Standby,tmp1Cooling};
+        line1ButtonControls = new Button[]{auto1, angel1,gauge1, pump1,bypass1,valve1,gate1,
+                tmp1,temperat1,press1};
 
-        pump1.setTooltip(pumpTooltip);
+        auto1.setTooltip(auto1Tooltip);
+        angel1.setTooltip(angel1Tooltip);
+        gauge1.setTooltip(gauge1Tooltip);
+        pump1.setTooltip(pump1Tooltip);
         bypass1.setTooltip(bypass1Tooltip);
         valve1.setTooltip(valve1Tooltip);
         gate1.setTooltip(gate1Tooltip);
         tmp1.setTooltip(tmp1Tooltip);
-        for (int i=1; i<5; i++)
-        {
-            line1ButtonControls[i].getTooltip().getStyleClass().add("tooltip");
-        }
+        temperat1.setTooltip(temperat1Tooltip);
+        press1.setTooltip(press1Tooltip);
+
+        for (int i=0; i<10; i++)  line1ButtonControls[i].getTooltip().getStyleClass().add("tooltip");
+
+        //set buttons positions and colors
+
+        initializeButtons();
+
 
         enableDataUpdating();
+    }
+
+    private void initializeButtons(){
+        Platform.runLater(() -> {
+            String mess = (System.currentTimeMillis()+"").substring(7)+" but ";
+            String[] message;
+            message = communicator.makeRequest(mess, true).split(" ");
+            for (int i=0; i<message[2].length();i++)
+            {
+                buttons1[i] = (message[2].charAt(i)+"").equals( (i<7) ? "2" : "1");
+                if (i<7) line1ButtonControls[i].setText((buttons1[i]) ? ">" : "<");
+                gaugeControl.setText("GAUGES "+(buttons1[2] ? "ON" : "OFF"));
+                tmp1Cooling.setText("CONTROL "+(buttons1[7] ? "ON" : "OFF"));
+                tmp1Cooling.setText("COOL "+(buttons1[9] ? "ON" : "OFF"));
+                tmp1Cooling.setText("RUN "+(buttons1[8] ? "ON" : "OFF"));
+                tmp1Standby.setText("STANDBY "+(buttons1[10] ? "ON" : "OFF"));
+            }
+        });
     }
 
     private boolean isMenuVisible = false;
@@ -94,10 +122,23 @@ public class VacuumController {
     @FXML
     private Button gaugeCalibrate;
 
+    //ButtonPanel
+    @FXML
+    private Button auto1;
+    @FXML
+    private Tooltip auto1Tooltip = new Tooltip();
+    @FXML
+    private Button angel1;
+    @FXML
+    private Tooltip angel1Tooltip = new Tooltip();
+    @FXML
+    private Button gauge1;
+    @FXML
+    private Tooltip gauge1Tooltip = new Tooltip();
     @FXML
     private Button pump1;
     @FXML
-    private Tooltip pumpTooltip = new Tooltip();
+    private Tooltip pump1Tooltip = new Tooltip();
     @FXML
     private Button bypass1;
     @FXML
@@ -115,7 +156,14 @@ public class VacuumController {
     @FXML
     private Tooltip tmp1Tooltip = new Tooltip();
     @FXML
-    private Button auto2;
+    private Button temperat1;
+    @FXML
+    private Tooltip temperat1Tooltip = new Tooltip();
+    @FXML
+    private Button press1;
+    @FXML
+    private Tooltip press1Tooltip = new Tooltip();
+
 
     //Charts
 
@@ -138,17 +186,17 @@ public class VacuumController {
 
     //FIXME when program is opened, it turns off all devices. Probably you nedd "enable connection button" ?!
     // pump, bypass valve, gate, tmpCOntrol,tmpEnable, tmpStandBy, tmpCooling
-    private boolean[] buttons1 = new boolean[]{false,false,false,false,false,false,false,false,false};
-    private boolean[] buttons2 = new boolean[]{false, false,false,false,false,false,false,false,false};
-    private boolean[] gauges = new boolean[]{false,false};
-    private int[] response =  new int[20];
-    private int[] request =  new int[20];
+    private boolean[] buttons1 = new boolean[11];
+    private boolean[] buttons2 = new boolean[11];
+    private int[] response =  new int[30];
+    private int[] request =  new int[30];
     private Button[] line1ButtonControls;
     private Button[] line2ButtonControls;
 
     // Array
     private XYChart.Series pressureColumn1Series;
     private XYChart.Series pressureColumn2Series;
+    private XYChart.Series pressureColumn3Series;
 
     private XYChart.Series temp1Series;
     private XYChart.Series freq1Series;
@@ -186,99 +234,109 @@ public class VacuumController {
     //Buttons methods
     //TMP
 
+    // FROM THE SERVER:  0 -> auto, angel, gauge,pump, bypass,valve,6 ->gate, 7 -> tmp control,
+    // tmp run, 9 -> tmp cool, 10 -> tmp standby   == 11 buttons
+
     @FXML
     private void tmp1ControlPressed()
     {
-        buttons1[5] = !buttons1[5];
-        if (buttons1[5])
-            tmp1Control.setText("CONTROL ON");
-        else
-            tmp1Control.setText("CONTROL OFF");
+        buttons1[7] = !buttons1[7];
+        tmp1Control.setText("CONTROL "+(buttons1[7] ? "ON" : "OFF"));
     }
 
     @FXML
     private void tmp1RunPressed()
     {
-        buttons1[6] = !buttons1[6];
-        if (buttons1[6])
-            tmp1Run.setText("RUN ON");
-        else
-            tmp1Run.setText("RUN OFF");
-    }
-
-    @FXML
-    private void tmp1StandbyPressed()
-    {
-        buttons1[7] = !buttons1[6];
-        if (buttons1[7])
-            tmp1Standby.setText("STANDBY ON");
-        else
-            tmp1Standby.setText("STANDBY OFF");
+        buttons1[8] = !buttons1[8];
+        tmp1Run.setText("RUN "+(buttons1[8] ? "ON" : "OFF"));
     }
 
     @FXML
     private void tmp1CoolingPressed()
     {
-        buttons1[8] = !buttons1[6];
-        if (buttons1[8])
-            tmp1Cooling.setText("COOL ON");
-        else
-            tmp1Cooling.setText("COOL OFF");
+        buttons1[9] = !buttons1[9];
+        line1ButtonControls[8].setText((buttons1[9]) ? ">" : "<");
+        tmp1Cooling.setText("COOL "+(buttons1[9] ? "ON" : "OFF"));
     }
+
+    @FXML
+    private void tmp1StandbyPressed()
+    {
+        buttons1[10] = !buttons1[10];
+        tmp1Standby.setText("STANDBY "+(buttons1[10] ? "ON" : "OFF"));
+    }
+
+
 
     //GAUGES
 
     @FXML
     private void gaugeControlPressed()
     {
-        gauges[0] = !gauges[0];
-        if (gauges[0])
-            gaugeControl.setText("GAUGES ON");
-        else
-            gaugeControl.setText("GAUGES OFF");
+        buttons1[2] = !buttons1[2];
+        gaugeControl.setText("GAUGES "+(buttons1[2] ? "ON" : "OFF"));
+        line1ButtonControls[2].setText((buttons1[2]) ? ">" : "<");
     }
 
     @FXML
     private void gaugeCalibratePressed()
     {
-        gauges[1] = !gauges[1];
+        //FIXME
     }
 
     //Button Panel
+
     @FXML
-    private void pump1Pressed()
+    private void auto1Pressed()
+    {
+        buttons1[0] = !buttons1[0];
+        line1ButtonControls[0].setText((buttons1[0]) ? ">" : "<");
+    }
+
+    @FXML
+    private void automation1Pressed()
     {
         buttons1[1] = !buttons1[1];
         line1ButtonControls[1].setText((buttons1[1]) ? ">" : "<");
     }
 
     @FXML
-    private void bypass1Pressed()
-    {
-        buttons1[2] = !buttons1[2];
-        line1ButtonControls[2].setText((buttons1[2]) ? ">" : "<");
-    }
-
-    @FXML
-    private void valve1Pressed()
+    private void pump1Pressed()
     {
         buttons1[3] = !buttons1[3];
         line1ButtonControls[3].setText((buttons1[3]) ? ">" : "<");
     }
 
     @FXML
-    private void gate1Pressed()
+    private void bypass1Pressed()
     {
         buttons1[4] = !buttons1[4];
         line1ButtonControls[4].setText((buttons1[4]) ? ">" : "<");
     }
 
     @FXML
+    private void valve1Pressed()
+    {
+        buttons1[5] = !buttons1[5];
+        line1ButtonControls[5].setText((buttons1[5]) ? ">" : "<");
+    }
+
+    @FXML
+    private void gate1Pressed()
+    {
+        buttons1[6] = !buttons1[6];
+        line1ButtonControls[6].setText((buttons1[6]) ? ">" : "<");
+    }
+
+    @FXML
     private void tmp1Pressed()
     {
-        //FIXME it should simultaneouslu turn on/off both of control and run
-       tmp1ControlPressed();
-       tmp1RunPressed();
+        buttons1[7] = false;
+        buttons1[8] = buttons1[8];
+        //magic~~~
+        tmp1ControlPressed();
+        tmp1RunPressed();
+        line1ButtonControls[7].setText((buttons1[8]) ? ">" : "<");
     }
 
     //data updating
@@ -304,9 +362,9 @@ public class VacuumController {
                     //FIXME ypu indicate not the propper TMP: indicate  control, but need run.
                     // So change their positions in protocol
 
-                    for (int i=0;i<5;i++) {
-                        if (response[i + 1] != Integer.parseInt(message[1].charAt(i) + "")) {
-                            setIndicatorColor(line1ButtonControls[i+1], message[1].charAt(i) + "");
+                    for (int i=0;i<10;i++) {
+                        if (response[i] != Integer.parseInt(message[2].charAt(i) + "")) {
+                            setIndicatorColor(line1ButtonControls[i], message[2].charAt(i) + "");
                         }
                     }
 
@@ -350,32 +408,28 @@ public class VacuumController {
     {
 
         //for pump, bypass, valve and gate of both lines
-        for (int i=1; i< 5;i++) {
+        //FIXME is it correct for auto, automation and gauges?
+        for (int i=0; i< 7;i++) {
             request[i] = (buttons1[i]) ? 2 : 1;
             request[i+8] = (buttons2[i]) ? 2 : 1;
         }
         //for tmp control, enable, standby, cooling of both lines
-        for (int i=5; i<9;i++){
+        for (int i=7; i<11;i++){
             request[i] = (buttons1[i]) ? 1 : 0;
             request[i+8] = (buttons2[i]) ? 1 : 0;
         }
-        //for gauges
-        request[17] = (gauges[0]) ? 1 : 0;
-        request[18] = (gauges[1]) ? 1 : 0;
-        String sRequest = (System.currentTimeMillis()+"").substring(7)+" ";
-        for (int i=1;i<9;i++) sRequest+=request[i]; //first line
+
+        String sRequest = (System.currentTimeMillis()+"").substring(7)+" vac ";
+        for (int i=0;i<11;i++) sRequest+=request[i]; //first line
         sRequest+=" ";
-        for (int i=9;i<17;i++) sRequest+=request[i]; //second line
-        sRequest+=" ";
-        sRequest+=request[17]; //gauge on/off
-        sRequest+=request[18]; //gauge calibrate
+        for (int i=11;i<18;i++) sRequest+=request[i]; //second line
         return  sRequest;
     }
 
     private void refreshResponse(String[] message)
     {
-        String mes = message[1]+""+message[2]+""+message[3];
-        for (int i=0; i<mes.length();i++) response[i+1] = Integer.parseInt(mes.charAt(i)+"");
+        String mes = message[2]+""+message[3];
+        for (int i=0; i<mes.length();i++) response[i] = Integer.parseInt(mes.charAt(i)+"");
     }
 
     private void setIndicatorColor(Button button, String flag)

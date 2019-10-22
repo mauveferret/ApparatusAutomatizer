@@ -15,6 +15,7 @@ public class Vacuum {
         LeyboldTMP leyboldTMP = new LeyboldTMP("tmp");
         ThyracontGauge thyracontGauge = new ThyracontGauge("thyracontGauge");
       //  PfeifferGauge pfeifferGauge = new PfeifferGauge("pfeifferGauge");
+        AutoPumping autoPumping = new AutoPumping("auto");
         Arduino arduino = new Arduino("arduino");
         GateControl gateControl = new GateControl("gateControl");
         VacuumServer server = new VacuumServer("server");

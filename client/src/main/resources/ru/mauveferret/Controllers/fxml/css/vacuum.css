@@ -194,10 +194,10 @@ LineChart related
 }
 .axis
 {
-    -fx-tick-label-fill: #999999;
+    -fx-tick-label-fill: #ffffff;
     -fx-stroke: transparent;
     -fx-font-family: "HP Simplified Bold";
-    -fx-font-size: 25pt;
+    -fx-font-size: 50pt;
     -fx-font-weight: bolder;
 
 }
@@ -244,16 +244,18 @@ LineChart related
     -fx-stroke: #ffffff;
     -fx-stroke-width: 5px;
 }
-.chart-horizontal-zero-line{
+/*.chart-horizontal-zero-line{
     -fx-stroke: #ffffff;
     -fx-stroke-width: 5px;
 }
 
+ */
+
 .default-color0.chart-series-line { -fx-stroke: #ffffff; }
 .default-color1.chart-series-line { -fx-stroke: #FF6600; }
-.default-color2.chart-series-line { -fx-stroke: #0000FF; }
-.default-color3.chart-series-line { -fx-stroke: #00FF00; }
+.default-color2.chart-series-line { -fx-stroke: #00FF00; }
+.default-color3.chart-series-line { -fx-stroke: #0000FF; }
 .default-color0.chart-line-symbol { -fx-background-color: #ffffff, #333333; }
 .default-color1.chart-line-symbol { -fx-background-color: #FF6600, #333333; }
-.default-color2.chart-line-symbol { -fx-background-color: #0000FF, #333333; }
 .default-color2.chart-line-symbol { -fx-background-color: #00FF00, #333333; }
+.default-color2.chart-line-symbol { -fx-background-color: #0000FF, #333333; }

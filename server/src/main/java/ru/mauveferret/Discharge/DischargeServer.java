@@ -3,10 +3,17 @@ package ru.mauveferret.Discharge;
 import ru.mauveferret.Server;
 import ru.mauveferret.SocketCryptedCommunicator;
 
+import java.util.HashMap;
+
 class DischargeServer extends Server {
 
     DischargeServer(String fileName) {
         super(fileName);
+    }
+
+    @Override
+    protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+
     }
 
     @Override

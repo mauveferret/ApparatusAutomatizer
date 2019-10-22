@@ -7,7 +7,9 @@ import java.util.HashMap;
 public class AutoPumping extends RecordingUnit {
 
     public AutoPumping(String fileName) {
+
         super(fileName);
+        enabled=1;
     }
 
     @Override
@@ -19,7 +21,12 @@ public class AutoPumping extends RecordingUnit {
     private Gauge gauge;
     private GateControl gateControl;
     private TMP tmp;
-    boolean enableAutoPumping;
+    private int enabled=1;
+
+
+    public int getEnabled() {
+        return enabled;
+    }
 
     @Override
     protected void measureAndLog() {

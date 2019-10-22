@@ -68,6 +68,16 @@ abstract public class RecordingUnit extends Unit {
     }
 
     @Override
+    protected void chooseTerminalCommand(String[] command) {
+        super.chooseTerminalCommand(command);
+    }
+
+    @Override
+    protected void chooseImportCommand(String line) {
+        super.chooseImportCommand(line);
+    }
+
+    @Override
     protected void measureAndLog() {
 
     }

@@ -116,7 +116,7 @@ class GateControl extends RecordingUnit {
         return status.get("valve");
     }
 
-    public int getGateStatus() { return status.get("pump");}
+    public int getGateStatus() { return status.get("gate");}
 
     //GateControl Methods
 
