@@ -89,7 +89,7 @@ public class VacuumController {
             message = communicator.makeRequest(mess, true).split(" ");
             for (int i=0; i<message[2].length();i++)
             {
-                buttons1[i] = (message[2].charAt(i)+"").equals( (i<7) ? "2" : "1");
+                buttons1[i] = (message[2].charAt(i)+"").equals("2");
                 if (i<7) line1ButtonControls[i].setText((buttons1[i]) ? ">" : "<");
                 gaugeControl.setText("GAUGES "+(buttons1[2] ? "ON" : "OFF"));
                 tmp1Cooling.setText("CONTROL "+(buttons1[7] ? "ON" : "OFF"));
@@ -249,6 +249,7 @@ public class VacuumController {
     {
         buttons1[8] = !buttons1[8];
         tmp1Run.setText("RUN "+(buttons1[8] ? "ON" : "OFF"));
+        line1ButtonControls[7].setText((buttons1[8]) ? ">" : "<");
     }
 
     @FXML
@@ -343,6 +344,7 @@ public class VacuumController {
 
     //TODO preferences with choosing units and plot updating regime
 
+
     private void enableDataUpdating() {
 
 
@@ -377,9 +379,9 @@ public class VacuumController {
                     int itemp1 = Integer.parseInt(message[8]);
                     double dvolt1 = Double.parseDouble(message[9]);
                     double dcurr1 = Double.parseDouble(message[10]);
-                    pressure1.setText(String.format("%6.2E", dpressure1));
-                    pressure2.setText(String.format("%6.2E", dpressure2));
-                    pressure3.setText(String.format("%6.2E", dpressure3));
+                    pressure1.setText(formatPressureDouble(dpressure1));
+                    pressure2.setText(formatPressureDouble(dpressure2));
+                    pressure3.setText(formatPressureDouble(dpressure3));
                     time.setText((ltime+"").substring(6));
 
                     freq1.setText(ifreq1+"");
@@ -404,19 +406,18 @@ public class VacuumController {
         }, 0, 500, TimeUnit.MILLISECONDS);
     }
 
+    private String formatPressureDouble(double d)
+    {
+        String sd = String.format("%6.2E", d);
+        return sd.substring(0,sd.length()-2)+sd.substring(sd.length()-1);
+    }
+
     private String refreshRequest()
     {
-
-        //for pump, bypass, valve and gate of both lines
         //FIXME is it correct for auto, automation and gauges?
-        for (int i=0; i< 7;i++) {
+        for (int i=0; i< 11;i++) {
             request[i] = (buttons1[i]) ? 2 : 1;
             request[i+8] = (buttons2[i]) ? 2 : 1;
-        }
-        //for tmp control, enable, standby, cooling of both lines
-        for (int i=7; i<11;i++){
-            request[i] = (buttons1[i]) ? 1 : 0;
-            request[i+8] = (buttons2[i]) ? 1 : 0;
         }
 
         String sRequest = (System.currentTimeMillis()+"").substring(7)+" vac ";

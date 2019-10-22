@@ -175,11 +175,11 @@ LineChart related
  */
 
 .chart {
-    -fx-padding: 10px;
+    -fx-padding: 13px;
 }
 
 .chart-content {
-    -fx-padding: 10px;
+    -fx-padding: 13px;
 }
 
 .chart-title {
@@ -197,7 +197,7 @@ LineChart related
     -fx-tick-label-fill: #ffffff;
     -fx-stroke: transparent;
     -fx-font-family: "HP Simplified Bold";
-    -fx-font-size: 50pt;
+    -fx-font-size: 13px;
     -fx-font-weight: bolder;
 
 }

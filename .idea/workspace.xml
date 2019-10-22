@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/qv.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/auto.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/PumpingColumn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/Vacuum.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/angel.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/server.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/tmp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuumServer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Discharge/DischargeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Discharge/DischargeServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RecordingUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/RecordingUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Vacuum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -271,14 +255,7 @@
       <workItem from="1571399072465" duration="19666000" />
       <workItem from="1571475157310" duration="5850000" />
       <workItem from="1571551124611" duration="11149000" />
-      <workItem from="1571739248550" duration="14752000" />
-    </task>
-    <task id="LOCAL-00030" summary="client/server conection works good, encryption made">
-      <created>1567947178342</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1567947178343</updated>
+      <workItem from="1571739248550" duration="17294000" />
     </task>
     <task id="LOCAL-00031" summary="client/server conection works good, encryption made">
       <created>1568008935701</created>
@@ -616,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571557133845</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made">
+      <created>1571765489036</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1571765489037</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,7 +621,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some rubbish added" />
     <MESSAGE value="some GUI elements added" />
     <MESSAGE value="some css added" />
     <MESSAGE value="plot improved" />
@@ -662,6 +645,7 @@
     <MESSAGE value="moved measureAndLog() to recodingUnit" />
     <MESSAGE value="some bugs fixed" />
     <MESSAGE value="TMP initialize made" />
-    <option name="LAST_COMMIT_MESSAGE" value="TMP initialize made" />
+    <MESSAGE value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
+    <option name="LAST_COMMIT_MESSAGE" value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
   </component>
 </project>

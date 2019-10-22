@@ -112,10 +112,12 @@ class VacuumServer extends Server {
         String columnData = "002";
         columnData+=gateControl.getPumpStatus()+""+gateControl.getBypassStatus();
         columnData+=gateControl.getValveStatus()+""+gateControl.getGateStatus();
-        columnData+=booleanToString(tmp.isControlOn())+""+booleanToString(tmp.isEnabled());
-        columnData+=booleanToString(tmp.isCoolingOn())+""+booleanToString(tmp.isStandbyOn());
+        columnData+=booleanTOProtocol(tmp.isControlOn())+""+booleanTOProtocol(tmp.isEnabled());
+        columnData+=booleanTOProtocol(tmp.isCoolingOn())+""+booleanTOProtocol(tmp.isStandbyOn());
         return columnData;
     }
+
+    private String booleanTOProtocol(boolean b) { return (b ? "2" : "1");}
 
     private String tmpMainParameters(int columnNumber)
     {
@@ -155,16 +157,15 @@ class VacuumServer extends Server {
         String gate1 = gateControl.config.unitCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
-        boolean comIs1 = commandsFromClient[commandIndex]==1;
         boolean comIs2 = commandsFromClient[commandIndex]==2;
         switch (commandIndex){
             case 8: {
-                terminalSample.launchCommand(stmp1+(comIs1 ? " run" : " stop"),
+                terminalSample.launchCommand(stmp1+(comIs2 ? " run" : " stop"),
                         true, accessLevel);
             }
             break;
             case 7: {
-                terminalSample.launchCommand(stmp1+" control "+(comIs1 ? "on" : "off"),
+                terminalSample.launchCommand(stmp1+" control "+(comIs2 ? "on" : "off"),
                         true, accessLevel);
             }
             break;
@@ -201,7 +202,7 @@ class VacuumServer extends Server {
             switch (command[0]) {
                 case "gauge": gaugeName = command[1];
                 break;
-                case  "tmp1" : { tmpName = command[1]; }
+                case  "tmp1" :  tmpName = command[1];
                 break;
                 case  "gatecontrol1" : gateControlName= command[1];
                 break;
