@@ -4,7 +4,15 @@
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/ru/mauveferret/Controllers/fxml/css/vacuum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/angel.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/auto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/auto.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -255,14 +263,8 @@
       <workItem from="1571399072465" duration="19666000" />
       <workItem from="1571475157310" duration="5850000" />
       <workItem from="1571551124611" duration="11149000" />
-      <workItem from="1571739248550" duration="17294000" />
-    </task>
-    <task id="LOCAL-00031" summary="client/server conection works good, encryption made">
-      <created>1568008935701</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1568008935701</updated>
+      <workItem from="1571739248550" duration="17530000" />
+      <workItem from="1571822227677" duration="7789000" />
     </task>
     <task id="LOCAL-00032" summary="everything works, checked">
       <created>1568101430608</created>
@@ -600,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571765489037</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!">
+      <created>1571768192266</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1571768192266</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +630,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some GUI elements added" />
     <MESSAGE value="some css added" />
     <MESSAGE value="plot improved" />
     <MESSAGE value="ROM and CPU consume reduced" />
@@ -646,6 +654,7 @@
     <MESSAGE value="some bugs fixed" />
     <MESSAGE value="TMP initialize made" />
     <MESSAGE value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
-    <option name="LAST_COMMIT_MESSAGE" value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
+    <MESSAGE value="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!" />
   </component>
 </project>

@@ -190,7 +190,7 @@ public class SocketCryptedCommunicator {
             out.write(rsa.encrypt(message, otherDevicePublicKey)+"\n");
             out.flush();
             long t2 = System.currentTimeMillis();
-            System.out.println(message+" time:"+(t2-t1));
+            //System.out.println(message+" time:"+(t2-t1));
         }
         catch (Exception e)
         {

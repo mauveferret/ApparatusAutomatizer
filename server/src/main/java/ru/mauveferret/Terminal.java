@@ -184,8 +184,7 @@ public class Terminal extends Unit {
         if (commandMap.containsKey(commandArray[0]))
         {
             //Thread commandThread = new Thread(() -> {
-                commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, accessLevel);
-               // TODO silentmode
+            commandMap.get(commandArray[0]).runTerminalCommand( internalCommand, accessLevel);
            // });
            // commandThread.setName(command);
             //commandThread.start();

@@ -9,7 +9,16 @@ public class AutoPumping extends RecordingUnit {
     public AutoPumping(String fileName) {
 
         super(fileName);
-        enabled=1;
+        enabled=0;
+    }
+
+
+    @Override
+    protected void initialize() {
+        super.initialize();
+        gauge =(Gauge) terminalSample.getDevice(gaugeName);
+        gateControl = (GateControl) terminalSample.getDevice(gateName);
+        tmp = (TMP) terminalSample.getDevice(tmpName);
     }
 
     @Override
@@ -18,11 +27,19 @@ public class AutoPumping extends RecordingUnit {
     }
 
 
+
     private Gauge gauge;
     private GateControl gateControl;
     private TMP tmp;
-    private int enabled=1;
+    private int enabled;
 
+    private  String gaugeName;
+    private String gateName;
+    private String tmpName;
+
+
+    private String firstColumnGaugeName;
+    private String vesselGaugeName;
 
     public int getEnabled() {
         return enabled;
@@ -61,12 +78,15 @@ public class AutoPumping extends RecordingUnit {
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
-                //FIXME might be initialize will work only from the ...?
-                case "gauge": gauge =(Gauge) terminalSample.getDevice(command[1]);
+                case "gauge": gaugeName = command[1];
                     break;
-                case "gatecontrol": gateControl = (GateControl) terminalSample.getDevice(command[1]);
+                case "gatecontrol": gateName = command[1];
                     break;
-                case "tmp" : tmp = (TMP)  terminalSample.getDevice(command[1]);
+                case "tmp" :  tmpName = command[1];
+                    break;
+                case "firstcolumngaugename" : firstColumnGaugeName = command[1];
+                    break;
+                case "vesselGaugeName" : vesselGaugeName = command[1];
                     break;
             }
         }

@@ -1,9 +1,6 @@
 package ru.mauveferret.Vacuum;
 
-
-
 import ru.mauveferret.RecordingUnit;
-
 import java.util.HashMap;
 import java.util.TreeMap;
 
@@ -20,7 +17,8 @@ class GuardianAngel extends RecordingUnit {
         super.initialize();
         gauge =(Gauge) terminalSample.getDevice(gaugeName);
         gateControl = (GateControl) terminalSample.getDevice(gateName);
-        terminalSample.getDevice(tmpName);
+        tmp = (TMP) terminalSample.getDevice(tmpName);
+        startCheckingPressure();
     }
 
     @Override
@@ -35,7 +33,7 @@ class GuardianAngel extends RecordingUnit {
     works as thread
      */
 
-    private boolean continueChecking = true;
+    private boolean continueChecking;
     private Gauge gauge;
     private GateControl gateControl;
     private TMP tmp;
@@ -46,12 +44,16 @@ class GuardianAngel extends RecordingUnit {
     private String tmpName;
 
 
+    private String firstColumnGaugeName;
+    private String vesselGaugeName;
+
     public int getEnabled() {
         return enabled;
     }
     //Getters and Setters
 
     private void setContinueChecking(boolean continueChecking) {
+        enabled = (continueChecking) ? 2 : 1;
         this.continueChecking = continueChecking;
     }
 
@@ -60,49 +62,70 @@ class GuardianAngel extends RecordingUnit {
 
 
     private void startCheckingPressure() {
+        continueChecking = true;
         Thread checkerThread = new Thread(() -> {
             boolean stop = false;
             while (!stop)
             {
                 while (continueChecking) {
-                    //fixme gauge names
-                    double pressureColumn = gauge.pressure.get("column1");
-                    double pressureVessel = gauge.pressure.get("vessel");
+
+                    double pressureColumn = gauge.pressure.get(firstColumnGaugeName);
+                    double pressureVessel = gauge.pressure.get(vesselGaugeName);
                     int gate = gateControl.getGateStatus();
                     int valve = gateControl.getValveStatus();
                     int bypass = gateControl.getBypassStatus();
                     int pump = gateControl.getPumpStatus();
                     boolean turboPump = tmp.isEnabled();
+                    boolean isOK = true;
                     int temperature = tmp.getTemperature();
 
                     //if pressure difference is too much or pressureVessel to much
-                    boolean highPressure = (Math.abs(pressureColumn - pressureVessel) > 10 || pressureColumn>10);
+                    boolean highPressure = Math.abs(pressureColumn - pressureVessel) > 10;
 
-                    if ((highPressure && (gate==2 || valve ==2)) || (gate>2 || valve >2))
+                    //To prevent high pressure ?!
+                    if ((highPressure && (gate==2 || valve ==2)))  //|| (gate>2 || valve >2)
                     {
-                        if (gate>2 || valve >2)
-                            sendMessage("Valve error occured. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
-                            else
-                                sendMessage("High pressure. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
+                        sendMessage("High pressure. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
+                        enabled = 7;
+                        isOK = false;
                         gateControl.runTerminalCommand("bla gate close", 10);
                         gateControl.runTerminalCommand("bla valve close", 10);
                     }
 
-
-                    if ((pressureColumn>10 || (temperature>42)) && turboPump)
+                    //to prevent TMP overheating
+                    if ( temperature>42 && pressureColumn>10 && turboPump)
                     {
-                        sendMessage("i'm closing the gates and stop the TMP!");
+                        sendMessage("i'm closing the gates and stopping the TMP!");
+                        enabled = 7;
+                        isOK = false;
                         tmp.runTerminalCommand( "bla stop",10);
                         gateControl.runTerminalCommand("bla gate close", 10);
-                        //FIXME find better indication of  valve closing need
                         gateControl.runTerminalCommand("bla valve close", 10);
                     }
 
+                    //it is not right them to be opened at the same time
+                    if (bypass>1 && valve>1)
+                    {
+                        sendMessage("i'm closing the bypass!");
+                        enabled = 7;
+                        isOK = false;
+                        gateControl.runTerminalCommand("bla bypass close", 10);
+                    }
+
+                    if (pump<2 && turboPump)
+                    {
+                        sendMessage("i'm  stopping the TMP!");
+                        enabled = 7;
+                        isOK = false;
+                        tmp.runTerminalCommand( "bla stop",10);
+                    }
+
+                    if (isOK) enabled = 2;
+
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(50);
                     }
                     catch (Exception ignored){}
-
                 }
 
                 try {
@@ -129,22 +152,17 @@ class GuardianAngel extends RecordingUnit {
     @Override
     protected TreeMap<String, String> getCommands() {
         commands.put("start", "");
-        commands.put("pause", "");
-        commands.put("resume","");
-
+        commands.put("stop", "");
         return commands;
     }
-
     @Override
     protected void chooseTerminalCommand(String[] command) {
 
         super.chooseTerminalCommand(command);
         switch (command[1]) {
-            case ("start"): startCheckingPressure();
+            case ("start"): setContinueChecking(true);
             break;
-            case ("pause"): setContinueChecking(false);
-            break;
-            case ("resume") : setContinueChecking(true);
+            case ("stop"): setContinueChecking(false);
             break;
         }
     }
@@ -155,12 +173,15 @@ class GuardianAngel extends RecordingUnit {
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
-                //FIXME might be initialize will work only from the ...?
                 case "gauge": gaugeName = command[1];
                     break;
                 case "gatecontrol": gateName = command[1];
                     break;
                 case "tmp" :  tmpName = command[1];
+                break;
+                case "firstcolumngaugename" : firstColumnGaugeName = command[1];
+                break;
+                case "vesselGaugeName" : vesselGaugeName = command[1];
                 break;
             }
         }

@@ -39,6 +39,7 @@ public class LeyboldTMP extends TMP {
             //FIXME
             case "run":
             {
+                setControl(true);
                 setEnabled(true);
             }
             break;
@@ -53,7 +54,11 @@ public class LeyboldTMP extends TMP {
                 else sendMessage("Enter option for $control$. Either $on$ or $off$");
             }
             break;
-            case "stop": setEnabled(false);
+            case "stop":
+            {
+                setControl(true);
+                setEnabled(false);
+            }
             break;
             case "data": sendMessage(temperature+" "+frequency+" "+voltage+" "+current);
             break;

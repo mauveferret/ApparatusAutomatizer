@@ -81,6 +81,7 @@ public abstract  class Unit extends Thread{
         if (accessLevel>= unitAccessLevel) {
             try {
                 long t1 = System.currentTimeMillis();
+                sendMessage("COMMAND:" + someCommand);
                 String[] command = commandToStringArray(someCommand);
                 command[1] = command[1].toLowerCase();
                 command = replaceAliasByCommand(command);
@@ -139,7 +140,7 @@ public abstract  class Unit extends Thread{
                 }
                 if (!(isComment || line.equals("") || line.contains("//"))) {
                    try {
-                       chooseImportCommand (line);
+                       chooseImportCommand (line.toLowerCase());
                    }
                    catch (Exception e)
                    {
@@ -160,7 +161,7 @@ public abstract  class Unit extends Thread{
     protected void chooseImportCommand(String line)
     {
         String[] command = line.split(" ");
-        switch (command[0].toLowerCase())
+        switch (command[0])
         {
             case "number": {
                 try {

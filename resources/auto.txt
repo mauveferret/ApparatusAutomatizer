@@ -1,2 +1,7 @@
 name auto
 cmd aut
+gauge thyracontGauge
+gateControl gate
+tmp tmppump
+firstColumnGaugeName column1
+VesselGaugeName vessel

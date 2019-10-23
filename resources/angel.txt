@@ -7,6 +7,8 @@ this
 name angel
 number 1
 gauge thyracontGauge
-gatecontrol gate
+gateControl gate
 tmp tmppump
+firstColumnGaugeName column1
+VesselGaugeName vessel
 start

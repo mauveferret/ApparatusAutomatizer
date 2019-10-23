@@ -189,6 +189,11 @@ class VacuumServer extends Server {
                         true, accessLevel);
             }
             break;
+            case 1: {
+                terminalSample.launchCommand(angel.config.unitCommand+" "+(comIs2? "start" : "stop"),
+                        true, accessLevel);
+            }
+            break;
         }
     }
 

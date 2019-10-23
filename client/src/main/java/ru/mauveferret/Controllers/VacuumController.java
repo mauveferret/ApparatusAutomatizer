@@ -460,6 +460,11 @@ public class VacuumController {
                     button.getTooltip().setText("device switched on, low pneumo line pressure");
                 }
                 break;
+                case 7:
+                {
+                    button.setStyle("-fx-background-color: #FF0000");
+                    button.getTooltip().setText("high pressure in column \n or high TMP temperature!");
+                }
             }
     }
 
