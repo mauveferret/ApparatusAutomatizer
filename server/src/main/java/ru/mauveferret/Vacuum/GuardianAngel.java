@@ -18,6 +18,11 @@ class GuardianAngel extends RecordingUnit {
         gauge =(Gauge) terminalSample.getDevice(gaugeName);
         gateControl = (GateControl) terminalSample.getDevice(gateName);
         tmp = (TMP) terminalSample.getDevice(tmpName);
+        //FIXME we have to wate while Gauge will load all its parameters
+        try {
+            Thread.sleep(3000);
+        }
+        catch (Exception ignored){}
         startCheckingPressure();
     }
 
@@ -67,66 +72,112 @@ class GuardianAngel extends RecordingUnit {
             boolean stop = false;
             while (!stop)
             {
-                while (continueChecking) {
+                try {
 
-                    double pressureColumn = gauge.pressure.get(firstColumnGaugeName);
-                    double pressureVessel = gauge.pressure.get(vesselGaugeName);
-                    int gate = gateControl.getGateStatus();
-                    int valve = gateControl.getValveStatus();
-                    int bypass = gateControl.getBypassStatus();
-                    int pump = gateControl.getPumpStatus();
-                    boolean turboPump = tmp.isEnabled();
-                    boolean isOK = true;
-                    int temperature = tmp.getTemperature();
+                    boolean order1=false;
+                    boolean order2=false;
+                    boolean order3=false;
+                    boolean order4=false;
 
-                    //if pressure difference is too much or pressureVessel to much
-                    boolean highPressure = Math.abs(pressureColumn - pressureVessel) > 10;
 
-                    //To prevent high pressure ?!
-                    if ((highPressure && (gate==2 || valve ==2)))  //|| (gate>2 || valve >2)
-                    {
-                        sendMessage("High pressure. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
-                        enabled = 7;
-                        isOK = false;
-                        gateControl.runTerminalCommand("bla gate close", 10);
-                        gateControl.runTerminalCommand("bla valve close", 10);
-                    }
+                    while (continueChecking) {
 
-                    //to prevent TMP overheating
-                    if ( temperature>42 && pressureColumn>10 && turboPump)
-                    {
-                        sendMessage("i'm closing the gates and stopping the TMP!");
-                        enabled = 7;
-                        isOK = false;
-                        tmp.runTerminalCommand( "bla stop",10);
-                        gateControl.runTerminalCommand("bla gate close", 10);
-                        gateControl.runTerminalCommand("bla valve close", 10);
-                    }
+                        double pressureColumn = gauge.pressure.get(firstColumnGaugeName);
+                        double pressureVessel = gauge.pressure.get(vesselGaugeName);
+                        int gate = gateControl.getGateStatus();
+                        int valve = gateControl.getValveStatus();
+                        int bypass = gateControl.getBypassStatus();
+                        int pump = gateControl.getPumpStatus();
+                        boolean turboPump = tmp.isEnabled();
+                        boolean isOK = true;
+                        int temperature = tmp.getTemperature();
 
-                    //it is not right them to be opened at the same time
-                    if (bypass>1 && valve>1)
-                    {
-                        sendMessage("i'm closing the bypass!");
-                        enabled = 7;
-                        isOK = false;
-                        gateControl.runTerminalCommand("bla bypass close", 10);
-                    }
+                        /*
+                        fixme if there is some problem woth gerkons, it runs commands always
+                        We will make  a booolean parameter which represents, that some agels't instruction
+                        was launched in order not to send it several times
+                         */
 
-                    if (pump<2 && turboPump)
-                    {
-                        sendMessage("i'm  stopping the TMP!");
-                        enabled = 7;
-                        isOK = false;
-                        tmp.runTerminalCommand( "bla stop",10);
-                    }
 
-                    if (isOK) enabled = 2;
+                        //if pressure difference is too much or pressureVessel to much
+                        boolean highPressure = Math.abs(pressureColumn - pressureVessel) > 10;
 
-                    try {
+
+                        //ORDER1: To prevent high pressure ?!
+                        if ((highPressure && (gate==2 || valve ==2)) && !order1 )  //|| (gate>2 || valve >2)
+                        {
+                            sendMessage("ORDER1: high pressure. Closing valve and gate of the column "+gateControl.config.unitNumber+".");
+                            enabled = 7;
+                            isOK = false;
+                            order1 = true;
+                            gateControl.runTerminalCommand("bla gate close", 10);
+                            gateControl.runTerminalCommand("bla valve close", 10);
+
+                        }
+                        else {
+                            if (!(highPressure && (gate==2 || valve ==2)) && order1) {
+                                order1 = false;
+                                sendMessage("ORDER1 was completed");
+                            }
+                        }
+
+                        //ORDER2: to prevent TMP overheating
+                        if (( temperature>42 && pressureColumn>10 && turboPump) && !order2)
+                        {
+                            sendMessage("ORDER2: TMP in danger. I'm closing the gates and stopping the TMP!");
+                            enabled = 7;
+                            isOK = false;
+                            order2 = true;
+                            tmp.runTerminalCommand( "bla stop",10);
+                            gateControl.runTerminalCommand("bla gate close", 10);
+                            gateControl.runTerminalCommand("bla valve close", 10);
+                        }
+                        else {
+                            if (!( temperature>42 && pressureColumn>10 && turboPump) && order2) {
+                                order2 = false;
+                                sendMessage("ORDER2 was completed");
+                            }
+                        }
+
+                        //ORDER3: it is not right them to be opened at the same time
+                        if ((bypass>1 && valve>1) && !order3)
+                        {
+                            sendMessage("ORDER3: bypass and valve opened. I'm closing the bypass!");
+                            enabled = 7;
+                            isOK = false;
+                            order3 = true;
+                            gateControl.runTerminalCommand("bla bypass close", 10);
+                        }
+                        else {
+                            if (!(bypass>1 && valve>1) && order3) {
+                                order3 = false;
+                                sendMessage("ORDER3 was completed");
+                            }
+                        }
+
+                        //ORDER4:
+                        if ((pump<2 && turboPump) && !order4)
+                        {
+                            sendMessage("ORDER4: tmp running wothout pump. I'm  stopping the TMP!");
+                            enabled = 7;
+                            isOK = false;
+                            order4 = true;
+                            tmp.runTerminalCommand( "bla stop",10);
+                        }
+                        else {
+                            if (!(pump<2 && turboPump) && order4) {
+                                order4 = false;
+                                sendMessage("ORDER4 was completed");
+                            }
+                        }
+
+                        if (isOK) enabled = 2;
+
+                        //FIXME very bad
                         Thread.sleep(50);
                     }
-                    catch (Exception ignored){}
                 }
+                catch (Exception ignored){ignored.printStackTrace(); continueChecking = false; }
 
                 try {
                     Thread.sleep(1000);
@@ -181,7 +232,7 @@ class GuardianAngel extends RecordingUnit {
                 break;
                 case "firstcolumngaugename" : firstColumnGaugeName = command[1];
                 break;
-                case "vesselGaugeName" : vesselGaugeName = command[1];
+                case "vesselgaugename" : vesselGaugeName = command[1];
                 break;
             }
         }

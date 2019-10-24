@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/Controllers/VacuumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/angel.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/auto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/auto.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SocketCryptedCommunicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Pumps/LeyboldTMP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -264,14 +257,8 @@
       <workItem from="1571475157310" duration="5850000" />
       <workItem from="1571551124611" duration="11149000" />
       <workItem from="1571739248550" duration="17530000" />
-      <workItem from="1571822227677" duration="7789000" />
-    </task>
-    <task id="LOCAL-00032" summary="everything works, checked">
-      <created>1568101430608</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1568101430608</updated>
+      <workItem from="1571822227677" duration="8467000" />
+      <workItem from="1571927702856" duration="6546000" />
     </task>
     <task id="LOCAL-00033" summary="some errors removed, some graphics added to client">
       <created>1568116889930</created>
@@ -609,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571768192266</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="angel is made, started making AUTO">
+      <created>1571851882649</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1571851882649</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some css added" />
     <MESSAGE value="plot improved" />
     <MESSAGE value="ROM and CPU consume reduced" />
     <MESSAGE value="correct jar files can be now created" />
@@ -655,6 +648,7 @@
     <MESSAGE value="TMP initialize made" />
     <MESSAGE value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
     <MESSAGE value="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!" />
+    <MESSAGE value="angel is made, started making AUTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="angel is made, started making AUTO" />
   </component>
 </project>

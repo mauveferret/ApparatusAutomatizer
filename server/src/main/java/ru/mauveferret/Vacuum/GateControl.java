@@ -41,7 +41,7 @@ class GateControl extends RecordingUnit {
         {
             try {
                 status.put(someDevice, Integer.parseInt(initializeData.get(someDevice).split(" ")[1]));
-                opened.put(someDevice, Integer.parseInt(initializeData.get(someDevice).split(" ")[1])==2);
+                opened.put(someDevice, Integer.parseInt(initializeData.get(someDevice).split(" ")[2])==1);
             }
             catch (Exception e)
             {
@@ -260,7 +260,9 @@ class GateControl extends RecordingUnit {
                 String someCommand = "deviceCommand dwrite " + bypassDigitalPin + " 0";
                 arduino.runTerminalCommand(someCommand, 10);
             }
-        }    else {
+        }
+        else {
+            System.out.println("ae2222222 "+opened.get("bypass")+"   "+status.get("bypass"));
             sendMessage("bypass"+config.unitNumber+" already "+((open) ? "opened" : "closed"));
         }
     }
@@ -312,19 +314,23 @@ class GateControl extends RecordingUnit {
                         {
                             //TODO add closing of the gates in case of errors!
                             status.put(type,5);
+                            opened.put(type,openedSignal);
                             sendMessage("ERROR: " + type + config.unitNumber + " wasn't " + action );
                         } else  //everything is good!
                         {
+                            opened.put(type,openedSignal);
                             status.put(type,(openedSignal) ? 2 : 1);
                             sendMessage(type + config.unitNumber + " was " + action);
                         }
                     } else //sensors contradict. They are either broken or the pressure in pneumo line is low
                     {
+                        //FIXME ist it a rubbish?
+                        opened.put(type,true);
                         status.put(type,4);
                         sendMessage("ERROR: " + type + config.unitNumber + " wasn't " + action +
                                 ". Low pressure in pneumo line");
                     }
-                    opened.put(type,openedSignal);
+
                 }
                 catch (InterruptedException ignored){}
                 measureAndLog();
@@ -416,7 +422,7 @@ class GateControl extends RecordingUnit {
             dataLog.write(mes);
             for (String someDevice: config.devices)
             {
-                loggerMap.get(someDevice).write("time " + status.get(someDevice));
+                loggerMap.get(someDevice).write("time " + status.get(someDevice)+" "+((opened.get(someDevice)) ? "1" : "0"));
             }
         }
         catch (Exception  e)

@@ -140,7 +140,11 @@ public abstract  class Unit extends Thread{
                 }
                 if (!(isComment || line.equals("") || line.contains("//"))) {
                    try {
-                       chooseImportCommand (line.toLowerCase());
+                       String[] optArray = line.split(" ");
+                       optArray[0] = optArray[0].toLowerCase();
+                       line="";
+                       for (String s : optArray) line += s + " ";
+                       chooseImportCommand (line);
                    }
                    catch (Exception e)
                    {

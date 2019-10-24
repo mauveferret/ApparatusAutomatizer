@@ -65,27 +65,30 @@ class VacuumServer extends Server {
     {
         String request = communicator.readEncryption();
         String[] commandsArray = request.split(" ");
-        switch (commandsArray[1]) {
-            case ("vac"): {
-                try {
-                    //first column
-                    fullfillOrders(request.split(" ")[2], communicator);
-                    //second column
-                    //fullfillOrders(request.split(" ")[3], communicator);
-                } catch (ArrayIndexOutOfBoundsException ignored) {
-                    sendMessage(ignored.getMessage());
+        try {
+            switch (commandsArray[1]) {
+                case ("vac"): {
+                    try {
+                        //first column
+                        fullfillOrders(request.split(" ")[2], communicator);
+                        //second column
+                        //fullfillOrders(request.split(" ")[3], communicator);
+                    } catch (ArrayIndexOutOfBoundsException ignored) {
+                        sendMessage(ignored.getMessage());
+                    }
+                    communicator.writeEncryption(createResponse());
                 }
-                communicator.writeEncryption(createResponse());
+                break;
+                case ("but"): //to set button position in order not to change units by opening the client
+                {
+                    String buttonPositions = (System.currentTimeMillis() + "").substring(7) + " but ";
+                    for (int i = 0; i < commandsFromClient.length; i++) buttonPositions += commandsFromClient[i];
+                    communicator.writeEncryption(buttonPositions);
+                }
+                break;
             }
-            break;
-            case ("but"): //to set button position in order not to change units by opening the client
-            {
-                String buttonPositions = (System.currentTimeMillis()+"").substring(7)+" but ";
-                for (int i=0;i < commandsFromClient.length; i++) buttonPositions+=commandsFromClient[i];
-                communicator.writeEncryption(buttonPositions);
-            }
-            break;
         }
+        catch (Exception ignored){}
     }
 
     private String createResponse()
