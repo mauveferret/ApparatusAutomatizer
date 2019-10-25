@@ -29,11 +29,15 @@ public class VacuumUnits extends Unit {
 
    public void loadVacuumUnits() {
 
-        terminalSample.addDevice(LoadedUnits.server);
+
         ArrayList<Unit> allUnits = new ArrayList<>();
+        Gauge gla = null;
         for (String g: LoadedUnits.gauge.keySet())
         {
+            if (gla != LoadedUnits.gauge.get(g)) {
                 allUnits.add(LoadedUnits.gauge.get(g));
+                gla = LoadedUnits.gauge.get(g);
+            }
         }
         allUnits.addAll(LoadedUnits.column1.getAll());
         allUnits.addAll(LoadedUnits.column2.getAll());
@@ -41,11 +45,16 @@ public class VacuumUnits extends Unit {
         {
             terminalSample.addDevice(u);
         }
+       terminalSample.addDevice(LoadedUnits.server);
     }
 
     @Override
     protected void chooseImportCommand(String line) {
-        thyracontGaugeWasCreated=false;
+
+        try {
+           if (thyracontGaugeWasCreated == null) thyracontGaugeWasCreated = false;
+        }
+        catch (Exception ignored){}
 
         String[] command = line.toLowerCase().split(" ");
         switch (command[0])
@@ -69,14 +78,13 @@ public class VacuumUnits extends Unit {
     }
 
 
-    Boolean thyracontGaugeWasCreated;
+    private Boolean thyracontGaugeWasCreated;
     String gaugeName;
     private void gauge(String[] params)
     {
         switch (params[1].toLowerCase())
         {
             case "thyracontgauge":  {
-
                 Gauge local;
                 if (!thyracontGaugeWasCreated)
                 {
@@ -86,6 +94,7 @@ public class VacuumUnits extends Unit {
                 else
                     local = LoadedUnits.gauge.get(gaugeName);
                 LoadedUnits.gauge.put(params[2],local);
+                thyracontGaugeWasCreated = true;
             }
             break;
             case "pfeiffergauge": {

@@ -30,7 +30,7 @@ class GateControl extends RecordingUnit {
         arduino = (config.unitNumber == 1) ? LoadedUnits.column1.arduino : LoadedUnits.column2.arduino;
         // in case of gauges it could be different devices
         columnGauge =  LoadedUnits.gauge.get(columnGaugeName);
-        columnGauge =  LoadedUnits.gauge.get(vesselGaugeName);
+        vesselGauge =  LoadedUnits.gauge.get(vesselGaugeName);
     }
 
 

@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/angel1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/angel2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/arduino2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/auto1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/auto2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/control1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/control2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/gauge1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/gauge2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/gauge3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/server.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/tmp1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/tmp2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/angel.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/arduino.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/auto.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/gateControl.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/thyracontGauge.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/tmp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/AutoPumping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumUnits.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -283,14 +256,7 @@
       <workItem from="1571551124611" duration="11149000" />
       <workItem from="1571739248550" duration="17530000" />
       <workItem from="1571822227677" duration="8467000" />
-      <workItem from="1571927702856" duration="25575000" />
-    </task>
-    <task id="LOCAL-00035" summary="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog">
-      <created>1568149387018</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1568149387018</updated>
+      <workItem from="1571927702856" duration="27894000" />
     </task>
     <task id="LOCAL-00036" summary="Pfeiffer gauges added">
       <created>1568199296804</created>
@@ -628,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572010965358</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure">
+      <created>1572022668943</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1572022668943</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +622,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="correct jar files can be now created" />
     <MESSAGE value="Launch4J maven plugin works" />
     <MESSAGE value="log scale fixed" />
     <MESSAGE value="indicators made" />
@@ -674,6 +646,7 @@
     <MESSAGE value="angel is made, started making AUTO" />
     <MESSAGE value="some shit in angel and gateControl, its logic is too confused" />
     <MESSAGE value="Vacuum Units created. It unifies units loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vacuum Units created. It unifies units loading" />
+    <MESSAGE value="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure" />
   </component>
 </project>
