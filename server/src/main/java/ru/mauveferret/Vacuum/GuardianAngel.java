@@ -24,7 +24,7 @@ class GuardianAngel extends RecordingUnit {
             Thread.sleep(3000);
         }
         catch (Exception ignored){}
-        //startCheckingPressure();
+        startCheckingPressure();
     }
 
     @Override
