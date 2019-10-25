@@ -1,2 +1,3 @@
 command trm
 name terminal
+number 1

@@ -1,4 +1,5 @@
 command tmp2
+name tmp2
 /* 1
 
 this

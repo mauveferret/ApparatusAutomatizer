@@ -1,4 +1,4 @@
-name auto
-command aut
+name auto1
+command aut1
 firstColumnGaugeName column1
 VesselGaugeName vessel

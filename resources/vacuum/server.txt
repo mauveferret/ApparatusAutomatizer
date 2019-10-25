@@ -1,5 +1,4 @@
 command srv
-name server
 name vacuumServer
 port 4004
 number 1

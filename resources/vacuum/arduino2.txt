@@ -1,4 +1,5 @@
 command ard2
+name arduino2
 /* 1
 
 this

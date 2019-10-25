@@ -1,0 +1,391 @@
+time device message
+arduino2 1572026263547 Port name doesn't exist
+
+arduino2 1572026266590 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572026266590 port wasn't created!
+
+arduino2 1572026266590 message wasn't written onarduino2
+
+arduino2 1572026266590 COM632 is lost. Reconnecting...
+
+arduino2 1572026266600 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572026267603 COMMAND:deviceCommand aread 0
+
+arduino2 1572026267605 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572026267606 COMMAND:deviceCommand aread 0
+
+arduino2 1572026267607 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027249365 Port name doesn't exist
+
+arduino2 1572027252401 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027252405 port wasn't created!
+
+arduino2 1572027252406 message wasn't written onarduino2
+
+arduino2 1572027252407 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027252408 COM632 is lost. Reconnecting...
+
+arduino2 1572027253411 COMMAND:deviceCommand aread 0
+
+arduino2 1572027253413 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027253414 COMMAND:deviceCommand aread 0
+
+arduino2 1572027253414 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027525609 Port name doesn't exist
+
+arduino2 1572027528638 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027528643 port wasn't created!
+
+arduino2 1572027528643 message wasn't written onarduino2
+
+arduino2 1572027528644 COM632 is lost. Reconnecting...
+
+arduino2 1572027528644 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027529649 COMMAND:deviceCommand aread 0
+
+arduino2 1572027529651 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027529652 COMMAND:deviceCommand aread 0
+
+arduino2 1572027529653 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027615751 Port name doesn't exist
+
+arduino2 1572027618779 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027618784 port wasn't created!
+
+arduino2 1572027618785 message wasn't written onarduino2
+
+arduino2 1572027618786 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027618787 COM632 is lost. Reconnecting...
+
+arduino2 1572027619788 COMMAND:deviceCommand aread 0
+
+arduino2 1572027619789 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027619791 COMMAND:deviceCommand aread 0
+
+arduino2 1572027619792 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027627660 Port name doesn't exist
+
+arduino2 1572027630690 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027630695 port wasn't created!
+
+arduino2 1572027630696 message wasn't written onarduino2
+
+arduino2 1572027630696 COM632 is lost. Reconnecting...
+
+arduino2 1572027630697 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027631699 COMMAND:deviceCommand aread 0
+
+arduino2 1572027631701 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027631701 COMMAND:deviceCommand aread 0
+
+arduino2 1572027631702 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027642903 Port name doesn't exist
+
+arduino2 1572027645931 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027645936 port wasn't created!
+
+arduino2 1572027645936 message wasn't written onarduino2
+
+arduino2 1572027645937 COM632 is lost. Reconnecting...
+
+arduino2 1572027645938 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027646940 COMMAND:deviceCommand aread 0
+
+arduino2 1572027646942 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027646943 COMMAND:deviceCommand aread 0
+
+arduino2 1572027646944 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027656091 Port name doesn't exist
+
+arduino2 1572027659119 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027659124 port wasn't created!
+
+arduino2 1572027659124 message wasn't written onarduino2
+
+arduino2 1572027659126 COM632 is lost. Reconnecting...
+
+arduino2 1572027659127 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027660128 COMMAND:deviceCommand aread 0
+
+arduino2 1572027660129 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027660130 COMMAND:deviceCommand aread 0
+
+arduino2 1572027660130 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027695394 Port name doesn't exist
+
+arduino2 1572027698428 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027698433 port wasn't created!
+
+arduino2 1572027698433 message wasn't written onarduino2
+
+arduino2 1572027698434 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027698435 COM632 is lost. Reconnecting...
+
+arduino2 1572027699435 COMMAND:deviceCommand aread 0
+
+arduino2 1572027699437 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027699437 COMMAND:deviceCommand aread 0
+
+arduino2 1572027699438 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027769453 Port name doesn't exist
+
+arduino2 1572027772483 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027772487 port wasn't created!
+
+arduino2 1572027772487 message wasn't written onarduino2
+
+arduino2 1572027772488 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027772490 COM632 is lost. Reconnecting...
+
+arduino2 1572027773501 COMMAND:deviceCommand aread 0
+
+arduino2 1572027773502 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027773503 COMMAND:deviceCommand aread 0
+
+arduino2 1572027773503 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027895691 Port name doesn't exist
+
+arduino2 1572027898719 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027898723 port wasn't created!
+
+arduino2 1572027898725 message wasn't written onarduino2
+
+arduino2 1572027898726 COM632 is lost. Reconnecting...
+
+arduino2 1572027898726 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027899734 COMMAND:deviceCommand aread 0
+
+arduino2 1572027899735 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027899736 COMMAND:deviceCommand aread 0
+
+arduino2 1572027899737 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572027951648 Port name doesn't exist
+
+arduino2 1572027954676 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572027954681 port wasn't created!
+
+arduino2 1572027954685 message wasn't written onarduino2
+
+arduino2 1572027954686 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572027954687 COM632 is lost. Reconnecting...
+
+arduino2 1572027955692 COMMAND:deviceCommand aread 0
+
+arduino2 1572027955693 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572027955695 COMMAND:deviceCommand aread 0
+
+arduino2 1572027955696 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572028035582 Port name doesn't exist
+
+arduino2 1572028038608 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028038613 port wasn't created!
+
+arduino2 1572028038613 message wasn't written onarduino2
+
+arduino2 1572028038614 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572028038619 COM632 is lost. Reconnecting...
+
+arduino2 1572028039618 COMMAND:deviceCommand aread 0
+
+arduino2 1572028039620 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572028039621 COMMAND:deviceCommand aread 0
+
+arduino2 1572028039622 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572028073100 Port name doesn't exist
+
+arduino2 1572028076136 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028076136 port wasn't created!
+
+arduino2 1572028076136 message wasn't written onarduino2
+
+arduino2 1572028076137 some internal error happeneddeviceCommand dwrite 9 0
+
+time device message
+arduino2 1572028548506 Port name doesn't exist
+
+arduino2 1572028551534 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028551539 port wasn't created!
+
+arduino2 1572028551539 message wasn't written onarduino2
+
+arduino2 1572028551539 COM632 is lost. Reconnecting...
+
+arduino2 1572028551541 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572028552542 COMMAND:deviceCommand aread 0
+
+arduino2 1572028552543 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572028552545 COMMAND:deviceCommand aread 0
+
+arduino2 1572028552546 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572028783493 Port name doesn't exist
+
+arduino2 1572028786525 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028786526 port wasn't created!
+
+arduino2 1572028786527 message wasn't written onarduino2
+
+arduino2 1572028786529 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572028786530 COM632 is lost. Reconnecting...
+
+arduino2 1572028787530 COMMAND:deviceCommand aread 0
+
+arduino2 1572028787531 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572028787563 COMMAND:deviceCommand aread 0
+
+arduino2 1572028787564 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572028798373 Port name doesn't exist
+
+arduino2 1572028801416 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028801419 port wasn't created!
+
+arduino2 1572028801419 message wasn't written onarduino2
+
+arduino2 1572028801420 COM632 is lost. Reconnecting...
+
+arduino2 1572028801421 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572028802423 COMMAND:deviceCommand aread 0
+
+arduino2 1572028802425 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572028802525 COMMAND:deviceCommand aread 0
+
+arduino2 1572028802526 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572028975381 Port name doesn't exist
+
+arduino2 1572028978412 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572028978416 port wasn't created!
+
+arduino2 1572028978417 message wasn't written onarduino2
+
+arduino2 1572028978418 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572028979419 COMMAND:deviceCommand aread 0
+
+arduino2 1572028979421 Analog signal on pin 0 is  -1.0
+
+arduino2 1572028979421 DEV logic 1572028979421 0 command 1572028979421: 2
+
+arduino2 1572028979421 COMMAND:deviceCommand aread 0
+
+arduino2 1572028979422 Analog signal on pin 0 is  -1.0
+
+arduino2 1572028979422 DEV logic 1572028979422 1 command 1572028979422: 0
+
+time device message
+arduino2 1572029014045 Port name doesn't exist
+
+arduino2 1572029017077 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572029017081 port wasn't created!
+
+arduino2 1572029017082 message wasn't written onarduino2
+
+arduino2 1572029017083 COM632 is lost. Reconnecting...
+
+arduino2 1572029017084 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572029018086 COMMAND:deviceCommand aread 0
+
+arduino2 1572029018088 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572029018088 COMMAND:deviceCommand aread 0
+
+arduino2 1572029018089 some internal error happeneddeviceCommand aread 0
+
+time device message
+arduino2 1572029147048 Port name doesn't exist
+
+arduino2 1572029150070 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572029150074 port wasn't created!
+
+arduino2 1572029150075 message wasn't written onarduino2
+
+arduino2 1572029150076 COM632 is lost. Reconnecting...
+
+arduino2 1572029150077 some internal error happeneddeviceCommand dwrite 9 0
+
+arduino2 1572029151078 COMMAND:deviceCommand aread 0
+
+arduino2 1572029151079 some internal error happeneddeviceCommand aread 0
+
+arduino2 1572029151080 COMMAND:deviceCommand aread 0
+
+arduino2 1572029151080 some internal error happeneddeviceCommand aread 0
+

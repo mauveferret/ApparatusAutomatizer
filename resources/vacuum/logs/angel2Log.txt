@@ -1,0 +1,57 @@
+time device message
+angel2 1572026266590 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027252401 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027528636 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027618778 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027630689 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027645930 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027659118 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027698427 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027772482 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027898718 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572027954675 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028038606 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028076135 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028551533 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028786525 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028801416 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572028978412 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572029017076 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel2 1572029150069 ORDER3: bypass and valve opened. I'm closing the bypass!
+

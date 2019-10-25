@@ -1,0 +1,61 @@
+time device message
+angel1 1572026266590 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027252400 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027528637 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027618778 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027630689 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027645930 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027659118 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027698427 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027772481 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027898717 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572027954675 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028038607 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028076126 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028551533 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028786521 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028801413 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572028978411 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572029017075 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572029150068 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+angel1 1572029277852 COMMAND:ang1 stop
+
+angel1 1572029277853 DEV logic 1572029277853 1 command 1572029277853: 0 command: ang1 stop
+

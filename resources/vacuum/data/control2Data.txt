@@ -1,0 +1,178 @@
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572015325818 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572015434895 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572015471600 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572016466988 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572016515033 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572016696016 0 0 0 0 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572016744006 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572016802463 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572017228048 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572017250942 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572017365661 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572017449841 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572017489587 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572019886712 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020017281 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020418504 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020496084 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020561023 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020611814 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020653413 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020679069 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020693445 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020745150 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020755406 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572020775604 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021161651 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021217453 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021323014 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021442673 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021497292 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021553198 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572021637606 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572022084446 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572022349982 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572022462766 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572022584693 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572023760084 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572023862110 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572023899684 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024033522 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024152451 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024496960 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024522784 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024708467 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024847078 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024930895 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572024961566 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025023575 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025035445 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025118545 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025136977 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025163518 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025291626 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025345804 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025423749 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572025519827 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572026263628 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027249432 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027525693 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027615896 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027627726 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027642971 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027656170 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027695465 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027769522 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027895765 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572027951714 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028035650 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028073160 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028548572 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028783571 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028798479 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572028975459 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572029014149 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572029147108 4 4 2 4 

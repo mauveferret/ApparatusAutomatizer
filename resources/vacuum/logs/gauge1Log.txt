@@ -1,0 +1,57 @@
+time device message
+gauge1 1572026263512 COM49 is opened
+
+time device message
+gauge1 1572027249329 COM49 is opened
+
+time device message
+gauge1 1572027525575 COM49 is opened
+
+time device message
+gauge1 1572027615721 COM49 is opened
+
+time device message
+gauge1 1572027627622 COM49 is opened
+
+time device message
+gauge1 1572027642867 COM49 is opened
+
+time device message
+gauge1 1572027656056 COM49 is opened
+
+time device message
+gauge1 1572027695359 COM49 is opened
+
+time device message
+gauge1 1572027769420 COM49 is opened
+
+time device message
+gauge1 1572027895658 COM49 is opened
+
+time device message
+gauge1 1572027951614 COM49 is opened
+
+time device message
+gauge1 1572028035551 COM49 is opened
+
+time device message
+gauge1 1572028073067 COM49 is opened
+
+time device message
+gauge1 1572028548475 COM49 is opened
+
+time device message
+gauge1 1572028783460 COM49 is opened
+
+time device message
+gauge1 1572028798318 COM49 is opened
+
+time device message
+gauge1 1572028975347 COM49 is opened
+
+time device message
+gauge1 1572029014005 COM49 is opened
+
+time device message
+gauge1 1572029147008 COM49 is opened
+

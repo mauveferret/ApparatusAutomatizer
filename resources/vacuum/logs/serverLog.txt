@@ -1,0 +1,63 @@
+time device message
+vacuumServer 1572026263636 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027249462 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027525697 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027615929 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027627751 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027642994 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027656179 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027695481 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572027711574 Access granted to admin
+
+vacuumServer 1572027722152 admin disconnected
+
+time device message
+vacuumServer 1572027769540 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027895779 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572027951735 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028035674 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028073185 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028548578 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028783600 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028798497 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572028975476 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572029014156 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572029147118 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572029267732 Access granted to admin
+

@@ -1,0 +1,95 @@
+time device message
+tmp1 1572026263630 COM51 port wasn't created!
+
+tmp1 1572026263647 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027249443 COM51 port wasn't created!
+
+tmp1 1572027249455 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027525695 COM51 port wasn't created!
+
+tmp1 1572027525715 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027615907 COM51 port wasn't created!
+
+tmp1 1572027615913 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027627751 COM51 port wasn't created!
+
+tmp1 1572027627759 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027642976 COM51 port wasn't created!
+
+tmp1 1572027642976 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027656175 COM51 port wasn't created!
+
+tmp1 1572027656194 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027695475 COM51 port wasn't created!
+
+tmp1 1572027695482 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027769540 COM51 port wasn't created!
+
+tmp1 1572027769542 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027895771 COM51 port wasn't created!
+
+tmp1 1572027895775 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572027951716 COM51 port wasn't created!
+
+tmp1 1572027951718 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028035650 COM51 port wasn't created!
+
+tmp1 1572028035662 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028073171 COM51 port wasn't created!
+
+tmp1 1572028073182 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028548574 COM51 port wasn't created!
+
+tmp1 1572028548583 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028783581 COM51 port wasn't created!
+
+tmp1 1572028783584 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028798478 COM51 port wasn't created!
+
+tmp1 1572028798489 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572028975469 COM51 port wasn't created!
+
+tmp1 1572028975483 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572029014144 COM51 port wasn't created!
+
+tmp1 1572029014153 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1572029147118 COM51 port wasn't created!
+
+tmp1 1572029147128 COM51 is lost. Reconnecting...
+

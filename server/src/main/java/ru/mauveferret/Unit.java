@@ -12,9 +12,6 @@ public abstract  class Unit extends Thread{
     {
         getCommands();
         String path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-
-        //FIXME "Apparatus..." can be used only during development
-
         String separator = File.separator ;
         path = path.substring(0,path.indexOf("ApparatusAutomatizer")+"ApparatusAutomatizer".length());
         /*
@@ -24,14 +21,18 @@ public abstract  class Unit extends Thread{
          */
         path = path.replaceAll("/", separator+separator);
         path+=separator+"resources"+separator;
+
+        String sectionDirectory = "";
         if (!fileName.contains(File.separator)) config.name = fileName;
-        else config.name = fileName.substring(fileName.indexOf(File.separator)+1);
+        else
+        {
+            config.name = fileName.substring(fileName.indexOf(File.separator)+1);
+            sectionDirectory = fileName.substring(0,fileName.indexOf(File.separator)+1);
+        }
         config.configPath = path+separator+fileName+".txt";
 
-        //TODO  configPath should be in directories  vacuum, discharge etc.
-
-        config.logPath = path+"logs"+separator+fileName+"Log.txt";
-        config.dataPath = path+"data"+separator+fileName+"Data.txt";
+        config.logPath = path+sectionDirectory+"logs"+separator+config.name+"Log.txt";
+        config.dataPath = path+sectionDirectory+"data"+separator+config.name+"Data.txt";
         messageLog.createFile(config.logPath,"time device message");
         importConfigurationFile();
     }
@@ -92,7 +93,7 @@ public abstract  class Unit extends Thread{
                     long t2 = System.currentTimeMillis();
                     chooseTerminalCommand(command);
                     long t3 = System.currentTimeMillis();
-                    sendMessage("DEV logic time " + (t2 - t1) + " command time: " + (t3 - t2));
+                    sendMessage("DEV logic time " + (t2 - t1) + " command time: " + (t3 - t2)+" command: "+someCommand);
 
                 } else {
                     sendMessage("command \"" + command[1] + "\" doesn't exist");

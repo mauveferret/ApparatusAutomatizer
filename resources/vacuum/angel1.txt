@@ -1,4 +1,5 @@
 command ang1
+name angel1
 /* 1
 
 this
