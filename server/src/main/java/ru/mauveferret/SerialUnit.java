@@ -210,7 +210,7 @@ public abstract class SerialUnit extends RecordingUnit {
             }
             return answer;
         }
-        catch (SerialPortException e) {
+        catch (SerialPortException|NullPointerException e) {
             if (!isReconnectActive)
                 sendMessage(e.getLocalizedMessage());
             reconnect();
@@ -302,6 +302,7 @@ public abstract class SerialUnit extends RecordingUnit {
         {
             sendMessage(ex.getPortName()+" не прокатило!!");
         }
+        catch (NullPointerException ignored){}
         if (!isReconnectActive)
             sendMessage(e.getMessage());
         reconnect();

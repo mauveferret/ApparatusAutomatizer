@@ -117,20 +117,27 @@ public class Arduino extends SerialUnit {
             message += "AI" + fillStringByZeros(pin, 2);
             writeString(message + fillStringByZeros(""+checkSum(message), 3) + "\n");
             String answer = readString("\n");
-            int signal = checkSum(answer.substring(0, answer.length() - 4));
-            int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
-            if ((signal == checksum) && (!answer.contains("ERROR"))) {
-                {
-                    double value = Integer.parseInt(answer.substring(7, 11)) / 204.6;
-                    analogPinsRead[Integer.parseInt(pin)] = value;
-                    return value;
-                }
-            } else {
-                if (answer.contains("ERROR")) sendMessage("pin " + pin + " doesn't exist");
-                else
-                    sendMessage("CheckSum is not correct. Check the wires!");
-            }
-            return -1;
+           try {
+               int signal = checkSum(answer.substring(0, answer.length() - 4));
+               int checksum = Integer.parseInt(answer.substring(answer.length() - 4, answer.length() - 1));
+               if ((signal == checksum) && (!answer.contains("ERROR"))) {
+                   {
+                       double value = Integer.parseInt(answer.substring(7, 11)) / 204.6;
+                       analogPinsRead[Integer.parseInt(pin)] = value;
+                       return value;
+                   }
+               } else {
+                   if (answer.contains("ERROR")) sendMessage("pin " + pin + " doesn't exist");
+                   else
+                       sendMessage("CheckSum is not correct. Check the wires!");
+               }
+               return -1;
+           }
+           catch (Exception e)
+           {
+               sendMessage(config.name+": "+e.getMessage());
+               return  -1;
+           }
     }
 
     //internal Arduino methods (are needed for the driver support)

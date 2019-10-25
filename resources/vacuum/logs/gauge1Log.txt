@@ -55,3 +55,21 @@ gauge1 1572029014005 COM49 is opened
 time device message
 gauge1 1572029147008 COM49 is opened
 
+time device message
+gauge1 1572029500977 COM49 is opened
+
+time device message
+gauge1 1572029803723 COM49 is opened
+
+time device message
+gauge1 1572030048921 COM49 is opened
+
+time device message
+gauge1 1572030173223 COM49 is opened
+
+time device message
+gauge1 1572030187134 COM49 is opened
+
+time device message
+gauge1 1572030327104 COM49 is opened
+

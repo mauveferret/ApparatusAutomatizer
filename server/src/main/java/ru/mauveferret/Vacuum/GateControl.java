@@ -264,7 +264,6 @@ class GateControl extends RecordingUnit {
             }
         }
         else {
-            System.out.println("ae2222222 "+opened.get("bypass")+"   "+status.get("bypass"));
             sendMessage("bypass"+config.unitNumber+" already "+((open) ? "opened" : "closed"));
         }
     }

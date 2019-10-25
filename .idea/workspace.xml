@@ -2,72 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/control2Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/gauge1Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/gauge2Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/gauge3Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/tmp1Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/tmp2Data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/arduino1/digitalPins1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/arduino2/digitalPins2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/bypass1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/gate1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/pump1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/valve1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/bypass2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/gate2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/pump2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/vessel1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/column11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/column21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/vessel1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/status1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/temperature1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/voltage1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/current2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/frequency2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/status2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/temperature2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/voltage2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column1previousCommands1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column2previousCommands1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/angel1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/angel2Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/arduino1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/arduino2Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/auto1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/auto2Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/control1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/control2Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/gauge1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/gauge3Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/serverLog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/analyzer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/analyzer.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pfeifferGauge.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/server.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/terminal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/terminal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/angel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/angel1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/angel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/angel2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/arduino2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/arduino2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/auto1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/auto1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/server.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/tmp1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/tmp1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/tmp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/tmp2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/control2Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/control2Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/gauge1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/gauge1Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/gauge3Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/gauge3Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/tmp1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/tmp1Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/tmp2Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/tmp2Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/arduino1/digitalPins1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/arduino1/digitalPins1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/arduino2/digitalPins2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/arduino2/digitalPins2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/bypass1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/bypass1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/gate1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/gate1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/pump1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/pump1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/valve1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate1/valve1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/bypass2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/bypass2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/gate2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/gate2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/pump2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/pump2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/status1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/status1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/temperature1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/temperature1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/voltage1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/voltage1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/current2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/current2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/frequency2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/frequency2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/status2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/status2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/temperature2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/temperature2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/voltage2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp2/voltage2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column1previousCommands1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column1previousCommands1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column2previousCommands1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/vacuumServer/column2previousCommands1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/angel1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/angel1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/angel2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/angel2Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/arduino1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/arduino1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/arduino2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/arduino2Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/auto1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/auto1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/auto2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/auto2Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/control1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/control1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/control2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/control2Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/gauge1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/gauge1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/gauge3Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/gauge3Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/serverLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/serverLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -319,14 +302,8 @@
       <workItem from="1571551124611" duration="11149000" />
       <workItem from="1571739248550" duration="17530000" />
       <workItem from="1571822227677" duration="8467000" />
-      <workItem from="1571927702856" duration="31559000" />
-    </task>
-    <task id="LOCAL-00038" summary="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control">
-      <created>1568307744100</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1568307744100</updated>
+      <workItem from="1571927702856" duration="31638000" />
+      <workItem from="1572029463917" duration="850000" />
     </task>
     <task id="LOCAL-00039" summary="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin">
       <created>1568471707620</created>
@@ -664,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572025594563</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="seems to work, but some error occures on arduino">
+      <created>1572029316553</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1572029316553</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="log scale fixed" />
     <MESSAGE value="indicators made" />
     <MESSAGE value="Leybold control and measuring made, strange error happens" />
     <MESSAGE value="Leybold TMP works! It can be controlled and data can be logged" />
@@ -710,6 +693,7 @@
     <MESSAGE value="Vacuum Units created. It unifies units loading" />
     <MESSAGE value="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure" />
     <MESSAGE value="...seems to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="...seems to work" />
+    <MESSAGE value="seems to work, but some error occures on arduino" />
+    <option name="LAST_COMMIT_MESSAGE" value="seems to work, but some error occures on arduino" />
   </component>
 </project>

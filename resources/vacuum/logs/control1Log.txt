@@ -157,3 +157,67 @@ gate1 1572029276352 COMMAND:gate1 pump on
 
 gate1 1572029276400 DEV logic 1572029276400 0 command 1572029276400: 48 command: gate1 pump on
 
+time device message
+gate1 1572029504039 COMMAND:bla bypass close
+
+gate1 1572029504091 DEV logic 1572029504091 0 command 1572029504091: 52 command: bla bypass close
+
+gate1 1572029505187 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572029806791 COMMAND:bla bypass close
+
+gate1 1572029806849 DEV logic 1572029806849 0 command 1572029806849: 58 command: bla bypass close
+
+gate1 1572029807945 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572030051988 COMMAND:bla bypass close
+
+gate1 1572030052040 DEV logic 1572030052040 0 command 1572030052040: 52 command: bla bypass close
+
+gate1 1572030053136 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572030176294 COMMAND:bla bypass close
+
+gate1 1572030176345 DEV logic 1572030176345 0 command 1572030176345: 51 command: bla bypass close
+
+gate1 1572030177442 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572030190195 COMMAND:bla bypass close
+
+gate1 1572030190246 DEV logic 1572030190246 0 command 1572030190246: 51 command: bla bypass close
+
+gate1 1572030191344 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572030330163 COMMAND:bla bypass close
+
+gate1 1572030330214 DEV logic 1572030330214 0 command 1572030330214: 51 command: bla bypass close
+
+gate1 1572030331310 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572030366441 COMMAND:gate1 pump off
+
+gate1 1572030366493 DEV logic 1572030366493 1 command 1572030366493: 51 command: gate1 pump off
+
+gate1 1572030366941 COMMAND:gate1 bypass open
+
+gate1 1572030366944 bypass1 already opened
+
+gate1 1572030366945 DEV logic 1572030366945 1 command 1572030366945: 3 command: gate1 bypass open
+
+gate1 1572030367453 COMMAND:gate1 gate open
+
+gate1 1572030367453 pressure difference is too high.
+
+gate1 1572030367453 pressure in vessel is too high.
+
+gate1 1572030367454 DEV logic 1572030367454 0 command 1572030367454: 1 command: gate1 gate open
+
+gate1 1572030368043 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572030368548 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+

@@ -129,3 +129,45 @@ gate2 1572029150084 DEV logic 1572029150084 1 command 1572029150084: 8 command: 
 
 gate2 1572029151085 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
 
+time device message
+gate2 1572029504039 COMMAND:bla bypass close
+
+gate2 1572029504060 DEV logic 1572029504060 0 command 1572029504060: 11 command: bla bypass close
+
+gate2 1572029505064 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate2 1572029806791 COMMAND:bla bypass close
+
+gate2 1572029806801 DEV logic 1572029806801 0 command 1572029806801: 10 command: bla bypass close
+
+gate2 1572029807802 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate2 1572030051998 COMMAND:bla bypass close
+
+gate2 1572030052009 DEV logic 1572030052009 0 command 1572030052009: 1 command: bla bypass close
+
+gate2 1572030053003 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate2 1572030176294 COMMAND:bla bypass close
+
+gate2 1572030176304 DEV logic 1572030176304 0 command 1572030176304: 10 command: bla bypass close
+
+gate2 1572030177319 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate2 1572030190195 COMMAND:bla bypass close
+
+gate2 1572030190206 DEV logic 1572030190206 0 command 1572030190206: 11 command: bla bypass close
+
+gate2 1572030191210 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate2 1572030330163 COMMAND:bla bypass close
+
+gate2 1572030330174 DEV logic 1572030330174 0 command 1572030330174: 11 command: bla bypass close
+
+gate2 1572030331188 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
+

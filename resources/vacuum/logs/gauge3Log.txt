@@ -235,3 +235,96 @@ gauge3 1572029147138 COM8 is lost. Reconnecting...
 
 gauge3 1572029147138 Port name - COM8; Method name - closePort(); Exception type - Port not opened.
 
+time device message
+gauge3 1572029500997 Port name doesn't exist
+
+gauge3 1572029501107 port wasn't created!
+
+gauge3 1572029501107 message wasn't written ongauge3
+
+gauge3 1572029501107 ERROR while log: port wasn't created
+ 
+
+gauge3 1572029501127 Port name - COM8; Method name - closePort(); Exception type - Port not opened.
+
+time device message
+gauge3 1572029803743 Port name doesn't exist
+
+gauge3 1572029803843 port wasn't created!
+
+gauge3 1572029803843 message wasn't written ongauge3
+
+gauge3 1572029803843 null
+
+gauge3 1572029803843 ERROR while log: port wasn't created
+ 
+
+gauge3 1572029803853 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1572030048941 Port name doesn't exist
+
+gauge3 1572030049051 port wasn't created!
+
+gauge3 1572030049051 message wasn't written ongauge3
+
+gauge3 1572030049051 null
+
+gauge3 1572030049072 ERROR while log: port wasn't created
+ 
+
+gauge3 1572030049072 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1572030173253 Port name doesn't exist
+
+gauge3 1572030173353 port wasn't created!
+
+gauge3 1572030173353 message wasn't written ongauge3
+
+gauge3 1572030173353 null
+
+gauge3 1572030173353 port wasn't created!
+
+gauge3 1572030173353 message wasn't written ongauge3
+
+gauge3 1572030173353 null
+
+gauge3 1572030173363 COM8 is lost. Reconnecting...
+
+gauge3 1572030173363 Port name - COM8; Method name - closePort(); Exception type - Port not opened.
+
+time device message
+gauge3 1572030187164 Port name doesn't exist
+
+gauge3 1572030187254 port wasn't created!
+
+gauge3 1572030187254 message wasn't written ongauge3
+
+gauge3 1572030187254 null
+
+gauge3 1572030187254 port wasn't created!
+
+gauge3 1572030187254 message wasn't written ongauge3
+
+gauge3 1572030187254 null
+
+gauge3 1572030187254 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1572030327124 Port name doesn't exist
+
+gauge3 1572030327214 port wasn't created!
+
+gauge3 1572030327214 message wasn't written ongauge3
+
+gauge3 1572030327214 null
+
+gauge3 1572030327224 port wasn't created!
+
+gauge3 1572030327224 message wasn't written ongauge3
+
+gauge3 1572030327224 null
+
+gauge3 1572030327234 COM8 is lost. Reconnecting...
+

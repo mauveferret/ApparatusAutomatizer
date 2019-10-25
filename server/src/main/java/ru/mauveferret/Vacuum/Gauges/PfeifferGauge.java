@@ -43,7 +43,7 @@ public class PfeifferGauge extends Gauge {
         catch (Exception e)
         {
             deviceIsOn = false;
-            return pressure.get(config.devices.get(gauge));
+            return pressure.get(config.devices.get(gauge-1));
         }
     }
 

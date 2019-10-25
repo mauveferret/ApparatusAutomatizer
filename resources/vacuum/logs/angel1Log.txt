@@ -59,3 +59,21 @@ angel1 1572029277852 COMMAND:ang1 stop
 
 angel1 1572029277853 DEV logic 1572029277853 1 command 1572029277853: 0 command: ang1 stop
 
+time device message
+angel1 1572029504039 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572029806791 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572030051988 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572030176294 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572030190195 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572030330163 ORDER3: bypass and valve opened. I'm closing the bypass!
+
