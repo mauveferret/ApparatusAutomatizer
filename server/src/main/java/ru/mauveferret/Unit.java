@@ -24,7 +24,7 @@ public abstract  class Unit extends Thread{
          */
         path = path.replaceAll("/", separator+separator);
         path+=separator+"resources"+separator;
-        config.name = fileName;
+        config.name = fileName.substring(fileName.indexOf(File.separator));
         config.configPath = path+separator+fileName+".txt";
 
         //TODO  configPath should be in directories  vacuum, discharge etc.

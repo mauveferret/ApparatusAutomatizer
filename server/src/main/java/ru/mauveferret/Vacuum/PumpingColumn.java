@@ -1,32 +1,26 @@
 package ru.mauveferret.Vacuum;
 
-import ru.mauveferret.Terminal;
-import ru.mauveferret.Vacuum.*;
+import ru.mauveferret.Arduino;
+import ru.mauveferret.Unit;
 
-public class PumpingColumn  {
+import java.util.ArrayList;
 
+public class PumpingColumn {
 
-    int kurva;
-
-    Gauge gauge;
     TMP tmp;
-    AutoPumping autoPumping;
-    GuardianAngel angel;
+    Arduino arduino;
     GateControl gateControl;
-    Terminal terminal;
+    GuardianAngel angel;
+    AutoPumping autoPumping;
 
-    String gaugeName;
-     String tmpName ;
-     String gateControlName;
-  String autoName;
-   String angelName;
-
-    void setUnits()
+    ArrayList<Unit> getAll()
     {
-        try {  gauge= (Gauge) (terminal.getDevice(gaugeName));} catch (Exception ignored) {}
-        try {  tmp = (TMP) (terminal.getDevice(tmpName));} catch (Exception ignored) {}
-        try {  gateControl = (GateControl) (terminal.getDevice(gateControlName));} catch (Exception ignored) {}
-        try {  angel = (GuardianAngel) (terminal.getDevice(angelName));} catch (Exception ignored) {}
-        try {  autoPumping = (AutoPumping) (terminal.getDevice(autoName));} catch (Exception ignored) {}
+        ArrayList<Unit> all = new ArrayList<>();
+        all.add(tmp);
+        all.add(arduino);
+        all.add(gateControl);
+        all.add(angel);
+        all.add(autoPumping);
+        return all;
     }
 }

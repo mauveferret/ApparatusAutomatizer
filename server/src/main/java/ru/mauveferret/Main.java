@@ -28,7 +28,7 @@ public class Main {
         terminal.addDevice(analyzer);
 
 
-        new Vacuum(terminal);
+        new VacuumUnits("vacuum");
 
         try {
             Thread.sleep(500);
