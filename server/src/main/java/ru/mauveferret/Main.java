@@ -16,28 +16,21 @@ public class Main {
         //System.out.println(passwordManager.IsPasswordValid("admin", "password"));
         //System.out.println(passwordManager.loginHasNotExpired("admin"));
 
-
+        LoadedUnits units = new LoadedUnits();
 
         SerialConsole serialConsole = new SerialConsole("console");
         ProgramAnalyzer analyzer = new ProgramAnalyzer("analyzer");
         //PasswordManager passwordManager = new PasswordManager();
         Terminal terminal = new Terminal("terminal");
+        VacuumUnits vacuumUnits = new VacuumUnits("vacuum");
         //terminal.addDevice(passwordManager);
         terminal.addDevice(serialConsole);
         terminal.addDevice(terminal);
         terminal.addDevice(analyzer);
 
 
-        new VacuumUnits("vacuum");
-
-        try {
-            Thread.sleep(500);
-        }
-        catch (Exception ignored){}
-        System.out.println("__________________________________________");
-        for (String s :terminal.getCommandMap().keySet()) System.out.print(s+" ");
-        System.out.println();
-        System.out.println("__________________________________________");
+        terminal.addDevice(vacuumUnits);
+        vacuumUnits.loadVacuumUnits();
         terminal.startNewSession();
     }
 }

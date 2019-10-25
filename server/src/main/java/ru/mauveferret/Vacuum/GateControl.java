@@ -22,14 +22,15 @@ class GateControl extends RecordingUnit {
         super(fileName);
         unitAccessLevel = 6;
         dataLog.createFile(config.dataPath, "forlineStatus  bypassStatus valveStatus   gateStatus");
-
     }
 
     @Override
     protected void initialize() {
         super.initialize();
-        try { arduino = (Arduino) (terminalSample.getDevice(arduinoName));} catch (Exception ignored) {}
-        try {  gauge = (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
+        arduino = (config.unitNumber == 1) ? LoadedUnits.column1.arduino : LoadedUnits.column2.arduino;
+        // in case of gauges it could be different devices
+        columnGauge =  LoadedUnits.gauge.get(columnGaugeName);
+        columnGauge =  LoadedUnits.gauge.get(vesselGaugeName);
     }
 
 
@@ -57,7 +58,8 @@ class GateControl extends RecordingUnit {
     private String arduinoName;
     private String gaugeName;
     private Arduino arduino;
-    private Gauge gauge;
+    private Gauge columnGauge;
+    private Gauge vesselGauge;
 
 
 
@@ -174,8 +176,8 @@ class GateControl extends RecordingUnit {
         }
 
         if (isCorrectControl) {
-            columnPressure = gauge.pressure.get(columnGaugeName);
-            vesselPressure = gauge.pressure.get(vesselGaugeName);
+            columnPressure = columnGauge.pressure.get(columnGaugeName);
+            vesselPressure = vesselGauge.pressure.get(vesselGaugeName);
             pressureDifference = Math.abs(columnPressure-vesselPressure);
             isPumpOn = arduino.getDigitalPinsWritten()[pumpDigitalPin];
 
@@ -383,10 +385,6 @@ class GateControl extends RecordingUnit {
                    case "columngauge" : columnGaugeName = command[1];
                    break;
                    case "vesselgauge" : vesselGaugeName = command[1];
-                   break;
-                   case "gauge": gaugeName = command[1];
-                   break;
-                   case "arduino": arduinoName = command[1];
                    break;
                }
            }

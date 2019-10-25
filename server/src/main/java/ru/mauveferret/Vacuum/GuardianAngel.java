@@ -15,15 +15,16 @@ class GuardianAngel extends RecordingUnit {
     @Override
     protected void initialize() {
         super.initialize();
-        gauge =(Gauge) terminalSample.getDevice(gaugeName);
-        gateControl = (GateControl) terminalSample.getDevice(gateName);
-        tmp = (TMP) terminalSample.getDevice(tmpName);
+        columnGauge = (config.unitNumber == 1) ? LoadedUnits.gauge.get("column1") : LoadedUnits.gauge.get("column2");
+        vesselGauge = LoadedUnits.gauge.get("vessel");
+        gateControl = (config.unitNumber == 1) ? LoadedUnits.column1.gateControl : LoadedUnits.column2.gateControl;
+        tmp = (config.unitNumber == 1) ? LoadedUnits.column1.tmp : LoadedUnits.column2.tmp;
         //FIXME we have to wate while Gauge will load all its parameters
         try {
             Thread.sleep(3000);
         }
         catch (Exception ignored){}
-        startCheckingPressure();
+        //startCheckingPressure();
     }
 
     @Override
@@ -39,7 +40,8 @@ class GuardianAngel extends RecordingUnit {
      */
 
     private boolean continueChecking;
-    private Gauge gauge;
+    private Gauge columnGauge;
+    private Gauge vesselGauge;
     private GateControl gateControl;
     private TMP tmp;
     private int enabled = 0;
@@ -82,8 +84,8 @@ class GuardianAngel extends RecordingUnit {
 
                     while (continueChecking) {
 
-                        double pressureColumn = gauge.pressure.get(firstColumnGaugeName);
-                        double pressureVessel = gauge.pressure.get(vesselGaugeName);
+                        double pressureColumn = columnGauge.pressure.get(firstColumnGaugeName);
+                        double pressureVessel = vesselGauge.pressure.get(vesselGaugeName);
                         int gate = gateControl.getGateStatus();
                         int valve = gateControl.getValveStatus();
                         int bypass = gateControl.getBypassStatus();
@@ -224,12 +226,6 @@ class GuardianAngel extends RecordingUnit {
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
-                case "gauge": gaugeName = command[1];
-                    break;
-                case "gatecontrol": gateName = command[1];
-                    break;
-                case "tmp" :  tmpName = command[1];
-                break;
                 case "firstcolumngaugename" : firstColumnGaugeName = command[1];
                 break;
                 case "vesselgaugename" : vesselGaugeName = command[1];

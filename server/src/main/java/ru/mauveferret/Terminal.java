@@ -132,6 +132,12 @@ public class Terminal extends Unit {
 
     //FIXME: it can stop the program?!
     void startNewSession() {
+
+        System.out.println("__________________________________________");
+        for (String s :getCommandMap().keySet()) System.out.print(s+" ");
+        System.out.println();
+        System.out.println("__________________________________________");
+
         Scanner scanner = new Scanner(System.in);
         sendMessage("Enter login and password, please.");
         String command = scanner.nextLine();

@@ -1,0 +1,11 @@
+command gate2
+name gate2
+number 2
+devices pump bypass valve gate
+gatecontrolpin 6
+forlinepin 4
+bypassControlPin 9
+gateanalogpins 0 1
+maxPressureDifference 10
+ColumnGauge column2
+VesselGauge vessel

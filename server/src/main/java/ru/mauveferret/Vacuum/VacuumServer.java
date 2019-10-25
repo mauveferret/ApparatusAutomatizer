@@ -34,25 +34,33 @@ class VacuumServer extends Server {
     @Override
     protected void initialize() {
         super.initialize();
-        try {  gauge= (Gauge) (terminalSample.getDevice(gaugeName));} catch (Exception ignored) {}
-        try {tmp = (TMP) (terminalSample.getDevice(tmpName));} catch (Exception ignored) {ignored.printStackTrace();}
-        try {  gateControl = (GateControl) (terminalSample.getDevice(gateControlName));} catch (Exception ignored) {}
-        try {  angel = (GuardianAngel) (terminalSample.getDevice(angelName));} catch (Exception ignored) {}
-        try {  autoPumping = (AutoPumping) (terminalSample.getDevice(autoName));} catch (Exception ignored) {}
+        tmp1 = LoadedUnits.column1.tmp;
+        tmp2 = LoadedUnits.column2.tmp;
+        autoPumping1 = LoadedUnits.column1.autoPumping;
+        autoPumping2 = LoadedUnits.column2.autoPumping;
+        angel1 = LoadedUnits.column1.angel;
+        angel2 = LoadedUnits.column2.angel;
+        gateControl1 = LoadedUnits.column1.gateControl;
+        gateControl2 = LoadedUnits.column2.gateControl;
+        columnGauge1 = LoadedUnits.gauge.get("column1");
+        columnGauge2 = LoadedUnits.gauge.get("column2");
+        vesselGauge = LoadedUnits.gauge.get("vessel");
     }
 
 
-    Gauge gauge;
-    private TMP tmp;
-    AutoPumping autoPumping;
-    GuardianAngel angel;
-    GateControl gateControl;
+    private Gauge columnGauge1;
+    private Gauge columnGauge2;
+    private Gauge vesselGauge;
+    private TMP tmp1;
+    private TMP tmp2;
+    private AutoPumping autoPumping1;
+    private AutoPumping autoPumping2;
+    private GuardianAngel angel1;
+    private GuardianAngel angel2;
+    private GateControl gateControl1;
+    private GateControl gateControl2;
 
-    String gaugeName;
-    private String tmpName ;
-    String gateControlName;
-    String autoName;
-    String angelName;
+
 
     private DecimalFormat decFormat = new DecimalFormat("#0.0");
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
@@ -98,10 +106,9 @@ class VacuumServer extends Server {
         String response =(System.currentTimeMillis()+"").substring(7)+" xyz ";
         response+= columnMainParameters(1)+" "+"00000000000 ";
         //FIXME do you need replace?!
-        response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
-        //Gauges TODO change it to column 2
-        response+=String.format("%6.2e",gauge.pressure.get("column1")).replace(",",".")+" ";
-        response+=String.format("%6.2e",gauge.pressure.get("vessel")).replace(",",".")+" ";
+        response+=String.format("%6.2e",columnGauge1.pressure.get("column1")).replace(",",".")+" ";
+        response+=String.format("%6.2e",columnGauge2.pressure.get("column2")).replace(",",".")+" ";
+        response+=String.format("%6.2e",vesselGauge.pressure.get("vessel")).replace(",",".")+" ";
         //tmp TODO  change  the first column to the second
         response+=tmpMainParameters(1)+" "+tmpMainParameters(1);
 
@@ -109,14 +116,22 @@ class VacuumServer extends Server {
     }
 
     private String columnMainParameters(int columnNumber){
-        //PumpingColumn local = (columnNumber==1) ? column1 :column2;
-        //FIXME
-        //String columnData = autoPumping.getEnabled()+""+angel.getEnabled()+""+gauge.getEnabled();
+        GateControl localCOntrol;
+        TMP localTMP;
+        if (columnNumber == 1)
+        {
+            localCOntrol = gateControl1;
+            localTMP = tmp1;
+        }
+        else {
+            localCOntrol = gateControl2;
+            localTMP = tmp2;
+        }
         String columnData = "002";
-        columnData+=gateControl.getPumpStatus()+""+gateControl.getBypassStatus();
-        columnData+=gateControl.getValveStatus()+""+gateControl.getGateStatus();
-        columnData+=booleanTOProtocol(tmp.isControlOn())+""+booleanTOProtocol(tmp.isEnabled());
-        columnData+=booleanTOProtocol(tmp.isCoolingOn())+""+booleanTOProtocol(tmp.isStandbyOn());
+        columnData+=localCOntrol.getPumpStatus()+""+localCOntrol.getBypassStatus();
+        columnData+=localCOntrol.getValveStatus()+""+localCOntrol.getGateStatus();
+        columnData+=booleanTOProtocol(localTMP.isControlOn())+""+booleanTOProtocol(localTMP.isEnabled());
+        columnData+=booleanTOProtocol(localTMP.isCoolingOn())+""+booleanTOProtocol(localTMP.isStandbyOn());
         return columnData;
     }
 
@@ -124,10 +139,10 @@ class VacuumServer extends Server {
 
     private String tmpMainParameters(int columnNumber)
     {
-        //PumpingColumn local = (columnNumber==1) ? column1 :column2;
-        String columnData =tmp.getFrequency()+" "+tmp.getTemperature()+" ";
-        columnData+=decFormat.format(tmp.getVoltage()).replace(",",".")+" ";
-        columnData+=decFormat.format(tmp.getCurrent()).replace(",",".");
+        TMP localTMP = (columnNumber==1) ? tmp1 : tmp2;
+        String columnData =localTMP.getFrequency()+" "+localTMP.getTemperature()+" ";
+        columnData+=decFormat.format(localTMP.getVoltage()).replace(",",".")+" ";
+        columnData+=decFormat.format(localTMP.getCurrent()).replace(",",".");
         return columnData;
     }
 
@@ -141,7 +156,8 @@ class VacuumServer extends Server {
             if (commandValue != commandsFromClient[i])
             {
                 commandsFromClient[i] =commandValue ;
-                executeCommand(i, communicator);
+                //FIXME columnNumber
+                executeCommand(i, communicator,1);
             }
         }
     }
@@ -153,11 +169,24 @@ class VacuumServer extends Server {
         return b;
     }
 
-    private void executeCommand(int commandIndex, SocketCryptedCommunicator communicator)
+    private void executeCommand(int commandIndex, SocketCryptedCommunicator communicator, int columnNumber)
     {
-
-        String stmp1 =tmp.config.unitCommand;
-        String gate1 = gateControl.config.unitCommand;
+        GateControl localCOntrol;
+        TMP localTMP;
+        GuardianAngel localAngel;
+        if (columnNumber == 1)
+        {
+            localCOntrol = gateControl1;
+            localTMP = tmp1;
+            localAngel = angel1;
+        }
+        else {
+            localCOntrol = gateControl2;
+            localTMP = tmp2;
+            localAngel = angel2;
+        }
+        String stmp1 =localTMP.config.unitCommand;
+        String gate1 =  localCOntrol.config.unitCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
         boolean comIs2 = commandsFromClient[commandIndex]==2;
@@ -193,39 +222,13 @@ class VacuumServer extends Server {
             }
             break;
             case 1: {
-                terminalSample.launchCommand(angel.config.unitCommand+" "+(comIs2? "start" : "stop"),
+                terminalSample.launchCommand(localAngel.config.unitCommand+" "+(comIs2? "start" : "stop"),
                         true, accessLevel);
             }
             break;
         }
     }
 
-    @Override
-    protected void chooseImportCommand(String line) {
-        super.chooseImportCommand(line);
-
-
-        String[] command = line.split(" ");
-        try {
-            switch (command[0]) {
-                case "gauge": gaugeName = command[1];
-                break;
-                case  "tmp1" :  tmpName = command[1];
-                break;
-                case  "gatecontrol1" : gateControlName= command[1];
-                break;
-                case "angel1" : angelName = command[1];
-                break;
-                case "auto1" : autoName = command[1];
-                break;
-            }
-        }
-        catch (Exception e)
-        {
-            sendMessage("incorrect option.");
-            sendMessage(e.getMessage());
-        }
-    }
 
     @Override
     protected void measureAndLog() {

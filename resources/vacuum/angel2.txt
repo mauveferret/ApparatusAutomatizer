@@ -1,0 +1,9 @@
+command ang2
+/* 1
+
+this
+
+*/
+number 2
+firstColumnGaugeName column2
+VesselGaugeName vessel

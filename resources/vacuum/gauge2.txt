@@ -1,0 +1,11 @@
+command tgag2
+/* 1
+
+this
+
+*/
+number 2
+name gauge2s
+port COM429
+devices column1 column2 
+open COM429

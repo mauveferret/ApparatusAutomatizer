@@ -1,12 +1,10 @@
-command tmp
+command tmp1
 /* 1
 
 this
 
 */
-ID 1
-name tmppump
 port COM51
 number 1
 devices temperature frequency voltage current status
-open
+

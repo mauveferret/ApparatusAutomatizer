@@ -1,0 +1,9 @@
+command tmp2
+/* 1
+
+this
+
+*/
+port COM123
+number 2
+devices temperature frequency voltage current status

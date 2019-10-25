@@ -1,0 +1,11 @@
+command pgag
+/* 1
+
+this
+
+*/
+number 1
+name gauge3
+devices vessel
+port COM8
+open 22

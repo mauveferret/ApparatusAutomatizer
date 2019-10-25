@@ -16,9 +16,10 @@ public class AutoPumping extends RecordingUnit {
     @Override
     protected void initialize() {
         super.initialize();
-        gauge =(Gauge) terminalSample.getDevice(gaugeName);
-        gateControl = (GateControl) terminalSample.getDevice(gateName);
-        tmp = (TMP) terminalSample.getDevice(tmpName);
+        columnGauge = (config.unitNumber == 1) ? LoadedUnits.gauge.get("column1") : LoadedUnits.gauge.get("column2");
+        vesselGauge = LoadedUnits.gauge.get("vessel");
+        gateControl = (config.unitNumber == 1) ? LoadedUnits.column1.gateControl : LoadedUnits.column2.gateControl;
+        tmp = (config.unitNumber == 1) ? LoadedUnits.column1.tmp : LoadedUnits.column2.tmp;
     }
 
     @Override
@@ -28,15 +29,11 @@ public class AutoPumping extends RecordingUnit {
 
 
 
-    private Gauge gauge;
+    private Gauge columnGauge;
+    private Gauge vesselGauge;
     private GateControl gateControl;
     private TMP tmp;
     private int enabled;
-
-    private  String gaugeName;
-    private String gateName;
-    private String tmpName;
-
 
     private String firstColumnGaugeName;
     private String vesselGaugeName;
@@ -78,12 +75,6 @@ public class AutoPumping extends RecordingUnit {
         String[] command = line.split(" ");
         try {
             switch (command[0]) {
-                case "gauge": gaugeName = command[1];
-                    break;
-                case "gatecontrol": gateName = command[1];
-                    break;
-                case "tmp" :  tmpName = command[1];
-                    break;
                 case "firstcolumngaugename" : firstColumnGaugeName = command[1];
                     break;
                 case "vesselGaugeName" : vesselGaugeName = command[1];

@@ -1,0 +1,8 @@
+command srv
+name server
+name vacuumServer
+port 4004
+number 1
+devices column1previousCommands column2previousCommands
+ColumnGauge column1
+VesselGauge vessel

@@ -17,30 +17,36 @@ public class VacuumUnits extends Unit {
         super(fileName);
     }
 
+
+
     @Override
     protected void initialize() {
         super.initialize();
-        loadVacuumUnits();
     }
 
 //just initializes  all vacuum devices
 
 
-   private void loadVacuumUnits() {
+   public void loadVacuumUnits() {
+
         terminalSample.addDevice(LoadedUnits.server);
         ArrayList<Unit> allUnits = new ArrayList<>();
         for (String g: LoadedUnits.gauge.keySet())
         {
-            if (!allUnits.contains(LoadedUnits.gauge.get(g))) allUnits.add(LoadedUnits.gauge.get(g));
+                allUnits.add(LoadedUnits.gauge.get(g));
         }
         allUnits.addAll(LoadedUnits.column1.getAll());
         allUnits.addAll(LoadedUnits.column2.getAll());
-        for (Unit u: allUnits) terminalSample.addDevice(u);
+        for (Unit u: allUnits)
+        {
+            terminalSample.addDevice(u);
+        }
     }
 
     @Override
     protected void chooseImportCommand(String line) {
-        LoadedUnits units = new LoadedUnits();
+        thyracontGaugeWasCreated=false;
+
         String[] command = line.toLowerCase().split(" ");
         switch (command[0])
         {
@@ -63,24 +69,37 @@ public class VacuumUnits extends Unit {
     }
 
 
+    Boolean thyracontGaugeWasCreated;
+    String gaugeName;
     private void gauge(String[] params)
     {
-        switch (params[1])
+        switch (params[1].toLowerCase())
         {
             case "thyracontgauge":  {
-                LoadedUnits.gauge.put(params[2], new ThyracontGauge(config.name+File.separator+params[2]));
+
+                Gauge local;
+                if (!thyracontGaugeWasCreated)
+                {
+                    gaugeName = params[2];
+                    local = new ThyracontGauge(config.name+File.separator+params[3]);
+                }
+                else
+                    local = LoadedUnits.gauge.get(gaugeName);
+                LoadedUnits.gauge.put(params[2],local);
             }
             break;
             case "pfeiffergauge": {
-            LoadedUnits.gauge.put(params[2], new PfeifferGauge(config.name+File.separator+params[2]));
+            LoadedUnits.gauge.put(params[2], new PfeifferGauge(config.name+File.separator+params[3]));
             }
+            break;
         }
     }
 
     private void arduino(String[] params)
     {
-        if (Integer.parseInt(params[1]) == 1)
+        if (Integer.parseInt(params[1]) == 1) {
             LoadedUnits.column1.arduino = new Arduino(config.name+File.separator+params[2]);
+        }
         else
             LoadedUnits.column2.arduino = new Arduino(config.name+File.separator+params[2]);
     }

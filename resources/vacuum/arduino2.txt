@@ -1,0 +1,12 @@
+command ard2
+/* 1
+
+this
+
+*/
+number 2
+devices digitalPins
+type nano
+baudrate 19200
+port COM632
+open

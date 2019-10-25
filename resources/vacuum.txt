@@ -1,0 +1,20 @@
+gauge ThyracontGauge column1 gauge1
+gauge ThyracontGauge column2 gauge1
+gauge PfeifferGauge vessel gauge3
+
+arduino 1 arduino1
+arduino 2 arduino2
+
+tmp 1 LeyboldTMP tmp1
+tmp 2 LeyboldTMP tmp2
+
+gateControl 1 control1
+gateControl 2 control2
+
+angel 1 angel1
+angel 2 angel2
+
+auto 1 auto1
+auto 2 auto2
+
+server server

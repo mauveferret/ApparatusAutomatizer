@@ -1,4 +1,4 @@
-command ard
+command ard1
 /* 1
 
 this
