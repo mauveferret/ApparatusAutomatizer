@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/control1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/control1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" afterDir="false" />
@@ -23,6 +25,8 @@
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/vessel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/vessel1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/vessel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/vessel1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/status1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/status1.txt" afterDir="false" />
@@ -48,9 +52,7 @@
       <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/serverLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/serverLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Arduino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/SerialUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/Gauges/PfeifferGauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -303,14 +305,12 @@
       <workItem from="1571739248550" duration="17530000" />
       <workItem from="1571822227677" duration="8467000" />
       <workItem from="1571927702856" duration="31638000" />
-      <workItem from="1572029463917" duration="850000" />
-    </task>
-    <task id="LOCAL-00039" summary="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin">
-      <created>1568471707620</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1568471707620</updated>
+      <workItem from="1572029463917" duration="1022000" />
+      <workItem from="1572102039825" duration="1914000" />
+      <workItem from="1572115069186" duration="325000" />
+      <workItem from="1572285109863" duration="2720000" />
+      <workItem from="1572689983114" duration="7712000" />
+      <workItem from="1572784126959" duration="1966000" />
     </task>
     <task id="LOCAL-00040" summary="client improved, vacuum module added, charts don't work">
       <created>1568551238587</created>
@@ -648,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572029316553</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="seems to work, ready for tests with hardware">
+      <created>1572030433694</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1572030433694</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="indicators made" />
     <MESSAGE value="Leybold control and measuring made, strange error happens" />
     <MESSAGE value="Leybold TMP works! It can be controlled and data can be logged" />
     <MESSAGE value="TMP in client made, TMP can be controlled" />
@@ -694,6 +700,7 @@
     <MESSAGE value="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure" />
     <MESSAGE value="...seems to work" />
     <MESSAGE value="seems to work, but some error occures on arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="seems to work, but some error occures on arduino" />
+    <MESSAGE value="seems to work, ready for tests with hardware" />
+    <option name="LAST_COMMIT_MESSAGE" value="seems to work, ready for tests with hardware" />
   </component>
 </project>

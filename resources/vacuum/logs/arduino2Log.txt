@@ -565,3 +565,623 @@ arduino2 1572030331188 Analog signal on pin 0 is  -1.0
 
 arduino2 1572030331188 DEV logic 1572030331188 0 command 1572030331188: 0 command: deviceCommand aread 0
 
+time device message
+arduino2 1572102050536 Port name doesn't exist
+
+arduino2 1572102053568 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572102053573 port wasn't created!
+
+arduino2 1572102053573 message wasn't written onarduino2
+
+arduino2 1572102053574 null
+
+arduino2 1572102053577 LOW on pin 9 isn't set
+
+arduino2 1572102053577 COM632 is lost. Reconnecting...
+
+arduino2 1572102053583 DEV logic 1572102053583 0 command 1572102053583: 9 command: deviceCommand dwrite 9 0
+
+arduino2 1572102054585 COMMAND:deviceCommand aread 0
+
+arduino2 1572102054585 arduino2: For input string: "rro"
+
+arduino2 1572102054585 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102054585 DEV logic 1572102054585 0 command 1572102054585: 0 command: deviceCommand aread 0
+
+arduino2 1572102054585 COMMAND:deviceCommand aread 0
+
+arduino2 1572102054585 arduino2: For input string: "rro"
+
+arduino2 1572102054585 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102054585 DEV logic 1572102054585 0 command 1572102054585: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572102208736 Port name doesn't exist
+
+arduino2 1572102211773 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572102211773 port wasn't created!
+
+arduino2 1572102211773 message wasn't written onarduino2
+
+arduino2 1572102211773 null
+
+arduino2 1572102211783 LOW on pin 9 isn't set
+
+arduino2 1572102211783 COM632 is lost. Reconnecting...
+
+arduino2 1572102211783 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572102211793 DEV logic 1572102211793 0 command 1572102211793: 10 command: deviceCommand dwrite 9 0
+
+arduino2 1572102212793 COMMAND:deviceCommand aread 0
+
+arduino2 1572102212794 arduino2: For input string: "rro"
+
+arduino2 1572102212795 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102212796 DEV logic 1572102212796 1 command 1572102212796: 2 command: deviceCommand aread 0
+
+arduino2 1572102212796 COMMAND:deviceCommand aread 0
+
+arduino2 1572102212797 arduino2: For input string: "rro"
+
+arduino2 1572102212797 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102212797 DEV logic 1572102212797 0 command 1572102212797: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572102550581 Port name doesn't exist
+
+arduino2 1572102553619 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572102553619 port wasn't created!
+
+arduino2 1572102553619 message wasn't written onarduino2
+
+arduino2 1572102553619 null
+
+arduino2 1572102553632 LOW on pin 9 isn't set
+
+arduino2 1572102553634 COM632 is lost. Reconnecting...
+
+arduino2 1572102553637 DEV logic 1572102553637 0 command 1572102553637: 14 command: deviceCommand dwrite 9 0
+
+arduino2 1572102554637 COMMAND:deviceCommand aread 0
+
+arduino2 1572102554637 arduino2: For input string: "rro"
+
+arduino2 1572102554637 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102554637 DEV logic 1572102554637 0 command 1572102554637: 0 command: deviceCommand aread 0
+
+arduino2 1572102554637 COMMAND:deviceCommand aread 0
+
+arduino2 1572102554637 arduino2: For input string: "rro"
+
+arduino2 1572102554637 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102554637 DEV logic 1572102554637 0 command 1572102554637: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572102757582 Port name doesn't exist
+
+arduino2 1572102760631 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572102760648 port wasn't created!
+
+arduino2 1572102760649 message wasn't written onarduino2
+
+arduino2 1572102760649 null
+
+arduino2 1572102760650 null
+
+arduino2 1572102760654 LOW on pin 9 isn't set
+
+arduino2 1572102760655 COM632 is lost. Reconnecting...
+
+arduino2 1572102760655 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572102760680 DEV logic 1572102760680 0 command 1572102760680: 23 command: deviceCommand dwrite 9 0
+
+arduino2 1572102761690 COMMAND:deviceCommand aread 0
+
+arduino2 1572102761690 arduino2: For input string: "rro"
+
+arduino2 1572102761690 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102761690 DEV logic 1572102761690 0 command 1572102761690: 0 command: deviceCommand aread 0
+
+arduino2 1572102761690 COMMAND:deviceCommand aread 0
+
+arduino2 1572102761690 arduino2: For input string: "rro"
+
+arduino2 1572102761690 Analog signal on pin 0 is  -1.0
+
+arduino2 1572102761690 DEV logic 1572102761690 0 command 1572102761690: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572115175589 Port name doesn't exist
+
+arduino2 1572115178834 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572115178834 port wasn't created!
+
+arduino2 1572115178834 message wasn't written onarduino2
+
+arduino2 1572115178834 null
+
+arduino2 1572115178844 LOW on pin 9 isn't set
+
+arduino2 1572115178844 COM632 is lost. Reconnecting...
+
+arduino2 1572115178854 DEV logic 1572115178854 0 command 1572115178854: 10 command: deviceCommand dwrite 9 0
+
+arduino2 1572115179864 COMMAND:deviceCommand aread 0
+
+arduino2 1572115179864 arduino2: For input string: "rro"
+
+arduino2 1572115179864 Analog signal on pin 0 is  -1.0
+
+arduino2 1572115179864 DEV logic 1572115179864 0 command 1572115179864: 0 command: deviceCommand aread 0
+
+arduino2 1572115179864 COMMAND:deviceCommand aread 0
+
+arduino2 1572115179864 arduino2: For input string: "rro"
+
+arduino2 1572115179864 Analog signal on pin 0 is  -1.0
+
+arduino2 1572115179864 DEV logic 1572115179864 0 command 1572115179864: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572286106996 Port name doesn't exist
+
+arduino2 1572286110093 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572286110097 port wasn't created!
+
+arduino2 1572286110098 message wasn't written onarduino2
+
+arduino2 1572286110098 null
+
+arduino2 1572286110099 null
+
+arduino2 1572286110102 LOW on pin 9 isn't set
+
+arduino2 1572286110102 COM632 is lost. Reconnecting...
+
+arduino2 1572286110121 DEV logic 1572286110121 0 command 1572286110121: 9 command: deviceCommand dwrite 9 0
+
+arduino2 1572286111134 COMMAND:deviceCommand aread 0
+
+arduino2 1572286111135 arduino2: For input string: "rro"
+
+arduino2 1572286111136 Analog signal on pin 0 is  -1.0
+
+arduino2 1572286111136 DEV logic 1572286111136 0 command 1572286111136: 2 command: deviceCommand aread 0
+
+arduino2 1572286111137 COMMAND:deviceCommand aread 0
+
+arduino2 1572286111137 arduino2: For input string: "rro"
+
+arduino2 1572286111138 Analog signal on pin 0 is  -1.0
+
+arduino2 1572286111138 DEV logic 1572286111138 0 command 1572286111138: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572454034003 Port name doesn't exist
+
+arduino2 1572454037102 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572454037102 port wasn't created!
+
+arduino2 1572454037102 message wasn't written onarduino2
+
+arduino2 1572454037102 null
+
+arduino2 1572454037112 LOW on pin 9 isn't set
+
+arduino2 1572454037112 COM632 is lost. Reconnecting...
+
+arduino2 1572454037202 DEV logic 1572454037202 0 command 1572454037202: 10 command: deviceCommand dwrite 9 0
+
+arduino2 1572454038242 COMMAND:deviceCommand aread 0
+
+arduino2 1572454038242 arduino2: For input string: "rro"
+
+arduino2 1572454038242 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454038242 DEV logic 1572454038242 0 command 1572454038242: 0 command: deviceCommand aread 0
+
+arduino2 1572454038242 COMMAND:deviceCommand aread 0
+
+arduino2 1572454038242 arduino2: For input string: "rro"
+
+arduino2 1572454038242 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454038242 DEV logic 1572454038242 0 command 1572454038242: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572454264046 Port name doesn't exist
+
+arduino2 1572454267076 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572454267081 port wasn't created!
+
+arduino2 1572454267081 message wasn't written onarduino2
+
+arduino2 1572454267082 null
+
+arduino2 1572454267084 LOW on pin 9 isn't set
+
+arduino2 1572454267084 COM632 is lost. Reconnecting...
+
+arduino2 1572454267085 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572454267091 DEV logic 1572454267091 1 command 1572454267091: 7 command: deviceCommand dwrite 9 0
+
+arduino2 1572454268094 COMMAND:deviceCommand aread 0
+
+arduino2 1572454268095 arduino2: For input string: "rro"
+
+arduino2 1572454268096 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454268096 DEV logic 1572454268097 0 command 1572454268097: 2 command: deviceCommand aread 0
+
+arduino2 1572454268097 COMMAND:deviceCommand aread 0
+
+arduino2 1572454268097 arduino2: For input string: "rro"
+
+arduino2 1572454268098 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454268098 DEV logic 1572454268098 0 command 1572454268098: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572454319601 Port name doesn't exist
+
+arduino2 1572454322624 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572454322634 port wasn't created!
+
+arduino2 1572454322635 message wasn't written onarduino2
+
+arduino2 1572454322635 null
+
+arduino2 1572454322637 null
+
+arduino2 1572454322640 LOW on pin 9 isn't set
+
+arduino2 1572454322641 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572454322647 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572454322647 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572454322655 DEV logic 1572454322656 0 command 1572454322656: 16 command: deviceCommand dwrite 9 0
+
+arduino2 1572454323658 COMMAND:deviceCommand aread 0
+
+arduino2 1572454323659 arduino2: For input string: "rro"
+
+arduino2 1572454323660 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454323660 DEV logic 1572454323660 0 command 1572454323660: 2 command: deviceCommand aread 0
+
+arduino2 1572454323661 COMMAND:deviceCommand aread 0
+
+arduino2 1572454323661 arduino2: For input string: "rro"
+
+arduino2 1572454323661 Analog signal on pin 0 is  -1.0
+
+arduino2 1572454323661 DEV logic 1572454323661 0 command 1572454323661: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572691004152 Port name doesn't exist
+
+arduino2 1572691007406 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572691007410 port wasn't created!
+
+arduino2 1572691007411 message wasn't written onarduino2
+
+arduino2 1572691007411 null
+
+arduino2 1572691007412 null
+
+arduino2 1572691007414 LOW on pin 9 isn't set
+
+arduino2 1572691007415 COM632 is lost. Reconnecting...
+
+arduino2 1572691007437 DEV logic 1572691007437 0 command 1572691007437: 8 command: deviceCommand dwrite 9 0
+
+arduino2 1572691008455 COMMAND:deviceCommand aread 0
+
+arduino2 1572691008456 arduino2: For input string: "rro"
+
+arduino2 1572691008457 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691008457 DEV logic 1572691008457 0 command 1572691008457: 2 command: deviceCommand aread 0
+
+arduino2 1572691008458 COMMAND:deviceCommand aread 0
+
+arduino2 1572691008458 arduino2: For input string: "rro"
+
+arduino2 1572691008458 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691008458 DEV logic 1572691008459 0 command 1572691008459: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572691140212 Port name doesn't exist
+
+arduino2 1572691143235 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572691143240 port wasn't created!
+
+arduino2 1572691143240 message wasn't written onarduino2
+
+arduino2 1572691143241 null
+
+arduino2 1572691143243 LOW on pin 9 isn't set
+
+arduino2 1572691143243 COM632 is lost. Reconnecting...
+
+arduino2 1572691143249 DEV logic 1572691143249 0 command 1572691143249: 8 command: deviceCommand dwrite 9 0
+
+arduino2 1572691144250 COMMAND:deviceCommand aread 0
+
+arduino2 1572691144252 arduino2: For input string: "rro"
+
+arduino2 1572691144253 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691144253 DEV logic 1572691144253 1 command 1572691144253: 2 command: deviceCommand aread 0
+
+arduino2 1572691144254 COMMAND:deviceCommand aread 0
+
+arduino2 1572691144256 arduino2: For input string: "rro"
+
+arduino2 1572691144256 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691144256 DEV logic 1572691144256 0 command 1572691144256: 2 command: deviceCommand aread 0
+
+time device message
+arduino2 1572691250779 Port name doesn't exist
+
+arduino2 1572691253804 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572691253809 port wasn't created!
+
+arduino2 1572691253810 message wasn't written onarduino2
+
+arduino2 1572691253811 null
+
+arduino2 1572691253826 LOW on pin 9 isn't set
+
+arduino2 1572691253832 DEV logic 1572691253832 1 command 1572691253832: 22 command: deviceCommand dwrite 9 0
+
+arduino2 1572691253833 COM632 is lost. Reconnecting...
+
+arduino2 1572691254841 COMMAND:deviceCommand aread 0
+
+arduino2 1572691254842 arduino2: For input string: "rro"
+
+arduino2 1572691254843 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691254843 DEV logic 1572691254844 0 command 1572691254844: 2 command: deviceCommand aread 0
+
+arduino2 1572691254844 COMMAND:deviceCommand aread 0
+
+arduino2 1572691254844 arduino2: For input string: "rro"
+
+arduino2 1572691254844 Analog signal on pin 0 is  -1.0
+
+arduino2 1572691254845 DEV logic 1572691254845 0 command 1572691254845: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572694395693 Port name doesn't exist
+
+arduino2 1572694398722 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572694398726 port wasn't created!
+
+arduino2 1572694398727 message wasn't written onarduino2
+
+arduino2 1572694398727 null
+
+arduino2 1572694398730 LOW on pin 9 isn't set
+
+arduino2 1572694398730 COM632 is lost. Reconnecting...
+
+arduino2 1572694398735 DEV logic 1572694398735 1 command 1572694398735: 7 command: deviceCommand dwrite 9 0
+
+arduino2 1572694399736 COMMAND:deviceCommand aread 1
+
+arduino2 1572694399737 arduino2: For input string: "rro"
+
+arduino2 1572694399739 Analog signal on pin 1 is  -1.0
+
+arduino2 1572694399740 DEV logic 1572694399740 1 command 1572694399740: 3 command: deviceCommand aread 1
+
+arduino2 1572694399740 COMMAND:deviceCommand aread 0
+
+arduino2 1572694399740 arduino2: For input string: "rro"
+
+arduino2 1572694399741 Analog signal on pin 0 is  -1.0
+
+arduino2 1572694399741 DEV logic 1572694399741 0 command 1572694399741: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572718977609 Port name doesn't exist
+
+arduino2 1572718980777 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572718980781 port wasn't created!
+
+arduino2 1572718980784 message wasn't written onarduino2
+
+arduino2 1572718980784 null
+
+arduino2 1572718980786 LOW on pin 9 isn't set
+
+arduino2 1572718980786 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572718980786 COM632 is lost. Reconnecting...
+
+arduino2 1572718980791 DEV logic 1572718980791 0 command 1572718980791: 9 command: deviceCommand dwrite 9 0
+
+arduino2 1572718981808 COMMAND:deviceCommand aread 1
+
+arduino2 1572718981809 arduino2: For input string: "rro"
+
+arduino2 1572718981810 Analog signal on pin 1 is  -1.0
+
+arduino2 1572718981810 DEV logic 1572718981810 0 command 1572718981810: 2 command: deviceCommand aread 1
+
+arduino2 1572718981811 COMMAND:deviceCommand aread 0
+
+arduino2 1572718981811 arduino2: For input string: "rro"
+
+arduino2 1572718981811 Analog signal on pin 0 is  -1.0
+
+arduino2 1572718981811 DEV logic 1572718981811 0 command 1572718981811: 0 command: deviceCommand aread 0
+
+time device message
+arduino2 1572719415917 Port name doesn't exist
+
+arduino2 1572719418952 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572719418978 port wasn't created!
+
+arduino2 1572719418979 message wasn't written onarduino2
+
+arduino2 1572719418979 null
+
+arduino2 1572719418980 null
+
+arduino2 1572719418983 LOW on pin 9 isn't set
+
+arduino2 1572719418995 DEV logic 1572719418996 0 command 1572719418996: 32 command: deviceCommand dwrite 9 0
+
+arduino2 1572719418996 COM632 is lost. Reconnecting...
+
+arduino2 1572719420004 COMMAND:deviceCommand aread 1
+
+arduino2 1572719420005 arduino2: For input string: "rro"
+
+arduino2 1572719420006 Analog signal on pin 1 is  -1.0
+
+arduino2 1572719420007 DEV logic 1572719420007 0 command 1572719420007: 3 command: deviceCommand aread 1
+
+arduino2 1572719420007 COMMAND:deviceCommand aread 0
+
+arduino2 1572719420007 arduino2: For input string: "rro"
+
+arduino2 1572719420007 Analog signal on pin 0 is  -1.0
+
+arduino2 1572719420008 DEV logic 1572719420008 0 command 1572719420008: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572719499844 Port name doesn't exist
+
+arduino2 1572719502875 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572719502879 port wasn't created!
+
+arduino2 1572719502880 message wasn't written onarduino2
+
+arduino2 1572719502880 null
+
+arduino2 1572719502885 LOW on pin 9 isn't set
+
+arduino2 1572719502885 COM632 is lost. Reconnecting...
+
+arduino2 1572719502885 Port name - COM632; Method name - closePort(); Exception type - Port not opened.
+
+arduino2 1572719502892 DEV logic 1572719502892 0 command 1572719502892: 10 command: deviceCommand dwrite 9 0
+
+arduino2 1572719503894 COMMAND:deviceCommand aread 1
+
+arduino2 1572719503895 arduino2: For input string: "rro"
+
+arduino2 1572719503897 Analog signal on pin 1 is  -1.0
+
+arduino2 1572719503897 DEV logic 1572719503897 0 command 1572719503897: 3 command: deviceCommand aread 1
+
+arduino2 1572719503897 COMMAND:deviceCommand aread 0
+
+arduino2 1572719503899 arduino2: For input string: "rro"
+
+arduino2 1572719503900 Analog signal on pin 0 is  -1.0
+
+arduino2 1572719503900 DEV logic 1572719503901 2 command 1572719503901: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572785127120 Port name doesn't exist
+
+arduino2 1572785130158 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572785130164 port wasn't created!
+
+arduino2 1572785130164 message wasn't written onarduino2
+
+arduino2 1572785130164 null
+
+arduino2 1572785130165 null
+
+arduino2 1572785130167 LOW on pin 9 isn't set
+
+arduino2 1572785130167 COM632 is lost. Reconnecting...
+
+arduino2 1572785130174 DEV logic 1572785130174 1 command 1572785130174: 8 command: deviceCommand dwrite 9 0
+
+arduino2 1572785131176 COMMAND:deviceCommand aread 1
+
+arduino2 1572785131177 arduino2: For input string: "rro"
+
+arduino2 1572785131178 Analog signal on pin 1 is  -1.0
+
+arduino2 1572785131178 DEV logic 1572785131179 0 command 1572785131179: 2 command: deviceCommand aread 1
+
+arduino2 1572785131179 COMMAND:deviceCommand aread 0
+
+arduino2 1572785131179 arduino2: For input string: "rro"
+
+arduino2 1572785131179 Analog signal on pin 0 is  -1.0
+
+arduino2 1572785131180 DEV logic 1572785131180 0 command 1572785131180: 1 command: deviceCommand aread 0
+
+time device message
+arduino2 1572785219059 Port name doesn't exist
+
+arduino2 1572785222081 COMMAND:deviceCommand dwrite 9 0
+
+arduino2 1572785222085 port wasn't created!
+
+arduino2 1572785222086 message wasn't written onarduino2
+
+arduino2 1572785222086 null
+
+arduino2 1572785222090 LOW on pin 9 isn't set
+
+arduino2 1572785222090 COM632 is lost. Reconnecting...
+
+arduino2 1572785222096 DEV logic 1572785222096 0 command 1572785222096: 9 command: deviceCommand dwrite 9 0
+
+arduino2 1572785223099 COMMAND:deviceCommand aread 1
+
+arduino2 1572785223100 arduino2: For input string: "rro"
+
+arduino2 1572785223101 Analog signal on pin 1 is  -1.0
+
+arduino2 1572785223102 DEV logic 1572785223102 1 command 1572785223102: 2 command: deviceCommand aread 1
+
+arduino2 1572785223102 COMMAND:deviceCommand aread 0
+
+arduino2 1572785223102 arduino2: For input string: "rro"
+
+arduino2 1572785223103 Analog signal on pin 0 is  -1.0
+
+arduino2 1572785223103 DEV logic 1572785223103 0 command 1572785223103: 1 command: deviceCommand aread 0
+

@@ -77,3 +77,105 @@ angel1 1572030190195 ORDER3: bypass and valve opened. I'm closing the bypass!
 time device message
 angel1 1572030330163 ORDER3: bypass and valve opened. I'm closing the bypass!
 
+time device message
+angel1 1572102053567 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572102211773 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572102553619 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572102760631 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572115178834 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572286110092 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572454037102 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572454267075 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572454322625 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572691007405 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572691143234 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572691253803 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572694398721 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+angel1 1572696436204 ORDER1: high pressure. Closing valve and gate of the column 1.
+
+angel1 1572696437409 ORDER1 was completed
+
+angel1 1572696474687 ORDER1: high pressure. Closing valve and gate of the column 1.
+
+angel1 1572696475834 ORDER1 was completed
+
+angel1 1572696556681 ORDER1: high pressure. Closing valve and gate of the column 1.
+
+angel1 1572696557827 ORDER1 was completed
+
+angel1 1572696600580 COMMAND:ang1 start
+
+angel1 1572696600581 DEV logic 1572696600581 1 command 1572696600581: 0 command: ang1 start
+
+angel1 1572696606578 COMMAND:ang1 stop
+
+angel1 1572696606579 DEV logic 1572696606579 1 command 1572696606579: 0 command: ang1 stop
+
+time device message
+angel1 1572718980776 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+angel1 1572719006469 COMMAND:ang1 start
+
+angel1 1572719006469 DEV logic 1572719006469 0 command 1572719006469: 0 command: ang1 start
+
+angel1 1572719007469 COMMAND:ang1 stop
+
+angel1 1572719007469 DEV logic 1572719007469 0 command 1572719007469: 0 command: ang1 stop
+
+time device message
+angel1 1572719418956 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+angel1 1572719426169 ORDER1: high pressure. Closing valve and gate of the column 1.
+
+angel1 1572719427317 ORDER1 was completed
+
+angel1 1572719430513 COMMAND:ang1 start
+
+angel1 1572719430514 DEV logic 1572719430514 1 command 1572719430514: 0 command: ang1 start
+
+angel1 1572719431025 COMMAND:ang1 stop
+
+angel1 1572719431026 DEV logic 1572719431026 1 command 1572719431026: 0 command: ang1 stop
+
+time device message
+angel1 1572719502873 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572785130157 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+time device message
+angel1 1572785222080 ORDER3: bypass and valve opened. I'm closing the bypass!
+
+angel1 1572785249875 COMMAND:ang1 start
+
+angel1 1572785249876 DEV logic 1572785249876 0 command 1572785249876: 1 command: ang1 start
+
+angel1 1572785250386 COMMAND:ang1 stop
+
+angel1 1572785250386 DEV logic 1572785250386 0 command 1572785250386: 0 command: ang1 stop
+

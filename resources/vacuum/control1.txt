@@ -2,10 +2,13 @@ command gate1
 name gate1
 number 1
 devices pump bypass valve gate
-gatecontrolpin 6
-forlinepin 4
-bypassControlPin 9
-gateanalogpins 0 1
+gatecontrolpin 8
+valvecontrolpin 6
+forlinepin 10
+bypassControlPin 3
+gateanalogpins 5 6
+valveanalogpins 3 4
+bypassanalogpins 1 2
 maxPressureDifference 10
 ColumnGauge column1
 VesselGauge vessel

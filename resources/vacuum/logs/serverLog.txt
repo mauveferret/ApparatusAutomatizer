@@ -81,3 +81,87 @@ vacuumServer 1572030327204 vacuumServer launched at port 4004. Its IP is 0.0.0.0
 
 vacuumServer 1572030360787 Access granted to admin
 
+time device message
+vacuumServer 1572102050816 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572102208846 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572102550671 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572102757652 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572102766482 Access granted to admin
+
+time device message
+vacuumServer 1572115175869 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572115197702 Access granted to admin
+
+time device message
+vacuumServer 1572286107146 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572286125093 Access granted to admin
+
+vacuumServer 1572287192156 admin disconnected
+
+time device message
+vacuumServer 1572454034147 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572454060517 Access granted to admin
+
+time device message
+vacuumServer 1572454264143 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572454319671 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572454324933 Access granted to admin
+
+time device message
+vacuumServer 1572691004445 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572691140279 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572691250865 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572691276263 Access granted to admin
+
+vacuumServer 1572694031501 admin disconnected
+
+time device message
+vacuumServer 1572694395799 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572694522131 Access granted to admin
+
+vacuumServer 1572718931377 admin disconnected
+
+time device message
+vacuumServer 1572718977824 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572718993159 Access granted to admin
+
+time device message
+vacuumServer 1572719416013 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572719421565 Access granted to admin
+
+vacuumServer 1572719449442 admin disconnected
+
+time device message
+vacuumServer 1572719499941 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572719504412 Access granted to admin
+
+time device message
+vacuumServer 1572785127246 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+time device message
+vacuumServer 1572785219155 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1572785233878 Access granted to admin
+

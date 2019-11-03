@@ -583,3 +583,5117 @@ arduino1 1572030368548 Analog signal on pin 0 is  1.6129032258064517
 
 arduino1 1572030368548 DEV logic 1572030368548 1 command 1572030368548: 46 command: deviceCommand aread 0
 
+time device message
+arduino1 1572102050526 COM10 is opened
+
+arduino1 1572102053568 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572102053620 LOW on pin 9 is set
+
+arduino1 1572102053621 DEV logic 1572102053621 0 command 1572102053621: 53 command: deviceCommand dwrite 9 0
+
+arduino1 1572102054625 COMMAND:deviceCommand aread 0
+
+arduino1 1572102054665 Analog signal on pin 0 is  1.989247311827957
+
+arduino1 1572102054665 DEV logic 1572102054665 0 command 1572102054665: 40 command: deviceCommand aread 0
+
+arduino1 1572102054665 COMMAND:deviceCommand aread 0
+
+arduino1 1572102054715 Analog signal on pin 0 is  1.989247311827957
+
+arduino1 1572102054715 DEV logic 1572102054715 0 command 1572102054715: 50 command: deviceCommand aread 0
+
+time device message
+arduino1 1572102208726 COM10 is opened
+
+arduino1 1572102211773 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572102211823 LOW on pin 9 is set
+
+arduino1 1572102211823 DEV logic 1572102211823 0 command 1572102211823: 50 command: deviceCommand dwrite 9 0
+
+arduino1 1572102212823 COMMAND:deviceCommand aread 0
+
+arduino1 1572102212869 Analog signal on pin 0 is  2.0869990224828934
+
+arduino1 1572102212870 DEV logic 1572102212870 0 command 1572102212870: 47 command: deviceCommand aread 0
+
+arduino1 1572102212870 COMMAND:deviceCommand aread 0
+
+arduino1 1572102212916 Analog signal on pin 0 is  2.189638318670577
+
+arduino1 1572102212917 DEV logic 1572102212917 0 command 1572102212917: 47 command: deviceCommand aread 0
+
+arduino1 1572102281988 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572102282038 HIGH on pin 3 is set
+
+arduino1 1572102282038 DEV logic 1572102282038 0 command 1572102282038: 50 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572102550581 COM10 is opened
+
+arduino1 1572102553619 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572102553667 LOW on pin 9 is set
+
+arduino1 1572102553667 DEV logic 1572102553667 0 command 1572102553667: 48 command: deviceCommand dwrite 9 0
+
+arduino1 1572102554667 COMMAND:deviceCommand aread 0
+
+arduino1 1572102554707 Analog signal on pin 0 is  2.1652003910068425
+
+arduino1 1572102554707 DEV logic 1572102554707 0 command 1572102554707: 40 command: deviceCommand aread 0
+
+arduino1 1572102554707 COMMAND:deviceCommand aread 0
+
+arduino1 1572102554757 Analog signal on pin 0 is  2.1358748778103616
+
+arduino1 1572102554757 DEV logic 1572102554757 0 command 1572102554757: 50 command: deviceCommand aread 0
+
+arduino1 1572102569699 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572102569749 HIGH on pin 3 is set
+
+arduino1 1572102569749 DEV logic 1572102569749 0 command 1572102569749: 50 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572102757572 COM10 is opened
+
+arduino1 1572102760631 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572102760690 LOW on pin 9 is set
+
+arduino1 1572102760690 DEV logic 1572102760690 0 command 1572102760690: 59 command: deviceCommand dwrite 9 0
+
+arduino1 1572102761690 COMMAND:deviceCommand aread 0
+
+arduino1 1572102761730 Analog signal on pin 0 is  2.155425219941349
+
+arduino1 1572102761730 DEV logic 1572102761730 0 command 1572102761730: 40 command: deviceCommand aread 0
+
+arduino1 1572102761730 COMMAND:deviceCommand aread 0
+
+arduino1 1572102761780 Analog signal on pin 0 is  2.1309872922776147
+
+arduino1 1572102761780 DEV logic 1572102761780 10 command 1572102761780: 40 command: deviceCommand aread 0
+
+arduino1 1572102770245 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572102770293 HIGH on pin 3 is set
+
+arduino1 1572102770293 DEV logic 1572102770293 1 command 1572102770293: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572102910241 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572102913242 arduino1 message wasn't got.
+
+arduino1 1572102913243 LOW on pin 3 isn't set
+
+arduino1 1572102913243 COM10 is closed
+
+arduino1 1572102913299 COM10 is lost. Reconnecting...
+
+arduino1 1572102913333 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572102916335 LOW on pin 3 isn't set
+
+arduino1 1572102916335 DEV logic 1572102916335 1 command 1572102916335: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572102916740 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572102919338 arduino1: begin 0, end -4, length 0
+
+arduino1 1572102919338 Reconnected.
+
+arduino1 1572102919339 COM10 is closed
+
+arduino1 1572102919340 COM10 is lost. Reconnecting...
+
+arduino1 1572102919340 port is closed!!
+
+arduino1 1572102919340 arduino1: For input string: "rro"
+
+arduino1 1572102919340 Reconnected.
+
+arduino1 1572102919341 LOW on pin 3 isn't set
+
+arduino1 1572102919341 DEV logic 1572102919341 1 command 1572102919341: 2600 command: deviceCommand dwrite 3 0
+
+arduino1 1572102919341 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572102919341 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572102922242 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572102922289 LOW on pin 3 is set
+
+arduino1 1572102922289 DEV logic 1572102922290 0 command 1572102922290: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572102922391 Reconnected.
+
+arduino1 1572102922437 Reconnected.
+
+arduino1 1572102922483 Reconnected.
+
+arduino1 1572102924241 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572102924288 HIGH on pin 3 is set
+
+arduino1 1572102924288 DEV logic 1572102924288 0 command 1572102924288: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572102926741 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572102926788 LOW on pin 3 is set
+
+arduino1 1572102926788 DEV logic 1572102926788 0 command 1572102926788: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572102928241 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572102928288 HIGH on pin 3 is set
+
+arduino1 1572102928288 DEV logic 1572102928288 0 command 1572102928288: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572103470759 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572103473760 arduino1 message wasn't got.
+
+arduino1 1572103473760 LOW on pin 3 isn't set
+
+arduino1 1572103473760 COM10 is closed
+
+arduino1 1572103473760 COM10 is closed
+
+arduino1 1572103473761 COM10 is lost. Reconnecting...
+
+arduino1 1572103476808 Reconnected.
+
+arduino1 1572103479745 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572103479792 LOW on pin 3 is set
+
+arduino1 1572103479792 DEV logic 1572103479792 0 command 1572103479792: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572103492245 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572103492292 HIGH on pin 3 is set
+
+arduino1 1572103492292 DEV logic 1572103492292 0 command 1572103492292: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572103644246 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572103647247 arduino1 message wasn't got.
+
+arduino1 1572103647248 LOW on pin 3 isn't set
+
+arduino1 1572103647249 DEV logic 1572103647249 0 command 1572103647249: 3003 command: deviceCommand dwrite 3 0
+
+arduino1 1572103647249 COM10 is closed
+
+arduino1 1572103647250 COM10 is lost. Reconnecting...
+
+arduino1 1572103650299 Reconnected.
+
+arduino1 1572103657747 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572103657794 LOW on pin 3 is set
+
+arduino1 1572103657794 DEV logic 1572103657794 0 command 1572103657794: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572103661254 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572103661301 HIGH on pin 3 is set
+
+arduino1 1572103661301 DEV logic 1572103661301 0 command 1572103661301: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572103669253 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572103669301 LOW on pin 3 is set
+
+arduino1 1572103669301 DEV logic 1572103669301 1 command 1572103669301: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572103674247 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572103674294 HIGH on pin 3 is set
+
+arduino1 1572103674294 DEV logic 1572103674294 0 command 1572103674294: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572105254261 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105257263 arduino1 message wasn't got.
+
+arduino1 1572105257263 LOW on pin 3 isn't set
+
+arduino1 1572105257263 COM10 is closed
+
+arduino1 1572105257264 COM10 is lost. Reconnecting...
+
+arduino1 1572105260311 Reconnected.
+
+arduino1 1572105268760 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105268807 LOW on pin 3 is set
+
+arduino1 1572105268807 DEV logic 1572105268807 0 command 1572105268807: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572105269766 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572105269814 HIGH on pin 3 is set
+
+arduino1 1572105269814 DEV logic 1572105269814 1 command 1572105269814: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572105315273 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105315320 LOW on pin 3 is set
+
+arduino1 1572105315320 DEV logic 1572105315320 0 command 1572105315320: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572105316266 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572105316313 HIGH on pin 3 is set
+
+arduino1 1572105316313 DEV logic 1572105316313 0 command 1572105316313: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572105431770 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105434771 arduino1 message wasn't got.
+
+arduino1 1572105434771 LOW on pin 3 isn't set
+
+arduino1 1572105434771 DEV logic 1572105434771 0 command 1572105434771: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572105434771 COM10 is closed
+
+arduino1 1572105434772 COM10 is lost. Reconnecting...
+
+arduino1 1572105436762 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105436809 LOW on pin 3 is set
+
+arduino1 1572105436809 DEV logic 1572105436809 0 command 1572105436809: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572105437821 Reconnected.
+
+arduino1 1572105438777 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572105438825 HIGH on pin 3 is set
+
+arduino1 1572105438825 DEV logic 1572105438825 1 command 1572105438825: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572105777276 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105780277 arduino1 message wasn't got.
+
+arduino1 1572105780277 LOW on pin 3 isn't set
+
+arduino1 1572105780277 COM10 is closed
+
+arduino1 1572105780277 COM10 is closed
+
+arduino1 1572105780277 COM10 is lost. Reconnecting...
+
+arduino1 1572105783325 Reconnected.
+
+arduino1 1572105789272 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572105789320 LOW on pin 3 is set
+
+arduino1 1572105789320 DEV logic 1572105789320 0 command 1572105789320: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572105792267 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572105792315 HIGH on pin 3 is set
+
+arduino1 1572105792315 DEV logic 1572105792316 1 command 1572105792316: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572106180777 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106183779 arduino1 message wasn't got.
+
+arduino1 1572106183779 LOW on pin 3 isn't set
+
+arduino1 1572106183779 DEV logic 1572106183779 0 command 1572106183779: 3002 command: deviceCommand dwrite 3 0
+
+arduino1 1572106183779 COM10 is closed
+
+arduino1 1572106183780 COM10 is lost. Reconnecting...
+
+arduino1 1572106186268 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106186315 LOW on pin 3 is set
+
+arduino1 1572106186315 DEV logic 1572106186315 0 command 1572106186315: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572106186828 Reconnected.
+
+arduino1 1572106187274 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572106187321 HIGH on pin 3 is set
+
+arduino1 1572106187322 DEV logic 1572106187322 0 command 1572106187322: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572106576780 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106579781 arduino1 message wasn't got.
+
+arduino1 1572106579781 LOW on pin 3 isn't set
+
+arduino1 1572106579781 DEV logic 1572106579781 0 command 1572106579781: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572106579781 COM10 is closed
+
+arduino1 1572106579781 COM10 is lost. Reconnecting...
+
+arduino1 1572106582829 Reconnected.
+
+arduino1 1572106587776 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106587823 LOW on pin 3 is set
+
+arduino1 1572106587823 DEV logic 1572106587823 0 command 1572106587823: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572106588771 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572106588818 HIGH on pin 3 is set
+
+arduino1 1572106588818 DEV logic 1572106588818 0 command 1572106588818: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572106683293 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106683340 LOW on pin 3 is set
+
+arduino1 1572106683341 DEV logic 1572106683341 0 command 1572106683341: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572106687276 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572106687323 HIGH on pin 3 is set
+
+arduino1 1572106687323 DEV logic 1572106687324 0 command 1572106687324: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572106711789 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106711837 LOW on pin 3 is set
+
+arduino1 1572106711837 DEV logic 1572106711837 1 command 1572106711837: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572106714284 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572106714332 HIGH on pin 3 is set
+
+arduino1 1572106714332 DEV logic 1572106714332 1 command 1572106714332: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572106889775 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106892776 arduino1 message wasn't got.
+
+arduino1 1572106892776 LOW on pin 3 isn't set
+
+arduino1 1572106892776 COM10 is closed
+
+arduino1 1572106892776 COM10 is closed
+
+arduino1 1572106892776 COM10 is lost. Reconnecting...
+
+arduino1 1572106893789 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106896791 LOW on pin 3 isn't set
+
+arduino1 1572106896791 DEV logic 1572106896791 0 command 1572106896791: 3002 command: deviceCommand dwrite 3 0
+
+arduino1 1572106899295 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106899794 arduino1: begin 0, end -4, length 0
+
+arduino1 1572106899794 Reconnected.
+
+arduino1 1572106899794 COM10 is closed
+
+arduino1 1572106899795 COM10 is lost. Reconnecting...
+
+arduino1 1572106899795 port is closed!!
+
+arduino1 1572106899795 arduino1: For input string: "rro"
+
+arduino1 1572106899795 Reconnected.
+
+arduino1 1572106899795 LOW on pin 3 isn't set
+
+arduino1 1572106899795 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572106899795 COM10 is lost. Reconnecting...
+
+arduino1 1572106902843 Reconnected.
+
+arduino1 1572106902889 Reconnected.
+
+arduino1 1572106902935 Reconnected.
+
+arduino1 1572106908781 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572106908828 LOW on pin 3 is set
+
+arduino1 1572106908828 DEV logic 1572106908828 0 command 1572106908828: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572106910775 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572106910822 HIGH on pin 3 is set
+
+arduino1 1572106910822 DEV logic 1572106910822 0 command 1572106910822: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572107055791 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572107055838 LOW on pin 3 is set
+
+arduino1 1572107055838 DEV logic 1572107055839 0 command 1572107055839: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572109073792 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109076793 arduino1 message wasn't got.
+
+arduino1 1572109076793 HIGH on pin 3 isn't set
+
+arduino1 1572109076793 COM10 is closed
+
+arduino1 1572109076794 COM10 is lost. Reconnecting...
+
+arduino1 1572109090793 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109094680 HIGH on pin 3 isn't set
+
+arduino1 1572109094680 DEV logic 1572109094680 0 command 1572109094680: 3887 command: deviceCommand dwrite 3 1
+
+arduino1 1572109096827 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109097683 arduino1: begin 0, end -4, length 0
+
+arduino1 1572109097683 Reconnected.
+
+arduino1 1572109097684 COM10 is closed
+
+arduino1 1572109097684 COM10 is lost. Reconnecting...
+
+arduino1 1572109097684 port is closed!!
+
+arduino1 1572109097684 arduino1: For input string: "rro"
+
+arduino1 1572109097684 Reconnected.
+
+arduino1 1572109097687 COM10 is opened
+
+arduino1 1572109100688 arduino1 message wasn't got.
+
+arduino1 1572109100688 HIGH on pin 3 isn't set
+
+arduino1 1572109100688 DEV logic 1572109100688 0 command 1572109100688: 3861 command: deviceCommand dwrite 3 1
+
+arduino1 1572109100688 COM10 is closed
+
+arduino1 1572109100688 COM10 is lost. Reconnecting...
+
+arduino1 1572109103691 arduino1: begin 0, end -4, length 0
+
+arduino1 1572109103691 Reconnected.
+
+arduino1 1572109103693 COM10 is opened
+
+arduino1 1572109103708 COM10 is closed
+
+arduino1 1572109103709 COM10 is lost. Reconnecting...
+
+arduino1 1572109105293 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109106712 arduino1: begin 0, end -4, length 0
+
+arduino1 1572109106712 Reconnected.
+
+arduino1 1572109106712 COM10 is closed
+
+arduino1 1572109106713 COM10 is lost. Reconnecting...
+
+arduino1 1572109106713 port is closed!!
+
+arduino1 1572109106713 arduino1: For input string: "rro"
+
+arduino1 1572109106713 Reconnected.
+
+arduino1 1572109106713 arduino1: For input string: "rro"
+
+arduino1 1572109106714 Reconnected.
+
+arduino1 1572109106714 port is closed!!
+
+arduino1 1572109106714 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572109106714 HIGH on pin 3 isn't set
+
+arduino1 1572109106714 DEV logic 1572109106714 0 command 1572109106714: 1421 command: deviceCommand dwrite 3 1
+
+arduino1 1572109106714 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572109106714 COM10 is lost. Reconnecting...
+
+arduino1 1572109109762 Reconnected.
+
+arduino1 1572109109809 Reconnected.
+
+arduino1 1572109109855 Reconnected.
+
+arduino1 1572109109901 Reconnected.
+
+arduino1 1572109111816 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109111863 HIGH on pin 3 is set
+
+arduino1 1572109111863 DEV logic 1572109111863 0 command 1572109111863: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572109116816 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572109116863 LOW on pin 3 is set
+
+arduino1 1572109116864 DEV logic 1572109116864 1 command 1572109116864: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572109121305 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109121352 HIGH on pin 3 is set
+
+arduino1 1572109121352 DEV logic 1572109121352 0 command 1572109121352: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572109132815 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572109132863 LOW on pin 3 is set
+
+arduino1 1572109132863 DEV logic 1572109132863 1 command 1572109132863: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572109188832 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109191834 arduino1 message wasn't got.
+
+arduino1 1572109191834 HIGH on pin 3 isn't set
+
+arduino1 1572109191834 COM10 is closed
+
+arduino1 1572109191834 COM10 is closed
+
+arduino1 1572109191834 COM10 is lost. Reconnecting...
+
+arduino1 1572109194882 Reconnected.
+
+arduino1 1572109201818 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572109201865 HIGH on pin 3 is set
+
+arduino1 1572109201866 DEV logic 1572109201866 0 command 1572109201866: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572111628355 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111631356 arduino1 message wasn't got.
+
+arduino1 1572111631356 LOW on pin 3 isn't set
+
+arduino1 1572111631356 COM10 is closed
+
+arduino1 1572111631356 COM10 is closed
+
+arduino1 1572111631356 COM10 is lost. Reconnecting...
+
+arduino1 1572111634425 Reconnected.
+
+arduino1 1572111646329 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111646376 LOW on pin 3 is set
+
+arduino1 1572111646377 DEV logic 1572111646377 1 command 1572111646377: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572111647815 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572111647862 HIGH on pin 3 is set
+
+arduino1 1572111647862 DEV logic 1572111647862 0 command 1572111647862: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572111660323 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111660370 LOW on pin 3 is set
+
+arduino1 1572111660370 DEV logic 1572111660370 0 command 1572111660370: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572111661843 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572111661890 HIGH on pin 3 is set
+
+arduino1 1572111661890 DEV logic 1572111661890 0 command 1572111661890: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572111673815 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111673862 LOW on pin 3 is set
+
+arduino1 1572111673862 DEV logic 1572111673862 0 command 1572111673862: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572111677324 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572111677371 HIGH on pin 3 is set
+
+arduino1 1572111677372 DEV logic 1572111677372 0 command 1572111677372: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572111746821 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111746868 LOW on pin 3 is set
+
+arduino1 1572111746868 DEV logic 1572111746868 0 command 1572111746868: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572111747815 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572111747862 HIGH on pin 3 is set
+
+arduino1 1572111747862 DEV logic 1572111747863 0 command 1572111747863: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572111859342 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572111859390 LOW on pin 3 is set
+
+arduino1 1572111859390 DEV logic 1572111859390 0 command 1572111859390: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572111860400 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572111860448 HIGH on pin 3 is set
+
+arduino1 1572111860448 DEV logic 1572111860448 1 command 1572111860448: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572112171346 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112171393 LOW on pin 3 is set
+
+arduino1 1572112171393 DEV logic 1572112171393 0 command 1572112171393: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572112199335 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112199383 HIGH on pin 3 is set
+
+arduino1 1572112199383 DEV logic 1572112199383 0 command 1572112199383: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572112365821 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112365868 LOW on pin 3 is set
+
+arduino1 1572112365869 DEV logic 1572112365869 0 command 1572112365869: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572112369842 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112369890 HIGH on pin 3 is set
+
+arduino1 1572112369890 DEV logic 1572112369890 0 command 1572112369890: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572112371821 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112371868 LOW on pin 3 is set
+
+arduino1 1572112371868 DEV logic 1572112371868 0 command 1572112371868: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572112384821 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112384868 HIGH on pin 3 is set
+
+arduino1 1572112384868 DEV logic 1572112384869 0 command 1572112384869: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572112386321 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112386368 LOW on pin 3 is set
+
+arduino1 1572112386368 DEV logic 1572112386368 0 command 1572112386368: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572112393368 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112393415 HIGH on pin 3 is set
+
+arduino1 1572112393415 DEV logic 1572112393416 0 command 1572112393416: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572112395821 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112395869 LOW on pin 3 is set
+
+arduino1 1572112395869 DEV logic 1572112395869 1 command 1572112395869: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572112434344 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112434391 HIGH on pin 3 is set
+
+arduino1 1572112434391 DEV logic 1572112434392 0 command 1572112434392: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572112439326 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112439373 LOW on pin 3 is set
+
+arduino1 1572112439374 DEV logic 1572112439374 0 command 1572112439374: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572112443897 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572112443945 HIGH on pin 3 is set
+
+arduino1 1572112443945 DEV logic 1572112443945 0 command 1572112443945: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572112444856 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572112444903 LOW on pin 3 is set
+
+arduino1 1572112444904 DEV logic 1572112444904 0 command 1572112444904: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572113236829 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113239830 arduino1 message wasn't got.
+
+arduino1 1572113239830 HIGH on pin 3 isn't set
+
+arduino1 1572113239830 DEV logic 1572113239830 0 command 1572113239830: 3001 command: deviceCommand dwrite 3 1
+
+arduino1 1572113239830 COM10 is closed
+
+arduino1 1572113239830 COM10 is lost. Reconnecting...
+
+arduino1 1572113242879 Reconnected.
+
+arduino1 1572113244842 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113244889 HIGH on pin 3 is set
+
+arduino1 1572113244890 DEV logic 1572113244890 0 command 1572113244890: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572113246349 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113246396 LOW on pin 3 is set
+
+arduino1 1572113246397 DEV logic 1572113246397 0 command 1572113246397: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572113250335 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113250383 HIGH on pin 3 is set
+
+arduino1 1572113250383 DEV logic 1572113250383 0 command 1572113250383: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572113285855 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113285902 LOW on pin 3 is set
+
+arduino1 1572113285903 DEV logic 1572113285903 0 command 1572113285903: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572113295329 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113295376 HIGH on pin 3 is set
+
+arduino1 1572113295376 DEV logic 1572113295376 0 command 1572113295376: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572113314853 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113314900 LOW on pin 3 is set
+
+arduino1 1572113314900 DEV logic 1572113314900 0 command 1572113314900: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572113364364 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113364421 HIGH on pin 3 is set
+
+arduino1 1572113364423 DEV logic 1572113364423 0 command 1572113364423: 59 command: deviceCommand dwrite 3 1
+
+arduino1 1572113372380 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113372428 LOW on pin 3 is set
+
+arduino1 1572113372428 DEV logic 1572113372428 0 command 1572113372428: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572113527332 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113527380 HIGH on pin 3 is set
+
+arduino1 1572113527380 DEV logic 1572113527380 0 command 1572113527380: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572113528880 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113528928 LOW on pin 3 is set
+
+arduino1 1572113528928 DEV logic 1572113528928 1 command 1572113528928: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572113543872 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113543920 HIGH on pin 3 is set
+
+arduino1 1572113543920 DEV logic 1572113543920 1 command 1572113543920: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572113544855 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113544902 LOW on pin 3 is set
+
+arduino1 1572113544902 DEV logic 1572113544902 0 command 1572113544902: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572113687832 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572113687879 HIGH on pin 3 is set
+
+arduino1 1572113687879 DEV logic 1572113687879 0 command 1572113687879: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572113689348 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572113689395 LOW on pin 3 is set
+
+arduino1 1572113689395 DEV logic 1572113689395 0 command 1572113689395: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114034335 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114037336 arduino1 message wasn't got.
+
+arduino1 1572114037336 HIGH on pin 3 isn't set
+
+arduino1 1572114037336 DEV logic 1572114037336 0 command 1572114037336: 3001 command: deviceCommand dwrite 3 1
+
+arduino1 1572114037337 COM10 is closed
+
+arduino1 1572114037337 COM10 is lost. Reconnecting...
+
+arduino1 1572114061210 Reconnected.
+
+arduino1 1572114062871 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114062918 HIGH on pin 3 is set
+
+arduino1 1572114062919 DEV logic 1572114062919 0 command 1572114062919: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572114074388 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114074436 LOW on pin 3 is set
+
+arduino1 1572114074436 DEV logic 1572114074436 1 command 1572114074436: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114075883 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114075931 HIGH on pin 3 is set
+
+arduino1 1572114075931 DEV logic 1572114075931 1 command 1572114075931: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114082337 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114082385 LOW on pin 3 is set
+
+arduino1 1572114082385 DEV logic 1572114082385 0 command 1572114082385: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114083370 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114083417 HIGH on pin 3 is set
+
+arduino1 1572114083418 DEV logic 1572114083418 0 command 1572114083418: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572114083896 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114083943 LOW on pin 3 is set
+
+arduino1 1572114083944 DEV logic 1572114083944 0 command 1572114083944: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114084887 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114084934 HIGH on pin 3 is set
+
+arduino1 1572114084934 DEV logic 1572114084934 0 command 1572114084934: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114085337 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114085384 LOW on pin 3 is set
+
+arduino1 1572114085385 DEV logic 1572114085385 0 command 1572114085385: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114086375 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114086423 HIGH on pin 3 is set
+
+arduino1 1572114086423 DEV logic 1572114086423 1 command 1572114086423: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114086890 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114086938 LOW on pin 3 is set
+
+arduino1 1572114086938 DEV logic 1572114086938 1 command 1572114086938: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114087339 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114087386 HIGH on pin 3 is set
+
+arduino1 1572114087386 DEV logic 1572114087386 0 command 1572114087386: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114087850 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114087897 LOW on pin 3 is set
+
+arduino1 1572114087897 DEV logic 1572114087898 0 command 1572114087898: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114088361 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114088408 HIGH on pin 3 is set
+
+arduino1 1572114088409 DEV logic 1572114088409 0 command 1572114088409: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114088885 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114088933 LOW on pin 3 is set
+
+arduino1 1572114088933 DEV logic 1572114088933 1 command 1572114088933: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114089381 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114089428 HIGH on pin 3 is set
+
+arduino1 1572114089428 DEV logic 1572114089428 0 command 1572114089428: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114089836 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114089883 LOW on pin 3 is set
+
+arduino1 1572114089883 DEV logic 1572114089883 0 command 1572114089883: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114090883 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114090930 HIGH on pin 3 is set
+
+arduino1 1572114090930 DEV logic 1572114090930 0 command 1572114090930: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114091336 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114091384 LOW on pin 3 is set
+
+arduino1 1572114091384 DEV logic 1572114091384 1 command 1572114091384: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114093369 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114093416 HIGH on pin 3 is set
+
+arduino1 1572114093416 DEV logic 1572114093417 0 command 1572114093417: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114094351 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114094398 LOW on pin 3 is set
+
+arduino1 1572114094398 DEV logic 1572114094398 0 command 1572114094398: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114099359 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114099407 HIGH on pin 3 is set
+
+arduino1 1572114099407 DEV logic 1572114099407 1 command 1572114099407: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114099880 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114099928 LOW on pin 3 is set
+
+arduino1 1572114099940 DEV logic 1572114099940 1 command 1572114099940: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114100854 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114100901 HIGH on pin 3 is set
+
+arduino1 1572114100902 DEV logic 1572114100902 0 command 1572114100902: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572114101389 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114101436 LOW on pin 3 is set
+
+arduino1 1572114101437 DEV logic 1572114101437 0 command 1572114101437: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114102370 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114102418 HIGH on pin 3 is set
+
+arduino1 1572114102418 DEV logic 1572114102418 1 command 1572114102418: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114102887 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114102934 LOW on pin 3 is set
+
+arduino1 1572114102935 DEV logic 1572114102935 0 command 1572114102935: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114103844 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114103891 HIGH on pin 3 is set
+
+arduino1 1572114103891 DEV logic 1572114103891 0 command 1572114103891: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114104361 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114104408 LOW on pin 3 is set
+
+arduino1 1572114104409 DEV logic 1572114104409 0 command 1572114104409: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114104877 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114104924 HIGH on pin 3 is set
+
+arduino1 1572114104924 DEV logic 1572114104924 0 command 1572114104924: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114105875 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114105923 LOW on pin 3 is set
+
+arduino1 1572114105923 DEV logic 1572114105923 1 command 1572114105923: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114106439 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114106487 HIGH on pin 3 is set
+
+arduino1 1572114106487 DEV logic 1572114106487 0 command 1572114106487: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572114106893 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114106941 LOW on pin 3 is set
+
+arduino1 1572114106941 DEV logic 1572114106941 1 command 1572114106941: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114107892 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114107939 HIGH on pin 3 is set
+
+arduino1 1572114107939 DEV logic 1572114107939 0 command 1572114107939: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114108347 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114108394 LOW on pin 3 is set
+
+arduino1 1572114108394 DEV logic 1572114108394 0 command 1572114108394: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114108858 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114108906 HIGH on pin 3 is set
+
+arduino1 1572114108906 DEV logic 1572114108906 1 command 1572114108906: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114109880 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114109927 LOW on pin 3 is set
+
+arduino1 1572114109928 DEV logic 1572114109928 0 command 1572114109928: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572114110337 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114110384 HIGH on pin 3 is set
+
+arduino1 1572114110384 DEV logic 1572114110384 0 command 1572114110384: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114110857 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114110905 LOW on pin 3 is set
+
+arduino1 1572114110905 DEV logic 1572114110905 1 command 1572114110905: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114111841 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114111888 HIGH on pin 3 is set
+
+arduino1 1572114111888 DEV logic 1572114111888 0 command 1572114111888: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114112336 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114112383 LOW on pin 3 is set
+
+arduino1 1572114112383 DEV logic 1572114112383 0 command 1572114112383: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114162885 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114162932 HIGH on pin 3 is set
+
+arduino1 1572114162941 DEV logic 1572114162941 0 command 1572114162941: 56 command: deviceCommand dwrite 3 1
+
+arduino1 1572114171884 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114171931 LOW on pin 3 is set
+
+arduino1 1572114171931 DEV logic 1572114171931 0 command 1572114171931: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114216850 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114216897 HIGH on pin 3 is set
+
+arduino1 1572114216897 DEV logic 1572114216897 0 command 1572114216897: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114217382 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114217429 LOW on pin 3 is set
+
+arduino1 1572114217429 DEV logic 1572114217430 0 command 1572114217430: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114218357 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114218404 HIGH on pin 3 is set
+
+arduino1 1572114218404 DEV logic 1572114218404 0 command 1572114218404: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114218874 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114218921 LOW on pin 3 is set
+
+arduino1 1572114218921 DEV logic 1572114218921 0 command 1572114218921: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114219393 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114219441 HIGH on pin 3 is set
+
+arduino1 1572114219441 DEV logic 1572114219441 1 command 1572114219441: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114220337 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114220384 LOW on pin 3 is set
+
+arduino1 1572114220384 DEV logic 1572114220384 0 command 1572114220384: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114222377 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114222424 HIGH on pin 3 is set
+
+arduino1 1572114222424 DEV logic 1572114222424 0 command 1572114222424: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572114231387 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114231434 LOW on pin 3 is set
+
+arduino1 1572114231434 DEV logic 1572114231434 0 command 1572114231434: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114231877 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114231924 HIGH on pin 3 is set
+
+arduino1 1572114231925 DEV logic 1572114231925 0 command 1572114231925: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572114232870 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572114232917 LOW on pin 3 is set
+
+arduino1 1572114232917 DEV logic 1572114232917 0 command 1572114232917: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572114233862 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572114233909 HIGH on pin 3 is set
+
+arduino1 1572114233909 DEV logic 1572114233909 0 command 1572114233909: 47 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572115175569 COM10 is opened
+
+arduino1 1572115178834 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572115178884 LOW on pin 9 is set
+
+arduino1 1572115178884 DEV logic 1572115178884 0 command 1572115178884: 50 command: deviceCommand dwrite 9 0
+
+arduino1 1572115179884 COMMAND:deviceCommand aread 0
+
+arduino1 1572115179924 Analog signal on pin 0 is  2.218963831867058
+
+arduino1 1572115179924 DEV logic 1572115179924 0 command 1572115179924: 40 command: deviceCommand aread 0
+
+arduino1 1572115179924 COMMAND:deviceCommand aread 0
+
+arduino1 1572115179974 Analog signal on pin 0 is  2.302052785923754
+
+arduino1 1572115179974 DEV logic 1572115179974 0 command 1572115179974: 50 command: deviceCommand aread 0
+
+arduino1 1572115204999 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572115205046 LOW on pin 3 is set
+
+arduino1 1572115205046 DEV logic 1572115205046 0 command 1572115205046: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572115205996 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572115206043 HIGH on pin 3 is set
+
+arduino1 1572115206044 DEV logic 1572115206044 0 command 1572115206044: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572115345992 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572115348993 arduino1 message wasn't got.
+
+arduino1 1572115348994 LOW on pin 3 isn't set
+
+arduino1 1572115348994 DEV logic 1572115348994 0 command 1572115348994: 3002 command: deviceCommand dwrite 3 0
+
+arduino1 1572115348994 COM10 is closed
+
+arduino1 1572115348994 COM10 is lost. Reconnecting...
+
+arduino1 1572115352043 Reconnected.
+
+arduino1 1572115353992 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572115354039 LOW on pin 3 is set
+
+arduino1 1572115354040 DEV logic 1572115354040 0 command 1572115354040: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572115356492 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572115356539 HIGH on pin 3 is set
+
+arduino1 1572115356540 DEV logic 1572115356540 0 command 1572115356540: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572115364493 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572115364540 LOW on pin 3 is set
+
+arduino1 1572115364543 DEV logic 1572115364543 0 command 1572115364543: 50 command: deviceCommand dwrite 3 0
+
+arduino1 1572115369992 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572115370040 HIGH on pin 3 is set
+
+arduino1 1572115370040 DEV logic 1572115370040 0 command 1572115370040: 48 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572286106994 COM10 is opened
+
+arduino1 1572286110093 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572286110145 LOW on pin 9 is set
+
+arduino1 1572286110145 DEV logic 1572286110145 0 command 1572286110145: 52 command: deviceCommand dwrite 9 0
+
+arduino1 1572286111146 COMMAND:deviceCommand aread 0
+
+arduino1 1572286111192 Analog signal on pin 0 is  2.6637341153470184
+
+arduino1 1572286111193 DEV logic 1572286111193 0 command 1572286111193: 47 command: deviceCommand aread 0
+
+arduino1 1572286111193 COMMAND:deviceCommand aread 0
+
+arduino1 1572286111239 Analog signal on pin 0 is  2.6783968719452593
+
+arduino1 1572286111240 DEV logic 1572286111240 0 command 1572286111240: 47 command: deviceCommand aread 0
+
+arduino1 1572286160241 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286160289 LOW on pin 3 is set
+
+arduino1 1572286160289 DEV logic 1572286160289 1 command 1572286160289: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286161723 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286161770 HIGH on pin 3 is set
+
+arduino1 1572286161771 DEV logic 1572286161771 0 command 1572286161771: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572286174238 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286177239 arduino1 message wasn't got.
+
+arduino1 1572286177240 LOW on pin 3 isn't set
+
+arduino1 1572286177240 DEV logic 1572286177240 0 command 1572286177240: 3002 command: deviceCommand dwrite 3 0
+
+arduino1 1572286177240 COM10 is closed
+
+arduino1 1572286177240 COM10 is lost. Reconnecting...
+
+arduino1 1572286180290 Reconnected.
+
+arduino1 1572286184238 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286184285 LOW on pin 3 is set
+
+arduino1 1572286184285 DEV logic 1572286184286 0 command 1572286184286: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286185724 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286185771 HIGH on pin 3 is set
+
+arduino1 1572286185771 DEV logic 1572286185771 0 command 1572286185771: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286193723 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286196724 arduino1 message wasn't got.
+
+arduino1 1572286196724 LOW on pin 3 isn't set
+
+arduino1 1572286196724 COM10 is closed
+
+arduino1 1572286196725 COM10 is lost. Reconnecting...
+
+arduino1 1572286199773 Reconnected.
+
+arduino1 1572286206237 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286206284 LOW on pin 3 is set
+
+arduino1 1572286206284 DEV logic 1572286206284 0 command 1572286206284: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286208237 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286208284 HIGH on pin 3 is set
+
+arduino1 1572286208284 DEV logic 1572286208284 0 command 1572286208284: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286246236 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286249237 arduino1 message wasn't got.
+
+arduino1 1572286249237 LOW on pin 3 isn't set
+
+arduino1 1572286249237 COM10 is closed
+
+arduino1 1572286249237 COM10 is lost. Reconnecting...
+
+arduino1 1572286252294 Reconnected.
+
+arduino1 1572286257724 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286257771 LOW on pin 3 is set
+
+arduino1 1572286257771 DEV logic 1572286257771 0 command 1572286257771: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286259724 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286259771 HIGH on pin 3 is set
+
+arduino1 1572286259771 DEV logic 1572286259771 0 command 1572286259771: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286266235 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286269236 arduino1 message wasn't got.
+
+arduino1 1572286269236 LOW on pin 3 isn't set
+
+arduino1 1572286269236 COM10 is closed
+
+arduino1 1572286269236 COM10 is lost. Reconnecting...
+
+arduino1 1572286273224 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286276225 LOW on pin 3 isn't set
+
+arduino1 1572286276225 DEV logic 1572286276225 0 command 1572286276225: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572286276226 arduino1: For input string: "rro"
+
+arduino1 1572286276226 Reconnected.
+
+arduino1 1572286276227 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572286276227 COM10 is lost. Reconnecting...
+
+arduino1 1572286278735 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286278782 LOW on pin 3 is set
+
+arduino1 1572286278782 DEV logic 1572286278782 0 command 1572286278782: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286279274 Reconnected.
+
+arduino1 1572286279320 Reconnected.
+
+arduino1 1572286279724 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286279771 HIGH on pin 3 is set
+
+arduino1 1572286279771 DEV logic 1572286279771 0 command 1572286279771: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286456231 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286459232 arduino1 message wasn't got.
+
+arduino1 1572286459232 LOW on pin 3 isn't set
+
+arduino1 1572286459232 COM10 is closed
+
+arduino1 1572286459232 COM10 is closed
+
+arduino1 1572286459232 COM10 is lost. Reconnecting...
+
+arduino1 1572286462281 Reconnected.
+
+arduino1 1572286465231 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286465278 LOW on pin 3 is set
+
+arduino1 1572286465278 DEV logic 1572286465278 0 command 1572286465278: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286466731 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286466778 HIGH on pin 3 is set
+
+arduino1 1572286466778 DEV logic 1572286466778 0 command 1572286466778: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286581730 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286584731 arduino1 message wasn't got.
+
+arduino1 1572286584731 LOW on pin 3 isn't set
+
+arduino1 1572286584731 DEV logic 1572286584731 0 command 1572286584731: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572286584731 COM10 is closed
+
+arduino1 1572286584731 COM10 is lost. Reconnecting...
+
+arduino1 1572286587781 Reconnected.
+
+arduino1 1572286592229 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286592277 LOW on pin 3 is set
+
+arduino1 1572286592277 DEV logic 1572286592277 1 command 1572286592277: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572286593234 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286593345 HIGH on pin 3 is set
+
+arduino1 1572286593345 DEV logic 1572286593345 64 command 1572286593345: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572286822733 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286825734 arduino1 message wasn't got.
+
+arduino1 1572286825734 LOW on pin 3 isn't set
+
+arduino1 1572286825734 DEV logic 1572286825734 0 command 1572286825734: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572286825734 COM10 is closed
+
+arduino1 1572286825735 COM10 is lost. Reconnecting...
+
+arduino1 1572286828783 Reconnected.
+
+arduino1 1572286836238 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572286836285 LOW on pin 3 is set
+
+arduino1 1572286836286 DEV logic 1572286836286 0 command 1572286836286: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572286837738 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572286837785 HIGH on pin 3 is set
+
+arduino1 1572286837785 DEV logic 1572286837786 0 command 1572286837786: 47 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572454033983 Port name doesn't exist
+
+arduino1 1572454037102 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572454037102 port wasn't created!
+
+arduino1 1572454037102 message wasn't written onarduino1
+
+arduino1 1572454037112 null
+
+arduino1 1572454037122 LOW on pin 9 isn't set
+
+arduino1 1572454037122 COM10 is lost. Reconnecting...
+
+arduino1 1572454037122 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572454037202 DEV logic 1572454037202 0 command 1572454037202: 20 command: deviceCommand dwrite 9 0
+
+arduino1 1572454038242 COMMAND:deviceCommand aread 0
+
+arduino1 1572454038242 arduino1: For input string: "rro"
+
+arduino1 1572454038242 Analog signal on pin 0 is  -1.0
+
+arduino1 1572454038242 DEV logic 1572454038242 0 command 1572454038242: 0 command: deviceCommand aread 0
+
+arduino1 1572454038242 COMMAND:deviceCommand aread 0
+
+arduino1 1572454038242 arduino1: For input string: "rro"
+
+arduino1 1572454038242 Analog signal on pin 0 is  -1.0
+
+arduino1 1572454038242 DEV logic 1572454038242 0 command 1572454038242: 0 command: deviceCommand aread 0
+
+arduino1 1572454184078 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572454184079 HIGH on pin 3 isn't set
+
+arduino1 1572454184079 DEV logic 1572454184079 1 command 1572454184079: 0 command: deviceCommand dwrite 3 1
+
+arduino1 1572454186076 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454186077 LOW on pin 3 isn't set
+
+arduino1 1572454186077 DEV logic 1572454186077 1 command 1572454186077: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454189077 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454189077 LOW on pin 3 isn't set
+
+arduino1 1572454189078 DEV logic 1572454189078 0 command 1572454189078: 1 command: deviceCommand dwrite 3 0
+
+arduino1 1572454194078 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454194078 LOW on pin 3 isn't set
+
+arduino1 1572454194078 DEV logic 1572454194078 0 command 1572454194078: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454203576 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454203577 LOW on pin 3 isn't set
+
+arduino1 1572454203577 DEV logic 1572454203577 0 command 1572454203577: 1 command: deviceCommand dwrite 3 0
+
+arduino1 1572454210577 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454210578 LOW on pin 3 isn't set
+
+arduino1 1572454210578 DEV logic 1572454210578 1 command 1572454210578: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454218577 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454218578 LOW on pin 3 isn't set
+
+arduino1 1572454218578 DEV logic 1572454218578 1 command 1572454218578: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454223577 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454223578 LOW on pin 3 isn't set
+
+arduino1 1572454223578 DEV logic 1572454223578 1 command 1572454223578: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454234577 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454234578 LOW on pin 3 isn't set
+
+arduino1 1572454234578 DEV logic 1572454234578 1 command 1572454234578: 0 command: deviceCommand dwrite 3 0
+
+arduino1 1572454239577 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454239578 LOW on pin 3 isn't set
+
+arduino1 1572454239578 DEV logic 1572454239578 0 command 1572454239578: 1 command: deviceCommand dwrite 3 0
+
+time device message
+arduino1 1572454264043 Port name doesn't exist
+
+arduino1 1572454267076 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572454267081 port wasn't created!
+
+arduino1 1572454267081 message wasn't written onarduino1
+
+arduino1 1572454267081 null
+
+arduino1 1572454267082 null
+
+arduino1 1572454267084 LOW on pin 9 isn't set
+
+arduino1 1572454267086 COM10 is lost. Reconnecting...
+
+arduino1 1572454267092 DEV logic 1572454267092 0 command 1572454267092: 9 command: deviceCommand dwrite 9 0
+
+arduino1 1572454268095 COMMAND:deviceCommand aread 0
+
+arduino1 1572454268095 arduino1: For input string: "rro"
+
+arduino1 1572454268096 Analog signal on pin 0 is  -1.0
+
+arduino1 1572454268097 DEV logic 1572454268097 0 command 1572454268097: 2 command: deviceCommand aread 0
+
+arduino1 1572454268097 COMMAND:deviceCommand aread 0
+
+arduino1 1572454268098 arduino1: For input string: "rro"
+
+arduino1 1572454268099 Analog signal on pin 0 is  -1.0
+
+arduino1 1572454268099 DEV logic 1572454268099 0 command 1572454268099: 2 command: deviceCommand aread 0
+
+time device message
+arduino1 1572454319601 COM63 is opened
+
+arduino1 1572454322626 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572454322688 LOW on pin 9 is set
+
+arduino1 1572454322688 DEV logic 1572454322688 0 command 1572454322688: 62 command: deviceCommand dwrite 9 0
+
+arduino1 1572454323694 COMMAND:deviceCommand aread 0
+
+arduino1 1572454323740 Analog signal on pin 0 is  2.5268817204301075
+
+arduino1 1572454323741 DEV logic 1572454323741 0 command 1572454323741: 47 command: deviceCommand aread 0
+
+arduino1 1572454323741 COMMAND:deviceCommand aread 0
+
+arduino1 1572454323787 Analog signal on pin 0 is  2.5562072336265884
+
+arduino1 1572454323788 DEV logic 1572454323788 0 command 1572454323788: 47 command: deviceCommand aread 0
+
+arduino1 1572454330627 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454330674 LOW on pin 3 is set
+
+arduino1 1572454330675 DEV logic 1572454330675 0 command 1572454330675: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572454331619 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572454331666 HIGH on pin 3 is set
+
+arduino1 1572454331666 DEV logic 1572454331666 0 command 1572454331666: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572454335123 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454335170 LOW on pin 3 is set
+
+arduino1 1572454335171 DEV logic 1572454335171 0 command 1572454335171: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572454615122 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572454615170 HIGH on pin 3 is set
+
+arduino1 1572454615170 DEV logic 1572454615170 0 command 1572454615170: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572454937628 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454940630 arduino1 message wasn't got.
+
+arduino1 1572454940631 LOW on pin 3 isn't set
+
+arduino1 1572454940631 DEV logic 1572454940631 1 command 1572454940631: 3002 command: deviceCommand dwrite 3 0
+
+arduino1 1572454940631 COM63 is closed
+
+arduino1 1572454940631 COM63 is lost. Reconnecting...
+
+arduino1 1572454943679 Reconnected.
+
+arduino1 1572454946128 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454946175 LOW on pin 3 is set
+
+arduino1 1572454946175 DEV logic 1572454946175 0 command 1572454946175: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572454972129 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572454972176 HIGH on pin 3 is set
+
+arduino1 1572454972177 DEV logic 1572454972177 0 command 1572454972177: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572454997629 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454997676 LOW on pin 3 is set
+
+arduino1 1572454997677 DEV logic 1572454997677 0 command 1572454997677: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572454998640 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572454998687 HIGH on pin 3 is set
+
+arduino1 1572454998688 DEV logic 1572454998688 0 command 1572454998688: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572454999629 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572454999676 LOW on pin 3 is set
+
+arduino1 1572454999677 DEV logic 1572454999677 0 command 1572454999677: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572455000129 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455000176 HIGH on pin 3 is set
+
+arduino1 1572455000176 DEV logic 1572455000176 0 command 1572455000176: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455001140 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455001187 LOW on pin 3 is set
+
+arduino1 1572455001187 DEV logic 1572455001187 0 command 1572455001187: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572455001629 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455001676 HIGH on pin 3 is set
+
+arduino1 1572455001676 DEV logic 1572455001676 0 command 1572455001676: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455002640 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455002687 LOW on pin 3 is set
+
+arduino1 1572455002688 DEV logic 1572455002688 0 command 1572455002688: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572455003140 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455003187 HIGH on pin 3 is set
+
+arduino1 1572455003187 DEV logic 1572455003187 0 command 1572455003187: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455004130 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455004177 LOW on pin 3 is set
+
+arduino1 1572455004178 DEV logic 1572455004178 0 command 1572455004178: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572455005141 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455005188 HIGH on pin 3 is set
+
+arduino1 1572455005188 DEV logic 1572455005188 0 command 1572455005188: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455005630 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455005677 LOW on pin 3 is set
+
+arduino1 1572455005677 DEV logic 1572455005678 0 command 1572455005678: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572455006130 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455006177 HIGH on pin 3 is set
+
+arduino1 1572455006178 DEV logic 1572455006178 0 command 1572455006178: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572455007630 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455007677 LOW on pin 3 is set
+
+arduino1 1572455007677 DEV logic 1572455007677 0 command 1572455007677: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572455008640 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455008687 HIGH on pin 3 is set
+
+arduino1 1572455008688 DEV logic 1572455008688 0 command 1572455008688: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572455140637 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455143638 arduino1 message wasn't got.
+
+arduino1 1572455143638 LOW on pin 3 isn't set
+
+arduino1 1572455143638 DEV logic 1572455143638 0 command 1572455143638: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572455143638 COM63 is closed
+
+arduino1 1572455143639 COM63 is lost. Reconnecting...
+
+arduino1 1572455146688 Reconnected.
+
+arduino1 1572455180636 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455180683 LOW on pin 3 is set
+
+arduino1 1572455180684 DEV logic 1572455180684 0 command 1572455180684: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572455181636 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455181684 HIGH on pin 3 is set
+
+arduino1 1572455181684 DEV logic 1572455181684 1 command 1572455181684: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455182636 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455182683 LOW on pin 3 is set
+
+arduino1 1572455182684 DEV logic 1572455182684 0 command 1572455182684: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572455183636 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455183683 HIGH on pin 3 is set
+
+arduino1 1572455183683 DEV logic 1572455183683 0 command 1572455183683: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572455184636 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572455184683 LOW on pin 3 is set
+
+arduino1 1572455184683 DEV logic 1572455184683 0 command 1572455184683: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572455185639 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572455185686 HIGH on pin 3 is set
+
+arduino1 1572455185686 DEV logic 1572455185686 0 command 1572455185686: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572456540161 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456543162 arduino1 message wasn't got.
+
+arduino1 1572456543162 LOW on pin 3 isn't set
+
+arduino1 1572456543162 DEV logic 1572456543162 0 command 1572456543162: 3001 command: deviceCommand dwrite 3 0
+
+arduino1 1572456543162 COM63 is closed
+
+arduino1 1572456543162 COM63 is lost. Reconnecting...
+
+arduino1 1572456544659 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456544706 LOW on pin 3 is set
+
+arduino1 1572456544706 DEV logic 1572456544706 0 command 1572456544706: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572456546211 Reconnected.
+
+arduino1 1572456551156 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456551203 HIGH on pin 3 is set
+
+arduino1 1572456551203 DEV logic 1572456551203 0 command 1572456551203: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572456580659 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456580706 LOW on pin 3 is set
+
+arduino1 1572456580707 DEV logic 1572456580707 0 command 1572456580707: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572456581656 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456581703 HIGH on pin 3 is set
+
+arduino1 1572456581704 DEV logic 1572456581704 0 command 1572456581704: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572456648661 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456648708 LOW on pin 3 is set
+
+arduino1 1572456648708 DEV logic 1572456648708 0 command 1572456648708: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572456649676 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456649723 HIGH on pin 3 is set
+
+arduino1 1572456649723 DEV logic 1572456649723 0 command 1572456649723: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572456650658 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456650705 LOW on pin 3 is set
+
+arduino1 1572456650705 DEV logic 1572456650705 0 command 1572456650705: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572456651658 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456651705 HIGH on pin 3 is set
+
+arduino1 1572456651705 DEV logic 1572456651705 0 command 1572456651705: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572456664657 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456667658 arduino1 message wasn't got.
+
+arduino1 1572456667658 LOW on pin 3 isn't set
+
+arduino1 1572456667658 COM63 is closed
+
+arduino1 1572456667658 COM63 is closed
+
+arduino1 1572456667659 COM63 is lost. Reconnecting...
+
+arduino1 1572456670706 Reconnected.
+
+arduino1 1572456672661 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456672708 LOW on pin 3 is set
+
+arduino1 1572456672708 DEV logic 1572456672708 0 command 1572456672708: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572456673665 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456673712 HIGH on pin 3 is set
+
+arduino1 1572456673712 DEV logic 1572456673712 0 command 1572456673712: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572456674660 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456674708 LOW on pin 3 is set
+
+arduino1 1572456674708 DEV logic 1572456674708 0 command 1572456674708: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572456675169 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572456675216 HIGH on pin 3 is set
+
+arduino1 1572456675217 DEV logic 1572456675217 0 command 1572456675217: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572456685178 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572456685225 LOW on pin 3 is set
+
+arduino1 1572456685225 DEV logic 1572456685225 0 command 1572456685225: 47 command: deviceCommand dwrite 3 0
+
+time device message
+arduino1 1572691004126 Port name doesn't exist
+
+arduino1 1572691007406 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572691007410 port wasn't created!
+
+arduino1 1572691007411 message wasn't written onarduino1
+
+arduino1 1572691007411 null
+
+arduino1 1572691007412 null
+
+arduino1 1572691007414 LOW on pin 9 isn't set
+
+arduino1 1572691007417 COM63 is lost. Reconnecting...
+
+arduino1 1572691007437 DEV logic 1572691007437 0 command 1572691007437: 10 command: deviceCommand dwrite 9 0
+
+arduino1 1572691008455 COMMAND:deviceCommand aread 0
+
+arduino1 1572691008456 arduino1: For input string: "rro"
+
+arduino1 1572691008457 Analog signal on pin 0 is  -1.0
+
+arduino1 1572691008457 DEV logic 1572691008458 1 command 1572691008458: 1 command: deviceCommand aread 0
+
+arduino1 1572691008458 COMMAND:deviceCommand aread 0
+
+arduino1 1572691008459 arduino1: For input string: "rro"
+
+arduino1 1572691008459 Analog signal on pin 0 is  -1.0
+
+arduino1 1572691008459 DEV logic 1572691008459 0 command 1572691008459: 1 command: deviceCommand aread 0
+
+time device message
+arduino1 1572691140209 Port name doesn't exist
+
+arduino1 1572691143235 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572691143239 port wasn't created!
+
+arduino1 1572691143240 message wasn't written onarduino1
+
+arduino1 1572691143241 null
+
+arduino1 1572691143243 LOW on pin 9 isn't set
+
+arduino1 1572691143246 COM63 is lost. Reconnecting...
+
+arduino1 1572691143250 DEV logic 1572691143250 0 command 1572691143250: 8 command: deviceCommand dwrite 9 0
+
+arduino1 1572691144251 COMMAND:deviceCommand aread 0
+
+arduino1 1572691144252 arduino1: For input string: "rro"
+
+arduino1 1572691144253 Analog signal on pin 0 is  -1.0
+
+arduino1 1572691144253 DEV logic 1572691144253 0 command 1572691144253: 2 command: deviceCommand aread 0
+
+arduino1 1572691144253 COMMAND:deviceCommand aread 0
+
+arduino1 1572691144254 arduino1: For input string: "rro"
+
+arduino1 1572691144254 Analog signal on pin 0 is  -1.0
+
+arduino1 1572691144254 DEV logic 1572691144254 0 command 1572691144254: 1 command: deviceCommand aread 0
+
+time device message
+arduino1 1572691250777 COM10 is opened
+
+arduino1 1572691253804 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572691253857 LOW on pin 9 is set
+
+arduino1 1572691253857 DEV logic 1572691253857 0 command 1572691253857: 53 command: deviceCommand dwrite 9 0
+
+arduino1 1572691254858 COMMAND:deviceCommand aread 0
+
+arduino1 1572691254904 Analog signal on pin 0 is  2.4780058651026393
+
+arduino1 1572691254905 DEV logic 1572691254905 0 command 1572691254905: 46 command: deviceCommand aread 0
+
+arduino1 1572691254905 COMMAND:deviceCommand aread 0
+
+arduino1 1572691254951 Analog signal on pin 0 is  2.512218963831867
+
+arduino1 1572691254951 DEV logic 1572691254952 0 command 1572691254952: 46 command: deviceCommand aread 0
+
+arduino1 1572691281544 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691281592 HIGH on pin 3 is set
+
+arduino1 1572691281592 DEV logic 1572691281592 1 command 1572691281592: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572691283041 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572691283088 LOW on pin 3 is set
+
+arduino1 1572691283088 DEV logic 1572691283088 0 command 1572691283088: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572691284041 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691284088 HIGH on pin 3 is set
+
+arduino1 1572691284089 DEV logic 1572691284089 0 command 1572691284089: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572691285041 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572691285088 LOW on pin 3 is set
+
+arduino1 1572691285088 DEV logic 1572691285088 0 command 1572691285088: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572691286042 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691286089 HIGH on pin 3 is set
+
+arduino1 1572691286089 DEV logic 1572691286089 0 command 1572691286089: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572691513053 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572691513100 LOW on pin 3 is set
+
+arduino1 1572691513100 DEV logic 1572691513100 0 command 1572691513100: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572691514040 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691514087 HIGH on pin 3 is set
+
+arduino1 1572691514087 DEV logic 1572691514087 0 command 1572691514087: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572691514540 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572691514587 LOW on pin 3 is set
+
+arduino1 1572691514587 DEV logic 1572691514587 0 command 1572691514587: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572691515052 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691515099 HIGH on pin 3 is set
+
+arduino1 1572691515100 DEV logic 1572691515100 0 command 1572691515100: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572691889044 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572691889091 LOW on pin 3 is set
+
+arduino1 1572691889092 DEV logic 1572691889092 0 command 1572691889092: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572691955545 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572691955592 HIGH on pin 3 is set
+
+arduino1 1572691955592 DEV logic 1572691955592 0 command 1572691955592: 47 command: deviceCommand dwrite 3 1
+
+time device message
+arduino1 1572694395690 COM10 is opened
+
+arduino1 1572694398722 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572694398774 LOW on pin 9 is set
+
+arduino1 1572694398775 DEV logic 1572694398775 0 command 1572694398775: 53 command: deviceCommand dwrite 9 0
+
+arduino1 1572694399775 COMMAND:deviceCommand aread 6
+
+arduino1 1572694399822 pin 6 doesn't exist
+
+arduino1 1572694399822 Analog signal on pin 6 is  -1.0
+
+arduino1 1572694399823 DEV logic 1572694399823 0 command 1572694399823: 48 command: deviceCommand aread 6
+
+arduino1 1572694399823 COMMAND:deviceCommand aread 5
+
+arduino1 1572694399869 Analog signal on pin 5 is  1.9990224828934506
+
+arduino1 1572694399870 DEV logic 1572694399870 0 command 1572694399870: 47 command: deviceCommand aread 5
+
+arduino1 1572694539057 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572694539105 LOW on pin 3 is set
+
+arduino1 1572694539105 DEV logic 1572694539105 1 command 1572694539105: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572694540106 COMMAND:deviceCommand aread 2
+
+arduino1 1572694540153 Analog signal on pin 2 is  0.9726295210166178
+
+arduino1 1572694540153 DEV logic 1572694540153 0 command 1572694540153: 47 command: deviceCommand aread 2
+
+arduino1 1572694540153 COMMAND:deviceCommand aread 1
+
+arduino1 1572694540200 Analog signal on pin 1 is  1.0654936461388074
+
+arduino1 1572694540201 DEV logic 1572694540201 1 command 1572694540201: 47 command: deviceCommand aread 1
+
+arduino1 1572694550063 COMMAND:deviceCommand aread 2
+
+arduino1 1572694550109 Analog signal on pin 2 is  1.1290322580645162
+
+arduino1 1572694550110 DEV logic 1572694550110 0 command 1572694550110: 47 command: deviceCommand aread 2
+
+arduino1 1572694550110 COMMAND:deviceCommand aread 1
+
+arduino1 1572694550156 Analog signal on pin 1 is  1.1192570869990226
+
+arduino1 1572694550157 DEV logic 1572694550157 0 command 1572694550157: 47 command: deviceCommand aread 1
+
+arduino1 1572694551556 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572694551603 LOW on pin 3 is set
+
+arduino1 1572694551605 DEV logic 1572694551605 1 command 1572694551605: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572694552605 COMMAND:deviceCommand aread 2
+
+arduino1 1572694552652 Analog signal on pin 2 is  1.1290322580645162
+
+arduino1 1572694552652 DEV logic 1572694552652 0 command 1572694552652: 47 command: deviceCommand aread 2
+
+arduino1 1572694552652 COMMAND:deviceCommand aread 1
+
+arduino1 1572694552699 Analog signal on pin 1 is  1.1143695014662758
+
+arduino1 1572694552699 DEV logic 1572694552699 0 command 1572694552699: 47 command: deviceCommand aread 1
+
+arduino1 1572694568556 COMMAND:deviceCommand aread 2
+
+arduino1 1572694568602 Analog signal on pin 2 is  1.1388074291300099
+
+arduino1 1572694568602 DEV logic 1572694568602 0 command 1572694568602: 46 command: deviceCommand aread 2
+
+arduino1 1572694568602 COMMAND:deviceCommand aread 1
+
+arduino1 1572694568649 Analog signal on pin 1 is  1.1192570869990226
+
+arduino1 1572694568649 DEV logic 1572694568649 1 command 1572694568649: 46 command: deviceCommand aread 1
+
+arduino1 1572694571569 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572694571616 LOW on pin 3 is set
+
+arduino1 1572694571616 DEV logic 1572694571617 0 command 1572694571617: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572694572618 COMMAND:deviceCommand aread 2
+
+arduino1 1572694572665 Analog signal on pin 2 is  1.133919843597263
+
+arduino1 1572694572665 DEV logic 1572694572665 1 command 1572694572665: 46 command: deviceCommand aread 2
+
+arduino1 1572694572665 COMMAND:deviceCommand aread 1
+
+arduino1 1572694572712 Analog signal on pin 1 is  1.1143695014662758
+
+arduino1 1572694572712 DEV logic 1572694572712 1 command 1572694572712: 46 command: deviceCommand aread 1
+
+arduino1 1572694725558 COMMAND:deviceCommand aread 2
+
+arduino1 1572694725604 Analog signal on pin 2 is  1.4760508308895406
+
+arduino1 1572694725605 DEV logic 1572694725605 0 command 1572694725605: 47 command: deviceCommand aread 2
+
+arduino1 1572694725605 COMMAND:deviceCommand aread 1
+
+arduino1 1572694725651 Analog signal on pin 1 is  1.520039100684262
+
+arduino1 1572694725651 DEV logic 1572694725652 0 command 1572694725652: 46 command: deviceCommand aread 1
+
+arduino1 1572694731058 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572694731105 LOW on pin 3 is set
+
+arduino1 1572694731105 DEV logic 1572694731105 0 command 1572694731105: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572694732106 COMMAND:deviceCommand aread 2
+
+arduino1 1572694732152 Analog signal on pin 2 is  1.1290322580645162
+
+arduino1 1572694732152 DEV logic 1572694732152 0 command 1572694732152: 46 command: deviceCommand aread 2
+
+arduino1 1572694732153 COMMAND:deviceCommand aread 1
+
+arduino1 1572694732199 Analog signal on pin 1 is  1.1143695014662758
+
+arduino1 1572694732199 DEV logic 1572694732199 0 command 1572694732199: 46 command: deviceCommand aread 1
+
+arduino1 1572695210072 COMMAND:deviceCommand aread 2
+
+arduino1 1572695210118 Analog signal on pin 2 is  3.4604105571847508
+
+arduino1 1572695210119 DEV logic 1572695210119 0 command 1572695210119: 47 command: deviceCommand aread 2
+
+arduino1 1572695210119 COMMAND:deviceCommand aread 1
+
+arduino1 1572695210165 Analog signal on pin 1 is  5.0
+
+arduino1 1572695210165 DEV logic 1572695210165 0 command 1572695210165: 46 command: deviceCommand aread 1
+
+arduino1 1572695211071 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572695211118 LOW on pin 3 is set
+
+arduino1 1572695211119 DEV logic 1572695211119 0 command 1572695211119: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572695212119 COMMAND:deviceCommand aread 2
+
+arduino1 1572695212166 Analog signal on pin 2 is  3.6265884652981426
+
+arduino1 1572695212166 DEV logic 1572695212166 0 command 1572695212166: 47 command: deviceCommand aread 2
+
+arduino1 1572695212166 COMMAND:deviceCommand aread 1
+
+arduino1 1572695212212 Analog signal on pin 1 is  5.0
+
+arduino1 1572695212213 DEV logic 1572695212213 0 command 1572695212213: 47 command: deviceCommand aread 1
+
+arduino1 1572695297570 COMMAND:deviceCommand aread 2
+
+arduino1 1572695300571 arduino1 message wasn't got.
+
+arduino1 1572695300572 arduino1: begin 0, end -4, length 0
+
+arduino1 1572695300572 COM10 is closed
+
+arduino1 1572695300572 COM10 is closed
+
+arduino1 1572695300573 DEV logic 1572695300573 0 command 1572695300573: 3003 command: deviceCommand aread 2
+
+arduino1 1572695300573 COM10 is lost. Reconnecting...
+
+arduino1 1572695300573 COMMAND:deviceCommand aread 1
+
+arduino1 1572695300621 Analog signal on pin 1 is  2.6392961876832843
+
+arduino1 1572695300621 DEV logic 1572695300621 0 command 1572695300621: 48 command: deviceCommand aread 1
+
+arduino1 1572695303620 Reconnected.
+
+arduino1 1572695308064 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572695308111 LOW on pin 3 is set
+
+arduino1 1572695308111 DEV logic 1572695308111 0 command 1572695308111: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572695309112 COMMAND:deviceCommand aread 2
+
+arduino1 1572695309158 Analog signal on pin 2 is  1.4467253176930597
+
+arduino1 1572695309158 DEV logic 1572695309158 0 command 1572695309158: 46 command: deviceCommand aread 2
+
+arduino1 1572695309158 COMMAND:deviceCommand aread 1
+
+arduino1 1572695309204 Analog signal on pin 1 is  2.6344086021505375
+
+arduino1 1572695309205 DEV logic 1572695309205 1 command 1572695309205: 46 command: deviceCommand aread 1
+
+arduino1 1572695507067 COMMAND:deviceCommand aread 2
+
+arduino1 1572695507113 Analog signal on pin 2 is  5.0
+
+arduino1 1572695507114 DEV logic 1572695507114 0 command 1572695507114: 47 command: deviceCommand aread 2
+
+arduino1 1572695507114 COMMAND:deviceCommand aread 1
+
+arduino1 1572695507161 Analog signal on pin 1 is  4.755620723362659
+
+arduino1 1572695507162 DEV logic 1572695507162 0 command 1572695507162: 48 command: deviceCommand aread 1
+
+arduino1 1572695672079 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572695672126 LOW on pin 3 is set
+
+arduino1 1572695672127 DEV logic 1572695672127 0 command 1572695672127: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572695673127 COMMAND:deviceCommand aread 2
+
+arduino1 1572695673173 Analog signal on pin 2 is  3.1915933528836757
+
+arduino1 1572695673174 DEV logic 1572695673174 0 command 1572695673174: 47 command: deviceCommand aread 2
+
+arduino1 1572695673174 COMMAND:deviceCommand aread 1
+
+arduino1 1572695673220 Analog signal on pin 1 is  3.8074291300097753
+
+arduino1 1572695673220 DEV logic 1572695673220 0 command 1572695673220: 46 command: deviceCommand aread 1
+
+arduino1 1572695680570 COMMAND:deviceCommand aread 2
+
+arduino1 1572695680616 Analog signal on pin 2 is  3.260019550342131
+
+arduino1 1572695680617 DEV logic 1572695680617 0 command 1572695680617: 47 command: deviceCommand aread 2
+
+arduino1 1572695680617 COMMAND:deviceCommand aread 1
+
+arduino1 1572695680663 Analog signal on pin 1 is  3.817204301075269
+
+arduino1 1572695680663 DEV logic 1572695680663 0 command 1572695680663: 46 command: deviceCommand aread 1
+
+arduino1 1572695764076 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572695764123 LOW on pin 3 is set
+
+arduino1 1572695764123 DEV logic 1572695764123 0 command 1572695764123: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572695765124 COMMAND:deviceCommand aread 2
+
+arduino1 1572695765170 Analog signal on pin 2 is  2.409579667644184
+
+arduino1 1572695765171 DEV logic 1572695765171 0 command 1572695765171: 47 command: deviceCommand aread 2
+
+arduino1 1572695765171 COMMAND:deviceCommand aread 1
+
+arduino1 1572695765217 Analog signal on pin 1 is  2.590420332355816
+
+arduino1 1572695765218 DEV logic 1572695765218 0 command 1572695765218: 47 command: deviceCommand aread 1
+
+arduino1 1572696426087 COMMAND:deviceCommand aread 2
+
+arduino1 1572696429088 arduino1 message wasn't got.
+
+arduino1 1572696429088 arduino1: begin 0, end -4, length 0
+
+arduino1 1572696429088 COM10 is closed
+
+arduino1 1572696429104 DEV logic 1572696429104 0 command 1572696429104: 3017 command: deviceCommand aread 2
+
+arduino1 1572696429105 COMMAND:deviceCommand aread 1
+
+arduino1 1572696429105 port is closed!!
+
+arduino1 1572696429106 arduino1: For input string: "rro"
+
+arduino1 1572696429106 Analog signal on pin 1 is  -1.0
+
+arduino1 1572696429106 DEV logic 1572696429106 0 command 1572696429106: 1 command: deviceCommand aread 1
+
+arduino1 1572696429578 COMMAND:deviceCommand aread 2
+
+arduino1 1572696429624 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696429625 DEV logic 1572696429625 0 command 1572696429625: 47 command: deviceCommand aread 2
+
+arduino1 1572696429625 COMMAND:deviceCommand aread 1
+
+arduino1 1572696429671 Analog signal on pin 1 is  0.0
+
+arduino1 1572696429672 DEV logic 1572696429672 0 command 1572696429672: 47 command: deviceCommand aread 1
+
+arduino1 1572696432154 Reconnected.
+
+arduino1 1572696432200 Reconnected.
+
+arduino1 1572696436086 COMMAND:deviceCommand aread 2
+
+arduino1 1572696436132 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696436132 DEV logic 1572696436132 0 command 1572696436132: 46 command: deviceCommand aread 2
+
+arduino1 1572696436133 COMMAND:deviceCommand aread 1
+
+arduino1 1572696436179 Analog signal on pin 1 is  0.0
+
+arduino1 1572696436179 DEV logic 1572696436179 0 command 1572696436179: 46 command: deviceCommand aread 1
+
+arduino1 1572696436205 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696436252 LOW on pin 3 is set
+
+arduino1 1572696436253 DEV logic 1572696436253 0 command 1572696436253: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572696436254 COMMAND:deviceCommand dwrite 0 0
+
+arduino1 1572696436302 LOW on pin 0 isn't set
+
+arduino1 1572696436302 DEV logic 1572696436302 0 command 1572696436302: 48 command: deviceCommand dwrite 0 0
+
+arduino1 1572696437259 COMMAND:deviceCommand aread 2
+
+arduino1 1572696437302 COMMAND:deviceCommand aread 4
+
+arduino1 1572696437305 Analog signal on pin 2 is  4.9608993157380255
+
+arduino1 1572696437305 DEV logic 1572696437305 0 command 1572696437305: 46 command: deviceCommand aread 2
+
+arduino1 1572696437305 COMMAND:deviceCommand aread 1
+
+arduino1 1572696437351 Analog signal on pin 4 is  3.4164222873900294
+
+arduino1 1572696437352 DEV logic 1572696437352 0 command 1572696437352: 50 command: deviceCommand aread 4
+
+arduino1 1572696437352 COMMAND:deviceCommand aread 3
+
+arduino1 1572696437397 Analog signal on pin 1 is  0.0
+
+arduino1 1572696437398 DEV logic 1572696437398 1 command 1572696437398: 92 command: deviceCommand aread 1
+
+arduino1 1572696437443 Analog signal on pin 3 is  0.855327468230694
+
+arduino1 1572696437443 DEV logic 1572696437443 0 command 1572696437443: 91 command: deviceCommand aread 3
+
+arduino1 1572696457582 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696457629 LOW on pin 3 is set
+
+arduino1 1572696457630 DEV logic 1572696457630 0 command 1572696457630: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572696458630 COMMAND:deviceCommand aread 2
+
+arduino1 1572696458676 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696458676 DEV logic 1572696458676 0 command 1572696458676: 46 command: deviceCommand aread 2
+
+arduino1 1572696458676 COMMAND:deviceCommand aread 1
+
+arduino1 1572696458723 Analog signal on pin 1 is  0.0
+
+arduino1 1572696458723 DEV logic 1572696458723 1 command 1572696458723: 46 command: deviceCommand aread 1
+
+arduino1 1572696474583 COMMAND:deviceCommand aread 2
+
+arduino1 1572696474629 Analog signal on pin 2 is  4.951124144672532
+
+arduino1 1572696474629 DEV logic 1572696474629 0 command 1572696474629: 46 command: deviceCommand aread 2
+
+arduino1 1572696474630 COMMAND:deviceCommand aread 1
+
+arduino1 1572696474676 Analog signal on pin 1 is  0.0
+
+arduino1 1572696474676 DEV logic 1572696474676 0 command 1572696474676: 46 command: deviceCommand aread 1
+
+arduino1 1572696474688 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696474735 LOW on pin 3 is set
+
+arduino1 1572696474735 DEV logic 1572696474735 0 command 1572696474735: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572696474735 COMMAND:deviceCommand dwrite 0 0
+
+arduino1 1572696474783 LOW on pin 0 isn't set
+
+arduino1 1572696474783 DEV logic 1572696474784 1 command 1572696474784: 47 command: deviceCommand dwrite 0 0
+
+arduino1 1572696475735 COMMAND:deviceCommand aread 2
+
+arduino1 1572696475781 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696475781 DEV logic 1572696475781 0 command 1572696475781: 46 command: deviceCommand aread 2
+
+arduino1 1572696475782 COMMAND:deviceCommand aread 1
+
+arduino1 1572696475784 COMMAND:deviceCommand aread 4
+
+arduino1 1572696475828 Analog signal on pin 1 is  0.0
+
+arduino1 1572696475828 DEV logic 1572696475828 0 command 1572696475828: 46 command: deviceCommand aread 1
+
+arduino1 1572696475874 Analog signal on pin 4 is  0.5474095796676443
+
+arduino1 1572696475874 DEV logic 1572696475874 0 command 1572696475874: 90 command: deviceCommand aread 4
+
+arduino1 1572696475874 COMMAND:deviceCommand aread 3
+
+arduino1 1572696475920 Analog signal on pin 3 is  1.04594330400782
+
+arduino1 1572696475920 DEV logic 1572696475921 0 command 1572696475921: 46 command: deviceCommand aread 3
+
+arduino1 1572696549585 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696549632 LOW on pin 3 is set
+
+arduino1 1572696549632 DEV logic 1572696549632 0 command 1572696549632: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572696550632 COMMAND:deviceCommand aread 2
+
+arduino1 1572696550678 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696550678 DEV logic 1572696550678 0 command 1572696550678: 46 command: deviceCommand aread 2
+
+arduino1 1572696550679 COMMAND:deviceCommand aread 1
+
+arduino1 1572696550725 Analog signal on pin 1 is  0.0
+
+arduino1 1572696550725 DEV logic 1572696550725 0 command 1572696550725: 46 command: deviceCommand aread 1
+
+arduino1 1572696556587 COMMAND:deviceCommand aread 2
+
+arduino1 1572696556633 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696556633 DEV logic 1572696556633 0 command 1572696556633: 46 command: deviceCommand aread 2
+
+arduino1 1572696556633 COMMAND:deviceCommand aread 1
+
+arduino1 1572696556680 Analog signal on pin 1 is  0.0
+
+arduino1 1572696556680 DEV logic 1572696556680 0 command 1572696556680: 47 command: deviceCommand aread 1
+
+arduino1 1572696556681 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696556728 LOW on pin 3 is set
+
+arduino1 1572696556728 DEV logic 1572696556728 0 command 1572696556728: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572696556729 COMMAND:deviceCommand dwrite 0 0
+
+arduino1 1572696556777 LOW on pin 0 isn't set
+
+arduino1 1572696556777 DEV logic 1572696556777 0 command 1572696556777: 48 command: deviceCommand dwrite 0 0
+
+arduino1 1572696557729 COMMAND:deviceCommand aread 2
+
+arduino1 1572696557775 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696557775 DEV logic 1572696557775 0 command 1572696557775: 46 command: deviceCommand aread 2
+
+arduino1 1572696557775 COMMAND:deviceCommand aread 1
+
+arduino1 1572696557778 COMMAND:deviceCommand aread 4
+
+arduino1 1572696557822 Analog signal on pin 1 is  0.0
+
+arduino1 1572696557822 DEV logic 1572696557822 0 command 1572696557822: 47 command: deviceCommand aread 1
+
+arduino1 1572696557868 Analog signal on pin 4 is  0.5425219941348973
+
+arduino1 1572696557868 DEV logic 1572696557868 0 command 1572696557868: 90 command: deviceCommand aread 4
+
+arduino1 1572696557868 COMMAND:deviceCommand aread 3
+
+arduino1 1572696557914 Analog signal on pin 3 is  1.0361681329423265
+
+arduino1 1572696557915 DEV logic 1572696557915 0 command 1572696557915: 47 command: deviceCommand aread 3
+
+arduino1 1572696628578 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696628625 LOW on pin 3 is set
+
+arduino1 1572696628625 DEV logic 1572696628625 0 command 1572696628625: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572696629625 COMMAND:deviceCommand aread 2
+
+arduino1 1572696629671 Analog signal on pin 2 is  4.956011730205279
+
+arduino1 1572696629684 DEV logic 1572696629684 0 command 1572696629684: 59 command: deviceCommand aread 2
+
+arduino1 1572696629684 COMMAND:deviceCommand aread 1
+
+arduino1 1572696629730 Analog signal on pin 1 is  0.0
+
+arduino1 1572696629731 DEV logic 1572696629731 0 command 1572696629731: 47 command: deviceCommand aread 1
+
+arduino1 1572696633578 COMMAND:deviceCommand aread 2
+
+arduino1 1572696633624 Analog signal on pin 2 is  4.9608993157380255
+
+arduino1 1572696633625 DEV logic 1572696633625 0 command 1572696633625: 47 command: deviceCommand aread 2
+
+arduino1 1572696633625 COMMAND:deviceCommand aread 1
+
+arduino1 1572696633671 Analog signal on pin 1 is  0.0
+
+arduino1 1572696633671 DEV logic 1572696633671 0 command 1572696633671: 46 command: deviceCommand aread 1
+
+arduino1 1572696640579 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572696640626 LOW on pin 3 is set
+
+arduino1 1572696640626 DEV logic 1572696640626 0 command 1572696640626: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572696641626 COMMAND:deviceCommand aread 2
+
+arduino1 1572696641672 Analog signal on pin 2 is  4.9608993157380255
+
+arduino1 1572696641673 DEV logic 1572696641673 0 command 1572696641673: 47 command: deviceCommand aread 2
+
+arduino1 1572696641673 COMMAND:deviceCommand aread 1
+
+arduino1 1572696641719 Analog signal on pin 1 is  0.0
+
+arduino1 1572696641719 DEV logic 1572696641719 0 command 1572696641719: 46 command: deviceCommand aread 1
+
+time device message
+arduino1 1572718977577 COM10 is opened
+
+arduino1 1572718980777 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572718980829 LOW on pin 9 is set
+
+arduino1 1572718980829 DEV logic 1572718980829 0 command 1572718980829: 52 command: deviceCommand dwrite 9 0
+
+arduino1 1572718981830 COMMAND:deviceCommand aread 6
+
+arduino1 1572718981877 pin 6 doesn't exist
+
+arduino1 1572718981877 Analog signal on pin 6 is  -1.0
+
+arduino1 1572718981877 DEV logic 1572718981877 0 command 1572718981877: 47 command: deviceCommand aread 6
+
+arduino1 1572718981877 COMMAND:deviceCommand aread 5
+
+arduino1 1572718981924 Analog signal on pin 5 is  1.9990224828934506
+
+arduino1 1572718981924 DEV logic 1572718981924 1 command 1572718981924: 46 command: deviceCommand aread 5
+
+arduino1 1572719001974 COMMAND:deviceCommand aread 2
+
+arduino1 1572719002020 Analog signal on pin 2 is  1.109481915933529
+
+arduino1 1572719002021 DEV logic 1572719002021 0 command 1572719002021: 47 command: deviceCommand aread 2
+
+arduino1 1572719002021 COMMAND:deviceCommand aread 1
+
+arduino1 1572719002068 Analog signal on pin 1 is  0.0
+
+arduino1 1572719002068 DEV logic 1572719002068 0 command 1572719002068: 47 command: deviceCommand aread 1
+
+arduino1 1572719003970 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719004017 LOW on pin 3 is set
+
+arduino1 1572719004018 DEV logic 1572719004018 1 command 1572719004018: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572719005019 COMMAND:deviceCommand aread 2
+
+arduino1 1572719005065 Analog signal on pin 2 is  0.581622678396872
+
+arduino1 1572719005066 DEV logic 1572719005066 0 command 1572719005066: 47 command: deviceCommand aread 2
+
+arduino1 1572719005067 COMMAND:deviceCommand aread 1
+
+arduino1 1572719005113 Analog signal on pin 1 is  0.0
+
+arduino1 1572719005114 DEV logic 1572719005114 0 command 1572719005114: 47 command: deviceCommand aread 1
+
+arduino1 1572719009970 COMMAND:deviceCommand aread 2
+
+arduino1 1572719010017 Analog signal on pin 2 is  0.5620723362658847
+
+arduino1 1572719010017 DEV logic 1572719010017 0 command 1572719010017: 47 command: deviceCommand aread 2
+
+arduino1 1572719010017 COMMAND:deviceCommand aread 1
+
+arduino1 1572719010064 Analog signal on pin 1 is  0.0
+
+arduino1 1572719010065 DEV logic 1572719010065 0 command 1572719010065: 48 command: deviceCommand aread 1
+
+arduino1 1572719010969 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719011016 LOW on pin 3 is set
+
+arduino1 1572719011017 DEV logic 1572719011017 0 command 1572719011017: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572719012017 COMMAND:deviceCommand aread 2
+
+arduino1 1572719012063 Analog signal on pin 2 is  0.5180840664711632
+
+arduino1 1572719012064 DEV logic 1572719012064 0 command 1572719012064: 47 command: deviceCommand aread 2
+
+arduino1 1572719012065 COMMAND:deviceCommand aread 1
+
+arduino1 1572719012111 Analog signal on pin 1 is  0.0
+
+arduino1 1572719012111 DEV logic 1572719012111 0 command 1572719012111: 46 command: deviceCommand aread 1
+
+arduino1 1572719013968 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572719014016 LOW on pin 9 is set
+
+arduino1 1572719014016 DEV logic 1572719014016 1 command 1572719014016: 47 command: deviceCommand dwrite 9 0
+
+arduino1 1572719015018 COMMAND:deviceCommand aread 6
+
+arduino1 1572719015063 pin 6 doesn't exist
+
+arduino1 1572719015064 Analog signal on pin 6 is  -1.0
+
+arduino1 1572719015064 DEV logic 1572719015065 0 command 1572719015065: 46 command: deviceCommand aread 6
+
+arduino1 1572719015065 COMMAND:deviceCommand aread 5
+
+arduino1 1572719015111 Analog signal on pin 5 is  0.5034213098729228
+
+arduino1 1572719015112 DEV logic 1572719015112 0 command 1572719015112: 47 command: deviceCommand aread 5
+
+arduino1 1572719015470 COMMAND:deviceCommand aread 6
+
+arduino1 1572719015515 pin 6 doesn't exist
+
+arduino1 1572719015516 Analog signal on pin 6 is  -1.0
+
+arduino1 1572719015516 DEV logic 1572719015516 0 command 1572719015516: 46 command: deviceCommand aread 6
+
+arduino1 1572719015516 COMMAND:deviceCommand aread 5
+
+arduino1 1572719015562 Analog signal on pin 5 is  0.6989247311827957
+
+arduino1 1572719015563 DEV logic 1572719015563 0 command 1572719015563: 47 command: deviceCommand aread 5
+
+arduino1 1572719016970 COMMAND:deviceCommand aread 4
+
+arduino1 1572719017017 Analog signal on pin 4 is  0.0
+
+arduino1 1572719017018 DEV logic 1572719017018 0 command 1572719017018: 48 command: deviceCommand aread 4
+
+arduino1 1572719017018 COMMAND:deviceCommand aread 3
+
+arduino1 1572719017064 Analog signal on pin 3 is  0.0
+
+arduino1 1572719017065 DEV logic 1572719017065 0 command 1572719017065: 47 command: deviceCommand aread 3
+
+arduino1 1572719017470 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719017517 LOW on pin 6 is set
+
+arduino1 1572719017517 DEV logic 1572719017517 0 command 1572719017517: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572719018518 COMMAND:deviceCommand aread 4
+
+arduino1 1572719018564 Analog signal on pin 4 is  0.0
+
+arduino1 1572719018565 DEV logic 1572719018565 0 command 1572719018565: 47 command: deviceCommand aread 4
+
+arduino1 1572719018565 COMMAND:deviceCommand aread 3
+
+arduino1 1572719018612 Analog signal on pin 3 is  0.0
+
+arduino1 1572719018612 DEV logic 1572719018612 0 command 1572719018612: 47 command: deviceCommand aread 3
+
+arduino1 1572719019969 COMMAND:deviceCommand aread 2
+
+arduino1 1572719020015 Analog signal on pin 2 is  0.581622678396872
+
+arduino1 1572719020017 DEV logic 1572719020017 0 command 1572719020017: 48 command: deviceCommand aread 2
+
+arduino1 1572719020017 COMMAND:deviceCommand aread 1
+
+arduino1 1572719020064 Analog signal on pin 1 is  0.0
+
+arduino1 1572719020065 DEV logic 1572719020065 1 command 1572719020065: 47 command: deviceCommand aread 1
+
+arduino1 1572719020469 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719020516 LOW on pin 3 is set
+
+arduino1 1572719020516 DEV logic 1572719020516 0 command 1572719020516: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572719021517 COMMAND:deviceCommand aread 2
+
+arduino1 1572719021563 Analog signal on pin 2 is  0.49853372434017595
+
+arduino1 1572719021564 DEV logic 1572719021564 0 command 1572719021564: 47 command: deviceCommand aread 2
+
+arduino1 1572719021564 COMMAND:deviceCommand aread 1
+
+arduino1 1572719021611 Analog signal on pin 1 is  0.0
+
+arduino1 1572719021611 DEV logic 1572719021611 1 command 1572719021611: 46 command: deviceCommand aread 1
+
+arduino1 1572719040469 COMMAND:deviceCommand aread 4
+
+arduino1 1572719040515 Analog signal on pin 4 is  0.0
+
+arduino1 1572719040517 DEV logic 1572719040517 0 command 1572719040517: 48 command: deviceCommand aread 4
+
+arduino1 1572719040517 COMMAND:deviceCommand aread 3
+
+arduino1 1572719040563 Analog signal on pin 3 is  0.0
+
+arduino1 1572719040564 DEV logic 1572719040564 0 command 1572719040564: 47 command: deviceCommand aread 3
+
+arduino1 1572719081983 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719082031 LOW on pin 6 is set
+
+arduino1 1572719082031 DEV logic 1572719082031 1 command 1572719082031: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572719083031 COMMAND:deviceCommand aread 4
+
+arduino1 1572719083078 Analog signal on pin 4 is  0.0
+
+arduino1 1572719083079 DEV logic 1572719083079 1 command 1572719083079: 47 command: deviceCommand aread 4
+
+arduino1 1572719083079 COMMAND:deviceCommand aread 3
+
+arduino1 1572719083126 Analog signal on pin 3 is  0.0
+
+arduino1 1572719083126 DEV logic 1572719083126 0 command 1572719083126: 47 command: deviceCommand aread 3
+
+arduino1 1572719109469 COMMAND:deviceCommand aread 2
+
+arduino1 1572719109515 Analog signal on pin 2 is  3.396871945259042
+
+arduino1 1572719109516 DEV logic 1572719109516 0 command 1572719109516: 47 command: deviceCommand aread 2
+
+arduino1 1572719109516 COMMAND:deviceCommand aread 1
+
+arduino1 1572719109563 Analog signal on pin 1 is  0.0
+
+arduino1 1572719109564 DEV logic 1572719109564 1 command 1572719109564: 47 command: deviceCommand aread 1
+
+arduino1 1572719119983 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719120030 LOW on pin 3 is set
+
+arduino1 1572719120031 DEV logic 1572719120031 0 command 1572719120031: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572719121031 COMMAND:deviceCommand aread 2
+
+arduino1 1572719121078 Analog signal on pin 2 is  0.5474095796676443
+
+arduino1 1572719121079 DEV logic 1572719121079 1 command 1572719121079: 47 command: deviceCommand aread 2
+
+arduino1 1572719121079 COMMAND:deviceCommand aread 1
+
+arduino1 1572719121126 Analog signal on pin 1 is  0.0
+
+arduino1 1572719121126 DEV logic 1572719121126 0 command 1572719121126: 47 command: deviceCommand aread 1
+
+arduino1 1572719123969 COMMAND:deviceCommand aread 2
+
+arduino1 1572719124015 Analog signal on pin 2 is  0.5180840664711632
+
+arduino1 1572719124016 DEV logic 1572719124016 0 command 1572719124016: 47 command: deviceCommand aread 2
+
+arduino1 1572719124016 COMMAND:deviceCommand aread 1
+
+arduino1 1572719124062 Analog signal on pin 1 is  0.0
+
+arduino1 1572719124063 DEV logic 1572719124063 0 command 1572719124063: 47 command: deviceCommand aread 1
+
+arduino1 1572719132983 COMMAND:deviceCommand aread 4
+
+arduino1 1572719133029 Analog signal on pin 4 is  0.0
+
+arduino1 1572719133031 DEV logic 1572719133031 0 command 1572719133031: 48 command: deviceCommand aread 4
+
+arduino1 1572719133031 COMMAND:deviceCommand aread 3
+
+arduino1 1572719133077 Analog signal on pin 3 is  4.951124144672532
+
+arduino1 1572719133078 DEV logic 1572719133078 0 command 1572719133078: 47 command: deviceCommand aread 3
+
+arduino1 1572719133468 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719133515 LOW on pin 3 is set
+
+arduino1 1572719133516 DEV logic 1572719133516 0 command 1572719133516: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572719134516 COMMAND:deviceCommand aread 2
+
+arduino1 1572719134562 Analog signal on pin 2 is  3.3626588465298144
+
+arduino1 1572719134564 DEV logic 1572719134564 0 command 1572719134564: 48 command: deviceCommand aread 2
+
+arduino1 1572719134564 COMMAND:deviceCommand aread 1
+
+arduino1 1572719134611 Analog signal on pin 1 is  0.0
+
+arduino1 1572719134611 DEV logic 1572719134611 0 command 1572719134611: 47 command: deviceCommand aread 1
+
+arduino1 1572719138983 COMMAND:deviceCommand aread 2
+
+arduino1 1572719139029 Analog signal on pin 2 is  0.718475073313783
+
+arduino1 1572719139029 DEV logic 1572719139029 0 command 1572719139029: 46 command: deviceCommand aread 2
+
+arduino1 1572719139030 COMMAND:deviceCommand aread 1
+
+arduino1 1572719139076 Analog signal on pin 1 is  0.0
+
+arduino1 1572719139076 DEV logic 1572719139076 0 command 1572719139076: 46 command: deviceCommand aread 1
+
+arduino1 1572719139982 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719140030 LOW on pin 3 is set
+
+arduino1 1572719140030 DEV logic 1572719140030 1 command 1572719140030: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572719141030 COMMAND:deviceCommand aread 2
+
+arduino1 1572719141077 Analog signal on pin 2 is  0.5962854349951124
+
+arduino1 1572719141077 DEV logic 1572719141077 1 command 1572719141077: 46 command: deviceCommand aread 2
+
+arduino1 1572719141077 COMMAND:deviceCommand aread 1
+
+arduino1 1572719141124 Analog signal on pin 1 is  0.0
+
+arduino1 1572719141124 DEV logic 1572719141124 1 command 1572719141124: 46 command: deviceCommand aread 1
+
+arduino1 1572719196469 COMMAND:deviceCommand aread 4
+
+arduino1 1572719196515 Analog signal on pin 4 is  0.0
+
+arduino1 1572719196516 DEV logic 1572719196516 0 command 1572719196516: 47 command: deviceCommand aread 4
+
+arduino1 1572719196516 COMMAND:deviceCommand aread 3
+
+arduino1 1572719196562 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572719196563 DEV logic 1572719196563 0 command 1572719196563: 47 command: deviceCommand aread 3
+
+arduino1 1572719200981 COMMAND:deviceCommand aread 4
+
+arduino1 1572719201027 Analog signal on pin 4 is  0.0
+
+arduino1 1572719201027 DEV logic 1572719201027 0 command 1572719201027: 46 command: deviceCommand aread 4
+
+arduino1 1572719201027 COMMAND:deviceCommand aread 3
+
+arduino1 1572719201073 Analog signal on pin 3 is  4.951124144672532
+
+arduino1 1572719201074 DEV logic 1572719201074 1 command 1572719201074: 46 command: deviceCommand aread 3
+
+arduino1 1572719207469 COMMAND:deviceCommand aread 4
+
+arduino1 1572719207515 Analog signal on pin 4 is  0.0
+
+arduino1 1572719207516 DEV logic 1572719207516 0 command 1572719207516: 47 command: deviceCommand aread 4
+
+arduino1 1572719207516 COMMAND:deviceCommand aread 3
+
+arduino1 1572719207562 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572719207563 DEV logic 1572719207563 0 command 1572719207563: 47 command: deviceCommand aread 3
+
+arduino1 1572719230981 COMMAND:deviceCommand aread 4
+
+arduino1 1572719231027 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719231028 DEV logic 1572719231028 0 command 1572719231028: 47 command: deviceCommand aread 4
+
+arduino1 1572719231029 COMMAND:deviceCommand aread 3
+
+arduino1 1572719231075 Analog signal on pin 3 is  0.0
+
+arduino1 1572719231076 DEV logic 1572719231076 0 command 1572719231076: 47 command: deviceCommand aread 3
+
+arduino1 1572719381977 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719382024 LOW on pin 6 is set
+
+arduino1 1572719382024 DEV logic 1572719382024 0 command 1572719382024: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572719383025 COMMAND:deviceCommand aread 4
+
+arduino1 1572719383072 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719383072 DEV logic 1572719383072 1 command 1572719383072: 46 command: deviceCommand aread 4
+
+arduino1 1572719383072 COMMAND:deviceCommand aread 3
+
+arduino1 1572719383119 Analog signal on pin 3 is  0.0
+
+arduino1 1572719383119 DEV logic 1572719383119 0 command 1572719383119: 47 command: deviceCommand aread 3
+
+time device message
+arduino1 1572719415914 COM10 is opened
+
+arduino1 1572719418957 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572719419019 LOW on pin 9 is set
+
+arduino1 1572719419020 DEV logic 1572719419020 0 command 1572719419020: 63 command: deviceCommand dwrite 9 0
+
+arduino1 1572719420047 COMMAND:deviceCommand aread 6
+
+arduino1 1572719420095 pin 6 doesn't exist
+
+arduino1 1572719420095 Analog signal on pin 6 is  -1.0
+
+arduino1 1572719420095 DEV logic 1572719420095 1 command 1572719420095: 47 command: deviceCommand aread 6
+
+arduino1 1572719420095 COMMAND:deviceCommand aread 5
+
+arduino1 1572719420142 Analog signal on pin 5 is  0.7820136852394917
+
+arduino1 1572719420142 DEV logic 1572719420142 1 command 1572719420142: 46 command: deviceCommand aread 5
+
+arduino1 1572719426031 COMMAND:deviceCommand aread 4
+
+arduino1 1572719426078 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719426078 DEV logic 1572719426078 1 command 1572719426078: 46 command: deviceCommand aread 4
+
+arduino1 1572719426078 COMMAND:deviceCommand aread 3
+
+arduino1 1572719426125 Analog signal on pin 3 is  0.0
+
+arduino1 1572719426125 DEV logic 1572719426125 1 command 1572719426125: 46 command: deviceCommand aread 3
+
+arduino1 1572719426170 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719426217 LOW on pin 6 is set
+
+arduino1 1572719426218 DEV logic 1572719426218 0 command 1572719426218: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572719426219 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572719426266 LOW on pin 3 is set
+
+arduino1 1572719426266 DEV logic 1572719426267 0 command 1572719426267: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572719427218 COMMAND:deviceCommand aread 4
+
+arduino1 1572719427264 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719427265 DEV logic 1572719427265 0 command 1572719427265: 46 command: deviceCommand aread 4
+
+arduino1 1572719427265 COMMAND:deviceCommand aread 3
+
+arduino1 1572719427267 COMMAND:deviceCommand aread 2
+
+arduino1 1572719427311 Analog signal on pin 3 is  0.0
+
+arduino1 1572719427312 DEV logic 1572719427312 0 command 1572719427312: 47 command: deviceCommand aread 3
+
+arduino1 1572719427357 Analog signal on pin 2 is  1.0019550342130987
+
+arduino1 1572719427358 DEV logic 1572719427358 0 command 1572719427358: 91 command: deviceCommand aread 2
+
+arduino1 1572719427358 COMMAND:deviceCommand aread 1
+
+arduino1 1572719427405 Analog signal on pin 1 is  0.0
+
+arduino1 1572719427405 DEV logic 1572719427406 0 command 1572719427406: 47 command: deviceCommand aread 1
+
+arduino1 1572719433526 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719433573 LOW on pin 6 is set
+
+arduino1 1572719433574 DEV logic 1572719433574 0 command 1572719433574: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572719434575 COMMAND:deviceCommand aread 4
+
+arduino1 1572719434621 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719434623 DEV logic 1572719434623 0 command 1572719434623: 48 command: deviceCommand aread 4
+
+arduino1 1572719434623 COMMAND:deviceCommand aread 3
+
+arduino1 1572719434669 Analog signal on pin 3 is  0.0
+
+arduino1 1572719434670 DEV logic 1572719434670 0 command 1572719434670: 47 command: deviceCommand aread 3
+
+arduino1 1572719437014 COMMAND:deviceCommand aread 4
+
+arduino1 1572719437060 Analog signal on pin 4 is  4.956011730205279
+
+arduino1 1572719437061 DEV logic 1572719437061 0 command 1572719437061: 47 command: deviceCommand aread 4
+
+arduino1 1572719437061 COMMAND:deviceCommand aread 3
+
+arduino1 1572719437107 Analog signal on pin 3 is  0.0
+
+arduino1 1572719437108 DEV logic 1572719437108 0 command 1572719437108: 47 command: deviceCommand aread 3
+
+time device message
+arduino1 1572719499841 COM10 is opened
+
+arduino1 1572719502875 COMMAND:deviceCommand dwrite 9 0
+
+arduino1 1572719502926 LOW on pin 9 is set
+
+arduino1 1572719502927 DEV logic 1572719502927 0 command 1572719502927: 52 command: deviceCommand dwrite 9 0
+
+arduino1 1572719503964 COMMAND:deviceCommand aread 6
+
+arduino1 1572719504013 pin 6 doesn't exist
+
+arduino1 1572719504013 Analog signal on pin 6 is  -1.0
+
+arduino1 1572719504013 DEV logic 1572719504013 1 command 1572719504013: 48 command: deviceCommand aread 6
+
+arduino1 1572719504013 COMMAND:deviceCommand aread 5
+
+arduino1 1572719504060 Analog signal on pin 5 is  0.5474095796676443
+
+arduino1 1572719504063 DEV logic 1572719504063 1 command 1572719504063: 49 command: deviceCommand aread 5
+
+arduino1 1572719509176 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719509223 LOW on pin 6 is set
+
+arduino1 1572719509224 DEV logic 1572719509224 0 command 1572719509224: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572719510224 COMMAND:deviceCommand aread 4
+
+arduino1 1572719510270 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719510271 DEV logic 1572719510271 0 command 1572719510271: 47 command: deviceCommand aread 4
+
+arduino1 1572719510271 COMMAND:deviceCommand aread 3
+
+arduino1 1572719510318 Analog signal on pin 3 is  0.0
+
+arduino1 1572719510318 DEV logic 1572719510318 0 command 1572719510318: 47 command: deviceCommand aread 3
+
+arduino1 1572719512692 COMMAND:deviceCommand aread 4
+
+arduino1 1572719512738 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719512739 DEV logic 1572719512739 0 command 1572719512739: 47 command: deviceCommand aread 4
+
+arduino1 1572719512739 COMMAND:deviceCommand aread 3
+
+arduino1 1572719512786 Analog signal on pin 3 is  0.0
+
+arduino1 1572719512787 DEV logic 1572719512787 0 command 1572719512787: 48 command: deviceCommand aread 3
+
+arduino1 1572719546175 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719546222 LOW on pin 6 is set
+
+arduino1 1572719546223 DEV logic 1572719546223 0 command 1572719546223: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572719547223 COMMAND:deviceCommand aread 4
+
+arduino1 1572719547270 Analog signal on pin 4 is  0.0
+
+arduino1 1572719547271 DEV logic 1572719547271 0 command 1572719547271: 48 command: deviceCommand aread 4
+
+arduino1 1572719547272 COMMAND:deviceCommand aread 3
+
+arduino1 1572719547319 Analog signal on pin 3 is  0.0
+
+arduino1 1572719547319 DEV logic 1572719547319 0 command 1572719547319: 47 command: deviceCommand aread 3
+
+arduino1 1572719564176 COMMAND:deviceCommand aread 4
+
+arduino1 1572719564222 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719564223 DEV logic 1572719564223 0 command 1572719564223: 47 command: deviceCommand aread 4
+
+arduino1 1572719564224 COMMAND:deviceCommand aread 3
+
+arduino1 1572719564270 Analog signal on pin 3 is  0.0
+
+arduino1 1572719564271 DEV logic 1572719564271 0 command 1572719564271: 47 command: deviceCommand aread 3
+
+arduino1 1572719569175 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719569222 LOW on pin 6 is set
+
+arduino1 1572719569223 DEV logic 1572719569223 0 command 1572719569223: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572719570223 COMMAND:deviceCommand aread 4
+
+arduino1 1572719570270 Analog signal on pin 4 is  0.0
+
+arduino1 1572719570271 DEV logic 1572719570271 0 command 1572719570271: 48 command: deviceCommand aread 4
+
+arduino1 1572719570271 COMMAND:deviceCommand aread 3
+
+arduino1 1572719570317 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572719570318 DEV logic 1572719570318 0 command 1572719570318: 47 command: deviceCommand aread 3
+
+arduino1 1572719576676 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572719576724 HIGH on pin 6 is set
+
+arduino1 1572719576724 DEV logic 1572719576724 1 command 1572719576724: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572719577725 COMMAND:deviceCommand aread 4
+
+arduino1 1572719577772 Analog signal on pin 4 is  4.9608993157380255
+
+arduino1 1572719577773 DEV logic 1572719577774 1 command 1572719577774: 47 command: deviceCommand aread 4
+
+arduino1 1572719577774 COMMAND:deviceCommand aread 3
+
+arduino1 1572719577821 Analog signal on pin 3 is  0.0
+
+arduino1 1572719577821 DEV logic 1572719577821 0 command 1572719577821: 47 command: deviceCommand aread 3
+
+arduino1 1572719582191 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719582238 LOW on pin 6 is set
+
+arduino1 1572719582238 DEV logic 1572719582238 0 command 1572719582238: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572719583239 COMMAND:deviceCommand aread 4
+
+arduino1 1572719583287 Analog signal on pin 4 is  0.0
+
+arduino1 1572719583287 DEV logic 1572719583287 1 command 1572719583287: 47 command: deviceCommand aread 4
+
+arduino1 1572719583288 COMMAND:deviceCommand aread 3
+
+arduino1 1572719583334 Analog signal on pin 3 is  4.9608993157380255
+
+arduino1 1572719583334 DEV logic 1572719583334 0 command 1572719583334: 46 command: deviceCommand aread 3
+
+arduino1 1572719585674 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572719585721 HIGH on pin 6 is set
+
+arduino1 1572719585721 DEV logic 1572719585721 0 command 1572719585721: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572719586722 COMMAND:deviceCommand aread 4
+
+arduino1 1572719586769 Analog signal on pin 4 is  0.0
+
+arduino1 1572719586769 DEV logic 1572719586770 1 command 1572719586770: 46 command: deviceCommand aread 4
+
+arduino1 1572719586770 COMMAND:deviceCommand aread 3
+
+arduino1 1572719586816 Analog signal on pin 3 is  0.0
+
+arduino1 1572719586816 DEV logic 1572719586816 0 command 1572719586816: 46 command: deviceCommand aread 3
+
+arduino1 1572719591175 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572719591223 LOW on pin 6 is set
+
+arduino1 1572719591223 DEV logic 1572719591223 1 command 1572719591223: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572719592224 COMMAND:deviceCommand aread 4
+
+arduino1 1572719592271 Analog signal on pin 4 is  0.0
+
+arduino1 1572719592272 DEV logic 1572719592272 1 command 1572719592272: 47 command: deviceCommand aread 4
+
+arduino1 1572719592272 COMMAND:deviceCommand aread 3
+
+arduino1 1572719592318 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572719592319 DEV logic 1572719592319 1 command 1572719592319: 46 command: deviceCommand aread 3
+
+time device message
+arduino1 1572785127117 Port name doesn't exist
+
+arduino1 1572785130158 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572785130163 port wasn't created!
+
+arduino1 1572785130163 message wasn't written onarduino1
+
+arduino1 1572785130164 null
+
+arduino1 1572785130166 LOW on pin 3 isn't set
+
+arduino1 1572785130168 COM10 is lost. Reconnecting...
+
+arduino1 1572785130174 DEV logic 1572785130174 1 command 1572785130174: 8 command: deviceCommand dwrite 3 0
+
+arduino1 1572785131176 COMMAND:deviceCommand aread 2
+
+arduino1 1572785131177 arduino1: For input string: "rro"
+
+arduino1 1572785131178 Analog signal on pin 2 is  -1.0
+
+arduino1 1572785131180 DEV logic 1572785131180 0 command 1572785131180: 4 command: deviceCommand aread 2
+
+arduino1 1572785131180 COMMAND:deviceCommand aread 1
+
+arduino1 1572785131180 arduino1: For input string: "rro"
+
+arduino1 1572785131181 Analog signal on pin 1 is  -1.0
+
+arduino1 1572785131181 DEV logic 1572785131181 0 command 1572785131181: 1 command: deviceCommand aread 1
+
+time device message
+arduino1 1572785219055 COM10 is opened
+
+arduino1 1572785222081 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572785222133 LOW on pin 3 is set
+
+arduino1 1572785222133 DEV logic 1572785222133 0 command 1572785222133: 52 command: deviceCommand dwrite 3 0
+
+arduino1 1572785223135 COMMAND:deviceCommand aread 2
+
+arduino1 1572785223181 Analog signal on pin 2 is  2.2580645161290325
+
+arduino1 1572785223182 DEV logic 1572785223182 0 command 1572785223182: 47 command: deviceCommand aread 2
+
+arduino1 1572785223182 COMMAND:deviceCommand aread 1
+
+arduino1 1572785223229 Analog signal on pin 1 is  0.0
+
+arduino1 1572785223229 DEV logic 1572785223229 0 command 1572785223229: 47 command: deviceCommand aread 1
+
+arduino1 1572785241377 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572785241424 LOW on pin 3 is set
+
+arduino1 1572785241425 DEV logic 1572785241425 0 command 1572785241425: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572785242425 COMMAND:deviceCommand aread 2
+
+arduino1 1572785242471 Analog signal on pin 2 is  0.6549364613880743
+
+arduino1 1572785242472 DEV logic 1572785242472 0 command 1572785242472: 47 command: deviceCommand aread 2
+
+arduino1 1572785242472 COMMAND:deviceCommand aread 1
+
+arduino1 1572785242519 Analog signal on pin 1 is  0.0
+
+arduino1 1572785242519 DEV logic 1572785242519 0 command 1572785242519: 47 command: deviceCommand aread 1
+
+arduino1 1572785244880 COMMAND:deviceCommand aread 2
+
+arduino1 1572785244927 Analog signal on pin 2 is  0.5962854349951124
+
+arduino1 1572785244927 DEV logic 1572785244927 0 command 1572785244927: 47 command: deviceCommand aread 2
+
+arduino1 1572785244927 COMMAND:deviceCommand aread 1
+
+arduino1 1572785244974 Analog signal on pin 1 is  0.0
+
+arduino1 1572785244974 DEV logic 1572785244974 0 command 1572785244974: 47 command: deviceCommand aread 1
+
+arduino1 1572785247887 COMMAND:deviceCommand aread 4
+
+arduino1 1572785247934 Analog signal on pin 4 is  0.0
+
+arduino1 1572785247935 DEV logic 1572785247935 0 command 1572785247935: 48 command: deviceCommand aread 4
+
+arduino1 1572785247935 COMMAND:deviceCommand aread 3
+
+arduino1 1572785247981 Analog signal on pin 3 is  4.9608993157380255
+
+arduino1 1572785247982 DEV logic 1572785247982 0 command 1572785247982: 47 command: deviceCommand aread 3
+
+arduino1 1572785253376 COMMAND:deviceCommand dwrite 8 1
+
+arduino1 1572785253423 HIGH on pin 8 is set
+
+arduino1 1572785253423 DEV logic 1572785253423 0 command 1572785253423: 47 command: deviceCommand dwrite 8 1
+
+arduino1 1572785254424 COMMAND:deviceCommand aread 6
+
+arduino1 1572785254471 pin 6 doesn't exist
+
+arduino1 1572785254472 Analog signal on pin 6 is  -1.0
+
+arduino1 1572785254472 DEV logic 1572785254472 0 command 1572785254472: 48 command: deviceCommand aread 6
+
+arduino1 1572785254472 COMMAND:deviceCommand aread 5
+
+arduino1 1572785254518 Analog signal on pin 5 is  3.3088954056695994
+
+arduino1 1572785254519 DEV logic 1572785254519 0 command 1572785254519: 47 command: deviceCommand aread 5
+
+arduino1 1572785264378 COMMAND:deviceCommand aread 6
+
+arduino1 1572785264423 pin 6 doesn't exist
+
+arduino1 1572785264425 Analog signal on pin 6 is  -1.0
+
+arduino1 1572785264425 DEV logic 1572785264425 0 command 1572785264425: 47 command: deviceCommand aread 6
+
+arduino1 1572785264425 COMMAND:deviceCommand aread 5
+
+arduino1 1572785264472 Analog signal on pin 5 is  1.109481915933529
+
+arduino1 1572785264472 DEV logic 1572785264472 1 command 1572785264472: 46 command: deviceCommand aread 5
+
+arduino1 1572785265877 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572785265892 COMMAND:deviceCommand aread 4
+
+arduino1 1572785265924 LOW on pin 3 is set
+
+arduino1 1572785265925 DEV logic 1572785265925 0 command 1572785265925: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572785265971 Analog signal on pin 4 is  0.0
+
+arduino1 1572785265974 DEV logic 1572785265974 0 command 1572785265974: 82 command: deviceCommand aread 4
+
+arduino1 1572785265974 COMMAND:deviceCommand aread 3
+
+arduino1 1572785266021 Analog signal on pin 3 is  4.9608993157380255
+
+arduino1 1572785266021 DEV logic 1572785266021 0 command 1572785266021: 47 command: deviceCommand aread 3
+
+arduino1 1572785266928 COMMAND:deviceCommand aread 2
+
+arduino1 1572785266975 Analog signal on pin 2 is  3.3822091886608017
+
+arduino1 1572785266975 DEV logic 1572785266975 0 command 1572785266975: 47 command: deviceCommand aread 2
+
+arduino1 1572785266975 COMMAND:deviceCommand aread 1
+
+arduino1 1572785267022 Analog signal on pin 1 is  0.0
+
+arduino1 1572785267022 DEV logic 1572785267022 1 command 1572785267022: 46 command: deviceCommand aread 1
+
+arduino1 1572785275388 COMMAND:deviceCommand aread 4
+
+arduino1 1572785275435 Analog signal on pin 4 is  0.0
+
+arduino1 1572785275436 DEV logic 1572785275436 1 command 1572785275436: 47 command: deviceCommand aread 4
+
+arduino1 1572785275436 COMMAND:deviceCommand aread 3
+
+arduino1 1572785275483 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572785275483 DEV logic 1572785275484 1 command 1572785275484: 46 command: deviceCommand aread 3
+
+arduino1 1572785287379 COMMAND:deviceCommand dwrite 10 1
+
+arduino1 1572785287426 HIGH on pin 10 is set
+
+arduino1 1572785287426 DEV logic 1572785287427 0 command 1572785287427: 47 command: deviceCommand dwrite 10 1
+
+arduino1 1572785293387 COMMAND:deviceCommand aread 2
+
+arduino1 1572785293433 Analog signal on pin 2 is  3.3822091886608017
+
+arduino1 1572785293435 DEV logic 1572785293435 0 command 1572785293435: 48 command: deviceCommand aread 2
+
+arduino1 1572785293435 COMMAND:deviceCommand aread 1
+
+arduino1 1572785293482 Analog signal on pin 1 is  0.0
+
+arduino1 1572785293482 DEV logic 1572785293482 1 command 1572785293482: 46 command: deviceCommand aread 1
+
+arduino1 1572785340377 COMMAND:deviceCommand aread 4
+
+arduino1 1572785340423 Analog signal on pin 4 is  0.0
+
+arduino1 1572785340424 DEV logic 1572785340424 0 command 1572785340424: 47 command: deviceCommand aread 4
+
+arduino1 1572785340424 COMMAND:deviceCommand aread 3
+
+arduino1 1572785340470 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572785340471 DEV logic 1572785340471 0 command 1572785340471: 47 command: deviceCommand aread 3
+
+arduino1 1572785347877 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572785347925 HIGH on pin 6 is set
+
+arduino1 1572785347925 DEV logic 1572785347925 1 command 1572785347925: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572785348925 COMMAND:deviceCommand aread 4
+
+arduino1 1572785348971 Analog signal on pin 4 is  0.0
+
+arduino1 1572785348972 DEV logic 1572785348972 0 command 1572785348972: 47 command: deviceCommand aread 4
+
+arduino1 1572785348972 COMMAND:deviceCommand aread 3
+
+arduino1 1572785349019 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572785349019 DEV logic 1572785349019 0 command 1572785349019: 47 command: deviceCommand aread 3
+
+arduino1 1572785366878 COMMAND:deviceCommand aread 4
+
+arduino1 1572785366924 Analog signal on pin 4 is  0.0
+
+arduino1 1572785366925 DEV logic 1572785366925 0 command 1572785366925: 47 command: deviceCommand aread 4
+
+arduino1 1572785366925 COMMAND:deviceCommand aread 3
+
+arduino1 1572785366971 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572785366971 DEV logic 1572785366971 0 command 1572785366971: 46 command: deviceCommand aread 3
+
+arduino1 1572785371877 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572785371924 HIGH on pin 6 is set
+
+arduino1 1572785371925 DEV logic 1572785371925 0 command 1572785371925: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572785372926 COMMAND:deviceCommand aread 4
+
+arduino1 1572785372972 Analog signal on pin 4 is  0.0
+
+arduino1 1572785372973 DEV logic 1572785372973 0 command 1572785372973: 47 command: deviceCommand aread 4
+
+arduino1 1572785372973 COMMAND:deviceCommand aread 3
+
+arduino1 1572785373019 Analog signal on pin 3 is  4.9608993157380255
+
+arduino1 1572785373019 DEV logic 1572785373019 0 command 1572785373019: 46 command: deviceCommand aread 3
+
+arduino1 1572785374377 COMMAND:deviceCommand aread 4
+
+arduino1 1572785374423 Analog signal on pin 4 is  0.0
+
+arduino1 1572785374424 DEV logic 1572785374424 0 command 1572785374424: 47 command: deviceCommand aread 4
+
+arduino1 1572785374424 COMMAND:deviceCommand aread 3
+
+arduino1 1572785374470 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572785374471 DEV logic 1572785374471 0 command 1572785374471: 47 command: deviceCommand aread 3
+
+arduino1 1572785975387 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572785975434 LOW on pin 3 is set
+
+arduino1 1572785975435 DEV logic 1572785975435 0 command 1572785975435: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572785976435 COMMAND:deviceCommand aread 2
+
+arduino1 1572785976481 Analog signal on pin 2 is  3.401759530791789
+
+arduino1 1572785976481 DEV logic 1572785976481 0 command 1572785976481: 46 command: deviceCommand aread 2
+
+arduino1 1572785976482 COMMAND:deviceCommand aread 1
+
+arduino1 1572785976528 Analog signal on pin 1 is  0.0
+
+arduino1 1572785976528 DEV logic 1572785976528 0 command 1572785976528: 46 command: deviceCommand aread 1
+
+arduino1 1572786023887 COMMAND:deviceCommand aread 2
+
+arduino1 1572786023933 Analog signal on pin 2 is  0.6549364613880743
+
+arduino1 1572786023934 DEV logic 1572786023935 0 command 1572786023935: 47 command: deviceCommand aread 2
+
+arduino1 1572786023935 COMMAND:deviceCommand aread 1
+
+arduino1 1572786023982 Analog signal on pin 1 is  0.0
+
+arduino1 1572786023982 DEV logic 1572786023982 0 command 1572786023982: 47 command: deviceCommand aread 1
+
+arduino1 1572786025884 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786025931 LOW on pin 3 is set
+
+arduino1 1572786025932 DEV logic 1572786025932 0 command 1572786025932: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786026933 COMMAND:deviceCommand aread 2
+
+arduino1 1572786026982 Analog signal on pin 2 is  0.6011730205278593
+
+arduino1 1572786026982 DEV logic 1572786026982 0 command 1572786026982: 49 command: deviceCommand aread 2
+
+arduino1 1572786026983 COMMAND:deviceCommand aread 1
+
+arduino1 1572786027029 Analog signal on pin 1 is  0.0
+
+arduino1 1572786027029 DEV logic 1572786027029 0 command 1572786027029: 46 command: deviceCommand aread 1
+
+arduino1 1572786078884 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786078885 COMMAND:deviceCommand aread 2
+
+arduino1 1572786078931 LOW on pin 3 is set
+
+arduino1 1572786078932 DEV logic 1572786078932 0 command 1572786078932: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786078978 Analog signal on pin 2 is  0.5522971652003911
+
+arduino1 1572786078978 DEV logic 1572786078978 0 command 1572786078978: 93 command: deviceCommand aread 2
+
+arduino1 1572786078978 COMMAND:deviceCommand aread 1
+
+arduino1 1572786079025 Analog signal on pin 1 is  0.0
+
+arduino1 1572786079025 DEV logic 1572786079025 1 command 1572786079025: 46 command: deviceCommand aread 1
+
+arduino1 1572786079933 COMMAND:deviceCommand aread 2
+
+arduino1 1572786079979 Analog signal on pin 2 is  0.47409579667644186
+
+arduino1 1572786079980 DEV logic 1572786079980 0 command 1572786079980: 47 command: deviceCommand aread 2
+
+arduino1 1572786079980 COMMAND:deviceCommand aread 1
+
+arduino1 1572786080026 Analog signal on pin 1 is  0.0
+
+arduino1 1572786080026 DEV logic 1572786080026 0 command 1572786080026: 46 command: deviceCommand aread 1
+
+arduino1 1572786111386 COMMAND:deviceCommand aread 6
+
+arduino1 1572786111431 pin 6 doesn't exist
+
+arduino1 1572786111431 Analog signal on pin 6 is  -1.0
+
+arduino1 1572786111432 DEV logic 1572786111432 0 command 1572786111432: 46 command: deviceCommand aread 6
+
+arduino1 1572786111432 COMMAND:deviceCommand aread 5
+
+arduino1 1572786111478 Analog signal on pin 5 is  0.47409579667644186
+
+arduino1 1572786111485 DEV logic 1572786111485 0 command 1572786111485: 53 command: deviceCommand aread 5
+
+arduino1 1572786115399 COMMAND:deviceCommand dwrite 8 0
+
+arduino1 1572786115447 LOW on pin 8 is set
+
+arduino1 1572786115447 DEV logic 1572786115447 1 command 1572786115447: 47 command: deviceCommand dwrite 8 0
+
+arduino1 1572786116448 COMMAND:deviceCommand aread 6
+
+arduino1 1572786116493 pin 6 doesn't exist
+
+arduino1 1572786116494 Analog signal on pin 6 is  -1.0
+
+arduino1 1572786116494 DEV logic 1572786116494 1 command 1572786116494: 45 command: deviceCommand aread 6
+
+arduino1 1572786116494 COMMAND:deviceCommand aread 5
+
+arduino1 1572786116541 Analog signal on pin 5 is  0.9384164222873901
+
+arduino1 1572786116541 DEV logic 1572786116541 0 command 1572786116541: 47 command: deviceCommand aread 5
+
+arduino1 1572786120885 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572786120932 HIGH on pin 6 is set
+
+arduino1 1572786120932 DEV logic 1572786120932 0 command 1572786120932: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572786121933 COMMAND:deviceCommand aread 4
+
+arduino1 1572786121980 Analog signal on pin 4 is  0.0
+
+arduino1 1572786121981 DEV logic 1572786121981 1 command 1572786121981: 47 command: deviceCommand aread 4
+
+arduino1 1572786121981 COMMAND:deviceCommand aread 3
+
+arduino1 1572786122028 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572786122028 DEV logic 1572786122028 1 command 1572786122028: 46 command: deviceCommand aread 3
+
+arduino1 1572786124886 COMMAND:deviceCommand aread 4
+
+arduino1 1572786124934 Analog signal on pin 4 is  0.0
+
+arduino1 1572786124942 DEV logic 1572786124942 0 command 1572786124942: 56 command: deviceCommand aread 4
+
+arduino1 1572786124943 COMMAND:deviceCommand aread 3
+
+arduino1 1572786124989 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572786124989 DEV logic 1572786124989 1 command 1572786124989: 46 command: deviceCommand aread 3
+
+arduino1 1572786129387 COMMAND:deviceCommand aread 2
+
+arduino1 1572786129434 Analog signal on pin 2 is  3.367546432062561
+
+arduino1 1572786129434 DEV logic 1572786129434 0 command 1572786129434: 47 command: deviceCommand aread 2
+
+arduino1 1572786129435 COMMAND:deviceCommand aread 1
+
+arduino1 1572786129481 Analog signal on pin 1 is  0.0
+
+arduino1 1572786129482 DEV logic 1572786129482 0 command 1572786129482: 47 command: deviceCommand aread 1
+
+arduino1 1572786132887 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786132934 LOW on pin 3 is set
+
+arduino1 1572786132935 DEV logic 1572786132935 0 command 1572786132935: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786133935 COMMAND:deviceCommand aread 2
+
+arduino1 1572786133982 Analog signal on pin 2 is  0.7429130009775171
+
+arduino1 1572786133982 DEV logic 1572786133982 1 command 1572786133982: 46 command: deviceCommand aread 2
+
+arduino1 1572786133982 COMMAND:deviceCommand aread 1
+
+arduino1 1572786134029 Analog signal on pin 1 is  0.0
+
+arduino1 1572786134029 DEV logic 1572786134029 1 command 1572786134029: 46 command: deviceCommand aread 1
+
+arduino1 1572786153888 COMMAND:deviceCommand aread 2
+
+arduino1 1572786153934 Analog signal on pin 2 is  3.450635386119257
+
+arduino1 1572786153935 DEV logic 1572786153935 0 command 1572786153935: 47 command: deviceCommand aread 2
+
+arduino1 1572786153935 COMMAND:deviceCommand aread 1
+
+arduino1 1572786153981 Analog signal on pin 1 is  4.956011730205279
+
+arduino1 1572786153981 DEV logic 1572786153981 0 command 1572786153981: 46 command: deviceCommand aread 1
+
+arduino1 1572786156386 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786156433 LOW on pin 3 is set
+
+arduino1 1572786156434 DEV logic 1572786156434 0 command 1572786156434: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786157434 COMMAND:deviceCommand aread 2
+
+arduino1 1572786157480 Analog signal on pin 2 is  3.5190615835777126
+
+arduino1 1572786157480 DEV logic 1572786157480 0 command 1572786157480: 46 command: deviceCommand aread 2
+
+arduino1 1572786157480 COMMAND:deviceCommand aread 1
+
+arduino1 1572786157526 Analog signal on pin 1 is  4.9608993157380255
+
+arduino1 1572786157527 DEV logic 1572786157527 1 command 1572786157527: 46 command: deviceCommand aread 1
+
+arduino1 1572786163885 COMMAND:deviceCommand aread 2
+
+arduino1 1572786163931 Analog signal on pin 2 is  3.4701857282502444
+
+arduino1 1572786163932 DEV logic 1572786163932 0 command 1572786163932: 47 command: deviceCommand aread 2
+
+arduino1 1572786163932 COMMAND:deviceCommand aread 1
+
+arduino1 1572786163979 Analog signal on pin 1 is  4.9608993157380255
+
+arduino1 1572786163980 DEV logic 1572786163980 0 command 1572786163980: 48 command: deviceCommand aread 1
+
+arduino1 1572786166385 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786166432 LOW on pin 3 is set
+
+arduino1 1572786166433 DEV logic 1572786166433 0 command 1572786166433: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786167434 COMMAND:deviceCommand aread 2
+
+arduino1 1572786167480 Analog signal on pin 2 is  3.5532746823069403
+
+arduino1 1572786167481 DEV logic 1572786167481 0 command 1572786167481: 47 command: deviceCommand aread 2
+
+arduino1 1572786167482 COMMAND:deviceCommand aread 1
+
+arduino1 1572786167528 Analog signal on pin 1 is  4.9608993157380255
+
+arduino1 1572786167529 DEV logic 1572786167529 0 command 1572786167529: 47 command: deviceCommand aread 1
+
+arduino1 1572786327394 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572786327441 HIGH on pin 6 is set
+
+arduino1 1572786327442 DEV logic 1572786327442 0 command 1572786327442: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572786328442 COMMAND:deviceCommand aread 4
+
+arduino1 1572786328488 Analog signal on pin 4 is  0.0
+
+arduino1 1572786328489 DEV logic 1572786328489 0 command 1572786328489: 47 command: deviceCommand aread 4
+
+arduino1 1572786328489 COMMAND:deviceCommand aread 3
+
+arduino1 1572786328535 Analog signal on pin 3 is  0.0
+
+arduino1 1572786328536 DEV logic 1572786328536 0 command 1572786328536: 47 command: deviceCommand aread 3
+
+arduino1 1572786339893 COMMAND:deviceCommand aread 2
+
+arduino1 1572786339939 Analog signal on pin 2 is  0.0
+
+arduino1 1572786339940 DEV logic 1572786339940 0 command 1572786339940: 47 command: deviceCommand aread 2
+
+arduino1 1572786339940 COMMAND:deviceCommand aread 1
+
+arduino1 1572786339986 Analog signal on pin 1 is  0.0
+
+arduino1 1572786339986 DEV logic 1572786339986 0 command 1572786339986: 46 command: deviceCommand aread 1
+
+arduino1 1572786342894 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786342941 LOW on pin 3 is set
+
+arduino1 1572786342941 DEV logic 1572786342941 0 command 1572786342941: 47 command: deviceCommand dwrite 3 0
+
+arduino1 1572786343942 COMMAND:deviceCommand aread 2
+
+arduino1 1572786343988 Analog signal on pin 2 is  0.0
+
+arduino1 1572786343988 DEV logic 1572786343988 0 command 1572786343988: 46 command: deviceCommand aread 2
+
+arduino1 1572786343988 COMMAND:deviceCommand aread 1
+
+arduino1 1572786344035 Analog signal on pin 1 is  4.9608993157380255
+
+arduino1 1572786344035 DEV logic 1572786344035 1 command 1572786344035: 46 command: deviceCommand aread 1
+
+arduino1 1572786349388 COMMAND:deviceCommand aread 2
+
+arduino1 1572786349434 Analog signal on pin 2 is  4.951124144672532
+
+arduino1 1572786349435 DEV logic 1572786349435 0 command 1572786349435: 47 command: deviceCommand aread 2
+
+arduino1 1572786349435 COMMAND:deviceCommand aread 1
+
+arduino1 1572786349481 Analog signal on pin 1 is  0.0
+
+arduino1 1572786349482 DEV logic 1572786349482 0 command 1572786349482: 47 command: deviceCommand aread 1
+
+arduino1 1572786398389 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572786398436 LOW on pin 6 is set
+
+arduino1 1572786398437 DEV logic 1572786398437 0 command 1572786398437: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572786399437 COMMAND:deviceCommand aread 4
+
+arduino1 1572786399483 Analog signal on pin 4 is  0.0
+
+arduino1 1572786399484 DEV logic 1572786399484 0 command 1572786399484: 47 command: deviceCommand aread 4
+
+arduino1 1572786399484 COMMAND:deviceCommand aread 3
+
+arduino1 1572786399530 Analog signal on pin 3 is  0.0
+
+arduino1 1572786399531 DEV logic 1572786399531 0 command 1572786399531: 47 command: deviceCommand aread 3
+
+arduino1 1572786405889 COMMAND:deviceCommand aread 4
+
+arduino1 1572786405936 Analog signal on pin 4 is  0.0
+
+arduino1 1572786405937 DEV logic 1572786405937 1 command 1572786405937: 47 command: deviceCommand aread 4
+
+arduino1 1572786405937 COMMAND:deviceCommand aread 3
+
+arduino1 1572786405983 Analog signal on pin 3 is  0.0
+
+arduino1 1572786405984 DEV logic 1572786405984 0 command 1572786405984: 47 command: deviceCommand aread 3
+
+arduino1 1572786407391 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572786407438 LOW on pin 6 is set
+
+arduino1 1572786407439 DEV logic 1572786407439 1 command 1572786407439: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572786408439 COMMAND:deviceCommand aread 4
+
+arduino1 1572786408486 Analog signal on pin 4 is  0.0
+
+arduino1 1572786408486 DEV logic 1572786408486 0 command 1572786408486: 47 command: deviceCommand aread 4
+
+arduino1 1572786408486 COMMAND:deviceCommand aread 3
+
+arduino1 1572786408532 Analog signal on pin 3 is  4.956011730205279
+
+arduino1 1572786408533 DEV logic 1572786408533 0 command 1572786408533: 47 command: deviceCommand aread 3
+
+arduino1 1572786410893 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786410940 LOW on pin 3 is set
+
+arduino1 1572786410941 DEV logic 1572786410941 0 command 1572786410941: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786411942 COMMAND:deviceCommand aread 2
+
+arduino1 1572786411988 Analog signal on pin 2 is  0.0
+
+arduino1 1572786411989 DEV logic 1572786411989 0 command 1572786411989: 47 command: deviceCommand aread 2
+
+arduino1 1572786411989 COMMAND:deviceCommand aread 1
+
+arduino1 1572786412035 Analog signal on pin 1 is  4.956011730205279
+
+arduino1 1572786412035 DEV logic 1572786412035 0 command 1572786412035: 46 command: deviceCommand aread 1
+
+arduino1 1572786416897 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572786416944 HIGH on pin 3 is set
+
+arduino1 1572786416945 DEV logic 1572786416945 0 command 1572786416945: 48 command: deviceCommand dwrite 3 1
+
+arduino1 1572786417945 COMMAND:deviceCommand aread 2
+
+arduino1 1572786417991 Analog signal on pin 2 is  4.9608993157380255
+
+arduino1 1572786417993 DEV logic 1572786417993 0 command 1572786417993: 48 command: deviceCommand aread 2
+
+arduino1 1572786417993 COMMAND:deviceCommand aread 1
+
+arduino1 1572786418040 Analog signal on pin 1 is  0.0
+
+arduino1 1572786418041 DEV logic 1572786418041 0 command 1572786418041: 48 command: deviceCommand aread 1
+
+arduino1 1572786424388 COMMAND:deviceCommand dwrite 3 0
+
+arduino1 1572786424435 LOW on pin 3 is set
+
+arduino1 1572786424436 DEV logic 1572786424436 0 command 1572786424436: 48 command: deviceCommand dwrite 3 0
+
+arduino1 1572786425436 COMMAND:deviceCommand aread 2
+
+arduino1 1572786425482 Analog signal on pin 2 is  0.0
+
+arduino1 1572786425483 DEV logic 1572786425483 0 command 1572786425483: 47 command: deviceCommand aread 2
+
+arduino1 1572786425483 COMMAND:deviceCommand aread 1
+
+arduino1 1572786425530 Analog signal on pin 1 is  0.009775171065493646
+
+arduino1 1572786425530 DEV logic 1572786425530 0 command 1572786425530: 47 command: deviceCommand aread 1
+
+arduino1 1572786431390 COMMAND:deviceCommand aread 2
+
+arduino1 1572786431437 Analog signal on pin 2 is  0.0
+
+arduino1 1572786431437 DEV logic 1572786431437 0 command 1572786431437: 47 command: deviceCommand aread 2
+
+arduino1 1572786431437 COMMAND:deviceCommand aread 1
+
+arduino1 1572786431483 Analog signal on pin 1 is  4.9608993157380255
+
+arduino1 1572786431483 DEV logic 1572786431484 0 command 1572786431484: 46 command: deviceCommand aread 1
+
+arduino1 1572786434892 COMMAND:deviceCommand aread 2
+
+arduino1 1572786434938 Analog signal on pin 2 is  0.0
+
+arduino1 1572786434939 DEV logic 1572786434939 0 command 1572786434939: 46 command: deviceCommand aread 2
+
+arduino1 1572786434939 COMMAND:deviceCommand aread 1
+
+arduino1 1572786434985 Analog signal on pin 1 is  4.956011730205279
+
+arduino1 1572786434985 DEV logic 1572786434985 0 command 1572786434985: 46 command: deviceCommand aread 1
+
+arduino1 1572786864902 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572786867903 arduino1 message wasn't got.
+
+arduino1 1572786867903 HIGH on pin 3 isn't set
+
+arduino1 1572786867904 DEV logic 1572786867904 0 command 1572786867904: 3002 command: deviceCommand dwrite 3 1
+
+arduino1 1572786867904 COM10 is closed
+
+arduino1 1572786867904 COM10 is lost. Reconnecting...
+
+arduino1 1572786867943 COMMAND:deviceCommand dwrite 3 1
+
+arduino1 1572786867990 HIGH on pin 3 is set
+
+arduino1 1572786867990 DEV logic 1572786867990 0 command 1572786867990: 47 command: deviceCommand dwrite 3 1
+
+arduino1 1572786868904 COMMAND:deviceCommand aread 2
+
+arduino1 1572786868932 COMMAND:deviceCommand aread 2
+
+arduino1 1572786868950 Analog signal on pin 2 is  0.0
+
+arduino1 1572786868950 DEV logic 1572786868950 0 command 1572786868950: 46 command: deviceCommand aread 2
+
+arduino1 1572786868951 COMMAND:deviceCommand aread 1
+
+arduino1 1572786868991 COMMAND:deviceCommand aread 2
+
+arduino1 1572786868997 Analog signal on pin 2 is  0.0
+
+arduino1 1572786868997 DEV logic 1572786868997 0 command 1572786868997: 65 command: deviceCommand aread 2
+
+arduino1 1572786868997 COMMAND:deviceCommand aread 1
+
+arduino1 1572786869043 Analog signal on pin 2 is  0.0
+
+arduino1 1572786869043 DEV logic 1572786869043 0 command 1572786869043: 52 command: deviceCommand aread 2
+
+arduino1 1572786869043 COMMAND:deviceCommand aread 1
+
+arduino1 1572786869089 Analog signal on pin 1 is  0.0
+
+arduino1 1572786869089 DEV logic 1572786869089 0 command 1572786869089: 138 command: deviceCommand aread 1
+
+arduino1 1572786869135 Analog signal on pin 1 is  0.0
+
+arduino1 1572786869136 DEV logic 1572786869136 0 command 1572786869136: 93 command: deviceCommand aread 1
+
+arduino1 1572786869182 Analog signal on pin 1 is  0.0
+
+arduino1 1572786869182 DEV logic 1572786869182 1 command 1572786869182: 184 command: deviceCommand aread 1
+
+arduino1 1572786869901 COMMAND:deviceCommand aread 2
+
+arduino1 1572786869947 Analog signal on pin 2 is  0.0
+
+arduino1 1572786869948 DEV logic 1572786869948 0 command 1572786869948: 47 command: deviceCommand aread 2
+
+arduino1 1572786869948 COMMAND:deviceCommand aread 1
+
+arduino1 1572786869994 Analog signal on pin 1 is  0.0
+
+arduino1 1572786869995 DEV logic 1572786869995 0 command 1572786869995: 47 command: deviceCommand aread 1
+
+arduino1 1572786870953 Reconnected.
+
+arduino1 1572787251398 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787251445 HIGH on pin 6 is set
+
+arduino1 1572787251445 DEV logic 1572787251446 0 command 1572787251446: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787252446 COMMAND:deviceCommand aread 4
+
+arduino1 1572787252492 Analog signal on pin 4 is  0.0
+
+arduino1 1572787252493 DEV logic 1572787252493 0 command 1572787252493: 47 command: deviceCommand aread 4
+
+arduino1 1572787252493 COMMAND:deviceCommand aread 3
+
+arduino1 1572787252539 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787252539 DEV logic 1572787252539 0 command 1572787252539: 46 command: deviceCommand aread 3
+
+arduino1 1572787256398 COMMAND:deviceCommand aread 4
+
+arduino1 1572787256444 Analog signal on pin 4 is  0.0
+
+arduino1 1572787256445 DEV logic 1572787256445 0 command 1572787256445: 47 command: deviceCommand aread 4
+
+arduino1 1572787256445 COMMAND:deviceCommand aread 3
+
+arduino1 1572787256491 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787256492 DEV logic 1572787256492 0 command 1572787256492: 47 command: deviceCommand aread 3
+
+arduino1 1572787301410 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787301457 HIGH on pin 6 is set
+
+arduino1 1572787301457 DEV logic 1572787301458 0 command 1572787301458: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787302460 COMMAND:deviceCommand aread 4
+
+arduino1 1572787302507 Analog signal on pin 4 is  0.0
+
+arduino1 1572787302507 DEV logic 1572787302507 1 command 1572787302507: 46 command: deviceCommand aread 4
+
+arduino1 1572787302508 COMMAND:deviceCommand aread 3
+
+arduino1 1572787302554 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787302555 DEV logic 1572787302555 0 command 1572787302555: 47 command: deviceCommand aread 3
+
+arduino1 1572787306410 COMMAND:deviceCommand aread 4
+
+arduino1 1572787306456 Analog signal on pin 4 is  0.0
+
+arduino1 1572787306457 DEV logic 1572787306457 0 command 1572787306457: 47 command: deviceCommand aread 4
+
+arduino1 1572787306457 COMMAND:deviceCommand aread 3
+
+arduino1 1572787306503 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787306504 DEV logic 1572787306504 0 command 1572787306504: 47 command: deviceCommand aread 3
+
+arduino1 1572787309412 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787309459 HIGH on pin 6 is set
+
+arduino1 1572787309460 DEV logic 1572787309460 0 command 1572787309460: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572787310460 COMMAND:deviceCommand aread 4
+
+arduino1 1572787310506 Analog signal on pin 4 is  0.0
+
+arduino1 1572787310507 DEV logic 1572787310507 0 command 1572787310507: 47 command: deviceCommand aread 4
+
+arduino1 1572787310507 COMMAND:deviceCommand aread 3
+
+arduino1 1572787310553 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787310553 DEV logic 1572787310553 0 command 1572787310553: 46 command: deviceCommand aread 3
+
+arduino1 1572787348399 COMMAND:deviceCommand aread 4
+
+arduino1 1572787348445 Analog signal on pin 4 is  0.0
+
+arduino1 1572787348446 DEV logic 1572787348446 0 command 1572787348446: 47 command: deviceCommand aread 4
+
+arduino1 1572787348446 COMMAND:deviceCommand aread 3
+
+arduino1 1572787348492 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787348492 DEV logic 1572787348492 0 command 1572787348492: 46 command: deviceCommand aread 3
+
+arduino1 1572787633412 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787633459 HIGH on pin 6 is set
+
+arduino1 1572787633459 DEV logic 1572787633459 0 command 1572787633459: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787634460 COMMAND:deviceCommand aread 4
+
+arduino1 1572787634506 Analog signal on pin 4 is  0.0
+
+arduino1 1572787634507 DEV logic 1572787634507 0 command 1572787634507: 47 command: deviceCommand aread 4
+
+arduino1 1572787634507 COMMAND:deviceCommand aread 3
+
+arduino1 1572787634553 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787634554 DEV logic 1572787634554 0 command 1572787634554: 47 command: deviceCommand aread 3
+
+arduino1 1572787637406 COMMAND:deviceCommand aread 4
+
+arduino1 1572787637452 Analog signal on pin 4 is  0.0
+
+arduino1 1572787637453 DEV logic 1572787637453 0 command 1572787637453: 47 command: deviceCommand aread 4
+
+arduino1 1572787637453 COMMAND:deviceCommand aread 3
+
+arduino1 1572787637499 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787637499 DEV logic 1572787637499 0 command 1572787637499: 46 command: deviceCommand aread 3
+
+arduino1 1572787729415 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787729462 HIGH on pin 6 is set
+
+arduino1 1572787729462 DEV logic 1572787729462 0 command 1572787729462: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787730463 COMMAND:deviceCommand aread 4
+
+arduino1 1572787730510 Analog signal on pin 4 is  0.0
+
+arduino1 1572787730511 DEV logic 1572787730511 0 command 1572787730511: 48 command: deviceCommand aread 4
+
+arduino1 1572787730511 COMMAND:deviceCommand aread 3
+
+arduino1 1572787730557 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787730558 DEV logic 1572787730558 0 command 1572787730558: 47 command: deviceCommand aread 3
+
+arduino1 1572787739403 COMMAND:deviceCommand aread 4
+
+arduino1 1572787739449 Analog signal on pin 4 is  0.0
+
+arduino1 1572787739449 DEV logic 1572787739449 0 command 1572787739449: 46 command: deviceCommand aread 4
+
+arduino1 1572787739449 COMMAND:deviceCommand aread 3
+
+arduino1 1572787739496 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787739496 DEV logic 1572787739496 1 command 1572787739496: 46 command: deviceCommand aread 3
+
+arduino1 1572787742905 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787742952 HIGH on pin 6 is set
+
+arduino1 1572787742953 DEV logic 1572787742953 0 command 1572787742953: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572787743953 COMMAND:deviceCommand aread 4
+
+arduino1 1572787743999 Analog signal on pin 4 is  0.0
+
+arduino1 1572787744000 DEV logic 1572787744000 0 command 1572787744000: 47 command: deviceCommand aread 4
+
+arduino1 1572787744000 COMMAND:deviceCommand aread 3
+
+arduino1 1572787744046 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787744046 DEV logic 1572787744046 0 command 1572787744046: 46 command: deviceCommand aread 3
+
+arduino1 1572787758910 COMMAND:deviceCommand aread 4
+
+arduino1 1572787758957 Analog signal on pin 4 is  0.0
+
+arduino1 1572787758957 DEV logic 1572787758957 0 command 1572787758957: 47 command: deviceCommand aread 4
+
+arduino1 1572787758957 COMMAND:deviceCommand aread 3
+
+arduino1 1572787759003 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787759003 DEV logic 1572787759003 0 command 1572787759003: 46 command: deviceCommand aread 3
+
+arduino1 1572787776920 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787776967 HIGH on pin 6 is set
+
+arduino1 1572787776968 DEV logic 1572787776968 0 command 1572787776968: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572787777968 COMMAND:deviceCommand aread 4
+
+arduino1 1572787778014 Analog signal on pin 4 is  0.0
+
+arduino1 1572787778015 DEV logic 1572787778015 0 command 1572787778015: 47 command: deviceCommand aread 4
+
+arduino1 1572787778015 COMMAND:deviceCommand aread 3
+
+arduino1 1572787778061 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787778061 DEV logic 1572787778061 0 command 1572787778061: 46 command: deviceCommand aread 3
+
+arduino1 1572787779916 COMMAND:deviceCommand aread 4
+
+arduino1 1572787779962 Analog signal on pin 4 is  0.0
+
+arduino1 1572787779962 DEV logic 1572787779962 0 command 1572787779962: 46 command: deviceCommand aread 4
+
+arduino1 1572787779963 COMMAND:deviceCommand aread 3
+
+arduino1 1572787780009 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787780009 DEV logic 1572787780009 1 command 1572787780009: 46 command: deviceCommand aread 3
+
+arduino1 1572787849415 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787852416 arduino1 message wasn't got.
+
+arduino1 1572787852416 HIGH on pin 6 isn't set
+
+arduino1 1572787852416 DEV logic 1572787852416 0 command 1572787852416: 3001 command: deviceCommand dwrite 6 1
+
+arduino1 1572787852417 COM10 is closed
+
+arduino1 1572787852417 COM10 is lost. Reconnecting...
+
+arduino1 1572787853417 COMMAND:deviceCommand aread 4
+
+arduino1 1572787856418 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787856418 Analog signal on pin 4 is  -1.0
+
+arduino1 1572787856418 DEV logic 1572787856418 0 command 1572787856418: 3001 command: deviceCommand aread 4
+
+arduino1 1572787856419 COMMAND:deviceCommand aread 3
+
+arduino1 1572787856419 arduino1: For input string: "rro"
+
+arduino1 1572787856419 Reconnected.
+
+arduino1 1572787856421 COM10 is opened
+
+arduino1 1572787859422 arduino1 message wasn't got.
+
+arduino1 1572787859422 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787859422 Analog signal on pin 3 is  -1.0
+
+arduino1 1572787859423 DEV logic 1572787859423 0 command 1572787859423: 3003 command: deviceCommand aread 3
+
+arduino1 1572787859423 COM10 is closed
+
+arduino1 1572787859423 COM10 is lost. Reconnecting...
+
+arduino1 1572787862427 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787862427 Reconnected.
+
+arduino1 1572787862429 COM10 is opened
+
+arduino1 1572787862430 COM10 is closed
+
+arduino1 1572787862430 COM10 is lost. Reconnecting...
+
+arduino1 1572787862430 port is closed!!
+
+arduino1 1572787862430 arduino1: For input string: "rro"
+
+arduino1 1572787862430 Reconnected.
+
+arduino1 1572787862432 COM10 is opened
+
+arduino1 1572787862433 COM10 is opened
+
+arduino1 1572787863411 COMMAND:deviceCommand aread 4
+
+arduino1 1572787866412 arduino1 message wasn't got.
+
+arduino1 1572787866412 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787866412 Analog signal on pin 4 is  -1.0
+
+arduino1 1572787866412 DEV logic 1572787866413 0 command 1572787866413: 3001 command: deviceCommand aread 4
+
+arduino1 1572787866413 COMMAND:deviceCommand aread 3
+
+arduino1 1572787866413 COM10 is closed
+
+arduino1 1572787866413 port is closed!!
+
+arduino1 1572787866413 port is closed!!
+
+arduino1 1572787866413 arduino1: For input string: "rro"
+
+arduino1 1572787866414 Reconnected.
+
+arduino1 1572787866414 port is closed!!
+
+arduino1 1572787866414 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572787866414 arduino1: For input string: "rro"
+
+arduino1 1572787866414 Reconnected.
+
+arduino1 1572787866414 port is closed!!
+
+arduino1 1572787866415 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572787866415 arduino1: For input string: "rro"
+
+arduino1 1572787866415 Reconnected.
+
+arduino1 1572787866416 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787866416 COM10 is lost. Reconnecting...
+
+arduino1 1572787869425 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787869425 Analog signal on pin 3 is  -1.0
+
+arduino1 1572787869425 DEV logic 1572787869425 0 command 1572787869425: 3012 command: deviceCommand aread 3
+
+arduino1 1572787869426 arduino1: For input string: "rro"
+
+arduino1 1572787869426 Reconnected.
+
+arduino1 1572787869426 arduino1: For input string: "rro"
+
+arduino1 1572787869426 port is closed!!
+
+arduino1 1572787869426 port is closed!!
+
+arduino1 1572787869426 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572787869427 arduino1: For input string: "rro"
+
+arduino1 1572787869427 Reconnected.
+
+arduino1 1572787869428 COM10 is opened
+
+arduino1 1572787869429 COM10 is closed
+
+arduino1 1572787869429 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787869429 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787875429 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787875429 Reconnected.
+
+arduino1 1572787875430 COM10 is closed
+
+arduino1 1572787875430 port is closed!!
+
+arduino1 1572787875430 port is closed!!
+
+arduino1 1572787875430 arduino1: For input string: "rro"
+
+arduino1 1572787875430 Reconnected.
+
+arduino1 1572787875430 arduino1: For input string: "rro"
+
+arduino1 1572787875430 Reconnected.
+
+arduino1 1572787875430 port is closed!!
+
+arduino1 1572787875430 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572787875431 arduino1: For input string: "rro"
+
+arduino1 1572787875431 Reconnected.
+
+arduino1 1572787875431 port is closed!!
+
+arduino1 1572787875431 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572787875431 arduino1: For input string: "rro"
+
+arduino1 1572787875431 Reconnected.
+
+arduino1 1572787875431 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787875431 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787875431 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572787881434 arduino1: begin 0, end -4, length 0
+
+arduino1 1572787881434 Reconnected.
+
+arduino1 1572787881436 COM10 is opened
+
+arduino1 1572787881483 Reconnected.
+
+arduino1 1572787881529 Reconnected.
+
+arduino1 1572787881575 Reconnected.
+
+arduino1 1572787881621 Reconnected.
+
+arduino1 1572787884482 Reconnected.
+
+arduino1 1572787895924 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787895972 HIGH on pin 6 is set
+
+arduino1 1572787895972 DEV logic 1572787895972 0 command 1572787895972: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572787896972 COMMAND:deviceCommand aread 4
+
+arduino1 1572787897018 Analog signal on pin 4 is  0.0
+
+arduino1 1572787897018 DEV logic 1572787897018 0 command 1572787897018: 46 command: deviceCommand aread 4
+
+arduino1 1572787897019 COMMAND:deviceCommand aread 3
+
+arduino1 1572787897065 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787897065 DEV logic 1572787897065 0 command 1572787897065: 46 command: deviceCommand aread 3
+
+arduino1 1572787899917 COMMAND:deviceCommand aread 4
+
+arduino1 1572787899963 Analog signal on pin 4 is  0.0
+
+arduino1 1572787899963 DEV logic 1572787899964 0 command 1572787899964: 46 command: deviceCommand aread 4
+
+arduino1 1572787899964 COMMAND:deviceCommand aread 3
+
+arduino1 1572787900010 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787900010 DEV logic 1572787900010 0 command 1572787900010: 46 command: deviceCommand aread 3
+
+arduino1 1572787906905 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787906952 HIGH on pin 6 is set
+
+arduino1 1572787906952 DEV logic 1572787906952 0 command 1572787906952: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787907953 COMMAND:deviceCommand aread 4
+
+arduino1 1572787907999 Analog signal on pin 4 is  0.0
+
+arduino1 1572787907999 DEV logic 1572787907999 0 command 1572787907999: 46 command: deviceCommand aread 4
+
+arduino1 1572787907999 COMMAND:deviceCommand aread 3
+
+arduino1 1572787908045 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787908046 DEV logic 1572787908046 1 command 1572787908046: 46 command: deviceCommand aread 3
+
+arduino1 1572787911405 COMMAND:deviceCommand aread 4
+
+arduino1 1572787911452 Analog signal on pin 4 is  0.0
+
+arduino1 1572787911452 DEV logic 1572787911452 0 command 1572787911452: 47 command: deviceCommand aread 4
+
+arduino1 1572787911452 COMMAND:deviceCommand aread 3
+
+arduino1 1572787911498 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572787911498 DEV logic 1572787911499 0 command 1572787911499: 46 command: deviceCommand aread 3
+
+arduino1 1572787920410 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787920458 HIGH on pin 6 is set
+
+arduino1 1572787920458 DEV logic 1572787920458 0 command 1572787920458: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572787921459 COMMAND:deviceCommand aread 4
+
+arduino1 1572787921505 Analog signal on pin 4 is  0.0
+
+arduino1 1572787921505 DEV logic 1572787921505 0 command 1572787921505: 46 command: deviceCommand aread 4
+
+arduino1 1572787921506 COMMAND:deviceCommand aread 3
+
+arduino1 1572787921552 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787921552 DEV logic 1572787921552 0 command 1572787921552: 46 command: deviceCommand aread 3
+
+arduino1 1572787930910 COMMAND:deviceCommand aread 4
+
+arduino1 1572787930956 Analog signal on pin 4 is  0.0
+
+arduino1 1572787930957 DEV logic 1572787930957 0 command 1572787930957: 47 command: deviceCommand aread 4
+
+arduino1 1572787930957 COMMAND:deviceCommand aread 3
+
+arduino1 1572787931003 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787931004 DEV logic 1572787931004 0 command 1572787931004: 47 command: deviceCommand aread 3
+
+arduino1 1572787935406 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572787935453 HIGH on pin 6 is set
+
+arduino1 1572787935453 DEV logic 1572787935453 0 command 1572787935453: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572787936454 COMMAND:deviceCommand aread 4
+
+arduino1 1572787936500 Analog signal on pin 4 is  0.0
+
+arduino1 1572787936501 DEV logic 1572787936501 0 command 1572787936501: 47 command: deviceCommand aread 4
+
+arduino1 1572787936501 COMMAND:deviceCommand aread 3
+
+arduino1 1572787936547 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787936548 DEV logic 1572787936548 0 command 1572787936548: 47 command: deviceCommand aread 3
+
+arduino1 1572787948909 COMMAND:deviceCommand aread 4
+
+arduino1 1572787948955 Analog signal on pin 4 is  0.0
+
+arduino1 1572787948956 DEV logic 1572787948956 0 command 1572787948956: 47 command: deviceCommand aread 4
+
+arduino1 1572787948956 COMMAND:deviceCommand aread 3
+
+arduino1 1572787949003 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572787949003 DEV logic 1572787949003 0 command 1572787949003: 47 command: deviceCommand aread 3
+
+arduino1 1572788147418 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572788147465 HIGH on pin 6 is set
+
+arduino1 1572788147466 DEV logic 1572788147466 0 command 1572788147466: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572788148466 COMMAND:deviceCommand aread 4
+
+arduino1 1572788148512 Analog signal on pin 4 is  0.0
+
+arduino1 1572788148515 DEV logic 1572788148515 0 command 1572788148515: 49 command: deviceCommand aread 4
+
+arduino1 1572788148515 COMMAND:deviceCommand aread 3
+
+arduino1 1572788148562 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572788148562 DEV logic 1572788148562 1 command 1572788148562: 46 command: deviceCommand aread 3
+
+arduino1 1572788154408 COMMAND:deviceCommand aread 4
+
+arduino1 1572788154454 Analog signal on pin 4 is  0.0
+
+arduino1 1572788154455 DEV logic 1572788154455 0 command 1572788154455: 47 command: deviceCommand aread 4
+
+arduino1 1572788154455 COMMAND:deviceCommand aread 3
+
+arduino1 1572788154501 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572788154502 DEV logic 1572788154502 0 command 1572788154502: 47 command: deviceCommand aread 3
+
+arduino1 1572788157418 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572788157465 HIGH on pin 6 is set
+
+arduino1 1572788157465 DEV logic 1572788157465 0 command 1572788157465: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572788158465 COMMAND:deviceCommand aread 4
+
+arduino1 1572788158511 Analog signal on pin 4 is  0.0
+
+arduino1 1572788158512 DEV logic 1572788158512 0 command 1572788158512: 47 command: deviceCommand aread 4
+
+arduino1 1572788158512 COMMAND:deviceCommand aread 3
+
+arduino1 1572788158558 Analog signal on pin 3 is  4.9315738025415445
+
+arduino1 1572788158558 DEV logic 1572788158558 0 command 1572788158558: 46 command: deviceCommand aread 3
+
+arduino1 1572788161409 COMMAND:deviceCommand aread 4
+
+arduino1 1572788161455 Analog signal on pin 4 is  0.0
+
+arduino1 1572788161456 DEV logic 1572788161456 0 command 1572788161456: 47 command: deviceCommand aread 4
+
+arduino1 1572788161456 COMMAND:deviceCommand aread 3
+
+arduino1 1572788161502 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572788161502 DEV logic 1572788161502 0 command 1572788161502: 46 command: deviceCommand aread 3
+
+arduino1 1572788188408 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572788191410 arduino1 message wasn't got.
+
+arduino1 1572788191410 HIGH on pin 6 isn't set
+
+arduino1 1572788191410 DEV logic 1572788191410 0 command 1572788191410: 3002 command: deviceCommand dwrite 6 1
+
+arduino1 1572788191411 COM10 is closed
+
+arduino1 1572788191411 COM10 is lost. Reconnecting...
+
+arduino1 1572788192411 COMMAND:deviceCommand aread 4
+
+arduino1 1572788195412 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788195412 Analog signal on pin 4 is  -1.0
+
+arduino1 1572788195412 DEV logic 1572788195412 0 command 1572788195412: 3001 command: deviceCommand aread 4
+
+arduino1 1572788195412 COMMAND:deviceCommand aread 3
+
+arduino1 1572788198414 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788198415 Analog signal on pin 3 is  -1.0
+
+arduino1 1572788198415 DEV logic 1572788198415 0 command 1572788198415: 3003 command: deviceCommand aread 3
+
+arduino1 1572788201418 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788201418 Reconnected.
+
+arduino1 1572788201419 COM10 is closed
+
+arduino1 1572788201419 COM10 is lost. Reconnecting...
+
+arduino1 1572788201419 port is closed!!
+
+arduino1 1572788201419 arduino1: For input string: "rro"
+
+arduino1 1572788201419 Reconnected.
+
+arduino1 1572788201421 COM10 is opened
+
+arduino1 1572788201421 COM10 is closed
+
+arduino1 1572788201421 COM10 is lost. Reconnecting...
+
+arduino1 1572788205920 COMMAND:deviceCommand aread 4
+
+arduino1 1572788207422 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788207422 Reconnected.
+
+arduino1 1572788207423 COM10 is closed
+
+arduino1 1572788207423 COM10 is lost. Reconnecting...
+
+arduino1 1572788207423 port is closed!!
+
+arduino1 1572788207424 arduino1: For input string: "rro"
+
+arduino1 1572788207424 Analog signal on pin 4 is  -1.0
+
+arduino1 1572788207424 arduino1: For input string: "rro"
+
+arduino1 1572788207424 arduino1: For input string: "rro"
+
+arduino1 1572788207424 Reconnected.
+
+arduino1 1572788207424 Reconnected.
+
+arduino1 1572788207424 arduino1: For input string: "rro"
+
+arduino1 1572788207424 Reconnected.
+
+arduino1 1572788207424 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788207424 port is closed!!
+
+arduino1 1572788207424 port is closed!!
+
+arduino1 1572788207425 arduino1: For input string: "rro"
+
+arduino1 1572788207425 Analog signal on pin 3 is  -1.0
+
+arduino1 1572788207425 DEV logic 1572788207425 0 command 1572788207425: 1 command: deviceCommand aread 3
+
+arduino1 1572788213428 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788213428 Reconnected.
+
+arduino1 1572788213429 COM10 is closed
+
+arduino1 1572788213429 COM10 is lost. Reconnecting...
+
+arduino1 1572788213429 port is closed!!
+
+arduino1 1572788213430 arduino1: For input string: "rro"
+
+arduino1 1572788213430 Reconnected.
+
+arduino1 1572788213430 arduino1: For input string: "rro"
+
+arduino1 1572788213430 Reconnected.
+
+arduino1 1572788213430 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788213430 COM10 is lost. Reconnecting...
+
+arduino1 1572788216433 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788216433 Reconnected.
+
+arduino1 1572788219434 arduino1 message wasn't got.
+
+arduino1 1572788219434 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788219434 Reconnected.
+
+arduino1 1572788219435 COM10 is closed
+
+arduino1 1572788219435 COM10 is lost. Reconnecting...
+
+arduino1 1572788219435 arduino1: For input string: "rro"
+
+arduino1 1572788219435 Reconnected.
+
+arduino1 1572788219436 COM10 is opened
+
+arduino1 1572788219438 COM10 is opened
+
+arduino1 1572788219439 COM10 is closed
+
+arduino1 1572788219439 COM10 is lost. Reconnecting...
+
+arduino1 1572788225438 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788225438 Reconnected.
+
+arduino1 1572788225439 COM10 is closed
+
+arduino1 1572788225439 port is closed!!
+
+arduino1 1572788225439 port is closed!!
+
+arduino1 1572788225439 arduino1: For input string: "rro"
+
+arduino1 1572788225439 Reconnected.
+
+arduino1 1572788225439 arduino1: For input string: "rro"
+
+arduino1 1572788225439 port is closed!!
+
+arduino1 1572788225439 port is closed!!
+
+arduino1 1572788225439 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788225439 arduino1: For input string: "rro"
+
+arduino1 1572788225440 port is closed!!
+
+arduino1 1572788225440 port is closed!!
+
+arduino1 1572788225440 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788225440 arduino1: For input string: "rro"
+
+arduino1 1572788225440 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788225440 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788225440 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788225440 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788231442 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788231442 Reconnected.
+
+arduino1 1572788231443 COM10 is closed
+
+arduino1 1572788231443 COM10 is lost. Reconnecting...
+
+arduino1 1572788231443 port is closed!!
+
+arduino1 1572788231443 arduino1: For input string: "rro"
+
+arduino1 1572788231443 Reconnected.
+
+arduino1 1572788231443 arduino1: For input string: "rro"
+
+arduino1 1572788231443 port is closed!!
+
+arduino1 1572788231444 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788231444 arduino1: For input string: "rro"
+
+arduino1 1572788231444 port is closed!!
+
+arduino1 1572788231444 port is closed!!
+
+arduino1 1572788231444 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788231444 arduino1: For input string: "rro"
+
+arduino1 1572788231444 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788231444 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788231444 COM10 is lost. Reconnecting...
+
+arduino1 1572788231444 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788237447 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788237447 Reconnected.
+
+arduino1 1572788237448 COM10 is closed
+
+arduino1 1572788237448 COM10 is lost. Reconnecting...
+
+arduino1 1572788237448 arduino1: For input string: "rro"
+
+arduino1 1572788237449 Reconnected.
+
+arduino1 1572788237449 port is closed!!
+
+arduino1 1572788237449 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788237449 arduino1: For input string: "rro"
+
+arduino1 1572788237449 Reconnected.
+
+arduino1 1572788237449 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788237449 port is closed!!
+
+arduino1 1572788237449 port is closed!!
+
+arduino1 1572788237449 arduino1: For input string: "rro"
+
+arduino1 1572788237450 Reconnected.
+
+arduino1 1572788237450 arduino1: For input string: "rro"
+
+arduino1 1572788237450 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788237450 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788237450 COM10 is lost. Reconnecting...
+
+arduino1 1572788237450 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788243453 arduino1: begin 0, end -4, length 0
+
+arduino1 1572788243453 Reconnected.
+
+arduino1 1572788243453 COM10 is closed
+
+arduino1 1572788243453 port is closed!!
+
+arduino1 1572788243453 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788243454 arduino1: For input string: "rro"
+
+arduino1 1572788243454 Reconnected.
+
+arduino1 1572788243454 arduino1: For input string: "rro"
+
+arduino1 1572788243454 port is closed!!
+
+arduino1 1572788243454 port is closed!!
+
+arduino1 1572788243454 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788243454 arduino1: For input string: "rro"
+
+arduino1 1572788243455 port is closed!!
+
+arduino1 1572788243455 port is closed!!
+
+arduino1 1572788243455 Port name - COM10; Method name - getInputBufferBytesCount(); Exception type - Port not opened.
+
+arduino1 1572788243455 arduino1: For input string: "rro"
+
+arduino1 1572788243455 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788243455 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788243455 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788243455 Port name - COM10; Method name - closePort(); Exception type - Port not opened.
+
+arduino1 1572788250502 Reconnected.
+
+arduino1 1572788250548 Reconnected.
+
+arduino1 1572788250594 Reconnected.
+
+arduino1 1572788250640 Reconnected.
+
+arduino1 1572788250686 Reconnected.
+
+arduino1 1572788285417 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572788285465 HIGH on pin 6 is set
+
+arduino1 1572788285465 DEV logic 1572788285465 1 command 1572788285465: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572788286466 COMMAND:deviceCommand aread 4
+
+arduino1 1572788286512 Analog signal on pin 4 is  0.0
+
+arduino1 1572788286512 DEV logic 1572788286512 0 command 1572788286512: 46 command: deviceCommand aread 4
+
+arduino1 1572788286512 COMMAND:deviceCommand aread 3
+
+arduino1 1572788286558 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572788286559 DEV logic 1572788286559 1 command 1572788286559: 46 command: deviceCommand aread 3
+
+arduino1 1572788295910 COMMAND:deviceCommand aread 4
+
+arduino1 1572788295957 Analog signal on pin 4 is  0.0
+
+arduino1 1572788295957 DEV logic 1572788295958 0 command 1572788295958: 47 command: deviceCommand aread 4
+
+arduino1 1572788295958 COMMAND:deviceCommand aread 3
+
+arduino1 1572788296004 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572788296004 DEV logic 1572788296004 0 command 1572788296004: 46 command: deviceCommand aread 3
+
+arduino1 1572788323912 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572788323959 HIGH on pin 6 is set
+
+arduino1 1572788323959 DEV logic 1572788323959 0 command 1572788323959: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572788324960 COMMAND:deviceCommand aread 4
+
+arduino1 1572788325006 Analog signal on pin 4 is  0.0
+
+arduino1 1572788325007 DEV logic 1572788325007 0 command 1572788325007: 47 command: deviceCommand aread 4
+
+arduino1 1572788325007 COMMAND:deviceCommand aread 3
+
+arduino1 1572788325053 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572788325053 DEV logic 1572788325053 0 command 1572788325053: 46 command: deviceCommand aread 3
+
+arduino1 1572788328928 COMMAND:deviceCommand aread 4
+
+arduino1 1572788328974 Analog signal on pin 4 is  0.0
+
+arduino1 1572788328975 DEV logic 1572788328975 0 command 1572788328975: 47 command: deviceCommand aread 4
+
+arduino1 1572788328975 COMMAND:deviceCommand aread 3
+
+arduino1 1572788329021 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572788329021 DEV logic 1572788329021 0 command 1572788329021: 46 command: deviceCommand aread 3
+
+arduino1 1572789206937 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572789206984 HIGH on pin 6 is set
+
+arduino1 1572789206984 DEV logic 1572789206984 0 command 1572789206984: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572789207985 COMMAND:deviceCommand aread 4
+
+arduino1 1572789208031 Analog signal on pin 4 is  4.946236559139785
+
+arduino1 1572789208031 DEV logic 1572789208031 0 command 1572789208031: 46 command: deviceCommand aread 4
+
+arduino1 1572789208031 COMMAND:deviceCommand aread 3
+
+arduino1 1572789208077 Analog signal on pin 3 is  0.0
+
+arduino1 1572789208078 DEV logic 1572789208078 0 command 1572789208078: 47 command: deviceCommand aread 3
+
+arduino1 1572789223434 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572789223481 LOW on pin 6 is set
+
+arduino1 1572789223482 DEV logic 1572789223482 0 command 1572789223482: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572789224482 COMMAND:deviceCommand aread 4
+
+arduino1 1572789224528 Analog signal on pin 4 is  0.0
+
+arduino1 1572789224529 DEV logic 1572789224529 0 command 1572789224529: 47 command: deviceCommand aread 4
+
+arduino1 1572789224529 COMMAND:deviceCommand aread 3
+
+arduino1 1572789224575 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572789224576 DEV logic 1572789224576 0 command 1572789224576: 47 command: deviceCommand aread 3
+
+arduino1 1572789237930 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572789237977 HIGH on pin 6 is set
+
+arduino1 1572789237978 DEV logic 1572789237978 0 command 1572789237978: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572789238978 COMMAND:deviceCommand aread 4
+
+arduino1 1572789239024 Analog signal on pin 4 is  0.0
+
+arduino1 1572789239024 DEV logic 1572789239024 0 command 1572789239024: 46 command: deviceCommand aread 4
+
+arduino1 1572789239025 COMMAND:deviceCommand aread 3
+
+arduino1 1572789239071 Analog signal on pin 3 is  0.0
+
+arduino1 1572789239071 DEV logic 1572789239071 0 command 1572789239071: 46 command: deviceCommand aread 3
+
+arduino1 1572789247919 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572789247967 LOW on pin 6 is set
+
+arduino1 1572789247967 DEV logic 1572789247967 1 command 1572789247967: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572789248967 COMMAND:deviceCommand aread 4
+
+arduino1 1572789249013 Analog signal on pin 4 is  0.0
+
+arduino1 1572789249014 DEV logic 1572789249014 0 command 1572789249014: 47 command: deviceCommand aread 4
+
+arduino1 1572789249014 COMMAND:deviceCommand aread 3
+
+arduino1 1572789249060 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572789249060 DEV logic 1572789249060 0 command 1572789249060: 46 command: deviceCommand aread 3
+
+arduino1 1572789250427 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572789250474 HIGH on pin 6 is set
+
+arduino1 1572789250474 DEV logic 1572789250474 0 command 1572789250474: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572789251475 COMMAND:deviceCommand aread 4
+
+arduino1 1572789251521 Analog signal on pin 4 is  0.0
+
+arduino1 1572789251523 DEV logic 1572789251523 0 command 1572789251523: 48 command: deviceCommand aread 4
+
+arduino1 1572789251523 COMMAND:deviceCommand aread 3
+
+arduino1 1572789251569 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572789251569 DEV logic 1572789251569 0 command 1572789251569: 46 command: deviceCommand aread 3
+
+arduino1 1572789267421 COMMAND:deviceCommand aread 4
+
+arduino1 1572789267467 Analog signal on pin 4 is  0.0
+
+arduino1 1572789267468 DEV logic 1572789267468 0 command 1572789267468: 47 command: deviceCommand aread 4
+
+arduino1 1572789267468 COMMAND:deviceCommand aread 3
+
+arduino1 1572789267514 Analog signal on pin 3 is  4.936461388074291
+
+arduino1 1572789267514 DEV logic 1572789267514 0 command 1572789267514: 46 command: deviceCommand aread 3
+
+arduino1 1572789274938 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572789274985 HIGH on pin 6 is set
+
+arduino1 1572789274986 DEV logic 1572789274986 0 command 1572789274986: 48 command: deviceCommand dwrite 6 1
+
+arduino1 1572789275986 COMMAND:deviceCommand aread 4
+
+arduino1 1572789276032 Analog signal on pin 4 is  4.946236559139785
+
+arduino1 1572789276032 DEV logic 1572789276032 0 command 1572789276032: 46 command: deviceCommand aread 4
+
+arduino1 1572789276032 COMMAND:deviceCommand aread 3
+
+arduino1 1572789276079 Analog signal on pin 3 is  0.0
+
+arduino1 1572789276079 DEV logic 1572789276079 1 command 1572789276079: 46 command: deviceCommand aread 3
+
+arduino1 1572789284440 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572789284487 LOW on pin 6 is set
+
+arduino1 1572789284488 DEV logic 1572789284488 0 command 1572789284488: 48 command: deviceCommand dwrite 6 0
+
+arduino1 1572789285488 COMMAND:deviceCommand aread 4
+
+arduino1 1572789285534 Analog signal on pin 4 is  0.0
+
+arduino1 1572789285534 DEV logic 1572789285534 0 command 1572789285534: 46 command: deviceCommand aread 4
+
+arduino1 1572789285535 COMMAND:deviceCommand aread 3
+
+arduino1 1572789285580 Analog signal on pin 3 is  4.941348973607038
+
+arduino1 1572789285581 DEV logic 1572789285581 0 command 1572789285581: 46 command: deviceCommand aread 3
+
+arduino1 1572789339930 COMMAND:deviceCommand dwrite 6 1
+
+arduino1 1572789339977 HIGH on pin 6 is set
+
+arduino1 1572789339977 DEV logic 1572789339977 0 command 1572789339977: 47 command: deviceCommand dwrite 6 1
+
+arduino1 1572789340977 COMMAND:deviceCommand aread 4
+
+arduino1 1572789341023 Analog signal on pin 4 is  4.941348973607038
+
+arduino1 1572789341023 DEV logic 1572789341023 0 command 1572789341023: 46 command: deviceCommand aread 4
+
+arduino1 1572789341024 COMMAND:deviceCommand aread 3
+
+arduino1 1572789341070 Analog signal on pin 3 is  0.0
+
+arduino1 1572789341070 DEV logic 1572789341070 0 command 1572789341070: 46 command: deviceCommand aread 3
+
+arduino1 1572789353922 COMMAND:deviceCommand dwrite 6 0
+
+arduino1 1572789353969 LOW on pin 6 is set
+
+arduino1 1572789353969 DEV logic 1572789353969 0 command 1572789353969: 47 command: deviceCommand dwrite 6 0
+
+arduino1 1572789354969 COMMAND:deviceCommand aread 4
+
+arduino1 1572789355015 Analog signal on pin 4 is  0.0
+
+arduino1 1572789355015 DEV logic 1572789355015 0 command 1572789355015: 46 command: deviceCommand aread 4
+
+arduino1 1572789355016 COMMAND:deviceCommand aread 3
+
+arduino1 1572789355062 Analog signal on pin 3 is  4.946236559139785
+
+arduino1 1572789355062 DEV logic 1572789355062 0 command 1572789355062: 46 command: deviceCommand aread 3
+

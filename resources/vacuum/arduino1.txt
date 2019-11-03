@@ -9,5 +9,5 @@ number 1
 devices digitalPins
 type nano
 baudrate 19200
-port COM63
+port COM10
 open

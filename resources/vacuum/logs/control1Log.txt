@@ -221,3 +221,2389 @@ gate1 1572030368043 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
 
 gate1 1572030368548 ERROR: gate1 wasn't opened. Low pressure in pneumo line
 
+time device message
+gate1 1572102053567 COMMAND:bla bypass close
+
+gate1 1572102053621 DEV logic 1572102053622 1 command 1572102053622: 53 command: bla bypass close
+
+gate1 1572102054715 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572102211773 COMMAND:bla bypass close
+
+gate1 1572102211823 DEV logic 1572102211823 0 command 1572102211823: 50 command: bla bypass close
+
+gate1 1572102212917 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572102281988 COMMAND:gate1 pump on
+
+gate1 1572102282038 DEV logic 1572102282038 0 command 1572102282038: 50 command: gate1 pump on
+
+time device message
+gate1 1572102553619 COMMAND:bla bypass close
+
+gate1 1572102553667 DEV logic 1572102553667 0 command 1572102553667: 48 command: bla bypass close
+
+gate1 1572102554757 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572102569689 COMMAND:gate1 pump on
+
+gate1 1572102569749 DEV logic 1572102569749 0 command 1572102569749: 60 command: gate1 pump on
+
+gate1 1572102733390 COMMAND:gate1 pump on
+
+gate1 1572102733390 DEV logic 1572102733390 0 command 1572102733390: 0 command: gate1 pump on
+
+time device message
+gate1 1572102760631 COMMAND:bla bypass close
+
+gate1 1572102760690 DEV logic 1572102760690 0 command 1572102760690: 59 command: bla bypass close
+
+gate1 1572102761780 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572102770242 COMMAND:gate1 pump on
+
+gate1 1572102770294 DEV logic 1572102770294 1 command 1572102770294: 51 command: gate1 pump on
+
+gate1 1572102910241 COMMAND:gate1 pump off
+
+gate1 1572102913299 DEV logic 1572102913299 0 command 1572102913299: 3058 command: gate1 pump off
+
+gate1 1572102913315 COMMAND:gate1 pump on
+
+gate1 1572102913315 DEV logic 1572102913315 0 command 1572102913315: 0 command: gate1 pump on
+
+gate1 1572102913333 COMMAND:gate1 pump off
+
+gate1 1572102916335 DEV logic 1572102916335 0 command 1572102916335: 3002 command: gate1 pump off
+
+gate1 1572102916362 COMMAND:gate1 pump on
+
+gate1 1572102916363 DEV logic 1572102916363 1 command 1572102916363: 0 command: gate1 pump on
+
+gate1 1572102916740 COMMAND:gate1 pump off
+
+gate1 1572102919341 DEV logic 1572102919341 0 command 1572102919341: 2601 command: gate1 pump off
+
+gate1 1572102920741 COMMAND:gate1 pump on
+
+gate1 1572102920741 DEV logic 1572102920741 0 command 1572102920741: 0 command: gate1 pump on
+
+gate1 1572102922241 COMMAND:gate1 pump off
+
+gate1 1572102922290 DEV logic 1572102922290 1 command 1572102922290: 48 command: gate1 pump off
+
+gate1 1572102924240 COMMAND:gate1 pump on
+
+gate1 1572102924289 DEV logic 1572102924289 1 command 1572102924289: 48 command: gate1 pump on
+
+gate1 1572102926740 COMMAND:gate1 pump off
+
+gate1 1572102926789 DEV logic 1572102926789 1 command 1572102926789: 48 command: gate1 pump off
+
+gate1 1572102928240 COMMAND:gate1 pump on
+
+gate1 1572102928289 DEV logic 1572102928289 1 command 1572102928289: 48 command: gate1 pump on
+
+gate1 1572103470758 COMMAND:gate1 pump off
+
+gate1 1572103473761 DEV logic 1572103473761 1 command 1572103473761: 3002 command: gate1 pump off
+
+gate1 1572103478244 COMMAND:gate1 pump on
+
+gate1 1572103478245 DEV logic 1572103478245 1 command 1572103478245: 0 command: gate1 pump on
+
+gate1 1572103479744 COMMAND:gate1 pump off
+
+gate1 1572103479793 DEV logic 1572103479793 1 command 1572103479793: 48 command: gate1 pump off
+
+gate1 1572103492244 COMMAND:gate1 pump on
+
+gate1 1572103492293 DEV logic 1572103492293 1 command 1572103492293: 48 command: gate1 pump on
+
+gate1 1572103644245 COMMAND:gate1 pump off
+
+gate1 1572103647250 DEV logic 1572103647250 1 command 1572103647250: 3004 command: gate1 pump off
+
+gate1 1572103651753 COMMAND:gate1 pump on
+
+gate1 1572103651754 DEV logic 1572103651754 1 command 1572103651754: 0 command: gate1 pump on
+
+gate1 1572103657746 COMMAND:gate1 pump off
+
+gate1 1572103657794 DEV logic 1572103657794 1 command 1572103657794: 47 command: gate1 pump off
+
+gate1 1572103661254 COMMAND:gate1 pump on
+
+gate1 1572103661302 DEV logic 1572103661302 0 command 1572103661302: 48 command: gate1 pump on
+
+gate1 1572103669253 COMMAND:gate1 pump off
+
+gate1 1572103669302 DEV logic 1572103669302 0 command 1572103669302: 49 command: gate1 pump off
+
+gate1 1572103674246 COMMAND:gate1 pump on
+
+gate1 1572103674295 DEV logic 1572103674295 1 command 1572103674295: 48 command: gate1 pump on
+
+gate1 1572105254261 COMMAND:gate1 pump off
+
+gate1 1572105257264 DEV logic 1572105257264 0 command 1572105257264: 3003 command: gate1 pump off
+
+gate1 1572105257348 COMMAND:gate1 pump on
+
+gate1 1572105257348 DEV logic 1572105257348 0 command 1572105257348: 0 command: gate1 pump on
+
+gate1 1572105268759 COMMAND:gate1 pump off
+
+gate1 1572105268807 DEV logic 1572105268807 1 command 1572105268807: 47 command: gate1 pump off
+
+gate1 1572105269766 COMMAND:gate1 pump on
+
+gate1 1572105269815 DEV logic 1572105269815 0 command 1572105269815: 49 command: gate1 pump on
+
+gate1 1572105315272 COMMAND:gate1 pump off
+
+gate1 1572105315321 DEV logic 1572105315321 1 command 1572105315321: 48 command: gate1 pump off
+
+gate1 1572105316265 COMMAND:gate1 pump on
+
+gate1 1572105316314 DEV logic 1572105316314 1 command 1572105316314: 48 command: gate1 pump on
+
+gate1 1572105431770 COMMAND:gate1 pump off
+
+gate1 1572105434772 DEV logic 1572105434772 0 command 1572105434772: 3002 command: gate1 pump off
+
+gate1 1572105434810 COMMAND:gate1 pump on
+
+gate1 1572105434810 DEV logic 1572105434810 0 command 1572105434810: 0 command: gate1 pump on
+
+gate1 1572105436761 COMMAND:gate1 pump off
+
+gate1 1572105436809 DEV logic 1572105436810 1 command 1572105436810: 47 command: gate1 pump off
+
+gate1 1572105438777 COMMAND:gate1 pump on
+
+gate1 1572105438826 DEV logic 1572105438826 0 command 1572105438826: 49 command: gate1 pump on
+
+gate1 1572105777275 COMMAND:gate1 pump off
+
+gate1 1572105780277 DEV logic 1572105780278 1 command 1572105780278: 3001 command: gate1 pump off
+
+gate1 1572105785273 COMMAND:gate1 pump on
+
+gate1 1572105785274 DEV logic 1572105785274 1 command 1572105785274: 0 command: gate1 pump on
+
+gate1 1572105789272 COMMAND:gate1 pump off
+
+gate1 1572105789320 DEV logic 1572105789320 0 command 1572105789320: 48 command: gate1 pump off
+
+gate1 1572105792267 COMMAND:gate1 pump on
+
+gate1 1572105792316 DEV logic 1572105792316 1 command 1572105792316: 49 command: gate1 pump on
+
+gate1 1572106180777 COMMAND:gate1 pump off
+
+gate1 1572106183780 DEV logic 1572106183780 0 command 1572106183780: 3003 command: gate1 pump off
+
+gate1 1572106183830 COMMAND:gate1 pump on
+
+gate1 1572106183830 DEV logic 1572106183830 0 command 1572106183830: 0 command: gate1 pump on
+
+gate1 1572106186267 COMMAND:gate1 pump off
+
+gate1 1572106186316 DEV logic 1572106186316 1 command 1572106186316: 48 command: gate1 pump off
+
+gate1 1572106187274 COMMAND:gate1 pump on
+
+gate1 1572106187322 DEV logic 1572106187323 0 command 1572106187323: 48 command: gate1 pump on
+
+gate1 1572106576779 COMMAND:gate1 pump off
+
+gate1 1572106579782 DEV logic 1572106579782 1 command 1572106579782: 3002 command: gate1 pump off
+
+gate1 1572106581271 COMMAND:gate1 pump on
+
+gate1 1572106581272 DEV logic 1572106581272 1 command 1572106581272: 0 command: gate1 pump on
+
+gate1 1572106587776 COMMAND:gate1 pump off
+
+gate1 1572106587824 DEV logic 1572106587824 0 command 1572106587824: 48 command: gate1 pump off
+
+gate1 1572106588770 COMMAND:gate1 pump on
+
+gate1 1572106588819 DEV logic 1572106588819 1 command 1572106588819: 48 command: gate1 pump on
+
+gate1 1572106683293 COMMAND:gate1 pump off
+
+gate1 1572106683342 DEV logic 1572106683346 0 command 1572106683346: 49 command: gate1 pump off
+
+gate1 1572106687276 COMMAND:gate1 pump on
+
+gate1 1572106687324 DEV logic 1572106687324 0 command 1572106687324: 48 command: gate1 pump on
+
+gate1 1572106711789 COMMAND:gate1 pump off
+
+gate1 1572106711838 DEV logic 1572106711838 0 command 1572106711838: 49 command: gate1 pump off
+
+gate1 1572106714284 COMMAND:gate1 pump on
+
+gate1 1572106714333 DEV logic 1572106714333 0 command 1572106714333: 49 command: gate1 pump on
+
+gate1 1572106889774 COMMAND:gate1 pump off
+
+gate1 1572106892777 DEV logic 1572106892777 1 command 1572106892777: 3002 command: gate1 pump off
+
+gate1 1572106892865 COMMAND:gate1 pump on
+
+gate1 1572106892865 DEV logic 1572106892865 0 command 1572106892865: 0 command: gate1 pump on
+
+gate1 1572106893789 COMMAND:gate1 pump off
+
+gate1 1572106896791 DEV logic 1572106896791 0 command 1572106896791: 3002 command: gate1 pump off
+
+gate1 1572106896842 COMMAND:gate1 pump on
+
+gate1 1572106896843 DEV logic 1572106896843 1 command 1572106896843: 0 command: gate1 pump on
+
+gate1 1572106899294 COMMAND:gate1 pump off
+
+gate1 1572106899796 DEV logic 1572106899796 1 command 1572106899796: 501 command: gate1 pump off
+
+gate1 1572106902780 COMMAND:gate1 pump on
+
+gate1 1572106902781 DEV logic 1572106902781 1 command 1572106902781: 0 command: gate1 pump on
+
+gate1 1572106908780 COMMAND:gate1 pump off
+
+gate1 1572106908829 DEV logic 1572106908829 1 command 1572106908829: 48 command: gate1 pump off
+
+gate1 1572106910774 COMMAND:gate1 pump on
+
+gate1 1572106910823 DEV logic 1572106910823 1 command 1572106910823: 48 command: gate1 pump on
+
+gate1 1572107055791 COMMAND:gate1 pump off
+
+gate1 1572107055839 DEV logic 1572107055843 0 command 1572107055843: 48 command: gate1 pump off
+
+gate1 1572109073792 COMMAND:gate1 pump on
+
+gate1 1572109076794 DEV logic 1572109076794 0 command 1572109076794: 3002 command: gate1 pump on
+
+gate1 1572109079792 COMMAND:gate1 pump off
+
+gate1 1572109079793 DEV logic 1572109079793 1 command 1572109079793: 0 command: gate1 pump off
+
+gate1 1572109090792 COMMAND:gate1 pump on
+
+gate1 1572109094680 DEV logic 1572109094680 1 command 1572109094680: 3887 command: gate1 pump on
+
+gate1 1572109094754 COMMAND:gate1 pump off
+
+gate1 1572109094754 DEV logic 1572109094754 0 command 1572109094754: 0 command: gate1 pump off
+
+gate1 1572109096826 COMMAND:gate1 pump on
+
+gate1 1572109100688 DEV logic 1572109100688 1 command 1572109100688: 3861 command: gate1 pump on
+
+gate1 1572109100762 COMMAND:gate1 pump off
+
+gate1 1572109100762 DEV logic 1572109100762 0 command 1572109100762: 0 command: gate1 pump off
+
+gate1 1572109105292 COMMAND:gate1 pump on
+
+gate1 1572109106714 DEV logic 1572109106714 1 command 1572109106714: 1421 command: gate1 pump on
+
+gate1 1572109109825 COMMAND:gate1 pump off
+
+gate1 1572109109826 DEV logic 1572109109826 0 command 1572109109826: 0 command: gate1 pump off
+
+gate1 1572109111815 COMMAND:gate1 pump on
+
+gate1 1572109111864 DEV logic 1572109111864 1 command 1572109111864: 48 command: gate1 pump on
+
+gate1 1572109116816 COMMAND:gate1 pump off
+
+gate1 1572109116864 DEV logic 1572109116864 0 command 1572109116864: 48 command: gate1 pump off
+
+gate1 1572109121304 COMMAND:gate1 pump on
+
+gate1 1572109121353 DEV logic 1572109121353 1 command 1572109121353: 48 command: gate1 pump on
+
+gate1 1572109132815 COMMAND:gate1 pump off
+
+gate1 1572109132864 DEV logic 1572109132864 0 command 1572109132864: 48 command: gate1 pump off
+
+gate1 1572109188832 COMMAND:gate1 pump on
+
+gate1 1572109191834 DEV logic 1572109191834 0 command 1572109191834: 3002 command: gate1 pump on
+
+gate1 1572109199816 COMMAND:gate1 pump off
+
+gate1 1572109199816 DEV logic 1572109199816 0 command 1572109199816: 0 command: gate1 pump off
+
+gate1 1572109201817 COMMAND:gate1 pump on
+
+gate1 1572109201866 DEV logic 1572109201866 1 command 1572109201866: 48 command: gate1 pump on
+
+gate1 1572111628354 COMMAND:gate1 pump off
+
+gate1 1572111631357 DEV logic 1572111631357 1 command 1572111631357: 3002 command: gate1 pump off
+
+gate1 1572111631549 COMMAND:gate1 pump on
+
+gate1 1572111631550 DEV logic 1572111631550 1 command 1572111631550: 0 command: gate1 pump on
+
+gate1 1572111646328 COMMAND:gate1 pump off
+
+gate1 1572111646377 DEV logic 1572111646377 1 command 1572111646377: 48 command: gate1 pump off
+
+gate1 1572111647814 COMMAND:gate1 pump on
+
+gate1 1572111647863 DEV logic 1572111647863 1 command 1572111647863: 48 command: gate1 pump on
+
+gate1 1572111660323 COMMAND:gate1 pump off
+
+gate1 1572111660371 DEV logic 1572111660371 0 command 1572111660371: 48 command: gate1 pump off
+
+gate1 1572111661842 COMMAND:gate1 pump on
+
+gate1 1572111661891 DEV logic 1572111661891 1 command 1572111661891: 48 command: gate1 pump on
+
+gate1 1572111673814 COMMAND:gate1 pump off
+
+gate1 1572111673863 DEV logic 1572111673863 1 command 1572111673863: 48 command: gate1 pump off
+
+gate1 1572111677323 COMMAND:gate1 pump on
+
+gate1 1572111677372 DEV logic 1572111677373 1 command 1572111677373: 48 command: gate1 pump on
+
+gate1 1572111746820 COMMAND:gate1 pump off
+
+gate1 1572111746869 DEV logic 1572111746875 1 command 1572111746875: 48 command: gate1 pump off
+
+gate1 1572111747815 COMMAND:gate1 pump on
+
+gate1 1572111747863 DEV logic 1572111747863 0 command 1572111747863: 48 command: gate1 pump on
+
+gate1 1572111859341 COMMAND:gate1 pump off
+
+gate1 1572111859409 DEV logic 1572111859413 1 command 1572111859413: 67 command: gate1 pump off
+
+gate1 1572111860400 COMMAND:gate1 pump on
+
+gate1 1572111860448 DEV logic 1572111860448 0 command 1572111860448: 48 command: gate1 pump on
+
+gate1 1572112171345 COMMAND:gate1 pump off
+
+gate1 1572112171394 DEV logic 1572112171394 0 command 1572112171394: 49 command: gate1 pump off
+
+gate1 1572112199334 COMMAND:gate1 pump on
+
+gate1 1572112199384 DEV logic 1572112199384 1 command 1572112199384: 49 command: gate1 pump on
+
+gate1 1572112365821 COMMAND:gate1 pump off
+
+gate1 1572112365869 DEV logic 1572112365869 0 command 1572112365869: 48 command: gate1 pump off
+
+gate1 1572112369841 COMMAND:gate1 pump on
+
+gate1 1572112369891 DEV logic 1572112369891 1 command 1572112369891: 49 command: gate1 pump on
+
+gate1 1572112371821 COMMAND:gate1 pump off
+
+gate1 1572112371869 DEV logic 1572112371869 0 command 1572112371869: 48 command: gate1 pump off
+
+gate1 1572112384821 COMMAND:gate1 pump on
+
+gate1 1572112384869 DEV logic 1572112384869 0 command 1572112384869: 48 command: gate1 pump on
+
+gate1 1572112386320 COMMAND:gate1 pump off
+
+gate1 1572112386369 DEV logic 1572112386369 1 command 1572112386369: 48 command: gate1 pump off
+
+gate1 1572112393368 COMMAND:gate1 pump on
+
+gate1 1572112393416 DEV logic 1572112393416 0 command 1572112393416: 48 command: gate1 pump on
+
+gate1 1572112395820 COMMAND:gate1 pump off
+
+gate1 1572112395870 DEV logic 1572112395870 1 command 1572112395870: 49 command: gate1 pump off
+
+gate1 1572112434343 COMMAND:gate1 pump on
+
+gate1 1572112434392 DEV logic 1572112434392 1 command 1572112434392: 48 command: gate1 pump on
+
+gate1 1572112439326 COMMAND:gate1 pump off
+
+gate1 1572112439374 DEV logic 1572112439374 0 command 1572112439374: 48 command: gate1 pump off
+
+gate1 1572112443896 COMMAND:gate1 pump on
+
+gate1 1572112443946 DEV logic 1572112443946 1 command 1572112443946: 49 command: gate1 pump on
+
+gate1 1572112444856 COMMAND:gate1 pump off
+
+gate1 1572112444905 DEV logic 1572112444905 0 command 1572112444905: 49 command: gate1 pump off
+
+gate1 1572113236828 COMMAND:gate1 pump on
+
+gate1 1572113239831 DEV logic 1572113239831 1 command 1572113239831: 3002 command: gate1 pump on
+
+gate1 1572113242851 COMMAND:gate1 pump off
+
+gate1 1572113242852 DEV logic 1572113242852 1 command 1572113242852: 0 command: gate1 pump off
+
+gate1 1572113244842 COMMAND:gate1 pump on
+
+gate1 1572113244890 DEV logic 1572113244890 0 command 1572113244890: 48 command: gate1 pump on
+
+gate1 1572113246348 COMMAND:gate1 pump off
+
+gate1 1572113246397 DEV logic 1572113246397 1 command 1572113246397: 48 command: gate1 pump off
+
+gate1 1572113250335 COMMAND:gate1 pump on
+
+gate1 1572113250384 DEV logic 1572113250384 0 command 1572113250384: 49 command: gate1 pump on
+
+gate1 1572113285854 COMMAND:gate1 pump off
+
+gate1 1572113285903 DEV logic 1572113285903 1 command 1572113285903: 48 command: gate1 pump off
+
+gate1 1572113295328 COMMAND:gate1 pump on
+
+gate1 1572113295377 DEV logic 1572113295377 1 command 1572113295377: 48 command: gate1 pump on
+
+gate1 1572113314853 COMMAND:gate1 pump off
+
+gate1 1572113314901 DEV logic 1572113314901 0 command 1572113314901: 48 command: gate1 pump off
+
+gate1 1572113364363 COMMAND:gate1 pump on
+
+gate1 1572113364424 DEV logic 1572113364424 1 command 1572113364424: 60 command: gate1 pump on
+
+gate1 1572113372380 COMMAND:gate1 pump off
+
+gate1 1572113372429 DEV logic 1572113372429 1 command 1572113372429: 49 command: gate1 pump off
+
+gate1 1572113527332 COMMAND:gate1 pump on
+
+gate1 1572113527381 DEV logic 1572113527381 0 command 1572113527381: 49 command: gate1 pump on
+
+gate1 1572113528880 COMMAND:gate1 pump off
+
+gate1 1572113528928 DEV logic 1572113528928 0 command 1572113528928: 48 command: gate1 pump off
+
+gate1 1572113543872 COMMAND:gate1 pump on
+
+gate1 1572113543921 DEV logic 1572113543921 0 command 1572113543921: 49 command: gate1 pump on
+
+gate1 1572113544847 COMMAND:gate1 pump off
+
+gate1 1572113544902 DEV logic 1572113544903 8 command 1572113544903: 47 command: gate1 pump off
+
+gate1 1572113687831 COMMAND:gate1 pump on
+
+gate1 1572113687880 DEV logic 1572113687885 1 command 1572113687885: 48 command: gate1 pump on
+
+gate1 1572113689348 COMMAND:gate1 pump off
+
+gate1 1572113689396 DEV logic 1572113689396 0 command 1572113689396: 48 command: gate1 pump off
+
+gate1 1572114034335 COMMAND:gate1 pump on
+
+gate1 1572114037337 DEV logic 1572114037337 0 command 1572114037337: 3002 command: gate1 pump on
+
+gate1 1572114060836 COMMAND:gate1 pump off
+
+gate1 1572114060836 DEV logic 1572114060836 0 command 1572114060836: 0 command: gate1 pump off
+
+gate1 1572114062871 COMMAND:gate1 pump on
+
+gate1 1572114062919 DEV logic 1572114062919 0 command 1572114062919: 48 command: gate1 pump on
+
+gate1 1572114074388 COMMAND:gate1 pump off
+
+gate1 1572114074437 DEV logic 1572114074437 0 command 1572114074437: 49 command: gate1 pump off
+
+gate1 1572114075883 COMMAND:gate1 pump on
+
+gate1 1572114075932 DEV logic 1572114075932 0 command 1572114075932: 49 command: gate1 pump on
+
+gate1 1572114082337 COMMAND:gate1 pump off
+
+gate1 1572114082386 DEV logic 1572114082386 0 command 1572114082386: 49 command: gate1 pump off
+
+gate1 1572114083370 COMMAND:gate1 pump on
+
+gate1 1572114083433 DEV logic 1572114083433 0 command 1572114083433: 63 command: gate1 pump on
+
+gate1 1572114083896 COMMAND:gate1 pump off
+
+gate1 1572114083956 DEV logic 1572114083956 0 command 1572114083956: 60 command: gate1 pump off
+
+gate1 1572114084886 COMMAND:gate1 pump on
+
+gate1 1572114084935 DEV logic 1572114084935 1 command 1572114084935: 48 command: gate1 pump on
+
+gate1 1572114085336 COMMAND:gate1 pump off
+
+gate1 1572114085385 DEV logic 1572114085385 1 command 1572114085385: 48 command: gate1 pump off
+
+gate1 1572114086375 COMMAND:gate1 pump on
+
+gate1 1572114086423 DEV logic 1572114086423 0 command 1572114086423: 48 command: gate1 pump on
+
+gate1 1572114086890 COMMAND:gate1 pump off
+
+gate1 1572114086939 DEV logic 1572114086939 0 command 1572114086939: 49 command: gate1 pump off
+
+gate1 1572114087338 COMMAND:gate1 pump on
+
+gate1 1572114087387 DEV logic 1572114087387 1 command 1572114087387: 48 command: gate1 pump on
+
+gate1 1572114087850 COMMAND:gate1 pump off
+
+gate1 1572114087898 DEV logic 1572114087898 0 command 1572114087898: 48 command: gate1 pump off
+
+gate1 1572114088360 COMMAND:gate1 pump on
+
+gate1 1572114088409 DEV logic 1572114088409 1 command 1572114088409: 48 command: gate1 pump on
+
+gate1 1572114088885 COMMAND:gate1 pump off
+
+gate1 1572114088934 DEV logic 1572114088934 0 command 1572114088934: 49 command: gate1 pump off
+
+gate1 1572114089380 COMMAND:gate1 pump on
+
+gate1 1572114089428 DEV logic 1572114089429 1 command 1572114089429: 47 command: gate1 pump on
+
+gate1 1572114089835 COMMAND:gate1 pump off
+
+gate1 1572114089883 DEV logic 1572114089884 0 command 1572114089884: 48 command: gate1 pump off
+
+gate1 1572114090882 COMMAND:gate1 pump on
+
+gate1 1572114090930 DEV logic 1572114090930 1 command 1572114090930: 47 command: gate1 pump on
+
+gate1 1572114091335 COMMAND:gate1 pump off
+
+gate1 1572114091385 DEV logic 1572114091385 1 command 1572114091385: 49 command: gate1 pump off
+
+gate1 1572114093368 COMMAND:gate1 pump on
+
+gate1 1572114093417 DEV logic 1572114093417 1 command 1572114093417: 48 command: gate1 pump on
+
+gate1 1572114094351 COMMAND:gate1 pump off
+
+gate1 1572114094399 DEV logic 1572114094399 0 command 1572114094399: 48 command: gate1 pump off
+
+gate1 1572114099359 COMMAND:gate1 pump on
+
+gate1 1572114099407 DEV logic 1572114099408 0 command 1572114099408: 48 command: gate1 pump on
+
+gate1 1572114099880 COMMAND:gate1 pump off
+
+gate1 1572114099940 DEV logic 1572114099940 0 command 1572114099940: 60 command: gate1 pump off
+
+gate1 1572114100854 COMMAND:gate1 pump on
+
+gate1 1572114100902 DEV logic 1572114100902 0 command 1572114100902: 48 command: gate1 pump on
+
+gate1 1572114101388 COMMAND:gate1 pump off
+
+gate1 1572114101437 DEV logic 1572114101437 1 command 1572114101437: 48 command: gate1 pump off
+
+gate1 1572114102370 COMMAND:gate1 pump on
+
+gate1 1572114102418 DEV logic 1572114102418 0 command 1572114102418: 48 command: gate1 pump on
+
+gate1 1572114102887 COMMAND:gate1 pump off
+
+gate1 1572114102935 DEV logic 1572114102935 0 command 1572114102935: 48 command: gate1 pump off
+
+gate1 1572114103843 COMMAND:gate1 pump on
+
+gate1 1572114103892 DEV logic 1572114103892 1 command 1572114103892: 48 command: gate1 pump on
+
+gate1 1572114104361 COMMAND:gate1 pump off
+
+gate1 1572114104409 DEV logic 1572114104409 0 command 1572114104409: 48 command: gate1 pump off
+
+gate1 1572114104876 COMMAND:gate1 pump on
+
+gate1 1572114104925 DEV logic 1572114104925 1 command 1572114104925: 48 command: gate1 pump on
+
+gate1 1572114105875 COMMAND:gate1 pump off
+
+gate1 1572114105924 DEV logic 1572114105924 0 command 1572114105924: 49 command: gate1 pump off
+
+gate1 1572114106439 COMMAND:gate1 pump on
+
+gate1 1572114106488 DEV logic 1572114106488 0 command 1572114106488: 49 command: gate1 pump on
+
+gate1 1572114106893 COMMAND:gate1 pump off
+
+gate1 1572114106942 DEV logic 1572114106942 0 command 1572114106942: 49 command: gate1 pump off
+
+gate1 1572114107892 COMMAND:gate1 pump on
+
+gate1 1572114107940 DEV logic 1572114107940 0 command 1572114107940: 48 command: gate1 pump on
+
+gate1 1572114108346 COMMAND:gate1 pump off
+
+gate1 1572114108395 DEV logic 1572114108395 1 command 1572114108395: 48 command: gate1 pump off
+
+gate1 1572114108858 COMMAND:gate1 pump on
+
+gate1 1572114108907 DEV logic 1572114108907 0 command 1572114108907: 49 command: gate1 pump on
+
+gate1 1572114109880 COMMAND:gate1 pump off
+
+gate1 1572114109928 DEV logic 1572114109928 0 command 1572114109928: 48 command: gate1 pump off
+
+gate1 1572114110336 COMMAND:gate1 pump on
+
+gate1 1572114110385 DEV logic 1572114110385 1 command 1572114110385: 48 command: gate1 pump on
+
+gate1 1572114110857 COMMAND:gate1 pump off
+
+gate1 1572114110906 DEV logic 1572114110906 0 command 1572114110906: 49 command: gate1 pump off
+
+gate1 1572114111840 COMMAND:gate1 pump on
+
+gate1 1572114111889 DEV logic 1572114111889 1 command 1572114111889: 48 command: gate1 pump on
+
+gate1 1572114112335 COMMAND:gate1 pump off
+
+gate1 1572114112383 DEV logic 1572114112383 1 command 1572114112383: 47 command: gate1 pump off
+
+gate1 1572114162884 COMMAND:gate1 pump on
+
+gate1 1572114162942 DEV logic 1572114162942 1 command 1572114162942: 57 command: gate1 pump on
+
+gate1 1572114171883 COMMAND:gate1 pump off
+
+gate1 1572114171931 DEV logic 1572114171932 1 command 1572114171932: 47 command: gate1 pump off
+
+gate1 1572114216849 COMMAND:gate1 pump on
+
+gate1 1572114216898 DEV logic 1572114216898 1 command 1572114216898: 48 command: gate1 pump on
+
+gate1 1572114217381 COMMAND:gate1 pump off
+
+gate1 1572114217430 DEV logic 1572114217430 1 command 1572114217430: 48 command: gate1 pump off
+
+gate1 1572114218356 COMMAND:gate1 pump on
+
+gate1 1572114218404 DEV logic 1572114218404 1 command 1572114218404: 47 command: gate1 pump on
+
+gate1 1572114218873 COMMAND:gate1 pump off
+
+gate1 1572114218922 DEV logic 1572114218922 1 command 1572114218922: 48 command: gate1 pump off
+
+gate1 1572114219393 COMMAND:gate1 pump on
+
+gate1 1572114219442 DEV logic 1572114219442 0 command 1572114219442: 49 command: gate1 pump on
+
+gate1 1572114220336 COMMAND:gate1 pump off
+
+gate1 1572114220385 DEV logic 1572114220385 1 command 1572114220385: 48 command: gate1 pump off
+
+gate1 1572114222377 COMMAND:gate1 pump on
+
+gate1 1572114222425 DEV logic 1572114222425 0 command 1572114222425: 48 command: gate1 pump on
+
+gate1 1572114231386 COMMAND:gate1 pump off
+
+gate1 1572114231435 DEV logic 1572114231435 1 command 1572114231435: 48 command: gate1 pump off
+
+gate1 1572114231877 COMMAND:gate1 pump on
+
+gate1 1572114231926 DEV logic 1572114231926 0 command 1572114231926: 49 command: gate1 pump on
+
+gate1 1572114232869 COMMAND:gate1 pump off
+
+gate1 1572114232918 DEV logic 1572114232918 1 command 1572114232918: 48 command: gate1 pump off
+
+gate1 1572114233861 COMMAND:gate1 pump on
+
+gate1 1572114233910 DEV logic 1572114233910 1 command 1572114233910: 48 command: gate1 pump on
+
+time device message
+gate1 1572115178834 COMMAND:bla bypass close
+
+gate1 1572115178884 DEV logic 1572115178884 0 command 1572115178884: 50 command: bla bypass close
+
+gate1 1572115179974 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572115204996 COMMAND:gate1 pump off
+
+gate1 1572115205047 DEV logic 1572115205047 0 command 1572115205047: 51 command: gate1 pump off
+
+gate1 1572115205995 COMMAND:gate1 pump on
+
+gate1 1572115206044 DEV logic 1572115206044 1 command 1572115206044: 48 command: gate1 pump on
+
+gate1 1572115345991 COMMAND:gate1 pump off
+
+gate1 1572115348995 DEV logic 1572115348995 1 command 1572115348995: 3003 command: gate1 pump off
+
+gate1 1572115349492 COMMAND:gate1 pump on
+
+gate1 1572115349493 DEV logic 1572115349493 1 command 1572115349493: 0 command: gate1 pump on
+
+gate1 1572115353992 COMMAND:gate1 pump off
+
+gate1 1572115354040 DEV logic 1572115354040 1 command 1572115354040: 48 command: gate1 pump off
+
+gate1 1572115356492 COMMAND:gate1 pump on
+
+gate1 1572115356540 DEV logic 1572115356541 0 command 1572115356541: 48 command: gate1 pump on
+
+gate1 1572115364492 COMMAND:gate1 pump off
+
+gate1 1572115364545 DEV logic 1572115364545 1 command 1572115364545: 52 command: gate1 pump off
+
+gate1 1572115369992 COMMAND:gate1 pump on
+
+gate1 1572115370041 DEV logic 1572115370041 0 command 1572115370041: 49 command: gate1 pump on
+
+time device message
+gate1 1572286110092 COMMAND:bla bypass close
+
+gate1 1572286110145 DEV logic 1572286110146 1 command 1572286110146: 52 command: bla bypass close
+
+gate1 1572286111240 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572286160238 COMMAND:gate1 pump off
+
+gate1 1572286160290 DEV logic 1572286160290 1 command 1572286160290: 51 command: gate1 pump off
+
+gate1 1572286161722 COMMAND:gate1 pump on
+
+gate1 1572286161772 DEV logic 1572286161772 1 command 1572286161772: 49 command: gate1 pump on
+
+gate1 1572286174237 COMMAND:gate1 pump off
+
+gate1 1572286177240 DEV logic 1572286177241 1 command 1572286177241: 3002 command: gate1 pump off
+
+gate1 1572286181222 COMMAND:gate1 pump on
+
+gate1 1572286181223 DEV logic 1572286181223 1 command 1572286181223: 0 command: gate1 pump on
+
+gate1 1572286184237 COMMAND:gate1 pump off
+
+gate1 1572286184286 DEV logic 1572286184286 1 command 1572286184286: 48 command: gate1 pump off
+
+gate1 1572286185723 COMMAND:gate1 pump on
+
+gate1 1572286185772 DEV logic 1572286185772 1 command 1572286185772: 48 command: gate1 pump on
+
+gate1 1572286193722 COMMAND:gate1 pump off
+
+gate1 1572286196725 DEV logic 1572286196725 0 command 1572286196725: 3003 command: gate1 pump off
+
+gate1 1572286200236 COMMAND:gate1 pump on
+
+gate1 1572286200236 DEV logic 1572286200236 0 command 1572286200236: 0 command: gate1 pump on
+
+gate1 1572286206236 COMMAND:gate1 pump off
+
+gate1 1572286206285 DEV logic 1572286206285 1 command 1572286206285: 48 command: gate1 pump off
+
+gate1 1572286208236 COMMAND:gate1 pump on
+
+gate1 1572286208285 DEV logic 1572286208285 1 command 1572286208285: 48 command: gate1 pump on
+
+gate1 1572286246236 COMMAND:gate1 pump off
+
+gate1 1572286249238 DEV logic 1572286249238 0 command 1572286249238: 3002 command: gate1 pump off
+
+gate1 1572286250723 COMMAND:gate1 pump on
+
+gate1 1572286250723 DEV logic 1572286250723 0 command 1572286250723: 0 command: gate1 pump on
+
+gate1 1572286257723 COMMAND:gate1 pump off
+
+gate1 1572286257772 DEV logic 1572286257772 1 command 1572286257772: 48 command: gate1 pump off
+
+gate1 1572286259723 COMMAND:gate1 pump on
+
+gate1 1572286259772 DEV logic 1572286259772 1 command 1572286259772: 48 command: gate1 pump on
+
+gate1 1572286266234 COMMAND:gate1 pump off
+
+gate1 1572286269237 DEV logic 1572286269237 1 command 1572286269237: 3002 command: gate1 pump off
+
+gate1 1572286271223 COMMAND:gate1 pump on
+
+gate1 1572286271224 DEV logic 1572286271224 1 command 1572286271224: 0 command: gate1 pump on
+
+gate1 1572286273224 COMMAND:gate1 pump off
+
+gate1 1572286276225 DEV logic 1572286276225 0 command 1572286276225: 3001 command: gate1 pump off
+
+gate1 1572286276241 COMMAND:gate1 pump on
+
+gate1 1572286276241 DEV logic 1572286276241 0 command 1572286276241: 0 command: gate1 pump on
+
+gate1 1572286278735 COMMAND:gate1 pump off
+
+gate1 1572286278783 DEV logic 1572286278783 0 command 1572286278783: 48 command: gate1 pump off
+
+gate1 1572286279723 COMMAND:gate1 pump on
+
+gate1 1572286279772 DEV logic 1572286279772 1 command 1572286279772: 48 command: gate1 pump on
+
+gate1 1572286456230 COMMAND:gate1 pump off
+
+gate1 1572286459233 DEV logic 1572286459233 1 command 1572286459233: 3002 command: gate1 pump off
+
+gate1 1572286459297 COMMAND:gate1 pump on
+
+gate1 1572286459298 DEV logic 1572286459298 1 command 1572286459298: 0 command: gate1 pump on
+
+gate1 1572286465230 COMMAND:gate1 pump off
+
+gate1 1572286465279 DEV logic 1572286465279 1 command 1572286465279: 48 command: gate1 pump off
+
+gate1 1572286466730 COMMAND:gate1 pump on
+
+gate1 1572286466779 DEV logic 1572286466779 1 command 1572286466779: 48 command: gate1 pump on
+
+gate1 1572286581729 COMMAND:gate1 pump off
+
+gate1 1572286584732 DEV logic 1572286584732 1 command 1572286584732: 3002 command: gate1 pump off
+
+gate1 1572286591229 COMMAND:gate1 pump on
+
+gate1 1572286591230 DEV logic 1572286591230 1 command 1572286591230: 0 command: gate1 pump on
+
+gate1 1572286592229 COMMAND:gate1 pump off
+
+gate1 1572286592278 DEV logic 1572286592278 0 command 1572286592278: 49 command: gate1 pump off
+
+gate1 1572286593234 COMMAND:gate1 pump on
+
+gate1 1572286593346 DEV logic 1572286593346 0 command 1572286593346: 112 command: gate1 pump on
+
+gate1 1572286822732 COMMAND:gate1 pump off
+
+gate1 1572286825735 DEV logic 1572286825735 1 command 1572286825735: 3002 command: gate1 pump off
+
+gate1 1572286825755 COMMAND:gate1 pump on
+
+gate1 1572286825755 DEV logic 1572286825755 0 command 1572286825755: 0 command: gate1 pump on
+
+gate1 1572286836238 COMMAND:gate1 pump off
+
+gate1 1572286836286 DEV logic 1572286836286 0 command 1572286836286: 48 command: gate1 pump off
+
+gate1 1572286837738 COMMAND:gate1 pump on
+
+gate1 1572286837786 DEV logic 1572286837786 0 command 1572286837786: 48 command: gate1 pump on
+
+time device message
+gate1 1572454037102 COMMAND:bla bypass close
+
+gate1 1572454037232 DEV logic 1572454037242 0 command 1572454037242: 130 command: bla bypass close
+
+gate1 1572454038252 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572454182577 COMMAND:gate1 pump off
+
+gate1 1572454182577 DEV logic 1572454182578 0 command 1572454182578: 0 command: gate1 pump off
+
+gate1 1572454184076 COMMAND:gate1 pump on
+
+gate1 1572454184081 DEV logic 1572454184106 0 command 1572454184106: 5 command: gate1 pump on
+
+gate1 1572454186076 COMMAND:gate1 pump off
+
+gate1 1572454186078 DEV logic 1572454186079 0 command 1572454186079: 2 command: gate1 pump off
+
+gate1 1572454187576 COMMAND:gate1 pump on
+
+gate1 1572454187576 DEV logic 1572454187577 0 command 1572454187577: 0 command: gate1 pump on
+
+gate1 1572454189077 COMMAND:gate1 pump off
+
+gate1 1572454189078 DEV logic 1572454189079 0 command 1572454189079: 1 command: gate1 pump off
+
+gate1 1572454192077 COMMAND:gate1 pump on
+
+gate1 1572454192077 DEV logic 1572454192077 0 command 1572454192077: 0 command: gate1 pump on
+
+gate1 1572454194077 COMMAND:gate1 pump off
+
+gate1 1572454194079 DEV logic 1572454194079 1 command 1572454194079: 1 command: gate1 pump off
+
+gate1 1572454195077 COMMAND:gate1 pump on
+
+gate1 1572454195077 DEV logic 1572454195078 0 command 1572454195078: 0 command: gate1 pump on
+
+gate1 1572454203576 COMMAND:gate1 pump off
+
+gate1 1572454203577 DEV logic 1572454203577 0 command 1572454203577: 1 command: gate1 pump off
+
+gate1 1572454209077 COMMAND:gate1 pump on
+
+gate1 1572454209078 DEV logic 1572454209078 1 command 1572454209078: 0 command: gate1 pump on
+
+gate1 1572454210577 COMMAND:gate1 pump off
+
+gate1 1572454210578 DEV logic 1572454210580 0 command 1572454210580: 1 command: gate1 pump off
+
+gate1 1572454212077 COMMAND:gate1 pump on
+
+gate1 1572454212077 DEV logic 1572454212077 0 command 1572454212077: 0 command: gate1 pump on
+
+gate1 1572454218577 COMMAND:gate1 pump off
+
+gate1 1572454218578 DEV logic 1572454218579 0 command 1572454218579: 1 command: gate1 pump off
+
+gate1 1572454220577 COMMAND:gate1 pump on
+
+gate1 1572454220577 DEV logic 1572454220577 0 command 1572454220577: 0 command: gate1 pump on
+
+gate1 1572454223577 COMMAND:gate1 pump off
+
+gate1 1572454223578 DEV logic 1572454223579 0 command 1572454223579: 1 command: gate1 pump off
+
+gate1 1572454230091 COMMAND:gate1 pump on
+
+gate1 1572454230092 DEV logic 1572454230092 1 command 1572454230092: 0 command: gate1 pump on
+
+gate1 1572454234577 COMMAND:gate1 pump off
+
+gate1 1572454234578 DEV logic 1572454234579 0 command 1572454234579: 1 command: gate1 pump off
+
+gate1 1572454237577 COMMAND:gate1 pump on
+
+gate1 1572454237577 DEV logic 1572454237577 0 command 1572454237577: 0 command: gate1 pump on
+
+gate1 1572454239577 COMMAND:gate1 pump off
+
+gate1 1572454239578 DEV logic 1572454239579 0 command 1572454239579: 1 command: gate1 pump off
+
+time device message
+gate1 1572454267075 COMMAND:bla bypass close
+
+gate1 1572454267094 DEV logic 1572454267094 1 command 1572454267094: 18 command: bla bypass close
+
+gate1 1572454268104 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572454322626 COMMAND:bla bypass close
+
+gate1 1572454322690 DEV logic 1572454322690 0 command 1572454322690: 64 command: bla bypass close
+
+gate1 1572454323788 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572454328124 COMMAND:gate1 pump on
+
+gate1 1572454328124 DEV logic 1572454328125 0 command 1572454328125: 0 command: gate1 pump on
+
+gate1 1572454330623 COMMAND:gate1 pump off
+
+gate1 1572454330676 DEV logic 1572454330676 1 command 1572454330676: 52 command: gate1 pump off
+
+gate1 1572454331618 COMMAND:gate1 pump on
+
+gate1 1572454331667 DEV logic 1572454331667 1 command 1572454331667: 48 command: gate1 pump on
+
+gate1 1572454335122 COMMAND:gate1 pump off
+
+gate1 1572454335172 DEV logic 1572454335172 1 command 1572454335172: 49 command: gate1 pump off
+
+gate1 1572454615122 COMMAND:gate1 pump on
+
+gate1 1572454615170 DEV logic 1572454615170 0 command 1572454615170: 48 command: gate1 pump on
+
+gate1 1572454937628 COMMAND:gate1 pump off
+
+gate1 1572454940632 DEV logic 1572454940632 0 command 1572454940632: 3004 command: gate1 pump off
+
+gate1 1572454943142 COMMAND:gate1 pump on
+
+gate1 1572454943142 DEV logic 1572454943142 0 command 1572454943142: 0 command: gate1 pump on
+
+gate1 1572454946128 COMMAND:gate1 pump off
+
+gate1 1572454946176 DEV logic 1572454946176 0 command 1572454946176: 48 command: gate1 pump off
+
+gate1 1572454972129 COMMAND:gate1 pump on
+
+gate1 1572454972177 DEV logic 1572454972177 0 command 1572454972177: 48 command: gate1 pump on
+
+gate1 1572454997629 COMMAND:gate1 pump off
+
+gate1 1572454997678 DEV logic 1572454997678 0 command 1572454997678: 49 command: gate1 pump off
+
+gate1 1572454998640 COMMAND:gate1 pump on
+
+gate1 1572454998688 DEV logic 1572454998688 0 command 1572454998688: 48 command: gate1 pump on
+
+gate1 1572454999629 COMMAND:gate1 pump off
+
+gate1 1572454999678 DEV logic 1572454999678 0 command 1572454999678: 49 command: gate1 pump off
+
+gate1 1572455000129 COMMAND:gate1 pump on
+
+gate1 1572455000177 DEV logic 1572455000177 0 command 1572455000177: 48 command: gate1 pump on
+
+gate1 1572455001139 COMMAND:gate1 pump off
+
+gate1 1572455001188 DEV logic 1572455001188 1 command 1572455001188: 48 command: gate1 pump off
+
+gate1 1572455001628 COMMAND:gate1 pump on
+
+gate1 1572455001677 DEV logic 1572455001677 1 command 1572455001677: 48 command: gate1 pump on
+
+gate1 1572455002640 COMMAND:gate1 pump off
+
+gate1 1572455002689 DEV logic 1572455002689 0 command 1572455002689: 49 command: gate1 pump off
+
+gate1 1572455003139 COMMAND:gate1 pump on
+
+gate1 1572455003188 DEV logic 1572455003188 1 command 1572455003188: 48 command: gate1 pump on
+
+gate1 1572455004130 COMMAND:gate1 pump off
+
+gate1 1572455004179 DEV logic 1572455004179 1 command 1572455004179: 49 command: gate1 pump off
+
+gate1 1572455005140 COMMAND:gate1 pump on
+
+gate1 1572455005189 DEV logic 1572455005189 1 command 1572455005189: 48 command: gate1 pump on
+
+gate1 1572455005629 COMMAND:gate1 pump off
+
+gate1 1572455005678 DEV logic 1572455005679 1 command 1572455005679: 48 command: gate1 pump off
+
+gate1 1572455006130 COMMAND:gate1 pump on
+
+gate1 1572455006179 DEV logic 1572455006179 0 command 1572455006179: 49 command: gate1 pump on
+
+gate1 1572455007629 COMMAND:gate1 pump off
+
+gate1 1572455007678 DEV logic 1572455007678 1 command 1572455007678: 48 command: gate1 pump off
+
+gate1 1572455008640 COMMAND:gate1 pump on
+
+gate1 1572455008688 DEV logic 1572455008689 0 command 1572455008689: 48 command: gate1 pump on
+
+gate1 1572455140636 COMMAND:gate1 pump off
+
+gate1 1572455143639 DEV logic 1572455143639 1 command 1572455143639: 3002 command: gate1 pump off
+
+gate1 1572455143660 COMMAND:gate1 pump on
+
+gate1 1572455143660 DEV logic 1572455143660 0 command 1572455143660: 0 command: gate1 pump on
+
+gate1 1572455180636 COMMAND:gate1 pump off
+
+gate1 1572455180684 DEV logic 1572455180684 0 command 1572455180684: 48 command: gate1 pump off
+
+gate1 1572455181636 COMMAND:gate1 pump on
+
+gate1 1572455181685 DEV logic 1572455181685 0 command 1572455181685: 49 command: gate1 pump on
+
+gate1 1572455182636 COMMAND:gate1 pump off
+
+gate1 1572455182684 DEV logic 1572455182684 0 command 1572455182684: 48 command: gate1 pump off
+
+gate1 1572455183635 COMMAND:gate1 pump on
+
+gate1 1572455183684 DEV logic 1572455183684 1 command 1572455183684: 48 command: gate1 pump on
+
+gate1 1572455184636 COMMAND:gate1 pump off
+
+gate1 1572455184684 DEV logic 1572455184684 0 command 1572455184684: 48 command: gate1 pump off
+
+gate1 1572455185638 COMMAND:gate1 pump on
+
+gate1 1572455185687 DEV logic 1572455185687 1 command 1572455185687: 48 command: gate1 pump on
+
+gate1 1572456540161 COMMAND:gate1 pump off
+
+gate1 1572456543163 DEV logic 1572456543163 0 command 1572456543163: 3002 command: gate1 pump off
+
+gate1 1572456543197 COMMAND:gate1 pump on
+
+gate1 1572456543197 DEV logic 1572456543197 0 command 1572456543197: 0 command: gate1 pump on
+
+gate1 1572456544659 COMMAND:gate1 pump off
+
+gate1 1572456544707 DEV logic 1572456544707 0 command 1572456544707: 48 command: gate1 pump off
+
+gate1 1572456551155 COMMAND:gate1 pump on
+
+gate1 1572456551204 DEV logic 1572456551204 1 command 1572456551204: 48 command: gate1 pump on
+
+gate1 1572456580659 COMMAND:gate1 pump off
+
+gate1 1572456580707 DEV logic 1572456580707 0 command 1572456580707: 48 command: gate1 pump off
+
+gate1 1572456581656 COMMAND:gate1 pump on
+
+gate1 1572456581704 DEV logic 1572456581705 0 command 1572456581705: 48 command: gate1 pump on
+
+gate1 1572456648661 COMMAND:gate1 pump off
+
+gate1 1572456648709 DEV logic 1572456648709 0 command 1572456648709: 48 command: gate1 pump off
+
+gate1 1572456649675 COMMAND:gate1 pump on
+
+gate1 1572456649723 DEV logic 1572456649724 1 command 1572456649724: 47 command: gate1 pump on
+
+gate1 1572456650657 COMMAND:gate1 pump off
+
+gate1 1572456650706 DEV logic 1572456650706 1 command 1572456650706: 48 command: gate1 pump off
+
+gate1 1572456651657 COMMAND:gate1 pump on
+
+gate1 1572456651706 DEV logic 1572456651706 1 command 1572456651706: 48 command: gate1 pump on
+
+gate1 1572456664656 COMMAND:gate1 pump off
+
+gate1 1572456667659 DEV logic 1572456667659 1 command 1572456667659: 3002 command: gate1 pump off
+
+gate1 1572456667740 COMMAND:gate1 pump on
+
+gate1 1572456667740 DEV logic 1572456667740 0 command 1572456667740: 0 command: gate1 pump on
+
+gate1 1572456672660 COMMAND:gate1 pump off
+
+gate1 1572456672708 DEV logic 1572456672709 1 command 1572456672709: 47 command: gate1 pump off
+
+gate1 1572456673665 COMMAND:gate1 pump on
+
+gate1 1572456673713 DEV logic 1572456673713 0 command 1572456673713: 48 command: gate1 pump on
+
+gate1 1572456674660 COMMAND:gate1 pump off
+
+gate1 1572456674708 DEV logic 1572456674709 0 command 1572456674709: 48 command: gate1 pump off
+
+gate1 1572456675169 COMMAND:gate1 pump on
+
+gate1 1572456675218 DEV logic 1572456675218 0 command 1572456675218: 49 command: gate1 pump on
+
+gate1 1572456685177 COMMAND:gate1 pump off
+
+gate1 1572456685226 DEV logic 1572456685226 1 command 1572456685226: 48 command: gate1 pump off
+
+time device message
+gate1 1572691007405 COMMAND:bla bypass close
+
+gate1 1572691007455 DEV logic 1572691007455 1 command 1572691007455: 49 command: bla bypass close
+
+gate1 1572691008466 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572691143234 COMMAND:bla bypass close
+
+gate1 1572691143251 DEV logic 1572691143251 1 command 1572691143251: 16 command: bla bypass close
+
+gate1 1572691144258 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572691253804 COMMAND:bla bypass close
+
+gate1 1572691253858 DEV logic 1572691253858 1 command 1572691253858: 54 command: bla bypass close
+
+gate1 1572691254952 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572691281542 COMMAND:gate1 pump on
+
+gate1 1572691281593 DEV logic 1572691281593 0 command 1572691281593: 51 command: gate1 pump on
+
+gate1 1572691283040 COMMAND:gate1 pump off
+
+gate1 1572691283089 DEV logic 1572691283089 1 command 1572691283089: 48 command: gate1 pump off
+
+gate1 1572691284041 COMMAND:gate1 pump on
+
+gate1 1572691284090 DEV logic 1572691284090 0 command 1572691284090: 49 command: gate1 pump on
+
+gate1 1572691285040 COMMAND:gate1 pump off
+
+gate1 1572691285090 DEV logic 1572691285090 1 command 1572691285090: 49 command: gate1 pump off
+
+gate1 1572691286041 COMMAND:gate1 pump on
+
+gate1 1572691286090 DEV logic 1572691286090 1 command 1572691286090: 48 command: gate1 pump on
+
+gate1 1572691513052 COMMAND:gate1 pump off
+
+gate1 1572691513101 DEV logic 1572691513101 1 command 1572691513101: 48 command: gate1 pump off
+
+gate1 1572691514040 COMMAND:gate1 pump on
+
+gate1 1572691514088 DEV logic 1572691514090 0 command 1572691514090: 48 command: gate1 pump on
+
+gate1 1572691514539 COMMAND:gate1 pump off
+
+gate1 1572691514588 DEV logic 1572691514588 1 command 1572691514588: 48 command: gate1 pump off
+
+gate1 1572691515052 COMMAND:gate1 pump on
+
+gate1 1572691515101 DEV logic 1572691515101 0 command 1572691515101: 49 command: gate1 pump on
+
+gate1 1572691889044 COMMAND:gate1 pump off
+
+gate1 1572691889092 DEV logic 1572691889102 0 command 1572691889102: 48 command: gate1 pump off
+
+gate1 1572691955544 COMMAND:gate1 pump on
+
+gate1 1572691955593 DEV logic 1572691955593 1 command 1572691955593: 48 command: gate1 pump on
+
+time device message
+gate1 1572694398721 COMMAND:bla bypass close
+
+gate1 1572694398775 DEV logic 1572694398775 1 command 1572694398775: 53 command: bla bypass close
+
+gate1 1572694399870 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572694539057 COMMAND:gate1 gate close
+
+gate1 1572694539106 DEV logic 1572694539106 0 command 1572694539106: 49 command: gate1 gate close
+
+gate1 1572694540201 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572694549056 COMMAND:gate1 gate open
+
+gate1 1572694549060 gate1 already opened
+
+gate1 1572694549061 DEV logic 1572694549061 0 command 1572694549061: 5 command: gate1 gate open
+
+gate1 1572694550157 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572694551556 COMMAND:gate1 gate close
+
+gate1 1572694551605 DEV logic 1572694551605 0 command 1572694551605: 49 command: gate1 gate close
+
+gate1 1572694552700 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572694567555 COMMAND:gate1 gate open
+
+gate1 1572694567556 gate1 already opened
+
+gate1 1572694567556 DEV logic 1572694567556 1 command 1572694567556: 0 command: gate1 gate open
+
+gate1 1572694568649 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572694571569 COMMAND:gate1 gate close
+
+gate1 1572694571617 DEV logic 1572694571617 0 command 1572694571617: 48 command: gate1 gate close
+
+gate1 1572694572712 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572694724557 COMMAND:gate1 gate open
+
+gate1 1572694724557 gate1 already opened
+
+gate1 1572694724558 DEV logic 1572694724558 0 command 1572694724558: 1 command: gate1 gate open
+
+gate1 1572694725652 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572694731058 COMMAND:gate1 gate close
+
+gate1 1572694731106 DEV logic 1572694731106 0 command 1572694731106: 48 command: gate1 gate close
+
+gate1 1572694732199 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572695209071 COMMAND:gate1 gate open
+
+gate1 1572695209071 gate1 already opened
+
+gate1 1572695209072 DEV logic 1572695209072 0 command 1572695209072: 1 command: gate1 gate open
+
+gate1 1572695210166 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572695211071 COMMAND:gate1 gate close
+
+gate1 1572695211119 DEV logic 1572695211119 0 command 1572695211119: 48 command: gate1 gate close
+
+gate1 1572695212213 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572695296569 COMMAND:gate1 gate open
+
+gate1 1572695296570 gate1 already opened
+
+gate1 1572695296570 DEV logic 1572695296570 1 command 1572695296570: 0 command: gate1 gate open
+
+gate1 1572695300621 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572695308064 COMMAND:gate1 gate close
+
+gate1 1572695308112 DEV logic 1572695308112 1 command 1572695308112: 48 command: gate1 gate close
+
+gate1 1572695309208 gate1 was closed
+
+gate1 1572695506066 COMMAND:gate1 gate open
+
+gate1 1572695506067 pressure difference is too high.
+
+gate1 1572695506067 pressure in vessel is too high.
+
+gate1 1572695506067 DEV logic 1572695506067 0 command 1572695506067: 1 command: gate1 gate open
+
+gate1 1572695507162 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572695672079 COMMAND:gate1 gate close
+
+gate1 1572695672127 DEV logic 1572695672160 0 command 1572695672160: 48 command: gate1 gate close
+
+gate1 1572695673220 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572695679568 COMMAND:gate1 gate open
+
+gate1 1572695679569 gate1 already opened
+
+gate1 1572695679569 DEV logic 1572695679569 1 command 1572695679569: 0 command: gate1 gate open
+
+gate1 1572695680663 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572695764075 COMMAND:gate1 gate close
+
+gate1 1572695764124 DEV logic 1572695764124 1 command 1572695764124: 48 command: gate1 gate close
+
+gate1 1572695765218 gate1 was closed
+
+gate1 1572696425085 COMMAND:gate1 gate open
+
+gate1 1572696425085 pressure difference is too high.
+
+gate1 1572696425085 pressure in vessel is too high.
+
+gate1 1572696425085 DEV logic 1572696425086 0 command 1572696425086: 0 command: gate1 gate open
+
+gate1 1572696428576 COMMAND:gate1 gate close
+
+gate1 1572696428577 gate1 already closed
+
+gate1 1572696428577 DEV logic 1572696428577 1 command 1572696428577: 0 command: gate1 gate close
+
+gate1 1572696429108 ERROR: gate1 wasn't opened
+
+gate1 1572696429672 ERROR: gate1 wasn't closed
+
+gate1 1572696435085 COMMAND:gate1 gate open
+
+gate1 1572696435086 gate1 already opened
+
+gate1 1572696435086 DEV logic 1572696435086 1 command 1572696435086: 0 command: gate1 gate open
+
+gate1 1572696436179 gate1 was opened
+
+gate1 1572696436205 COMMAND:bla gate close
+
+gate1 1572696436253 DEV logic 1572696436253 0 command 1572696436253: 48 command: bla gate close
+
+gate1 1572696436253 COMMAND:bla valve close
+
+gate1 1572696436302 DEV logic 1572696436302 0 command 1572696436302: 49 command: bla valve close
+
+gate1 1572696437398 ERROR: gate1 wasn't closed
+
+gate1 1572696437444 ERROR: valve1 wasn't closed
+
+gate1 1572696457582 COMMAND:gate1 gate close
+
+gate1 1572696457630 DEV logic 1572696457630 0 command 1572696457630: 48 command: gate1 gate close
+
+gate1 1572696458723 ERROR: gate1 wasn't closed
+
+gate1 1572696473582 COMMAND:gate1 gate open
+
+gate1 1572696473582 gate1 already opened
+
+gate1 1572696473582 DEV logic 1572696473582 0 command 1572696473582: 0 command: gate1 gate open
+
+gate1 1572696474676 gate1 was opened
+
+gate1 1572696474687 COMMAND:bla gate close
+
+gate1 1572696474735 DEV logic 1572696474735 1 command 1572696474735: 47 command: bla gate close
+
+gate1 1572696474735 COMMAND:bla valve close
+
+gate1 1572696474784 DEV logic 1572696474784 0 command 1572696474784: 49 command: bla valve close
+
+gate1 1572696475828 ERROR: gate1 wasn't closed
+
+gate1 1572696475921 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572696549584 COMMAND:gate1 gate close
+
+gate1 1572696549632 DEV logic 1572696549632 1 command 1572696549632: 47 command: gate1 gate close
+
+gate1 1572696550725 ERROR: gate1 wasn't closed
+
+gate1 1572696555586 COMMAND:gate1 gate open
+
+gate1 1572696555586 gate1 already opened
+
+gate1 1572696555587 DEV logic 1572696555587 0 command 1572696555587: 1 command: gate1 gate open
+
+gate1 1572696556680 gate1 was opened
+
+gate1 1572696556681 COMMAND:bla gate close
+
+gate1 1572696556728 DEV logic 1572696556728 0 command 1572696556728: 47 command: bla gate close
+
+gate1 1572696556729 COMMAND:bla valve close
+
+gate1 1572696556777 DEV logic 1572696556777 0 command 1572696556777: 48 command: bla valve close
+
+gate1 1572696557822 ERROR: gate1 wasn't closed
+
+gate1 1572696557915 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572696628577 COMMAND:gate1 gate close
+
+gate1 1572696628625 DEV logic 1572696628625 1 command 1572696628625: 47 command: gate1 gate close
+
+gate1 1572696629731 ERROR: gate1 wasn't closed
+
+gate1 1572696632577 COMMAND:gate1 gate open
+
+gate1 1572696632578 gate1 already opened
+
+gate1 1572696632578 DEV logic 1572696632578 1 command 1572696632578: 0 command: gate1 gate open
+
+gate1 1572696633671 gate1 was opened
+
+gate1 1572696640578 COMMAND:gate1 gate close
+
+gate1 1572696640626 DEV logic 1572696640626 1 command 1572696640626: 47 command: gate1 gate close
+
+gate1 1572696641720 ERROR: gate1 wasn't closed
+
+time device message
+gate1 1572718980777 COMMAND:bla bypass close
+
+gate1 1572718980830 DEV logic 1572718980830 1 command 1572718980830: 53 command: bla bypass close
+
+gate1 1572718981924 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719000970 COMMAND:gate1 valve open
+
+gate1 1572719000973 valve1 already opened
+
+gate1 1572719000974 DEV logic 1572719000974 0 command 1572719000974: 4 command: gate1 valve open
+
+gate1 1572719002068 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719003969 COMMAND:gate1 valve close
+
+gate1 1572719004018 DEV logic 1572719004019 0 command 1572719004019: 49 command: gate1 valve close
+
+gate1 1572719005114 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719008969 COMMAND:gate1 valve open
+
+gate1 1572719008969 valve1 already opened
+
+gate1 1572719008969 DEV logic 1572719008970 0 command 1572719008970: 0 command: gate1 valve open
+
+gate1 1572719010065 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719010968 COMMAND:gate1 valve close
+
+gate1 1572719011017 DEV logic 1572719011017 1 command 1572719011017: 48 command: gate1 valve close
+
+gate1 1572719012112 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719013968 COMMAND:gate1 bypass close
+
+gate1 1572719014016 DEV logic 1572719014017 0 command 1572719014017: 48 command: gate1 bypass close
+
+gate1 1572719014469 COMMAND:gate1 bypass open
+
+gate1 1572719014469 bypass1 already opened
+
+gate1 1572719014470 DEV logic 1572719014470 0 command 1572719014470: 1 command: gate1 bypass open
+
+gate1 1572719015112 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719015563 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719015969 COMMAND:gate1 gate open
+
+gate1 1572719015969 gate1 already opened
+
+gate1 1572719015970 DEV logic 1572719015970 0 command 1572719015970: 1 command: gate1 gate open
+
+gate1 1572719017065 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719017469 COMMAND:gate1 gate close
+
+gate1 1572719017517 DEV logic 1572719017518 0 command 1572719017518: 48 command: gate1 gate close
+
+gate1 1572719018612 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719018968 COMMAND:gate1 valve open
+
+gate1 1572719018969 valve1 already opened
+
+gate1 1572719018969 DEV logic 1572719018969 1 command 1572719018969: 0 command: gate1 valve open
+
+gate1 1572719020065 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719020468 COMMAND:gate1 valve close
+
+gate1 1572719020517 DEV logic 1572719020517 1 command 1572719020517: 48 command: gate1 valve close
+
+gate1 1572719021612 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719039468 COMMAND:gate1 gate open
+
+gate1 1572719039468 gate1 already opened
+
+gate1 1572719039469 DEV logic 1572719039469 0 command 1572719039469: 1 command: gate1 gate open
+
+gate1 1572719040564 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719081983 COMMAND:gate1 gate close
+
+gate1 1572719082031 DEV logic 1572719082031 0 command 1572719082031: 48 command: gate1 gate close
+
+gate1 1572719083126 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719108468 COMMAND:gate1 valve open
+
+gate1 1572719108469 valve1 already opened
+
+gate1 1572719108469 DEV logic 1572719108469 1 command 1572719108469: 0 command: gate1 valve open
+
+gate1 1572719109568 valve1 was opened
+
+gate1 1572719119983 COMMAND:gate1 valve close
+
+gate1 1572719120031 DEV logic 1572719120031 0 command 1572719120031: 48 command: gate1 valve close
+
+gate1 1572719121127 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719122968 COMMAND:gate1 valve open
+
+gate1 1572719122969 valve1 already opened
+
+gate1 1572719122969 DEV logic 1572719122969 1 command 1572719122969: 0 command: gate1 valve open
+
+gate1 1572719124063 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719131982 COMMAND:gate1 gate open
+
+gate1 1572719131982 gate1 already opened
+
+gate1 1572719131983 DEV logic 1572719131983 0 command 1572719131983: 1 command: gate1 gate open
+
+gate1 1572719133081 ERROR: gate1 wasn't opened
+
+gate1 1572719133468 COMMAND:gate1 valve close
+
+gate1 1572719133516 DEV logic 1572719133516 0 command 1572719133516: 48 command: gate1 valve close
+
+gate1 1572719134611 ERROR: valve1 wasn't closed
+
+gate1 1572719137982 COMMAND:gate1 valve open
+
+gate1 1572719137983 valve1 already opened
+
+gate1 1572719137983 DEV logic 1572719137983 1 command 1572719137983: 0 command: gate1 valve open
+
+gate1 1572719139076 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719139982 COMMAND:gate1 valve close
+
+gate1 1572719140030 DEV logic 1572719140030 0 command 1572719140030: 48 command: gate1 valve close
+
+gate1 1572719141124 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719195468 COMMAND:gate1 gate close
+
+gate1 1572719195469 gate1 already closed
+
+gate1 1572719195469 DEV logic 1572719195469 1 command 1572719195469: 0 command: gate1 gate close
+
+gate1 1572719196563 gate1 was closed
+
+gate1 1572719199980 COMMAND:gate1 gate open
+
+gate1 1572719199981 pressure difference is too high.
+
+gate1 1572719199981 pressure in vessel is too high.
+
+gate1 1572719199981 DEV logic 1572719199982 1 command 1572719199982: 0 command: gate1 gate open
+
+gate1 1572719201074 ERROR: gate1 wasn't opened
+
+gate1 1572719206468 COMMAND:gate1 gate close
+
+gate1 1572719206469 gate1 already closed
+
+gate1 1572719206469 DEV logic 1572719206485 1 command 1572719206485: 0 command: gate1 gate close
+
+gate1 1572719207563 gate1 was closed
+
+gate1 1572719229980 COMMAND:gate1 gate open
+
+gate1 1572719229980 pressure difference is too high.
+
+gate1 1572719229980 pressure in vessel is too high.
+
+gate1 1572719229981 DEV logic 1572719229981 0 command 1572719229981: 1 command: gate1 gate open
+
+gate1 1572719231076 gate1 was opened
+
+gate1 1572719381977 COMMAND:gate1 gate close
+
+gate1 1572719382025 DEV logic 1572719382025 0 command 1572719382025: 48 command: gate1 gate close
+
+gate1 1572719383119 ERROR: gate1 wasn't closed
+
+time device message
+gate1 1572719418956 COMMAND:bla bypass close
+
+gate1 1572719419025 DEV logic 1572719419025 1 command 1572719419025: 64 command: bla bypass close
+
+gate1 1572719420142 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719425026 COMMAND:gate1 gate open
+
+gate1 1572719425029 gate1 already opened
+
+gate1 1572719425031 DEV logic 1572719425031 0 command 1572719425031: 5 command: gate1 gate open
+
+gate1 1572719426128 gate1 was opened
+
+gate1 1572719426169 COMMAND:bla gate close
+
+gate1 1572719426218 DEV logic 1572719426218 1 command 1572719426218: 48 command: bla gate close
+
+gate1 1572719426218 COMMAND:bla valve close
+
+gate1 1572719426267 DEV logic 1572719426267 1 command 1572719426267: 48 command: bla valve close
+
+gate1 1572719427314 ERROR: gate1 wasn't closed
+
+gate1 1572719427406 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719433525 COMMAND:gate1 gate close
+
+gate1 1572719433574 DEV logic 1572719433574 1 command 1572719433574: 48 command: gate1 gate close
+
+gate1 1572719434670 ERROR: gate1 wasn't closed
+
+gate1 1572719436013 COMMAND:gate1 gate open
+
+gate1 1572719436013 gate1 already opened
+
+gate1 1572719436014 DEV logic 1572719436014 0 command 1572719436014: 1 command: gate1 gate open
+
+gate1 1572719437108 gate1 was opened
+
+time device message
+gate1 1572719502874 COMMAND:bla bypass close
+
+gate1 1572719502927 DEV logic 1572719502927 1 command 1572719502927: 52 command: bla bypass close
+
+gate1 1572719504063 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719509174 COMMAND:gate1 gate close
+
+gate1 1572719509224 DEV logic 1572719509224 1 command 1572719509224: 49 command: gate1 gate close
+
+gate1 1572719510324 ERROR: gate1 wasn't closed
+
+gate1 1572719511676 COMMAND:gate1 gate open
+
+gate1 1572719511679 gate1 already opened
+
+gate1 1572719511681 DEV logic 1572719511681 0 command 1572719511681: 5 command: gate1 gate open
+
+gate1 1572719512791 gate1 was opened
+
+gate1 1572719546175 COMMAND:gate1 gate close
+
+gate1 1572719546223 DEV logic 1572719546223 0 command 1572719546223: 48 command: gate1 gate close
+
+gate1 1572719547320 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572719563175 COMMAND:gate1 gate open
+
+gate1 1572719563176 gate1 already opened
+
+gate1 1572719563176 DEV logic 1572719563176 1 command 1572719563176: 0 command: gate1 gate open
+
+gate1 1572719564272 gate1 was opened
+
+gate1 1572719569174 COMMAND:gate1 gate close
+
+gate1 1572719569223 DEV logic 1572719569223 1 command 1572719569223: 48 command: gate1 gate close
+
+gate1 1572719570318 gate1 was closed
+
+gate1 1572719576675 COMMAND:gate1 gate open
+
+gate1 1572719576725 DEV logic 1572719576725 1 command 1572719576725: 49 command: gate1 gate open
+
+gate1 1572719577821 gate1 was opened
+
+gate1 1572719582189 COMMAND:gate1 gate close
+
+gate1 1572719582239 DEV logic 1572719582239 2 command 1572719582239: 48 command: gate1 gate close
+
+gate1 1572719583334 gate1 was closed
+
+gate1 1572719585673 COMMAND:gate1 gate open
+
+gate1 1572719585722 DEV logic 1572719585722 1 command 1572719585722: 48 command: gate1 gate open
+
+gate1 1572719586817 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572719591175 COMMAND:gate1 gate close
+
+gate1 1572719591223 DEV logic 1572719591223 0 command 1572719591223: 48 command: gate1 gate close
+
+gate1 1572719592319 gate1 was closed
+
+time device message
+gate1 1572785130158 COMMAND:bla bypass close
+
+gate1 1572785130175 DEV logic 1572785130175 0 command 1572785130175: 17 command: bla bypass close
+
+gate1 1572785131185 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+time device message
+gate1 1572785222080 COMMAND:bla bypass close
+
+gate1 1572785222134 DEV logic 1572785222134 1 command 1572785222134: 53 command: bla bypass close
+
+gate1 1572785223229 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572785241376 COMMAND:gate1 bypass close
+
+gate1 1572785241425 DEV logic 1572785241425 1 command 1572785241425: 48 command: gate1 bypass close
+
+gate1 1572785242519 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572785243876 COMMAND:gate1 bypass open
+
+gate1 1572785243879 bypass1 already opened
+
+gate1 1572785243880 DEV logic 1572785243880 0 command 1572785243880: 4 command: gate1 bypass open
+
+gate1 1572785244974 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572785246886 COMMAND:gate1 valve open
+
+gate1 1572785246887 valve1 already opened
+
+gate1 1572785246887 DEV logic 1572785246888 1 command 1572785246888: 0 command: gate1 valve open
+
+gate1 1572785247985 ERROR: valve1 wasn't opened
+
+gate1 1572785253375 COMMAND:gate1 gate open
+
+gate1 1572785253424 DEV logic 1572785253424 0 command 1572785253424: 49 command: gate1 gate open
+
+gate1 1572785254519 ERROR: gate1 wasn't opened
+
+gate1 1572785263376 COMMAND:gate1 gate close
+
+gate1 1572785263378 gate1 already closed
+
+gate1 1572785263378 DEV logic 1572785263378 1 command 1572785263378: 1 command: gate1 gate close
+
+gate1 1572785264473 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572785264886 COMMAND:gate1 valve close
+
+gate1 1572785264886 valve1 already closed
+
+gate1 1572785264887 DEV logic 1572785264887 0 command 1572785264887: 1 command: gate1 valve close
+
+gate1 1572785265876 COMMAND:gate1 bypass close
+
+gate1 1572785265925 DEV logic 1572785265925 1 command 1572785265925: 48 command: gate1 bypass close
+
+gate1 1572785266025 valve1 was closed
+
+gate1 1572785267022 ERROR: bypass1 wasn't closed
+
+gate1 1572785274385 COMMAND:gate1 valve open
+
+gate1 1572785274386 pressure difference is too high.
+
+gate1 1572785274387 DEV logic 1572785274387 1 command 1572785274387: 1 command: gate1 valve open
+
+gate1 1572785275484 ERROR: valve1 wasn't opened
+
+gate1 1572785286885 COMMAND:gate1 pump off
+
+gate1 1572785286886 DEV logic 1572785286886 1 command 1572785286886: 0 command: gate1 pump off
+
+gate1 1572785287376 COMMAND:gate1 pump on
+
+gate1 1572785287427 DEV logic 1572785287427 1 command 1572785287427: 50 command: gate1 pump on
+
+gate1 1572785292385 COMMAND:gate1 bypass open
+
+gate1 1572785292386 bypass1 already opened
+
+gate1 1572785292386 DEV logic 1572785292386 1 command 1572785292386: 0 command: gate1 bypass open
+
+gate1 1572785293482 bypass1 was opened
+
+gate1 1572785339376 COMMAND:gate1 valve close
+
+gate1 1572785339376 valve1 already closed
+
+gate1 1572785339377 DEV logic 1572785339377 0 command 1572785339377: 1 command: gate1 valve close
+
+gate1 1572785340471 valve1 was closed
+
+gate1 1572785347877 COMMAND:gate1 valve open
+
+gate1 1572785347925 DEV logic 1572785347925 0 command 1572785347925: 48 command: gate1 valve open
+
+gate1 1572785349019 ERROR: valve1 wasn't opened
+
+gate1 1572785365877 COMMAND:gate1 valve close
+
+gate1 1572785365877 valve1 already closed
+
+gate1 1572785365877 DEV logic 1572785365878 0 command 1572785365878: 0 command: gate1 valve close
+
+gate1 1572785366971 valve1 was closed
+
+gate1 1572785371877 COMMAND:gate1 valve open
+
+gate1 1572785371925 DEV logic 1572785371925 0 command 1572785371925: 48 command: gate1 valve open
+
+gate1 1572785373020 ERROR: valve1 wasn't opened
+
+gate1 1572785373376 COMMAND:gate1 valve close
+
+gate1 1572785373377 valve1 already closed
+
+gate1 1572785373377 DEV logic 1572785373377 1 command 1572785373377: 0 command: gate1 valve close
+
+gate1 1572785374472 valve1 was closed
+
+gate1 1572785975387 COMMAND:gate1 bypass close
+
+gate1 1572785975435 DEV logic 1572785975436 0 command 1572785975436: 48 command: gate1 bypass close
+
+gate1 1572785976528 ERROR: bypass1 wasn't closed
+
+gate1 1572786022885 COMMAND:gate1 bypass open
+
+gate1 1572786022886 bypass1 already opened
+
+gate1 1572786022887 DEV logic 1572786022887 1 command 1572786022887: 1 command: gate1 bypass open
+
+gate1 1572786023982 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786025884 COMMAND:gate1 bypass close
+
+gate1 1572786025932 DEV logic 1572786025932 0 command 1572786025932: 48 command: gate1 bypass close
+
+gate1 1572786027029 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786077884 COMMAND:gate1 bypass open
+
+gate1 1572786077885 bypass1 already opened
+
+gate1 1572786077885 DEV logic 1572786077885 1 command 1572786077885: 0 command: gate1 bypass open
+
+gate1 1572786078884 COMMAND:gate1 bypass close
+
+gate1 1572786078932 DEV logic 1572786078932 0 command 1572786078932: 48 command: gate1 bypass close
+
+gate1 1572786079025 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786080026 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786110385 COMMAND:gate1 gate open
+
+gate1 1572786110386 gate1 already opened
+
+gate1 1572786110386 DEV logic 1572786110386 0 command 1572786110386: 1 command: gate1 gate open
+
+gate1 1572786111485 ERROR: gate1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786115399 COMMAND:gate1 gate close
+
+gate1 1572786115447 DEV logic 1572786115447 0 command 1572786115447: 48 command: gate1 gate close
+
+gate1 1572786116541 ERROR: gate1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786120885 COMMAND:gate1 valve open
+
+gate1 1572786120933 DEV logic 1572786120933 1 command 1572786120933: 48 command: gate1 valve open
+
+gate1 1572786122028 ERROR: valve1 wasn't opened
+
+gate1 1572786123885 COMMAND:gate1 valve close
+
+gate1 1572786123886 valve1 already closed
+
+gate1 1572786123886 DEV logic 1572786123886 0 command 1572786123886: 1 command: gate1 valve close
+
+gate1 1572786124989 valve1 was closed
+
+gate1 1572786128385 COMMAND:gate1 bypass open
+
+gate1 1572786128386 bypass1 already opened
+
+gate1 1572786128386 DEV logic 1572786128386 1 command 1572786128386: 0 command: gate1 bypass open
+
+gate1 1572786129482 bypass1 was opened
+
+gate1 1572786132887 COMMAND:gate1 bypass close
+
+gate1 1572786132935 DEV logic 1572786132935 0 command 1572786132935: 48 command: gate1 bypass close
+
+gate1 1572786134029 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786152886 COMMAND:gate1 bypass open
+
+gate1 1572786152887 bypass1 already opened
+
+gate1 1572786152888 DEV logic 1572786152888 1 command 1572786152888: 0 command: gate1 bypass open
+
+gate1 1572786153981 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786156386 COMMAND:gate1 bypass close
+
+gate1 1572786156434 DEV logic 1572786156434 0 command 1572786156434: 48 command: gate1 bypass close
+
+gate1 1572786157527 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786162885 COMMAND:gate1 bypass open
+
+gate1 1572786162885 bypass1 already opened
+
+gate1 1572786162885 DEV logic 1572786162885 0 command 1572786162885: 0 command: gate1 bypass open
+
+gate1 1572786163980 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786166385 COMMAND:gate1 bypass close
+
+gate1 1572786166433 DEV logic 1572786166433 0 command 1572786166433: 48 command: gate1 bypass close
+
+gate1 1572786167529 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786327394 COMMAND:gate1 valve open
+
+gate1 1572786327442 DEV logic 1572786327443 0 command 1572786327443: 48 command: gate1 valve open
+
+gate1 1572786328536 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786338893 COMMAND:gate1 bypass open
+
+gate1 1572786338893 bypass1 already opened
+
+gate1 1572786338893 DEV logic 1572786338893 0 command 1572786338893: 0 command: gate1 bypass open
+
+gate1 1572786339986 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786342893 COMMAND:gate1 bypass close
+
+gate1 1572786342941 DEV logic 1572786342941 1 command 1572786342941: 47 command: gate1 bypass close
+
+gate1 1572786344035 bypass1 was closed
+
+gate1 1572786348387 COMMAND:gate1 bypass open
+
+gate1 1572786348388 pressure difference is too high.
+
+gate1 1572786348388 DEV logic 1572786348388 1 command 1572786348388: 0 command: gate1 bypass open
+
+gate1 1572786349482 bypass1 was opened
+
+gate1 1572786398389 COMMAND:gate1 valve close
+
+gate1 1572786398437 DEV logic 1572786398437 0 command 1572786398437: 48 command: gate1 valve close
+
+gate1 1572786399531 ERROR: valve1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786404888 COMMAND:gate1 valve open
+
+gate1 1572786404888 valve1 already opened
+
+gate1 1572786404889 DEV logic 1572786404889 0 command 1572786404889: 1 command: gate1 valve open
+
+gate1 1572786405984 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786407391 COMMAND:gate1 valve close
+
+gate1 1572786407439 DEV logic 1572786407439 0 command 1572786407439: 48 command: gate1 valve close
+
+gate1 1572786408533 valve1 was closed
+
+gate1 1572786410892 COMMAND:gate1 bypass close
+
+gate1 1572786410941 DEV logic 1572786410941 1 command 1572786410941: 48 command: gate1 bypass close
+
+gate1 1572786412036 bypass1 was closed
+
+gate1 1572786416896 COMMAND:gate1 bypass open
+
+gate1 1572786416945 DEV logic 1572786416945 1 command 1572786416945: 48 command: gate1 bypass open
+
+gate1 1572786418041 bypass1 was opened
+
+gate1 1572786424388 COMMAND:gate1 bypass close
+
+gate1 1572786424436 DEV logic 1572786424436 0 command 1572786424436: 48 command: gate1 bypass close
+
+gate1 1572786425530 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786430389 COMMAND:gate1 bypass open
+
+gate1 1572786430389 bypass1 already opened
+
+gate1 1572786430390 DEV logic 1572786430390 0 command 1572786430390: 1 command: gate1 bypass open
+
+gate1 1572786431484 ERROR: bypass1 wasn't opened
+
+gate1 1572786433891 COMMAND:gate1 bypass close
+
+gate1 1572786433891 bypass1 already closed
+
+gate1 1572786433891 DEV logic 1572786433892 0 command 1572786433892: 0 command: gate1 bypass close
+
+gate1 1572786434985 bypass1 was closed
+
+gate1 1572786864901 COMMAND:gate1 bypass open
+
+gate1 1572786867904 DEV logic 1572786867904 1 command 1572786867904: 3002 command: gate1 bypass open
+
+gate1 1572786867931 COMMAND:gate1 bypass close
+
+gate1 1572786867931 bypass1 already closed
+
+gate1 1572786867932 DEV logic 1572786867932 0 command 1572786867932: 1 command: gate1 bypass close
+
+gate1 1572786867943 COMMAND:gate1 bypass open
+
+gate1 1572786867991 DEV logic 1572786867991 0 command 1572786867991: 48 command: gate1 bypass open
+
+gate1 1572786868899 COMMAND:gate1 bypass close
+
+gate1 1572786868900 bypass1 already closed
+
+gate1 1572786868901 DEV logic 1572786868901 1 command 1572786868901: 1 command: gate1 bypass close
+
+gate1 1572786869090 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786869136 ERROR: bypass1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572786869182 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572786869995 ERROR: bypass1 wasn't closed. Low pressure in pneumo line
+
+gate1 1572787251398 COMMAND:gate1 valve open
+
+gate1 1572787251446 DEV logic 1572787251446 0 command 1572787251446: 48 command: gate1 valve open
+
+gate1 1572787252539 ERROR: valve1 wasn't opened
+
+gate1 1572787255397 COMMAND:gate1 valve close
+
+gate1 1572787255398 valve1 already closed
+
+gate1 1572787255398 DEV logic 1572787255398 1 command 1572787255398: 0 command: gate1 valve close
+
+gate1 1572787256492 valve1 was closed
+
+gate1 1572787301410 COMMAND:gate1 valve open
+
+gate1 1572787301458 DEV logic 1572787301458 0 command 1572787301458: 48 command: gate1 valve open
+
+gate1 1572787302555 ERROR: valve1 wasn't opened
+
+gate1 1572787305409 COMMAND:gate1 valve close
+
+gate1 1572787305410 valve1 already closed
+
+gate1 1572787305410 DEV logic 1572787305410 1 command 1572787305410: 0 command: gate1 valve close
+
+gate1 1572787306504 valve1 was closed
+
+gate1 1572787309412 COMMAND:gate1 valve open
+
+gate1 1572787309460 DEV logic 1572787309460 0 command 1572787309460: 48 command: gate1 valve open
+
+gate1 1572787310553 ERROR: valve1 wasn't opened
+
+gate1 1572787347398 COMMAND:gate1 valve close
+
+gate1 1572787347399 valve1 already closed
+
+gate1 1572787347399 DEV logic 1572787347399 1 command 1572787347399: 0 command: gate1 valve close
+
+gate1 1572787348492 valve1 was closed
+
+gate1 1572787633411 COMMAND:gate1 valve open
+
+gate1 1572787633460 DEV logic 1572787633460 1 command 1572787633460: 48 command: gate1 valve open
+
+gate1 1572787634554 ERROR: valve1 wasn't opened
+
+gate1 1572787636405 COMMAND:gate1 valve close
+
+gate1 1572787636405 valve1 already closed
+
+gate1 1572787636406 DEV logic 1572787636406 0 command 1572787636406: 1 command: gate1 valve close
+
+gate1 1572787637500 valve1 was closed
+
+gate1 1572787729415 COMMAND:gate1 valve open
+
+gate1 1572787729462 DEV logic 1572787729463 0 command 1572787729463: 47 command: gate1 valve open
+
+gate1 1572787730558 ERROR: valve1 wasn't opened
+
+gate1 1572787738402 COMMAND:gate1 valve close
+
+gate1 1572787738403 valve1 already closed
+
+gate1 1572787738403 DEV logic 1572787738403 1 command 1572787738403: 0 command: gate1 valve close
+
+gate1 1572787739496 valve1 was closed
+
+gate1 1572787742905 COMMAND:gate1 valve open
+
+gate1 1572787742953 DEV logic 1572787742953 0 command 1572787742953: 48 command: gate1 valve open
+
+gate1 1572787744046 ERROR: valve1 wasn't opened
+
+gate1 1572787757910 COMMAND:gate1 valve close
+
+gate1 1572787757910 valve1 already closed
+
+gate1 1572787757910 DEV logic 1572787757910 0 command 1572787757910: 0 command: gate1 valve close
+
+gate1 1572787759004 valve1 was closed
+
+gate1 1572787776920 COMMAND:gate1 valve open
+
+gate1 1572787776968 DEV logic 1572787776968 0 command 1572787776968: 48 command: gate1 valve open
+
+gate1 1572787778061 ERROR: valve1 wasn't opened
+
+gate1 1572787778915 COMMAND:gate1 valve close
+
+gate1 1572787778915 valve1 already closed
+
+gate1 1572787778915 DEV logic 1572787778916 0 command 1572787778916: 0 command: gate1 valve close
+
+gate1 1572787780009 valve1 was closed
+
+gate1 1572787849414 COMMAND:gate1 valve open
+
+gate1 1572787852416 DEV logic 1572787852417 1 command 1572787852417: 3001 command: gate1 valve open
+
+gate1 1572787859423 ERROR: valve1 wasn't opened
+
+gate1 1572787862409 COMMAND:gate1 valve close
+
+gate1 1572787862410 valve1 already closed
+
+gate1 1572787862410 DEV logic 1572787862410 1 command 1572787862410: 0 command: gate1 valve close
+
+gate1 1572787869425 valve1 was closed
+
+gate1 1572787895924 COMMAND:gate1 valve open
+
+gate1 1572787895972 DEV logic 1572787895973 0 command 1572787895973: 48 command: gate1 valve open
+
+gate1 1572787897065 ERROR: valve1 wasn't opened
+
+gate1 1572787898916 COMMAND:gate1 valve close
+
+gate1 1572787898917 valve1 already closed
+
+gate1 1572787898917 DEV logic 1572787898917 1 command 1572787898917: 0 command: gate1 valve close
+
+gate1 1572787900010 valve1 was closed
+
+gate1 1572787906904 COMMAND:gate1 valve open
+
+gate1 1572787906953 DEV logic 1572787906953 1 command 1572787906953: 48 command: gate1 valve open
+
+gate1 1572787908046 ERROR: valve1 wasn't opened
+
+gate1 1572787910404 COMMAND:gate1 valve close
+
+gate1 1572787910405 valve1 already closed
+
+gate1 1572787910405 DEV logic 1572787910405 1 command 1572787910405: 0 command: gate1 valve close
+
+gate1 1572787911499 valve1 was closed
+
+gate1 1572787920410 COMMAND:gate1 valve open
+
+gate1 1572787920459 DEV logic 1572787920459 0 command 1572787920459: 49 command: gate1 valve open
+
+gate1 1572787921552 ERROR: valve1 wasn't opened
+
+gate1 1572787929909 COMMAND:gate1 valve close
+
+gate1 1572787929909 valve1 already closed
+
+gate1 1572787929910 DEV logic 1572787929910 0 command 1572787929910: 1 command: gate1 valve close
+
+gate1 1572787931004 valve1 was closed
+
+gate1 1572787935405 COMMAND:gate1 valve open
+
+gate1 1572787935453 DEV logic 1572787935453 1 command 1572787935453: 47 command: gate1 valve open
+
+gate1 1572787936548 ERROR: valve1 wasn't opened
+
+gate1 1572787947908 COMMAND:gate1 valve close
+
+gate1 1572787947909 valve1 already closed
+
+gate1 1572787947909 DEV logic 1572787947909 1 command 1572787947909: 0 command: gate1 valve close
+
+gate1 1572787949003 valve1 was closed
+
+gate1 1572788147418 COMMAND:gate1 valve open
+
+gate1 1572788147466 DEV logic 1572788147466 0 command 1572788147466: 48 command: gate1 valve open
+
+gate1 1572788148562 ERROR: valve1 wasn't opened
+
+gate1 1572788153407 COMMAND:gate1 valve close
+
+gate1 1572788153408 valve1 already closed
+
+gate1 1572788153408 DEV logic 1572788153408 1 command 1572788153408: 0 command: gate1 valve close
+
+gate1 1572788154502 valve1 was closed
+
+gate1 1572788157417 COMMAND:gate1 valve open
+
+gate1 1572788157465 DEV logic 1572788157465 1 command 1572788157465: 47 command: gate1 valve open
+
+gate1 1572788158559 ERROR: valve1 wasn't opened
+
+gate1 1572788160408 COMMAND:gate1 valve close
+
+gate1 1572788160409 valve1 already closed
+
+gate1 1572788160409 DEV logic 1572788160409 1 command 1572788160409: 0 command: gate1 valve close
+
+gate1 1572788161503 valve1 was closed
+
+gate1 1572788188408 COMMAND:gate1 valve open
+
+gate1 1572788191411 DEV logic 1572788191411 0 command 1572788191411: 3003 command: gate1 valve open
+
+gate1 1572788198415 ERROR: valve1 wasn't opened
+
+gate1 1572788204919 COMMAND:gate1 valve close
+
+gate1 1572788204920 valve1 already closed
+
+gate1 1572788204920 DEV logic 1572788204920 1 command 1572788204920: 0 command: gate1 valve close
+
+gate1 1572788207425 valve1 was closed
+
+gate1 1572788285417 COMMAND:gate1 valve open
+
+gate1 1572788285466 DEV logic 1572788285466 0 command 1572788285466: 49 command: gate1 valve open
+
+gate1 1572788286559 ERROR: valve1 wasn't opened
+
+gate1 1572788294909 COMMAND:gate1 valve close
+
+gate1 1572788294909 valve1 already closed
+
+gate1 1572788294910 DEV logic 1572788294910 0 command 1572788294910: 1 command: gate1 valve close
+
+gate1 1572788296004 valve1 was closed
+
+gate1 1572788323911 COMMAND:gate1 valve open
+
+gate1 1572788323960 DEV logic 1572788323960 1 command 1572788323960: 48 command: gate1 valve open
+
+gate1 1572788325053 ERROR: valve1 wasn't opened
+
+gate1 1572788327927 COMMAND:gate1 valve close
+
+gate1 1572788327927 valve1 already closed
+
+gate1 1572788327928 DEV logic 1572788327928 0 command 1572788327928: 1 command: gate1 valve close
+
+gate1 1572788329022 valve1 was closed
+
+gate1 1572789206937 COMMAND:gate1 valve open
+
+gate1 1572789206985 DEV logic 1572789206985 0 command 1572789206985: 48 command: gate1 valve open
+
+gate1 1572789208078 valve1 was opened
+
+gate1 1572789223434 COMMAND:gate1 valve close
+
+gate1 1572789223482 DEV logic 1572789223482 0 command 1572789223482: 48 command: gate1 valve close
+
+gate1 1572789224576 valve1 was closed
+
+gate1 1572789237930 COMMAND:gate1 valve open
+
+gate1 1572789237978 DEV logic 1572789237978 0 command 1572789237978: 48 command: gate1 valve open
+
+gate1 1572789239071 ERROR: valve1 wasn't opened. Low pressure in pneumo line
+
+gate1 1572789247919 COMMAND:gate1 valve close
+
+gate1 1572789247967 DEV logic 1572789247967 0 command 1572789247967: 48 command: gate1 valve close
+
+gate1 1572789249060 valve1 was closed
+
+gate1 1572789250426 COMMAND:gate1 valve open
+
+gate1 1572789250475 DEV logic 1572789250475 1 command 1572789250475: 48 command: gate1 valve open
+
+gate1 1572789251569 ERROR: valve1 wasn't opened
+
+gate1 1572789266420 COMMAND:gate1 valve close
+
+gate1 1572789266421 valve1 already closed
+
+gate1 1572789266421 DEV logic 1572789266421 1 command 1572789266421: 0 command: gate1 valve close
+
+gate1 1572789267514 valve1 was closed
+
+gate1 1572789274937 COMMAND:gate1 valve open
+
+gate1 1572789274986 DEV logic 1572789274986 1 command 1572789274986: 48 command: gate1 valve open
+
+gate1 1572789276079 valve1 was opened
+
+gate1 1572789284440 COMMAND:gate1 valve close
+
+gate1 1572789284488 DEV logic 1572789284488 0 command 1572789284488: 48 command: gate1 valve close
+
+gate1 1572789285581 valve1 was closed
+
+gate1 1572789339930 COMMAND:gate1 valve open
+
+gate1 1572789339977 DEV logic 1572789339977 0 command 1572789339977: 47 command: gate1 valve open
+
+gate1 1572789341070 valve1 was opened
+
+gate1 1572789353921 COMMAND:gate1 valve close
+
+gate1 1572789353969 DEV logic 1572789353969 1 command 1572789353969: 47 command: gate1 valve close
+
+gate1 1572789355062 valve1 was closed
+

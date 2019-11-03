@@ -378,6 +378,11 @@ class GateControl extends RecordingUnit {
                        gateAnalogClosedPin =  Integer.parseInt(command[1]);
                        gateAnalogOpenedPin =  Integer.parseInt(command[2]);
                    }
+                   case "bypassanalogpins" :
+                   {
+                       bypassAnalogClosedPin =  Integer.parseInt(command[1]);
+                       bypassAnalogOpenedPin =  Integer.parseInt(command[2]);
+                   }
                    break;
                    case "maxpressuredifference" : maxPresDifference = Integer.parseInt(command[1]);
                    break;
