@@ -217,3 +217,8 @@ tmp2 1572785219130 COM123 port wasn't created!
 
 tmp2 1572785219133 COM123 is lost. Reconnecting...
 
+time device message
+tmp2 1572895406630 COM123 port wasn't created!
+
+tmp2 1572895406653 COM123 is lost. Reconnecting...
+

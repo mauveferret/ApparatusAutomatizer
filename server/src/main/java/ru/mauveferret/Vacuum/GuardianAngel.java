@@ -30,7 +30,16 @@ class GuardianAngel extends RecordingUnit {
 
     @Override
     protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
-
+        for (String someDevice: config.devices)
+        {
+            try {
+                continueChecking = initializeData.get(someDevice).split(" ")[1].equals("2");
+            }
+            catch (Exception e)
+            {
+                sendMessage("12123 "+e.getMessage());
+            }
+        }
     }
 
     /*
@@ -45,7 +54,7 @@ class GuardianAngel extends RecordingUnit {
     private Gauge vesselGauge;
     private GateControl gateControl;
     private TMP tmp;
-    private int enabled = 0;
+    private int enabled;
 
     private  String gaugeName;
     private String gateName;
@@ -58,11 +67,14 @@ class GuardianAngel extends RecordingUnit {
     public int getEnabled() {
         return enabled;
     }
+
+
     //Getters and Setters
 
     private void setContinueChecking(boolean continueChecking) {
         enabled = (continueChecking) ? 2 : 1;
         this.continueChecking = continueChecking;
+        measureAndLog();
     }
 
 
@@ -70,7 +82,6 @@ class GuardianAngel extends RecordingUnit {
 
 
     private void startCheckingPressure() {
-        continueChecking = true;
         Thread checkerThread = new Thread(() -> {
             boolean stop = false;
             while (!stop)
@@ -180,7 +191,10 @@ class GuardianAngel extends RecordingUnit {
                         Thread.sleep(50);
                     }
                 }
-                catch (Exception ignored){ignored.printStackTrace(); continueChecking = false; }
+                catch (Exception ignored){
+                    sendMessage("can't continue checking!");
+                    continueChecking = false;
+                }
 
                 try {
                     Thread.sleep(1000);
@@ -241,5 +255,10 @@ class GuardianAngel extends RecordingUnit {
     }
 
     @Override
-    protected void measureAndLog() {}
+    protected void measureAndLog() {
+        for (String someDevice: config.devices)
+        {
+            loggerMap.get(someDevice).write("time " + ((continueChecking) ? 2 : 1)+" "+enabled);
+        }
+    }
 }

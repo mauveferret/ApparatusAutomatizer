@@ -1185,3 +1185,6 @@ arduino2 1572785223103 Analog signal on pin 0 is  -1.0
 
 arduino2 1572785223103 DEV logic 1572785223103 0 command 1572785223103: 1 command: deviceCommand aread 0
 
+time device message
+arduino2 1572895406484 Port name doesn't exist
+

@@ -179,3 +179,4 @@ angel1 1572785250386 COMMAND:ang1 stop
 
 angel1 1572785250386 DEV logic 1572785250386 0 command 1572785250386: 0 command: ang1 stop
 
+time device message

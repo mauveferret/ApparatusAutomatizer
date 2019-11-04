@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5294dfc8-cdd4-4cda-9d31-a5baf50a4b27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/angel1/firstAngel1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vacuum/data/values/angel2/secondAngel2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/arduino1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/control1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/control1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/angel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/angel1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vacuum/angel2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/angel2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino1Data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/arduino2Data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/control1Data.txt" afterDir="false" />
@@ -25,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gate2/valve2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column11.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/column21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/vessel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge1/vessel1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/vessel1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/gauge3/vessel1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/current1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/data/values/tmp1/frequency1.txt" afterDir="false" />
@@ -53,6 +54,8 @@
       <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp1Log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vacuum/logs/tmp2Log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GateControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/GuardianAngel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/mauveferret/Vacuum/VacuumServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,20 +118,8 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\resources" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
-      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.mauveferret.Controllers" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.mauveferret" />
-      <recent name="ru.mauveferret.Discharge" />
-      <recent name="ru.mauveferret.Vacuum" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dgbulgadaryan.2133-20115\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
@@ -136,6 +127,18 @@
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\pics" />
       <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\target\classes\ru\mauveferret" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.mauveferret" />
+      <recent name="ru.mauveferret.Discharge" />
+      <recent name="ru.mauveferret.Vacuum" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\fxml\css" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers\pics\icons" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\src\main\resources\ru\mauveferret\Controllers" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\resources\pics" />
+      <recent name="C:\Users\mauve\Git\ApparatusAutomatizer\client\recources\pics\icons" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -150,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="Application.server">
     <configuration name="client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.mauveferret.Main" />
       <module name="client" />
@@ -301,16 +304,73 @@
       <workItem from="1571322478084" duration="8601000" />
       <workItem from="1571399072465" duration="19666000" />
       <workItem from="1571475157310" duration="5850000" />
-      <workItem from="1571551124611" duration="11149000" />
-      <workItem from="1571739248550" duration="17530000" />
-      <workItem from="1571822227677" duration="8467000" />
-      <workItem from="1571927702856" duration="31638000" />
-      <workItem from="1572029463917" duration="1022000" />
-      <workItem from="1572102039825" duration="1914000" />
-      <workItem from="1572115069186" duration="325000" />
-      <workItem from="1572285109863" duration="2720000" />
-      <workItem from="1572689983114" duration="7712000" />
-      <workItem from="1572784126959" duration="1966000" />
+      <workItem from="1571551124611" duration="13680000" />
+      <workItem from="1571687646827" duration="793000" />
+      <workItem from="1572893492844" duration="634000" />
+      <workItem from="1572894597971" duration="2745000" />
+    </task>
+    <task id="LOCAL-00031" summary="client/server conection works good, encryption made">
+      <created>1568008935701</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1568008935701</updated>
+    </task>
+    <task id="LOCAL-00032" summary="everything works, checked">
+      <created>1568101430608</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1568101430608</updated>
+    </task>
+    <task id="LOCAL-00033" summary="some errors removed, some graphics added to client">
+      <created>1568116889930</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1568116889931</updated>
+    </task>
+    <task id="LOCAL-00034" summary="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog">
+      <created>1568142682473</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1568142682473</updated>
+    </task>
+    <task id="LOCAL-00035" summary="started adding accessLevel, removed Device from runCommand, added initialize with measureAndLog">
+      <created>1568149387018</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1568149387018</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Pfeiffer gauges added">
+      <created>1568199296804</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1568199296804</updated>
+    </task>
+    <task id="LOCAL-00037" summary="passwords.txt crypted">
+      <created>1568237288802</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1568237288802</updated>
+    </task>
+    <task id="LOCAL-00038" summary="gauges and serial works properly. &quot;deviceWorks&quot; added to gauge, needs control">
+      <created>1568307744100</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568307744100</updated>
+    </task>
+    <task id="LOCAL-00039" summary="some experiments with pom. works from IDE, bout not from javaFx-maven-plugin">
+      <created>1568471707620</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1568471707620</updated>
     </task>
     <task id="LOCAL-00040" summary="client improved, vacuum module added, charts don't work">
       <created>1568551238587</created>
@@ -585,77 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571557133845</updated>
     </task>
-    <task id="LOCAL-00079" summary="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made">
-      <created>1571765489036</created>
+    <task id="LOCAL-00079" summary="angel and autopumping started">
+      <created>1571586641543</created>
       <option name="number" value="00079" />
       <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1571765489037</updated>
+      <updated>1571586641543</updated>
     </task>
-    <task id="LOCAL-00080" summary="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!">
-      <created>1571768192266</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1571768192266</updated>
-    </task>
-    <task id="LOCAL-00081" summary="angel is made, started making AUTO">
-      <created>1571851882649</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1571851882649</updated>
-    </task>
-    <task id="LOCAL-00082" summary="some shit in angel and gateControl, its logic is too confused">
-      <created>1571935021442</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1571935021442</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Vacuum Units created. It unifies units loading">
-      <created>1572010965358</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1572010965358</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure">
-      <created>1572022668943</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1572022668943</updated>
-    </task>
-    <task id="LOCAL-00085" summary="...seems to work">
-      <created>1572025408687</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1572025408687</updated>
-    </task>
-    <task id="LOCAL-00086" summary="...seems to work">
-      <created>1572025594563</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1572025594563</updated>
-    </task>
-    <task id="LOCAL-00087" summary="seems to work, but some error occures on arduino">
-      <created>1572029316553</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1572029316553</updated>
-    </task>
-    <task id="LOCAL-00088" summary="seems to work, ready for tests with hardware">
-      <created>1572030433694</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1572030433694</updated>
-    </task>
-    <option name="localTasksCounter" value="89" />
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,6 +673,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="some GUI elements added" />
+    <MESSAGE value="some css added" />
+    <MESSAGE value="plot improved" />
+    <MESSAGE value="ROM and CPU consume reduced" />
+    <MESSAGE value="correct jar files can be now created" />
+    <MESSAGE value="Launch4J maven plugin works" />
+    <MESSAGE value="log scale fixed" />
+    <MESSAGE value="indicators made" />
     <MESSAGE value="Leybold control and measuring made, strange error happens" />
     <MESSAGE value="Leybold TMP works! It can be controlled and data can be logged" />
     <MESSAGE value="TMP in client made, TMP can be controlled" />
@@ -692,15 +697,7 @@
     <MESSAGE value="moved measureAndLog() to recodingUnit" />
     <MESSAGE value="some bugs fixed" />
     <MESSAGE value="TMP initialize made" />
-    <MESSAGE value="client load initial parameters from the server, buttons works with new protocol, some small GUI fixes made" />
-    <MESSAGE value="many GUI bags fixed, it works! Was checked on Ubntu 19.04 server, also works!" />
-    <MESSAGE value="angel is made, started making AUTO" />
-    <MESSAGE value="some shit in angel and gateControl, its logic is too confused" />
-    <MESSAGE value="Vacuum Units created. It unifies units loading" />
-    <MESSAGE value="Vacuum Units created. it is a piece of a shit..need to rebuild gauge's structure" />
-    <MESSAGE value="...seems to work" />
-    <MESSAGE value="seems to work, but some error occures on arduino" />
-    <MESSAGE value="seems to work, ready for tests with hardware" />
-    <option name="LAST_COMMIT_MESSAGE" value="seems to work, ready for tests with hardware" />
+    <MESSAGE value="angel and autopumping started" />
+    <option name="LAST_COMMIT_MESSAGE" value="angel and autopumping started" />
   </component>
 </project>

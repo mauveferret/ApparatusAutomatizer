@@ -415,3 +415,20 @@ gauge1 1572785219194 COM49 is lost. Reconnecting...
 
 gauge1 1572785219194 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
 
+time device message
+gauge1 1572895406443 Port name doesn't exist
+
+gauge1 1572895406649 port wasn't created!
+
+gauge1 1572895406668 message wasn't written ongauge1
+
+gauge1 1572895406675 null
+
+gauge1 1572895406688 null
+
+gauge1 1572895406690 Error during measuring pressure by 1 gauge.Message too short
+
+gauge1 1572895406694 COM49 is lost. Reconnecting...
+
+gauge1 1572895406694 Port name - COM49; Method name - closePort(); Exception type - Port not opened.
+

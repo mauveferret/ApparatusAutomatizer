@@ -16,7 +16,6 @@ or "please open valve when pressure before is much another tha pressure after"
  */
 class GateControl extends RecordingUnit {
 
-    //FIXME remove Control device
 
     GateControl(String fileName) {
         super(fileName);
@@ -46,17 +45,15 @@ class GateControl extends RecordingUnit {
             }
             catch (Exception e)
             {
-                sendMessage("12123 "+e.getMessage());
+                sendMessage("Values loading error. Check the file! "+e.getMessage());
             }
         }
     }
 
-    //key - device name (pump, bypass, valve, gate), value - ststus int number or boolean number
+    //key - device name (pump, bypass, valve, gate), value - status int number or boolean number
     private HashMap<String, Integer> status = new HashMap<>();
     private HashMap<String, Boolean> opened = new HashMap<>();
 
-    private String arduinoName;
-    private String gaugeName;
     private Arduino arduino;
     private Gauge columnGauge;
     private Gauge vesselGauge;

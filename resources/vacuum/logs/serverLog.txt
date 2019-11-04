@@ -165,3 +165,6 @@ vacuumServer 1572785219155 vacuumServer launched at port 4004. Its IP is 0.0.0.0
 
 vacuumServer 1572785233878 Access granted to admin
 
+time device message
+vacuumServer 1572895406632 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+

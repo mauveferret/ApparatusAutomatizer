@@ -2607,3 +2607,4 @@ gate1 1572789353969 DEV logic 1572789353969 1 command 1572789353969: 47 command:
 
 gate1 1572789355062 valve1 was closed
 
+time device message

@@ -714,3 +714,26 @@ gauge3 1572785219138 Port name - COM8; Method name - closePort(); Exception type
 
 gauge3 1572785219138 Port name - COM8; Method name - closePort(); Exception type - Port not opened.
 
+time device message
+gauge3 1572895406466 Port name doesn't exist
+
+gauge3 1572895406629 port wasn't created!
+
+gauge3 1572895406644 message wasn't written ongauge3
+
+gauge3 1572895406648 null
+
+gauge3 1572895406671 null
+
+gauge3 1572895406676 port wasn't created!
+
+gauge3 1572895406679 message wasn't written ongauge3
+
+gauge3 1572895406681 null
+
+gauge3 1572895406687 null
+
+gauge3 1572895406689 COM8 is lost. Reconnecting...
+
+gauge3 1572895406689 Port name - COM8; Method name - closePort(); Exception type - Port not opened.
+

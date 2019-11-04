@@ -224,3 +224,5 @@ forlineStatus  bypassStatus valveStatus   gateStatus
 1572785127210 4 4 2 4 
 forlineStatus  bypassStatus valveStatus   gateStatus
 1572785219128 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1572895406605 4 4 2 4 

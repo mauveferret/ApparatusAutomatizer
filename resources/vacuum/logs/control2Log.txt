@@ -297,3 +297,4 @@ gate2 1572785222097 DEV logic 1572785222097 1 command 1572785222097: 16 command:
 
 gate2 1572785223107 ERROR: bypass2 wasn't closed. Low pressure in pneumo line
 
+time device message

@@ -8,3 +8,4 @@ this
 number 2
 firstColumnGaugeName column2
 VesselGaugeName vessel
+devices secondAngel

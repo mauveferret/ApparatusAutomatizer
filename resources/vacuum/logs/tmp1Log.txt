@@ -239,3 +239,8 @@ tmp1 1572785219130 COM51 port wasn't created!
 
 tmp1 1572785219136 COM51 is lost. Reconnecting...
 
+time device message
+tmp1 1572895406621 COM51 port wasn't created!
+
+tmp1 1572895406652 COM51 is lost. Reconnecting...
+

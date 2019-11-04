@@ -118,16 +118,21 @@ class VacuumServer extends Server {
     private String columnMainParameters(int columnNumber){
         GateControl localCOntrol;
         TMP localTMP;
+        GuardianAngel localAngel;
+
         if (columnNumber == 1)
         {
             localCOntrol = gateControl1;
             localTMP = tmp1;
+            localAngel = angel1;
         }
         else {
             localCOntrol = gateControl2;
             localTMP = tmp2;
+            localAngel = angel2;
         }
-        String columnData = "002";
+        String columnData = "0"; //auto
+        columnData+=""+localAngel.getEnabled()+"2"; //angel + gauges
         columnData+=localCOntrol.getPumpStatus()+""+localCOntrol.getBypassStatus();
         columnData+=localCOntrol.getValveStatus()+""+localCOntrol.getGateStatus();
         columnData+=booleanTOProtocol(localTMP.isControlOn())+""+booleanTOProtocol(localTMP.isEnabled());
@@ -222,7 +227,7 @@ class VacuumServer extends Server {
             }
             break;
             case 1: {
-                terminalSample.launchCommand(localAngel.config.unitCommand+" "+(comIs2? "start" : "stop"),
+                terminalSample.launchCommand(localAngel.config.unitCommand+" "+(comIs2 ? "start" : "stop"),
                         true, accessLevel);
             }
             break;
