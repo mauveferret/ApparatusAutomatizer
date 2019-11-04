@@ -25,9 +25,14 @@ public abstract class SerialUnit extends RecordingUnit {
 
     //SerialUnit(){}
 
-    //Getters
+    //Getters AND SETTERS
 
-    protected boolean isReconnectActive() {
+
+    synchronized  private void setReconnectActive(boolean reconnectActive) {
+        isReconnectActive = reconnectActive;
+    }
+
+    synchronized protected boolean isReconnectActive() {
         return isReconnectActive;
     }
 
@@ -176,7 +181,7 @@ public abstract class SerialUnit extends RecordingUnit {
             return true;
         }
         catch (SerialPortException ex) {
-            if (!isReconnectActive) sendMessage(ex.getLocalizedMessage());
+            //if (!isReconnectActive) sendMessage("Cant't close port: "+ex.getLocalizedMessage());
             return false;
         }
     }
@@ -188,7 +193,10 @@ public abstract class SerialUnit extends RecordingUnit {
             Thread.sleep(delay);
         }
         catch (Exception ignored){}
-        return readString(endOfLine);
+        if (!isReconnectActive)
+            return readString(endOfLine);
+        else
+            return "ConnectionLost";
     }
 
     protected synchronized String readString(String endOfLine) {
@@ -201,19 +209,21 @@ public abstract class SerialUnit extends RecordingUnit {
                     answer += (new String(serialPort.readBytes(1)));
                 }
                 if (System.currentTimeMillis() - startTime > 3000) {
-                    if (!isReconnectActive)
+                    if (!isReconnectActive) {
                         sendMessage(config.name + " message wasn't got.");
-                    //FIXME is it really necessary?
-                    reconnect();
+                        //FIXME is it really necessary?
+                        reconnect();
+                    }
                     break;
                 }
             }
             return answer;
         }
         catch (SerialPortException|NullPointerException e) {
-            if (!isReconnectActive)
-                sendMessage(e.getLocalizedMessage());
-            reconnect();
+            if (!isReconnectActive){
+                //sendMessage(""e.getLocalizedMessage());
+                 reconnect();
+            }
             return "error";
         }
     }
@@ -233,14 +243,13 @@ public abstract class SerialUnit extends RecordingUnit {
        catch (SerialPortException e)
        {
            if (!isReconnectActive) {
-               sendMessage(e.getMessage());
+               //sendMessage(e.getMessage());
                reconnect();
            }
            return  null;
        }
     }
 
-    //FIXME repeating code
     protected synchronized boolean writeBytes(byte[] message)
     {
         try
@@ -303,23 +312,23 @@ public abstract class SerialUnit extends RecordingUnit {
             sendMessage(ex.getPortName()+" не прокатило!!");
         }
         catch (NullPointerException ignored){}
-        if (!isReconnectActive)
-            sendMessage(e.getMessage());
-        reconnect();
+        if (!isReconnectActive) {
+            //sendMessage(e.getMessage());
+            reconnect();
+        }
     }
 
     protected synchronized void reconnect() {
         reconnectionThread = new Thread(() -> {
             try {
-                try {
-                    closePort();
-                }
+                try {closePort();}
                 catch (Exception ignored){}
                 String comPortName = config.unitPort;
                 serialPort = new SerialPort(comPortName);
-                if (!isReconnectActive)
+                if (!isReconnectActive) {
+                    setReconnectActive(true);
                     sendMessage(serialPort.getPortName() + " is lost. Reconnecting...");
-                isReconnectActive = true;
+                }
                 long t1 = System.currentTimeMillis();
                 while (!(serialPort.isOpened() && callDevice())) {
                     openPort(comPortName);
@@ -335,7 +344,7 @@ public abstract class SerialUnit extends RecordingUnit {
                     catch (Exception ignored){}
                 }
                 sendMessage("Reconnected.");
-                isReconnectActive = false;
+                setReconnectActive(false);
 
                 try {
                     Thread.sleep(3000);
@@ -347,13 +356,18 @@ public abstract class SerialUnit extends RecordingUnit {
                 //FIXME very bad!!!
                 if (!"".equals(getReceivedCommand()))
                 terminalSample.launchCommand(receivedCommand, true, receivedAccessLevel);
-            } catch (NullPointerException e) {
-                isReconnectActive = false;
+            } catch (Exception e) {
+                setReconnectActive(false);
                 sendMessage("port wasn't found.");
             }
         });
         reconnectionThread.setName("reconnection");
-        reconnectionThread.start();
+        if (!isReconnectActive) reconnectionThread.start();
+
+        try {
+            Thread.sleep(1000);
+        }
+        catch (Exception ignored){}
     }
 
     private void findPort()
