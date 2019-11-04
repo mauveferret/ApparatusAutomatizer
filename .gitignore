@@ -117,3 +117,5 @@ buildNumber.properties
 !/resources/vacuum/logs/auto2Log.txt
 !/resources/vacuum/logs/arduino1Log.txt
 !/resources/vacuum/logs/arduino2Log.txt
+!/resources/vacuum/logs/
+!/resources/vacuum/logs/
