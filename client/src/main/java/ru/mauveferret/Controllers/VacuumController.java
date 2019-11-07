@@ -90,7 +90,7 @@ public class VacuumController {
             for (int i=0; i<message[2].length();i++)
             {
                 buttons1[i] = (message[2].charAt(i)+"").equals("2");
-                if (i<7) line1ButtonControls[i].setText((buttons1[i]) ? ">" : "<");
+                if (i<=7) line1ButtonControls[i].setText((buttons1[i]) ? ">" : "<");
                 gaugeControl.setText("GAUGES "+(buttons1[2] ? "ON" : "OFF"));
                 tmp1Cooling.setText("CONTROL "+(buttons1[7] ? "ON" : "OFF"));
                 tmp1Cooling.setText("COOL "+(buttons1[9] ? "ON" : "OFF"));

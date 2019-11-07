@@ -1,0 +1,12 @@
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573123223748 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573123792751 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573124069369 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573124392975 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573125015960 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573125034018 0 0 0.0 0.0 null

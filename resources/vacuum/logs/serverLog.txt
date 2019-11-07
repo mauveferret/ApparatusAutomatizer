@@ -1,0 +1,48 @@
+time device message
+vacuumServer 1573123222723 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573123236568 Access granted to admin
+
+vacuumServer 1573123277427 admin disconnected
+
+vacuumServer 1573123288023 Access granted to admin
+
+vacuumServer 1573123304806 admin disconnected
+
+vacuumServer 1573123542207 Access granted to admin
+
+time device message
+vacuumServer 1573123791732 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573123800116 Access granted to admin
+
+vacuumServer 1573123816124 admin disconnected
+
+time device message
+vacuumServer 1573124068356 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573124089844 Access granted to admin
+
+vacuumServer 1573124121585 admin disconnected
+
+time device message
+vacuumServer 1573124391971 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573124431368 Access granted to admin
+
+vacuumServer 1573124441571 admin disconnected
+
+vacuumServer 1573124733814 Access granted to admin
+
+vacuumServer 1573124739693 admin disconnected
+
+time device message
+vacuumServer 1573125014943 server met some error Address already in use: NET_Bind
+
+time device message
+vacuumServer 1573125032998 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573125041423 Access granted to admin
+
+vacuumServer 1573125050385 admin disconnected
+

@@ -9,7 +9,7 @@ class GuardianAngel extends RecordingUnit {
     GuardianAngel(String fileName) {
         super(fileName);
         unitAccessLevel = 2;
-        enabled = 0;
+        enabled = 1;
     }
 
     @Override
@@ -24,7 +24,7 @@ class GuardianAngel extends RecordingUnit {
             Thread.sleep(3000);
         }
         catch (Exception ignored){}
-        enabled = 0;
+        enabled = 1;
         startCheckingPressure();
     }
 

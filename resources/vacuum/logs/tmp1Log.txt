@@ -1,0 +1,70 @@
+time device message
+tmp1 1573123222729 COM51 port wasn't created!
+
+tmp1 1573123223741 COM51 is lost. Reconnecting...
+
+tmp1 1573123254294 COMMAND:tmp1 run
+
+tmp1 1573123254311 DEV logic 1573123254311 1 command 1573123254311: 0 command: tmp1 run
+
+tmp1 1573123254793 COMMAND:tmp1 stop
+
+tmp1 1573123254803 DEV logic 1573123254803 10 command 1573123254803: 0 command: tmp1 stop
+
+tmp1 1573123300777 COMMAND:tmp1 run
+
+tmp1 1573123300777 DEV logic 1573123300777 0 command 1573123300777: 0 command: tmp1 run
+
+tmp1 1573123301290 COMMAND:tmp1 stop
+
+tmp1 1573123301290 DEV logic 1573123301290 0 command 1573123301290: 0 command: tmp1 stop
+
+time device message
+tmp1 1573123791727 COM51 port wasn't created!
+
+tmp1 1573123792743 COM51 is lost. Reconnecting...
+
+tmp1 1573123804462 COMMAND:tmp1 run
+
+tmp1 1573123804469 DEV logic 1573123804470 0 command 1573123804470: 0 command: tmp1 run
+
+tmp1 1573123806460 COMMAND:tmp1 stop
+
+tmp1 1573123806461 DEV logic 1573123806461 1 command 1573123806461: 0 command: tmp1 stop
+
+time device message
+tmp1 1573124068349 COM51 port wasn't created!
+
+tmp1 1573124069356 COM51 is lost. Reconnecting...
+
+tmp1 1573124101417 COMMAND:tmp1 run
+
+tmp1 1573124101425 DEV logic 1573124101425 1 command 1573124101425: 0 command: tmp1 run
+
+tmp1 1573124103917 COMMAND:tmp1 stop
+
+tmp1 1573124103917 DEV logic 1573124103917 0 command 1573124103917: 0 command: tmp1 stop
+
+tmp1 1573124118417 COMMAND:tmp1 run
+
+tmp1 1573124118417 DEV logic 1573124118417 0 command 1573124118417: 0 command: tmp1 run
+
+tmp1 1573124118917 COMMAND:tmp1 stop
+
+tmp1 1573124118918 DEV logic 1573124118918 1 command 1573124118918: 0 command: tmp1 stop
+
+time device message
+tmp1 1573124391966 COM51 port wasn't created!
+
+tmp1 1573124392972 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1573125014945 COM51 port wasn't created!
+
+tmp1 1573125015950 COM51 is lost. Reconnecting...
+
+time device message
+tmp1 1573125033004 COM51 port wasn't created!
+
+tmp1 1573125034009 COM51 is lost. Reconnecting...
+

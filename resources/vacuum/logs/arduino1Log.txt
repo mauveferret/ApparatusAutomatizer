@@ -1,0 +1,18 @@
+time device message
+arduino1 1573123222637 Port name doesn't exist
+
+time device message
+arduino1 1573123791633 Port name doesn't exist
+
+time device message
+arduino1 1573124068281 Port name doesn't exist
+
+time device message
+arduino1 1573124391888 Port name doesn't exist
+
+time device message
+arduino1 1573125014850 Port name doesn't exist
+
+time device message
+arduino1 1573125032929 Port name doesn't exist
+

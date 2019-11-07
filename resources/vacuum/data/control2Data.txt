@@ -1,0 +1,12 @@
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573123222712 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573123791724 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573124068345 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573124391957 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573125014914 4 4 2 4 
+forlineStatus  bypassStatus valveStatus   gateStatus
+1573125033004 4 4 2 4 
