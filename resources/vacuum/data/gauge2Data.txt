@@ -1,26 +1,26 @@
 time  column1,torr column2,torr vessel torr  
-1573302643580 1,350e-01 
+1573302643575 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573308260468 1,350e-01 
+1573308260469 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573308630999 1,350e-01 
+1573308631000 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573308668754 1,350e-01 
+1573308668753 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573308748323 1,350e-01 
+1573308748325 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573309203383 1,350e-01 
+1573309203386 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573309556147 1,350e-01 
+1573309556147 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573309669110 1,350e-01 
+1573309669110 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573309830893 1,350e-01 
+1573309830896 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573310067005 1,350e-01 
+1573310067002 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573310100622 1,350e-01 
+1573310100633 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573310437411 1,350e-01 
+1573310437413 0,000e+00 
 time  column1,torr column2,torr vessel torr  
-1573310578221 1,350e-01 
+1573310578231 0,000e+00 

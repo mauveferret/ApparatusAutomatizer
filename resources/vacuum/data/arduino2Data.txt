@@ -1,12 +1,26 @@
 time  digitalPinsStatus analogPinsStatus
-1573123222713 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573302637560 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
-1573123791721 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573308254454 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
-1573124068332 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573308624994 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
-1573124391955 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573308662724 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
-1573125014921 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573308742308 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
-1573125033002 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1573309197367 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573309550130 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573309663058 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573309824873 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573310060970 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573310094602 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573310431395 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573310572229 digital: 0 0 0 0 0 0 0 0 0 0 0 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 

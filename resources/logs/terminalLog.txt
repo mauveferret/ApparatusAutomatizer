@@ -1,0 +1,24 @@
+time device message
+terminal 1573309197325 Enter login and password, please.
+
+time device message
+terminal 1573309550082 Enter login and password, please.
+
+time device message
+terminal 1573309662999 Enter login and password, please.
+
+time device message
+terminal 1573309824828 Enter login and password, please.
+
+time device message
+terminal 1573310060928 Enter login and password, please.
+
+time device message
+terminal 1573310094577 Enter login and password, please.
+
+time device message
+terminal 1573310431357 Enter login and password, please.
+
+time device message
+terminal 1573310572174 Enter login and password, please.
+

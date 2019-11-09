@@ -3,4 +3,19 @@ time device message
 time device message
 time device message
 time device message
+angel1 1573308893630 COMMAND:ang1 start
+
+angel1 1573308893630 DEV logic 1573308893630 0 command 1573308893630: 0 command: ang1 start
+
+angel1 1573308914626 COMMAND:ang1 stop
+
+angel1 1573308914627 DEV logic 1573308914627 0 command 1573308914627: 1 command: ang1 stop
+
+time device message
+time device message
+time device message
+time device message
+time device message
+time device message
+time device message
 time device message

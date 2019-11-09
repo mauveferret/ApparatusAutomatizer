@@ -18,7 +18,6 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-
   <dependencies>
     <dependency>
       <groupId>org.scream3r</groupId>
@@ -50,7 +49,7 @@
             <goals><goal>launch4j</goal></goals>
             <configuration>
               <headerType>console</headerType>
-              <jar>${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.jar</jar>
+              <jar>${project.build.directory}/${project.artifactId}.jar</jar>
               <outfile>${project.build.directory}/${project.artifactId}.exe</outfile>
               <errTitle>some went wrong</errTitle>
               <classPath>

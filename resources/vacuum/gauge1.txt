@@ -7,5 +7,5 @@ this
 number 1
 name gauge1
 port COM49
-devices column1 column2 
+devices column1
 open COM49

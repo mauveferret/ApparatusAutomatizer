@@ -1,54 +1,177 @@
 time device message
-gauge3 1573123222633 Port name doesn't exist
+gauge3 1573302637475 Port name doesn't exist
 
-gauge3 1573123222728 port wasn't created!
+gauge3 1573302637572 port wasn't created!
 
-gauge3 1573123223729 message wasn't written ongauge3
+gauge3 1573302638579 message wasn't written ongauge3
 
-gauge3 1573123225729 port wasn't created!
+gauge3 1573302640579 port wasn't created!
 
-gauge3 1573123226729 message wasn't written ongauge3
+gauge3 1573302641580 message wasn't written ongauge3
 
-gauge3 1573123228729 COM8 is lost. Reconnecting...
-
-gauge3 1573123228731 COM8 is lost. Reconnecting...
+gauge3 1573302643580 COM8 is lost. Reconnecting...
 
 time device message
-gauge3 1573123791627 Port name doesn't exist
+gauge3 1573308254366 Port name doesn't exist
 
-gauge3 1573123791731 port wasn't created!
+gauge3 1573308254467 port wasn't created!
 
-gauge3 1573123792743 message wasn't written ongauge3
+gauge3 1573308255467 message wasn't written ongauge3
 
-gauge3 1573123794750 port wasn't created!
+gauge3 1573308257467 port wasn't created!
 
-gauge3 1573123795750 message wasn't written ongauge3
+gauge3 1573308258467 message wasn't written ongauge3
 
-gauge3 1573123797751 COM8 is lost. Reconnecting...
-
-time device message
-gauge3 1573125014846 Port name doesn't exist
-
-gauge3 1573125014946 port wasn't created!
-
-gauge3 1573125015947 message wasn't written ongauge3
-
-gauge3 1573125017948 port wasn't created!
-
-gauge3 1573125018948 message wasn't written ongauge3
-
-gauge3 1573125020949 COM8 is lost. Reconnecting...
+gauge3 1573308260467 COM8 is lost. Reconnecting...
 
 time device message
-gauge3 1573125032925 Port name doesn't exist
+gauge3 1573308624911 Port name doesn't exist
 
-gauge3 1573125033009 port wasn't created!
+gauge3 1573308624998 port wasn't created!
 
-gauge3 1573125034015 message wasn't written ongauge3
+gauge3 1573308625999 message wasn't written ongauge3
 
-gauge3 1573125036015 port wasn't created!
+gauge3 1573308627999 port wasn't created!
 
-gauge3 1573125037015 message wasn't written ongauge3
+gauge3 1573308628999 message wasn't written ongauge3
 
-gauge3 1573125039015 COM8 is lost. Reconnecting...
+gauge3 1573308630999 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573308662620 Port name doesn't exist
+
+gauge3 1573308662749 port wasn't created!
+
+gauge3 1573308663750 message wasn't written ongauge3
+
+gauge3 1573308665751 port wasn't created!
+
+gauge3 1573308666751 message wasn't written ongauge3
+
+gauge3 1573308668751 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573308742228 Port name doesn't exist
+
+gauge3 1573308742318 port wasn't created!
+
+gauge3 1573308743322 message wasn't written ongauge3
+
+gauge3 1573308745322 port wasn't created!
+
+gauge3 1573308746323 message wasn't written ongauge3
+
+gauge3 1573308748323 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573309197293 Port name doesn't exist
+
+gauge3 1573309197380 port wasn't created!
+
+gauge3 1573309198381 message wasn't written ongauge3
+
+gauge3 1573309200381 port wasn't created!
+
+gauge3 1573309201381 message wasn't written ongauge3
+
+gauge3 1573309203383 port wasn't created!
+
+gauge3 1573309204385 message wasn't written ongauge3
+
+gauge3 1573309206386 port wasn't created!
+
+gauge3 1573309207386 message wasn't written ongauge3
+
+gauge3 1573309209388 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573309550049 Port name doesn't exist
+
+gauge3 1573309550145 port wasn't created!
+
+gauge3 1573309551146 message wasn't written ongauge3
+
+gauge3 1573309553147 port wasn't created!
+
+gauge3 1573309554147 message wasn't written ongauge3
+
+gauge3 1573309556147 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573309662964 Port name doesn't exist
+
+gauge3 1573309663106 port wasn't created!
+
+gauge3 1573309664108 message wasn't written ongauge3
+
+gauge3 1573309666108 port wasn't created!
+
+gauge3 1573309667109 message wasn't written ongauge3
+
+gauge3 1573309669109 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573309824791 Port name doesn't exist
+
+gauge3 1573309824890 port wasn't created!
+
+gauge3 1573309825891 message wasn't written ongauge3
+
+gauge3 1573309827892 port wasn't created!
+
+gauge3 1573309828892 message wasn't written ongauge3
+
+gauge3 1573309830892 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573310060890 Port name doesn't exist
+
+gauge3 1573310061002 port wasn't created!
+
+gauge3 1573310062004 message wasn't written ongauge3
+
+gauge3 1573310064004 port wasn't created!
+
+gauge3 1573310065004 message wasn't written ongauge3
+
+gauge3 1573310067004 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573310094530 Port name doesn't exist
+
+gauge3 1573310094617 port wasn't created!
+
+gauge3 1573310095621 message wasn't written ongauge3
+
+gauge3 1573310097621 port wasn't created!
+
+gauge3 1573310098622 message wasn't written ongauge3
+
+gauge3 1573310100622 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573310431318 Port name doesn't exist
+
+gauge3 1573310431407 port wasn't created!
+
+gauge3 1573310432409 message wasn't written ongauge3
+
+gauge3 1573310434409 port wasn't created!
+
+gauge3 1573310435409 message wasn't written ongauge3
+
+gauge3 1573310437410 COM8 is lost. Reconnecting...
+
+time device message
+gauge3 1573310572135 Port name doesn't exist
+
+gauge3 1573310572217 port wasn't created!
+
+gauge3 1573310573218 message wasn't written ongauge3
+
+gauge3 1573310575220 port wasn't created!
+
+gauge3 1573310576220 message wasn't written ongauge3
+
+gauge3 1573310578220 COM8 is lost. Reconnecting...
 

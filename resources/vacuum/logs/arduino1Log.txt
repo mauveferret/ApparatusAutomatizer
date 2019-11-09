@@ -1,18 +1,51 @@
 time device message
-arduino1 1573123222637 Port name doesn't exist
+arduino1 1573302637479 Port name doesn't exist
 
 time device message
-arduino1 1573123791633 Port name doesn't exist
+arduino1 1573308254371 Port name doesn't exist
 
 time device message
-arduino1 1573124068281 Port name doesn't exist
+arduino1 1573308624916 Port name doesn't exist
 
 time device message
-arduino1 1573124391888 Port name doesn't exist
+arduino1 1573308662625 Port name doesn't exist
 
 time device message
-arduino1 1573125014850 Port name doesn't exist
+arduino1 1573308742238 Port name doesn't exist
+
+arduino1 1573308897132 COMMAND:deviceCommand dwrite 10 0
+
+arduino1 1573308897137 port wasn't created!
+
+arduino1 1573308898137 message wasn't written onarduino1
+
+arduino1 1573308900138 LOW on pin 10 isn't set
+
+arduino1 1573308900139 COM10 is lost. Reconnecting...
+
+arduino1 1573308900139 DEV logic 1573308900139 1 command 1573308900139: 3006 command: deviceCommand dwrite 10 0
 
 time device message
-arduino1 1573125032929 Port name doesn't exist
+arduino1 1573309197296 Port name doesn't exist
+
+time device message
+arduino1 1573309550053 Port name doesn't exist
+
+time device message
+arduino1 1573309662969 Port name doesn't exist
+
+time device message
+arduino1 1573309824796 Port name doesn't exist
+
+time device message
+arduino1 1573310060894 Port name doesn't exist
+
+time device message
+arduino1 1573310094534 Port name doesn't exist
+
+time device message
+arduino1 1573310431324 Port name doesn't exist
+
+time device message
+arduino1 1573310572140 Port name doesn't exist
 

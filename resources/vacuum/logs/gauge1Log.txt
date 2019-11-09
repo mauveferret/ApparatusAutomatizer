@@ -1,66 +1,55 @@
 time device message
-gauge1 1573123222586 Port name doesn't exist
+gauge1 1573302637456 COM49 is opened
 
-gauge1 1573123222741 port wasn't created!
+gauge1 1573302640599 gauge1 message wasn't got.
 
-gauge1 1573123223743 message wasn't written ongauge1
+gauge1 1573302641600 Error during measuring pressure by 1 gauge.Message too short
 
-gauge1 1573123225803 Error during measuring pressure by 1 gauge.Message too short
+gauge1 1573302641601 COM49 is closed
 
-gauge1 1573123225803 COM49 is lost. Reconnecting...
-
-time device message
-gauge1 1573123791602 Port name doesn't exist
-
-gauge1 1573123791737 port wasn't created!
-
-gauge1 1573123792743 message wasn't written ongauge1
-
-gauge1 1573123794750 Error during measuring pressure by 1 gauge.Message too short
-
-gauge1 1573123794750 COM49 is lost. Reconnecting...
+gauge1 1573302641603 COM49 is lost. Reconnecting...
 
 time device message
-gauge1 1573124068264 Port name doesn't exist
+gauge1 1573308254338 Port name doesn't exist
 
-gauge1 1573124068378 port wasn't created!
+gauge1 1573308254485 port wasn't created!
 
-gauge1 1573124069378 message wasn't written ongauge1
+gauge1 1573308255486 message wasn't written ongauge1
 
-gauge1 1573124071379 Error during measuring pressure by 1 gauge.Message too short
+gauge1 1573308257489 Error during measuring pressure by 1 gauge.Message too short
 
-gauge1 1573124071379 COM49 is lost. Reconnecting...
-
-time device message
-gauge1 1573124391868 Port name doesn't exist
-
-gauge1 1573124391983 port wasn't created!
-
-gauge1 1573124392983 message wasn't written ongauge1
-
-gauge1 1573124394984 Error during measuring pressure by 1 gauge.Message too short
-
-gauge1 1573124394984 COM49 is lost. Reconnecting...
+gauge1 1573308257490 COM49 is lost. Reconnecting...
 
 time device message
-gauge1 1573125014823 Port name doesn't exist
-
-gauge1 1573125014946 port wasn't created!
-
-gauge1 1573125015951 message wasn't written ongauge1
-
-gauge1 1573125017953 Error during measuring pressure by 1 gauge.Message too short
-
-gauge1 1573125017953 COM49 is lost. Reconnecting...
+gauge1 1573308624889 COM49 is opened
 
 time device message
-gauge1 1573125032899 Port name doesn't exist
+gauge1 1573308662593 COM49 is opened
 
-gauge1 1573125033030 port wasn't created!
+time device message
+gauge1 1573308742208 COM49 is opened
 
-gauge1 1573125034031 message wasn't written ongauge1
+time device message
+gauge1 1573309197267 COM49 is opened
 
-gauge1 1573125036032 Error during measuring pressure by 1 gauge.Message too short
+time device message
+gauge1 1573309550021 COM49 is opened
 
-gauge1 1573125036032 COM49 is lost. Reconnecting...
+time device message
+gauge1 1573309662934 COM49 is opened
+
+time device message
+gauge1 1573309824768 COM49 is opened
+
+time device message
+gauge1 1573310060861 COM49 is opened
+
+time device message
+gauge1 1573310094507 COM49 is opened
+
+time device message
+gauge1 1573310431293 COM49 is opened
+
+time device message
+gauge1 1573310572107 COM49 is opened
 

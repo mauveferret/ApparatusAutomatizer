@@ -15,6 +15,7 @@ class VacuumServer extends Server {
 
     @Override
     protected void convertDataFromInitializeToLocalType(HashMap<String, String> initializeData) {
+        commandsFromClient = new int[11];
         for (String someDevice: config.devices)
         {
             String[] digitalpinsfromTHeFile = initializeData.get(someDevice).split(" ");
@@ -66,7 +67,7 @@ class VacuumServer extends Server {
     DecimalFormat sciFormat = new DecimalFormat("%6.3e");
     // 0 -> auto, angel, gauge,pump, bypass,valve,6 ->gate, 7 -> tmp control,
     // tmp run, 9 -> tmp cool, 10 -> tmp standby   == 11 buttons
-    private int[] commandsFromClient = new int[11];
+    private int[] commandsFromClient;
 
     @Override
     public void communicate(SocketCryptedCommunicator communicator)
@@ -194,7 +195,7 @@ class VacuumServer extends Server {
         String gate1 =  localCOntrol.config.unitCommand;
         int accessLevel = communicator.getAccessLevel();
         String userName = communicator.getLogin();
-        boolean comIs2 = commandsFromClient[commandIndex]==2;
+        boolean comIs2 = (commandsFromClient[commandIndex]==2);
         switch (commandIndex){
             case 8: {
                 terminalSample.launchCommand(stmp1+(comIs2 ? " run" : " stop"),

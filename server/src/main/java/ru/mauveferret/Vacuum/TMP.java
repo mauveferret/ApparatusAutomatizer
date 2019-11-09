@@ -33,10 +33,10 @@ public abstract class TMP extends SerialUnit {
                     case "current" : current = Double.parseDouble(sData);
                     break;
                     case "status" : {
-                        isEnabled = (sData.charAt(0)+"").equals("1");
-                        isCoolingOn = (sData.charAt(1)+"").equals("1");
-                        isControlOn = (sData.charAt(2)+"").equals("1");
-                        isStandbyOn = (sData.charAt(3)+"").equals("1");
+                        isEnabled = (sData.charAt(0)+"").equals("2");
+                        isCoolingOn = (sData.charAt(1)+"").equals("2");
+                        isControlOn = (sData.charAt(2)+"").equals("2");
+                        isStandbyOn = (sData.charAt(3)+"").equals("2");
                     }
                     break;
                 }
@@ -173,5 +173,8 @@ public abstract class TMP extends SerialUnit {
         log.start();
     }
 
-
+    @Override
+    protected String booleanToString(boolean b) {
+        return (b) ? "2" : "1";
+    }
 }

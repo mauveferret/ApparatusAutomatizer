@@ -264,7 +264,7 @@ public abstract class SerialUnit extends RecordingUnit {
             catch (Exception e)
             {
                 if (!isReconnectActive) {
-                    sendMessage(config.unitPort + " port wasn't created!");
+                    sendMessage(config.unitPort + " port wasn't created: "+e.getLocalizedMessage());
                     reconnect();
                 }
             }

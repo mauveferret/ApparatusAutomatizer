@@ -3,4 +3,19 @@ time device message
 time device message
 time device message
 time device message
+gate1 1573308897129 COMMAND:gate1 pump off
+
+gate1 1573308900140 DEV logic 1573308900140 0 command 1573308900140: 3011 command: gate1 pump off
+
+gate1 1573308908628 COMMAND:gate1 pump on
+
+gate1 1573308908629 DEV logic 1573308908629 1 command 1573308908629: 0 command: gate1 pump on
+
+time device message
+time device message
+time device message
+time device message
+time device message
+time device message
+time device message
 time device message

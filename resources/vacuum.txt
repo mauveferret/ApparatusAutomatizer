@@ -1,5 +1,5 @@
 gauge ThyracontGauge column1 gauge1
-gauge ThyracontGauge column2 gauge1
+gauge PfeifferGauge column2 gauge2
 gauge PfeifferGauge vessel gauge3
 
 arduino 1 arduino1
