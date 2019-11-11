@@ -37,3 +37,9 @@ arduino2 1573310431327 Port name doesn't exist
 time device message
 arduino2 1573310572143 Port name doesn't exist
 
+time device message
+arduino2 1573483605965 Port name doesn't exist
+
+time device message
+arduino2 1573483771098 Port name doesn't exist
+

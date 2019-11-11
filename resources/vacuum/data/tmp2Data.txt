@@ -24,3 +24,7 @@ time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see man
 1573310432434 0 0 0.0 0.0 null
 time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
 1573310573239 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573483607104 0 0 0.0 0.0 null
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1573483772170 0 0 0.0 0.0 null

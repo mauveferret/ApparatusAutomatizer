@@ -16,7 +16,7 @@ public class ThyracontGauge extends Gauge {
     {
         //FIXME very bad!!
         try {
-            Thread.sleep(30);
+            Thread.sleep(50);
         }
         catch (Exception ignored){}
         String message = "00"+gaugeNumber+"M";

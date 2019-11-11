@@ -16,11 +16,11 @@ public class LeyboldTMP extends TMP {
 
     public LeyboldTMP(String fileName) {
         super(fileName);
+        setFrequency = true;
         request= new byte[]{0x02,0x16,0x00,0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
         response = new byte[24];
         statusRequest = new boolean[16];
         statusResponse = new boolean[16];
-
         unitAccessLevel = 6;
     }
 
@@ -171,11 +171,30 @@ public class LeyboldTMP extends TMP {
         return strBuilder.toString();
     }
 
+    boolean setFrequency;
     //Generally, its not only measure parameters of the TMP, but also send commands
     @Override
     public void measure()
     {
         try {
+
+            //porn in order to set freq 1000 Hz
+            if (setFrequency)
+            {
+                try {
+
+                    byte[] req1 = new byte[]{0x02, 0x16, 0x00, 0x20, 0x14, 0x00, 0x00, 0x00, 0x00, 0x03, (byte) 0xE8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, (byte) 0xCB};
+                    writeBytes(req1);
+                    try {
+                        Thread.sleep(300);
+                    } catch (Exception ignored) {
+                    }
+                    byte[] resp = readBytes(24);
+                }
+                catch (Exception ignored){}
+                setFrequency = false;
+            }
+
             setStatusRequest();
             checkSum();
             writeBytes(request);

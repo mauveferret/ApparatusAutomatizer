@@ -69,3 +69,17 @@ vacuumServer 1573310591385 Access granted to admin
 
 vacuumServer 1573310602203 admin disconnected
 
+time device message
+vacuumServer 1573483606093 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573483618357 Access granted to admin
+
+vacuumServer 1573483685946 admin disconnected
+
+time device message
+vacuumServer 1573483771178 vacuumServer launched at port 4004. Its IP is 0.0.0.0
+
+vacuumServer 1573483792403 Access granted to admin
+
+vacuumServer 1573483821851 admin disconnected
+

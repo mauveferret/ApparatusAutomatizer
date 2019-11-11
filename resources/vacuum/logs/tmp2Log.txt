@@ -63,3 +63,13 @@ tmp2 1573310572230 COM123 port wasn't created: null
 
 tmp2 1573310573231 COM123 is lost. Reconnecting...
 
+time device message
+tmp2 1573483606095 COM123 port wasn't created: null
+
+tmp2 1573483607096 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1573483771169 COM123 port wasn't created: null
+
+tmp2 1573483772170 COM123 is lost. Reconnecting...
+

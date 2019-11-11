@@ -87,3 +87,33 @@ tmp1 1573310572231 COM51 port wasn't created: null
 
 tmp1 1573310573232 COM51 is lost. Reconnecting...
 
+time device message
+tmp1 1573483606102 COM51 port wasn't created: null
+
+tmp1 1573483607103 COM51 is lost. Reconnecting...
+
+tmp1 1573483625726 COMMAND:tmp1 control on
+
+tmp1 1573483625732 DEV logic 1573483625733 1 command 1573483625733: 0 command: tmp1 control on
+
+tmp1 1573483625733 COMMAND:tmp1 run
+
+tmp1 1573483625733 DEV logic 1573483625733 0 command 1573483625733: 0 command: tmp1 run
+
+tmp1 1573483638735 COMMAND:tmp1 stop
+
+tmp1 1573483638735 DEV logic 1573483638735 0 command 1573483638735: 0 command: tmp1 stop
+
+time device message
+tmp1 1573483771163 COM51 port wasn't created: null
+
+tmp1 1573483772163 COM51 is lost. Reconnecting...
+
+tmp1 1573483800898 COMMAND:tmp1 run
+
+tmp1 1573483800904 DEV logic 1573483800904 0 command 1573483800904: 0 command: tmp1 run
+
+tmp1 1573483807892 COMMAND:tmp1 stop
+
+tmp1 1573483807893 DEV logic 1573483807893 1 command 1573483807893: 0 command: tmp1 stop
+

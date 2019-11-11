@@ -24,3 +24,7 @@ time  digitalPinsStatus analogPinsStatus
 1573310431406 digital: 0 0 0 1 0 0 0 0 0 0 1 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
 time  digitalPinsStatus analogPinsStatus
 1573310572209 digital: 0 0 0 1 0 0 0 0 0 0 1 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573483606083 digital: 0 0 0 1 0 0 0 0 0 0 1 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+time  digitalPinsStatus analogPinsStatus
+1573483771162 digital: 0 0 0 1 0 0 0 0 0 0 1 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 

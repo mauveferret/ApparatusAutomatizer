@@ -22,3 +22,15 @@ terminal 1573310431357 Enter login and password, please.
 time device message
 terminal 1573310572174 Enter login and password, please.
 
+time device message
+terminal 1573483605991 Enter login and password, please.
+
+time device message
+terminal 1573483771122 Enter login and password, please.
+
+terminal 1573483841729 Access granted. Your level of access is 10
+
+terminal 1573483844827 COMMAND:trm terminate
+
+terminal 1573483844828 Goodbye, my Lord.
+

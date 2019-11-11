@@ -175,3 +175,29 @@ gauge2s 1573310576230 message wasn't written ongauge2s
 
 gauge2s 1573310578230 COM429 is lost. Reconnecting...
 
+time device message
+gauge2s 1573483605958 Port name doesn't exist
+
+gauge2s 1573483606092 port wasn't created!
+
+gauge2s 1573483607093 message wasn't written ongauge2s
+
+gauge2s 1573483609093 port wasn't created!
+
+gauge2s 1573483610093 message wasn't written ongauge2s
+
+gauge2s 1573483612093 COM429 is lost. Reconnecting...
+
+time device message
+gauge2s 1573483771091 Port name doesn't exist
+
+gauge2s 1573483771169 port wasn't created!
+
+gauge2s 1573483772169 message wasn't written ongauge2s
+
+gauge2s 1573483774169 port wasn't created!
+
+gauge2s 1573483775169 message wasn't written ongauge2s
+
+gauge2s 1573483777170 COM429 is lost. Reconnecting...
+

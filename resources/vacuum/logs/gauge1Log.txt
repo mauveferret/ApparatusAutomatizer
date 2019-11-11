@@ -53,3 +53,17 @@ gauge1 1573310431293 COM49 is opened
 time device message
 gauge1 1573310572107 COM49 is opened
 
+time device message
+gauge1 1573483605940 COM49 is opened
+
+time device message
+gauge1 1573483771076 COM49 is opened
+
+gauge1 1573483831263 gauge1 message wasn't got.
+
+gauge1 1573483832263 Error during measuring pressure by 1 gauge.Message too short
+
+gauge1 1573483832264 COM49 is closed
+
+gauge1 1573483832271 COM49 is lost. Reconnecting...
+
