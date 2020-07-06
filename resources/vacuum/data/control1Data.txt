@@ -1,0 +1,2 @@
+forlineStatus  bypassStatus valveStatus   gateStatus
+1578442781492 4 4 2 1 

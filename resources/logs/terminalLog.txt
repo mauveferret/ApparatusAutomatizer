@@ -1,0 +1,3 @@
+time device message
+terminal 1578442781424 Enter login and password, please.
+

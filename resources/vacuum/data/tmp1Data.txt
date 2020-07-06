@@ -1,0 +1,2 @@
+time  temperature,C  frequency, Hz   voltage, 0.1V   current,A   status (see manual) 
+1578442782535 0 0 0.0 0.0 null

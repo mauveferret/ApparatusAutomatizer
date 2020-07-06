@@ -1,0 +1,2 @@
+time  digitalPinsStatus analogPinsStatus
+1578442781494 digital: 0 0 0 1 0 0 0 0 0 0 1 0 0 0  analog: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 

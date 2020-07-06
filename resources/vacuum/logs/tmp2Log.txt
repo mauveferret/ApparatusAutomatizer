@@ -1,0 +1,65 @@
+time device message
+tmp2 1572899170175 COM123 port wasn't created!
+
+tmp2 1572899170198 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572899232249 COM123 port wasn't created!
+
+tmp2 1572899232259 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572899287569 COM123 port wasn't created!
+
+tmp2 1572899288579 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572899517640 COM123 port wasn't created!
+
+tmp2 1572899518650 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572899603420 COM123 port wasn't created!
+
+tmp2 1572899604425 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572899874299 COM123 port wasn't created!
+
+tmp2 1572899875308 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900065419 COM123 port wasn't created!
+
+tmp2 1572900066427 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900142651 COM123 port wasn't created!
+
+tmp2 1572900143666 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900209131 COM123 port wasn't created!
+
+tmp2 1572900210140 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900308033 COM123 port wasn't created!
+
+tmp2 1572900309056 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900427730 COM123 port wasn't created!
+
+tmp2 1572900428735 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1572900452486 COM123 port wasn't created!
+
+tmp2 1572900453491 COM123 is lost. Reconnecting...
+
+time device message
+tmp2 1578442781524 COM123 port wasn't created!
+
+tmp2 1578442782533 COM123 is lost. Reconnecting...
+
